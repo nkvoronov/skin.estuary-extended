@@ -194,9 +194,7 @@
 			<include>MediaMenuCommon</include>
 			<control type="grouplist" id="9000">
 				<top>90</top>
-				<include name="MediaMenuListCommon">
-					<param name="viewtype_button_vis" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(addons)" />
-				</include>
+				<include>MediaMenuListCommon</include>
 				<control type="button" id="10">
 					<description>Watched Toggle</description>
 					<include>MediaMenuItemsCommon</include>
@@ -227,6 +225,7 @@
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[653]</label>
 					<onclick>UpdateLibrary(video)</onclick>
+					<visible>!Container.Content(addons)</visible>
 					<altlabel>$LOCALIZE[13353]</altlabel>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
@@ -244,17 +243,25 @@
 					<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
 					<visible>Container.Content(addons)</visible>
 				</control>
+				<control type="button" id="624">
+					<include>MediaMenuItemsCommon</include>
+					<label>$LOCALIZE[10140]</label>
+					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+					<visible>!IsEmpty(Container.PluginName)</visible>
+				</control>
 				<control type="button" id="622">
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[31117]</label>
 					<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
-					<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+                    <!-- jarvis fix -->
+					<!-- <onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick> -->
 					<visible>Container.Content() + IsEmpty(Container.PluginName)</visible>
 				</control>
 				<control type="button" id="623">
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[31009]</label>
-					<onclick>InstallAddon(resource.images.studios.white)</onclick>
+                    <!-- jarvis fix -->
+					<!-- <onclick>InstallAddon(resource.images.studios.white)</onclick> -->
 					<visible>Container.Content(studios) + !System.HasAddon(resource.images.studios.white)</visible>
 				</control>
 				<include>MediaMenuNowPlaying</include>
@@ -264,6 +271,8 @@
 			<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
 			<param name="breadcrumbs_icon" value="icons/settings/video.png" />
 		</include>
-		<include>BottomBar</include>
+		<include name="BottomBar">
+			<param name="info_visible" value="true" />
+		</include>
 	</controls>
 </window>

@@ -4,7 +4,7 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<include>Visible_Right</include>
-			<visible>![container.content(Songs) + Window.IsActive(musicinformation)]</visible>
+			<visible>![Window.Is(songinformation) + Window.IsActive(musicinformation)]</visible>
 			<control type="group">
 				<animation effect="fade" start="0" end="100" time="100" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
@@ -282,6 +282,7 @@
 				<orientation>horizontal</orientation>
 				<control type="group" id="420">
 					<width>262</width>
+					<!-- jarvis fix-->
 					<visible>container.content(Albums) | container.content(Songs)</visible>
 					<control type="button" id="7">
 						<include name="VideoInfoButtonsCommon">
@@ -320,6 +321,7 @@
 					<enable>!IsEmpty(ListItem.Art(fanart))</enable>
 					<onclick>SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)</onclick>
 					<onclick>ActivateWindow(1104)</onclick>
+					<!-- jarvis fix-->
 					<visible>container.content(Artists) | container.content(Albums)</visible>
 				</control>
 				<include name="InfoDialogButton">
@@ -357,6 +359,7 @@
 			</include>
 		</control>
 		<control type="group">
+			<!-- jarvis fix-->
 			<visible>container.content(Artists)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Artist]" />
@@ -365,14 +368,16 @@
 			</include>
 		</control>
 		<control type="group">
+			<!-- jarvis fix-->
 			<visible>container.content(Albums)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR button_focus],[/COLOR])]" />
-                <param name="sub_label" value="$INFO[ListItem.Artist]" />
+				<param name="sub_label" value="$INFO[ListItem.Artist]" />
 				<param name="id" value="33334" />
 			</include>
 		</control>
 		<control type="group">
+			<!-- jarvis fix-->
 			<visible>container.content(Songs) + !Window.IsActive(musicinformation)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />

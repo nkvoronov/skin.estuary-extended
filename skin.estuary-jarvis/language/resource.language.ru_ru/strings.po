@@ -81,12 +81,8 @@ msgid "Recent recordings"
 msgstr "Последние записи"
 
 msgctxt "#31016"
-msgid "Favourite channels"
-msgstr "Избранные каналы"
-
-msgctxt "#31017"
-msgid "Recent channels"
-msgstr "Последние каналы"
+msgid "Recently played channels"
+msgstr "Последние проигранные каналы"
 
 msgctxt "#31018"
 msgid "Most played channels"
@@ -349,8 +345,8 @@ msgctxt "#31082"
 msgid "Lyrics add-on"
 msgstr "Дополнение текстов песен"
 msgctxt "#31083"
-msgid "Настройки дополнения текстов песен"
-msgstr ""
+msgid "Lyrics add-on settings"
+msgstr "Настройки дополнения текстов песен"
 msgctxt "#31084"
 msgid "Visualisation settings"
 msgstr "Настройки визуализации"
@@ -432,7 +428,7 @@ msgid "Enter text here..."
 msgstr "Введите текст здесь ..."
 
 msgctxt "#31104"
-msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library. "
+msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
 msgstr "Ваша библиотека пуста. Для того, чтобы заполните его с вашей личной информации, введите \"Файлы\", добавьте источник медиа и настройте его. После того, как был добавлен источник и проиндексируются вы будете иметь возможность просматривать вашу библиотеку."
 
 msgctxt "#31105"
@@ -530,3 +526,18 @@ msgstr "Показать иконки"
 msgctxt "#31128"
 msgid "Contributors"
 msgstr "Авторы"
+
+#: /1080i/Variables.xml:229
+msgctxt "#31129"
+msgid "General settings applying to all areas of the skin."
+msgstr "Общие параметры, применимые ко всем областям скина."
+
+#: /1080i/Variables.xml:230
+msgctxt "#31130"
+msgid "Main menu-related settings: Configure the home screen to your likings."
+msgstr "Основные параметры меню, связанные с: Настройка главного экрана для ваших предпочтений."
+
+#: /1080i/SkinSettings.xml:117
+msgctxt "#31131"
+msgid "Choose home fanart pack"
+msgstr "Выбрать фанарт пакет"

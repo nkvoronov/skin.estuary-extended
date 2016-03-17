@@ -158,6 +158,7 @@
 			<top>186</top>
 			<width>461</width>
 			<height>461</height>
+			<!-- FIX -->
 			<aspectratio>keep</aspectratio>
 			<fadetime>300</fadetime>
 			<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
