@@ -19,7 +19,8 @@
 				<include>OpenClose_Right</include>
 				<visible>Control.Isvisible(54)</visible>
 				<include>Visible_Right</include>
-				<visible>Container.Content(images)</visible>
+                <!-- jarvis fix -->
+				<!-- <visible>Container.Content(images)</visible> -->
 				<control type="image">
 					<right>90</right>
 					<top>162</top>
@@ -179,14 +180,15 @@
 						<param name="label" value="$LOCALIZE[21861]"/>
 						<param name="value" value="ListItem.PictureKeywords" />
 					</include>
-					<include name="PicsInfoLine">
+                    <!-- jarvis fix -->
+					<!-- <include name="PicsInfoLine">
 						<param name="label" value="$LOCALIZE[21843]"/>
 						<param name="value" value="$INFO[ListItem.PictureOrientation]" />
 					</include>
 					<include name="PicsInfoLine">
 						<param name="label" value="$LOCALIZE[21808]"/>
 						<param name="value" value="$INFO[ListItem.PictureProcess]" />
-					</include>
+					</include> -->
 				</control>
 			</control>
 		</control>
@@ -226,7 +228,7 @@
 					<onclick condition="System.HasAddon(script.maps.browser)">RunScript(script.maps.browser,folder=$INFO[Container.FolderPath])</onclick>
                     <!-- jarvis fix -->
 					<!-- <onclick condition="!System.HasAddon(script.maps.browser)">InstallAddon(script.maps.browser)</onclick> -->
-					<visible>Container.Content(images) + IsEmpty(Container.PluginName)</visible>
+					<!-- <visible>Container.Content(images) + IsEmpty(Container.PluginName)</visible> -->
 				</control>
 				<control type="button" id="624">
 					<include>MediaMenuItemsCommon</include>
