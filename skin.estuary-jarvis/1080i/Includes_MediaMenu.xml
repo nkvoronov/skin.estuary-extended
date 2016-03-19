@@ -332,7 +332,6 @@
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31023]</label>
 				<label2>[B]$INFO[Container.Viewmode][/B]</label2>
-                <!-- jarvis fix -->
 				<!-- <enable>IntegerGreaterThan(Container.ViewCount,1)</enable> -->
 				<onclick>Container.NextViewMode</onclick>
 			</control>
