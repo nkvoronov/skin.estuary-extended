@@ -675,3 +675,11 @@ msgstr ""
 msgctxt "#31131"
 msgid "Choose home fanart pack"
 msgstr ""
+
+msgctxt "#32000"
+msgid "Poster"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Banner"
+msgstr ""

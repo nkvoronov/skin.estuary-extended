@@ -593,7 +593,7 @@
 							<top>0</top>
 							<width>340</width>
 							<height>340</height>
-							<!-- FIX -->
+							<!-- jarvis fix -->
                             <aspectratio>keep</aspectratio>
 							<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
@@ -654,7 +654,7 @@
 								<top>0</top>
 								<width>340</width>
 								<height>340</height>
-								<!-- FIX -->
+								<!-- jarvis fix -->
                                 <aspectratio>keep</aspectratio>
 								<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>

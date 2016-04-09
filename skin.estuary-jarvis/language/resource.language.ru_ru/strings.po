@@ -541,3 +541,11 @@ msgstr "Основные параметры меню, связанные с: Н�
 msgctxt "#31131"
 msgid "Choose home fanart pack"
 msgstr "Выбрать фанарт пакет"
+
+msgctxt "#32000"
+msgid "Poster"
+msgstr "Постер"
+
+msgctxt "#32001"
+msgid "Banner"
+msgstr "Баннер"

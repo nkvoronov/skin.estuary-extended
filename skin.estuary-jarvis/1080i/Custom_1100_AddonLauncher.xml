@@ -146,12 +146,12 @@
 							<property name="id">pictures</property>
 							<property name="path">addons://sources/executable/</property>
 						</item>
-						<!-- 					<item id="6">
+						<!-- <item id="6">
 						     <label>Available Updates</label>
 						     <onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
 						     <thumb>icons/settings/update-available.png</thumb>
 						     <property name="id">outdated</property>
-						     </item> -->
+						</item> -->
 					</content>
 				</control>
 			</control>
@@ -216,7 +216,7 @@
 					<height>110</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<onclick>ActivateWindow(systemsettings,addons)</onclick>
+					<onclick>ActivateWindow(systemsettings)</onclick>
 					<font>font10</font>
 					<label>-</label>
 					<textoffsetx>40</textoffsetx>
@@ -276,18 +276,18 @@
 					<param name="container_path" value="addons://sources/image/" />
 					<param name="container_target" value="pictures" />
 				</include>
-				<!-- 			<include name="AddonLauncherPanel">
+				<!-- <include name="AddonLauncherPanel">
 				     <param name="container_id" value="504" />
 				     <param name="visible" value="Container(9000).HasFocus(6)" />
 				     <param name="container_path" value="addons://outdated/" />
 				     <param name="container_target" value="" />
-				     </include>
-				     <include name="AddonLauncherPanel">
+				</include>
+				<include name="AddonLauncherPanel">
 				     <param name="container_id" value="505" />
 				     <param name="visible" value="Container(9000).HasFocus(7)" />
 				     <param name="container_path" value="addons://all/" />
 				     <param name="container_target" value="" />
-				     </include> -->
+				</include> -->
 			</control>
 			<control type="scrollbar" id="531">
 				<left>1907</left>

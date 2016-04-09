@@ -240,7 +240,7 @@
 					<description>Get more</description>
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[21452]</label>
-					<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/video/,return)</onclick>
 					<visible>Container.Content(addons)</visible>
 				</control>
 				<control type="button" id="624">

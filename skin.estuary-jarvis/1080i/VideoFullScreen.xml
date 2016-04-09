@@ -52,7 +52,7 @@
 				</control>
 				<control type="grouplist">
 					<orientation>vertical</orientation>
-					<left>20</left>
+					<left>30</left>
 					<top>90</top>
 					<include name="LeftRightAlignedInfoLine">
 						<param name="label" value="$LOCALIZE[19012]" />
@@ -72,7 +72,7 @@
 					<top>90</top>
 					<control type="label">
 						<description>Signal</description>
-						<width>250</width>
+						<width>300</width>
 						<height>25</height>
 						<aligny>center</aligny>
 						<label>[COLOR button_focus]$LOCALIZE[19008]:[/COLOR] $INFO[PVR.ActStreamSignal]</label>
@@ -88,7 +88,7 @@
 					<control type="label">
 						<description>SNR</description>
 						<top>60</top>
-						<width>250</width>
+						<width>300</width>
 						<height>25</height>
 						<aligny>center</aligny>
 						<label>[COLOR button_focus]$LOCALIZE[19009]:[/COLOR] $INFO[PVR.ActStreamSNR]</label>

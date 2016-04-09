@@ -53,7 +53,7 @@
 							<top>12</top>
 							<width>1225</width>
 							<height>702</height>
-							<texture border="2" fallback="DefaultVideo.png" background="true">$VAR[FanartImageVar]</texture>
+                            <texture border="2" background="true">$VAR[FanartImageVar]</texture>
 							<aspectratio align="center">scale</aspectratio>
 						</control>
 						<control type="group">
@@ -132,7 +132,7 @@
 									<top>12</top>
 									<width>1225</width>
 									<height>702</height>
-									<texture border="2" fallback="DefaultVideo.png" background="true">$VAR[FanartImageVar]</texture>
+                                    <texture border="2" background="true">$VAR[FanartImageVar]</texture>
 									<aspectratio align="center">scale</aspectratio>
 								</control>
 								<control type="group">

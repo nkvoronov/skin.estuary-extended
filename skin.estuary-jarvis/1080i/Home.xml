@@ -2,8 +2,8 @@
 <window>
 	<menucontrol>9000</menucontrol>
 	<defaultcontrol>9000</defaultcontrol>
-<!-- 	<onload condition="ControlGroup(700).HasFocus">SetFocus(9000,0)</onload>
- -->	<backgroundcolor>background</backgroundcolor>
+	<!-- <onload condition="ControlGroup(700).HasFocus">SetFocus(9000,0)</onload> -->
+	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
@@ -19,6 +19,7 @@
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
+        <!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -32,6 +33,7 @@
 			<imagepath background="true" colordiffuse="40FFFFFF">$VAR[HomeFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
 		</control>
+        <!-- MainContent -->
 		<control type="group" id="2000">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
@@ -45,6 +47,7 @@
 			<top>78</top>
 			<left>20</left>
 			<include>OpenClose_Right</include>
+            <!-- Movies -->
 			<control type="group" id="5000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),movies)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -144,6 +147,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- TVShows -->
 			<control type="group" id="6000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),tvshows)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -191,8 +195,9 @@
 						<param name="item8_icon" value="updatelibrary.png" />
 						<param name="item8_label" value="$LOCALIZE[653]" />
 					</include>
+                    <!-- jarvis fix -->
 					<include name="WidgetListEpisodes">
-						<param name="content_path" value="videodb://inprogresstvshows"/>
+						<param name="content_path" value="special://skin/playlists/inprogress_tvshows.xsp"/>
 						<param name="sortby" value="lastplayed"/>
 						<param name="sortorder" value="descending"/>
 						<param name="widget_header" value="$LOCALIZE[626]"/>
@@ -241,6 +246,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- Music -->
 			<control type="group" id="7000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),music)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -354,6 +360,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- Addons -->
 			<control type="group" id="8000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),addons)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -377,7 +384,7 @@
 						<param name="item1_onclick" value="ActivateWindow(addonbrowser,root)" />
 						<param name="item1_icon" value="add-ons.png" />
 						<param name="item1_label" value="$LOCALIZE[10040]" />
-						<param name="item2_onclick" value="ActivateWindow(systemsettings,addons)" />
+						<param name="item2_onclick" value="ActivateWindow(systemsettings)" />
 						<param name="item2_icon" value="settings.png" />
 						<param name="item2_label" value="$LOCALIZE[1045]" />
 						<param name="item3_vis" value="False" />
@@ -396,9 +403,6 @@
 						<param name="list_id" value="8100"/>
 						<param name="onup_id" value="8900"/>
 						<param name="ondown_id" value="8200"/>
-						<param name="single_label" value="$INFO[ListItem.Label]"/>
-						<param name="main_label" value=""/>
-						<param name="sub_label" value=""/>
 					</include>
 					<include name="WidgetListSquare">
 						<param name="content_path" value="addons://sources/audio/"/>
@@ -409,9 +413,6 @@
 						<param name="list_id" value="8200"/>
 						<param name="onup_id" value="8100"/>
 						<param name="ondown_id" value="8300"/>
-						<param name="single_label" value="$INFO[ListItem.Label]"/>
-						<param name="main_label" value=""/>
-						<param name="sub_label" value=""/>
 					</include>
 					<include name="WidgetListSquare">
 						<param name="content_path" value="addons://sources/executable/"/>
@@ -422,9 +423,6 @@
 						<param name="list_id" value="8300"/>
 						<param name="onup_id" value="8200"/>
 						<param name="ondown_id" value="8400"/>
-						<param name="single_label" value="$INFO[ListItem.Label]"/>
-						<param name="main_label" value=""/>
-						<param name="sub_label" value=""/>
 					</include>
 					<include name="WidgetListSquare">
 						<param name="content_path" value="androidapp://sources/apps/"/>
@@ -435,9 +433,6 @@
 						<param name="list_id" value="8400"/>
 						<param name="onup_id" value="8300"/>
 						<param name="ondown_id" value="8500"/>
-						<param name="single_label" value="$INFO[ListItem.Label]"/>
-						<param name="main_label" value=""/>
-						<param name="sub_label" value=""/>
 					</include>
 					<include name="WidgetListSquare">
 						<param name="content_path" value="addons://sources/image/"/>
@@ -448,9 +443,6 @@
 						<param name="list_id" value="8500"/>
 						<param name="onup_id" value="8400"/>
 						<param name="ondown_id" value="20001"/>
-						<param name="single_label" value="$INFO[ListItem.Label]"/>
-						<param name="main_label" value=""/>
-						<param name="sub_label" value=""/>
 					</include>
 					<include name="ImageWidget">
 						<param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
@@ -463,6 +455,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- Video -->
 			<control type="group" id="11000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),video)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -530,6 +523,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- LiveTV -->
 			<control type="group" id="12000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),livetv)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -611,6 +605,7 @@
 					</control>
 				</control>
 			</control>
+            <!-- Radio -->
 			<control type="group" id="13000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),radio)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -662,6 +657,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- Weather -->
 			<control type="group" id="15000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),weather)</visible>
 				<include>Visible_Right_Delayed</include>
@@ -803,6 +799,7 @@
 					</include>
 				</control>
 			</control>
+            <!-- Pictures -->
 			<control type="group" id="4000">
 				<visible>Stringcompare(Container(9000).ListItem.Property(id),pictures)</visible>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -826,10 +823,12 @@
 				</control>
 			</control>
 		</control>
+        <!-- TopBar -->
 		<include name="TopBar">
 			<param name="breadcrumbs_label" value="" />
 			<param name="breadcrumbs_icon" value="" />
 		</include>
+        <!-- Logo -->
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<control type="image">
@@ -853,7 +852,9 @@
 				<texture>icons/logo-text.png</texture>
 			</control>
 		</control>
+        <!-- BottomBar -->
 		<include>BottomBar</include>
+        <!-- LeftBar -->
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<include>OpenClose_Left</include>
@@ -891,6 +892,7 @@
 				<pauseatend>5000</pauseatend>
 				<label>$LOCALIZE[31001]...</label>
 			</control>
+            <!-- Main menu (Vertical) -->
 			<control type="group">
 				<left>53</left>
 				<top>204</top>
@@ -1037,6 +1039,7 @@
 						</control>
 					</itemlayout>
 					<content>
+                        <!-- Movies -->
 						<item>
 							<label>$LOCALIZE[342]</label>
 							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
@@ -1046,6 +1049,7 @@
 							<property name="id">movies</property>
 							<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 						</item>
+                        <!-- TVShows -->
 						<item>
 							<label>$LOCALIZE[20343]</label>
 							<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
@@ -1055,6 +1059,7 @@
 							<property name="id">tvshows</property>
 							<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 						</item>
+                        <!-- Music -->
 						<item>
 							<label>$LOCALIZE[2]</label>
 							<label2>$LOCALIZE[133]: $INFO[Window(Home).Property(Music.ArtistsCount)]</label2>
@@ -1063,20 +1068,25 @@
 							<property name="id">music</property>
 							<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 						</item>
+                        <!-- TV -->
 						<item>
 							<label>$LOCALIZE[19020]</label>
+                            <label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
 							<onclick>ActivateWindow(TVChannels)</onclick>
 							<thumb>icons/home/livetv.png</thumb>
 							<property name="id">livetv</property>
 							<visible>PVR.HasTVChannels</visible>
 						</item>
+                        <!-- Radio -->
 						<item>
 							<label>$LOCALIZE[19021]</label>
+                            <label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
 							<onclick>ActivateWindow(RadioChannels)</onclick>
 							<thumb>icons/home/radio.png</thumb>
 							<property name="id">radio</property>
 							<visible>PVR.HasRadioChannels</visible>
 						</item>
+                        <!-- Addons -->
 						<item>
 							<label>$LOCALIZE[24001]</label>
 							<onclick>ActivateWindow(1100)</onclick>
@@ -1084,6 +1094,7 @@
 							<property name="id">addons</property>
 							<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 						</item>
+                        <!-- Pictures -->
 						<item>
 							<label>$LOCALIZE[1]</label>
 							<onclick>ActivateWindow(Pictures)</onclick>
@@ -1091,6 +1102,7 @@
 							<property name="id">pictures</property>
 							<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 						</item>
+                        <!-- Videos -->
 						<item>
 							<label>$LOCALIZE[3]</label>
 							<onclick>ActivateWindow(Videos,root)</onclick>
@@ -1098,8 +1110,10 @@
 							<property name="id">video</property>
 							<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 						</item>
+                        <!-- Weather -->
 						<item>
 							<label>$LOCALIZE[8]</label>
+                            <label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
 							<onclick>ActivateWindow(Weather)</onclick>
 							<thumb>icons/home/weather.png</thumb>
 							<property name="id">weather</property>
@@ -1108,6 +1122,7 @@
 					</content>
 				</control>
 			</control>
+            <!-- System menu -->
 			<control type="grouplist" id="700">
 				<orientation>horizontal</orientation>
 				<itemgap>-17</itemgap>
@@ -1139,6 +1154,7 @@
 				</include>
 			</control>
 		</control>
+        <!-- FullScreen -->
 		<control type="radiobutton" id="14200">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<top>995</top>
@@ -1165,6 +1181,7 @@
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<visible>Player.hasMedia</visible>
 		</control>
+        <!-- RSS -->
 		<control type="rss">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation)">Conditional</animation>
 			<left>0</left>
