@@ -19,7 +19,6 @@
 				<include>OpenClose_Right</include>
 				<visible>Control.Isvisible(54)</visible>
 				<include>Visible_Right</include>
-                <!-- jarvis fix -->
 				<!-- <visible>Container.Content(images)</visible> -->
 				<control type="image">
 					<right>90</right>
@@ -36,7 +35,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>!ListItem.IsParentFolder + ListItem.IsFolder</visible>
+					<visible>!StringCompare(ListItem.Label,..) + ListItem.IsFolder</visible>
 				</control>
 				<control type="grouplist">
 					<right>110</right>
@@ -222,6 +221,7 @@
 					<label>$LOCALIZE[13319]</label>
 					<include>MediaMenuItemsCommon</include>
 				</control>
+                
 				<control type="button" id="622">
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[31124]</label>
@@ -229,6 +229,7 @@
                     <!-- jarvis fix -->
 					<!-- <onclick condition="!System.HasAddon(script.maps.browser)">InstallAddon(script.maps.browser)</onclick> -->
 					<!-- <visible>Container.Content(images) + IsEmpty(Container.PluginName)</visible> -->
+                    <visible>IsEmpty(Container.PluginName)</visible>
 				</control>
 				<control type="button" id="624">
 					<include>MediaMenuItemsCommon</include>

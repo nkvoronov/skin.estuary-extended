@@ -125,14 +125,15 @@
 					<texture colordiffuse="grey" fallback="empty.png">$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image">
+                <!-- jarvis fix -->
+				<!-- <control type="image">
 					<left>280</left>
 					<top>1022</top>
 					<width>130</width>
 					<height>65</height>
 					<texture>flags/starrating/rating$INFO[MusicPlayer.UserRating].png</texture>
 					<aspectratio>keep</aspectratio>
-				</control>
+				</control> -->
 			</control>
 			<control type="label">
 				<left>1840</left>

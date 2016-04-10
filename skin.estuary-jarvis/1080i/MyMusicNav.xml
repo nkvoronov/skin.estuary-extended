@@ -52,7 +52,7 @@
 				<align>center</align>
 				<font>font24_title</font>
 				<label>$LOCALIZE[19055]</label>
-				<visible>IsEmpty(Listitem.Property(artist_description)) + IsEmpty(Listitem.Property(album_description)) + !ListItem.IsParentFolder</visible>
+				<visible>IsEmpty(Listitem.Property(artist_description)) + IsEmpty(Listitem.Property(album_description)) + !StringCompare(ListItem.Label,..)</visible>
 			</control>
 			<control type="image">
 				<right>113</right>
