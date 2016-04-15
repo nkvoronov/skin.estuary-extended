@@ -70,20 +70,11 @@
 				<height>250</height>
 				<itemgap>-10</itemgap>
 				<onleft>5</onleft>
-				<onright>5</onright>
-				<!-- <include name="DefaultDialogButton">
-					<param name="id" value="28" />
-					<param name="label" value="-" />
-				</include> -->                
+				<onright>5</onright>           
                 <include name="DefaultDialogButton">
                     <param name="id" value="29" />
                     <param name="label" value="$LOCALIZE[15067]" />
-                    <param name="onclick" value="Dialog.Close(selectdialog)" />
                 </include>
-				<!-- <include name="DefaultDialogButton">
-					<param name="id" value="30" />
-					<param name="label" value="-" />
-				</include> -->
 			</control>
 		</control>
 	</controls>
