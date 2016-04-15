@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-jarvis" version="0.7.5.009" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
+<addon id="skin.estuary-jarvis" version="0.7.5.010" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
 	</requires>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+    <defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<left>502</left>
 		<top>345</top>
@@ -12,7 +13,6 @@
 			<param name="DialogBackgroundHeight" value="380" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
 			<param name="DialogHeaderId" value="1" />
-			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="textbox" id="9">
 			<left>30</left>
