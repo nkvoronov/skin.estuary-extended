@@ -689,6 +689,10 @@ msgctxt "#32001"
 msgid "Banner"
 msgstr ""
 
+msgctxt "#31312"
+msgid "Current scraper"
+msgstr ""
+
 msgctxt "#84102"
 msgid "Timer rules"
 msgstr ""
