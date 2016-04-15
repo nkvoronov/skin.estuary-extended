@@ -23,7 +23,7 @@
 				<height>790</height>
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
-            <control type="group" id="50">
+            <control type="grouplist" id="50">
                 <description>control area 1</description>
 				<left>30</left>
 				<top>100</top>
@@ -39,10 +39,6 @@
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[20344]</label>
                     <reverse>yes</reverse>
-                    <onleft>9000</onleft>
-                    <onright>9000</onright>
-                    <onup>50</onup>
-                    <ondown>23</ondown>
                 </control>
                 <control type="group" id="23">
                     <description>Scraper List</description>
@@ -93,10 +89,6 @@
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[31312]</label>     
                     <label2>[B]$INFO[ListItem.Label][/B]</label2>
-                    <onleft>9000</onleft>
-                    <onright>9000</onright>
-                    <onup>21</onup>
-                    <ondown>22</ondown>
                 </control>
                 <control type="button" id="22">
                     <description>Default Button</description>
@@ -104,10 +96,6 @@
                     <width>1160</width>
                     <include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[5]</label>
-                    <onleft>9000</onleft>
-                    <onright>9000</onright>
-                    <onup>24</onup>
-                    <ondown>5</ondown>
                 </control>
             </control>            
             <control type="image">
