@@ -193,7 +193,7 @@
 				<control type="radiobutton" id="8">
 					<description>Hide disabled timers</description>
 					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[34003]</label>
+					<label>$LOCALIZE[84103]</label>
 					<visible>Window.IsActive(MyPVRTimers.xml)</visible>
 				</control>
 				<control type="group" id="141000">

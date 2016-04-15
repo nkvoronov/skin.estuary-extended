@@ -74,7 +74,6 @@
                 <include name="DefaultDialogButton">
                     <param name="id" value="29" />
                     <param name="label" value="$LOCALIZE[15067]" />
-                    <param name="onclick" value="Dialog.Close(selectdialog)" />
                 </include>
             </control>
         </control>

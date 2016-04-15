@@ -335,7 +335,7 @@
 		<value>$LOCALIZE[3]</value>
 	</variable>
 	<variable name="BreadcrumbsPVRTimerVar">
-		<value condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">$LOCALIZE[34002]</value>
+		<!-- <value condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">$LOCALIZE[84102]</value> -->
 		<value>$LOCALIZE[19040]</value>
 	</variable>
 	<variable name="RepeatButtonColordiffuseVar">
@@ -361,7 +361,7 @@
 		<value condition="Control.HasFocus(101)">$LOCALIZE[19069]</value>
 		<value condition="Control.HasFocus(102)">$LOCALIZE[19017]</value>
 		<value condition="Control.HasFocus(103)">$LOCALIZE[19040]</value>
-		<value condition="Control.HasFocus(104)">$LOCALIZE[32002]</value>
+		<value condition="Control.HasFocus(104)">$LOCALIZE[84102]</value>
 		<value condition="Control.HasFocus(105)">$LOCALIZE[137]</value>
 	</variable>
 	<variable name="PlayerControlsRepeatImageVar">
