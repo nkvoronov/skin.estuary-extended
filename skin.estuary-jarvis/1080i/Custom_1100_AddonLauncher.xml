@@ -12,11 +12,11 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="40FFFFFF">$VAR[AddonsFanartVar]</imagepath>
+			<imagepath background="true" colordiffuse="35FFFFFF">$VAR[AddonsFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(addoninformation)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
 			<control type="group">
 				<left>90</left>
 				<top>185</top>
@@ -216,7 +216,7 @@
 					<height>110</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<onclick>ActivateWindow(systemsettings)</onclick>
+					<onclick>ActivateWindow(systemsettings,addons)</onclick>
 					<font>font10</font>
 					<label>-</label>
 					<textoffsetx>40</textoffsetx>
@@ -264,7 +264,7 @@
 					<param name="container_path" value="addons://sources/executable/" />
 					<param name="container_target" value="programs" />
 				</include>
-				<include name="AddonLauncherPanel">
+				<include name="AddonLauncherPanel" condition="System.Platform.Android">
 					<param name="container_id" value="506" />
 					<param name="visible" value="Container(9000).HasFocus(4)" />
 					<param name="container_path" value="androidapps://" />
@@ -281,8 +281,8 @@
 				     <param name="visible" value="Container(9000).HasFocus(6)" />
 				     <param name="container_path" value="addons://outdated/" />
 				     <param name="container_target" value="" />
-				</include>
-				<include name="AddonLauncherPanel">
+				     </include>
+				     <include name="AddonLauncherPanel">
 				     <param name="container_id" value="505" />
 				     <param name="visible" value="Container(9000).HasFocus(7)" />
 				     <param name="container_path" value="addons://all/" />
@@ -303,42 +303,42 @@
 				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			</control>
+			<include name="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
+				<param name="breadcrumbs_icon" value="icons/settings/addons.png" />
+			</include>
+			<include>BottomBar</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="500" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="501" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="502" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="503" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="504" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="UpDownArrows">
+				<param name="container_id" value="505" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+			<include name="InfoList">
+				<param name="path" value="addons://outdated/" />
+				<param name="height" value="1" />
+				<param name="width" value="1" />
+				<param name="list_id" value="8000" />
+				<param name="item_label" value="" />
+			</include>
 		</control>
-		<include name="UpDownArrows">
-			<param name="container_id" value="500" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="UpDownArrows">
-			<param name="container_id" value="501" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="UpDownArrows">
-			<param name="container_id" value="502" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="UpDownArrows">
-			<param name="container_id" value="503" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="UpDownArrows">
-			<param name="container_id" value="504" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="UpDownArrows">
-			<param name="container_id" value="505" />
-			<param name="visible" value="!System.HasModalDialog" />
-		</include>
-		<include name="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
-			<param name="breadcrumbs_icon" value="icons/settings/addons.png" />
-		</include>
-		<include name="InfoList">
-			<param name="path" value="addons://outdated/" />
-			<param name="height" value="1" />
-			<param name="width" value="1" />
-			<param name="list_id" value="8000" />
-			<param name="item_label" value="" />
-		</include>
-		<include>BottomBar</include>
 	</controls>
 </window>

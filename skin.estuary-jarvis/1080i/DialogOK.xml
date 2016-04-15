@@ -16,7 +16,6 @@
 			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="textbox" id="9">
-			<description>text</description>
 			<left>30</left>
 			<top>82</top>
 			<width>855</width>
@@ -24,7 +23,7 @@
 			<label>-</label>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>        
-		<control type="grouplist">
+		<control type="grouplist" id="9000">
 			<orientation>horizontal</orientation>
 			<left>0</left>
 			<top>280</top>

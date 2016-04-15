@@ -7,12 +7,12 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<include>CommonScrollbars</include>
-		<control type="group" id="100">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(addoninformation) | Window.IsActive(pictureinfo)">Conditional</animation>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
 			<include>View_50_List</include>
 			<include>View_52_IconWall</include>
-			<include>View_53_Shift</include>
-			<include>View_54_InfoWall</include>
+			<include>View_53_Shift_Images</include>
+			<include>View_54_InfoWall_Images</include>
 			<include>View_55_WideList</include>
 			<include>View_500_SmallThumb</include>
 			<control type="group">
@@ -179,7 +179,6 @@
 						<param name="label" value="$LOCALIZE[21861]"/>
 						<param name="value" value="ListItem.PictureKeywords" />
 					</include>
-                    <!-- jarvis fix -->
 					<!-- <include name="PicsInfoLine">
 						<param name="label" value="$LOCALIZE[21843]"/>
 						<param name="value" value="$INFO[ListItem.PictureOrientation]" />
@@ -190,69 +189,65 @@
 					</include> -->
 				</control>
 			</control>
-		</control>
-		<control type="group">
-			<include>OpenClose_Left</include>
-			<visible>Window.IsActive(addoninformation) | Control.IsVisible(50) | Control.IsVisible(55)</visible>
-			<include>Visible_Left</include>
-			<visible>!Container.Content()</visible>
-			<include>ListThumbInfoPanel</include>
-		</control>
-		<include>MediaMenuMouseOverlay</include>
-		<control type="group">
-			<include>MediaMenuCommon</include>
-			<control type="grouplist" id="9000">
-				<top>90</top>
-				<include>MediaMenuListCommon</include>
-				<control type="label" id="203">
-					<description>Actions</description>
-					<include>MediaMenuLabelCommon</include>
-					<label>$LOCALIZE[31020]</label>
-				</control>
-				<control type="button" id="6">
-					<label>$LOCALIZE[13317]</label>
-					<include>MediaMenuItemsCommon</include>
-				</control>
-				<control type="button" id="7">
-					<label>$LOCALIZE[13318]</label>
-					<include>MediaMenuItemsCommon</include>
-				</control>
-				<control type="radiobutton" id="9">
-					<label>$LOCALIZE[13319]</label>
-					<include>MediaMenuItemsCommon</include>
-				</control>
-                
-				<control type="button" id="622">
-					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[31124]</label>
-					<onclick condition="System.HasAddon(script.maps.browser)">RunScript(script.maps.browser,folder=$INFO[Container.FolderPath])</onclick>
-                    <!-- jarvis fix -->
-					<!-- <onclick condition="!System.HasAddon(script.maps.browser)">InstallAddon(script.maps.browser)</onclick> -->
-					<!-- <visible>Container.Content(images) + IsEmpty(Container.PluginName)</visible> -->
-                    <visible>IsEmpty(Container.PluginName)</visible>
-				</control>
-				<control type="button" id="624">
-					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[10140]</label>
-					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-					<visible>!IsEmpty(Container.PluginName)</visible>
-				</control>
-				<control type="button" id="621">
-					<description>Get more</description>
-					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[21452]</label>
-					<onclick>ActivateWindow(addonbrowser,addons://sources/image/,return)</onclick>
-					<visible>Container.Content(addons)</visible>
-				</control>
-				<include>MediaMenuNowPlaying</include>
+			<control type="group">
+				<include>OpenClose_Left</include>
+				<visible>Control.IsVisible(50) | Control.IsVisible(55)</visible>
+				<include>Visible_Left</include>
+				<visible>!Container.Content()</visible>
+				<include>ListThumbInfoPanel</include>
 			</control>
+			<include>MediaMenuMouseOverlay</include>
+			<control type="group">
+				<include>MediaMenuCommon</include>
+				<control type="grouplist" id="9000">
+					<top>90</top>
+					<include>MediaMenuListCommon</include>
+					<control type="label" id="203">
+						<description>Actions</description>
+						<include>MediaMenuLabelCommon</include>
+						<label>$LOCALIZE[31020]</label>
+					</control>
+					<control type="button" id="6">
+						<label>$LOCALIZE[13317]</label>
+						<include>MediaMenuItemsCommon</include>
+					</control>
+					<control type="button" id="7">
+						<label>$LOCALIZE[13318]</label>
+						<include>MediaMenuItemsCommon</include>
+					</control>
+					<control type="radiobutton" id="9">
+						<label>$LOCALIZE[13319]</label>
+						<include>MediaMenuItemsCommon</include>
+					</control>
+					<control type="button" id="622">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[31124]</label>
+						<onclick condition="System.HasAddon(script.maps.browser)">RunScript(script.maps.browser,folder=$INFO[Container.FolderPath])</onclick>
+						<!-- <onclick condition="!System.HasAddon(script.maps.browser)">InstallAddon(script.maps.browser)</onclick> -->
+						<!-- <visible>Container.Content(images) + IsEmpty(Container.PluginName)</visible> -->
+                        <visible>IsEmpty(Container.PluginName)</visible>
+					</control>
+					<control type="button" id="624">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[10140]</label>
+						<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+						<visible>!IsEmpty(Container.PluginName)</visible>
+					</control>
+					<control type="button" id="621">
+						<description>Get more</description>
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[21452]</label>
+					    <onclick>ActivateWindow(addonbrowser,addons://sources/image/,return)</onclick>
+						<visible>Container.Content(addons)</visible>
+					</control>
+					<include>MediaMenuNowPlaying</include>
+				</control>
+			</control>
+			<include name="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[1213]" />
+				<param name="breadcrumbs_icon" value="icons/settings/pictures.png" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include name="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[1213]" />
-			<param name="breadcrumbs_icon" value="icons/settings/pictures.png" />
-		</include>
-		<include name="BottomBar">
-			<param name="info_visible" value="true" />
-		</include>
 	</controls>
 </window>

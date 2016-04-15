@@ -426,7 +426,7 @@
 						<radioposx>350</radioposx>
 						<label>$LOCALIZE[31005]</label>
 						<onclick>StereoModeToMono</onclick>
-						<selected>StringCompare(System.StereoscopicMode,9)</selected>
+						<selected>IntegerGreaterThan(System.StereoscopicMode,9)</selected>
 					</control>
 				</control>
 			</control>

@@ -16,7 +16,7 @@
 			<fadetime>400</fadetime>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<texture background="true" colordiffuse="40FFFFFF">$INFO[Player.Art(fanart)]</texture>
+			<texture background="true" colordiffuse="35FFFFFF">$INFO[Player.Art(fanart)]</texture>
 		</control>
 		<control type="image">
 			<texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
@@ -125,7 +125,6 @@
 					<texture colordiffuse="grey" fallback="empty.png">$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-                <!-- jarvis fix -->
 				<!-- <control type="image">
 					<left>280</left>
 					<top>1022</top>

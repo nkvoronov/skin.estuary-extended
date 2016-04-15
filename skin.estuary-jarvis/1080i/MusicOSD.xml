@@ -80,7 +80,6 @@
 				<ondown>noop</ondown>
 				<onleft>605</onleft>
 				<onright>600</onright>
-                <!-- jarvis fix -->
 				<!-- <control type="radiobutton" id="620">
 					<include name="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>

@@ -7,7 +7,7 @@
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<left>110</left>
@@ -312,7 +312,7 @@
 					<width>12</width>
 					<height>706</height>
 					<onleft>50</onleft>
-					<onright>4301</onright>
+					<onright>50</onright>
 					<orientation>vertical</orientation>
 				</control>
 			</control>
@@ -334,17 +334,17 @@
 				<param name="down_posy" value="912" />
 				<param name="visible" value="!System.HasModalDialog" />
 			</include>
+			<include>MediaMenuMouseOverlay</include>
+			<control type="group">
+				<include>MediaMenuCommon</include>
+				<include>PVRSideBar</include>
+			</control>
+			<include name="TopBar">
+				<param name="breadcrumbs_label" value="TV$INFO[Control.GetLabel(29), / ]$INFO[Control.GetLabel(30), / ]" />
+				<param name="breadcrumbs_icon" value="icons/settings/tvremote.png" />
+			</include>
+			<include>BottomBar</include>
 		</control>
-		<include>MediaMenuMouseOverlay</include>
-		<control type="group">
-			<include>MediaMenuCommon</include>
-			<include>PVRSideBar</include>
-		</control>
-		<include name="TopBar">
-			<param name="breadcrumbs_label" value="TV$INFO[Control.GetLabel(29), / ]$INFO[Control.GetLabel(30), / ]" />
-			<param name="breadcrumbs_icon" value="icons/settings/tvremote.png" />
-		</include>
-		<include>BottomBar</include>
 		<control type="label" id="29">
 			<font>-</font>
 			<include>HiddenObject</include>

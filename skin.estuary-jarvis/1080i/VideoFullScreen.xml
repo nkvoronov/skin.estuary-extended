@@ -52,7 +52,7 @@
 				</control>
 				<control type="grouplist">
 					<orientation>vertical</orientation>
-					<left>30</left>
+					<left>35</left>
 					<top>90</top>
 					<include name="LeftRightAlignedInfoLine">
 						<param name="label" value="$LOCALIZE[19012]" />

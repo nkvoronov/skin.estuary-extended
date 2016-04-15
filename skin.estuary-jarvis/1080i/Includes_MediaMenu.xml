@@ -109,11 +109,11 @@
 							<param name="area" value="Timers" />
 							<param name="icon" value="icons/submenu/timers.png" />
 						</include>
-						<include name="PVRQuickNavItemsCommon">
+						<!-- <include name="PVRQuickNavItemsCommon">
 							<param name="control_id" value="104" />
 							<param name="area" value="TimerRules" />
 							<param name="icon" value="icons/submenu/timer-rules.png" />
-						</include>
+						</include> -->
 						<include name="PVRQuickNavItemsCommon">
 							<param name="control_id" value="105" />
 							<param name="area" value="Search" />
@@ -332,7 +332,6 @@
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31023]</label>
 				<label2>[B]$INFO[Container.Viewmode][/B]</label2>
-                <!-- jarvis fix -->
 				<!-- <enable>IntegerGreaterThan(Container.ViewCount,1)</enable> -->
 				<onclick>Container.NextViewMode</onclick>
 			</control>
