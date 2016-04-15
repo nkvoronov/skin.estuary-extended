@@ -109,11 +109,11 @@
 							<param name="area" value="Timers" />
 							<param name="icon" value="icons/submenu/timers.png" />
 						</include>
-						<!-- <include name="PVRQuickNavItemsCommon">
+						<include name="PVRQuickNavItemsCommon">
 							<param name="control_id" value="104" />
-							<param name="area" value="TimerRules" />
+							<param name="area" value="Timers" />
 							<param name="icon" value="icons/submenu/timer-rules.png" />
-						</include> -->
+						</include>
 						<include name="PVRQuickNavItemsCommon">
 							<param name="control_id" value="105" />
 							<param name="area" value="Search" />
@@ -193,7 +193,7 @@
 				<control type="radiobutton" id="8">
 					<description>Hide disabled timers</description>
 					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[19077]</label>
+					<label>$LOCALIZE[34003]</label>
 					<visible>Window.IsActive(MyPVRTimers.xml)</visible>
 				</control>
 				<control type="group" id="141000">

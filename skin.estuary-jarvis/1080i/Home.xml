@@ -19,7 +19,7 @@
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
-        <!-- Background -->
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -35,7 +35,7 @@
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
-            <!-- MainContent -->
+			<!-- MainContent -->
 			<control type="group" id="2000">
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 					<effect type="slide" end="0,20" time="60" tween="sine" />
@@ -48,7 +48,7 @@
 				<top>78</top>
 				<left>20</left>
 				<include>OpenClose_Right</include>
-                <!-- Movies -->
+				<!-- Movies -->
 				<control type="group" id="5000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),movies)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -144,7 +144,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- TVShows -->
+				<!-- TVShows -->
 				<control type="group" id="6000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),tvshows)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -239,7 +239,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- Music -->
+				<!-- Music -->
 				<control type="group" id="7000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),music)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -355,7 +355,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- Addons -->
+				<!-- Addons -->
 				<control type="group" id="8000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),addons)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -379,10 +379,9 @@
 							<param name="item1_onclick" value="ActivateWindow(addonbrowser,root)" />
 							<param name="item1_icon" value="add-ons.png" />
 							<param name="item1_label" value="$LOCALIZE[10040]" />
-                            <param name="item2_vis" value="False" />
-						    <!-- <param name="item2_onclick" value="ActivateWindow(systemsettings,addons)" />
+						    <param name="item2_onclick" value="ActivateWindow(systemsettings)" />
 							<param name="item2_icon" value="settings.png" />
-							<param name="item2_label" value="$LOCALIZE[1045]" /> -->
+							<param name="item2_label" value="$LOCALIZE[1045]" />
 							<param name="item3_vis" value="False" />
 							<param name="item4_vis" value="False" />
 							<param name="item5_vis" value="False" />
@@ -452,7 +451,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- Video -->
+				<!-- Video -->
 				<control type="group" id="11000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),video)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -520,7 +519,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- LiveTV -->
+				<!-- LiveTV -->
 				<control type="group" id="12000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),livetv)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -554,10 +553,9 @@
 							<param name="item4_onclick" value="ActivateWindow(TVTimers)" />
 							<param name="item4_icon" value="timers.png" />
 							<param name="item4_label" value="$LOCALIZE[19040]" />
-                            <param name="item5_vis" value="False" />
-							<!-- <param name="item5_onclick" value="ActivateWindow(TVTimerRules)" />
+							<param name="item5_onclick" value="ActivateWindow(TVTimers)" />
 							<param name="item5_icon" value="timer-rules.png" />
-							<param name="item5_label" value="$LOCALIZE[32002]" /> -->
+							<param name="item5_label" value="$LOCALIZE[34002]" />
 							<param name="item6_onclick" value="ActivateWindow(TVSearch)" />
 							<param name="item6_icon" value="tv-search.png" />
 							<param name="item6_label" value="$LOCALIZE[137]" />
@@ -603,7 +601,7 @@
 						</control>
 					</control>
 				</control>
-                <!-- Radio -->
+				<!-- Radio -->
 				<control type="group" id="13000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),radio)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -636,10 +634,9 @@
 							<param name="item4_onclick" value="ActivateWindow(RadioTimers)" />
 							<param name="item4_icon" value="timers.png" />
 							<param name="item4_label" value="$LOCALIZE[19040]" />
-                            <param name="item5_vis" value="False" />
-							<!-- <param name="item5_onclick" value="ActivateWindow(RadioTimerRules)" />
+							<param name="item5_onclick" value="ActivateWindow(RadioTimers)" />
 							<param name="item5_icon" value="timer-rules.png" />
-							<param name="item5_label" value="$LOCALIZE[32002]" /> -->
+							<param name="item5_label" value="$LOCALIZE[34002]" />
 							<param name="item6_onclick" value="ActivateWindow(RadioSearch)" />
 							<param name="item6_icon" value="tv-search.png" />
 							<param name="item6_label" value="$LOCALIZE[137]" />
@@ -656,7 +653,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- Weather -->
+				<!-- Weather -->
 				<control type="group" id="15000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),weather)</visible>
 					<include>Visible_Right_Delayed</include>
@@ -798,7 +795,7 @@
 						</include>
 					</control>
 				</control>
-                <!-- Pictures -->
+				<!-- Pictures -->
 				<control type="group" id="4000">
 				    <visible>Stringcompare(Container(9000).ListItem.Property(id),pictures)</visible>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -822,12 +819,12 @@
 					</control>
 				</control>
 			</control>
-            <!-- TopBar -->
+			<!-- TopBar -->
 			<include name="TopBar">
 				<param name="breadcrumbs_label" value="" />
 				<param name="breadcrumbs_icon" value="" />
 			</include>
-            <!-- Logo -->
+			<!-- Logo -->
 			<control type="group">
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -849,9 +846,9 @@
 					<texture>icons/logo-text.png</texture>
 				</control>
 			</control>
-            <!-- BottomBar -->
+			<!-- BottomBar -->
 			<include>BottomBar</include>
-            <!-- LeftBar -->
+			<!-- LeftBar -->
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="radiobutton" id="900">
@@ -1024,7 +1021,7 @@
 							</control>
 						</itemlayout>
 						<content>
-                            <!-- Movies -->
+							<!-- Movies -->
 							<item>
 								<label>$LOCALIZE[342]</label>
 								<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
@@ -1034,7 +1031,7 @@
 								<property name="id">movies</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 							</item>
-                            <!-- TVShows -->
+							<!-- TVShows -->
 							<item>
 								<label>$LOCALIZE[20343]</label>
 								<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
@@ -1044,7 +1041,7 @@
 								<property name="id">tvshows</property>
 								<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 							</item>
-                            <!-- Music -->
+							<!-- Music -->
 							<item>
 								<label>$LOCALIZE[2]</label>
 								<label2>$LOCALIZE[133]: $INFO[Window(Home).Property(Music.ArtistsCount)]</label2>
@@ -1053,25 +1050,25 @@
 								<property name="id">music</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 							</item>
-                            <!-- TV -->
+							<!-- TV -->
 							<item>
 								<label>$LOCALIZE[19020]</label>
-                                <label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
+								<label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
 								<onclick>ActivateWindow(TVChannels)</onclick>
 								<thumb>icons/home/livetv.png</thumb>
 								<property name="id">livetv</property>
 								<visible>PVR.HasTVChannels</visible>
 							</item>
-                            <!-- Radio -->
+							<!-- Radio -->
 							<item>
 								<label>$LOCALIZE[19021]</label>
-                                <label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
+								<label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
 								<onclick>ActivateWindow(RadioChannels)</onclick>
 								<thumb>icons/home/radio.png</thumb>
 								<property name="id">radio</property>
 								<visible>PVR.HasRadioChannels</visible>
 							</item>
-                            <!-- Addons -->
+							<!-- Addons -->
 							<item>
 								<label>$LOCALIZE[24001]</label>
 								<onclick>ActivateWindow(1100)</onclick>
@@ -1079,7 +1076,7 @@
 								<property name="id">addons</property>
 								<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 							</item>
-                            <!-- Pictures -->
+							<!-- Pictures -->
 							<item>
 								<label>$LOCALIZE[1]</label>
 								<onclick>ActivateWindow(Pictures)</onclick>
@@ -1087,7 +1084,7 @@
 								<property name="id">pictures</property>
 								<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 							</item>
-                            <!-- Videos -->
+							<!-- Videos -->
 							<item>
 								<label>$LOCALIZE[3]</label>
 								<onclick>ActivateWindow(Videos,root)</onclick>
@@ -1095,10 +1092,10 @@
 								<property name="id">video</property>
 								<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 							</item>
-                            <!-- Weather -->
+							<!-- Weather -->
 							<item>
 								<label>$LOCALIZE[8]</label>
-                                <label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
+								<label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
 								<onclick>ActivateWindow(Weather)</onclick>
 								<thumb>icons/home/weather.png</thumb>
 								<property name="id">weather</property>
@@ -1107,7 +1104,7 @@
 						</content>
 					</control>
 				</control>
-                <!-- System menu -->
+				<!-- System menu -->
 				<control type="grouplist" id="700">
 					<orientation>horizontal</orientation>
 					<itemgap>-17</itemgap>
@@ -1139,46 +1136,46 @@
 					</include>
 				</control>
 			</control>
-            <!-- FullScreen -->
-            <control type="radiobutton" id="14200">
-                <top>995</top>
-                <left>35</left>
-                <width>420</width>
-                <height>95</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <onclick>FullScreen</onclick>
-                <label>$LOCALIZE[244]</label>
-                <ondown>900</ondown>
-                <onup>700</onup>
-                <radioposx>338</radioposx>
-                <textoffsetx>40</textoffsetx>
-                <radioposy>0</radioposy>
-                <radiowidth>34</radiowidth>
-                <radioheight>34</radioheight>
-                <texturefocus border="40">buttons/dialogbutton-fo.png</texturefocus>
-                <texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-                <textureradioonfocus>icons/now-playing/fullscreen.png</textureradioonfocus>
-                <textureradioonnofocus>icons/now-playing/fullscreen.png</textureradioonnofocus>
-                <textureradioofffocus>icons/now-playing/fullscreen.png</textureradioofffocus>
-                <textureradiooffnofocus>icons/now-playing/fullscreen.png</textureradiooffnofocus>
-                <selected>!Player.Paused</selected>
-                <visible>Player.hasMedia</visible>
-            </control>
-            <!-- RSS -->
-            <control type="rss">
-                <left>0</left>
-                <top>1041</top>
-                <height>30</height>
-                <width>1920</width>
-                <font>font12</font>
-                <urlset>1</urlset>
-                <titlecolor>button_focus</titlecolor>
-                <shadowcolor>text_shadow</shadowcolor>
-                <headlinecolor>FFC0C0C0</headlinecolor>
-                <textcolor>white</textcolor>
-                <visible>!Player.hasMedia</visible>
-            </control>
+			<!-- FullScreen -->
+			<control type="radiobutton" id="14200">
+				<top>995</top>
+				<left>35</left>
+				<width>420</width>
+				<height>95</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<onclick>FullScreen</onclick>
+				<label>$LOCALIZE[244]</label>
+				<ondown>900</ondown>
+				<onup>700</onup>
+				<radioposx>338</radioposx>
+				<textoffsetx>40</textoffsetx>
+				<radioposy>0</radioposy>
+				<radiowidth>34</radiowidth>
+				<radioheight>34</radioheight>
+				<texturefocus border="40">buttons/dialogbutton-fo.png</texturefocus>
+				<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+				<textureradioonfocus>icons/now-playing/fullscreen.png</textureradioonfocus>
+				<textureradioonnofocus>icons/now-playing/fullscreen.png</textureradioonnofocus>
+				<textureradioofffocus>icons/now-playing/fullscreen.png</textureradioofffocus>
+				<textureradiooffnofocus>icons/now-playing/fullscreen.png</textureradiooffnofocus>
+				<selected>!Player.Paused</selected>
+				<visible>Player.hasMedia</visible>
+			</control>
+			<!-- RSS -->
+			<control type="rss">
+				<left>0</left>
+				<top>1041</top>
+				<height>30</height>
+				<width>1920</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<titlecolor>button_focus</titlecolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<headlinecolor>FFC0C0C0</headlinecolor>
+				<textcolor>white</textcolor>
+				<visible>!Player.hasMedia</visible>
+			</control>
 		</control>
 	</controls>
 </window>

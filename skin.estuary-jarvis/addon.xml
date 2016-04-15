@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-jarvis" version="0.7.5.011" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
+<addon id="skin.estuary-jarvis" version="0.7.5.012" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
 	</requires>
 	<extension
-        point="xbmc.gui.skin"
-        defaultthemename="Textures.xbt"
-        debugging="false"
-        effectslowdown="1.0">
+		point="xbmc.gui.skin"
+		defaultthemename="Textures.xbt"
+		debugging="false"
+		effectslowdown="1.0">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
 	</extension>
 	<extension point="xbmc.addon.metadata">

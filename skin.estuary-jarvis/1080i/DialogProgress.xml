@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<left>502</left>
 		<top>345</top>
@@ -10,9 +11,8 @@
 		<include name="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="915" />
 			<param name="DialogBackgroundHeight" value="380" />
-            <param name="DialogHeaderLabel" value="" />
+			<param name="DialogHeaderLabel" value="" />
 			<param name="DialogHeaderId" value="1" />
-			<param name="CloseButtonNav" value="10" />
 		</include>
 		<control type="textbox" id="9">
 			<left>30</left>
@@ -39,6 +39,6 @@
 				<param name="id" value="10" />
 				<param name="label" value="$LOCALIZE[222]" />
 			</include>
-		</control>        
+		</control>
 	</controls>
 </window>

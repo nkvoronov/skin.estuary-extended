@@ -216,7 +216,7 @@
 					<height>110</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<onclick>ActivateWindow(systemsettings,addons)</onclick>
+					<onclick>ActivateWindow(systemsettings)</onclick>
 					<font>font10</font>
 					<label>-</label>
 					<textoffsetx>40</textoffsetx>

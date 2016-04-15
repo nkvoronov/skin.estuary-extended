@@ -335,7 +335,7 @@
 		<value>$LOCALIZE[3]</value>
 	</variable>
 	<variable name="BreadcrumbsPVRTimerVar">
-		<value condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">$LOCALIZE[32002]</value>
+		<value condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">$LOCALIZE[34002]</value>
 		<value>$LOCALIZE[19040]</value>
 	</variable>
 	<variable name="RepeatButtonColordiffuseVar">

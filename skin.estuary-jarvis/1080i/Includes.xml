@@ -16,8 +16,8 @@
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
-    <include file="DialogMusicInfo.xml" />
-    <include file="MyPlaylist.xml" />
+	<include file="DialogMusicInfo.xml" />
+	<include file="MyPlaylist.xml" />
 	<constant name="FanartCrossfadeTime">400</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<constant name="DepthDialog">0.50</constant>
