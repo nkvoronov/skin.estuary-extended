@@ -563,3 +563,23 @@ msgstr "Правила таймера"
 msgctxt "#84103"
 msgid "Hide disabled"
 msgstr "Скрыть запрещенные"
+
+msgctxt "#84104"
+msgid "Apply"
+msgstr "Применить"
+
+msgctxt "#84105"
+msgid "Apply immediately"
+msgstr "Применить сразу"
+
+msgctxt "#84106"
+msgid "Input oversampling"
+msgstr "Вх. передискретизация"
+
+msgctxt "#84107"
+msgid "Preprocessing"
+msgstr "Пред. обработка"
+
+msgctxt "#84108"
+msgid "Output oversampling"
+msgstr "Вы. передискретизация"

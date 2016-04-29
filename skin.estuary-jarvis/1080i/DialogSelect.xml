@@ -83,7 +83,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="125" width="880">
@@ -100,7 +100,7 @@
 						<top>0</top>
 						<width>880</width>
 						<height>125</height>
-						<texture>lists/focus.png</texture>
+						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
@@ -127,8 +127,7 @@
 						<width>700</width>
 						<height>60</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>
 			</control>

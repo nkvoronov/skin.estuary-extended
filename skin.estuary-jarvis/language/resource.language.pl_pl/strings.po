@@ -21,8 +21,8 @@ msgid "Now playing"
 msgstr "Teraz odtwarzane"
 
 msgctxt "#31001"
-msgid "Search"
-msgstr "Szukaj"
+msgid "Search..."
+msgstr "Szukaj..."
 
 msgctxt "#31002"
 msgid "Show media fanart as background"

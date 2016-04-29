@@ -700,3 +700,23 @@ msgstr ""
 msgctxt "#84103"
 msgid "Hide disabled"
 msgstr ""
+
+msgctxt "#84104"
+msgid "Apply"
+msgstr ""
+
+msgctxt "#84105"
+msgid "Apply immediately"
+msgstr ""
+
+msgctxt "#84106"
+msgid "Input oversampling"
+msgstr ""
+
+msgctxt "#84107"
+msgid "Preprocessing"
+msgstr ""
+
+msgctxt "#84108"
+msgid "Output oversampling"
+msgstr ""

@@ -67,8 +67,7 @@
 						<height>50</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
-						<!-- 						<visible>!ListItem.Property(ActiveChannel)</visible>
-						 -->
+                        <!-- <visible>!ListItem.Property(ActiveChannel)</visible> -->						
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -95,7 +94,7 @@
 						<top>0</top>
 						<width>600</width>
 						<height>70</height>
-						<texture>lists/focus.png</texture>
+						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
 					</control>
 					<control type="image">
@@ -257,7 +256,8 @@
 			<include name="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="5" />
-				<param name="label" value="$LOCALIZE[14070]" />
+				<!-- <param name="label" value="$LOCALIZE[14070]" /> -->
+                <param name="label" value="$LOCALIZE[84104]" />
 			</include>
 			<include name="DefaultDialogButton">
 				<param name="width" value="350" />

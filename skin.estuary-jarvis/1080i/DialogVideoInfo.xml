@@ -29,6 +29,7 @@
 				</control>
 				<control type="group">
 				<visible>Stringcompare(ListItem.DBType,episode) + !IsEmpty(ListItem.Thumb)</visible>
+                <visible>!IsEmpty(ListItem.Thumb) + !Stringcompare(ListItem.Thumb,ListItem.Art(poster))</visible>
 					<control type="image">
 						<left>4</left>
 						<top>4</top>
@@ -197,16 +198,21 @@
 						<param name="label" value="[COLOR button_focus]$LOCALIZE[31017]: [/COLOR]$INFO[ListItem.Mpaa]" />
 						<param name="visible" value="!IsEmpty(ListItem.Mpaa)" />
 					</include>
-					<!-- <include name="InfoDialogMetadata">
+					<include name="InfoDialogMetadata">
 						<param name="control_id" value="157" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[20141]: [/COLOR]$INFO[ListItem.Set]" />
+						<param name="label" value="[COLOR button_focus]$LOCALIZE[31133]: [/COLOR]$INFO[ListItem.Set]" />
 						<param name="visible" value="!IsEmpty(ListItem.Set)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="157" />
 						<param name="label" value="[COLOR button_focus]$LOCALIZE[20459]: [/COLOR]$INFO[ListItem.Tag]" />
 						<param name="visible" value="!IsEmpty(ListItem.Tag)" />
-					</include> -->
+					</include>
+					<include content="InfoDialogMetadata">
+						<param name="control_id" value="157" />
+						<param name="label" value="[COLOR button_focus]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
+						<param name="visible" value="!IsEmpty(ListItem.Status)" />
+					</include>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -265,7 +271,7 @@
 								<left>20</left>
 								<width>224</width>
 								<height>277</height>
-								<texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -317,7 +323,7 @@
 								<left>20</left>
 								<width>224</width>
 								<height>277</height>
-								<texture>$INFO[ListItem.Thumb]</texture>
+								<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Thumb]</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -414,6 +420,7 @@
 							<onleft>440</onleft>
 							<onright>101</onright>
 							<onup>140</onup>
+                            <enable>IsEmpty(Container.PluginName)</enable>
 							<ondown condition="Stringcompare(Container(5000).CurrentItem,1)">SetFocus(50,0)</ondown>
 							<ondown condition="Stringcompare(Container(5000).CurrentItem,2)">SetFocus(50,1)</ondown>
 							<ondown condition="Stringcompare(Container(5000).CurrentItem,3)">SetFocus(50,2)</ondown>
