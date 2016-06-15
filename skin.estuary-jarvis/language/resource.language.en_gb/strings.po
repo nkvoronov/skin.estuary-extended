@@ -693,6 +693,8 @@ msgctxt "#31312"
 msgid "Current scraper"
 msgstr ""
 
+# extended added value
+
 msgctxt "#84102"
 msgid "Timer rules"
 msgstr ""
@@ -720,3 +722,33 @@ msgstr ""
 msgctxt "#84108"
 msgid "Output oversampling"
 msgstr ""
+
+msgctxt "#84200"
+msgid "List of add-ons"
+msgstr ""
+
+msgctxt "#84201"
+msgid "List of TV and radio"
+msgstr ""
+
+msgctxt "#84202"
+msgid "Custom list of add-ons"
+msgstr ""
+
+msgctxt "#84203"
+msgid "Custom list of TV and radio channels"
+msgstr ""
+
+msgctxt "#84204"
+msgid "Enable custom list of add-ons"
+msgstr ""
+
+msgctxt "#84205"
+msgid "Enable custom list of TV and radio channels"
+msgstr ""
+
+msgctxt "#84206"
+msgid "Channel"
+msgstr ""
+
+

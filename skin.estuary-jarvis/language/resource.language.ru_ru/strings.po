@@ -556,6 +556,8 @@ msgctxt "#31312"
 msgid "Current scraper"
 msgstr "Текущий инфоресурс"
 
+# extended added value
+
 msgctxt "#84102"
 msgid "Timer rules"
 msgstr "Правила таймера"
@@ -583,3 +585,32 @@ msgstr "Пред. обработка"
 msgctxt "#84108"
 msgid "Output oversampling"
 msgstr "Вы. передискретизация"
+
+msgctxt "#84200"
+msgid "List of add-ons"
+msgstr "Cписок дополнений"
+
+msgctxt "#84201"
+msgid "List of TV and radio"
+msgstr "Cписок тв и радио"
+
+
+msgctxt "#84202"
+msgid "Custom list of add-ons"
+msgstr "Пользовательский список дополнений"
+
+msgctxt "#84203"
+msgid "Custom list of TV and radio channels"
+msgstr "Пользовательский список тв и радио каналов"
+
+msgctxt "#84204"
+msgid "Enable custom list of add-ons"
+msgstr "Разрешить пользовательский список дополнений"
+
+msgctxt "#84205"
+msgid "Enable custom list of TV and radio channels"
+msgstr "Разрешить пользовательский список тв и радио каналов"
+
+msgctxt "#84206"
+msgid "Channel"
+msgstr "Канал"

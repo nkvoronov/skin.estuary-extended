@@ -40,6 +40,16 @@
 						<label>$LOCALIZE[31061]</label>
 						<onclick>noop</onclick>
 					</item>
+                    <item id="3">
+						<label>$LOCALIZE[84200]</label>
+                        <visible>Skin.HasSetting(enable_custom_list_addons)</visible>
+						<onclick>noop</onclick>
+					</item>
+                    <item id="4">
+						<label>$LOCALIZE[84201]</label>
+                        <visible>Skin.HasSetting(enable_custom_list_channels)</visible>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
 		</control>
@@ -136,6 +146,20 @@
 					<onclick>Skin.SetImage(custom_background)</onclick>
 					<enable>Skin.HasSetting(use_custom_bg)</enable>
 				</control>
+                <control type="radiobutton" id="608">
+					<label>$LOCALIZE[84204]</label>
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
+					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
+				</control>
+                <control type="radiobutton" id="609">
+					<label>$LOCALIZE[84205]</label>
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(enable_custom_list_channels)</onclick>
+					<selected>Skin.HasSetting(enable_custom_list_channels)</selected>
+				</control>
 			</control>
 			<control type="grouplist" id="610">
 				<left>442</left>
@@ -197,6 +221,110 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 				</control>
 			</control>
+            <include name="UpDownArrows">
+				<param name="container_id" value="1000" />
+				<param name="posx" value="1045" />
+				<param name="up_posy" value="130" />
+				<param name="down_posy" value="910" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+            <control type="grouplist" id="1000">
+				<left>442</left>
+				<top>160</top>
+				<width>1256</width>
+				<height>610</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>610</onup>
+				<ondown>610</ondown>
+				<visible>Container(9000).HasFocus(3)</visible>
+                <control type="radiobutton" id="1100">
+                    <label>$LOCALIZE[1037]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_addons_video)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons_video)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsVideoSettings">
+                    <param name="id2" value="11" />
+                </include>
+                <control type="radiobutton" id="1200">
+                    <label>$LOCALIZE[1038]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_addons_audio)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons_audio)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsAudioSettings">
+                    <param name="id2" value="21" />
+                </include>
+                <control type="radiobutton" id="1300">
+                    <label>$LOCALIZE[1043]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_addons_programs)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons_programs)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsProgramsSettings">
+                    <param name="id2" value="31" />
+                </include>
+                <control type="radiobutton" id="1400">
+                    <label>$LOCALIZE[20244]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_addons_apps)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons_apps)</onclick>
+                    <visible>System.Platform.Android</visible>
+                </control>
+                <control type="radiobutton" id="1500">
+                    <label>$LOCALIZE[1039]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_addons_image)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_addons_image)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsImageSettings">
+                    <param name="id2" value="51" />
+                </include>
+            </control>
+            <include name="UpDownArrows">
+				<param name="container_id" value="2000" />
+				<param name="posx" value="1045" />
+				<param name="up_posy" value="130" />
+				<param name="down_posy" value="910" />
+				<param name="visible" value="!System.HasModalDialog" />
+			</include>
+            <control type="grouplist" id="2000">
+				<left>442</left>
+				<top>160</top>
+				<width>1256</width>
+				<height>610</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>610</onup>
+				<ondown>610</ondown>
+				<visible>Container(9000).HasFocus(4)</visible>
+                <control type="radiobutton" id="2100">
+                    <label>$LOCALIZE[19020]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_channels_tv)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_channels_tv)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsTVSettings">
+                    <param name="id2" value="11" />
+                </include>
+                <control type="radiobutton" id="2200">
+                    <label>$LOCALIZE[19021]</label>
+                    <width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <selected>Skin.HasSetting(enable_custom_list_channels_radio)</selected>
+					<onclick>Skin.ToggleSetting(enable_custom_list_channels_radio)</onclick>
+                </control>
+                <include name="HomeMainCustomWidgetsRadioSettings">
+                    <param name="id2" value="21" />
+                </include>
+            </control>
 			<control type="textbox" id="6">
 				<description>description area</description>
 				<left>480</left>

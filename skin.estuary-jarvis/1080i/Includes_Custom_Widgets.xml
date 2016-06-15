@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="HomeMainCustomWidgetsVideoSettings">
+        <control type="button" id="1$PARAM[id2]0">
+            <label>- $LOCALIZE[24000] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]1">
+            <label>- $LOCALIZE[24000] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.0.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]2">
+            <label>- $LOCALIZE[24000] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.1.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]3">
+            <label>- $LOCALIZE[24000] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.2.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]4">
+            <label>- $LOCALIZE[24000] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.3.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]5">
+            <label>- $LOCALIZE[24000] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.4.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]6">
+            <label>- $LOCALIZE[24000] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.5.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]7">
+            <label>- $LOCALIZE[24000] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.6.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]8">
+            <label>- $LOCALIZE[24000] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.7.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]9">
+            <label>- $LOCALIZE[24000] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetVideo.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectVideoAddons">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_video)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetVideo.8.Label))</visible>
+        </control>
+    </include>
+    <include name="HomeMainCustomWidgetsAudioSettings">
+        <control type="button" id="1$PARAM[id2]0">
+            <label>- $LOCALIZE[24000] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]1">
+            <label>- $LOCALIZE[24000] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.0.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]2">
+            <label>- $LOCALIZE[24000] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.1.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]3">
+            <label>- $LOCALIZE[24000] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.2.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]4">
+            <label>- $LOCALIZE[24000] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.3.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]5">
+            <label>- $LOCALIZE[24000] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.4.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]6">
+            <label>- $LOCALIZE[24000] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.5.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]7">
+            <label>- $LOCALIZE[24000] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.6.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]8">
+            <label>- $LOCALIZE[24000] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.7.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]9">
+            <label>- $LOCALIZE[24000] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetAudio.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectAudioAddons">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_audio)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetAudio.8.Label))</visible>
+        </control>
+    </include>
+    <include name="HomeMainCustomWidgetsProgramsSettings">
+        <control type="button" id="1$PARAM[id2]0">
+            <label>- $LOCALIZE[24000] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]1">
+            <label>- $LOCALIZE[24000] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.0.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]2">
+            <label>- $LOCALIZE[24000] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.1.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]3">
+            <label>- $LOCALIZE[24000] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.2.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]4">
+            <label>- $LOCALIZE[24000] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.3.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]5">
+            <label>- $LOCALIZE[24000] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.4.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]6">
+            <label>- $LOCALIZE[24000] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.5.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]7">
+            <label>- $LOCALIZE[24000] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.6.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]8">
+            <label>- $LOCALIZE[24000] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.7.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]9">
+            <label>- $LOCALIZE[24000] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetPrograms.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectProgramsAddons">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_programs)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetPrograms.8.Label))</visible>
+        </control>
+    </include>
+    <include name="HomeMainCustomWidgetsImageSettings">
+        <control type="button" id="1$PARAM[id2]0">
+            <label>- $LOCALIZE[24000] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]1">
+            <label>- $LOCALIZE[24000] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.0.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]2">
+            <label>- $LOCALIZE[24000] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.1.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]3">
+            <label>- $LOCALIZE[24000] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.2.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]4">
+            <label>- $LOCALIZE[24000] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.3.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]5">
+            <label>- $LOCALIZE[24000] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.4.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]6">
+            <label>- $LOCALIZE[24000] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.5.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]7">
+            <label>- $LOCALIZE[24000] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.6.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]8">
+            <label>- $LOCALIZE[24000] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.7.Label))</visible>
+        </control>
+        <control type="button" id="1$PARAM[id2]9">
+            <label>- $LOCALIZE[24000] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(AddonSetImage.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectImageAddons">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_addons_image)</visible>
+            <visible>!IsEmpty(Skin.String(AddonSetImage.8.Label))</visible>
+        </control>
+    </include>
+    <include name="HomeMainCustomWidgetsTVSettings">
+        <control type="button" id="2$PARAM[id2]0">
+            <label>- $LOCALIZE[84206] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]1">
+            <label>- $LOCALIZE[84206] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.0.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]2">
+            <label>- $LOCALIZE[84206] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.1.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]3">
+            <label>- $LOCALIZE[84206] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.2.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]4">
+            <label>- $LOCALIZE[84206] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.3.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]5">
+            <label>- $LOCALIZE[84206] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.4.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]6">
+            <label>- $LOCALIZE[84206] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.5.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]7">
+            <label>- $LOCALIZE[84206] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.6.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]8">
+            <label>- $LOCALIZE[84206] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.7.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]9">
+            <label>- $LOCALIZE[84206] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelTV.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectTVChannels">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_tv)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelTV.8.Label))</visible>
+        </control>
+    </include>
+    <include name="HomeMainCustomWidgetsRadioSettings">
+        <control type="button" id="2$PARAM[id2]0">
+            <label>- $LOCALIZE[84206] [B]1[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.0.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="0" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]1">
+            <label>- $LOCALIZE[84206] [B]2[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.1.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="1" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.0.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]2">
+            <label>- $LOCALIZE[84206] [B]3[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.2.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="2" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.1.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]3">
+            <label>- $LOCALIZE[84206] [B]4[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.3.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="3" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.2.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]4">
+            <label>- $LOCALIZE[84206] [B]5[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.4.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="4" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.3.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]5">
+            <label>- $LOCALIZE[84206] [B]6[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.5.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="5" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.4.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]6">
+            <label>- $LOCALIZE[84206] [B]7[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.6.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="6" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.5.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]7">
+            <label>- $LOCALIZE[84206] [B]8[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.7.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="7" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.6.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]8">
+            <label>- $LOCALIZE[84206] [B]9[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.8.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="8" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.7.Label))</visible>
+        </control>
+        <control type="button" id="2$PARAM[id2]9">
+            <label>- $LOCALIZE[84206] [B]10[/B]</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(ChannelRadio.9.Label)][/COLOR]</label2>
+            <width>1256</width>
+			<include>DefaultSettingButton</include>
+			<include name="HomeMainCustomWidgetsSelectRadioChannels">
+                <param name="id1" value="9" />
+            </include>
+            <visible>Skin.HasSetting(enable_custom_list_channels_radio)</visible>
+            <visible>!IsEmpty(Skin.String(ChannelRadio.8.Label))</visible>
+        </control>        
+    </include>
+    <include name="HomeMainCustomWidgetsSelectVideoAddons">
+        <onclick>Skin.Reset(UsrSelectAddon)</onclick>
+        <onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.video)</onclick>
+        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick condition="IsEmpty(Skin.String(AddonSetVideo.$PARAM[id1].Label))">Skin.SetString(AddonSetVideo.$PARAM[id1].Label)</onclick>
+    </include>
+    <include name="HomeMainCustomWidgetsSelectAudioAddons">
+        <onclick>Skin.Reset(UsrSelectAddon)</onclick>
+        <onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.audio)</onclick>
+        <onclick>Skin.SetString(AddonSetAudio.$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSetAudio.$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+        <onclick>Skin.SetString(AddonSetAudio.$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick condition="IsEmpty(Skin.String(AddonSetAudio.$PARAM[id1].Label))">Skin.SetString(AddonSetAudio.$PARAM[id1].Label)</onclick>
+    </include>
+    <include name="HomeMainCustomWidgetsSelectProgramsAddons">
+        <onclick>Skin.Reset(UsrSelectAddon)</onclick>
+        <onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.executable)</onclick>
+        <onclick>Skin.SetString(AddonSetPrograms.$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSetPrograms.$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+        <onclick>Skin.SetString(AddonSetPrograms.$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick condition="IsEmpty(Skin.String(AddonSetPrograms.$PARAM[id1].Label))">Skin.SetString(AddonSetPrograms.$PARAM[id1].Label)</onclick>
+    </include>
+    <include name="HomeMainCustomWidgetsSelectImageAddons">
+        <onclick>Skin.Reset(UsrSelectAddon)</onclick>
+        <onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.image)</onclick>
+        <onclick>Skin.SetString(AddonSetImage.$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSetImage.$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+        <onclick>Skin.SetString(AddonSetImage.$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick condition="IsEmpty(Skin.String(AddonSetImage.$PARAM[id1].Label))">Skin.SetString(AddonSetImage.$PARAM[id1].Label)</onclick>
+    </include>
+    <include name="HomeMainCustomWidgetsSelectTVChannels">
+        <onclick>Skin.Reset(UsrSelectChannel)</onclick>
+        <onclick condition="IsEmpty(Skin.String(ChannelTV.$PARAM[id1].Label))">Skin.SetString(ChannelTV.$PARAM[id1].Label)</onclick>
+    </include>
+    <include name="HomeMainCustomWidgetsSelectRadioChannels">
+        <onclick>Skin.Reset(UsrSelectChannel)</onclick>
+        <onclick condition="IsEmpty(Skin.String(ChannelRadio.$PARAM[id1].Label))">Skin.SetString(ChannelRadio.$PARAM[id1].Label)</onclick>
+    </include>
+	<include name="HomeCustomAddonsItems">
+        <content>
+            <item id="1">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].0.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].0.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</icon>                
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].0.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].0.Name))</visible>
+            </item>
+            <item id="2">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].1.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].1.Name)])</onclick>                
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].1.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].1.Name))</visible>
+            </item>
+            <item id="3">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].2.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].2.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].2.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].2.Name))</visible>
+            </item>
+            <item id="4">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].3.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].3.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].3.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].3.Name))</visible>
+            </item>
+            <item id="5">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].4.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].4.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].4.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].4.Name))</visible>
+            </item>
+            <item id="6">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].5.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].5.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].5.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].5.Name))</visible>
+            </item>
+            <item id="7">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].6.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].6.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].6.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].6.Name))</visible>
+            </item>
+            <item id="8">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].7.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].7.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].7.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].7.Name))</visible>
+            </item>
+            <item id="9">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].8.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].8.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].8.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].8.Name))</visible>
+            </item>
+            <item id="10">
+                <label>$INFO[Skin.String(AddonSet$PARAM[id2].9.Label)]</label>
+                <onclick>RunAddon($INFO[Skin.String(AddonSet$PARAM[id2].9.Name)])</onclick>
+                <icon>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</icon>
+                <thumb>-</thumb>
+                <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].9.Name))]</property>
+                <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].9.Name))</visible>
+            </item>
+        </content>
+	</include>
+	<include name="HomeCustomChannelsItems">
+        <content>
+            <item id="1">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].0.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].0.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].0.Path))</visible>
+            </item>
+            <item id="2">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].1.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].1.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].1.Path))</visible>
+            </item>
+            <item id="3">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].2.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].2.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].2.Path))</visible>
+            </item>
+            <item id="4">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].3.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].3.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].3.Path))</visible>
+            </item>
+            <item id="5">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].4.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].4.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].4.Path))</visible>
+            </item>
+            <item id="6">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].5.Label)]</label>
+                <onclick>SetProperty(MenuBackground,$VAR[SubMenuItemBackground],Home)</onclick>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].5.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].5.Path))</visible>
+            </item>
+            <item id="7">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].6.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].6.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].6.Path))</visible>
+            </item>
+            <item id="8">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].7.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].7.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].7.Path))</visible>
+            </item>
+            <item id="9">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].8.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].8.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].8.Path))</visible>
+            </item>
+            <item id="10">
+                <label>$INFO[Skin.String(Channel$PARAM[id2].9.Label)]</label>
+                <onclick>$INFO[Skin.String(Channel$PARAM[id2].9.Path)]</onclick>
+                <icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
+                <thumb>-</thumb>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].9.Path))</visible>
+            </item>
+        </content>
+	</include>
+	<include name="WidgetCustomListSquare">
+		<param name="height">405</param>
+		<param name="sub_label">$INFO[ListItem.Label]</param>
+		<param name="visible">True</param>
+		<param name="main_label">$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Artist]$INFO[ListItem.Property(AddonVersion),[COLOR button_focus],[/COLOR]]</param>
+		<definition>
+			<control type="group">
+				<description>Square Widget including header and arrows</description>
+				<height>$PARAM[height]</height>
+				<left>0</left>
+				<visible>$PARAM[visible]</visible>
+				<visible>IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<include name="LeftRightArrows">
+					<param name="posy" value="200" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
+				<control type="label">
+					<left>500</left>
+					<top>15</top>
+					<width>600</width>
+					<height>40</height>
+					<label>$PARAM[widget_header]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>55</top>
+					<width>1372</width>
+					<height>400</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>noop</onright>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+					<onup>$PARAM[onup_id]</onup>
+					<ondown>$PARAM[ondown_id]</ondown>
+					<onback>SetFocus(9000)</onback>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="343" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
+                            <aspectratio>keep</aspectratio>
+							<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="group">
+							<left>20</left>
+							<top>20</top>
+							<control type="image">
+								<left>0</left>
+								<top>240</top>
+								<width>300</width>
+								<height>60</height>
+								<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>238</top>
+								<width>260</width>
+								<label>$PARAM[sub_label]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>266</top>
+								<width>260</width>
+								<label>$PARAM[main_label]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="textbox">
+								<left>10</left>
+								<top>237</top>
+								<width>280</width>
+								<height>60</height>
+								<aligny>center</aligny>
+								<label>$PARAM[single_label]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="343" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>340</width>
+								<height>340</height>
+                                <aspectratio>keep</aspectratio>
+								<texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<control type="image">
+									<left>0</left>
+									<top>240</top>
+									<width>300</width>
+									<height>60</height>
+									<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>238</top>
+									<width>280</width>
+									<label>$PARAM[sub_label]</label>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>266</top>
+									<width>280</width>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<label>$PARAM[main_label]</label>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="textbox">
+									<left>10</left>
+									<top>237</top>
+									<width>280</width>
+									<height>60</height>
+									<aligny>center</aligny>
+									<label>$PARAM[single_label]</label>
+									<font>font10</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>300</width>
+									<height>300</height>
+									<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+									<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+									<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+                    <include name="HomeCustomAddonsItems">
+                        <param name="id2" value="$PARAM[widget_target]" />
+                    </include>
+				</control>
+			</control>
+		</definition>
+	</include>    
+</includes>

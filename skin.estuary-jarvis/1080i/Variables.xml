@@ -227,6 +227,8 @@
 	<variable name="SkinSettingsHelpTextVar">
 		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[31129]</value>
 		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[31130]</value>
+        <value condition="Container(9000).HasFocus(3)">$LOCALIZE[84202]</value>
+        <value condition="Container(9000).HasFocus(4)">$LOCALIZE[84203]</value>
 	</variable>
 	<variable name="DSPManagerHelpTextVar">
 		<value condition="Control.HasFocus(20)">$INFO[Container(20).ListItem.Property(Description)]</value>
