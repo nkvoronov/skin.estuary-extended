@@ -456,7 +456,7 @@
 							<param name="list_id" value="8400"/>
 							<param name="onup_id" value="8350"/>
 							<param name="ondown_id" value="8500"/>
-							<param name="visible" value="System.Platform.Android"/>
+							<param name="visible" value="System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_apps)]"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="addons://sources/image/"/>
@@ -606,8 +606,18 @@
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12200"/>
 							<param name="onup_id" value="12900"/>
+							<param name="ondown_id" value="12250"/>
+							<param name="height" value="540"/>
+                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)]"/>
+						</include>
+                        <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels">
+							<param name="widget_header" value="$LOCALIZE[84207]"/>
+							<param name="widget_target" value="TV"/>
+							<param name="list_id" value="12250"/>
+							<param name="onup_id" value="12200"/>
 							<param name="ondown_id" value="20001"/>
 							<param name="height" value="540"/>
+                            <param name="visible" value="Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)"/>
 						</include>
 						<control type="grouplist">
 							<height>218</height>
@@ -687,7 +697,16 @@
 							<param name="widget_target" value="files"/>
 							<param name="list_id" value="13200"/>
 							<param name="onup_id" value="13900"/>
+							<param name="ondown_id" value="13250"/>
+                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)]"/>
+						</include>
+                        <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels">
+							<param name="widget_header" value="$LOCALIZE[84208]"/>
+							<param name="widget_target" value="Radio"/>
+							<param name="list_id" value="13250"/>
+							<param name="onup_id" value="13200"/>
 							<param name="ondown_id" value="20001"/>
+                            <param name="visible" value="Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)"/>
 						</include>
 					</control>
 				</control>

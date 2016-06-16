@@ -848,12 +848,14 @@
 		<param name="arrow_posy">200</param>
 		<param name="item_limit">10</param>
 		<param name="icon">icons/defaulticons/$INFO[ListItem.Icon]</param>
+        <param name="visible">True</param>
 		<definition>
 			<control type="group">
 				<description>Square Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<top>0</top>
+                <visible>$PARAM[visible]</visible>
 				<visible>IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<control type="label">
 					<left>500</left>

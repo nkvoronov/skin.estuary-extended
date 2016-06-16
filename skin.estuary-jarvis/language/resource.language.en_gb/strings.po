@@ -751,4 +751,10 @@ msgctxt "#84206"
 msgid "Channel"
 msgstr ""
 
+msgctxt "#84207"
+msgid "Selected TV Channels"
+msgstr ""
 
+msgctxt "#84208"
+msgid "Selected Radio Channels"
+msgstr ""

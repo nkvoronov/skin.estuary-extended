@@ -159,6 +159,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_custom_list_channels)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_channels)</selected>
+                    <visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="610">
