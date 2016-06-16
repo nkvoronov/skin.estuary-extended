@@ -146,14 +146,14 @@
 					<onclick>Skin.SetImage(custom_background)</onclick>
 					<enable>Skin.HasSetting(use_custom_bg)</enable>
 				</control>
-                <control type="radiobutton" id="608">
+                <control type="radiobutton" id="609">
 					<label>$LOCALIZE[84204]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-                <control type="radiobutton" id="609">
+                <control type="radiobutton" id="610">
 					<label>$LOCALIZE[84205]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
