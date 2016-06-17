@@ -239,35 +239,26 @@
 				<onup>610</onup>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(3)</visible>
-                <control type="radiobutton" id="1100">
-                    <label>$LOCALIZE[1037]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_addons_video)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_addons_video)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsVideoSettings">
-                    <param name="id2" value="11" />
+                <include name="HomeMainCustomWidgetsAddonsSettings">
+                    <param name="id1" value="11" />
+                    <param name="title" value="$LOCALIZE[1037]" />
+                    <param name="flags" value="enable_custom_list_addons_video" />
+                    <param name="setadonnstype" value="Video" />
+                    <param name="type" value="xbmc.addon.video" />
                 </include>
-                <control type="radiobutton" id="1200">
-                    <label>$LOCALIZE[1038]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_addons_audio)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_addons_audio)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsAudioSettings">
-                    <param name="id2" value="21" />
+                <include name="HomeMainCustomWidgetsAddonsSettings">
+                    <param name="id1" value="12" />
+                    <param name="title" value="$LOCALIZE[1038]" />
+                    <param name="flags" value="enable_custom_list_addons_audio" />
+                    <param name="setadonnstype" value="Audio" />
+                    <param name="type" value="xbmc.addon.audio" />
                 </include>
-                <control type="radiobutton" id="1300">
-                    <label>$LOCALIZE[1043]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_addons_programs)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_addons_programs)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsProgramsSettings">
-                    <param name="id2" value="31" />
+                <include name="HomeMainCustomWidgetsAddonsSettings">
+                    <param name="id1" value="13" />
+                    <param name="title" value="$LOCALIZE[1043]" />
+                    <param name="flags" value="enable_custom_list_addons_programs" />
+                    <param name="setadonnstype" value="Programs" />
+                    <param name="type" value="xbmc.addon.executable" />
                 </include>
                 <control type="radiobutton" id="1400">
                     <label>$LOCALIZE[20244]</label>
@@ -277,15 +268,12 @@
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons_apps)</onclick>
                     <visible>System.Platform.Android</visible>
                 </control>
-                <control type="radiobutton" id="1500">
-                    <label>$LOCALIZE[1039]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_addons_image)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_addons_image)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsImageSettings">
-                    <param name="id2" value="51" />
+                <include name="HomeMainCustomWidgetsAddonsSettings">
+                    <param name="id1" value="15" />
+                    <param name="title" value="$LOCALIZE[1039]" />
+                    <param name="flags" value="enable_custom_list_addons_image" />
+                    <param name="setadonnstype" value="Image" />
+                    <param name="type" value="xbmc.addon.image" />
                 </include>
             </control>
             <include name="UpDownArrows">
@@ -305,25 +293,19 @@
 				<onup>610</onup>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(4)</visible>
-                <control type="radiobutton" id="2100">
-                    <label>$LOCALIZE[19020]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_channels_tv)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_channels_tv)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsTVSettings">
-                    <param name="id2" value="11" />
+                <include name="HomeMainCustomWidgetsChannelsSettings">
+                    <param name="id1" value="21" />
+                    <param name="title" value="$LOCALIZE[19020]" />
+                    <param name="flags" value="enable_custom_list_channels_tv" />
+                    <param name="setchannelstype" value="TV" />
+                    <param name="type" value="0" />
                 </include>
-                <control type="radiobutton" id="2200">
-                    <label>$LOCALIZE[19021]</label>
-                    <width>1256</width>
-					<include>DefaultSettingButton</include>
-                    <selected>Skin.HasSetting(enable_custom_list_channels_radio)</selected>
-					<onclick>Skin.ToggleSetting(enable_custom_list_channels_radio)</onclick>
-                </control>
-                <include name="HomeMainCustomWidgetsRadioSettings">
-                    <param name="id2" value="21" />
+                <include name="HomeMainCustomWidgetsChannelsSettings">
+                    <param name="id1" value="22" />
+                    <param name="title" value="$LOCALIZE[19021]" />
+                    <param name="flags" value="enable_custom_list_channels_radio" />
+                    <param name="setchannelstype" value="Radio" />
+                    <param name="type" value="1" />
                 </include>
             </control>
 			<control type="textbox" id="6">
