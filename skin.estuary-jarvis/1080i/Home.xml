@@ -484,7 +484,7 @@
 							<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
 							<param name="button_id" value="8600"/>
 							<param name="visible" value="!IntegerGreaterThan(Container(8100).NumItems,0) + !IntegerGreaterThan(Container(8200).NumItems,0) + !IntegerGreaterThan(Container(8300).NumItems,0) + !IntegerGreaterThan(Container(8400).NumItems,0) + !IntegerGreaterThan(Container(8500).NumItems,0)"/>
-                            <param name="visible" value="!IntegerGreaterThan(Container(8150).NumItems,0) + !IntegerGreaterThan(Container(8250).NumItems,0) + !IntegerGreaterThan(Container(8350).NumItems,0) + !IntegerGreaterThan(Container(8450).NumItems,0) + !IntegerGreaterThan(Container(8550).NumItems,0)"/>
+                            <param name="visible" value="!IntegerGreaterThan(Container(8150).NumItems,0) + !IntegerGreaterThan(Container(8250).NumItems,0) + !IntegerGreaterThan(Container(8350).NumItems,0) + !IntegerGreaterThan(Container(8550).NumItems,0)"/>
 							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
 						</include>
 					</control>
