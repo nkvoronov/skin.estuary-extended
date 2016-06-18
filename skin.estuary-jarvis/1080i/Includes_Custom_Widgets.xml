@@ -18,6 +18,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="0" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -30,6 +31,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="1" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -43,6 +45,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="2" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -56,6 +59,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="3" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -69,6 +73,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="4" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -82,6 +87,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="5" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -95,6 +101,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="6" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -108,6 +115,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="7" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -121,6 +129,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="8" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -134,6 +143,7 @@
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
                 <param name="type" value="$PARAM[type]" />
+                <param name="adonnstype" value="$PARAM[setadonnstype]" />
                 <param name="id1" value="9" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
@@ -144,9 +154,9 @@
     <include name="HomeMainCustomWidgetsSelectAddons">
         <onclick>Skin.Reset(UsrSelectAddon)</onclick>
         <onclick>Skin.SetAddon(UsrSelectAddon,$PARAM[type])</onclick>
-        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
-        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
-        <onclick>Skin.SetString(AddonSetVideo.$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSet$PARAM[adonnstype].$PARAM[id1].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
+        <onclick>Skin.SetString(AddonSet$PARAM[adonnstype].$PARAM[id1].Name,$INFO[Skin.String(UsrSelectAddon)])</onclick>
+        <onclick>Skin.SetString(AddonSet$PARAM[adonnstype].$PARAM[id1].Icon,$INFO[system.addonicon(Skin.String(UsrSelectAddon))])</onclick>
     </include>    
     <!-- ContentAddonsWidgets -->
 	<include name="HomeCustomAddonsItems">
