@@ -534,9 +534,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].0.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].0.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].0.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].0.Path))</visible>
             </item>
             <item id="2">
@@ -545,9 +545,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].1.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].1.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].1.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].1.Path))</visible>
             </item>
             <item id="3">
@@ -556,9 +556,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].2.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].2.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].2.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].2.Path))</visible>
             </item>
             <item id="4">
@@ -567,9 +567,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].3.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].3.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].3.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].3.Path))</visible>
             </item>
             <item id="5">
@@ -578,9 +578,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].4.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].4.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].4.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].4.Path))</visible>
             </item>
             <item id="6">
@@ -589,9 +589,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].5.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].5.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].5.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].5.Path))</visible>
             </item>
             <item id="7">
@@ -600,9 +600,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].6.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].6.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].6.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].6.Path))</visible>
             </item>
             <item id="8">
@@ -611,9 +611,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].7.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].7.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].7.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].7.Path))</visible>
             </item>
             <item id="9">
@@ -622,9 +622,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].8.Number)]</property>
-                <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].8.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].8.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].8.Path))</visible>
             </item>
             <item id="10">
@@ -633,9 +633,9 @@
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
                 <thumb>-</thumb>
                 <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].9.Number)]</property>
-               <property name="StartTime">$INFO[System.Time]</property>
-                <property name="EndTime">$INFO[System.Time]</property>
-                <property name="Title">$INFO[Skin.String(Channel$PARAM[id2].9.Number)]</property>
+                <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.StartTime)]</property>
+                <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.EndTime)]</property>
+                <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].9.Title)]</property>
                 <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].9.Path))</visible>
             </item>
         </content>
@@ -712,8 +712,7 @@
 							<top>350</top>
 							<width>260</width>
 							<height>100</height>
-							<!-- <label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label> -->
-                            <label></label>
+							<label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -765,8 +764,7 @@
 								<top>350</top>
 								<width>260</width>
 								<height>100</height>
-								<!-- <label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label> -->
-                                <label></label>
+								<label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
