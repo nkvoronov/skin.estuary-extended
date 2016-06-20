@@ -391,7 +391,8 @@
 							<param name="item7_vis" value="False" />
 							<param name="item8_vis" value="False" />
 						</include>
-						<include name="WidgetListSquare">
+                        <!-- Video Addons -->
+						<include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)]" name="WidgetListSquare">
 							<param name="content_path" value="addons://sources/video/"/>
 							<param name="widget_header" value="$LOCALIZE[1037]"/>
 							<param name="widget_target" value="videos"/>
@@ -399,55 +400,52 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8100"/>
 							<param name="onup_id" value="8900"/>
-							<param name="ondown_id" value="8150"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)]"/>
+							<param name="ondown_id" value="8200"/>
 						</include>
-                        <include name="WidgetCustomListSquare">
+                        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)" name="WidgetCustomListSquare">
 							<param name="widget_header" value="$LOCALIZE[1037]"/>
 							<param name="widget_target" value="Video"/>
-							<param name="list_id" value="8150"/>
-							<param name="onup_id" value="8100"/>
+							<param name="list_id" value="8100"/>
+							<param name="onup_id" value="8900"/>
 							<param name="ondown_id" value="8200"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_video)"/>
 						</include>
-						<include name="WidgetListSquare">
+                        <!-- Audio Addons -->
+						<include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)]" name="WidgetListSquare">
 							<param name="content_path" value="addons://sources/audio/"/>
 							<param name="widget_header" value="$LOCALIZE[1038]"/>
 							<param name="widget_target" value="music"/>
 							<param name="sortby" value="lastused"/>
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8200"/>
-							<param name="onup_id" value="8150"/>
-							<param name="ondown_id" value="8250"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)]"/>
+							<param name="onup_id" value="8100"/>
+							<param name="ondown_id" value="8300"/>
 						</include>
-                        <include name="WidgetCustomListSquare">
+                        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)" name="WidgetCustomListSquare">
 							<param name="widget_header" value="$LOCALIZE[1038]"/>
 							<param name="widget_target" value="Audio"/>
-							<param name="list_id" value="8250"/>
-							<param name="onup_id" value="8200"/>
+							<param name="list_id" value="8200"/>
+							<param name="onup_id" value="8100"/>
 							<param name="ondown_id" value="8300"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_audio)"/>
 						</include>
-						<include name="WidgetListSquare">
+                        <!-- Programs Addons -->
+						<include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)]" name="WidgetListSquare">
 							<param name="content_path" value="addons://sources/executable/"/>
 							<param name="widget_header" value="$LOCALIZE[1043]"/>
 							<param name="widget_target" value="programs"/>
 							<param name="sortby" value="lastused"/>
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8300"/>
-							<param name="onup_id" value="8250"/>
-							<param name="ondown_id" value="8350"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)]"/>
+							<param name="onup_id" value="8200"/>
+							<param name="ondown_id" value="8400"/>
 						</include>
-                        <include name="WidgetCustomListSquare">
+                        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)" name="WidgetCustomListSquare">
 							<param name="widget_header" value="$LOCALIZE[1043]"/>
 							<param name="widget_target" value="Programs"/>
-							<param name="list_id" value="8350"/>
-							<param name="onup_id" value="8300"/>
+							<param name="list_id" value="8300"/>
+							<param name="onup_id" value="8200"/>
 							<param name="ondown_id" value="8400"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_programs)"/>
 						</include>
+                        <!-- Android Apps -->
 						<include name="WidgetListSquare">
 							<param name="content_path" value="androidapp://sources/apps/"/>
 							<param name="widget_header" value="$LOCALIZE[20244]"/>
@@ -455,11 +453,12 @@
 							<param name="sortby" value="lastused"/>
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8400"/>
-							<param name="onup_id" value="8350"/>
+							<param name="onup_id" value="8300"/>
 							<param name="ondown_id" value="8500"/>
 							<param name="visible" value="System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_apps)]"/>
 						</include>
-						<include name="WidgetListSquare">
+                        <!-- Images Addons -->
+						<include condition="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)]" name="WidgetListSquare">
 							<param name="content_path" value="addons://sources/image/"/>
 							<param name="widget_header" value="$LOCALIZE[1039]"/>
 							<param name="widget_target" value="pictures"/>
@@ -467,17 +466,16 @@
 							<param name="sortorder" value="descending"/>
 							<param name="list_id" value="8500"/>
 							<param name="onup_id" value="8400"/>
-							<param name="ondown_id" value="8550"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)]"/>
+							<param name="ondown_id" value="20001"/>
 						</include>
-                        <include name="WidgetCustomListSquare">
+                        <include condition="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)" name="WidgetCustomListSquare">
 							<param name="widget_header" value="$LOCALIZE[1039]"/>
 							<param name="widget_target" value="Image"/>
-							<param name="list_id" value="8550"/>
-							<param name="onup_id" value="8500"/>
+							<param name="list_id" value="8500"/>
+							<param name="onup_id" value="8400"/>
 							<param name="ondown_id" value="20001"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_addons)+Skin.HasSetting(enable_custom_list_addons_image)"/>
-						</include>                        
+						</include>
+                        <!-- No Addons -->                        
 						<include name="ImageWidget">
 							<param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31119]" />
@@ -485,7 +483,6 @@
 							<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
 							<param name="button_id" value="8600"/>
 							<param name="visible" value="!IntegerGreaterThan(Container(8100).NumItems,0) + !IntegerGreaterThan(Container(8200).NumItems,0) + !IntegerGreaterThan(Container(8300).NumItems,0) + !IntegerGreaterThan(Container(8400).NumItems,0) + !IntegerGreaterThan(Container(8500).NumItems,0)"/>
-                            <param name="visible" value="!IntegerGreaterThan(Container(8150).NumItems,0) + !IntegerGreaterThan(Container(8250).NumItems,0) + !IntegerGreaterThan(Container(8350).NumItems,0) + !IntegerGreaterThan(Container(8550).NumItems,0)"/>
 							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
 						</include>
 					</control>
@@ -601,24 +598,22 @@
 							<param name="item7_vis" value="False" />
 							<param name="item8_vis" value="False" />
 						</include>
-						<include name="WidgetListChannels" condition="PVR.HasTVChannels">
+						<include name="WidgetListChannels" condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)]">
 							<param name="content_path" value="pvr://channels/tv/All channels/"/>
 							<param name="widget_header" value="$LOCALIZE[31016]"/>
 							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12200"/>
 							<param name="onup_id" value="12900"/>
-							<param name="ondown_id" value="12250"/>
-							<param name="height" value="540"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)]"/>
-						</include>
-                        <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels">
-							<param name="widget_header" value="$LOCALIZE[84207]"/>
-							<param name="widget_target" value="TV"/>
-							<param name="list_id" value="12250"/>
-							<param name="onup_id" value="12200"/>
 							<param name="ondown_id" value="20001"/>
 							<param name="height" value="540"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)"/>
+						</include>
+                        <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)">
+							<param name="widget_header" value="$LOCALIZE[84207]"/>
+							<param name="widget_target" value="TV"/>
+							<param name="list_id" value="12200"/>
+							<param name="onup_id" value="12900"/>
+							<param name="ondown_id" value="20001"/>
+							<param name="height" value="540"/>
 						</include>
 						<control type="grouplist">
 							<height>218</height>
@@ -692,22 +687,20 @@
 							<param name="item7_vis" value="False" />
 							<param name="item8_vis" value="False" />
 						</include>
-						<include name="WidgetListChannels" condition="PVR.HasRadioChannels">
+						<include name="WidgetListChannels" condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)]">
 							<param name="content_path" value="pvr://channels/radio/All channels/"/>
 							<param name="widget_header" value="$LOCALIZE[31018]"/>
 							<param name="widget_target" value="files"/>
 							<param name="list_id" value="13200"/>
 							<param name="onup_id" value="13900"/>
-							<param name="ondown_id" value="13250"/>
-                            <param name="visible" value="![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)]"/>
+							<param name="ondown_id" value="20001"/>
 						</include>
-                        <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels">
+                        <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)">
 							<param name="widget_header" value="$LOCALIZE[84208]"/>
 							<param name="widget_target" value="Radio"/>
-							<param name="list_id" value="13250"/>
-							<param name="onup_id" value="13200"/>
+							<param name="list_id" value="13200"/>
+							<param name="onup_id" value="13900"/>
 							<param name="ondown_id" value="20001"/>
-                            <param name="visible" value="Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)"/>
 						</include>
 					</control>
 				</control>

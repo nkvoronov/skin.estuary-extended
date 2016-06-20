@@ -616,9 +616,9 @@ msgid "Channel"
 msgstr "Канал"
 
 msgctxt "#84207"
-msgid "Selected TV Channels"
-msgstr "Выбранные ТВ каналы"
+msgid "Favorites TV Channels"
+msgstr "Избранные ТВ каналы"
 
 msgctxt "#84208"
-msgid "Selected Radio Channels"
-msgstr "Выбранные Радио каналы"
+msgid "Favorites Radio Channels"
+msgstr "Избранные Радио каналы"
