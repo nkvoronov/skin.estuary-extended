@@ -159,7 +159,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_custom_list_channels)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_channels)</selected>
-                    <visible>System.HasAddon(script.pvrchannels.select)</visible>
+                    <visible>System.HasAddon(script.pvr.favourites)</visible>
                     <visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
 			</control>
