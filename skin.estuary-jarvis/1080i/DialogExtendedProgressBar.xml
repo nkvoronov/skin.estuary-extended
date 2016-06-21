@@ -56,7 +56,7 @@
 					<description>Header label</description>
 					<left>0</left>
 					<top>0</top>
-					<width min="0" max="120">auto</width>
+					<width min="0" max="680">auto</width>
 					<height>120</height>
 					<font>font12</font>
 					<label>$INFO[Control.GetLabel(32),: ,%]</label>

@@ -83,7 +83,7 @@
 					<control type="grouplist" id="6056">
 						<orientation>horizontal</orientation>
 						<itemgap>-24</itemgap>
-						<left>5</left>
+						<left>35</left>
 						<height>95</height>
 						<onleft>6056</onleft>
 						<onright>50</onright>
@@ -109,11 +109,6 @@
 							<param name="control_id" value="103" />
 							<param name="area" value="Timers" />
 							<param name="icon" value="icons/submenu/timers.png" />
-						</include>
-						<include name="PVRQuickNavItemsCommon">
-							<param name="control_id" value="104" />
-							<param name="area" value="Timers" />
-							<param name="icon" value="icons/submenu/timer-rules.png" />
 						</include>
 						<include name="PVRQuickNavItemsCommon">
 							<param name="control_id" value="105" />
