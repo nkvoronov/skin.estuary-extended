@@ -167,6 +167,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</icon>                
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].0.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].0.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].0.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].0.Name))</visible>
             </item>
             <item id="2">
@@ -175,6 +176,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].1.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].1.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].1.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].1.Name))</visible>
             </item>
             <item id="3">
@@ -183,6 +185,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].2.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].2.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].2.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].2.Name))</visible>
             </item>
             <item id="4">
@@ -191,6 +194,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].3.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].3.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].3.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].3.Name))</visible>
             </item>
             <item id="5">
@@ -199,6 +203,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].4.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].4.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].4.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].4.Name))</visible>
             </item>
             <item id="6">
@@ -207,6 +212,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].5.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].5.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].5.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].5.Name))</visible>
             </item>
             <item id="7">
@@ -215,6 +221,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].6.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].6.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].6.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].6.Name))</visible>
             </item>
             <item id="8">
@@ -223,6 +230,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].7.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].7.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].7.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].7.Name))</visible>
             </item>
             <item id="9">
@@ -231,6 +239,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].8.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].8.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].8.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].8.Name))</visible>
             </item>
             <item id="10">
@@ -239,6 +248,7 @@
                 <icon>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</icon>
                 <thumb>$INFO[Skin.String(AddonSet$PARAM[id2].9.Icon)]</thumb>
                 <property name="AddonVersion">$INFO[system.addonversion(Skin.String(AddonSet$PARAM[id2].9.Name))]</property>
+                <property name="AddonFanart">special://home/addons/$INFO[Skin.String(AddonSet$PARAM[id2].9.Name)]/fanart.jpg</property>
                 <visible>!IsEmpty(Skin.String(AddonSet$PARAM[id2].9.Name))</visible>
             </item>
         </content>
