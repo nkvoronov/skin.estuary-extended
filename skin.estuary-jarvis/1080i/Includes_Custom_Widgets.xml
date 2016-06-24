@@ -434,6 +434,7 @@
 			<include>DefaultSettingButton</include>
             <selected>Skin.HasSetting($PARAM[flags])</selected>
             <onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels01 -->
         <control type="button" id="$PARAM[id1]01">
@@ -443,6 +444,7 @@
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].0)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels02 -->
         <control type="button" id="$PARAM[id1]02">
@@ -453,6 +455,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].1)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].0.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels03 -->
         <control type="button" id="$PARAM[id1]03">
@@ -463,6 +466,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].2)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].1.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels04 -->
         <control type="button" id="$PARAM[id1]04">
@@ -473,6 +477,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].3)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].2.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels05 -->
         <control type="button" id="$PARAM[id1]05">
@@ -483,6 +488,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].4)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].3.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels06 -->
         <control type="button" id="$PARAM[id1]06">
@@ -493,6 +499,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].5)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].4.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels07 -->
         <control type="button" id="$PARAM[id1]07">
@@ -503,6 +510,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].6)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].5.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels08 -->
         <control type="button" id="$PARAM[id1]08">
@@ -513,6 +521,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].7)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].6.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels09 -->
         <control type="button" id="$PARAM[id1]09">
@@ -523,6 +532,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].8)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].7.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels10 -->
         <control type="button" id="$PARAM[id1]10">
@@ -533,6 +543,7 @@
 			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].9)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].8.Label))</visible>
+            <visible>$PARAM[visible]</visible>
         </control>
     </include>
     <!-- ContentChannelsWidgets -->

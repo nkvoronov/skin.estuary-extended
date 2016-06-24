@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-jarvis" version="0.7.9.032" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
+<addon id="skin.estuary-jarvis" version="0.7.9.033" name="Estuary-jarvis" provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
-        <import addon="script.pvr.favourites" version="1.0.4"/>
+        <import addon="script.pvr.favourites" version="1.0.5"/>
 	</requires>
 	<extension
 		point="xbmc.gui.skin"
