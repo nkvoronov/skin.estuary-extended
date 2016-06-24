@@ -330,7 +330,7 @@ msgstr "Следующее местоположение"
 
 msgctxt "#31079"
 msgid "Cast not available"
-msgstr ""
+msgstr "Актеры не доступены"
 
 msgctxt "#31080"
 msgid "Ends at"
@@ -490,7 +490,7 @@ msgstr "Ввойти в браузер дополнений"
 
 msgctxt "#31119"
 msgid "You do not have any add-ons installed yet. Visit our add-on browser to browse through our collection and improve your Kodi experience."
-msgstr "Нет установленных дополнений. Откройте браузер дополнений, чтобы просмотреть нашу коллекцию и улучшить Коди."
+msgstr "Нет установленных дополнений. Откройте браузер дополнений, чтобы просмотреть нашу коллекцию и улучшить KODI."
 
 msgctxt "#31120"
 msgid "You did not set up a weather provider yet. In order to view weather information, choose a weather provider and set up your location."
