@@ -259,18 +259,6 @@
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,[COLOR button_focus]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR button_focus]E,: [/COLOR]]$INFO[VideoPlayer.TVShowTitle]</value>
 		<value>$INFO[VideoPlayer.Genre]</value>
 	</variable>
-	<variable name="AddonsFanartVar">
-		<value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
-		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
-		<value condition="!IsEmpty(Container(500).ListItem.Art(fanart)) + Control.HasFocus(500)">$INFO[Container(500).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(501).ListItem.Art(fanart)) + Control.HasFocus(501)">$INFO[Container(501).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(502).ListItem.Art(fanart)) + Control.HasFocus(502)">$INFO[Container(502).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(503).ListItem.Art(fanart)) + Control.HasFocus(503)">$INFO[Container(503).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(504).ListItem.Art(fanart)) + Control.HasFocus(504)">$INFO[Container(504).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(505).ListItem.Art(fanart)) + Control.HasFocus(505)">$INFO[Container(505).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value>-</value>
-	</variable>
 	<variable name="HomeFanartVar">
 		<value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
@@ -310,9 +298,16 @@
 		<value condition="!IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
+    <variable name="FanartHomeTypeVar">
+        <value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value>-</value>
+    </variable>
 	<variable name="WeatherFanartVar">
-		<value condition="!IsEmpty(Window(weather).Property(current.fanartcode)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(weather).Property(current.fanartcode)]</value>
-		<value>$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(weather).Property(fanartcode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+        <value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + IsEmpty(Skin.String(WeatherFanart.path))">$INFO[Skin.String(HomeFanart.path)]weather$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Window(weather).Property(Current.FanartCode)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(weather).Property(Current.FanartCode)]</value>
+		<value>$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(weather).Property(Day0.FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>        
 	</variable>
 	<variable name="ListWatchedIconVar">
 		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>

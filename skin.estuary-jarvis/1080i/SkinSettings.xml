@@ -122,7 +122,7 @@
 					<onclick>Skin.ToggleSetting(no_fanart)</onclick>
 					<selected>!Skin.HasSetting(no_fanart)</selected>
 				</control>
-				<control type="button" id="608">
+				<control type="button" id="606">
 					<label>$LOCALIZE[31131]</label>
 					<label2>$INFO[Skin.String(HomeFanart.name)]</label2>
 					<width>1256</width>
@@ -130,14 +130,22 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-				<control type="radiobutton" id="606">
+                <control type="button" id="607">
+					<label>$LOCALIZE[84209]</label>
+					<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
+                    <enable>!Skin.HasSetting(no_fanart)</enable>
+				</control>
+				<control type="radiobutton" id="610">
 					<label>$LOCALIZE[31108]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(use_custom_bg)</onclick>
 					<selected>Skin.HasSetting(use_custom_bg)</selected>
 				</control>
-				<control type="button" id="607">
+				<control type="button" id="611">
 					<label>$LOCALIZE[31109]</label>
 					<label2>$INFO[Skin.String(custom_background)]</label2>
 					<width>1256</width>
@@ -145,14 +153,14 @@
 					<onclick>Skin.SetImage(custom_background)</onclick>
 					<enable>Skin.HasSetting(use_custom_bg)</enable>
 				</control>
-                <control type="radiobutton" id="609">
+                <control type="radiobutton" id="612">
 					<label>$LOCALIZE[84204]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-                <control type="radiobutton" id="610">
+                <control type="radiobutton" id="613">
 					<label>$LOCALIZE[84205]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>

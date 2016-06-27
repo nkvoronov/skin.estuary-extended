@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1100">
 	<defaultcontrol>9000</defaultcontrol>
+    <onload>SetProperty(FanartHomeType,addons,home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
-		<control type="multiimage">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>600</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="35FFFFFF">$VAR[AddonsFanartVar]</imagepath>
-			<visible>!Player.HasMedia</visible>
-		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
 			<control type="group">
@@ -112,6 +101,7 @@
 					<content>
 						<item id="1">
 							<label>$LOCALIZE[1037]</label>
+                            <onclick>SetProperty(FanartHomeType,video,home)</onclick>
 							<onclick>ActivateWindow(videos,addons://sources/video/,return)</onclick>
 							<thumb>icons/settings/video.png</thumb>
 							<property name="id">video</property>
@@ -119,6 +109,7 @@
 						</item>
 						<item id="2">
 							<label>$LOCALIZE[1038]</label>
+                            <onclick>SetProperty(FanartHomeType,music,home)</onclick>
 							<onclick>ActivateWindow(music,addons://sources/audio/,return)</onclick>
 							<thumb>icons/settings/music.png</thumb>
 							<property name="id">music</property>
@@ -126,6 +117,7 @@
 						</item>
 						<item id="3">
 							<label>$LOCALIZE[1043]</label>
+                            <onclick>SetProperty(FanartHomeType,addons,home)</onclick>
 							<onclick>ActivateWindow(programs,addons://sources/executable/,return)</onclick>
 							<thumb>icons/settings/appearance.png</thumb>
 							<property name="id">addons</property>
@@ -133,6 +125,7 @@
 						</item>
 						<item id="4">
 							<label>$LOCALIZE[1043]</label>
+                            <onclick>SetProperty(FanartHomeType,addons,home)</onclick>
 							<onclick>ActivateWindow(programs,androidapps://,return)</onclick>
 							<thumb>icons/settings/android.png</thumb>
 							<property name="id">android</property>
@@ -141,17 +134,12 @@
 						</item>
 						<item id="5">
 							<label>$LOCALIZE[1039]</label>
+                            <onclick>SetProperty(FanartHomeType,pictures,home)</onclick>
 							<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
 							<thumb>icons/settings/pictures.png</thumb>
 							<property name="id">pictures</property>
 							<property name="path">addons://sources/executable/</property>
 						</item>
-						<!-- <item id="6">
-						     <label>Available Updates</label>
-						     <onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
-						     <thumb>icons/settings/update-available.png</thumb>
-						     <property name="id">outdated</property>
-						</item> -->
 					</content>
 				</control>
 			</control>
@@ -276,18 +264,6 @@
 					<param name="container_path" value="addons://sources/image/" />
 					<param name="container_target" value="pictures" />
 				</include>
-				<!-- <include name="AddonLauncherPanel">
-				     <param name="container_id" value="504" />
-				     <param name="visible" value="Container(9000).HasFocus(6)" />
-				     <param name="container_path" value="addons://outdated/" />
-				     <param name="container_target" value="" />
-				     </include>
-				     <include name="AddonLauncherPanel">
-				     <param name="container_id" value="505" />
-				     <param name="visible" value="Container(9000).HasFocus(7)" />
-				     <param name="container_path" value="addons://all/" />
-				     <param name="container_target" value="" />
-				</include> -->
 			</control>
 			<control type="scrollbar" id="531">
 				<left>1907</left>

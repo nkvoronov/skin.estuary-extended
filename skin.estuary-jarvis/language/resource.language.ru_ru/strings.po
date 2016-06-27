@@ -622,3 +622,8 @@ msgstr "Избранные ТВ каналы"
 msgctxt "#84208"
 msgid "Favorites Radio Channels"
 msgstr "Избранные Радио каналы"
+
+msgctxt "#84209"
+msgid "Choose weather fanart pack"
+msgstr "Выбрать фанарт пакет для погоды"
+

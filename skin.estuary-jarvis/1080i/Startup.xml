@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls />
+	<defaultcontrol always="true">10</defaultcontrol>
+    <controls>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+		</control>
+	</controls>
 </window>

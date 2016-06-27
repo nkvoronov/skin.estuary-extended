@@ -758,3 +758,7 @@ msgstr ""
 msgctxt "#84208"
 msgid "Favorites Radio Channels"
 msgstr ""
+
+msgctxt "#84209"
+msgid "Choose weather fanart pack"
+msgstr ""

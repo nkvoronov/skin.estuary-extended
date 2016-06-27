@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol>9000</defaultcontrol>
+    <onload condition="!IsEmpty(Window(home).Property(FanartHomeType))">ClearProperty(FanartHomeType,home)</onload>
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">XBMC.RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
@@ -71,27 +72,35 @@
 							<param name="list_id" value="5900"/>
 							<param name="ondown_id" value="5100"/>
 							<param name="visible" value="Library.HasContent(movies)"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item1_onclick" value="ActivateWindow(videos,RecentlyAddedMovies,return)" />
 							<param name="item1_icon" value="recentlyadded.png" />
 							<param name="item1_label" value="$LOCALIZE[20386]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item2_onclick" value="ActivateWindow(videos,MovieYears,return)" />
 							<param name="item2_icon" value="years.png" />
 							<param name="item2_label" value="$LOCALIZE[652]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item3_onclick" value="ActivateWindow(videos,MovieSets,return)" />
 							<param name="item3_icon" value="sets.png" />
 							<param name="item3_label" value="$LOCALIZE[31075]" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item4_onclick" value="ActivateWindow(videos,MovieGenres,return)" />
 							<param name="item4_icon" value="genres.png" />
 							<param name="item4_label" value="$LOCALIZE[135]" />
+                            <param name="item5_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item5_onclick" value="ActivateWindow(videos,MovieActors,return)" />
 							<param name="item5_icon" value="actors.png" />
 							<param name="item5_label" value="$LOCALIZE[344]" />
+                            <param name="item6_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item6_onclick" value="ActivateWindow(videos,MovieTags,return)" />
 							<param name="item6_icon" value="tags.png" />
 							<param name="item6_label" value="$LOCALIZE[20459]" />
+                            <param name="item7_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item7_onclick" value="ActivateWindow(videos,library://video/movies/,return)" />
 							<param name="item7_icon" value="media.png" />
 							<param name="item7_label" value="$LOCALIZE[31074]" />
+                            <param name="item8_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(video)" />
 							<param name="item8_icon" value="updatelibrary.png" />
 							<param name="item8_label" value="$LOCALIZE[653]" />
@@ -136,6 +145,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/movie.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31104]" />
 							<param name="button_label" value="$LOCALIZE[31110]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 							<param name="button_id" value="5500"/>
 							<param name="visible" value="!Library.HasContent(movies)"/>
@@ -166,27 +176,35 @@
 							<param name="list_id" value="6900"/>
 							<param name="ondown_id" value="6100"/>
 							<param name="visible" value="Library.HasContent(tvshows)"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item1_onclick" value="ActivateWindow(Videos,RecentlyAddedEpisodes,return)" />
 							<param name="item1_icon" value="recentlyadded.png" />
 							<param name="item1_label" value="$LOCALIZE[20387]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item2_onclick" value="ActivateWindow(Videos,TVShowYears,return)" />
 							<param name="item2_icon" value="years.png" />
 							<param name="item2_label" value="$LOCALIZE[652]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item3_onclick" value="ActivateWindow(Videos,TVShowTitles,return)" />
 							<param name="item3_icon" value="title.png" />
 							<param name="item3_label" value="$LOCALIZE[31073]" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item4_onclick" value="ActivateWindow(Videos,TVShowGenres,return)" />
 							<param name="item4_icon" value="genres.png" />
 							<param name="item4_label" value="$LOCALIZE[135]" />
+                            <param name="item5_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item5_onclick" value="ActivateWindow(Videos,TVShowActors,return)" />
 							<param name="item5_icon" value="actors.png" />
 							<param name="item5_label" value="$LOCALIZE[344]" />
+                            <param name="item6_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item6_onclick" value="ActivateWindow(Videos,TVShowTags,return)" />
 							<param name="item6_icon" value="tags.png" />
 							<param name="item6_label" value="$LOCALIZE[20459]" />
+                            <param name="item7_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item7_onclick" value="ActivateWindow(videos,library://video/tvshows/)" />
 							<param name="item7_icon" value="media.png" />
 							<param name="item7_label" value="$LOCALIZE[31074]" />
+                            <param name="item8_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(video)" />
 							<param name="item8_icon" value="updatelibrary.png" />
 							<param name="item8_label" value="$LOCALIZE[653]" />
@@ -231,6 +249,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31104]" />
 							<param name="button_label" value="$LOCALIZE[31110]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 							<param name="button_id" value="6400"/>
 							<param name="visible" value="!Library.HasContent(tvshows)"/>
@@ -259,31 +278,39 @@
 						<include name="SubMenu">
 							<param name="list_id" value="7900"/>
 							<param name="ondown_id" value="7100"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item1_onclick" value="ActivateWindow(Music,RecentlyAddedAlbums,return)" />
 							<param name="item1_icon" value="recentlyadded.png" />
 							<param name="item1_label" value="$LOCALIZE[359]" />
 							<param name="item1_vis" value="Library.HasContent(music)" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item2_onclick" value="ActivateWindow(Music,Artists,return)" />
 							<param name="item2_icon" value="actors.png" />
 							<param name="item2_label" value="$LOCALIZE[133]" />
 							<param name="item2_vis" value="Library.HasContent(music)" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item3_onclick" value="ActivateWindow(Music,Albums,return)" />
 							<param name="item3_icon" value="albums.png" />
 							<param name="item3_label" value="$LOCALIZE[132]" />
 							<param name="item3_vis" value="Library.HasContent(music)" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item4_onclick" value="ActivateWindow(Music,Top100,return)" />
 							<param name="item4_icon" value="top100.png" />
 							<param name="item4_label" value="$LOCALIZE[271]" />
 							<param name="item4_vis" value="Library.HasContent(music)" />
+                            <param name="item5_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item5_onclick" value="ActivateWindow(Music,Files,return)" />
 							<param name="item5_icon" value="files.png" />
 							<param name="item5_label" value="$LOCALIZE[744]" />
+                            <param name="item6_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item6_onclick" value="ActivateWindow(music,Playlists,return)" />
 							<param name="item6_icon" value="playlists.png" />
 							<param name="item6_label" value="$LOCALIZE[136]" />
+                            <param name="item7_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item7_onclick" value="ActivateWindow(Music,root)" />
 							<param name="item7_icon" value="media.png" />
 							<param name="item7_label" value="$LOCALIZE[31074]" />
+                            <param name="item8_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(music)" />
 							<param name="item8_icon" value="updatelibrary.png" />
 							<param name="item8_label" value="$LOCALIZE[653]" />
@@ -346,6 +373,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31104]" />
 							<param name="button_label" value="$LOCALIZE[31110]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="button_onclick" value="ActivateWindow(music,files)"/>
 							<param name="button_id" value="7600"/>
 							<param name="onup_id" value="7500"/>
@@ -376,9 +404,11 @@
 							<param name="list_id" value="8900"/>
 							<param name="ondown_id" value="8100"/>
                             <param name="item1_vis" value="System.HasAddon(service.openelec.settings)" />
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
 						    <param name="item1_onclick" value="RunAddon(service.openelec.settings)" />
 							<param name="item1_icon" value="openelec.png" />
 							<param name="item1_label" value="OpenELEC" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
 							<param name="item2_onclick" value="ActivateWindow(addonbrowser,root)" />
 							<param name="item2_icon" value="add-ons.png" />
 							<param name="item2_label" value="$LOCALIZE[10040]" />
@@ -478,6 +508,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31119]" />
 							<param name="button_label" value="$LOCALIZE[31118]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
 							<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
 							<param name="button_id" value="8600"/>
 							<param name="visible" value="!IntegerGreaterThan(Container(8100).NumItems,0) + !IntegerGreaterThan(Container(8200).NumItems,0) + !IntegerGreaterThan(Container(8300).NumItems,0) + !IntegerGreaterThan(Container(8400).NumItems,0) + !IntegerGreaterThan(Container(8500).NumItems,0)"/>
@@ -506,16 +537,20 @@
 						<include name="SubMenu">
 							<param name="list_id" value="11900"/>
 							<param name="ondown_id" value="11100"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="item1_onclick" value="ActivateWindow(Videos,Files,return)" />
 							<param name="item1_icon" value="files.png" />
 							<param name="item1_label" value="$LOCALIZE[744]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="item2_onclick" value="ActivateWindow(Videos,special://videoplaylists/,return)" />
 							<param name="item2_icon" value="playlists.png" />
 							<param name="item2_label" value="$LOCALIZE[136]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,dvd,home)" />
 							<param name="item3_onclick" value="PlayDVD" />
 							<param name="item3_icon" value="dvd.png" />
 							<param name="item3_label" value="$LOCALIZE[31076]" />
 							<param name="item3_vis" value="System.HasMediadvd" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="item4_onclick" value="ActivateWindow(videos,root,return)" />
 							<param name="item4_icon" value="videos.png" />
 							<param name="item4_label" value="$LOCALIZE[31074]" />
@@ -545,6 +580,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31105]" />
 							<param name="button_label" value="$LOCALIZE[31110]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
 							<param name="button_onclick" value="ActivateWindow(videos,root)"/>
 							<param name="button_id" value="11300"/>
 							<param name="onup_id" value="11200"/>
@@ -575,18 +611,23 @@
 						<include name="SubMenu">
 							<param name="list_id" value="12900"/>
 							<param name="ondown_id" value="12200"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
 							<param name="item1_onclick" value="ActivateWindow(TVChannels)" />
 							<param name="item1_icon" value="channels.png" />
 							<param name="item1_label" value="$LOCALIZE[19019]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
 							<param name="item2_onclick" value="ActivateWindow(TVGuide)" />
 							<param name="item2_icon" value="guide.png" />
 							<param name="item2_label" value="$LOCALIZE[19069]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
 							<param name="item3_onclick" value="ActivateWindow(TVRecordings)" />
 							<param name="item3_icon" value="recordings.png" />
 							<param name="item3_label" value="$LOCALIZE[19017]" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
 							<param name="item4_onclick" value="ActivateWindow(TVTimers)" />
 							<param name="item4_icon" value="timers.png" />
 							<param name="item4_label" value="$LOCALIZE[19040]" />
+                            <param name="item5_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
 							<param name="item5_onclick" value="ActivateWindow(TVSearch)" />
 							<param name="item5_icon" value="tv-search.png" />
 							<param name="item5_label" value="$LOCALIZE[137]" />
@@ -662,18 +703,23 @@
 						<include name="SubMenu">
 							<param name="list_id" value="13900"/>
 							<param name="ondown_id" value="13200"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
 							<param name="item1_onclick" value="ActivateWindow(RadioChannels)" />
 							<param name="item1_icon" value="channels.png" />
 							<param name="item1_label" value="$LOCALIZE[19019]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
 							<param name="item2_onclick" value="ActivateWindow(RadioGuide)" />
 							<param name="item2_icon" value="guide.png" />
 							<param name="item2_label" value="$LOCALIZE[19069]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
 							<param name="item3_onclick" value="ActivateWindow(RadioRecordings)" />
 							<param name="item3_icon" value="recordings.png" />
 							<param name="item3_label" value="$LOCALIZE[19017]" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
 							<param name="item4_onclick" value="ActivateWindow(RadioTimers)" />
 							<param name="item4_icon" value="timers.png" />
 							<param name="item4_label" value="$LOCALIZE[19040]" />
+                            <param name="item5_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
 							<param name="item5_onclick" value="ActivateWindow(RadioSearch)" />
 							<param name="item5_icon" value="tv-search.png" />
 							<param name="item5_label" value="$LOCALIZE[137]" />
@@ -720,15 +766,19 @@
 						<include name="SubMenu">
 							<param name="list_id" value="15900"/>
 							<param name="ondown_id" value="15100"/>
+                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
 							<param name="item1_onclick" value="Weather.Refresh" />
 							<param name="item1_icon" value="updatelibrary.png" />
 							<param name="item1_label" value="$LOCALIZE[184]" />
+                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
 							<param name="item2_onclick" value="Weather.LocationPrevious" />
 							<param name="item2_icon" value="location-previous.png" />
 							<param name="item2_label" value="$LOCALIZE[31077]" />
+                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
 							<param name="item3_onclick" value="Weather.LocationNext" />
 							<param name="item3_icon" value="location-next.png" />
 							<param name="item3_label" value="$LOCALIZE[31078]" />
+                            <param name="item4_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
 							<param name="item4_onclick" value="ActivateWindow(weathersettings)" />
 							<param name="item4_icon" value="weather-settings.png" />
 							<param name="item4_label" value="$LOCALIZE[1390]" />
@@ -833,6 +883,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/weather.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31120]" />
 							<param name="button_label" value="$LOCALIZE[31121]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
 							<param name="button_onclick" value="ActivateWindow(weathersettings)"/>
 							<param name="button_id" value="15300"/>
 							<param name="visible" value="IsEmpty(Weather.plugin)"/>
@@ -855,6 +906,7 @@
 							<param name="image_path" value="special://skin/extras/home-images/pictures.jpg"/>
 							<param name="text_label" value="$LOCALIZE[31111]" />
 							<param name="button_label" value="" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,pictures,home)" />
 							<param name="button_onclick" value="ActivateWindow(pictures)"/>
 							<param name="button_id" value="4100"/>
 							<param name="visible" value="true"/>
@@ -1071,8 +1123,9 @@
 							<item>
 								<label>$LOCALIZE[342]</label>
 								<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(movies.watched)]$INFO[Window(home).Property(movies.Count), / ]</label2>
+                                <onclick>SetProperty(FanartHomeType,movies,home)</onclick>
 								<onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
-								<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>
+								<onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>                                
 								<thumb>icons/home/movies.png</thumb>
 								<property name="id">movies</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
@@ -1081,8 +1134,9 @@
 							<item>
 								<label>$LOCALIZE[20343]</label>
 								<label2>$LOCALIZE[16102]: $INFO[Window(home).Property(episodes.watched)]$INFO[Window(home).Property(episodes.Count), / ]</label2>
-								<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
-								<onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
+                                <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
+								<onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>								
+                                <onclick>SetProperty(FanartHomeType,tvshows,home)</onclick>
 								<thumb>icons/home/tv.png</thumb>
 								<property name="id">tvshows</property>
 								<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
@@ -1090,8 +1144,9 @@
 							<!-- Music -->
 							<item>
 								<label>$LOCALIZE[2]</label>
-								<label2>$LOCALIZE[133]: $INFO[Window(Home).Property(Music.ArtistsCount)]</label2>
-								<onclick>ActivateWindow(Music,root,return)</onclick>
+								<label2>$LOCALIZE[133]: $INFO[Window(home).Property(Music.ArtistsCount)]</label2>
+                                <onclick>SetProperty(FanartHomeType,music,home)</onclick>
+								<onclick>ActivateWindow(Music,root,return)</onclick>                                
 								<thumb>icons/home/music.png</thumb>
 								<property name="id">music</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
@@ -1100,7 +1155,8 @@
 							<item>
 								<label>$LOCALIZE[19020]</label>
 								<label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
-								<onclick>ActivateWindow(TVChannels)</onclick>
+                                <onclick>SetProperty(FanartHomeType,livetv,home)</onclick>
+								<onclick>ActivateWindow(TVChannels)</onclick>                                
 								<thumb>icons/home/livetv.png</thumb>
 								<property name="id">livetv</property>
 								<visible>PVR.HasTVChannels</visible>
@@ -1109,31 +1165,35 @@
 							<item>
 								<label>$LOCALIZE[19021]</label>
 								<label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
-								<onclick>ActivateWindow(RadioChannels)</onclick>
+                                <onclick>SetProperty(FanartHomeType,radio,home)</onclick>
+								<onclick>ActivateWindow(RadioChannels)</onclick>                                
 								<thumb>icons/home/radio.png</thumb>
 								<property name="id">radio</property>
 								<visible>PVR.HasRadioChannels</visible>
 							</item>
 							<!-- Addons -->
 							<item>
-								<label>$LOCALIZE[24001]</label>
-								<onclick>ActivateWindow(1100)</onclick>
+								<label>$LOCALIZE[24001]</label>								
+                                <onclick>SetProperty(FanartHomeType,addons,home)</onclick>
+                                <onclick>ActivateWindow(1100)</onclick>
 								<thumb>icons/home/addons.png</thumb>
 								<property name="id">addons</property>
 								<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 							</item>
 							<!-- Pictures -->
 							<item>
-								<label>$LOCALIZE[1]</label>
-								<onclick>ActivateWindow(Pictures)</onclick>
+								<label>$LOCALIZE[1]</label>								
+                                <onclick>SetProperty(FanartHomeType,pictures,home)</onclick>
+                                <onclick>ActivateWindow(Pictures)</onclick>
 								<thumb>icons/home/pictures.png</thumb>
 								<property name="id">pictures</property>
 								<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 							</item>
 							<!-- Videos -->
 							<item>
-								<label>$LOCALIZE[3]</label>
-								<onclick>ActivateWindow(Videos,root)</onclick>
+								<label>$LOCALIZE[3]</label>								
+                                <onclick>SetProperty(FanartHomeType,video,home)</onclick>
+                                <onclick>ActivateWindow(Videos,root)</onclick>
 								<thumb>icons/home/videos.png</thumb>
 								<property name="id">video</property>
 								<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
@@ -1142,6 +1202,7 @@
 							<item>
 								<label>$LOCALIZE[8]</label>
 								<label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
+                                <onclick>SetProperty(FanartHomeType,weather,home)</onclick>
 								<onclick>ActivateWindow(Weather)</onclick>
 								<thumb>icons/home/weather.png</thumb>
 								<property name="id">weather</property>
@@ -1163,21 +1224,25 @@
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="804" />
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+                        <param name="onclick2" value="SetProperty(FanartHomeType,power,home)" />
 						<param name="icon" value="icons/power.png" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="802" />
 						<param name="onclick" value="ActivateWindow(settings)" />
+                        <param name="onclick2" value="SetProperty(FanartHomeType,settings,home)" />
 						<param name="icon" value="icons/settings.png" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="803" />
 						<param name="onclick" value="ActivateWindow(favourites)" />
+                        <param name="onclick2" value="SetProperty(FanartHomeType,favourites,home)" />
 						<param name="icon" value="icons/favourites.png" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="801" />
 						<param name="onclick" value="ActivateWindow(filemanager)" />
+                        <param name="onclick2" value="SetProperty(FanartHomeType,filemanager,home)" />
 						<param name="icon" value="icons/filemanager.png" />
 					</include>
 				</control>
