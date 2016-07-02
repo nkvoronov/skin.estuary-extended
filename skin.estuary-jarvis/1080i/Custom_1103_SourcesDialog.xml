@@ -41,16 +41,19 @@
 			<content>
 				<item>
 					<label>$LOCALIZE[3]</label>
+                    <onclick>SetProperty(FanartHomeType,video,home)</onclick>
 					<onclick>Dialog.Close(all)</onclick>
 					<onclick>ActivateWindow(Videos,Files,return)</onclick>
 				</item>
 				<item>
 					<label>$LOCALIZE[2]</label>
+                    <onclick>SetProperty(FanartHomeType,music,home)</onclick>
 					<onclick>Dialog.Close(all)</onclick>
 					<onclick>ActivateWindow(Music,Files,return)</onclick>
 				</item>
 				<item>
 					<label>$LOCALIZE[1]</label>
+                    <onclick>SetProperty(FanartHomeType,pictures,home)</onclick>
 					<onclick>Dialog.Close(all)</onclick>
 					<onclick>ActivateWindow(pictures,root)</onclick>
 				</item>

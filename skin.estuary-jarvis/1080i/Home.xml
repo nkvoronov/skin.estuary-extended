@@ -48,9 +48,33 @@
 				<top>78</top>
 				<left>20</left>
 				<include>OpenClose_Right</include>
+                <!-- Search -->
+                <control type="group" id="4000">
+                    <visible>Control.HasFocus(900)</visible>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<include>Visible_Right_Delayed</include>
+                    <control type="grouplist" id="4001">
+						<orientation>vertical</orientation>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[137]" />
+							<param name="visible" value="true"/>
+						</include>
+                        <include name="ImageWidget">
+                            <param name="image_path" value="special://skin/extras/home-images/search.jpg"/>
+                            <param name="text_label" value="$LOCALIZE[137]..." />
+                            <param name="button_label" value="" />
+                            <param name="button_onclick2" value="" />
+                            <param name="button_onclick" value=""/>
+                            <param name="button_id" value="4100"/>
+                            <param name="visible" value="true"/>
+							<param name="visible_1" value="False"/>
+							<param name="visible_2" value="False"/>
+                        </include>
+                    </control>
+                </control>
 				<!-- Movies -->
 				<control type="group" id="5000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),movies)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),movies) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="5888">
 						<width>1</width>
@@ -155,7 +179,7 @@
 				</control>
 				<!-- TVShows -->
 				<control type="group" id="6000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),tvshows)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),tvshows) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="6888">
 						<width>1</width>
@@ -259,7 +283,7 @@
 				</control>
 				<!-- Music -->
 				<control type="group" id="7000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),music)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),music) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="7888">
 						<width>1</width>
@@ -384,7 +408,7 @@
 				</control>
 				<!-- Addons -->
 				<control type="group" id="8000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),addons)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),addons) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="8888">
 						<width>1</width>
@@ -518,7 +542,7 @@
 				</control>
 				<!-- Video -->
 				<control type="group" id="11000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),video)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),video) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="11888">
 						<width>1</width>
@@ -591,7 +615,7 @@
 				</control>
 				<!-- LiveTV -->
 				<control type="group" id="12000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),livetv)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),livetv) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="12888">
 						<width>1</width>
@@ -684,7 +708,7 @@
 				</control>
 				<!-- Radio -->
 				<control type="group" id="13000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),radio)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),radio) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="13888">
 						<width>1</width>
@@ -746,7 +770,7 @@
 				</control>
 				<!-- Weather -->
 				<control type="group" id="15000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),weather)</visible>
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),weather) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="15888">
 						<width>1</width>
@@ -766,15 +790,15 @@
 						<include name="SubMenu">
 							<param name="list_id" value="15900"/>
 							<param name="ondown_id" value="15100"/>
-                            <param name="item1_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
+                            <param name="item1_onclick2" value="" />
 							<param name="item1_onclick" value="Weather.Refresh" />
 							<param name="item1_icon" value="updatelibrary.png" />
 							<param name="item1_label" value="$LOCALIZE[184]" />
-                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
+                            <param name="item2_onclick2" value="" />
 							<param name="item2_onclick" value="Weather.LocationPrevious" />
 							<param name="item2_icon" value="location-previous.png" />
 							<param name="item2_label" value="$LOCALIZE[31077]" />
-                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,weather,home)" />
+                            <param name="item3_onclick2" value="" />
 							<param name="item3_onclick" value="Weather.LocationNext" />
 							<param name="item3_icon" value="location-next.png" />
 							<param name="item3_label" value="$LOCALIZE[31078]" />
@@ -892,11 +916,11 @@
 					</control>
 				</control>
 				<!-- Pictures -->
-				<control type="group" id="4000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),pictures)</visible>
+				<control type="group" id="16000">
+				    <visible>Stringcompare(Container(9000).ListItem.Property(id),pictures) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<include>Visible_Right_Delayed</include>
-					<control type="grouplist" id="4001">
+					<control type="grouplist" id="16001">
 						<orientation>vertical</orientation>
 						<include name="ImageWidgetHeader">
 							<param name="widget_header" value="$LOCALIZE[1]" />
@@ -908,13 +932,109 @@
 							<param name="button_label" value="" />
                             <param name="button_onclick2" value="SetProperty(FanartHomeType,pictures,home)" />
 							<param name="button_onclick" value="ActivateWindow(pictures)"/>
-							<param name="button_id" value="4100"/>
+							<param name="button_id" value="16100"/>
 							<param name="visible" value="true"/>
 							<param name="visible_1" value="False"/>
 							<param name="visible_2" value="False"/>
 						</include>
 					</control>
 				</control>
+                <!-- Power -->
+                <control type="group" id="17000">
+                    <visible>Control.HasFocus(801)</visible>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<include>Visible_Right_Delayed</include>
+                    <control type="grouplist" id="17001">
+						<orientation>vertical</orientation>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[31072]" />
+							<param name="visible" value="true"/>
+						</include>
+                        <include name="ImageWidget">
+                            <param name="image_path" value="special://skin/extras/home-images/power.jpg"/>
+                            <param name="text_label" value="$LOCALIZE[31072]" />
+                            <param name="button_label" value="" />
+                            <param name="button_onclick2" value="" />
+                            <param name="button_onclick" value=""/>
+                            <param name="button_id" value="17100"/>
+                            <param name="visible" value="true"/>
+							<param name="visible_1" value="False"/>
+							<param name="visible_2" value="False"/>
+                        </include>
+                    </control>
+                </control>
+                <!-- Settings -->
+                <control type="group" id="18000">
+                    <visible>Control.HasFocus(802)</visible>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<include>Visible_Right_Delayed</include>
+                    <control type="grouplist" id="18001">
+						<orientation>vertical</orientation>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[5]" />
+							<param name="visible" value="true"/>
+						</include>
+                        <include name="ImageWidget">
+                            <param name="image_path" value="special://skin/extras/home-images/settings.jpg"/>
+                            <param name="text_label" value="$LOCALIZE[5]" />
+                            <param name="button_label" value="" />
+                            <param name="button_onclick2" value="" />
+                            <param name="button_onclick" value=""/>
+                            <param name="button_id" value="18100"/>
+                            <param name="visible" value="true"/>
+							<param name="visible_1" value="False"/>
+							<param name="visible_2" value="False"/>
+                        </include>
+                    </control>
+                </control>
+                <!-- Favourites -->
+                <control type="group" id="19000">
+                    <visible>Control.HasFocus(803)</visible>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<include>Visible_Right_Delayed</include>
+                    <control type="grouplist" id="19001">
+						<orientation>vertical</orientation>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[1036]" />
+							<param name="visible" value="true"/>
+						</include>
+                        <include name="ImageWidget">
+                            <param name="image_path" value="special://skin/extras/home-images/favorites.jpg"/>
+                            <param name="text_label" value="$LOCALIZE[22080] $LOCALIZE[1036]" />
+                            <param name="button_label" value="" />
+                            <param name="button_onclick2" value="" />
+                            <param name="button_onclick" value=""/>
+                            <param name="button_id" value="19100"/>
+                            <param name="visible" value="true"/>
+							<param name="visible_1" value="False"/>
+							<param name="visible_2" value="False"/>
+                        </include>
+                    </control>
+                </control>
+                <!-- File manager -->
+                <control type="group" id="22000">
+                    <visible>Control.HasFocus(804)</visible>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<include>Visible_Right_Delayed</include>
+                    <control type="grouplist" id="22001">
+						<orientation>vertical</orientation>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[7]" />
+							<param name="visible" value="true"/>
+						</include>
+                        <include name="ImageWidget">
+                            <param name="image_path" value="special://skin/extras/home-images/filemanager.jpg"/>
+                            <param name="text_label" value="$LOCALIZE[7]" />
+                            <param name="button_label" value="" />
+                            <param name="button_onclick2" value="" />
+                            <param name="button_onclick" value=""/>
+                            <param name="button_id" value="22100"/>
+                            <param name="visible" value="true"/>
+							<param name="visible_1" value="False"/>
+							<param name="visible_2" value="False"/>
+                        </include>
+                    </control>
+                </control>
 			</control>
 			<!-- TopBar -->
 			<include name="TopBar">
@@ -1222,7 +1342,7 @@
 					<ondown>14200</ondown>
 					<onright>2000</onright>
 					<include name="BottomMainMenuItem">
-						<param name="control_id" value="804" />
+						<param name="control_id" value="801" />
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,power,home)" />
 						<param name="icon" value="icons/power.png" />
@@ -1240,7 +1360,7 @@
 						<param name="icon" value="icons/favourites.png" />
 					</include>
 					<include name="BottomMainMenuItem">
-						<param name="control_id" value="801" />
+						<param name="control_id" value="804" />
 						<param name="onclick" value="ActivateWindow(filemanager)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,filemanager,home)" />
 						<param name="icon" value="icons/filemanager.png" />

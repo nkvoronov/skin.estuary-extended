@@ -65,7 +65,7 @@
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">conditional</animation>
 			</control>
 		</control>
-	</include>
+	</include>  
 	<include name="HiddenObject">
 		<left>-3000</left>
 		<top>-3000</top>
@@ -97,6 +97,30 @@
 					<height>32</height>
 					<font>font10_title</font>
 					<label>$INFO[ListItem.UserRating]</label>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="WatchedCircle">
+		<param name="animation">False</param>
+		<definition>
+			<control type="group">
+                <visible>!IsEmpty(ListItem.Overlay)</visible>
+				<animation effect="fade" time="200" condition="$PARAM[animation]">VisibleChange</animation>
+				<control type="image">
+					<left>8</left>
+					<top>2</top>
+					<width>36</width>
+					<height>36</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="button_focus">overlays/circle.png</texture>
+				</control>
+				<control type="image">
+                    <left>10</left>
+					<top>4</top>
+					<width>32</width>
+                    <height>32</height>
+                    <texture>$VAR[ListWatchedIconVar]</texture>
 				</control>
 			</control>
 		</definition>

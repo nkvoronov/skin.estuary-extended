@@ -627,3 +627,22 @@ msgctxt "#84209"
 msgid "Choose weather fanart pack"
 msgstr "Выбрать фанарт пакет для погоды"
 
+msgctxt "#84210"
+msgid "Show studios logos"
+msgstr "Показывать студийные лого"
+
+msgctxt "#84211"
+msgid "Choose studios logos"
+msgstr "Выбрать студийное лого"
+
+msgctxt "#84212"
+msgid "Choose record labels"
+msgstr "Выберать метки записи"
+
+msgctxt "#84213"
+msgid "Choose flags country"
+msgstr "Выбрать флаги стран"
+
+msgctxt "#84214"
+msgid "Choose weather icons"
+msgstr "Выбрать иконки погоды"

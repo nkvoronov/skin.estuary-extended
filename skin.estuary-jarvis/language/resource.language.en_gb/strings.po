@@ -762,3 +762,25 @@ msgstr ""
 msgctxt "#84209"
 msgid "Choose weather fanart pack"
 msgstr ""
+
+msgctxt "#84210"
+msgid "Show studios logos"
+msgstr ""
+
+msgctxt "#84211"
+msgid "Choose studios logos"
+msgstr ""
+
+msgctxt "#84212"
+msgid "Choose record labels"
+msgstr ""
+
+msgctxt "#84213"
+msgid "Choose flags country"
+msgstr ""
+
+msgctxt "#84214"
+msgid "Choose weather icons"
+msgstr ""
+
+

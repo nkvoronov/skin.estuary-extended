@@ -41,6 +41,11 @@
 						<top>20</top>
 						<include>UserRatingCircle</include>
 					</control>
+                    <control type="group">
+                        <left>5</left>
+                        <top>20</top>
+                        <include>WatchedCircle</include>
+                    </control>
 				</itemlayout>
 				<focusedlayout height="183" width="900">
 					<control type="group">
@@ -61,6 +66,11 @@
 							<top>20</top>
 							<include>UserRatingCircle</include>
 						</control>
+                        <control type="group">
+                            <left>5</left>
+                            <top>20</top>
+                            <include>WatchedCircle</include>
+                        </control>
 						<control type="image">
 							<left>1</left>
 							<top>15</top>

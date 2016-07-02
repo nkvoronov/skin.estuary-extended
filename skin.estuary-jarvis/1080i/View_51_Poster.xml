@@ -56,6 +56,11 @@
 							<top>30</top>
 							<include>UserRatingCircle</include>
 						</control>
+                        <control type="group">
+                            <left>33</left>
+                            <top>30</top>
+                            <include>WatchedCircle</include>
+                        </control>
 					</itemlayout>
 					<focusedlayout width="317">
 						<control type="image">
@@ -77,6 +82,13 @@
 							<top>30</top>
 							<include>UserRatingCircle</include>
 						</control>
+                        <control type="group">
+                            <animation effect="fade" time="300" start="100" end="0">Focus</animation>
+                            <visible>Control.IsVisible(20000)</visible>
+                            <left>33</left>
+                            <top>30</top>
+                            <include>WatchedCircle</include>
+                        </control>
 					</focusedlayout>
 				</control>
 				<control type="image">
@@ -103,13 +115,11 @@
 						<param name="font" value="font12" />
 					</include>
 				</control>
-				<control type="image">
-					<left>645</left>
-					<top>415</top>
-					<width>32</width>
-					<height>32</height>
-					<texture>$VAR[ListWatchedIconVar]</texture>
-				</control>
+                <control type="group">
+                    <left>640</left>
+                    <top>415</top>
+                    <include>WatchedCircle</include>
+                </control>
 				<control type="label">
 					<left>695</left>
 					<top>400</top>

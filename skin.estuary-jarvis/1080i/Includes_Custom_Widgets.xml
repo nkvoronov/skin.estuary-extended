@@ -300,7 +300,7 @@
 							<top>0</top>
 							<width>340</width>
 							<height>340</height>
-                            <aspectratio>keep</aspectratio>
+                            <aspectratio>scale</aspectratio>
                             <texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -360,7 +360,7 @@
 								<top>0</top>
 								<width>340</width>
 								<height>340</height>
-                                <aspectratio>keep</aspectratio>
+                                <aspectratio>scale</aspectratio>
                                 <texture fallback="DefaultAudio.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>

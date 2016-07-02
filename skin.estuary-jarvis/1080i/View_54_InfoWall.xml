@@ -75,6 +75,11 @@
 			<top>28</top>
 			<include>UserRatingCircle</include>
 		</control>
+        <control type="group">
+            <left>38</left>
+            <top>28</top>
+            <include>WatchedCircle</include>
+        </control>
 	</include>
 	<include name="View_54_InfoWall">
 		<include name="UpDownArrows">
@@ -125,6 +130,11 @@
 						<top>30</top>
 						<include>UserRatingCircle</include>
 					</control>
+                    <control type="group">
+                        <left>15</left>
+                        <top>30</top>
+                        <include>WatchedCircle</include>
+                    </control>
 				</itemlayout>
 				<focusedlayout height="360" width="240" condition="Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
 					<control type="group">
@@ -144,6 +154,11 @@
 							<top>30</top>
 							<include>UserRatingCircle</include>
 						</control>
+                        <control type="group">
+                            <left>15</left>
+                            <top>30</top>
+                            <include>WatchedCircle</include>
+                        </control>
 						<control type="image">
 							<left>15</left>
 							<top>20</top>
@@ -167,24 +182,6 @@
 							<left>15</left>
 							<top>5</top>
 							<width>288</width>
-							<height>348</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
-						</control>
-					</control>
-				</focusedlayout>
-				<itemlayout height="360" width="401" condition="Container.Content(images)">
-					<include>InfoWallPictureLayout</include>
-				</itemlayout>
-				<focusedlayout height="360" width="401" condition="Container.Content(images)">
-					<control type="group">
-						<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="190,180">Focus</animation>
-						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="190,180">UnFocus</animation>
-						<include>InfoWallPictureLayout</include>
-						<control type="image">
-							<left>15</left>
-							<top>5</top>
-							<width>368</width>
 							<height>348</height>
 							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>

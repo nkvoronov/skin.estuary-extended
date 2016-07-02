@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+    <onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="panel" id="9000">
@@ -102,7 +103,7 @@
 					<label>$LOCALIZE[480]</label>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>
 					<icon>icons/settings/appearance.png</icon>
-				</item>^
+				</item>
 				<item>
 					<label>$LOCALIZE[157]</label>
 					<onclick>ActivateWindow(VideosSettings)</onclick>
