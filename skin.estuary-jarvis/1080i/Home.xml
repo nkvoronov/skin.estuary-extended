@@ -829,6 +829,15 @@
 								<width>150</width>
 								<height>150</height>
 								<texture>$INFO[Weather.conditions]</texture>
+                                <visible>IsEmpty(Skin.String(WeatherIcons.name))</visible>
+							</control>
+                            <control type="image">
+								<top>20</top>
+								<left>530</left>
+								<width>150</width>
+								<height>150</height>
+                                <texture>$INFO[Skin.String(WeatherIcons.path),,/]$INFO[Window(weather).Property(Daily.1.OutlookIcon)]</texture>
+                                <visible>!IsEmpty(Skin.String(WeatherIcons.name))</visible>
 							</control>
 							<control type="label">
 								<left>990</left>
@@ -971,21 +980,13 @@
                     <control type="grouplist" id="18001">
 						<orientation>vertical</orientation>
 						<include name="ImageWidgetHeader">
-							<param name="widget_header" value="$LOCALIZE[5]" />
+							<param name="widget_header" value="$LOCALIZE[138]" />
 							<param name="visible" value="true"/>
 						</include>
-                        <include name="ImageWidget">
-                            <param name="image_path" value="special://skin/extras/home-images/settings.jpg"/>
-                            <param name="text_label" value="$LOCALIZE[5]" />
-                            <param name="button_label" value="" />
-                            <param name="button_onclick2" value="" />
-                            <param name="button_onclick" value=""/>
+                        <include name="SystemInfoWidget">
                             <param name="button_id" value="18100"/>
-                            <param name="visible" value="true"/>
-							<param name="visible_1" value="False"/>
-							<param name="visible_2" value="False"/>
                         </include>
-                    </control>
+					</control>
                 </control>
                 <!-- Favourites -->
                 <control type="group" id="19000">

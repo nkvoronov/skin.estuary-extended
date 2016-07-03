@@ -174,14 +174,14 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
-                <!-- <control type="button" id="612">
+                <control type="button" id="612">
 					<label>$LOCALIZE[84214]</label>
 					<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
-				</control> -->
+				</control>
 				<control type="radiobutton" id="620">
 					<label>$LOCALIZE[31108]</label>
 					<width>1256</width>

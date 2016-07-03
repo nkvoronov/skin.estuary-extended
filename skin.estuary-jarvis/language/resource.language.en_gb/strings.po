@@ -783,4 +783,8 @@ msgctxt "#84214"
 msgid "Choose weather icons"
 msgstr ""
 
+msgctxt "#84215"
+msgid "Hardware"
+msgstr ""
+
 

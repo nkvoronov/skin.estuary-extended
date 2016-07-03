@@ -646,3 +646,7 @@ msgstr "Вибрати прапори країн"
 msgctxt "#84214"
 msgid "Choose weather icons"
 msgstr "Вибрати іконки погоди"
+
+msgctxt "#84215"
+msgid "Hardware"
+msgstr "Устаткування"
