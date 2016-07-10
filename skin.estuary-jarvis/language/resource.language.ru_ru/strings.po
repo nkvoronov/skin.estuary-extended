@@ -650,3 +650,7 @@ msgstr "Выбрать иконки погоды"
 msgctxt "#84215"
 msgid "Hardware"
 msgstr "Оборудование"
+
+msgctxt "#84216"
+msgid "Customize power menu"
+msgstr "Настройка меню питания"

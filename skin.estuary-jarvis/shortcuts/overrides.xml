@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+    <!-- Icons Directory -->
+    <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
+    <!-- Background -->
+	<background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
+	<background label="smartshortcuts">||BROWSE||special://skin/extras/home-images</background>
+	<backgroundBrowse default="protocol://">True</backgroundBrowse>    
+    <!-- Icons overrides -->
+    <icon image="DefaultShortcut.png">special://skin/extras/icons/files.png</icon>
+    <icon image="DefaultFolder.png">special://skin/extras/icons/files.png</icon>
+    <icon image="DefaultFolderBack.png">special://skin/extras/icons/folderback.png</icon>
+    <icon image="DefaultTVShows.png" grouping="pvr-tv">special://skin/extras/icons/livetv.png</icon>
+    <icon image="DefaultAudio.png" grouping="pvr-radio">special://skin/extras/icons/radio.png</icon>    
+    <icon image="DefaultPlaylist.png">special://skin/extras/icons/playlist.png</icon>
+    
+<!--     <icon image="DefaultVideoPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+    <icon image="DefaultMusicPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+    <icon image="DefaultMusicAlbums.png">special://skin/extras/icons/music.png</icon>
+    <icon image="DefaultMusicVideos.png">special://skin/extras/icons/musicvideo.png</icon>
+    <icon image="DefaultAddonVideo.png">special://skin/extras/icons/video-addons.png</icon>
+    <icon image="DefaultMusicGenres.png">special://skin/extras/icons/genres.png</icon>
+    <icon image="DefaultMusicArtists.png">special://skin/extras/icons/artist.png</icon>
+    <icon image="DefaultMusicSongs.png">special://skin/extras/icons/music2.png</icon>
+    <icon image="DefaultMusicRecentlyAdded.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultMusicRecentlyPlayed.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultAddon.png">special://skin/extras/icons/addon.png</icon> -->
+        
+<!--     <icon labelID="videos">special://skin/extras/icons/videos.png</icon>
+    <icon labelID="movies">special://skin/extras/icons/movies.png</icon>
+    <icon labelID="tvshows">special://skin/extras/icons/tv.png</icon>    
+    <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
+	<icon labelID="radio">special://skin/extras/icons/radio.png</icon>
+    <icon labelID="pictures">special://skin/extras/icons/pictures.png</icon>
+    <icon labelID="weather">special://skin/extras/icons/weather.png</icon>
+    <icon labelID="programs">special://skin/extras/icons/addons.png</icon>
+    <icon labelID="settings">special://skin/extras/icons/settings2.png</icon>
+    <icon labelID="dvd">special://skin/extras/icons/dvd.png</icon>
+    <icon labelID="32033">special://skin/extras/icons/eject.png</icon>
+    <icon labelID="10003">special://skin/extras/icons/systeminfo.png</icon>
+    <icon labelID="32046">special://skin/extras/icons/updatelibrary.png</icon>
+    <icon labelID="32047">special://skin/extras/icons/updatelibrary.png</icon>
+    <icon labelID="13200">special://skin/extras/icons/unknownuser.png</icon>
+    <icon labelID="132">special://skin/extras/icons/album.png</icon>
+    <icon labelID="134">special://skin/extras/icons/song.png</icon>
+    <icon labelID="652">special://skin/extras/icons/years.png</icon>
+    <icon labelID="271">special://skin/extras/icons/top100.png</icon>
+    <icon labelID="20389">special://skin/extras/icons/musicvideo.png</icon>
+    <icon labelID="20386">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon labelID="20387">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon labelID="20390">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon labelID="626">special://skin/extras/icons/recentlyadded.png</icon> -->
+    
+    <!-- Groupings -->
+    <groupings>
+        <!-- Weather -->
+        <node label="8">
+            <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
+            <shortcut label="184" type="8" icon="special://skin/extras/icons/update.png">Weather.Refresh</shortcut>
+            <shortcut label="31077" type="8" icon="special://skin/extras/icons/location-previous.png">Weather.LocationPrevious</shortcut>
+            <shortcut label="31078" type="8" icon="special://skin/extras/icons/location-next.png">Weather.LocationNext</shortcut>
+            <shortcut label="10004" type="8" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(weathersettings)</shortcut>
+        </node>
+        <!-- Pictures -->
+        <node label="1">
+            <shortcut label="1" type="1" icon="special://skin/extras/icons/pictures.png">ActivateWindow(pictures)</shortcut>
+            <shortcut label="1039" type="1" icon="special://skin/extras/icons/pictures-addons.png">ActivateWindow(pictures,addons://sources/pictures/,return)</shortcut>
+            <shortcut label="10004" type="1" icon="special://skin/extras/icons/pictures.png">ActivateWindow(picturessettings)</shortcut>
+            <content>picturesources</content>
+        </node>
+        <!-- LiveTV -->
+        <node label="19020" condition="PVR.HasTVChannels">
+            <shortcut label="19020" type="19020" icon="special://skin/extras/icons/livetv.png">ActivateWindow(tvchannels)</shortcut>
+            <shortcut label="19019" type="19020" icon="special://skin/extras/icons/channels.png">ActivateWindow(tvchannels)</shortcut>
+            <shortcut label="19069" type="19020" icon="special://skin/extras/icons/guide.png">ActivateWindow(tvguide)</shortcut>
+            <shortcut label="19017" type="19020" icon="special://skin/extras/icons/recordings.png">ActivateWindow(tvrecordings)</shortcut>
+            <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimers)</shortcut>
+            <shortcut label="137" type="19020" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(tvsearch)</shortcut>
+            <shortcut label="32066" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvrTV</shortcut>
+            <shortcut label="32068" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvr</shortcut>
+            <shortcut label="10004" type="19020" icon="special://skin/extras/icons/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <node label="19023">
+                <content>pvr-tv</content>
+            </node>
+        </node>
+        <!-- Radio -->
+        <node label="19021" condition="PVR.HasRadioChannels">
+            <shortcut label="19021" type="19021" icon="special://skin/extras/icons/radio.png">ActivateWindow(radiochannels)</shortcut>
+            <shortcut label="19019" type="19021" icon="special://skin/extras/icons/channels.png">ActivateWindow(radiochannels)</shortcut>
+            <shortcut label="19069" type="19021" icon="special://skin/extras/icons/guide.png">ActivateWindow(radioguide)</shortcut>
+            <shortcut label="19017" type="19021" icon="special://skin/extras/icons/recordings.png">ActivateWindow(radiorecordings)</shortcut>
+            <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimers)</shortcut>
+            <shortcut label="137" type="19021" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(radiosearch)</shortcut>
+            <shortcut label="32066" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvrRadio</shortcut>
+            <shortcut label="32068" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvr</shortcut>
+            <shortcut label="10004" type="19020" icon="special://skin/extras/icons/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <node label="19024">
+                <content>pvr-radio</content>
+            </node>
+        </node>
+        <!-- Video -->
+        <node label="3">
+            <shortcut label="3" type="3" icon="special://skin/extras/icons/videos.png">ActivateWindow(videos,library://video/,return)</shortcut>
+            <shortcut label="744" type="3" icon="special://skin/extras/icons/files.png">ActivateWindow(videos,sources://video/,return)</shortcut>
+            <shortcut label="136" type="3" icon="special://skin/extras/icons/playlist.png">ActivateWindow(videos,special://videoplaylists/,return)</shortcut>
+            <shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+            <shortcut label="136" type="3" icon="special://skin/extras/icons/playlist.png">ActivateWindow(videos,special://videoplaylists/,return)</shortcut>
+            <shortcut label="10004" type="3" icon="special://skin/extras/icons/videos.png">ActivateWindow(videossettings)</shortcut>
+            <shortcut label="653" type="3" icon="special://skin/extras/icons/update.png">UpdateLibrary(video)</shortcut>
+            <shortcut label="32055" type="3" icon="special://skin/extras/icons/error.png">CleanLibrary(video)</shortcut>            
+            <node label="32040">
+                <content>playlist-video</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32075">
+                <content>videosources</content>
+                <content>upnp-video</content>
+            </node>
+        </node>
+        <!-- Movies -->
+        <node label="342">
+            <shortcut label="342" type="342" icon="special://skin/extras/icons/movies.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="20386" type="342" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</shortcut>
+            <shortcut label="135" type="342" icon="special://skin/extras/icons/genres.png">ActivateWindow(videos,videodb://movies/genres/,return)</shortcut>
+            <shortcut label="369" type="342" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="562" type="342" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://movies/years/,return)</shortcut>
+            <shortcut label="344" type="342" icon="special://skin/extras/icons/actor.png">ActivateWindow(videos,videodb://movies/actors/,return)</shortcut>
+            <shortcut label="20348" type="342" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://movies/directors/,return)</shortcut>
+            <shortcut label="20388" type="342" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://movies/studios/,return)</shortcut>
+            <shortcut label="20434" type="342" icon="special://skin/extras/icons/sets.png">ActivateWindow(videos,videodb://movies/sets/,return)</shortcut>
+            <shortcut label="20451" type="342" icon="special://skin/extras/icons/country.png">ActivateWindow(videos,videodb://movies/countries/,return)</shortcut>            
+            <shortcut label="20459" type="342" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://movies/tags/,return)</shortcut>
+            <shortcut label="20314" type="342" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://movies/,return)</shortcut>
+        </node>
+        <!-- TVShows -->
+        <node label="20343">
+            <shortcut label="20343" type="20343" icon="special://skin/extras/icons/tv.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="20387" type="20343" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</shortcut>
+            <shortcut label="626" type="20343" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,library://video/inprogressshows.xml/,return)</shortcut>
+            <shortcut label="135" type="20343" icon="special://skin/extras/icons/genres.png">ActivateWindow(videos,videodb://tvshows/genres/,return)</shortcut>
+            <shortcut label="369" type="20343" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://tvshows/titles/,return)</shortcut>
+            <shortcut label="562" type="20343" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://tvshows/years/,return)</shortcut>
+            <shortcut label="344" type="20343" icon="special://skin/extras/icons/actor.png">ActivateWindow(videos,videodb://tvshows/actors/,return)</shortcut>
+            <shortcut label="20388" type="20343" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://tvshows/studios/,return)</shortcut>            
+            <shortcut label="20459" type="20343" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://tvshows/tags/,return)</shortcut>
+            <shortcut label="20314" type="20343" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://tvshows/,return)</shortcut>
+        </node>
+        <!-- MusicVideos -->
+        <node label="20389">
+            <shortcut label="20389" type="20389" icon="special://skin/extras/icons/musicvideo.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
+            <shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</shortcut>
+            <shortcut label="135" type="20389" icon="special://skin/extras/icons/genres.png">ActivateWindow(videos,videodb://musicvideos/genres/,return)</shortcut>
+            <shortcut label="369" type="20389" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://musicvideos/titles/,return)</shortcut>
+            <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://musicvideos/years/,return)</shortcut>
+            <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png">ActivateWindow(videos,videodb://musicvideos/artists/,return)</shortcut>
+            <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png">ActivateWindow(videos,videodb://musicvideos/albums/,return)</shortcut>            
+            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>            
+            <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://musicvideos/studios/,return)</shortcut>
+            <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://musicvideos/tags/,return)</shortcut>
+            <shortcut label="20314" type="20389" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
+            <shortcut label="589" type="20389" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode(Video))</shortcut>
+        </node>
+        <!-- Music -->
+        <node label="2">
+            <shortcut label="2" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(music,musicdb://,return)</shortcut>
+            <shortcut label="359" type="2" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</shortcut>
+            <shortcut label="135" type="2" icon="special://skin/extras/icons/genres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
+            <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
+            <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
+            <shortcut label="134" type="2" icon="special://skin/extras/icons/song.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
+            <shortcut label="271" type="2" icon="special://skin/extras/icons/top100_2.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
+            <shortcut label="10504" type="2" icon="special://skin/extras/icons/top100songs.png">ActivateWindow(music,musicdb://top100/songs/,return)</shortcut>
+            <shortcut label="10505" type="2" icon="special://skin/extras/icons/top100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>            
+            <shortcut label="521" type="2" icon="special://skin/extras/icons/compilations.png">ActivateWindow(music,musicdb://compilations/,return)</shortcut>
+            <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png">ActivateWindow(music,musicdb://years/,return)</shortcut>
+            <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png">ActivateWindow(music,musicdb://singles/,return)</shortcut>
+            <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png">ActivateWindow(music,musicdb://,return)</shortcut>
+            <shortcut label="589" type="2" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode)</shortcut>
+            <shortcut label="744" type="2" icon="special://skin/extras/icons/files.png">ActivateWindow(music,sources://music/,return)</shortcut>
+            <shortcut label="136" type="2" icon="special://skin/extras/icons/playlist.png">ActivateWindow(music,special://musicplaylists/,return)</shortcut>
+            <shortcut label="1038" type="2" icon="special://skin/extras/icons/music-addons.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+            <shortcut label="10004" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>            
+            <shortcut label="653" type="2" icon="special://skin/extras/icons/update.png">UpdateLibrary(music)</shortcut>
+            <shortcut label="32055" type="2" icon="special://skin/extras/icons/error.png">CleanLibrary(music)</shortcut>
+            <node label="32040">
+                <content>playlist-audio</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="2" icon="special://skin/extras/icons/music-addons.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32075">
+                <content>musicsources</content>
+                <content>upnp-music</content>
+            </node>        
+        </node>
+        <!-- Addons -->
+        <node label="24001">
+            <shortcut label="24001" type="24001" icon="special://skin/extras/icons/addons.png">ActivateWindow(1100)</shortcut>
+            <shortcut label="10040" type="24001" icon="special://skin/extras/icons/addons.png">ActivateWindow(addonbrowser)</shortcut>
+            <node label="32009">
+                <shortcut label="10001" type="24001" icon="special://skin/extras/icons/program-addons.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
+                <shortcut label="20244" type="24001" icon="special://skin/extras/icons/android.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps,return)</shortcut>
+                <content>addon-program</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="2" icon="special://skin/extras/icons/music-addons.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32012">
+                <shortcut label="1039" type="1" icon="special://skin/extras/icons/pictures-addons.png">ActivateWindow(pictures,addons://sources/pictures/,return)</shortcut>
+                <content>addon-image</content>
+            </node>
+        </node>
+        <!-- DVD -->
+        <node label="446">
+            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
+            <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
+        </node>
+        <!-- Favourites -->
+        <node label="1036">
+            <shortcut label="1036" type="1036" icon="special://skin/extras/icons/favourites2.png">ActivateWindow(favourites)</shortcut>
+            <content>favourite</content>
+        </node>
+        <!-- Settings -->
+        <node label="10004">
+            <shortcut label="10004" type="10004" icon="special://skin/extras/icons/settings2.png">ActivateWindow(settings)</shortcut>
+            <shortcut label="480" type="10004" icon="special://skin/extras/icons/settings2.png">ActivateWindow(appearancesettings)</shortcut>
+            <shortcut label="10004" type="8" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(weathersettings)</shortcut>
+            <shortcut label="10004" type="1" icon="special://skin/extras/icons/pictures.png">ActivateWindow(picturessettings)</shortcut>
+            <shortcut label="10004" type="19020" icon="special://skin/extras/icons/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <shortcut label="10004" type="3" icon="special://skin/extras/icons/videos.png">ActivateWindow(videossettings)</shortcut>
+            <shortcut label="10004" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>
+            <shortcut label="13000" type="10004" icon="special://skin/extras/icons/sysinfo.png">ActivateWindow(systemsettings)</shortcut>
+            <shortcut label="14036" type="10004" icon="special://skin/extras/icons/settings2.png">ActivateWindow(servicesettings)</shortcut>
+            <shortcut label="166" type="10004" icon="special://skin/extras/icons/skinsettings.png">ActivateWindow(skinsettings)</shortcut>
+            <shortcut label="14111" type="10004" icon="special://skin/extras/icons/settings2.png">ActivateWindow(eventlog,events://,return)</shortcut>
+            <shortcut label="7" type="10004" icon="special://skin/extras/icons/files.png">ActivateWindow(filemanager)</shortcut>
+            <shortcut label="10040" type="24001" icon="special://skin/extras/icons/addons.png">ActivateWindow(addonbrowser)</shortcut>
+            <shortcut label="130" type="10004" icon="special://skin/extras/icons/systeminfo.png">ActivateWindow(systeminfo)</shortcut>
+        </node>
+        <node label="32054">
+            <shortcut label="20183" type="32054" icon="special://skin/extras/icons/reloadskin.png">ReloadSkin</shortcut>
+            <content>commands</content>
+        </node>
+    </groupings>    
+</overrides>

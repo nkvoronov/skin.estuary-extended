@@ -233,6 +233,11 @@
         <value condition="Container(9000).HasFocus(3)">$LOCALIZE[84202]</value>
         <value condition="Container(9000).HasFocus(4)">$LOCALIZE[84203]</value>
 	</variable>
+    <variable name="script_SkinShortcutsTitle">
+        <value condition="StringCompare(Window.Property(groupname),mainmenu)">$LOCALIZE[5] / $ADDON[script.skinshortcuts 32071]</value>
+        <value condition="StringCompare(Window.Property(groupname),powermenu)">$LOCALIZE[5] / $LOCALIZE[84217]</value>
+		<value condition="!StringCompare(Window.Property(groupname),mainmenu) + !StringCompare(Window.Property(groupname),powermenu)">$LOCALIZE[5] / $ADDON[script.skinshortcuts 32072]</value>
+    </variable>
 	<variable name="DSPManagerHelpTextVar">
 		<value condition="Control.HasFocus(20)">$INFO[Container(20).ListItem.Property(Description)]</value>
 		<value condition="Control.HasFocus(21)">$INFO[Container(21).ListItem.Property(Description)]</value>

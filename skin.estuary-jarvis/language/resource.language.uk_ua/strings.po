@@ -650,3 +650,23 @@ msgstr "Вибрати іконки погоди"
 msgctxt "#84215"
 msgid "Hardware"
 msgstr "Устаткування"
+
+msgctxt "#84216"
+msgid "Customize Main Menu"
+msgstr "Налаштування головного меню"
+
+msgctxt "#84217"
+msgid "Customize power menu"
+msgstr "Налаштування меню живлення"
+
+msgctxt "#84218"
+msgid "Reset menus settings"
+msgstr "Скидання налаштувань меню"
+
+msgctxt "#84219"
+msgid "Choose item for menu"
+msgstr "Виберіть пункт для меню"
+
+msgctxt "#84220"
+msgid "Common Shortcut"
+msgstr "Загальний ярлик"

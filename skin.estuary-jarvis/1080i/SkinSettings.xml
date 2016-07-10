@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|videos|movie|tvshow|music|musicvideo|livetv|radio|pictures|addons|weather|powermenu)</onunload>
 	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
@@ -73,8 +74,8 @@
 			<include name="UpDownArrows">
 				<param name="container_id" value="600" />
 				<param name="posx" value="1045" />
-				<param name="up_posy" value="130" />
-				<param name="down_posy" value="910" />
+                <param name="up_posy" value="105" />
+                <param name="down_posy" value="940" />
 				<param name="visible" value="!System.HasModalDialog" />
 			</include>
 			<control type="grouplist" id="600">
@@ -224,7 +225,8 @@
 				<onup>610</onup>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(2)</visible>
-				<control type="radiobutton" id="611">
+                <visible>!Window.IsActive(script-skinshortcuts.xml)</visible>
+				<!-- <control type="radiobutton" id="611">
 					<label>$LOCALIZE[342]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -272,13 +274,36 @@
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
-				</control>
+				</control> -->
+                <control type="button" id="621">
+                  <label>$ADDON[script.skinshortcuts 32071]</label>
+                  <width>1256</width>
+                  <include>DefaultSettingButton</include>
+                  <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+               </control>
+               <control type="button" id="622">
+                  <label>$LOCALIZE[84216]</label>
+                  <width>1256</width>
+                  <include>DefaultSettingButton</include>
+                  <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+               </control>
+               <control type="image" id="10">
+				  <description>separator image</description>
+			      <height>3</height>
+				  <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		       </control>
+               <control type="button" id="623">
+                  <label>$ADDON[script.skinshortcuts 32037]</label>
+                  <width>1256</width>
+                  <include>DefaultSettingButton</include>
+                  <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+               </control>
 			</control>
             <include name="UpDownArrows">
 				<param name="container_id" value="1000" />
 				<param name="posx" value="1045" />
-				<param name="up_posy" value="130" />
-				<param name="down_posy" value="910" />
+                <param name="up_posy" value="105" />
+                <param name="down_posy" value="940" />
 				<param name="visible" value="!System.HasModalDialog" />
 			</include>
             <control type="grouplist" id="1000">
@@ -331,8 +356,8 @@
             <include name="UpDownArrows">
 				<param name="container_id" value="2000" />
 				<param name="posx" value="1045" />
-				<param name="up_posy" value="130" />
-				<param name="down_posy" value="910" />
+                <param name="up_posy" value="105" />
+                <param name="down_posy" value="940" />
 				<param name="visible" value="!System.HasModalDialog" />
 			</include>
             <control type="grouplist" id="2000">

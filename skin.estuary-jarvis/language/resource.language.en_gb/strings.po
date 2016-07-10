@@ -787,4 +787,6 @@ msgctxt "#84215"
 msgid "Hardware"
 msgstr ""
 
-
+msgctxt "#84216"
+msgid "Customize power menu"
+msgstr ""
