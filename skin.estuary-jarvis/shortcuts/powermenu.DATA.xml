@@ -3,35 +3,35 @@
     <shortcut>        
         <label>13012</label>
         <label2>84220</label2>
-        <action>Quit()</action>
+        <action>Quit</action>
         <icon>special://skin/extras/icons/power.png</icon> 
         <visible>System.ShowExitButton</visible>       
     </shortcut>
     <shortcut>
         <label>13016</label>
         <label2>84220</label2>        
-        <action>Powerdown()</action>
+        <action>Powerdown</action>
         <icon>special://skin/extras/icons/power.png</icon> 
         <visible>System.CanPowerDown</visible>        
     </shortcut>
     <shortcut>        
         <label>13011</label>
         <label2>84220</label2>
-        <action>Suspend()</action>
+        <action>Suspend</action>
         <icon>special://skin/extras/icons/power.png</icon> 
         <visible>System.CanSuspend</visible>       
     </shortcut>
     <shortcut>       
         <label>13010</label>
         <label2>84220</label2>
-        <action>Hibernate()</action>
+        <action>Hibernate</action>
         <icon>special://skin/extras/icons/power.png</icon> 
         <visible>System.CanHibernate</visible>        
     </shortcut>
     <shortcut>        
         <label>13013</label>
         <label2>84220</label2>
-        <action>Reset()</action>
+        <action>Reset</action>
         <icon>special://skin/extras/icons/power.png</icon> 
         <visible>System.CanReboot</visible>        
     </shortcut>
@@ -85,7 +85,7 @@
     <shortcut>        
         <label>20183</label>
         <label2>84220</label2>
-        <action>ReloadSkin()</action>
+        <action>ReloadSkin</action>
         <icon>special://skin/extras/icons/power.png</icon>        
     </shortcut>
 </shortcuts>

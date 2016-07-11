@@ -500,16 +500,7 @@
 					<left>50</left>
 					<width>300</width>
 					<height>300</height>
-					<texture>$INFO[Weather.conditions]</texture>
-                    <visible>IsEmpty(Skin.String(WeatherIcons.name))</visible>
-				</control>
-				<control type="image">
-					<top>232</top>
-					<left>50</left>
-					<width>300</width>
-					<height>300</height>
-					<texture>$INFO[Skin.String(WeatherIcons.path),,/]$INFO[Window(weather).Property(Daily.1.OutlookIcon)]</texture>
-                    <visible>!IsEmpty(Skin.String(WeatherIcons.name))</visible>
+					<texture>$VAR[CurrentWeatherIcon]</texture>
 				</control>
 				<control type="label">
 					<left>800</left>

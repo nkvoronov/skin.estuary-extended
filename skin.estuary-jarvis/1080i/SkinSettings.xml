@@ -125,7 +125,7 @@
 				</control>
 				<control type="button" id="606">
 					<label>- $LOCALIZE[31131]</label>
-					<label2>$INFO[Skin.String(HomeFanart.name)]</label2>
+					<label2>$VAR[HomeFanartName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
@@ -134,7 +134,7 @@
 				</control>
                 <control type="button" id="607">
 					<label>- $LOCALIZE[84209]</label>
-					<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
+					<label2>$VAR[WeatherFanartName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
@@ -151,7 +151,7 @@
                </control>
 				<control type="button" id="609">
 					<label>- $LOCALIZE[84211]</label>
-					<label2>$INFO[Skin.String(StudiosImages.name)]</label2>
+					<label2>$VAR[StudiosImagesName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <onclick>RunScript(script.image.resource.select,property=StudiosImages&amp;type=resource.images.studios)</onclick>
@@ -160,7 +160,7 @@
 				</control>
                 <!-- <control type="button" id="610">
                     <label>- $LOCALIZE[84212]</label>
-                    <label2>$INFO[Skin.String(RecordLabels.name)]</label2>
+                    <label2>$VAR[RecordLabelsName]</label2>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <onclick>RunScript(script.image.resource.select,property=RecordLabels&amp;type=resource.images.recordlabels)</onclick>
@@ -169,18 +169,18 @@
                </control> -->
                 <control type="button" id="611">
 					<label>$LOCALIZE[84213]</label>
-					<label2>$INFO[Skin.String(LanguageFlags.name)]</label2>
+					<label2>$VAR[LanguageFlagsName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
+					<onclick>RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
                 <control type="button" id="612">
 					<label>$LOCALIZE[84214]</label>
-					<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
+					<label2>$VAR[WeatherIconsName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
+					<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
 				<control type="radiobutton" id="620">
