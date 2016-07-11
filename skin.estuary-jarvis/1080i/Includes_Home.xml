@@ -411,7 +411,7 @@
 					<texture border="22">dialogs/dialog-bg.png</texture>
 				</control>
 				<control type="group" id="$PARAM[button_id]567">
-					<top>50</top>
+					<top>40</top>
 					<left>478</left>
 					<width>1370</width>
 					<height>806</height>
@@ -463,7 +463,7 @@
                         <label>$INFO[System.KernelVersion]</label>
                     </control>
                     <control type="label">
-                        <top>155</top>
+                        <top>185</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -474,7 +474,7 @@
                         <label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
                     </control>
                     <control type="label">
-                        <top>190</top>
+                        <top>220</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -484,7 +484,7 @@
                         <label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
                     </control>
                     <control type="label">
-                        <top>225</top>
+                        <top>255</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -494,7 +494,7 @@
                         <label>$LOCALIZE[12390]: [LOWERCASE]$INFO[System.Uptime][/LOWERCASE]</label>
                     </control>
                     <control type="label">
-                        <top>260</top>
+                        <top>290</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -504,7 +504,7 @@
                         <label>$LOCALIZE[12394]: [LOWERCASE]$INFO[System.TotalUptime][/LOWERCASE]</label>
                     </control>
                     <control type="label">
-                        <top>295</top>
+                        <top>325</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -514,7 +514,7 @@
                         <label>$LOCALIZE[150]: $INFO[Network.IPAddress] [B]-[/B] $LOCALIZE[149]: $INFO[Network.MACAddress] [B]-[/B] $INFO[Network.LinkState]</label>
                     </control>
                     <control type="label">
-                        <top>330</top>
+                        <top>390</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -525,7 +525,7 @@
                         <label>[UPPERCASE]• $LOCALIZE[84215] •[/UPPERCASE]</label>
                     </control>
                     <control type="label">
-                        <top>365</top>
+                        <top>425</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -536,7 +536,7 @@
                         <label>$LOCALIZE[22011] $INFO[System.CPUTemperature]</label>
                     </control>
                     <control type="label">
-                        <top>400</top>
+                        <top>460</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -547,7 +547,7 @@
                         <label>$LOCALIZE[22010] $INFO[System.GPUTemperature]</label>
                     </control>
                     <control type="label">
-                        <top>435</top>
+                        <top>495</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -558,14 +558,14 @@
                         <label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
                     </control>
                     <control type="progress">
-                        <top>490</top>
+                        <top>550</top>
                         <centerleft>50%</centerleft>
                         <width>1100</width>
                         <height>16</height>
                         <info>System.CPUUsage</info>
                     </control>
                     <control type="label">
-                        <top>495</top>
+                        <top>555</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -575,14 +575,14 @@
                         <label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
                     </control>
                     <control type="progress">
-                        <top>550</top>
+                        <top>610</top>
                         <centerleft>50%</centerleft>
                         <width>1100</width>
                         <height>16</height>
                         <info>system.memory(used)</info>
                     </control>
                     <control type="label">
-                        <top>555</top>
+                        <top>615</top>
                         <align>center</align>
                         <height>30</height>
                         <textoffsety>10</textoffsety>
@@ -593,7 +593,7 @@
                         <visible>!System.Platform.Android</visible>
                     </control>
                     <control type="progress">
-                        <top>610</top>
+                        <top>670</top>
                         <centerleft>50%</centerleft>
                         <width>1100</width>
                         <height>16</height>

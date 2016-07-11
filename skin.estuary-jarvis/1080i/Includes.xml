@@ -704,6 +704,8 @@
 		</definition>
 	</include>
 	<include name="UpDownArrows">
+        <param name="width">48</param>
+        <param name="height">24</param>
 		<param name="up_posy">134</param>
 		<param name="down_posy">910</param>
 		<param name="posx">936</param>
@@ -712,8 +714,8 @@
 			<control type="button" id="$PARAM[container_id]588">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[down_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
@@ -727,8 +729,8 @@
 			<control type="button" id="$PARAM[container_id]589">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[up_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<window>
+	<defaultcontrol>111</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<left>240</left>
+		<top>70</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>940</height>
+			<texture border="2">dialogs/dialog-bg-solid.png</texture>
+		</control>
+        <control type="image">
+			<description>Dialog Header image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>70</height>
+			<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+		</control>
+		<control type="label">
+			<description>textarea</description>
+			<textoffsetx>70</textoffsetx>
+			<left>-30</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>70</height>
+			<visible>true</visible>
+			<label>$ADDON[script.transmission 32112]</label>
+			<font>font20_title</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<shadowcolor>black</shadowcolor>
+		</control>
+        <control type="button" id="22001">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>5760</width>
+			<height>3240</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Action(close)</onclick>
+		</control>
+		<control type="button" id="22002">
+			<description>button overlay to avoid closing in dialog area</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>940</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>noop</onclick>
+		</control>
+		<control type="radiobutton" id="22000">
+			<left>1440</left>
+			<top>11</top>
+			<width>48</width>
+			<height>48</height>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label></label>
+			<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+			<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+			<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+			<onclick>Action(close)</onclick>
+		</control>
+        <control type="image">
+			<left>0</left>
+			<top>70</top>
+			<width>1440</width>
+			<height>870</height>
+            <texture border="40">buttons/dialogbutton-nofo.png</texture>
+		</control>
+		<control type="group">
+			<left>30</left>
+			<top>90</top>
+			<control type="label">
+				<left>0</left>
+				<top>0</top>
+				<width>200</width>
+				<height>50</height>
+				<label>$ADDON[script.transmission 32110]:</label>
+                <align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="1">
+				<left>220</left>
+				<top>0</top>
+				<width>1150</width>
+				<height>50</height>
+				<label></label>
+                <align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>50</top>
+				<width>200</width>
+				<height>50</height>
+				<label>$ADDON[script.transmission 32111]:</label>
+                <align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="2">
+				<left>220</left>
+				<top>50</top>
+				<width>1100</width>
+				<height>50</height>
+				<label></label>
+                <align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="progress" id="219">
+				<description>Torrent progress</description>
+				<left>0</left>
+				<top>115</top>
+				<width>1260</width>
+				<height>25</height>
+				<visible>true</visible>
+			</control>
+			<control type="label" id="11">
+				<left>1280</left>
+				<top>100</top>
+				<width>100</width>
+				<height>50</height>
+				<label></label>
+                <aligny>center</aligny>
+			</control>
+            <control type="image">
+				<description>separator</description>
+				<left>0</left>
+				<top>145</top>
+				<width>1370</width>
+				<height>20</height>
+				<texture border="40">lists/separator.png</texture>
+			</control>
+		</control>
+		<control type="list" id="220">
+			<description>File list</description>
+			<left>30</left>
+			<top>250</top>
+			<width>1370</width>
+			<height>500</height>
+            <onup>111</onup>
+			<viewtype label="File List">list</viewtype>
+			<orientation>vertical</orientation>
+			<visible>true</visible>
+			<itemlayout width="1370" height="50">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1370</width>
+					<height>50</height>
+					<texture border="5">lists/separator.png</texture>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>1260</width>
+					<height>50</height>
+					<info>ListItem.label</info>
+                    <aligny>center</aligny>
+				</control>
+				<control type="label">
+					<left>1270</left>
+					<top>0</top>
+					<width>100</width>
+					<height>50</height>
+					<info>ListItem.Property(Progress)</info>
+                    <aligny>center</aligny>
+				</control>
+			</itemlayout>
+			<focusedlayout width="1370" height="50">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1370</width>
+					<height>50</height>
+					<visible>Control.HasFocus(220)</visible>
+					<texture border="5" colordiffuse="button_focus">lists/focus.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1370</width>
+					<height>50</height>
+					<visible>!Control.HasFocus(220)</visible>
+					<texture border="5">lists/separator.png</texture>
+				</control>
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>1260</width>
+					<height>50</height>
+					<info>ListItem.label</info>
+                    <aligny>center</aligny>
+				</control>
+				<control type="label">
+					<left>1270</left>
+					<top>0</top>
+					<width>100</width>
+					<height>50</height>
+					<info>ListItem.Property(Progress)</info>
+                    <aligny>center</aligny>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

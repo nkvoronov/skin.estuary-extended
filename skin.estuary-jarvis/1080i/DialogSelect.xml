@@ -83,7 +83,18 @@
 						<height>60</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label2] $INFO[ListItem.Property(Addon.Summary)]</label>
+						<label>$INFO[ListItem.Label2]</label>
+                        <visible>!IsEmpy(ListItem.Label2) + IsEmpy(ListItem.Property(Addon.Summary))</visible>
+					</control>
+					<control type="textbox">
+						<left>135</left>
+						<top>52</top>
+						<width>700</width>
+						<height>60</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+                        <visible>!IsEmpy(ListItem.Property(Addon.Summary))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="125" width="880">
@@ -127,7 +138,19 @@
 						<width>700</width>
 						<height>60</height>
 						<font>font12</font>
-						<label>$INFO[ListItem.Label2] $INFO[ListItem.Property(Addon.Summary)]</label>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+                        <visible>!IsEmpy(ListItem.Label2) + IsEmpy(ListItem.Property(Addon.Summary))</visible>
+					</control>
+					<control type="textbox">
+						<left>135</left>
+						<top>52</top>
+						<width>700</width>
+						<height>60</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+                        <visible>!IsEmpy(ListItem.Property(Addon.Summary))</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -165,7 +188,7 @@
 						<param name="label" value="-" />
 					</include>
 					<include name="DefaultDialogButton">
-						<param name="id" value="7" />
+						<param name="id" value="99" />
 						<param name="label" value="$LOCALIZE[222]" />
 						<param name="onclick" value="Dialog.Close(selectdialog)" />
 					</include>
