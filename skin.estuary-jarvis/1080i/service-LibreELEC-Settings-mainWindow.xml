@@ -22,7 +22,7 @@
                 <width>400</width>
                 <height>120</height>
                 <aspectratio>keep</aspectratio>
-                <texture>os/openelec/Logo.png</texture>
+                <texture>os/libreelec/Logo.png</texture>
             </control>
 			<control type="list" id="1000">
 				<description>button area</description>
@@ -77,7 +77,7 @@
                     <top>10</top>
                     <width>300</width>
                     <height>300</height>
-                    <texture border="1">os/openelec/logo_big.png</texture>
+                    <texture border="1">os/libreelec/logo_big.png</texture>
                 </control>
                 <!-- Separator Logo -->
                 <control type="image">
@@ -98,7 +98,7 @@
                     <textcolor>button_focus</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$ADDON[service.openelec.settings 606]</label>
+                    <label>$ADDON[service.libreelec.settings 606]</label>
                 </control>	
                 <control type="label">
                     <left>250</left>
@@ -122,7 +122,7 @@
                     <textcolor>button_focus</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$ADDON[service.openelec.settings 607]</label>
+                    <label>$ADDON[service.libreelec.settings 607]</label>
                 </control>	
                 <control type="label">
                     <left>250</left>
@@ -146,7 +146,7 @@
                     <textcolor>button_focus</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$ADDON[service.openelec.settings 608]</label>
+                    <label>$ADDON[service.libreelec.settings 608]</label>
                 </control>
                 <control type="label">
                     <left>250</left>
@@ -167,7 +167,7 @@
                     <height>170</height>
                     <font>font10</font>
                     <textcolor>white</textcolor>
-                    <label>$ADDON[service.openelec.settings 609]</label>
+                    <label>$ADDON[service.libreelec.settings 609]</label>
                     <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
                 </control>
                 <!-- Comment 2 -->                
@@ -178,7 +178,7 @@
                     <height>150</height>
                     <font>font10</font>
                     <textcolor>white</textcolor>
-                    <label>$ADDON[service.openelec.settings 610]</label>
+                    <label>$ADDON[service.libreelec.settings 610]</label>
                     <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
                 </control>
                 <!-- Comment 3 -->                
@@ -190,7 +190,7 @@
                     <font>font10</font>
                     <textcolor>white</textcolor>
                     <align>left</align>
-                    <label>$ADDON[service.openelec.settings 611]</label>
+                    <label>$ADDON[service.libreelec.settings 611]</label>
                     <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
                 </control>
             </control>
@@ -430,7 +430,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(netType), ethernet)</visible> 
-                        <texture>os/openelec/icons/eth.png</texture>
+                        <texture>icons/eth.png</texture>
                     </control>
                     <!-- Icon wifi -->
                     <control type="image">
@@ -440,7 +440,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(netType), wifi)</visible> 
-                        <texture>os/openelec/icons/wlan.png</texture>
+                        <texture>icons/wlan.png</texture>
                     </control>
                     <!-- Connection Name -->
                     <control type="label">
@@ -463,7 +463,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
                         <visible>!IsEmpty(ListItem.Property(Interface))</visible>
                     </control>
                     <!-- Connection Address -->
@@ -475,7 +475,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                         <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
                     </control>
                     <!-- Method -->
@@ -487,7 +487,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
                     </control>
                     <!-- State -->
                     <control type="label">
@@ -498,7 +498,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
                     </control>
                     <!-- Signal strength -->
                     <control type="progress">
@@ -530,7 +530,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(State), online)</visible> 
-                        <texture>os/openelec/icons/connected.png</texture>
+                        <texture>os/libreelec/icons/connected.png</texture>
                     </control>
                     <!-- Favorite Symbol (bottom right) -->
                     <control type="image">
@@ -540,7 +540,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Favorite), 1)</visible> 
-                        <texture>os/openelec/icons/Favorite.png</texture>
+                        <texture>os/libreelec/icons/Favorite.png</texture>
                     </control>
                     <!-- Secure Symbol (bottom right) -->
                     <control type="image">
@@ -550,7 +550,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible> 
-                        <texture>os/openelec/icons/Key.png</texture>
+                        <texture>os/libreelec/icons/Key.png</texture>
                     </control>		
                 </itemlayout>
                 <focusedlayout height="150">
@@ -577,7 +577,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(netType), ethernet)</visible> 
-                        <texture>os/openelec/icons/eth.png</texture>
+                        <texture>os/libreelec/icons/eth.png</texture>
                     </control>
                     <!-- Icon wifi -->
                     <control type="image">
@@ -587,7 +587,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(netType), wifi)</visible> 
-                        <texture>os/openelec/icons/wlan.png</texture>
+                        <texture>os/libreelec/icons/wlan.png</texture>
                     </control>
                     <!-- Connection Name -->
                     <control type="label">
@@ -610,7 +610,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
                         <visible>!IsEmpty(ListItem.Property(Interface))</visible>
                     </control>
                     <!-- Connection Address -->
@@ -623,7 +623,7 @@
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
                         <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
-                        <label>$ADDON[service.openelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                     </control>
                     <!-- Method -->
                     <control type="label">
@@ -634,7 +634,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
                     </control>
                     <!-- State -->
                     <control type="label">
@@ -645,7 +645,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
                     </control>
                     <!-- Signal strength -->
                     <control type="progress">
@@ -677,7 +677,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(State), online)</visible> 
-                        <texture>icons/connected.png</texture>
+                        <texture>os/libreelec/icons/connected.png</texture>
                     </control>
                     <!-- Favorite Symbol (bottom right) -->
                     <control type="image">
@@ -687,7 +687,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Favorite), 1)</visible> 
-                        <texture>os/openelec/icons/Favorite.png</texture>
+                        <texture>os/libreelec/icons/Favorite.png</texture>
                     </control>
                     <!-- Secure Symbol (bottom right) -->
                     <control type="image">
@@ -697,7 +697,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible> 
-                        <texture>os/openelec/icons/Key.png</texture>
+                        <texture>os/libreelec/icons/Key.png</texture>
                     </control>		
                 </focusedlayout>                
             </control>
@@ -744,7 +744,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), default)</visible> 
-                        <texture>os/openelec/icons/bt.png</texture>	
+                        <texture>os/libreelec/icons/bt.png</texture>	
                     </control>
                     <!-- modem -->
                     <control type="image">
@@ -754,7 +754,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), modem)</visible> 
-                        <texture>os/openelec/icons/bt-modem.png</texture>
+                        <texture>os/libreelec/icons/bt-modem.png</texture>
                     </control>
                     <!-- audio -->
                     <control type="image">
@@ -764,7 +764,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), audio-card)</visible> 
-                        <texture>os/openelec/icons/bt-audio-card.png</texture>
+                        <texture>os/libreelec/icons/bt-audio-card.png</texture>
                     </control>
                     <!-- Camera Photo -->
                     <control type="image">
@@ -774,7 +774,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), camera-photo)</visible> 
-                        <texture>os/openelec/icons/bt-camera-photo.png</texture>
+                        <texture>os/libreelec/icons/bt-camera-photo.png</texture>
                     </control>		
                     <!-- Icon phone -->
                     <control type="image">
@@ -784,7 +784,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), phone)</visible> 
-                        <texture>os/openelec/icons/bt-phone.png</texture>
+                        <texture>os/libreelec/icons/bt-phone.png</texture>
                     </control>	
                     <!-- camera-video -->
                     <control type="image">
@@ -794,7 +794,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), camera-video)</visible> 
-                        <texture>os/openelec/icons/bt-camera-video.png</texture>
+                        <texture>os/libreelec/icons/bt-camera-video.png</texture>
                     </control>
                     <!-- input-mouse -->
                     <control type="image">
@@ -804,7 +804,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-mouse)</visible> 
-                        <texture>os/openelec/icons/bt-input-mouse.png</texture>
+                        <texture>os/libreelec/icons/bt-input-mouse.png</texture>
                     </control>								
                     <!-- input-gaming -->
                     <control type="image">
@@ -814,7 +814,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-gaming)</visible> 
-                        <texture>os/openelec/icons/bt-input-gaming.png</texture>
+                        <texture>os/libreelec/icons/bt-input-gaming.png</texture>
                     </control>	
                     <!-- input-keyboard -->
                     <control type="image">
@@ -824,7 +824,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-keyboard)</visible> 
-                        <texture>os/openelec/icons/bt-input-keyboard.png</texture>
+                        <texture>os/libreelec/icons/bt-input-keyboard.png</texture>
                     </control>	
                     <!-- input-tablet -->
                     <control type="image">
@@ -834,7 +834,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-tablet)</visible> 
-                        <texture>os/openelec/icons/bt-input-tablet.png</texture>
+                        <texture>os/libreelec/icons/bt-input-tablet.png</texture>
                     </control>	
                     <!-- Printer -->
                     <control type="image">
@@ -844,7 +844,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), printer)</visible> 
-                        <texture>os/openelec/icons/bt-printer.png</texture>
+                        <texture>os/libreelec/icons/bt-printer.png</texture>
                     </control>
                     <!-- Computer -->
                     <control type="image">
@@ -854,7 +854,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), computer)</visible> 
-                        <texture>os/openelec/icons/bt-computer.png</texture>
+                        <texture>os/libreelec/icons/bt-computer.png</texture>
                     </control>                                                
                     <!-- Connection Name -->
                     <control type="label">
@@ -877,7 +877,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                     </control>
                     <!-- Connected State -->
                     <control type="label">
@@ -888,7 +888,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
                     </control>
                     <!-- Paired Symbol (bottom right) -->
                     <control type="image">
@@ -898,7 +898,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Paired), 1)</visible> 
-                        <texture>os/openelec/icons/Favorite.png</texture>
+                        <texture>os/libreelec/icons/Favorite.png</texture>
                     </control>
                     <!-- Trusted Symbol (bottom right) -->
                     <control type="image">
@@ -908,7 +908,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible> 
-                        <texture>os/openelec/icons/Key.png</texture>
+                        <texture>os/libreelec/icons/Key.png</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout height="140">
@@ -935,7 +935,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), default)</visible> 
-                        <texture>os/openelec/icons/bt.png</texture>
+                        <texture>os/libreelec/icons/bt.png</texture>
                     </control>
                     <!-- modem -->
                     <control type="image">
@@ -945,7 +945,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), modem)</visible> 
-                        <texture>os/openelec/icons/bt-modem.png</texture>
+                        <texture>os/libreelec/icons/bt-modem.png</texture>
                     </control>
                     <!-- audio -->
                     <control type="image">
@@ -955,7 +955,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), audio-card)</visible> 
-                        <texture>os/openelec/icons/bt-audio-card.png</texture>
+                        <texture>os/libreelec/icons/bt-audio-card.png</texture>
                     </control>
                     <!-- Camera Photo -->
                     <control type="image">
@@ -965,7 +965,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), camera-photo)</visible> 
-                        <texture>os/openelec/icons/bt-camera-photo.png</texture>
+                        <texture>os/libreelec/icons/bt-camera-photo.png</texture>
                     </control>		
                     <!-- Icon phone -->
                     <control type="image">
@@ -975,7 +975,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), phone)</visible> 
-                        <texture>os/openelec/icons/bt-phone.png</texture>
+                        <texture>os/libreelec/icons/bt-phone.png</texture>
                     </control>	
                     <!-- camera-video -->
                     <control type="image">
@@ -985,7 +985,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), camera-video)</visible> 
-                        <texture>os/openelec/icons/bt-camera-video.png</texture>
+                        <texture>os/libreelec/icons/bt-camera-video.png</texture>
                     </control>	
                     <!-- input-mouse -->
                     <control type="image">
@@ -995,7 +995,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-mouse)</visible> 
-                        <texture>os/openelec/icons/bt-input-mouse.png</texture>
+                        <texture>os/libreelec/icons/bt-input-mouse.png</texture>
                     </control>							
                     <!-- input-gaming -->
                     <control type="image">
@@ -1005,7 +1005,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-gaming)</visible> 
-                        <texture>os/openelec/icons/bt-input-gaming.png</texture>
+                        <texture>os/libreelec/icons/bt-input-gaming.png</texture>
                     </control>	
                     <!-- input-keyboard -->
                     <control type="image">
@@ -1015,7 +1015,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-keyboard)</visible> 
-                        <texture>os/openelec/icons/bt-input-keyboard.png</texture>
+                        <texture>os/libreelec/icons/bt-input-keyboard.png</texture>
                     </control>	
                     <!-- input-tablet -->
                     <control type="image">
@@ -1025,7 +1025,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), input-tablet)</visible> 
-                        <texture>os/openelec/icons/bt-input-tablet.png</texture>
+                        <texture>os/libreelec/icons/bt-input-tablet.png</texture>
                     </control>	
                     <!-- Printer -->
                     <control type="image">
@@ -1035,7 +1035,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), printer)</visible> 
-                        <texture>os/openelec/icons/bt-printer.png</texture>
+                        <texture>os/libreelec/icons/bt-printer.png</texture>
                     </control>
                     <!-- Computer -->
                     <control type="image">
@@ -1045,7 +1045,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Icon), computer)</visible> 
-                        <texture>os/openelec/icons/bt-computer.png</texture>
+                        <texture>os/libreelec/icons/bt-computer.png</texture>
                     </control>                                                
                     <!-- Connection Name -->
                     <control type="label">
@@ -1068,7 +1068,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                     </control>
                     <!-- Connected State -->
                     <control type="label">
@@ -1079,7 +1079,7 @@
                         <aligny>center</aligny>
                         <font>font12</font>
                         <textcolor>button_focus</textcolor>
-                        <label>$ADDON[service.openelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
+                        <label>$ADDON[service.libreelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
                     </control>
                     <!-- Paired Symbol (bottom right) -->
                     <control type="image">
@@ -1089,7 +1089,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>StringCompare(ListItem.Property(Paired), 1)</visible> 
-                        <texture>os/openelec/icons/Favorite.png</texture>
+                        <texture>os/libreelec/icons/Favorite.png</texture>
                     </control>
                     <!-- Trusted Symbol (bottom right) -->
                     <control type="image">
@@ -1099,7 +1099,7 @@
                         <height>50</height>
                         <aspectratio>keep</aspectratio>
                         <visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible> 
-                        <texture>os/openelec/icons/Key.png</texture>
+                        <texture>os/libreelec/icons/Key.png</texture>
                     </control>
                 </focusedlayout>                
             </control>
@@ -1227,8 +1227,8 @@
             </control>
         </control>
 		<include name="TopBar">
-			<param name="breadcrumbs_label" value="$ADDON[service.openelec.settings 600]" />
-			<param name="breadcrumbs_icon" value="os/openelec/logo_openelec.png" />
+			<param name="breadcrumbs_label" value="$ADDON[service.libreelec.settings 600]" />
+			<param name="breadcrumbs_icon" value="os/libreelec/logo_libreelec.png" />
 		</include>
 		<include>BottomBar</include>
 	</controls>
