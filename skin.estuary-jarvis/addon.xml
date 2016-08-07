@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-jarvis" 
-    version="0.7.9.039" 
+    version="0.7.9.040" 
     name="Estuary-jarvis" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
