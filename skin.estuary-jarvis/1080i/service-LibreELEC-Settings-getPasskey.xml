@@ -32,7 +32,7 @@
                     <height>30</height>
                     <font>font12</font>
                     <textcolor>white</textcolor>
-                    <label />
+                    <label></label>
                     <align>center</align>
                     <visible>true</visible>
                 </control>
@@ -41,9 +41,9 @@
                     <top>50</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font23_title</font>
+                    <font>font24_title</font>
                     <textcolor>button_focus</textcolor>
-                    <label />
+                    <label></label>
                     <align>center</align>
                     <visible>true</visible>
                 </control>
@@ -52,9 +52,9 @@
                     <top>70</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font23_title</font>
+                    <font>font24_title</font>
                     <textcolor>button_focus</textcolor>
-                    <label />
+                    <label></label>
                     <align>center</align>
                     <visible>true</visible>
                 </control>
@@ -63,9 +63,9 @@
                     <top>90</top>
                     <width>560</width>
                     <height>30</height>
-                    <font>font23_title</font>
+                    <font>font24_title</font>
                     <textcolor>button_focus</textcolor>
-                    <label />
+                    <label></label>
                     <align>center</align>
                     <visible>true</visible>
                 </control>
