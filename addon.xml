@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
-    id="skin.estuary-jarvis" 
-    version="0.7.9.042" 
-    name="Estuary-jarvis" 
+    id="skin.estuary-extented" 
+    version="0.7.9.043" 
+    name="Estuary Extented" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
