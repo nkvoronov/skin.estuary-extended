@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-extented" 
-    version="0.7.9.045" 
+    version="0.7.9.046" 
     name="Estuary Extented" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
