@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-extented" 
-    version="0.7.9.044" 
+    version="0.7.9.045" 
     name="Estuary Extented" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
-        <import addon="script.pvr.favourites" version="1.0.7"/>
+		<import addon="script.pvr.favourites" version="1.0.7"/>
 	</requires>
 	<extension
 		point="xbmc.gui.skin"
@@ -31,13 +31,13 @@
 		<summary lang="ms_MY">Kulit Estuary Extented oleh phil65 dan rakan-rakan.</summary>
 		<summary lang="nl_NL">Estuary Extented skin door phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="pt_BR">Skin Esturay por phil65, Piers, YLLOW_DRAGON.</summary>
-        <summary lang="ru_RU">Обложка Estuary Extented. Авторы: phil65, Piers, YLLOW_DRAGON.</summary>
+		<summary lang="ru_RU">Обложка Estuary Extented. Авторы: phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="sk_SK">Vzhľad Estuary Extented, vytvorili phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="sr_RS">Маска Estuary Extented аутора phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="sr_RS@latin">Maska Estuary Extented autora phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="sv_SE">Estuary Extented-skin av phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="tr_TR">Estuary Extented dış görünümü. phil65, Piers, YLLOW_DRAGON</summary>
-        <summary lang="uk_UA">Обкладинка Estuary Extented. Автори: phil65, Piers, YLLOW_DRAGON.</summary>
+		<summary lang="uk_UA">Обкладинка Estuary Extented. Автори: phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="zh_CN">phil65 和 Piers 开发的 Estuary Extented 皮肤</summary>
 		<description lang="bg_BG">Estuary Extented е стандартният облик на Kodi 17 и по-новите версии. Целта е да се улеснят хората които се сблъскват за първи път с Kodi.</description>
 		<description lang="cs_CZ">Estuary Extented je výchozí skin pro Kodi 17.0 a výše. Jeho snahou je zjednodušit používání Kodi pro nové uživatele.</description>
@@ -54,13 +54,13 @@
 		<description lang="ms_MY">Estuary Extented ialah kulit lalai untuk Kodi 17.0 dan ke atas. Kulit yang mudah digunakan buat pengguna Kodi kali pertama untuk memahami dan menggunakannya.</description>
 		<description lang="nl_NL">Estuary Extented is de standaard skin voor Kodi 17.0 en hoger. Het tracht eenvoudig te begrijpen en te gebruiken te zijn voor beginnende Kodi gebruikers.</description>
 		<description lang="pt_BR">Estuary Extented é a skin padrão para o Kodi 17.0 e acima. Objetiva ser fácil para usuários que iniciam no Kodi pela primeira vez, facilitando aprendizagem de uso do mesmo.</description>
-        <description lang="ru_RU">Estuary Extented — это адаптированная обложка Estuary для KODI 16(jarvis).</description>
+		<description lang="ru_RU">Estuary Extented — это адаптированная обложка Estuary для KODI 16(jarvis).</description>
 		<description lang="sk_SK">Estuary Extented je predvolený vzhľad pre Kodi 17.0 a vyššie. Pokúša sa byť pre prvotných používateľov Kodi jednoduchým na pochopenie a používanie.</description>
 		<description lang="sr_RS">Estuary Extented је подразумевана маска за Kodi 17.0 и изнад. Покушава да буде једноставан за разумевање и коришћење новим корисницима Kodi-ја.</description>
 		<description lang="sr_RS@latin">Estuary Extented je podrazumevana maska za Kodi 17.0 i iznad. Pokušava da bude jednostavan za razumevanje i korišćenje novim korisnicima Kodija.</description>
 		<description lang="sv_SE">Estuary Extented är standard-skin för Kodi 17.0 och uppåt. Det försöker att vara lättförståeligt för förstagångsanvändare av Kodi att förstå och använda.</description>
 		<description lang="tr_TR">Estuary Extented Kodi 17.0 ve yukarısı için varsayılan dış görünümdür. İlk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
-        <description lang="uk_UA">Estuary Extented - це адаптована обкладинка Estuary для KODI 16 (jarvis).</description>
+		<description lang="uk_UA">Estuary Extented - це адаптована обкладинка Estuary для KODI 16 (jarvis).</description>
 		<description lang="zh_CN">Estuary Extented 是 Kodi 17.0 的默认皮肤。它力求使首次使用 Kodi 的用户易于上手。</description>
 		<disclaimer lang="bg_BG">Estuary Extented е стандартният облик на Kodi. Премахването му може да предизвика проблеми</disclaimer>
 		<disclaimer lang="cs_CZ">Estuary Extented je výchozí skin pro Kodi, jeho odebráním může dojít k potížím.</disclaimer>
