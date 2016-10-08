@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-extented-s" 
-    version="0.7.9.047" 
+    version="0.7.9.048" 
     name="Estuary Extented Shortcuts" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
@@ -21,7 +21,7 @@
 		<summary lang="de_DE">Estuary Extented Shortcuts skin by phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="en_GB">Estuary Extented Shortcuts skin by phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="en_US">Estuary Extented Shortcuts skin by phil65, Piers, YLLOW_DRAGON.</summary>
-		<summary lang="fr_CA">Habillage Estuaire par phil65, Piers, YLLOW_DRAGON.</summary>
+		<summary lang="fr_CA">Habillage Estuary Extented Shortcuts par phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="fr_FR">Estuary Extented Shortcuts, un habillage par phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="hr_HR">Estuary Extented Shortcuts presvlaka autora phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="hu_HU">Estuary Extented Shortcuts felszín. Készítette phil65, Piers, YLLOW_DRAGON.</summary>
