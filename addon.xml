@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-extented" 
-    version="0.7.9.046" 
+    version="0.7.9.047" 
     name="Estuary Extented" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
@@ -21,7 +21,7 @@
 		<summary lang="de_DE">Estuary Extented skin by phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="en_GB">Estuary Extented skin by phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="en_US">Estuary Extented skin by phil65, Piers, YLLOW_DRAGON.</summary>
-		<summary lang="fr_CA">Habillage Estuaire par phil65, Piers, YLLOW_DRAGON.</summary>
+		<summary lang="fr_CA">Habillage Estuary Extented par phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="fr_FR">Estuary Extented, un habillage par phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="hr_HR">Estuary Extented presvlaka autora phil65, Piers, YLLOW_DRAGON.</summary>
 		<summary lang="hu_HU">Estuary Extented felszín. Készítette phil65, Piers, YLLOW_DRAGON.</summary>
