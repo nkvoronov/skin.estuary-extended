@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
     id="skin.estuary-extented-s" 
-    version="0.7.9.046" 
+    version="0.7.9.047" 
     name="Estuary Extented Shortcuts" 
     provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
