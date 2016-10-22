@@ -449,7 +449,7 @@
                         <font>font13</font>
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
-                        <label>Estuary-jarvis $INFO[System.AddonVersion(skin.estuary-jarvis)]</label>
+                        <label>Estuary Extented $INFO[System.AddonVersion(skin.estuary-extented)]</label>
                     </control>
                     <control type="label">
                         <top>120</top>
