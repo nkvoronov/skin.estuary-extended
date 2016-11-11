@@ -12,6 +12,7 @@
             <width>100</width>
             <height>100</height>
             <texture colordiffuse="button_focus">dialogs/volume/progress/p0.png</texture>
+            <visible>![Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
         </control>
 		<control type="image">
 			<left>37</left>
@@ -19,7 +20,8 @@
             <width>40</width>
             <height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture>dialogs/volume/mute.png</texture>
+			<texture colordiffuse="button_focus">dialogs/volume/mute.png</texture>
+            <visible>![Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
 		</control>
 	</controls>
 </window>

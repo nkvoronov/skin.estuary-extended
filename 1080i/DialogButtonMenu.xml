@@ -130,6 +130,12 @@
 					<onclick>InhibitIdleShutdown(false)</onclick>
 					<visible>System.HasShutdown + System.IsInhibit</visible>
 				</item>
+				<item>
+					<label>$LOCALIZE[20183]</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+                    <visible>true</visible>
+                    <!-- <visible>Skin.HasSetting(HideReloadSkinButton)</visible> -->
+				</item>
 			</content>
 		</control>
 	</controls>

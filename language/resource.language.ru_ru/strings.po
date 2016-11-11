@@ -54,15 +54,15 @@ msgstr "Нет отказа от ответственности"
 
 msgctxt "#31009"
 msgid "Download icons"
-msgstr "Скачать иконки"
+msgstr "Загрузить иконки"
 
 msgctxt "#31010"
 msgid "In progress movies"
-msgstr "Незавершенные фильмы"
+msgstr "Просматриваемые фильмы"
 
 msgctxt "#31011"
 msgid "Most played albums"
-msgstr "Самые популярные альбомы"
+msgstr "Самые проигрываемые альбомы"
 
 msgctxt "#31012"
 msgid "Random albums"
@@ -84,8 +84,12 @@ msgctxt "#31016"
 msgid "Recently played channels"
 msgstr "Недавно проигранные каналы"
 
+msgctxt "#31017"
+msgid "Rated"
+msgstr "Номинальный"
+
 msgctxt "#31018"
-msgid "Most played channels"
+msgid "Recently played channels"
 msgstr "Самые проигрываемые каналы"
 
 msgctxt "#31019"
@@ -134,7 +138,7 @@ msgstr "Последний вход"
 
 msgctxt "#31030"
 msgid "Memory used"
-msgstr "Использование памяти"
+msgstr "Использовано памяти"
 
 msgctxt "#31031"
 msgid "Version info"
@@ -150,7 +154,7 @@ msgstr "Ваш рейтинг"
 
 msgctxt "#31034"
 msgid "Extended info"
-msgstr "Расширенная информация"
+msgstr "Дополнительная информация"
 
 msgctxt "#31035"
 msgid "Pages"
@@ -242,7 +246,7 @@ msgstr "Перейти к плейлисту"
 
 msgctxt "#31057"
 msgid "Show login screen on startup"
-msgstr "Показать экран входа в систему при запуске"
+msgstr "Показывать экран входа при запуске"
 
 msgctxt "#31058"
 msgid "Automatic Login on startup"
@@ -257,8 +261,8 @@ msgid "minutes"
 msgstr "мин."
 
 msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Пункты главного меню"
+msgid "Main menu"
+msgstr "Главное меню"
 
 msgctxt "#31062"
 msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
@@ -274,7 +278,7 @@ msgstr "непросмотренные"
 
 msgctxt "#31065"
 msgid "Video playlist"
-msgstr "Видео плейлист"
+msgstr "Плейлист видео"
 
 msgctxt "#31066"
 msgid "Music playlist"
@@ -414,7 +418,7 @@ msgstr "Стена иконок"
 
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Сдвиг"
+msgstr "Cдвиг"
 
 msgctxt "#31101"
 msgid "InfoWall"
@@ -426,7 +430,7 @@ msgstr "Стена"
 
 msgctxt "#31103"
 msgid "Enter text here..."
-msgstr "Введите текст здесь ..."
+msgstr "Введите текст здесь..."
 
 msgctxt "#31104"
 msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
@@ -544,6 +548,66 @@ msgctxt "#31132"
 msgid "min"
 msgstr "мин"
 
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Скрыть"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Осталось"
+
+msgctxt "#31135"
+msgid "Installed from"
+msgstr "Установлен из"
+
+msgctxt "#31136"
+msgid "Click here to see latest changes..."
+msgstr "Нажмите сюда, чтобы увидеть последние изменения ..."
+
+msgctxt "#31137"
+msgid "PVR info"
+msgstr "PVR инфо"
+
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "Информация о процессе проигрывания"
+
+msgctxt "#31139"
+msgid "Video decoder"
+msgstr "Видео декодер"
+
+msgctxt "#31140"
+msgid "Pixel format"
+msgstr "Пиксель формат"
+
+msgctxt "#31141"
+msgid "Changes for version"
+msgstr "Изменения для версии"
+
+msgctxt "#31142"
+msgid "Play speed"
+msgstr "Скорость воспроизведения"
+
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Вы еще не включили PVR. Для того чтобы использовать PVR, выберите дополнение клиента PVR и настройте его. Пожалуйста, посетите http://kodi.wiki/view/PVR, чтобы узнать больше."
+
+msgctxt "#31144"
+msgid "Enter add-on browser"
+msgstr "Войти в браузер дополнений"
+
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "Поиск дополнений"
+
+msgctxt "#31146"
+msgid "Manage add-ons"
+msgstr "Управление дополнениями"
+
+msgctxt "#31147"
+msgid "Download add-ons"
+msgstr "Скачать дополнения"
+
 msgctxt "#32000"
 msgid "Poster"
 msgstr "Постер"
@@ -593,7 +657,6 @@ msgstr "Cписок дополнений"
 msgctxt "#84201"
 msgid "List of TV and radio"
 msgstr "Cписок тв и радио"
-
 
 msgctxt "#84202"
 msgid "Custom list of add-ons"
@@ -650,3 +713,27 @@ msgstr "Выбрать иконки погоды"
 msgctxt "#84215"
 msgid "Hardware"
 msgstr "Оборудование"
+
+msgctxt "#84216"
+msgid "Choose home fanart pack"
+msgstr "Выбрать фанарт пакет"
+
+msgctxt "#84217"
+msgid "Advanced"
+msgstr "Дополнительно"
+
+msgctxt "#84218"
+msgid "Advanced options"
+msgstr "Дополнительные опции"
+
+msgctxt "#88080"
+msgid "reload skin button"
+msgstr "кнопку обновления обложки"
+
+msgctxt "#89501"
+msgid "Enable FullScreen Clock"
+msgstr "Показывать часы в полноэкранном режиме"
+
+msgctxt "#89502"
+msgid "Enable SlideShow Info"
+msgstr "Показывать инормацию в слайдшоу"

@@ -84,6 +84,10 @@ msgctxt "#31016"
 msgid "Recently played channels"
 msgstr "Нещодавно програні канали"
 
+msgctxt "#31017"
+msgid "Rated"
+msgstr "Номінальний"
+
 msgctxt "#31018"
 msgid "Most played channels"
 msgstr "Самі програваємі канали"
@@ -257,8 +261,8 @@ msgid "minutes"
 msgstr "мін."
 
 msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Пункти головного меню"
+msgid "Main menu"
+msgstr "Головне меню"
 
 msgctxt "#31062"
 msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
@@ -414,7 +418,7 @@ msgstr "Стіна іконок"
 
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Сдвіг"
+msgstr "Зсув"
 
 msgctxt "#31101"
 msgid "InfoWall"
@@ -544,6 +548,66 @@ msgctxt "#31132"
 msgid "min"
 msgstr "мін"
 
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Приховати"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Залишилося"
+
+msgctxt "#31135"
+msgid "Installed from"
+msgstr "Встановлено з"
+
+msgctxt "#31136"
+msgid "Click here to see latest changes..."
+msgstr "Натисніть сюди, щоб побачити останні зміни ..."
+
+msgctxt "#31137"
+msgid "PVR info"
+msgstr "PVR інфо"
+
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "Інформація про процес програвання"
+
+msgctxt "#31139"
+msgid "Video decoder"
+msgstr "Відео декодер"
+
+msgctxt "#31140"
+msgid "Pixel format"
+msgstr "Піксель формат"
+
+msgctxt "#31141"
+msgid "Changes for version"
+msgstr "Зміни для версії"
+
+msgctxt "#31142"
+msgid "Play speed"
+msgstr "Швидкість відтворення"
+
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Ви ще не включили PVR. Для того щоб використовувати PVR, виберіть додаток клієнта PVR і налаштуйте його. Будь ласка, відвідайте http://kodi.wiki/view/PVR, щоб дізнатися більше."
+
+msgctxt "#31144"
+msgid "Enter add-on browser"
+msgstr "Увійти в браузер доповнень"
+
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "Пошук доповнень"
+
+msgctxt "#31146"
+msgid "Manage add-ons"
+msgstr "Управління доповненнями"
+
+msgctxt "#31147"
+msgid "Download add-ons"
+msgstr "Завантажити доповнення"
+
 msgctxt "#32000"
 msgid "Poster"
 msgstr "Постер"
@@ -593,7 +657,6 @@ msgstr "Список доповнень"
 msgctxt "#84201"
 msgid "List of TV and radio"
 msgstr "Список тв і радіо"
-
 
 msgctxt "#84202"
 msgid "Custom list of add-ons"
@@ -650,3 +713,27 @@ msgstr "Вибрати іконки погоди"
 msgctxt "#84215"
 msgid "Hardware"
 msgstr "Устаткування"
+
+msgctxt "#84216"
+msgid "Choose home fanart pack"
+msgstr "Вибрати фанарт пакет"
+
+msgctxt "#84217"
+msgid "Advanced"
+msgstr "Додатково"
+
+msgctxt "#84218"
+msgid "Advanced options"
+msgstr "Додаткові опції"
+
+msgctxt "#88080"
+msgid "reload skin button"
+msgstr "кнопку оновлення обкладинки"
+
+msgctxt "#89501"
+msgid "Enable FullScreen Clock"
+msgstr "Показувати годинник в повноекранному режимі"
+
+msgctxt "#89502"
+msgid "Enable SlideShow Info"
+msgstr "Показувати інформацію в слайдшоу"

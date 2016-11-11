@@ -48,6 +48,10 @@ msgctxt "#31029"
 msgid "Last logged in"
 msgstr "Zadnja prijava"
 
+msgctxt "#31030"
+msgid "Memory used"
+msgstr "Uporabljen pomnilnik"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "Nazaj"
@@ -123,3 +127,7 @@ msgstr "Izberite svoj Kodi uporabniški profil[CR]za prijavo in nadaljevanje"
 msgctxt "#31100"
 msgid "Shift"
 msgstr "Shift"
+
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Skrij"

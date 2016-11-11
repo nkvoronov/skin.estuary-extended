@@ -74,18 +74,18 @@
                 </control>
 				<!-- Movies -->
 				<control type="group" id="5000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),movies) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),movies) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="5888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(5001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(5200).NumItems,0)">SetFocus(5200)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(5100).NumItems,0)">SetFocus(5100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="5001">
 						<orientation>vertical</orientation>
@@ -127,7 +127,7 @@
                             <param name="item8_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(video)" />
 							<param name="item8_icon" value="updatelibrary.png" />
-							<param name="item8_label" value="$LOCALIZE[653]" />
+							<param name="item8_label" value="$VAR[VideoLibraryScanLabel]" />
 						</include>
 						<include name="WidgetListMovies">
 							<param name="content_path" value="special://skin/extras/playlists/inprogress_movies.xsp"/>
@@ -179,18 +179,18 @@
 				</control>
 				<!-- TVShows -->
 				<control type="group" id="6000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),tvshows) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),tvshows) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="6888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(6001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(6200).NumItems,0)">SetFocus(6200)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(6100).NumItems,0)">SetFocus(6100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="6001">
 						<orientation>vertical</orientation>
@@ -231,7 +231,7 @@
                             <param name="item8_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(video)" />
 							<param name="item8_icon" value="updatelibrary.png" />
-							<param name="item8_label" value="$LOCALIZE[653]" />
+							<param name="item8_label" value="$VAR[VideoLibraryScanLabel]" />
 						</include>
 						<include name="WidgetListEpisodes">
 							<param name="content_path" value="special://skin/extras/playlists/inprogress_tvshows.xsp"/>
@@ -283,17 +283,17 @@
 				</control>
 				<!-- Music -->
 				<control type="group" id="7000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),music) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),music) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="7888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(7001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(7100).NumItems,0)">SetFocus(7100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="7001">
 						<orientation>vertical</orientation>
@@ -309,7 +309,7 @@
 							<param name="item1_vis" value="Library.HasContent(music)" />
                             <param name="item2_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item2_onclick" value="ActivateWindow(Music,Artists,return)" />
-							<param name="item2_icon" value="actors.png" />
+							<param name="item2_icon" value="artists.png" />
 							<param name="item2_label" value="$LOCALIZE[133]" />
 							<param name="item2_vis" value="Library.HasContent(music)" />
                             <param name="item3_onclick2" value="SetProperty(FanartHomeType,music,home)" />
@@ -337,35 +337,42 @@
                             <param name="item8_onclick2" value="SetProperty(FanartHomeType,music,home)" />
 							<param name="item8_onclick" value="UpdateLibrary(music)" />
 							<param name="item8_icon" value="updatelibrary.png" />
-							<param name="item8_label" value="$LOCALIZE[653]" />
+							<param name="item8_label" value="$VAR[MusicLibraryScanLabel]" />
 							<param name="item8_vis" value="Library.HasContent(music)" />
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="musicdb://recentlyplayedalbums"/>
+                            <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[517]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7100"/>
 							<param name="onup_id" value="7900"/>
 							<param name="ondown_id" value="7200"/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="musicdb://recentlyaddedalbums/"/>
+                            <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[359]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7200"/>
 							<param name="onup_id" value="7100"/>
 							<param name="ondown_id" value="7300"/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="special://skin/extras/playlists/random_albums.xsp"/>
+                            <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[31012]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7300"/>
 							<param name="onup_id" value="7200"/>
 							<param name="ondown_id" value="7400"/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="special://skin/extras/playlists/random_artists.xsp"/>
+                            <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[31013]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7400"/>
@@ -374,17 +381,21 @@
 							<param name="single_label" value="$INFO[ListItem.Label]"/>
 							<param name="main_label" value=""/>
 							<param name="sub_label" value=""/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="special://skin/extras/playlists/unplayed_albums.xsp"/>
+                            <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[31014]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7500"/>
 							<param name="onup_id" value="7400"/>
 							<param name="ondown_id" value="7600"/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="WidgetListSquare">
 							<param name="content_path" value="special://skin/extras/playlists/mostplayed_albums.xsp"/>
+                            <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
 							<param name="widget_header" value="$LOCALIZE[31011]"/>
 							<param name="widget_target" value="music"/>
 							<param name="list_id" value="7600"/>
@@ -392,6 +403,7 @@
 							<param name="ondown_id" value="20001"/>
 							<param name="sortby" value="playcount"/>
 							<param name="sortorder" value="descending"/>
+							<param name="widget_limit" value="10"/>
 						</include>
 						<include name="ImageWidget">
 							<param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
@@ -408,17 +420,17 @@
 				</control>
 				<!-- Addons -->
 				<control type="group" id="8000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),addons) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),addons) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="8888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(8001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(8100).NumItems,0)">SetFocus(8100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="8001">
 						<orientation>vertical</orientation>
@@ -427,20 +439,12 @@
 						<include name="SubMenu">
 							<param name="list_id" value="8900"/>
 							<param name="ondown_id" value="8100"/>
-                            <param name="item1_vis" value="System.HasAddon(service.openelec.settings)" />
                             <param name="item1_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-						    <param name="item1_onclick" value="RunAddon(service.openelec.settings)" />
-							<param name="item1_icon" value="openelec.png" />
-							<param name="item1_label" value="OpenELEC" />
-                            <param name="item2_vis" value="System.HasAddon(service.libreelec.settings)" />
-                            <param name="item2_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-						    <param name="item2_onclick" value="RunAddon(service.libreelec.settings)" />
-							<param name="item2_icon" value="libreelec.png" />
-							<param name="item2_label" value="LibreELEC" />
-                            <param name="item3_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-							<param name="item3_onclick" value="ActivateWindow(addonbrowser,root)" />
-							<param name="item3_icon" value="add-ons.png" />
-							<param name="item3_label" value="$LOCALIZE[10040]" />
+						    <param name="item1_onclick" value="ActivateWindow(addonbrowser,root)" />
+                            <param name="item1_icon" value="add-ons.png" />
+							<param name="item1_label" value="$LOCALIZE[10040]" />
+                            <param name="item2_vis" value="False" />
+                            <param name="item3_vis" value="False" />
                             <param name="item4_vis" value="False" />                            
 							<param name="item5_vis" value="False" />
 							<param name="item6_vis" value="False" />
@@ -503,7 +507,7 @@
 						</include>
                         <!-- Android Apps -->
 						<include name="WidgetListSquare">
-							<param name="content_path" value="androidapp://sources/apps/"/>
+							<param name="content_path" value="$VAR[AndroidAppPathVar]"/>
 							<param name="widget_header" value="$LOCALIZE[20244]"/>
 							<param name="widget_target" value="programs"/>
 							<param name="sortby" value="lastused"/>
@@ -539,6 +543,7 @@
                             <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
 							<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
 							<param name="button_id" value="8600"/>
+							<param name="onup_id" value="8100"/>
 							<param name="visible" value="!IntegerGreaterThan(Container(8100).NumItems,0) + !IntegerGreaterThan(Container(8200).NumItems,0) + !IntegerGreaterThan(Container(8300).NumItems,0) + !IntegerGreaterThan(Container(8400).NumItems,0) + !IntegerGreaterThan(Container(8500).NumItems,0)"/>
 							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
 						</include>
@@ -546,17 +551,17 @@
 				</control>
 				<!-- Video -->
 				<control type="group" id="11000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),video) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),video) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="11888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(11001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(11100).NumItems,0)">SetFocus(11100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="11001">
 						<orientation>vertical</orientation>
@@ -602,7 +607,7 @@
 							<param name="list_id" value="11200"/>
 							<param name="onup_id" value="11100"/>
 							<param name="ondown_id" value="20001"/>
-							<param name="icon" value="icons/defaulticons/DefaultPlaylist.png"/>
+							<param name="icon" value="DefaultPlaylist.png"/>
 						</include>
 						<include name="ImageWidget">
 							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
@@ -619,17 +624,17 @@
 				</control>
 				<!-- LiveTV -->
 				<control type="group" id="12000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),livetv) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),livetv) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="12888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(12001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(12100).NumItems,0)">SetFocus(12100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="12001">
 						<orientation>vertical</orientation>
@@ -661,30 +666,19 @@
 							<param name="item5_label" value="$LOCALIZE[137]" />
 							<param name="item6_vis" value="False" />
 							<param name="item7_vis" value="False" />
-                            <param name="item8_vis" value="False" />
+							<param name="item8_vis" value="False" />
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
 						</include>
-						<include name="WidgetListChannels" condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)]">
-							<param name="content_path" value="pvr://channels/tv/All channels/"/>
-							<param name="widget_header" value="$LOCALIZE[31016]"/>
-							<param name="widget_target" value="pvr"/>
-							<param name="list_id" value="12200"/>
-							<param name="onup_id" value="12900"/>
-							<param name="ondown_id" value="20001"/>
-							<param name="height" value="540"/>
-						</include>
-                        <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_tv)">
-							<param name="widget_header" value="$LOCALIZE[84207]"/>
-							<param name="widget_target" value="TV"/>
-							<param name="list_id" value="12200"/>
-							<param name="onup_id" value="12900"/>
-							<param name="ondown_id" value="20001"/>
-							<param name="height" value="540"/>
+                        <include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[19020]" />
+							<param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
 						</include>
 						<control type="grouplist">
 							<height>218</height>
 							<left>478</left>
 							<top>36</top>
 							<orientation>horizontal</orientation>
+							<visible>PVR.IsRecording | PVR.HasNonRecordingTimer</visible>
 							<align>right</align>
 							<width>1360</width>
 							<control type="group">
@@ -697,7 +691,7 @@
 									<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
 								</include>
 							</control>
-							<control type="group">>
+							<control type="group">
 								<visible>PVR.HasNonRecordingTimer</visible>
 								<width>680</width>
 								<include name="PVRWidget">
@@ -708,26 +702,71 @@
 								</include>
 							</control>
 						</control>
+						<include name="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31143]" />
+							<param name="button_label" value="$LOCALIZE[31144]" />
+                            <param name="button_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
+							<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+							<param name="button_id" value="12400"/>
+							<param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
+						</include>                                                
+						<include name="WidgetListChannels" condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]">
+							<!-- <param name="content_path" value="pvr://channels/tv/All channels/"/> -->
+                            <param name="content_path" value="pvr://channels/tv/*?view=lastplayed"/>
+							<param name="sortby" value="lastplayed"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31016]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="12200"/>
+							<param name="onup_id" value="12900"/>
+							<param name="ondown_id" value="12300"/>
+							<param name="height" value="550"/>
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
+						</include>
+                        <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)">
+							<param name="widget_header" value="$LOCALIZE[84207]"/>
+							<param name="widget_target" value="TV"/>
+							<param name="list_id" value="12200"/>
+							<param name="onup_id" value="12900"/>
+							<param name="ondown_id" value="12300"/>
+							<param name="height" value="550"/>
+                            <param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
+						</include>
+						<include name="WidgetListRecordings">
+							<param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+							<param name="sortby" value="date"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31015]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="12300"/>
+							<param name="onup_id" value="12200"/>
+							<param name="ondown_id" value="20001"/>
+							<param name="height" value="550"/>
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
+						</include>
 					</control>
 				</control>
 				<!-- Radio -->
 				<control type="group" id="13000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),radio) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),radio) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="13888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(13001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(13100).NumItems,0)">SetFocus(13100)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="13001">
 						<orientation>vertical</orientation>
 						<height>922</height>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
+						<usecontrolcoords>true</usecontrolcoords>
 						<include name="SubMenu">
 							<param name="list_id" value="13900"/>
 							<param name="ondown_id" value="13200"/>
@@ -754,38 +793,100 @@
 							<param name="item6_vis" value="False" />
 							<param name="item7_vis" value="False" />
                             <param name="item8_vis" value="False" />
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
 						</include>
-						<include name="WidgetListChannels" condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)]">
-							<param name="content_path" value="pvr://channels/radio/All channels/"/>
+						<include name="ImageWidgetHeader">
+							<param name="widget_header" value="$LOCALIZE[19021]" />
+							<param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
+						</include>
+						<control type="grouplist">
+							<height>218</height>
+							<left>478</left>
+							<top>36</top>
+							<orientation>horizontal</orientation>
+							<align>right</align>
+							<width>1360</width>
+							<visible>PVR.IsRecording | PVR.HasNonRecordingTimer</visible>
+							<control type="group">
+								<width>680</width>
+								<visible>PVR.IsRecording</visible>
+								<include name="PVRWidget">
+									<param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19158]" />
+									<param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
+									<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+							<control type="group">
+								<visible>PVR.HasNonRecordingTimer</visible>
+								<width>680</width>
+								<include name="PVRWidget">
+									<param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
+									<param name="header" value="$LOCALIZE[19157]" />
+									<param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
+									<param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+								</include>
+							</control>
+						</control>
+						<include name="ImageWidget">
+							<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
+							<param name="text_label" value="$LOCALIZE[31143]" />
+							<param name="button_label" value="$LOCALIZE[31144]" />
+							<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
+							<param name="button_id" value="13400"/>
+							<param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
+							<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
+						</include>
+                        <include name="WidgetListChannels" condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]">
+							<!-- <param name="content_path" value="pvr://channels/radio/All channels/"/> -->
+                            <param name="content_path" value="pvr://channels/radio/*?view=lastplayed"/>
+							<param name="sortby" value="lastplayed"/>
+							<param name="sortorder" value="descending"/>                            
 							<param name="widget_header" value="$LOCALIZE[31018]"/>
 							<param name="widget_target" value="files"/>
 							<param name="list_id" value="13200"/>
 							<param name="onup_id" value="13900"/>
-							<param name="ondown_id" value="20001"/>
+							<param name="ondown_id" value="13300"/>
+							<param name="height" value="550"/>
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
 						</include>
-                        <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels)+Skin.HasSetting(enable_custom_list_channels_radio)">
+                        <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)">
 							<param name="widget_header" value="$LOCALIZE[84208]"/>
 							<param name="widget_target" value="Radio"/>
 							<param name="list_id" value="13200"/>
 							<param name="onup_id" value="13900"/>
+							<param name="ondown_id" value="13300"/>
+							<param name="height" value="550"/>
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
+						</include>
+						<include name="WidgetListRecordings">
+							<param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+							<param name="sortby" value="date"/>
+							<param name="sortorder" value="descending"/>
+							<param name="widget_header" value="$LOCALIZE[31015]"/>
+							<param name="widget_target" value="pvr"/>
+							<param name="list_id" value="13300"/>
+							<param name="onup_id" value="13200"/>
 							<param name="ondown_id" value="20001"/>
+							<param name="height" value="550"/>
+							<param name="visible" value="System.GetBool(pvrmanager.enabled)"/>
 						</include>
 					</control>
 				</control>
 				<!-- Weather -->
 				<control type="group" id="15000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),weather) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),weather) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
 					<include>Visible_Right_Delayed</include>
 					<control type="button" id="15888">
 						<width>1</width>
 						<height>1</height>
-						<label>-</label>
+						<label></label>
 						<onfocus>SetFocus(15001)</onfocus>
 						<onfocus condition="IntegerGreaterThan(Container(15100).NumItems,0)">SetFocus(15100)</onfocus>
 						<onfocus condition="IsEmpty(Weather.Plugin)">SetFocus(15300)</onfocus>
 						<onclick>noop</onclick>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 					</control>
 					<control type="grouplist" id="15001">
 						<orientation>vertical</orientation>
@@ -857,6 +958,7 @@
 							<control type="grouplist">
 								<top>215</top>
 								<left>540</left>
+								<width>1330</width>
 								<orientation>horizontal</orientation>
 								<align>justify</align>
 								<itemgap>-50</itemgap>
@@ -921,8 +1023,8 @@
 				</control>
 				<!-- Pictures -->
 				<control type="group" id="16000">
-				    <visible>Stringcompare(Container(9000).ListItem.Property(id),pictures) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
-					<scrolltime tween="cubic" easing="out">500</scrolltime>
+				    <visible>StringCompare(Container(9000).ListItem.Property(id),pictures) + ![Control.HasFocus(900) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804)]</visible>
+
 					<include>Visible_Right_Delayed</include>
 					<control type="grouplist" id="16001">
 						<orientation>vertical</orientation>
@@ -1065,9 +1167,9 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="radiobutton" id="900">
-					<left>37</left>
+					<left>33</left>
 					<top>94</top>
-					<width>420</width>
+					<width>424</width>
 					<height>110</height>
 					<onup>14200</onup>
 					<ondown>SetFocus(9000,0)</ondown>
@@ -1105,14 +1207,14 @@
 						<height>671</height>
 						<pagecontrol>70</pagecontrol>
                         <onfocus>ClearProperty(listposition,home)</onfocus>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),movies) + Control.IsVisible(5000)">5000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),tvshows) + Control.IsVisible(6000)">6000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),music) + Control.IsVisible(7000)">7000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),addons) + Control.IsVisible(8000)">8000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),video) + Control.IsVisible(11000)">11000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),livetv) + Control.IsVisible(12000)">12000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),radio) + Control.IsVisible(13000)">13000</onright>
-					    <onright condition="Stringcompare(Container(9000).ListItem.Property(id),weather) + Control.IsVisible(15000)">15000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),movies) + Control.IsVisible(5000)">5000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),tvshows) + Control.IsVisible(6000)">6000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),music) + Control.IsVisible(7000)">7000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),addons) + Control.IsVisible(8000)">8000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),video) + Control.IsVisible(11000)">11000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),livetv) + Control.IsVisible(12000)">12000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),radio) + Control.IsVisible(13000)">13000</onright>
+					    <onright condition="StringCompare(Container(9000).ListItem.Property(id),weather) + Control.IsVisible(15000)">15000</onright>
 						<onup>900</onup>
 						<ondown>700</ondown>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -1275,9 +1377,8 @@
 								<onclick>ActivateWindow(TVChannels)</onclick>                                
 								<thumb>icons/home/livetv.png</thumb>
 								<property name="id">livetv</property>
-								<visible>PVR.HasTVChannels</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 							</item>
-							<!-- Radio -->
 							<item>
 								<label>$LOCALIZE[19021]</label>
 								<label2>$INFO[Pvr.BackendChannels,$LOCALIZE[19019]: ]</label2>
@@ -1285,7 +1386,7 @@
 								<onclick>ActivateWindow(RadioChannels)</onclick>                                
 								<thumb>icons/home/radio.png</thumb>
 								<property name="id">radio</property>
-								<visible>PVR.HasRadioChannels</visible>
+								<visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
 							</item>
 							<!-- Addons -->
 							<item>
@@ -1330,8 +1431,8 @@
 				<!-- System menu -->
 				<control type="grouplist" id="700">
 					<orientation>horizontal</orientation>
-					<itemgap>-17</itemgap>
-					<left>36</left>
+					<itemgap>-16</itemgap>
+					<left>33</left>
 					<top>878</top>
 					<onup>SetFocus(9000,99)</onup>
 					<onup>9000</onup>
@@ -1342,24 +1443,28 @@
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,power,home)" />
 						<param name="icon" value="icons/power.png" />
+						<param name="label" value="$LOCALIZE[33060]" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="802" />
 						<param name="onclick" value="ActivateWindow(settings)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,settings,home)" />
 						<param name="icon" value="icons/settings.png" />
+						<param name="label" value="$LOCALIZE[21417]" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="803" />
 						<param name="onclick" value="ActivateWindow(favourites)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,favourites,home)" />
 						<param name="icon" value="icons/favourites.png" />
+						<param name="label" value="$LOCALIZE[10134]" />
 					</include>
 					<include name="BottomMainMenuItem">
 						<param name="control_id" value="804" />
 						<param name="onclick" value="ActivateWindow(filemanager)" />
                         <param name="onclick2" value="SetProperty(FanartHomeType,filemanager,home)" />
 						<param name="icon" value="icons/filemanager.png" />
+						<param name="label" value="$LOCALIZE[10003]" />
 					</include>
 				</control>
 			</control>

@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Nepozreté filmy"
 
+msgctxt "#31008"
+msgid "No disclaimer"
+msgstr "Žiadne podmienky"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Prevziať ikony"
@@ -102,7 +106,7 @@ msgstr "Ďalšie možnosti"
 
 msgctxt "#31022"
 msgid "Sort by"
-msgstr "Usporiadať podľa"
+msgstr "Zoradiť podľa"
 
 msgctxt "#31023"
 msgid "Viewtype"
@@ -543,3 +547,11 @@ msgstr "Vybrať domovský fanart balík"
 msgctxt "#31132"
 msgid "min"
 msgstr "min"
+
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Skryť"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Zostáva"

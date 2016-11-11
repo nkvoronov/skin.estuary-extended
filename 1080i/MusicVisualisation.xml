@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<control type="visualisation">
@@ -10,8 +10,8 @@
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -20,8 +20,8 @@
 		</control>
 		<control type="image">
 			<texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<aspectratio align="center">scale</aspectratio>
 			<animation effect="fade" start="100" end="50" time="0" condition="!IsEmpty(Player.Art(fanart)) | !IsEmpty(Visualisation.Name)">Conditional</animation>
 		</control>
@@ -38,6 +38,21 @@
 			<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 			<bordersize>4</bordersize>
 		</control>
+        <control type="label">
+            <description>Clock label</description>
+            <left>1100</left>
+            <top>25</top>
+            <width>800</width>
+            <height>25</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[System.Time]</label>
+            <animation effect="slide" start="0,0" end="-65,0" time="0" condition="Window.IsActive(volumebar) | Player.Muted">conditional</animation>
+            <visible>Skin.HasSetting(FullScreenClock) + ![Player.ShowInfo | Window.IsActive(musicosd)]</visible>
+        </control>
 		<control type="group">
 			<top>-30</top>
 			<visible>Player.ShowInfo | Window.IsActive(musicosd)</visible>
@@ -63,6 +78,17 @@
 					<textcolor>button_focus</textcolor>
 					<scroll>true</scroll>
 				</control>
+                <control type="label">
+					<top>0</top>
+					<width>1600</width>
+					<height>40</height>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+					<font>font30_title</font>
+					<shadowcolor>black</shadowcolor>
+					<textcolor>button_focus</textcolor>
+					<scroll>true</scroll>
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+				</control>
 				<control type="label">
 					<top>56</top>
 					<width>1600</width>
@@ -77,11 +103,12 @@
 					<top>100</top>
 					<width>1600</width>
 					<height>40</height>
-					<label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[Player.Title][/COLOR]</label>
+					<label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[MusicPlayer.Title][/COLOR]</label>
 					<font>font30_title</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
+                    <visible>!SubString(MusicPlayer.Title,.pvr,Right)</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -95,7 +122,7 @@
 				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 				<visible>!IsEmpty(Player.Art(fanart))</visible>
-				<visible>![Window.IsActive(VisualisationSettings) | Window.IsActive(VisualisationPresetList)]</visible>
+				<visible>!Window.IsActive(VisualisationPresetList)</visible>
 				<animation effect="fade" start="0" end="100" delay="400" time="200">Visible</animation>
 				<animation effect="fade" end="0" time="200">Hidden</animation>
 			</control>
@@ -124,24 +151,39 @@
 					<height>99</height>
 					<texture colordiffuse="grey" fallback="empty.png">$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
+					<visible>!Player.ChannelPreviewActive</visible>
 				</control>
-				<!-- <control type="image">
+				<control type="image">
 					<left>280</left>
 					<top>1022</top>
-					<width>130</width>
+					<width>256</width>
 					<height>65</height>
-					<texture>flags/starrating/rating$INFO[MusicPlayer.UserRating].png</texture>
+					<texture>flags/starrating/$INFO[MusicPlayer.UserRating].png</texture>
 					<aspectratio>keep</aspectratio>
-				</control> -->
+				</control>
 			</control>
 			<control type="label">
-				<left>1840</left>
-				<top>834</top>
+				<left>1450</left>
+				<top>720</top>
 				<width>400</width>
 				<height>45</height>
 				<align>right</align>
 				<aligny>bottom</aligny>
 				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<font>font30_title</font>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>grey</textcolor>
+				<animation effect="fade" start="0" end="100" delay="400" time="200">WindowOpen</animation>
+				<animation effect="fade" end="0" time="200">WindowClose</animation>
+			</control>
+			<control type="label">
+				<left>1450</left>
+				<top>770</top>
+				<width>400</width>
+				<height>45</height>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<label>$VAR[SeekLabel]</label>
 				<font>font30_title</font>
 				<shadowcolor>black</shadowcolor>
 				<textcolor>grey</textcolor>
@@ -158,6 +200,7 @@
 				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
 				<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+				<visible>!Player.ChannelPreviewActive</visible>
 			</control>
 			<control type="progress" id="23">
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
@@ -168,6 +211,7 @@
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="80FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
+				<visible>!Player.ChannelPreviewActive | VideoPlayer.HasEpg</visible>
 			</control>
 		</control>
 		<control type="group">

@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Cereka belum ditonton"
 
+msgctxt "#31008"
+msgid "No disclaimer"
+msgstr "Tiada penolak tuntutan"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Muat turun ikon"
@@ -543,3 +547,11 @@ msgstr "Pilih pek seni peminat rumah"
 msgctxt "#31132"
 msgid "min"
 msgstr "min"
+
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Sembunyi"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Berbaki"

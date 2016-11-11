@@ -32,10 +32,10 @@
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<texture colordiffuse="button_focus">colors/white.png</texture>
-					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,1) | Stringcompare(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,3) | Stringcompare(Container.Position,4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,1) | StringCompare(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,3) | StringCompare(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,4)">Conditional</animation>
 				</control>
 				<control type="fixedlist" id="53">
 					<left>110</left>
@@ -47,7 +47,7 @@
 					<pagecontrol>5199</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(images) | Container.Content(videos)</visible>
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(videos)</visible>
 					<onleft>53</onleft>
 					<onup>9000</onup>
 					<ondown>5199</ondown>
@@ -61,7 +61,7 @@
 								<top>3</top>
 								<width>340</width>
 								<height>424</height>
-								<aspectratio aligny="bottom">keep</aspectratio>
+								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -76,16 +76,45 @@
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 							</control>
-							<control type="group">
-								<left>240</left>
-                                <top>30</top>
-								<include>UserRatingCircle</include>
-							</control>
                             <control type="group">
-								<left>50</left>
-								<top>30</top>
-								<include>WatchedCircle</include>
-							</control>
+                                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(mixed) | Container.Content(videos)</visible>
+                                <control type="group">
+                                    <left>255</left>
+                                    <top>20</top>
+                                    <include>UserRatingCircle</include>
+                                </control>
+                                <control type="group">
+                                    <left>35</left>
+                                    <top>20</top>
+                                    <include>WatchedCircle</include>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <visible>Container.Content(episodes)</visible>
+                                <control type="group">
+                                    <left>278</left>
+                                    <top>127</top>
+                                    <include>UserRatingCircle</include>
+                                </control>
+                                <control type="group">
+                                    <left>10</left>
+                                    <top>127</top>
+                                    <include>WatchedCircle</include>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+                                <control type="group">
+                                    <left>278</left>
+                                    <top>62</top>
+                                    <include>UserRatingCircle</include>
+                                </control>
+                                <control type="group">
+                                    <left>10</left>
+                                    <top>62</top>
+                                    <include>WatchedCircle</include>
+                                </control>
+                            </control>
 						</control>
 					</itemlayout>
 					<focusedlayout width="340">
@@ -94,7 +123,7 @@
 							<top>3</top>
 							<width>340</width>
 							<height>424</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -110,15 +139,44 @@
 							<font>font12</font>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
-						<control type="group">
-							<left>240</left>
-                            <top>30</top>
-							<include>UserRatingCircle</include>
-						</control>
                         <control type="group">
-                            <left>50</left>
-                            <top>30</top>
-                            <include>WatchedCircle</include>
+                            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(mixed) | Container.Content(videos)</visible>
+                            <control type="group">
+                                <left>255</left>
+                                <top>20</top>
+                                <include>UserRatingCircle</include>
+                            </control>
+                            <control type="group">
+                                <left>35</left>
+                                <top>20</top>
+                                <include>WatchedCircle</include>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>Container.Content(episodes)</visible>
+                            <control type="group">
+                                <left>278</left>
+                                <top>127</top>
+                                <include>UserRatingCircle</include>
+                            </control>
+                            <control type="group">
+                                <left>10</left>
+                                <top>127</top>
+                                <include>WatchedCircle</include>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)</visible>
+                            <control type="group">
+                                <left>278</left>
+                                <top>62</top>
+                                <include>UserRatingCircle</include>
+                            </control>
+                            <control type="group">
+                                <left>10</left>
+                                <top>62</top>
+                                <include>WatchedCircle</include>
+                            </control>
                         </control>                        
 					</focusedlayout>
 				</control>
@@ -201,8 +259,8 @@
 								<top>3</top>
 								<width>340</width>
 								<height>424</height>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
+								<aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultFolderSquare.png">$VAR[ShiftImagesThumbVar]</texture>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
 							</control>
@@ -229,8 +287,8 @@
 							<top>3</top>
 							<width>340</width>
 							<height>424</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture fallback="DefaultFolderSquare.png">$VAR[ShiftImagesThumbVar]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
