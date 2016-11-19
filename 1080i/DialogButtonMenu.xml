@@ -134,7 +134,7 @@
 					<label>$LOCALIZE[20183]</label>
 					<onclick>XBMC.ReloadSkin()</onclick>
                     <visible>true</visible>
-                    <!-- <visible>Skin.HasSetting(HideReloadSkinButton)</visible> -->
+                    <visible>Skin.HasSetting(HideReloadSkinButton)</visible>
 				</item>
 			</content>
 		</control>

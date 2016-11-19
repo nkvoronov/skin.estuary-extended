@@ -37,12 +37,12 @@
 				<onright>10000</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>                
-                <itemlayout height="70">
+                <itemlayout height="75">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
                         <width>400</width>
-                        <height>70</height>
+                        <height>75</height>
                         <texture border="40">lists/separator.png</texture>
                     </control>
                     <control type="label">
@@ -50,19 +50,19 @@
                         <textoffsetx>20</textoffsetx>
                         <top>0</top>
                         <width>400</width>
-                        <height>70</height>
-                        <align>center</align>
+                        <height>75</height>
                         <aligny>center</aligny>
-                        <textcolor>grey</textcolor>
+                        <font>font13_title</font>                        
+                        <textcolor>white</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="70">
+                <focusedlayout height="75">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
                         <width>400</width>
-                        <height>70</height>
+                        <height>75</height>
                         <texture border="40">lists/separator.png</texture>
                         <visible>!Control.HasFocus(9000)</visible>
                     </control>
@@ -70,7 +70,7 @@
                         <left>0</left>
                         <top>0</top>
                         <width>400</width>
-                        <height>70</height>
+                        <height>75</height>
                         <texture colordiffuse="button_focus">lists/focus.png</texture>
                         <animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(9000)">conditional</animation>
                     </control>
@@ -79,9 +79,10 @@
                         <textoffsetx>20</textoffsetx>
                         <top>0</top>
                         <width>400</width>
-                        <height>70</height>
-                        <align>center</align>
+                        <height>75</height>
                         <aligny>center</aligny>
+                        <font>font13_title</font>
+                        <scroll>true</scroll>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
@@ -232,8 +233,13 @@
 					<onclick>Skin.ToggleSetting(SlideShowInfo)</onclick>
 					<selected>Skin.HasSetting(SlideShowInfo)</selected>
 				</control>
-				<control type="button" id="706">
-					<label>- $LOCALIZE[84216]</label>
+                <control type="image" id="703">
+                    <description>separator image</description>
+                    <height>3</height>
+                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		        </control>
+				<control type="button" id="704">
+					<label>$LOCALIZE[84216]</label>
 					<label2>$VAR[HomeFanartName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -241,8 +247,8 @@
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-                <control type="button" id="707">
-					<label>- $LOCALIZE[84209]</label>
+                <control type="button" id="705">
+					<label>$LOCALIZE[84209]</label>
 					<label2>$VAR[WeatherFanartName]</label2>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -250,15 +256,15 @@
                     <visible>System.HasAddon(script.image.resource.select)</visible>
                     <enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-                <control type="radiobutton" id="708">
+                <control type="radiobutton" id="706">
                     <label>$LOCALIZE[84210]</label>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <selected>Skin.HasSetting(show_studiologos)</selected>
                     <onclick>Skin.ToggleSetting(show_studiologos)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
-               </control>
-				<control type="button" id="709">
+                </control>
+				<control type="button" id="707">
 					<label>- $LOCALIZE[84211]</label>
 					<label2>$VAR[StudiosImagesName]</label2>
 					<width>1256</width>
@@ -267,16 +273,7 @@
                     <visible>System.HasAddon(script.image.resource.select)</visible>
                     <visible>Skin.HasSetting(show_studiologos)</visible>
 				</control>
-                <!-- <control type="button" id="710">
-                    <label>- $LOCALIZE[84212]</label>
-                    <label2>$VAR[RecordLabelsName]</label2>
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <onclick>RunScript(script.image.resource.select,property=RecordLabels&amp;type=resource.images.recordlabels)</onclick>
-                    <visible>System.HasAddon(script.image.resource.select)</visible>
-                    <visible>Skin.HasSetting(show_studiologos)</visible>
-               </control> -->
-                <control type="button" id="711">
+                <control type="button" id="708">
 					<label>$LOCALIZE[84213]</label>
 					<label2>$VAR[LanguageFlagsName]</label2>
 					<width>1256</width>
@@ -284,7 +281,7 @@
 					<onclick>RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
-                <control type="button" id="712">
+                <control type="button" id="709">
 					<label>$LOCALIZE[84214]</label>
 					<label2>$VAR[WeatherIconsName]</label2>
 					<width>1256</width>
@@ -292,14 +289,19 @@
 					<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
-                <control type="radiobutton" id="722">
+                <control type="image" id="710">
+                    <description>separator image</description>
+                    <height>3</height>
+                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		        </control>
+                <control type="radiobutton" id="711">
 					<label>$LOCALIZE[84204]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-                <control type="radiobutton" id="723">
+                <control type="radiobutton" id="712">
 					<label>$LOCALIZE[84205]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -308,7 +310,12 @@
                     <visible>System.HasAddon(script.pvr.favourites)</visible>
                     <visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
-                <control type="radiobutton" id="724">
+                <control type="image" id="713">
+                    <description>separator image</description>
+                    <height>3</height>
+                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+		        </control>
+                <control type="radiobutton" id="714">
 					<label>$LOCALIZE[31133] $LOCALIZE[88080]</label>
 					<width>1256</width>
 					<include>DefaultSettingButton</include>

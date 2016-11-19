@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="NameAndVersionSkinVar">
+        <value>Estuary Extented $INFO[System.AddonVersion(skin.estuary-extented)]</value>
+    </variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer + !ListItem.IsRecording + !ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
@@ -331,13 +334,13 @@
 		<value condition="!IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
 		<value condition="!IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
         <value condition="!IsEmpty(Container(15100).ListItem.Property(FanartCode)) + Control.HasFocus(15100) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15100).ListItem.Property(FanartCode)]</value>
-		<value condition="!IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]</value>
-        <value condition="Control.HasFocus(900)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
-        <value condition="Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
-        <value condition="Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
-        <value condition="Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]favourites$INFO[Skin.String(HomeFanart.ext)]</value>
-        <value condition="Control.HasFocus(804)">$INFO[Skin.String(HomeFanart.path)]filemanager$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Container(15200).ListItem.Property(FanartCode)) + Control.HasFocus(15200) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Container(15200).ListItem.Property(FanartCode)]</value> -->
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(900)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(801)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(802)">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(803)">$INFO[Skin.String(HomeFanart.path)]favourites$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(804)">$INFO[Skin.String(HomeFanart.path)]filemanager$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Control.HasFocus(9000)">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
 	</variable>
 	<variable name="MediaFanartVar">
