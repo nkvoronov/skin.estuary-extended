@@ -4,11 +4,12 @@
     <include name="HomeMainCustomWidgetsAddonsSettings">
         <!-- WidgetsAddonsEnable -->
         <control type="radiobutton" id="$PARAM[id1]00">
-            <label>$PARAM[title]</label>
+            <description>Flags</description>
             <width>1256</width>
             <include>DefaultSettingButton</include>
-            <selected>Skin.HasSetting($PARAM[flags])</selected>
+            <label>$PARAM[title]</label>
             <onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
+            <selected>Skin.HasSetting($PARAM[flags])</selected>            
         </control>
         <!-- WidgetsAddons01 -->
         <control type="button" id="$PARAM[id1]01">
@@ -430,11 +431,12 @@
     <include name="HomeMainCustomWidgetsChannelsSettings">
         <!-- WidgetsChannelsEnable -->
         <control type="radiobutton" id="$PARAM[id1]00">
-            <label>$PARAM[title]</label>
+            <description>Flags</description>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-            <selected>Skin.HasSetting($PARAM[flags])</selected>
+            <label>$PARAM[title]</label>
             <onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
+            <selected>Skin.HasSetting($PARAM[flags])</selected>           
             <visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsChannels01 -->
