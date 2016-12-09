@@ -622,6 +622,18 @@ msgstr "Текущий инфоресурс"
 
 # extended added value
 
+msgctxt "#40100"
+msgid "Most watched music videos"
+msgstr "Самые просматриваемые муз. видео"
+
+msgctxt "#40101"
+msgid "Random music videos"
+msgstr "Случайные муз. видео"
+
+msgctxt "#40102"
+msgid "Unwatched music videos"
+msgstr "Непросмотренные муз. видео"
+
 msgctxt "#84102"
 msgid "Timer rules"
 msgstr "Правила таймера"
@@ -651,27 +663,27 @@ msgid "Output oversampling"
 msgstr "Вы. передискретизация"
 
 msgctxt "#84200"
-msgid "List of add-ons"
-msgstr "Cписок дополнений"
+msgid "User widgets"
+msgstr "Виджеты пользователя"
 
 msgctxt "#84201"
-msgid "List of TV and radio"
-msgstr "Cписок тв и радио"
+msgid "User widgets options"
+msgstr "Параметры виджетов пользователя"
 
 msgctxt "#84202"
-msgid "Custom list of add-ons"
+msgid "User list of add-ons"
 msgstr "Пользовательский список дополнений"
 
 msgctxt "#84203"
-msgid "Custom list of TV and radio channels"
+msgid "User list of TV and radio channels"
 msgstr "Пользовательский список тв и радио каналов"
 
 msgctxt "#84204"
-msgid "Enable custom list of add-ons"
+msgid "Enable user list of add-ons"
 msgstr "Разрешить пользовательский список дополнений"
 
 msgctxt "#84205"
-msgid "Enable custom list of TV and radio channels"
+msgid "Enable user list of TV and radio channels"
 msgstr "Разрешить пользовательский список тв и радио каналов"
 
 msgctxt "#84206"
@@ -719,12 +731,24 @@ msgid "Choose home fanart pack"
 msgstr "Выбрать фанарт пакет"
 
 msgctxt "#84217"
-msgid "Advanced"
-msgstr "Дополнительно"
+msgid "Options"
+msgstr "Параметры"
 
 msgctxt "#84218"
 msgid "Advanced options"
-msgstr "Дополнительные опции"
+msgstr "Дополнительные параметры"
+
+msgctxt "#84219"
+msgid "Background options"
+msgstr "Параметры фона"
+
+msgctxt "#84220"
+msgid "Reset skin options"
+msgstr "Сброс параметров обложки"
+
+msgctxt "#88071"
+msgid "Show stats"
+msgstr "Показывать статистику"
 
 msgctxt "#88080"
 msgid "reload skin button"

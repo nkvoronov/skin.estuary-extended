@@ -4,6 +4,7 @@
 	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>

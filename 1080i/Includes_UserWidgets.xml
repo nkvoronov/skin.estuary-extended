@@ -9,7 +9,8 @@
             <include>DefaultSettingButton</include>
             <label>$PARAM[title]</label>
             <onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
-            <selected>Skin.HasSetting($PARAM[flags])</selected>            
+            <selected>Skin.HasSetting($PARAM[flags])</selected>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons01 -->
         <control type="button" id="$PARAM[id1]01">
@@ -23,6 +24,7 @@
                 <param name="id1" value="0" />
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons02 -->
         <control type="button" id="$PARAM[id1]02">
@@ -37,6 +39,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].0.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons03 -->
         <control type="button" id="$PARAM[id1]03">
@@ -51,6 +54,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].1.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons04 -->
         <control type="button" id="$PARAM[id1]04">
@@ -65,6 +69,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].2.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons05 -->
         <control type="button" id="$PARAM[id1]05">
@@ -79,6 +84,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].3.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons06 -->
         <control type="button" id="$PARAM[id1]06">
@@ -93,6 +99,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].4.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons07 -->
         <control type="button" id="$PARAM[id1]07">
@@ -107,6 +114,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].5.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons08 -->
         <control type="button" id="$PARAM[id1]08">
@@ -121,6 +129,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].6.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons09 -->
         <control type="button" id="$PARAM[id1]09">
@@ -135,6 +144,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].7.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
         <!-- WidgetsAddons10 -->
         <control type="button" id="$PARAM[id1]10">
@@ -149,6 +159,7 @@
             </include>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(AddonSet$PARAM[setadonnstype].8.Label))</visible>
+			<visible>$PARAM[visible]</visible>
         </control>
     </include>
     <!-- SelectAddons -->
@@ -670,12 +681,14 @@
 		<param name="arrow_posy">200</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
         <param name="fallback_image">DefaultTVShowsSquare.png</param>
+        <param name="visible">True</param>
 		<definition>
 			<control type="group">
 				<description>Square Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<top>0</top>
+                <visible>$PARAM[visible]</visible>
 				<visible>IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<control type="label">
 					<left>500</left>
@@ -798,213 +811,6 @@
 					<include name="HomeCustomChannelsItems">
                         <param name="id2" value="$PARAM[widget_target]" />
                     </include>
-				</control>
-			</control>
-		</definition>
-	</include>
-	<include name="SystemInfoWidget">
-		<param name="onup_id">20000</param>
-		<param name="ondown_id">20001</param>
-		<definition>
-			<control type="group">
-				<visible>$PARAM[visible]</visible>
-				<control type="image">
-					<top>0</top>
-					<left>478</left>
-					<width>1370</width>
-					<height>806</height>
-					<texture border="22">dialogs/dialog-bg.png</texture>
-				</control>
-				<control type="group" id="$PARAM[button_id]567">
-					<top>40</top>
-					<left>478</left>
-					<width>1370</width>
-					<height>806</height>
-					<align>center</align>
-					<onleft>9000</onleft>
-					<onup>$PARAM[onup_id]</onup>
-					<ondown>$PARAM[ondown_id]</ondown>
-                    <control type="label">
-                        <top>15</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13_title</font>
-                        <width>1370</width>
-                        <textcolor>button_focus</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                        <scroll>yes</scroll>
-                        <label>[UPPERCASE]• $LOCALIZE[31031] •[/UPPERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>50</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>KODI $INFO[System.BuildVersion] - $INFO[System.BuildDate]</label>
-                    </control>
-                    <control type="label">
-                        <top>85</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$VAR[NameAndVersionSkinVar]</label>
-                    </control>
-                    <control type="label">
-                        <top>120</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <scroll>yes</scroll>
-                        <label>$INFO[System.KernelVersion]</label>
-                    </control>
-                    <control type="label">
-                        <top>185</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13_title</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <textcolor>button_focus</textcolor>
-                        <label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>220</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
-                    </control>
-                    <control type="label">
-                        <top>255</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[12390]: [LOWERCASE]$INFO[System.Uptime][/LOWERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>290</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[12394]: [LOWERCASE]$INFO[System.TotalUptime][/LOWERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>325</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[150]: $INFO[Network.IPAddress] [B]-[/B] $LOCALIZE[149]: $INFO[Network.MACAddress] [B]-[/B] $INFO[Network.LinkState]</label>
-                    </control>
-                    <control type="label">
-                        <top>390</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13_title</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <textcolor>button_focus</textcolor>
-                        <label>[UPPERCASE]• $LOCALIZE[84215] •[/UPPERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>425</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <scroll>yes</scroll>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[22011] $INFO[System.CPUTemperature]</label>
-                    </control>
-                    <control type="label">
-                        <top>460</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <scroll>yes</scroll>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[22010] $INFO[System.GPUTemperature]</label>
-                    </control>
-                    <control type="label">
-                        <top>495</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <scroll>yes</scroll>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
-                    </control>
-                    <control type="progress">
-                        <top>550</top>
-                        <centerleft>50%</centerleft>
-                        <width>1100</width>
-                        <height>16</height>
-                        <info>System.CPUUsage</info>
-                    </control>
-                    <control type="label">
-                        <top>555</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
-                    </control>
-                    <control type="progress">
-                        <top>610</top>
-                        <centerleft>50%</centerleft>
-                        <width>1100</width>
-                        <height>16</height>
-                        <info>system.memory(used)</info>
-                    </control>
-                    <control type="label">
-                        <top>615</top>
-                        <align>center</align>
-                        <height>30</height>
-                        <textoffsety>10</textoffsety>
-                        <font>font13</font>
-                        <width>1370</width>
-                        <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[40112] $INFO[System.UsedSpace] [B]/[/B] $INFO[System.TotalSpace] [B]-[/B] [LOWERCASE]$INFO[System.UsedSpacePercent][/LOWERCASE]</label>
-                        <visible>!System.Platform.Android</visible>
-                    </control>
-                    <control type="progress">
-                        <top>670</top>
-                        <centerleft>50%</centerleft>
-                        <width>1100</width>
-                        <height>16</height>
-                        <info>System.UsedSpace</info>
-                        <visible>!System.Platform.Android</visible>
-                    </control>
 				</control>
 			</control>
 		</definition>

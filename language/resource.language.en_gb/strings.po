@@ -773,6 +773,18 @@ msgstr ""
 
 # extended added value
 
+msgctxt "#40100"
+msgid "Most watched music videos"
+msgstr ""
+
+msgctxt "#40101"
+msgid "Random music videos"
+msgstr ""
+
+msgctxt "#40102"
+msgid "Unwatched music videos"
+msgstr ""
+
 msgctxt "#84102"
 msgid "Timer rules"
 msgstr ""
@@ -802,27 +814,27 @@ msgid "Output oversampling"
 msgstr ""
 
 msgctxt "#84200"
-msgid "List of add-ons"
+msgid "User widgets"
 msgstr ""
 
 msgctxt "#84201"
-msgid "List of TV and radio"
+msgid "User widgets options"
 msgstr ""
 
 msgctxt "#84202"
-msgid "Custom list of add-ons"
+msgid "User list of add-ons"
 msgstr ""
 
 msgctxt "#84203"
-msgid "Custom list of TV and radio channels"
+msgid "User list of TV and radio channels"
 msgstr ""
 
 msgctxt "#84204"
-msgid "Enable custom list of add-ons"
+msgid "Enable user list of add-ons"
 msgstr ""
 
 msgctxt "#84205"
-msgid "Enable custom list of TV and radio channels"
+msgid "Enable user list of TV and radio channels"
 msgstr ""
 
 msgctxt "#84206"
@@ -870,15 +882,27 @@ msgid "Choose home fanart pack"
 msgstr ""
 
 msgctxt "#84217"
-msgid "Advanced"
+msgid "Options"
 msgstr ""
 
 msgctxt "#84218"
 msgid "Advanced options"
 msgstr ""
 
+msgctxt "#84219"
+msgid "Background options"
+msgstr ""
+
+msgctxt "#84220"
+msgid "Reset skin options"
+msgstr ""
+
 msgctxt "#88080"
 msgid "reload skin button"
+msgstr ""
+
+msgctxt "#88071"
+msgid "Show stats"
 msgstr ""
 
 msgctxt "#89501"

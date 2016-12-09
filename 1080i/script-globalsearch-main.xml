@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<onload>SetProperty(FanartHomeType,search,Home)</onload>
 	<coordinates>
 		<left>0</left>
-		<top>80</top>
+		<top>0</top>
 	</coordinates>
 	<animation effect="fade" time="400">WindowOpen</animation>
 	<animation effect="fade" time="400">WindowClose</animation>
@@ -41,152 +42,44 @@
 			<control type="label" id="230">
 				<font>-</font>
 			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture>special://skin/extras/backgrounds/$INFO[Skin.CurrentColourTheme].jpg</texture>
-				<aspectratio>scale</aspectratio>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(111).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(111)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(121).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(121)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(131)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(141)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(151)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(161)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(171)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(181)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(211)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(221)</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>920</height>
-				<texture background="true" colordiffuse="40FFFFFF">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>400</fadetime>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Control.HasFocus(231)</visible>
+			<!-- Background -->
+			<include name="DefaultBackground">
+				<param name="is_media" value="False" />
+				<param name="image_path" value="$VAR[SearchFanartVar]" />
+			</include>
+			<!-- TopBar -->
+			<include name="TopBar">
+				<param name="breadcrumbs_label" value="" />
+				<param name="breadcrumbs_icon" value="" />
+			</include>
+			<!-- Logo -->
+			<control type="group">
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<control type="image">
+					<left>20</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="button_focus">icons/logo.png</texture>
+				</control>
+				<control type="image">
+					<left>60</left>
+					<top>20</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+				</control>
 			</control>
 			<control type="group">
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">Conditional</animation>
 				<control type="radiobutton">
-					<left>37</left>
-					<top>14</top>
-					<width>420</width>
+					<left>33</left>
+					<top>94</top>
+					<width>424</width>
 					<height>110</height>
 					<font>-</font>
 					<label>-</label>
@@ -222,9 +115,9 @@
 					<label>-</label>
 				</control>
 				<control type="radiobutton" id="198">
-					<left>37</left>
-					<top>14</top>
-					<width>420</width>
+					<left>33</left>
+					<top>94</top>
+					<width>424</width>
 					<height>110</height>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
@@ -247,19 +140,19 @@
 				</control>
 				<control type="group">
 					<left>53</left>
-					<top>124</top>
+					<top>204</top>
 					<control type="image">
 						<left>-20</left>
 						<top>-20</top>
 						<width>424</width>
-						<height>711</height>
+						<height>810</height>
 						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="list" id="9000">
 						<left>1</left>
 						<top>1</top>
 						<width>382</width>
-						<height>671</height>
+						<height>770</height>
 						<onleft>101</onleft>
 						<onright>101</onright>
 						<onup>198</onup>
@@ -351,92 +244,66 @@
 								<font>font14</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>22000000</shadowcolor>
-								<animation effect="slide" start="0,0" end="0,-13" time="150" delay="400">Focus</animation>
-								<animation effect="slide" start="0,-13" end="0,0" time="300" delay="200">UnFocus</animation>
-							</control>
-							<control type="label">
-								<left>74</left>
-								<top>17</top>
-								<height>70</height>
-								<width>560</width>
-								<aligny>center</aligny>
-								<font>font10</font>
-								<label>$INFO[ListItem.Label2]</label>
-								<shadowcolor>22000000</shadowcolor>
-								<visible>Control.HasFocus(9000)</visible>
-								<animation effect="fade" time="300" condition="Control.HasFocus(9000) | Control.HasFocus(198) | ControlGroup(101).HasFocus">VisibleChange</animation>
-								<animation effect="fade" start="0" end="100" time="150" delay="500">Focus</animation>
-								<animation effect="fade" start="100" end="0" time="300">UnFocus</animation>
 							</control>
 						</focusedlayout>
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[342]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(110),: ]</label2>
-								<thumb>icons/defaulticons/defaultmovies.png</thumb>
+								<thumb>defaultmovies.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(119)</visible>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[20343]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(120),: ]</label2>
-								<thumb>icons/defaulticons/defaulttvshows.png</thumb>
+								<thumb>defaulttvshows.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(129)</visible>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[33054]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(130),: ]</label2>
-								<thumb>icons/defaulticons/defaultaddontvinfo.png</thumb>
+								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(139)</visible>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[20360]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(140),: ]</label2>
-								<thumb>icons/defaulticons/defaultaddontvinfo.png</thumb>
+								<thumb>defaultaddontvinfo.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(149)</visible>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[20389]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(150),: ]</label2>
-								<thumb>icons/defaulticons/defaultmusicvideos.png</thumb>
+								<thumb>defaultmusicvideos.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(159)</visible>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[133]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(160),: ]</label2>
-								<thumb>icons/defaulticons/defaultmusicartists.png</thumb>
+								<thumb>defaultmusicartists.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(169)</visible>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[132]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(170),: ]</label2>
-								<thumb>icons/defaulticons/defaultmusicalbums.png</thumb>
+								<thumb>defaultmusicalbums.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(179)</visible>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[134]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(180),: ]</label2>
-								<thumb>icons/defaulticons/defaultmusicsongs.png</thumb>
+								<thumb>defaultmusicsongs.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(189)</visible>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[344]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(210),: ]</label2>
-								<thumb>icons/defaulticons/defaultactor.png</thumb>
+								<thumb>defaultactor.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(219)</visible>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[19069]</label>
-								<label2>$LOCALIZE[283]$INFO[Control.GetLabel(220),: ]</label2>
-								<thumb>icons/defaulticons/defaultaddonpvrclient.png</thumb>
+								<thumb>defaultaddonpvrclient.png</thumb>
 								<onclick>noop</onclick>
 								<visible>Control.IsVisible(229)</visible>
 							</item>
@@ -445,7 +312,7 @@
 				</control>
 				<control type="group" id="101">
 					<left>500</left>
-					<top>92</top>
+					<top>172</top>
 					<control type="group" id="119">
 						<control type="panel" id="111">
 							<left>0</left>
@@ -3341,6 +3208,27 @@
 					<label>$LOCALIZE[284]</label>
 				</control>
 			</control>
+			<!-- BottomBar -->
+			<include>BottomBar</include>
+			<control type="group">
+				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			    <!-- RSS -->
+			    <control type="rss">
+				    <left>0</left>
+				    <top>1041</top>
+				    <height>30</height>
+				    <width>1920</width>
+				    <font>font12</font>
+				    <urlset>1</urlset>
+				    <titlecolor>button_focus</titlecolor>
+				    <shadowcolor>text_shadow</shadowcolor>
+				    <headlinecolor>FFC0C0C0</headlinecolor>
+				    <textcolor>white</textcolor>
+				    <visible>!Player.hasMedia</visible>
+			    </control>
+			</control>		
 		</control>
 	</controls>
 </window>

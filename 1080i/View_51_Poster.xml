@@ -68,11 +68,14 @@
 							<top>25</top>
 							<include>UserRatingCircle</include>
 						</control>
-                        <control type="group">
-                            <left>33</left>
-                            <top>25</top>
-                            <include>WatchedCircle</include>
-                        </control>
+                        <control type="image">
+							<left>40</left>
+							<top>25</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout width="317">
 						<control type="image">
@@ -106,13 +109,14 @@
 							<top>30</top>
 							<include>UserRatingCircle</include>
 						</control>
-                        <control type="group">
-                            <animation effect="fade" time="300" start="100" end="0">Focus</animation>
-                            <visible>Control.IsVisible(20000)</visible>
-                            <left>33</left>
-                            <top>30</top>
-                            <include>WatchedCircle</include>
-                        </control>
+                        <control type="image">
+							<left>40</left>
+							<top>25</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
+						</control>
 					</focusedlayout>
 				</control>
 				<control type="group">
@@ -146,6 +150,7 @@
 						<width>32</width>
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
+						<visible>!IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="label">
 						<left>695</left>
