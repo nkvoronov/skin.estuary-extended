@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol>9000</defaultcontrol>
+    <!-- -->
     <onload condition="!IsEmpty(Window(home).Property(FanartHomeType))">ClearProperty(FanartHomeType,home)</onload>
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">XBMC.RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
@@ -53,6 +54,7 @@
 					<texture>icons/logo-text.png</texture>
 				</control>
 			</control>
+			<!-- StatBar -->
 			<control type="label">
 				<left>0</left>
 				<top>15</top>
@@ -60,7 +62,8 @@
 				<align>center</align>
 				<label>$VAR[InfoBarStats]</label>
 				<font>font10</font>
-				<visible>Skin.HasSetting(EnableHomeStats)</visible>
+				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
+				<visible>Skin.HasSetting(EnableHomeStats)</visible>				
 			</control>
 			<!-- LeftBar -->
 			<control type="group">

@@ -318,7 +318,7 @@
 		<value condition="!IsEmpty(Container(504).ListItem.Art(fanart)) + Control.HasFocus(504)">$INFO[Container(504).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(505).ListItem.Art(fanart)) + Control.HasFocus(505)">$INFO[Container(505).ListItem.Art(fanart)]</value>
 		<!-- Global -->
-		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
 	</variable>
 	<variable name="HomeFanartVar">
@@ -375,7 +375,7 @@
 	</variable>
     <variable name="FanartHomeTypeVar">
         <value condition="Skin.HasSetting(no_fanart) | IsEmpty(Window(home).Property(FanartHomeType))">$VAR[GlobalFanartVar]</value>
-        <value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
+        <value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
     </variable>
 	<variable name="WeatherFanartVar">
