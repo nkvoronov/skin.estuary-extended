@@ -68,14 +68,12 @@
 			</focusedlayout>
 			<content>
 				<item id="91">
-					<!-- <label>$LOCALIZE[15057]</label> -->
                     <label>$LOCALIZE[84106]</label>
 					<label2>$LOCALIZE[15114]</label2>
 					<onclick>noop</onclick>
 					<property name="currentMode">InputResampling</property>
 				</item>
-				<item id="92">
-					<!-- <label>$LOCALIZE[15058]</label> -->                    
+				<item id="92">                 
                     <label>$LOCALIZE[84107]</label>
 					<label2>$LOCALIZE[15113]</label2>
 					<onclick>noop</onclick>
@@ -94,7 +92,6 @@
 					<property name="currentMode">Postprocessing</property>
 				</item>
 				<item id="95">
-					<!-- <label>$LOCALIZE[15061]</label> -->
                     <label>$LOCALIZE[84108]</label>
 					<label2>$LOCALIZE[15116]</label2>
 					<onclick>noop</onclick>
@@ -138,7 +135,6 @@
 			<control type="radiobutton" id="22">
 				<width>470</width>
 				<height>90</height>
-				<!-- <label>$LOCALIZE[15064]</label> -->
                 <label>$LOCALIZE[84105]</label>
 				<font>font12_title</font>
 				<textoffsetx>40</textoffsetx>

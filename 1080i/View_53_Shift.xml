@@ -32,10 +32,10 @@
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<texture colordiffuse="button_focus">colors/white.png</texture>
-					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,1) | Stringcompare(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,3) | Stringcompare(Container.Position,4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,1) | StringCompare(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,3) | StringCompare(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,4)">Conditional</animation>
 				</control>
 				<control type="fixedlist" id="53">
 					<left>110</left>
@@ -47,7 +47,7 @@
 					<pagecontrol>5199</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>horizontal</orientation>
-					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(images) | Container.Content(videos)</visible>
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(videos)</visible>
 					<onleft>53</onleft>
 					<onup>9000</onup>
 					<ondown>5199</ondown>
@@ -57,14 +57,20 @@
 					<itemlayout width="340">
 						<control type="group">
 							<control type="image">
-								<left>0</left>
-								<top>3</top>
+								<top>-10</top>
 								<width>340</width>
-								<height>424</height>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordertexture border="20">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
+								<height>450</height>
+								<texture border="40">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>15</top>
+								<width>300</width>
+								<height>400</height>
+								<aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+								<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+								<bordersize>4</bordersize>
 							</control>
 							<control type="textbox">
 								<left>20</left>
@@ -77,27 +83,37 @@
 								<font>font12</font>
 							</control>
 							<control type="group">
-								<left>240</left>
-                                <top>30</top>
+								<left>255</left>
+								<top>20</top>
 								<include>UserRatingCircle</include>
+								<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 							</control>
-                            <control type="group">
-								<left>50</left>
-								<top>30</top>
-								<include>WatchedCircle</include>
+							<control type="image">
+								<left>40</left>
+								<top>20</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout width="340">
 						<control type="image">
-							<left>0</left>
-							<top>3</top>
+							<top>-10</top>
 							<width>340</width>
-							<height>424</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+							<height>450</height>
+							<texture border="40">buttons/button-nofo.png</texture>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>15</top>
+							<width>300</width>
+							<height>400</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+							<bordersize>4</bordersize>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -111,15 +127,19 @@
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
 						<control type="group">
-							<left>240</left>
-                            <top>30</top>
+							<left>255</left>
+							<top>20</top>
 							<include>UserRatingCircle</include>
+							<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 						</control>
-                        <control type="group">
-                            <left>50</left>
-                            <top>30</top>
-                            <include>WatchedCircle</include>
-                        </control>                        
+						<control type="image">
+							<left>40</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
+						</control>                        
 					</focusedlayout>
 				</control>
 			</control>
@@ -197,14 +217,20 @@
 					<itemlayout width="340">
 						<control type="group">
 							<control type="image">
-								<left>0</left>
-								<top>3</top>
+								<top>-10</top>
 								<width>340</width>
-								<height>424</height>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordertexture border="20">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
+								<height>450</height>
+								<texture border="40">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>15</top>
+								<width>300</width>
+								<height>400</height>
+								<aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultFolder.png">$VAR[ShiftImagesThumbVar]</texture>
+								<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+								<bordersize>4</bordersize>
 							</control>
 							<control type="textbox">
 								<left>20</left>
@@ -216,23 +242,32 @@
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
 							</control>
-							<control type="group">
-								<left>145</left>
-								<top>383</top>
-								<include>UserRatingCircle</include>
+							<control type="image">
+								<left>40</left>
+								<top>25</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout width="340">
 						<control type="image">
-							<left>0</left>
-							<top>3</top>
+							<top>-10</top>
 							<width>340</width>
-							<height>424</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+							<height>450</height>
+							<texture border="40">buttons/button-nofo.png</texture>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>15</top>
+							<width>300</width>
+							<height>400</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture fallback="DefaultFolder.png">$VAR[ShiftImagesThumbVar]</texture>
+							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+							<bordersize>4</bordersize>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -245,10 +280,13 @@
 							<font>font12</font>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
-						<control type="group">
-							<left>145</left>
-							<top>383</top>
-							<include>UserRatingCircle</include>
+						<control type="image">
+							<left>40</left>
+							<top>25</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</focusedlayout>
 				</control>

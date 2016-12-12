@@ -22,7 +22,7 @@
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
 				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
-			</control>            
+			</control>
 		</control>
         <!-- Main -->
 		<control type="group">
@@ -40,7 +40,7 @@
 					<height>610</height>
 					<onup>50</onup>
 					<ondown>9000</ondown>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="image">
 					<left>614</left>
@@ -83,7 +83,7 @@
 					<top>-295</top>
 					<width>1190</width>
 					<height>320</height>
-					<label>-</label>
+					<label></label>
 					<visible>StringCompare(Container(50).NumItems,0)</visible>
 				</control>
 				<control type="button" id="130">
@@ -92,10 +92,10 @@
 					<left>586</left>
 					<width>1190</width>
 					<height>320</height>
-					<label>-</label>
-					<onclick condition="!IsEmpty(Control.GetLabel(400))">SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
-					<onclick condition="!IsEmpty(Control.GetLabel(400))">SetProperty(TextViewer_Text,$ESCVAR[MusicInfoTextboxVar],home)</onclick>
-					<onclick condition="!IsEmpty(Control.GetLabel(400))">ActivateWindow(1102)</onclick>
+					<label></label>
+					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
+					<onclick>SetProperty(TextViewer_Text,$ESCVAR[MusicInfoTextboxVar],home)</onclick>
+					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,-295" time="0" condition="StringCompare(Container(50).NumItems,0)">Conditional</animation>
@@ -289,7 +289,7 @@
 				<orientation>horizontal</orientation>
 				<control type="group" id="420">
 					<width>262</width>
-					<visible>container.content(songs)</visible>
+					<visible>Container.Content(songs)</visible>
 					<control type="button" id="7">
 						<include name="VideoInfoButtonsCommon">
 							<param name="icon" value="" />
@@ -327,7 +327,7 @@
 					<enable>!IsEmpty(ListItem.Art(fanart))</enable>
 					<onclick>SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)</onclick>
 					<onclick>ActivateWindow(1104)</onclick>
-					<visible>container.content(artists) | container.content(albums)</visible>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
 				</control>
 				<control type="radiobutton" id="440">
 					<label>$LOCALIZE[31114]</label>
@@ -336,9 +336,9 @@
 					</include>
 					<onclick>Action(close)</onclick>
 					<visible>System.hasAddon(script.extendedinfo)</visible>
-					<onclick condition="!Stringcompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
-					<onclick condition="Stringcompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
-				</control>                
+					<onclick condition="!StringCompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+					<onclick condition="StringCompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+				</control>
 				<include name="InfoDialogButton">
 					<param name="id" value="6" />
 					<param name="icon" value="icons/infodialogs/update.png" />
@@ -348,19 +348,19 @@
 					<param name="id" value="10" />
 					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[13405]" />
-                    <param name="visible" value="container.content(artists) | container.content(albums)" />
+                    <param name="visible" value="Container.Content(artists) | Container.Content(albums)" />
 				</include>
                 <include name="InfoDialogButton">
 					<param name="id" value="13" />
 					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[13405]" />
-                    <param name="visible" value="container.content(songs)" />
+                    <param name="visible" value="Container.Content(songs)" />
 				</include>
 				<include name="InfoDialogButton">
 					<param name="id" value="12" />
 					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[20413]" />
-                    <param name="visible" value="container.content(artists)" />
+                    <param name="visible" value="Container.Content(artists)" />
 				</include>
 			</control>
 			<include name="LeftRightArrows">
@@ -373,7 +373,7 @@
 		</control>
         <!-- TopBarInfo Artists -->
 		<control type="group">
-			<visible>container.content(artists)</visible>
+			<visible>Container.Content(artists)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Artist]" />
 				<param name="sub_label" value="$INFO[ListItem.Genre]" />
@@ -382,7 +382,7 @@
 		</control>
         <!-- TopBarInfo Albums -->
 		<control type="group">
-			<visible>container.content(albums)</visible>
+			<visible>Container.Content(albums)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist]" />
@@ -391,7 +391,7 @@
 		</control>
         <!-- TopBarInfo Songs -->
 		<control type="group">
-			<visible>container.content(songs) + !Window.IsActive(musicinformation)</visible>
+			<visible>Container.Content(songs) + !Window.IsActive(musicinformation)</visible>
 			<include name="InfoDialogTopBarInfo">
 				<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />

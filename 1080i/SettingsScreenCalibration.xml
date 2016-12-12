@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>8</defaultcontrol>
+	<onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="mover" id="8">
 			<description>top left mover</description>
@@ -45,7 +47,7 @@
 			<top>150</top>
 			<width>1920</width>
 			<align>center</align>
-			<label>-</label>
+			<label></label>
 			<font>font16</font>
 			<shadowcolor>FF000000</shadowcolor>
 		</control>
@@ -55,7 +57,7 @@
 			<top>210</top>
 			<width>1920</width>
 			<align>center</align>
-			<label>-</label>
+			<label></label>
 			<font>font16</font>
 			<shadowcolor>FF000000</shadowcolor>
 		</control>

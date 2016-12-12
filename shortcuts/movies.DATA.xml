@@ -7,21 +7,21 @@
         <action>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</action>
     </shortcut>
     <shortcut>
+        <label>562</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/years.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/years/,return)</action>
+    </shortcut>    
+    <shortcut>
         <label>20434</label>
         <label2>342</label2>
         <icon>special://skin/extras/icons/sets.png</icon>
         <action>ActivateWindow(videos,videodb://movies/sets/,return)</action>
     </shortcut>
     <shortcut>
-        <label>562</label>
-        <label2>342</label2>
-        <icon>special://skin/extras/icons/years.png</icon>
-        <action>ActivateWindow(videos,videodb://movies/years/,return)</action>
-    </shortcut>
-    <shortcut>
         <label>135</label>
         <label2>342</label2>
-        <icon>special://skin/extras/icons/genres.png</icon>
+        <icon>special://skin/extras/icons/genre.png</icon>
         <action>ActivateWindow(videos,videodb://movies/genres/,return)</action>
     </shortcut>
     <shortcut>
@@ -45,7 +45,7 @@
     <shortcut>
         <label>653</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/update.png</icon>
+        <icon>special://skin/extras/icons/updatelibrary.png</icon>
         <action>UpdateLibrary(video)</action>
     </shortcut>
 </shortcuts>

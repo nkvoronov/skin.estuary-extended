@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Неодгледани филмови"
 
+msgctxt "#31008"
+msgid "No disclaimer"
+msgstr "Нема правила одрицања"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Преузми иконице"
@@ -543,3 +547,11 @@ msgstr "Изаберите пакет уметности љубитеља за �
 msgctxt "#31132"
 msgid "min"
 msgstr "мин"
+
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Сакриј"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Преостало"

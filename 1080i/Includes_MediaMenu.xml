@@ -23,7 +23,7 @@
 				<height>95</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>-</font>
+				<font></font>
 				<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
 				<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 				<radioposx>26</radioposx>
@@ -46,17 +46,21 @@
 		<definition>
 			<control type="button" id="28">
 				<left>-1000</left>
-				<label>-</label>
+				<label></label>
 				<height>1</height>
 			</control>
 			<control type="grouplist" id="9000">
 				<top>90</top>
 				<left>0</left>
 				<width>430</width>
-				<height>1080</height>
+				<height>100%</height>
 				<onleft>9000</onleft>
 				<onup>9000</onup>
-				<onright>50</onright>
+				<onright condition="!Window.IsActive(MyPVRGuide.xml)">50</onright>
+				<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(10)">10</onright>
+				<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(11)">11</onright>
+				<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(12)">12</onright>
+				<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(13)">13</onright>
 				<ondown>14100</ondown>
 				<onback>50</onback>
 				<defaultcontrol>6054</defaultcontrol>
@@ -86,7 +90,11 @@
 						<left>35</left>
 						<height>95</height>
 						<onleft>6056</onleft>
-						<onright>50</onright>
+						<onright condition="!Window.IsActive(MyPVRGuide.xml)">50</onright>
+						<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(10)">10</onright>
+						<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(11)">11</onright>
+						<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(12)">12</onright>
+						<onright condition="Window.IsActive(MyPVRGuide.xml) + Control.IsVisible(13)">13</onright>
 						<onup>14100</onup>
 						<ondown>6054</ondown>
 						<width>1000</width>
@@ -149,13 +157,6 @@
 					<onclick>Container.SetSortDirection</onclick>
 					<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
-				<control type="button" id="6051">
-					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[456]</label>
-					<label2>[B]$INFO[Container.Viewmode][/B]</label2>
-					<onclick>Container.NextViewMode</onclick>
-					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
-				</control>
 				<control type="label" id="300">
 					<label>$LOCALIZE[31021]</label>
 					<include>MediaMenuLabelCommon</include>
@@ -205,11 +206,13 @@
 						<ondown>6056</ondown>
 						<visible>Player.HasMedia + [ControlGroup(9000).HasFocus | Control.HasFocus(6130)]</visible>
 						<visible>!System.HasModalDialog</visible>
-						<include name="BottomMainMenuItem">
+						<include name="BottomMainMenuToggleItem">
 							<param name="control_id" value="14101" />
 							<param name="height" value="95" />
-							<param name="onclick" value="Pause" />
-							<param name="icon" value="icons/now-playing/pause.png" />
+							<param name="onclick" value="PlayerControl(Play)" />
+							<param name="icon_on" value="icons/now-playing/play.png" />
+							<param name="icon_off" value="icons/now-playing/pause.png" />
+							<param name="selected" value="Player.Paused" />
 						</include>
 						<include name="BottomMainMenuItem">
 							<param name="control_id" value="14102" />
@@ -248,17 +251,14 @@
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
 		<depth>DepthSideBlade</depth>
-		<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)">
+		<left>-484</left>
+		<animation type="Conditional" condition="ControlGroup(9000).HasFocus | Control.HasFocus(6130)" reversible="true">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="-320" end="0" time="400" tween="cubic" easing="out" />
-		</animation>
-		<animation type="Conditional" condition="!ControlGroup(9000).HasFocus + !Control.HasFocus(6130)">
-			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
-			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="in" />
+			<effect type="slide" start="0" end="484" time="400" tween="cubic" easing="out" />
 		</animation>
 		<control type="image">
 			<left>0</left>
-			<top>80</top>
+			<top>79</top>
 			<width>484</width>
 			<height>920</height>
 			<texture>lists/panel.png</texture>
@@ -283,11 +283,13 @@
 			<onleft>14100</onleft>
 			<visible>Player.HasMedia + [ControlGroup(9000).HasFocus | Control.HasFocus(6130)]</visible>
 			<visible>!System.HasModalDialog</visible>
-			<include name="BottomMainMenuItem">
+			<include name="BottomMainMenuToggleItem">
 				<param name="control_id" value="14101" />
 				<param name="height" value="95" />
-				<param name="onclick" value="Pause" />
-				<param name="icon" value="icons/now-playing/pause.png" />
+				<param name="onclick" value="PlayerControl(Play)" />
+				<param name="icon_on" value="icons/now-playing/play.png" />
+				<param name="icon_off" value="icons/now-playing/pause.png" />
+				<param name="selected" value="Player.Paused" />
 			</include>
 			<include name="BottomMainMenuItem">
 				<param name="control_id" value="14102" />
@@ -298,7 +300,7 @@
 			<include name="BottomMainMenuItem">
 				<param name="control_id" value="14104" />
 				<param name="height" value="95" />
-				<param name="onclick" value="Next" />
+				<param name="onclick" value="PlayerControl(Next)" />
 				<param name="icon" value="icons/now-playing/next.png" />
 			</include>
 			<include name="BottomMainMenuItem">
@@ -314,7 +316,7 @@
 			<left>0</left>
 			<top>100</top>
 			<width>430</width>
-			<height>1080</height>
+			<height>100%</height>
 			<onleft>9000</onleft>
 			<onup>9000</onup>
 			<onright>50</onright>
@@ -364,13 +366,13 @@
 	</include>
 	<include name="MediaMenuMouseOverlay">
 		<control type="button" id="6130">
-			<label>-</label>
-			<height>1080</height>
+			<label></label>
+			<height>100%</height>
 			<width>50</width>
 			<left>-50</left>
 			<top>0</top>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 		</control>
 	</include>
 </includes>

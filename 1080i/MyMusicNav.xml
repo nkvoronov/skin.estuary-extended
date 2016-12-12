@@ -8,8 +8,8 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
-            <include>CommonScrollbars</include>			
-            <include>View_50_List</include>
+			<include>CommonScrollbars</include>
+			<include>View_50_List</include>
 			<include>View_52_IconWall</include>
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
@@ -18,7 +18,7 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(50) | Control.IsVisible(55)</visible>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(files) | Container.Content(directors)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(files) | Container.Content(directors)</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
@@ -41,6 +41,7 @@
 					<height>388</height>
 					<font>font12</font>
 					<label>$INFO[ListItem.Property(artist_description)]$INFO[ListItem.Property(album_description),[CR]]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<right>130</right>
@@ -51,6 +52,7 @@
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
 					<visible>IsEmpty(Listitem.Property(artist_description)) + IsEmpty(Listitem.Property(album_description)) + !StringCompare(ListItem.Label,..)</visible>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
 					<right>113</right>
@@ -59,7 +61,7 @@
 					<height>270</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
-					<texture background="true" fallback="DefaultFolder.png">$VAR[ListInfoBoxImageVar]</texture>
+					<texture background="true" fallback="colors/black.png">$VAR[ListInfoBoxImageVar]</texture>
 				</control>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
@@ -77,7 +79,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
 						<onclick>UpdateLibrary(music)</onclick>
-						<visible>!Container.Content(addons)</visible>
+						<visible>!Container.Content(addons)+ IsEmpty(Container.PluginName)</visible>
 						<altlabel>$LOCALIZE[13353]</altlabel>
 						<usealttexture>library.isscanningmusic</usealttexture>
 					</control>
@@ -107,8 +109,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31117]</label>
 						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
-						<!-- <onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick> -->
-						<visible>Container.Content() + IsEmpty(Container.PluginName)</visible>
+						<visible>IsEmpty(Container.FolderPath) + IsEmpty(Container.PluginName)</visible>
 					</control>
 					<include>MediaMenuNowPlaying</include>
 				</control>

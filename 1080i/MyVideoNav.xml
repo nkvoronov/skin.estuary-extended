@@ -6,11 +6,12 @@
 	<views>50,51,52,53,54,55,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
-            <include>CommonScrollbars</include>			
-            <include>View_50_List</include>
+			<include>CommonScrollbars</include>
+			<include>View_50_List</include>
 			<include>View_51_Poster</include>
 			<include>View_52_IconWall</include>
 			<include>View_53_Shift</include>
@@ -34,7 +35,7 @@
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>[Control.IsVisible(50) | Control.Isvisible(54)]</visible>
-                <visible>!ListItem.IsParentFolder</visible>
+                <visible>!StringCompare(ListItem.Label,..)</visible>
 				<include>Visible_Right</include>
 				<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				<control type="image">
@@ -51,16 +52,7 @@
 					<height>338</height>
 					<font>font13_title</font>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>Control.IsVisible(54) | ListItem.IsCollection</visible>
-				</control>
-				<control type="textbox">
-					<right>130</right>
-					<top>245</top>
-					<width>429</width>
-					<height>338</height>
-					<font>font12</font>
-					<visible>Control.IsVisible(54)</visible>
-					<label>$INFO[ListItem.Plot]</label>
+					<visible>ListItem.IsCollection</visible>
 				</control>
 				<control type="textbox">
 					<right>130</right>
@@ -68,8 +60,9 @@
 					<width>429</width>
 					<height>398</height>
 					<font>font12</font>
-					<visible>!Control.IsVisible(54)</visible>
+					<visible>!ListItem.IsCollection</visible>
 					<label>$INFO[ListItem.Tagline,[B],[/B][CR]]$INFO[ListItem.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<right>130</right>
@@ -100,7 +93,7 @@
 					<height>270</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
-					<texture background="true" fallback="DefaultFolder.png">$VAR[ListInfoBoxImageVar]</texture>
+					<texture background="true" fallback="colors/black.png">$VAR[ListInfoBoxImageVar]</texture>
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection</visible>
@@ -221,6 +214,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
 						<onclick>UpdateLibrary(video)</onclick>
+						<visible>!Container.Content(addons)+ IsEmpty(Container.PluginName)</visible>
 						<altlabel>$LOCALIZE[13353]</altlabel>
 						<usealttexture>library.isscanningvideo</usealttexture>
 					</control>
@@ -245,6 +239,11 @@
 						<visible>Container.Content() + IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="button" id="623">
+						<include>MediaMenuItemsCommon</include>
+						<label>$LOCALIZE[31009]</label>
+						<visible>Container.Content(studios) + !System.HasAddon(resource.images.studios.white)</visible>
+					</control>
+					<control type="button" id="624">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[10140]</label>
 						<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>

@@ -3,7 +3,7 @@
     <shortcut>
         <label>184</label>
         <label2>8</label2>
-        <icon>special://skin/extras/icons/update.png</icon>
+        <icon>special://skin/extras/icons/updatelibrary.png</icon>
         <action>Weather.Refresh</action>
     </shortcut>
     <shortcut>

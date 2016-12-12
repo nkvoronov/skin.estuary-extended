@@ -9,7 +9,7 @@
     <shortcut>
         <label>136</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/playlist.png</icon>
+        <icon>special://skin/extras/icons/playlists.png</icon>
         <action>ActivateWindow(videos,special://videoplaylists/,return)</action>
     </shortcut>
     <shortcut>
@@ -21,7 +21,7 @@
     <shortcut>
         <label>20314</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/videos.png</icon>
+        <icon>special://skin/extras/icons/media.png</icon>
         <action>ActivateWindow(videos,library://video/,return)</action>
     </shortcut>
 </shortcuts>

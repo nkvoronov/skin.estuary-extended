@@ -84,6 +84,10 @@ msgctxt "#31016"
 msgid "Recently played channels"
 msgstr "Нещодавно програні канали"
 
+msgctxt "#31017"
+msgid "Rated"
+msgstr "Номінальний"
+
 msgctxt "#31018"
 msgid "Most played channels"
 msgstr "Самі програваємі канали"
@@ -257,8 +261,8 @@ msgid "minutes"
 msgstr "мін."
 
 msgctxt "#31061"
-msgid "Main menu items"
-msgstr "Пункти головного меню"
+msgid "Main menu"
+msgstr "Головне меню"
 
 msgctxt "#31062"
 msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
@@ -414,7 +418,7 @@ msgstr "Стіна іконок"
 
 msgctxt "#31100"
 msgid "Shift"
-msgstr "Сдвіг"
+msgstr "Зсув"
 
 msgctxt "#31101"
 msgid "InfoWall"
@@ -544,6 +548,66 @@ msgctxt "#31132"
 msgid "min"
 msgstr "мін"
 
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Приховати"
+
+msgctxt "#31134"
+msgid "Remaining"
+msgstr "Залишилося"
+
+msgctxt "#31135"
+msgid "Installed from"
+msgstr "Встановлено з"
+
+msgctxt "#31136"
+msgid "Click here to see latest changes..."
+msgstr "Натисніть сюди, щоб побачити останні зміни ..."
+
+msgctxt "#31137"
+msgid "PVR info"
+msgstr "PVR інфо"
+
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "Інформація про процес програвання"
+
+msgctxt "#31139"
+msgid "Video decoder"
+msgstr "Відео декодер"
+
+msgctxt "#31140"
+msgid "Pixel format"
+msgstr "Піксель формат"
+
+msgctxt "#31141"
+msgid "Changes for version"
+msgstr "Зміни для версії"
+
+msgctxt "#31142"
+msgid "Play speed"
+msgstr "Швидкість відтворення"
+
+msgctxt "#31143"
+msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
+msgstr "Ви ще не включили PVR. Для того щоб використовувати PVR, виберіть додаток клієнта PVR і налаштуйте його. Будь ласка, відвідайте http://kodi.wiki/view/PVR, щоб дізнатися більше."
+
+msgctxt "#31144"
+msgid "Enter add-on browser"
+msgstr "Увійти в браузер доповнень"
+
+msgctxt "#31145"
+msgid "Search add-ons"
+msgstr "Пошук доповнень"
+
+msgctxt "#31146"
+msgid "Manage add-ons"
+msgstr "Управління доповненнями"
+
+msgctxt "#31147"
+msgid "Download add-ons"
+msgstr "Завантажити доповнення"
+
 msgctxt "#32000"
 msgid "Poster"
 msgstr "Постер"
@@ -557,6 +621,82 @@ msgid "Current scraper"
 msgstr "Поточний інфоресурс"
 
 # extended added value
+
+msgctxt "#40000"
+msgid "Preconfigured widgets"
+msgstr "Передвстановлені віджети"
+
+msgctxt "#40001"
+msgid "Weather widget"
+msgstr "Віджети погоди"
+
+msgctxt "#40002"
+msgid "Pictures widget"
+msgstr "Віджети фото"
+
+msgctxt "#40003"
+msgid "LiveTV widget"
+msgstr "Віджети ТБ"
+
+msgctxt "#40004"
+msgid "Radios widget"
+msgstr "Віджети радіо"
+
+msgctxt "#40005"
+msgid "Videos widget"
+msgstr "Віджети відео"
+
+msgctxt "#40006"
+msgid "Movies widget"
+msgstr "Віджети фільмів"
+
+msgctxt "#40007"
+msgid "TVShows widget"
+msgstr "Віджети серіалів"
+
+msgctxt "#40008"
+msgid "Musicvideos widget"
+msgstr "Віджети муз.відео"
+
+msgctxt "#40009"
+msgid "Music widget"
+msgstr "Віджети музики"
+
+msgctxt "#40010"
+msgid "Addons widget"
+msgstr "Віджети доповнень"
+
+msgctxt "#40011"
+msgid "Customizable widgets"
+msgstr "Віджети користовуча"
+
+msgctxt "#40012"
+msgid "Customizable widget (posters)"
+msgstr "Віджети користовуча (постери)"
+
+msgctxt "#40013"
+msgid "Customizable widget (thumbs)"
+msgstr "Віджети користовуча (thumbs)"
+
+msgctxt "#40014"
+msgid "Customizable widget (icons)"
+msgstr "Віджети користовуча (іконки)"
+
+msgctxt "#40015"
+msgid "SystemInfo widget"
+msgstr "Віджет системної інформації"
+
+msgctxt "#40100"
+msgid "Most watched music videos"
+msgstr "Саме Популярне муз. відео"
+
+msgctxt "#40101"
+msgid "Random music videos"
+msgstr "Випадкове муз. відео"
+
+msgctxt "#40102"
+msgid "Unwatched music videos"
+msgstr "Непереглянуте муз. відео"
 
 msgctxt "#84102"
 msgid "Timer rules"
@@ -587,28 +727,27 @@ msgid "Output oversampling"
 msgstr "Ви. передискретизація"
 
 msgctxt "#84200"
-msgid "List of add-ons"
-msgstr "Список доповнень"
+msgid "User widgets"
+msgstr "Віджети користувача"
 
 msgctxt "#84201"
-msgid "List of TV and radio"
-msgstr "Список тв і радіо"
-
+msgid "User widgets options"
+msgstr "Параметри віджетів користувача"
 
 msgctxt "#84202"
-msgid "Custom list of add-ons"
+msgid "User list of add-ons"
 msgstr "Список користувача доповнень"
 
 msgctxt "#84203"
-msgid "Custom list of TV and radio channels"
+msgid "User list of TV and radio channels"
 msgstr "Список користувача тв і радіо каналів"
 
 msgctxt "#84204"
-msgid "Enable custom list of add-ons"
+msgid "Enable user list of add-ons"
 msgstr "Дозволити список користувача доповнень"
 
 msgctxt "#84205"
-msgid "Enable custom list of TV and radio channels"
+msgid "Enable user list of TV and radio channels"
 msgstr "Дозволити список користувача тв і радіо каналів"
 
 msgctxt "#84206"
@@ -652,21 +791,57 @@ msgid "Hardware"
 msgstr "Устаткування"
 
 msgctxt "#84216"
-msgid "Customize Main Menu"
-msgstr "Налаштування головного меню"
+msgid "Choose home fanart pack"
+msgstr "Вибрати фанарт пакет"
 
 msgctxt "#84217"
-msgid "Customize power menu"
-msgstr "Налаштування меню живлення"
+msgid "Options"
+msgstr "Параметри"
 
 msgctxt "#84218"
-msgid "Reset menus settings"
-msgstr "Скидання налаштувань меню"
+msgid "Advanced options"
+msgstr "Додаткові параметри"
 
 msgctxt "#84219"
-msgid "Choose item for menu"
-msgstr "Виберіть пункт для меню"
+msgid "Background options"
+msgstr "Параметри фону"
 
 msgctxt "#84220"
-msgid "Common Shortcut"
-msgstr "Загальний ярлик"
+msgid "Reset skin options"
+msgstr "Скидання параметрів обкладинки"
+
+msgctxt "#88071"
+msgid "Show stats"
+msgstr "Показувати статистику"
+
+msgctxt "#85216"
+msgid "Customize power menu"
+msgstr "Настройка меню живлення"
+
+msgctxt "#89501"
+msgid "Enable FullScreen Clock"
+msgstr "Показувати годинник в повноекранному режимі"
+
+msgctxt "#89502"
+msgid "Enable SlideShow Info"
+msgstr "Показувати інформацію в слайдшоу"
+
+msgctxt "#90020"
+msgid "Backup Skin Settings"
+msgstr "Резервна копія налаштувань обкладинки"
+
+msgctxt "#90021"
+msgid "Create"
+msgstr "Створити"
+
+msgctxt "#90022"
+msgid "Restory"
+msgstr "Відновити"
+
+msgctxt "#90030"
+msgid "Set type of widgets"
+msgstr "Виберіть тип віджетів"
+
+msgctxt "#90044"
+msgid "Disable"
+msgstr "Заборонити"

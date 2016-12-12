@@ -21,7 +21,7 @@
     <shortcut>
         <label>271</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/top100.png</icon>
+        <icon>special://skin/extras/icons/musictop100.png</icon>
         <action>ActivateWindow(music,musicdb://top100/,return)</action>
     </shortcut>
     <shortcut>
@@ -33,7 +33,7 @@
     <shortcut>
         <label>136</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/playlist.png</icon>
+        <icon>special://skin/extras/icons/playlists.png</icon>
         <action>ActivateWindow(music,special://musicplaylists/,return)</action>
     </shortcut>
     <shortcut>
@@ -45,7 +45,7 @@
     <shortcut>
         <label>653</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/update.png</icon>
+        <icon>special://skin/extras/icons/updatelibrary.png</icon>
         <action>UpdateLibrary(music)</action>
     </shortcut>
 </shortcuts>

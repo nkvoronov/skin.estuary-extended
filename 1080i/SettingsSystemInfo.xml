@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">95</defaultcontrol>
     <onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<left>90</left>

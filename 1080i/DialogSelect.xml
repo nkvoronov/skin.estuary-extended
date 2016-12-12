@@ -59,14 +59,12 @@
 						<texture border="40">lists/separator.png</texture>
 					</control>
 					<control type="image">
-						<left>10</left>
-						<top>5</top>
-						<width>115</width>
-						<height>115</height>
+						<left>12</left>
+						<top>7</top>
+						<width>110</width>
+						<height>110</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordertexture border="2" colordiffuse="border_alpha">colors/black.png</bordertexture>
-						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
 						<left>135</left>
@@ -84,17 +82,6 @@
 						<font>font12</font>
 						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
-                        <visible>!IsEmpy(ListItem.Label2) + IsEmpy(ListItem.Property(Addon.Summary))</visible>
-					</control>
-					<control type="textbox">
-						<left>135</left>
-						<top>52</top>
-						<width>700</width>
-						<height>60</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
-                        <visible>!IsEmpy(ListItem.Property(Addon.Summary))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="125" width="880">
@@ -115,14 +102,12 @@
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
-						<left>10</left>
-						<top>5</top>
-						<width>115</width>
-						<height>115</height>
+						<left>12</left>
+						<top>7</top>
+						<width>110</width>
+						<height>110</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordertexture>colors/black.png</bordertexture>
-						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
 						<left>135</left>
@@ -130,6 +115,7 @@
 						<width>700</width>
 						<height>60</height>
 						<aligny>center</aligny>
+						<scroll>true</scroll>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
@@ -138,19 +124,7 @@
 						<width>700</width>
 						<height>60</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
-                        <visible>!IsEmpy(ListItem.Label2) + IsEmpy(ListItem.Property(Addon.Summary))</visible>
-					</control>
-					<control type="textbox">
-						<left>135</left>
-						<top>52</top>
-						<width>700</width>
-						<height>60</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Summary)]</label>
-                        <visible>!IsEmpy(ListItem.Property(Addon.Summary))</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -171,7 +145,7 @@
 					<top>695</top>
 					<width>275</width>
 					<height>35</height>
-					<font>font12</font>
+					<font>font10</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
@@ -185,12 +159,12 @@
 					<onright>3</onright>
 					<include name="DefaultDialogButton">
 						<param name="id" value="5" />
-						<param name="label" value="-" />
+						<param name="label" value="" />
 					</include>
 					<include name="DefaultDialogButton">
 						<param name="id" value="99" />
 						<param name="label" value="$LOCALIZE[222]" />
-						<param name="onclick" value="Dialog.Close(selectdialog)" />
+                        <param name="onclick" value="PreviousMenu"/>
 					</include>
 				</control>
 			</control>

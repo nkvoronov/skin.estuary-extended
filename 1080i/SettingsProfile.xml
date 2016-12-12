@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Left</include>
@@ -53,12 +55,12 @@
 					<item id="1">
 						<label>$LOCALIZE[128]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[13200]</label>
 						<onclick>noop</onclick>
-						<icon>-</icon>
+						<icon></icon>
 					</item>
 				</content>
 			</control>
@@ -158,7 +160,6 @@
 						<top>275</top>
 						<width>305</width>
 						<height>100</height>
-						<textcolor>grey</textcolor>
 						<font>font10</font>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -170,7 +171,6 @@
 						<width>305</width>
 						<height>100</height>
 						<font>font10</font>
-						<textcolor>grey</textcolor>
 						<align>center</align>
 						<aligny>top</aligny>
 						<label fallback="13170">$INFO[ListItem.Label2]</label>

@@ -96,6 +96,14 @@ msgctxt "#31085"
 msgid "Channel Group"
 msgstr "Grup del canal"
 
+msgctxt "#31086"
+msgid "Metadata"
+msgstr "Metadades"
+
+msgctxt "#31087"
+msgid "Provider settings"
+msgstr "Ajusts del proveïdor"
+
 msgctxt "#31088"
 msgid "Content scanning options"
 msgstr "Opcions d'escaneig de continguts"
@@ -119,3 +127,11 @@ msgstr "Seleccioni el seu perfil d'usuari de Kodi[CR]per ingressar i continuar"
 msgctxt "#31100"
 msgid "Shift"
 msgstr "Majúscules"
+
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "Teletext"
+
+msgctxt "#31133"
+msgid "Hide"
+msgstr "Amaga"
