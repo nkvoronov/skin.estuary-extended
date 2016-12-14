@@ -271,7 +271,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetMoviesHeader1Label2]</label2>
+                    <label2>$VAR[MoviesHeader1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, movies1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -282,7 +282,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetMoviesHeader2Label2]</label2>
+                    <label2>$VAR[MoviesHeader2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, movies2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -293,7 +293,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetMoviesHeader3Label2]</label2>
+                    <label2>$VAR[MoviesHeader3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, movies3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -304,7 +304,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetMoviesHeader4Label2]</label2>
+                    <label2>$VAR[MoviesHeader4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, movies4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -316,7 +316,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetTVShowsHeader1Label2]</label2>
+                    <label2>$VAR[TVShowsHeader1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, tvshows1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -327,7 +327,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetTVShowsHeader2Label2]</label2>
+                    <label2>$VAR[TVShowsHeader2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, tvshows2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -338,7 +338,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetTVShowsHeader3Label2]</label2>
+                    <label2>$VAR[TVShowsHeader3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, tvshows3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -350,7 +350,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetMusicVideosHeader1Label2]</label2>
+                    <label2>$VAR[MusicVideosHeader1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, musicvideos1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -361,7 +361,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetMusicVideosHeader2Label2]</label2>
+                    <label2>$VAR[MusicVideosHeader2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, musicvideos2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -372,7 +372,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetMusicVideosHeader3Label2]</label2>
+                    <label2>$VAR[MusicVideosHeader3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, musicvideos3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -383,7 +383,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetMusicVideosHeader4Label2]</label2>
+                    <label2>$VAR[MusicVideosHeader4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, musicvideos4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -395,7 +395,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetMusicHeader1Label2]</label2>
+                    <label2>$VAR[MusicHeader1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -406,7 +406,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetMusicHeader2Label2]</label2>
+                    <label2>$VAR[MusicHeader2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -417,7 +417,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetMusicVideosHeader3Label2]</label2>
+                    <label2>$VAR[MusicHeader3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -428,7 +428,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetMusicHeader4Label2]</label2>
+                    <label2>$VAR[MusicHeader4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -439,7 +439,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[WidgetMusicHeader5Label2]</label2>
+                    <label2>$VAR[MusicHeader5Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music5)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -450,7 +450,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[WidgetMusicHeader6Label2]</label2>
+                    <label2>$VAR[MusicHeader6Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, music6)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -462,7 +462,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetPersonalPoster1Label2]</label2>
+                    <label2>$VAR[PersonalPoster1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -473,7 +473,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetPersonalPoster2Label2]</label2>
+                    <label2>$VAR[PersonalPoster2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -484,7 +484,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetPersonalPoster3Label2]</label2>
+                    <label2>$VAR[PersonalPoster3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -495,7 +495,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetPersonalPoster4Label2]</label2>
+                    <label2>$VAR[PersonalPoster4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -506,7 +506,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[WidgetPersonalPoster5Label2]</label2>
+                    <label2>$VAR[PersonalPoster5Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter5)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -517,7 +517,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[WidgetPersonalPoster6Label2]</label2>
+                    <label2>$VAR[PersonalPoster6Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalposter6)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -529,7 +529,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetPersonalThumb1Label2]</label2>
+                    <label2>$VAR[PersonalThumb1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -540,7 +540,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetPersonalThumb2Label2]</label2>
+                    <label2>$VAR[PersonalThumb2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -551,7 +551,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetPersonalThumb3Label2]</label2>
+                    <label2>$VAR[PersonalThumb3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -562,7 +562,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetPersonalThumb4Label2]</label2>
+                    <label2>$VAR[PersonalThumb4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -573,7 +573,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[WidgetPersonalThumb5Label2]</label2>
+                    <label2>$VAR[PersonalThumb5Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb5)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -584,7 +584,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[WidgetPersonalThumb6Label2]</label2>
+                    <label2>$VAR[PersonalThumb6Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalthumb6)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -596,7 +596,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetPersonalIcon1Label2]</label2>
+                    <label2>$VAR[PersonalIcon1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -607,7 +607,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetPersonalIcon2Label2]</label2>
+                    <label2>$VAR[PersonalIcon2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -618,7 +618,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetPersonalIcon3Label2]</label2>
+                    <label2>$VAR[PersonalIcon3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -629,7 +629,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetPersonalIcon4Label2]</label2>
+                    <label2>$VAR[PersonalIcon4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -640,7 +640,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[WidgetPersonalIcon5Label2]</label2>
+                    <label2>$VAR[PersonalIcon5Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon5)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -651,7 +651,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[WidgetPersonalIcon6Label2]</label2>
+                    <label2>$VAR[PersonalIcon6Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, personalicon6)</onclick>
                     <onclick>SendClick(312)</onclick>

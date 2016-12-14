@@ -5,7 +5,6 @@
     <include file="Includes_HomeMainMenu.xml" />
     <include file="Includes_HomeSubMenu.xml" />
     <include file="Includes_HomeWidgets.xml" />
-    <include file="Includes_HomeSystemButtons.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />

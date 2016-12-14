@@ -4,7 +4,7 @@
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<label>$LOCALIZE[8]</label>
-			<label2>Погода</label2>
+			<label2>$LOCALIZE[8]</label2>
 			<icon>special://skin/extras/icons/weather.png</icon>
 			<thumb />
 			<property name="labelID">8</property>
@@ -13,6 +13,7 @@
 			<property name="widgetName">40001</property>
 			<property name="background">special://skin/extras/home-images/weather.jpg</property>
 			<visible>!IsEmpty(Weather.Plugin)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(weather)</onclick>
 			<property name="path">ActivateWindow(weather)</property>
 			<property name="list">weather</property>
@@ -24,13 +25,14 @@
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
 			<label>$LOCALIZE[1]</label>
-			<label2>Фото</label2>
+			<label2>$LOCALIZE[1]</label2>
 			<icon>special://skin/extras/icons/pictures.png</icon>
 			<thumb />
 			<property name="labelID">1</property>
 			<property name="defaultID">pictures</property>
 			<property name="widget">PictureWidget</property>
 			<property name="widgetName">40002</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(pictures)</onclick>
 			<property name="path">ActivateWindow(pictures)</property>
 			<property name="list">pictures</property>
@@ -42,7 +44,7 @@
 		<item id="3">
 			<property name="id">$NUMBER[3]</property>
 			<label>$LOCALIZE[19020]</label>
-			<label2>ТВ</label2>
+			<label2>$LOCALIZE[19020]</label2>
 			<icon>special://skin/extras/icons/livetv.png</icon>
 			<thumb />
 			<property name="labelID">19020</property>
@@ -51,6 +53,7 @@
 			<property name="widgetName">40003</property>
 			<property name="background">special://skin/extras/home-images/livetv.jpg</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvchannels)</onclick>
 			<property name="path">ActivateWindow(tvchannels)</property>
 			<property name="list">tvchannels</property>
@@ -62,7 +65,7 @@
 		<item id="4">
 			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[19021]</label>
-			<label2>Радио</label2>
+			<label2>$LOCALIZE[19021]</label2>
 			<icon>special://skin/extras/icons/radio.png</icon>
 			<thumb />
 			<property name="labelID">19021</property>
@@ -71,6 +74,7 @@
 			<property name="widgetName">40004</property>
 			<property name="background">special://skin/extras/home-images/radio.jpg</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiochannels)</onclick>
 			<property name="path">ActivateWindow(radiochannels)</property>
 			<property name="list">radiochannels</property>
@@ -82,13 +86,14 @@
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
 			<label>$LOCALIZE[3]</label>
-			<label2>Видео</label2>
+			<label2>$LOCALIZE[3]</label2>
 			<icon>special://skin/extras/icons/videos.png</icon>
 			<thumb />
 			<property name="labelID">3</property>
 			<property name="defaultID">video</property>
 			<property name="widget">VideoWidget</property>
 			<property name="widgetName">40005</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/,return)</property>
 			<property name="list">library://video/</property>
@@ -100,7 +105,7 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>$LOCALIZE[342]</label>
-			<label2>Фильмы</label2>
+			<label2>$LOCALIZE[342]</label2>
 			<icon>special://skin/extras/icons/movies2.png</icon>
 			<thumb />
 			<property name="labelID">movies</property>
@@ -108,7 +113,28 @@
 			<property name="widget">MoviesWidget</property>
 			<property name="widgetName">40006</property>
 			<property name="background">special://skin/extras/home-images/movies.jpg</property>
+			<property name="widget.movies1">Playlist</property>
+			<property name="widgetName.movies1">31010</property>
+			<property name="widgetType.movies1">movies</property>
+			<property name="widgetTarget.movies1">videos</property>
+			<property name="widgetPath.movies1">special://skin/extras/playlists/inprogress_movies.xsp</property>
+			<property name="widget.movies2">Library</property>
+			<property name="widgetName.movies2">20386</property>
+			<property name="widgetType.movies2">movies</property>
+			<property name="widgetTarget.movies2">videos</property>
+			<property name="widgetPath.movies2">videodb://recentlyaddedmovies/</property>
+			<property name="widget.movies3">Playlist</property>
+			<property name="widgetName.movies3">31007</property>
+			<property name="widgetType.movies3">movies</property>
+			<property name="widgetTarget.movies3">videos</property>
+			<property name="widgetPath.movies3">special://skin/extras/playlists/unwatched_movies.xsp</property>
+			<property name="widget.movies4">Playlist</property>
+			<property name="widgetName.movies4">31006</property>
+			<property name="widgetType.movies4">movies</property>
+			<property name="widgetTarget.movies4">videos</property>
+			<property name="widgetPath.movies4">special://skin/extras/playlists/random_movies.xsp</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/titles/,return)</property>
 			<property name="list">videodb://movies/titles/</property>
@@ -120,7 +146,7 @@
 		<item id="7">
 			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[20343]</label>
-			<label2>Сериалы</label2>
+			<label2>$LOCALIZE[20343]</label2>
 			<icon>special://skin/extras/icons/tvshows.png</icon>
 			<thumb />
 			<property name="labelID">tvshows</property>
@@ -128,7 +154,23 @@
 			<property name="widget">TVShowsWidget</property>
 			<property name="widgetName">40007</property>
 			<property name="background">special://skin/extras/home-images/tvshows.jpg</property>
+			<property name="widget.tvshows1">Playlist</property>
+			<property name="widgetName.tvshows1">626</property>
+			<property name="widgetType.tvshows1">tvshows</property>
+			<property name="widgetTarget.tvshows1">videos</property>
+			<property name="widgetPath.tvshows1">special://skin/extras/playlists/inprogress_tvshows.xsp</property>
+			<property name="widget.tvshows2">Library</property>
+			<property name="widgetName.tvshows2">20387</property>
+			<property name="widgetType.tvshows2">episodes</property>
+			<property name="widgetTarget.tvshows2">videos</property>
+			<property name="widgetPath.tvshows2">videodb://recentlyaddedepisodes/</property>
+			<property name="widget.tvshows3">Playlist</property>
+			<property name="widgetName.tvshows3">31122</property>
+			<property name="widgetType.tvshows3">tvshows</property>
+			<property name="widgetTarget.tvshows3">videos</property>
+			<property name="widgetPath.tvshows3">special://skin/extras/playlists/unwatched_tvshows.xsp</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/titles/,return)</property>
 			<property name="list">videodb://tvshows/titles/</property>
@@ -140,14 +182,35 @@
 		<item id="8">
 			<property name="id">$NUMBER[8]</property>
 			<label>$LOCALIZE[20389]</label>
-			<label2>Муз. видео</label2>
+			<label2>$LOCALIZE[20389]</label2>
 			<icon>special://skin/extras/icons/musicvideos.png</icon>
 			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
 			<property name="widget">MusicVideoWidget</property>
 			<property name="widgetName">40008</property>
+			<property name="widget.musicvideos1">Library</property>
+			<property name="widgetName.musicvideos1">20390</property>
+			<property name="widgetType.musicvideos1">musicvideos</property>
+			<property name="widgetTarget.musicvideos1">music</property>
+			<property name="widgetPath.musicvideos1">videodb://recentlyaddedmusicvideos/</property>
+			<property name="widget.musicvideos2">Playlist</property>
+			<property name="widgetName.musicvideos2">40100</property>
+			<property name="widgetType.musicvideos2">musicvideos</property>
+			<property name="widgetTarget.musicvideos2">music</property>
+			<property name="widgetPath.musicvideos2">special://skin/extras/playlists/mostwatched_musicvideos.xsp</property>
+			<property name="widget.musicvideos3">Playlist</property>
+			<property name="widgetName.musicvideos3">40101</property>
+			<property name="widgetType.musicvideos3">musicvideos</property>
+			<property name="widgetTarget.musicvideos3">music</property>
+			<property name="widgetPath.musicvideos3">special://skin/extras/playlists/random_musicvideos.xsp</property>
+			<property name="widget.musicvideos4">Playlist</property>
+			<property name="widgetName.musicvideos4">40102</property>
+			<property name="widgetType.musicvideos4">musicvideos</property>
+			<property name="widgetTarget.musicvideos4">music</property>
+			<property name="widgetPath.musicvideos4">special://skin/extras/playlists/unwatched_musicvideos.xsp</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://musicvideos/,return)</property>
 			<property name="list">videodb://musicvideos/</property>
@@ -159,7 +222,7 @@
 		<item id="9">
 			<property name="id">$NUMBER[9]</property>
 			<label>$LOCALIZE[2]</label>
-			<label2>Музыка</label2>
+			<label2>$LOCALIZE[2]</label2>
 			<icon>special://skin/extras/icons/music.png</icon>
 			<thumb />
 			<property name="labelID">2</property>
@@ -167,6 +230,37 @@
 			<property name="widget">MusicWidget</property>
 			<property name="widgetName">40009</property>
 			<property name="background">special://skin/extras/home-images/music.jpg</property>
+			<property name="widget.music1">Library</property>
+			<property name="widgetName.music1">517</property>
+			<property name="widgetType.music1">albums</property>
+			<property name="widgetTarget.music1">music</property>
+			<property name="widgetPath.music1">musicdb://recentlyplayedalbums/</property>
+			<property name="widget.music2">Library</property>
+			<property name="widgetName.music2">359</property>
+			<property name="widgetType.music2">albums</property>
+			<property name="widgetTarget.music2">music</property>
+			<property name="widgetPath.music2">musicdb://recentlyaddedalbums/</property>
+			<property name="widget.music3">Playlist</property>
+			<property name="widgetName.music3">31012</property>
+			<property name="widgetType.music3">albums</property>
+			<property name="widgetTarget.music3">music</property>
+			<property name="widgetPath.music3">special://skin/extras/playlists/random_albums.xsp</property>
+			<property name="widget.music4">Playlist</property>
+			<property name="widgetName.music4">31013</property>
+			<property name="widgetType.music4">artists</property>
+			<property name="widgetTarget.music4">music</property>
+			<property name="widgetPath.music4">special://skin/extras/playlists/random_artists.xsp</property>
+			<property name="widget.music5">Playlist</property>
+			<property name="widgetName.music5">31014</property>
+			<property name="widgetType.music5">albums</property>
+			<property name="widgetTarget.music5">music</property>
+			<property name="widgetPath.music5">special://skin/extras/playlists/unplayed_albums.xsp</property>
+			<property name="widget.music6">Playlist</property>
+			<property name="widgetName.music6">31011</property>
+			<property name="widgetType.music6">albums</property>
+			<property name="widgetTarget.music6">music</property>
+			<property name="widgetPath.music6">special://skin/extras/playlists/mostplayed_albums.xsp</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music)</onclick>
 			<property name="path">ActivateWindow(music)</property>
 			<property name="list">music</property>
@@ -178,16 +272,14 @@
 		<item id="10">
 			<property name="id">$NUMBER[10]</property>
 			<label>$LOCALIZE[24001]</label>
-			<label2>Дополнения</label2>
+			<label2>$LOCALIZE[24001]</label2>
 			<icon>special://skin/extras/icons/addons.png</icon>
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">addons</property>
 			<property name="widget">AddonsWidget</property>
 			<property name="widgetName">40010</property>
-			<property name="widgetType" />
-			<property name="widgetTarget" />
-			<property name="widgetPath">AddonsWidget</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(1100)</onclick>
 			<property name="path">ActivateWindow(1100)</property>
 			<property name="list">1100</property>
@@ -199,16 +291,14 @@
 		<item id="11">
 			<property name="id">$NUMBER[11]</property>
 			<label>$LOCALIZE[10004]</label>
-			<label2>Настройки</label2>
+			<label2>$LOCALIZE[10004]</label2>
 			<icon>special://skin/extras/icons/settings.png</icon>
 			<thumb />
 			<property name="labelID">settings</property>
 			<property name="defaultID">settings</property>
 			<property name="widget">SystemInfoWidget</property>
 			<property name="widgetName">40015</property>
-			<property name="widgetType" />
-			<property name="widgetTarget" />
-			<property name="widgetPath">SystemInfoWidget</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(settings)</onclick>
 			<property name="path">ActivateWindow(settings)</property>
 			<property name="list">settings</property>
@@ -229,6 +319,7 @@
 			<thumb />
 			<property name="labelID">184</property>
 			<property name="defaultID">184</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.Refresh</onclick>
 			<property name="path">Weather.Refresh</property>
 			<property name="list">Weather.Refresh</property>
@@ -245,6 +336,7 @@
 			<thumb />
 			<property name="labelID">31077</property>
 			<property name="defaultID">31077</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationPrevious</onclick>
 			<property name="path">Weather.LocationPrevious</property>
 			<property name="list">Weather.LocationPrevious</property>
@@ -261,6 +353,7 @@
 			<thumb />
 			<property name="labelID">31078</property>
 			<property name="defaultID">31078</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationNext</onclick>
 			<property name="path">Weather.LocationNext</property>
 			<property name="list">Weather.LocationNext</property>
@@ -277,6 +370,7 @@
 			<thumb />
 			<property name="labelID">1390</property>
 			<property name="defaultID">1390</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(weathersettings)</onclick>
 			<property name="path">ActivateWindow(weathersettings)</property>
 			<property name="list">weathersettings</property>
@@ -293,6 +387,7 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
 			<property name="path">ActivateWindow(pictures,addons://sources/image/,return)</property>
 			<property name="list">addons://sources/image/</property>
@@ -310,6 +405,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvchannels)</onclick>
 			<property name="path">ActivateWindow(tvchannels)</property>
 			<property name="list">tvchannels</property>
@@ -327,6 +423,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvguide)</onclick>
 			<property name="path">ActivateWindow(tvguide)</property>
 			<property name="list">tvguide</property>
@@ -344,6 +441,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvrecordings)</onclick>
 			<property name="path">ActivateWindow(tvrecordings)</property>
 			<property name="list">tvrecordings</property>
@@ -361,6 +459,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvtimers)</onclick>
 			<property name="path">ActivateWindow(tvtimers)</property>
 			<property name="list">tvtimers</property>
@@ -378,6 +477,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvsearch)</onclick>
 			<property name="path">ActivateWindow(tvsearch)</property>
 			<property name="list">tvsearch</property>
@@ -395,6 +495,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiochannels)</onclick>
 			<property name="path">ActivateWindow(radiochannels)</property>
 			<property name="list">radiochannels</property>
@@ -412,6 +513,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radioguide)</onclick>
 			<property name="path">ActivateWindow(radioguide)</property>
 			<property name="list">radioguide</property>
@@ -429,6 +531,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiorecordings)</onclick>
 			<property name="path">ActivateWindow(radiorecordings)</property>
 			<property name="list">radiorecordings</property>
@@ -446,6 +549,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiotimers)</onclick>
 			<property name="path">ActivateWindow(radiotimers)</property>
 			<property name="list">radiotimers</property>
@@ -463,6 +567,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiosearch)</onclick>
 			<property name="path">ActivateWindow(radiosearch)</property>
 			<property name="list">radiosearch</property>
@@ -479,6 +584,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,sources://video/,return)</property>
 			<property name="list">sources://video/</property>
@@ -495,6 +601,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(videos,special://videoplaylists/,return)</property>
 			<property name="list">special://videoplaylists/</property>
@@ -512,6 +619,7 @@
 			<property name="labelID">341</property>
 			<property name="defaultID">341</property>
 			<visible>[System.HasMediaDVD] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-3)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>PlayDVD</onclick>
 			<property name="path">PlayDVD</property>
 			<property name="list">PlayDVD</property>
@@ -528,6 +636,7 @@
 			<thumb />
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/,return)</property>
 			<property name="list">library://video/</property>
@@ -545,6 +654,7 @@
 			<property name="labelID">20386</property>
 			<property name="defaultID">20386</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</property>
 			<property name="list">videodb://recentlyaddedmovies/</property>
@@ -562,6 +672,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/years/,return)</property>
 			<property name="list">videodb://movies/years/</property>
@@ -579,6 +690,7 @@
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>[Library.HasContent(MovieSets)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/sets/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/sets/,return)</property>
 			<property name="list">videodb://movies/sets/</property>
@@ -596,6 +708,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/genres/,return)</property>
 			<property name="list">videodb://movies/genres/</property>
@@ -613,6 +726,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/actors/,return)</property>
 			<property name="list">videodb://movies/actors/</property>
@@ -630,6 +744,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/tags/,return)</property>
 			<property name="list">videodb://movies/tags/</property>
@@ -647,6 +762,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/movies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/movies/,return)</property>
 			<property name="list">library://video/movies/</property>
@@ -663,6 +779,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -680,6 +797,7 @@
 			<property name="labelID">20387</property>
 			<property name="defaultID">20387</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</property>
 			<property name="list">videodb://recentlyaddedepisodes/</property>
@@ -697,6 +815,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/years/,return)</property>
 			<property name="list">videodb://tvshows/years/</property>
@@ -714,6 +833,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/titles/,return)</property>
 			<property name="list">videodb://tvshows/titles/</property>
@@ -731,6 +851,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/genres/,return)</property>
 			<property name="list">videodb://tvshows/genres/</property>
@@ -748,6 +869,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/actors/,return)</property>
 			<property name="list">videodb://tvshows/actors/</property>
@@ -765,6 +887,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/tags/,return)</property>
 			<property name="list">videodb://tvshows/tags/</property>
@@ -782,6 +905,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/tvshows/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/tvshows/,return)</property>
 			<property name="list">library://video/tvshows/</property>
@@ -798,6 +922,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -815,6 +940,7 @@
 			<property name="labelID">20390</property>
 			<property name="defaultID">20390</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</property>
 			<property name="list">videodb://recentlyaddedmusicvideos/</property>
@@ -832,6 +958,7 @@
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/years/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/years/,return)</property>
 			<property name="list">videodb://musicvideos/years/</property>
@@ -849,6 +976,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://musicvideos/titles/,return)</property>
 			<property name="list">videodb://musicvideos/titles/</property>
@@ -866,6 +994,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/genres/,return)</property>
 			<property name="list">videodb://musicvideos/genres/</property>
@@ -883,6 +1012,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/artists/,return)</property>
 			<property name="list">videodb://musicvideos/artists/</property>
@@ -900,6 +1030,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/albums/,return)</property>
 			<property name="list">videodb://musicvideos/albums/</property>
@@ -917,6 +1048,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/musicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/musicvideos/,return)</property>
 			<property name="list">library://video/musicvideos/</property>
@@ -933,6 +1065,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -950,6 +1083,7 @@
 			<property name="labelID">359</property>
 			<property name="defaultID">359</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</property>
 			<property name="list">musicdb://recentlyaddedalbums/</property>
@@ -967,6 +1101,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://artists/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://artists/,return)</property>
 			<property name="list">musicdb://artists/</property>
@@ -984,6 +1119,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://albums/,return)</property>
 			<property name="list">musicdb://albums/</property>
@@ -1001,6 +1137,7 @@
 			<property name="labelID">271</property>
 			<property name="defaultID">271</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://top100/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://top100/,return)</property>
 			<property name="list">musicdb://top100/</property>
@@ -1017,6 +1154,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,sources://music/,return)</onclick>
 			<property name="path">ActivateWindow(music,sources://music/,return)</property>
 			<property name="list">sources://music/</property>
@@ -1033,6 +1171,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
 			<property name="list">special://musicplaylists/</property>
@@ -1049,6 +1188,7 @@
 			<thumb />
 			<property name="labelID">10516</property>
 			<property name="defaultID">10516</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://,return)</property>
 			<property name="list">musicdb://</property>
@@ -1065,6 +1205,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(music)</onclick>
 			<property name="path">UpdateLibrary(music)</property>
 			<property name="list">UpdateLibrary(music)</property>
@@ -1081,6 +1222,7 @@
 			<thumb />
 			<property name="labelID">10040</property>
 			<property name="defaultID">10040</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser)</onclick>
 			<property name="path">ActivateWindow(addonbrowser)</property>
 			<property name="list">addonbrowser</property>
@@ -1097,6 +1239,7 @@
 			<thumb />
 			<property name="labelID">24998</property>
 			<property name="defaultID">24998</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://user/,return)</property>
 			<property name="list">addons://user/</property>
@@ -1113,6 +1256,7 @@
 			<thumb />
 			<property name="labelID">24043</property>
 			<property name="defaultID">24043</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://outdated/,return)</property>
 			<property name="list">addons://outdated/</property>
@@ -1129,6 +1273,7 @@
 			<thumb />
 			<property name="labelID">24033</property>
 			<property name="defaultID">24033</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://repos/,return)</property>
 			<property name="list">addons://repos/</property>
@@ -1145,6 +1290,7 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://search/,return)</property>
 			<property name="list">addons://search/</property>
@@ -1161,6 +1307,7 @@
 			<thumb />
 			<property name="labelID">7</property>
 			<property name="defaultID">7</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(filemanager)</onclick>
 			<property name="path">ActivateWindow(filemanager)</property>
 			<property name="list">filemanager</property>
@@ -1177,6 +1324,7 @@
 			<thumb />
 			<property name="labelID">13200</property>
 			<property name="defaultID">13200</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(profiles)</onclick>
 			<property name="path">ActivateWindow(profiles)</property>
 			<property name="list">profiles</property>
@@ -1193,6 +1341,7 @@
 			<thumb />
 			<property name="labelID">130</property>
 			<property name="defaultID">130</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 			<property name="path">ActivateWindow(systeminfo)</property>
 			<property name="list">systeminfo</property>
@@ -1210,6 +1359,7 @@
 			<property name="labelID">14111</property>
 			<property name="defaultID">14111</property>
 			<visible>[system.getbool(eventlog.enabled)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),settings)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(eventlog,events://,return)</onclick>
 			<property name="path">ActivateWindow(eventlog,events://,return)</property>
 			<property name="list">events://</property>
@@ -1443,6 +1593,7 @@
 			<thumb />
 			<property name="labelID">184</property>
 			<property name="defaultID">184</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.Refresh</onclick>
 			<property name="path">Weather.Refresh</property>
 			<property name="list">Weather.Refresh</property>
@@ -1459,6 +1610,7 @@
 			<thumb />
 			<property name="labelID">31077</property>
 			<property name="defaultID">31077</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationPrevious</onclick>
 			<property name="path">Weather.LocationPrevious</property>
 			<property name="list">Weather.LocationPrevious</property>
@@ -1475,6 +1627,7 @@
 			<thumb />
 			<property name="labelID">31078</property>
 			<property name="defaultID">31078</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationNext</onclick>
 			<property name="path">Weather.LocationNext</property>
 			<property name="list">Weather.LocationNext</property>
@@ -1491,6 +1644,7 @@
 			<thumb />
 			<property name="labelID">1390</property>
 			<property name="defaultID">1390</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(weathersettings)</onclick>
 			<property name="path">ActivateWindow(weathersettings)</property>
 			<property name="list">weathersettings</property>
@@ -1509,6 +1663,7 @@
 			<thumb />
 			<property name="labelID">184</property>
 			<property name="defaultID">184</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.Refresh</onclick>
 			<property name="path">Weather.Refresh</property>
 			<property name="list">Weather.Refresh</property>
@@ -1525,6 +1680,7 @@
 			<thumb />
 			<property name="labelID">31077</property>
 			<property name="defaultID">31077</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationPrevious</onclick>
 			<property name="path">Weather.LocationPrevious</property>
 			<property name="list">Weather.LocationPrevious</property>
@@ -1541,6 +1697,7 @@
 			<thumb />
 			<property name="labelID">31078</property>
 			<property name="defaultID">31078</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>Weather.LocationNext</onclick>
 			<property name="path">Weather.LocationNext</property>
 			<property name="list">Weather.LocationNext</property>
@@ -1557,6 +1714,7 @@
 			<thumb />
 			<property name="labelID">1390</property>
 			<property name="defaultID">1390</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(weathersettings)</onclick>
 			<property name="path">ActivateWindow(weathersettings)</property>
 			<property name="list">weathersettings</property>
@@ -1575,6 +1733,7 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
 			<property name="path">ActivateWindow(pictures,addons://sources/image/,return)</property>
 			<property name="list">addons://sources/image/</property>
@@ -1593,6 +1752,7 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(pictures,addons://sources/image/,return)</onclick>
 			<property name="path">ActivateWindow(pictures,addons://sources/image/,return)</property>
 			<property name="list">addons://sources/image/</property>
@@ -1612,6 +1772,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvchannels)</onclick>
 			<property name="path">ActivateWindow(tvchannels)</property>
 			<property name="list">tvchannels</property>
@@ -1629,6 +1790,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvguide)</onclick>
 			<property name="path">ActivateWindow(tvguide)</property>
 			<property name="list">tvguide</property>
@@ -1646,6 +1808,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvrecordings)</onclick>
 			<property name="path">ActivateWindow(tvrecordings)</property>
 			<property name="list">tvrecordings</property>
@@ -1663,6 +1826,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvtimers)</onclick>
 			<property name="path">ActivateWindow(tvtimers)</property>
 			<property name="list">tvtimers</property>
@@ -1680,6 +1844,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>PVR.HasTVChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvsearch)</onclick>
 			<property name="path">ActivateWindow(tvsearch)</property>
 			<property name="list">tvsearch</property>
@@ -1699,6 +1864,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvchannels)</onclick>
 			<property name="path">ActivateWindow(tvchannels)</property>
 			<property name="list">tvchannels</property>
@@ -1716,6 +1882,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvguide)</onclick>
 			<property name="path">ActivateWindow(tvguide)</property>
 			<property name="list">tvguide</property>
@@ -1733,6 +1900,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvrecordings)</onclick>
 			<property name="path">ActivateWindow(tvrecordings)</property>
 			<property name="list">tvrecordings</property>
@@ -1750,6 +1918,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvtimers)</onclick>
 			<property name="path">ActivateWindow(tvtimers)</property>
 			<property name="list">tvtimers</property>
@@ -1767,6 +1936,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>[PVR.HasTVChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19020)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(tvsearch)</onclick>
 			<property name="path">ActivateWindow(tvsearch)</property>
 			<property name="list">tvsearch</property>
@@ -1786,6 +1956,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiochannels)</onclick>
 			<property name="path">ActivateWindow(radiochannels)</property>
 			<property name="list">radiochannels</property>
@@ -1803,6 +1974,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radioguide)</onclick>
 			<property name="path">ActivateWindow(radioguide)</property>
 			<property name="list">radioguide</property>
@@ -1820,6 +1992,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiorecordings)</onclick>
 			<property name="path">ActivateWindow(radiorecordings)</property>
 			<property name="list">radiorecordings</property>
@@ -1837,6 +2010,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiotimers)</onclick>
 			<property name="path">ActivateWindow(radiotimers)</property>
 			<property name="list">radiotimers</property>
@@ -1854,6 +2028,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>PVR.HasRadioChannels</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiosearch)</onclick>
 			<property name="path">ActivateWindow(radiosearch)</property>
 			<property name="list">radiosearch</property>
@@ -1873,6 +2048,7 @@
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiochannels)</onclick>
 			<property name="path">ActivateWindow(radiochannels)</property>
 			<property name="list">radiochannels</property>
@@ -1890,6 +2066,7 @@
 			<property name="labelID">19069</property>
 			<property name="defaultID">19069</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radioguide)</onclick>
 			<property name="path">ActivateWindow(radioguide)</property>
 			<property name="list">radioguide</property>
@@ -1907,6 +2084,7 @@
 			<property name="labelID">19017</property>
 			<property name="defaultID">19017</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiorecordings)</onclick>
 			<property name="path">ActivateWindow(radiorecordings)</property>
 			<property name="list">radiorecordings</property>
@@ -1924,6 +2102,7 @@
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiotimers)</onclick>
 			<property name="path">ActivateWindow(radiotimers)</property>
 			<property name="list">radiotimers</property>
@@ -1941,6 +2120,7 @@
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
 			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),num-19021)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(radiosearch)</onclick>
 			<property name="path">ActivateWindow(radiosearch)</property>
 			<property name="list">radiosearch</property>
@@ -1959,6 +2139,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,sources://video/,return)</property>
 			<property name="list">sources://video/</property>
@@ -1975,6 +2156,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(videos,special://videoplaylists/,return)</property>
 			<property name="list">special://videoplaylists/</property>
@@ -1992,6 +2174,7 @@
 			<property name="labelID">341</property>
 			<property name="defaultID">341</property>
 			<visible>System.HasMediaDVD</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>PlayDVD</onclick>
 			<property name="path">PlayDVD</property>
 			<property name="list">PlayDVD</property>
@@ -2008,6 +2191,7 @@
 			<thumb />
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/,return)</property>
 			<property name="list">library://video/</property>
@@ -2026,6 +2210,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,sources://video/,return)</property>
 			<property name="list">sources://video/</property>
@@ -2042,6 +2227,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,special://videoplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(videos,special://videoplaylists/,return)</property>
 			<property name="list">special://videoplaylists/</property>
@@ -2059,6 +2245,7 @@
 			<property name="labelID">341</property>
 			<property name="defaultID">341</property>
 			<visible>[System.HasMediaDVD] + StringCompare(Window(10000).Property(submenuVisibility),num-3)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>PlayDVD</onclick>
 			<property name="path">PlayDVD</property>
 			<property name="list">PlayDVD</property>
@@ -2075,6 +2262,7 @@
 			<thumb />
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/,return)</property>
 			<property name="list">library://video/</property>
@@ -2094,6 +2282,7 @@
 			<property name="labelID">20386</property>
 			<property name="defaultID">20386</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</property>
 			<property name="list">videodb://recentlyaddedmovies/</property>
@@ -2111,6 +2300,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/years/,return)</property>
 			<property name="list">videodb://movies/years/</property>
@@ -2128,6 +2318,7 @@
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>Library.HasContent(MovieSets)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/sets/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/sets/,return)</property>
 			<property name="list">videodb://movies/sets/</property>
@@ -2145,6 +2336,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/genres/,return)</property>
 			<property name="list">videodb://movies/genres/</property>
@@ -2162,6 +2354,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/actors/,return)</property>
 			<property name="list">videodb://movies/actors/</property>
@@ -2179,6 +2372,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/tags/,return)</property>
 			<property name="list">videodb://movies/tags/</property>
@@ -2196,6 +2390,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>Library.HasContent(Movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/movies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/movies/,return)</property>
 			<property name="list">library://video/movies/</property>
@@ -2212,6 +2407,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2231,6 +2427,7 @@
 			<property name="labelID">20386</property>
 			<property name="defaultID">20386</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</property>
 			<property name="list">videodb://recentlyaddedmovies/</property>
@@ -2248,6 +2445,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/years/,return)</property>
 			<property name="list">videodb://movies/years/</property>
@@ -2265,6 +2463,7 @@
 			<property name="labelID">20434</property>
 			<property name="defaultID">20434</property>
 			<visible>[Library.HasContent(MovieSets)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/sets/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/sets/,return)</property>
 			<property name="list">videodb://movies/sets/</property>
@@ -2282,6 +2481,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/genres/,return)</property>
 			<property name="list">videodb://movies/genres/</property>
@@ -2299,6 +2499,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/actors/,return)</property>
 			<property name="list">videodb://movies/actors/</property>
@@ -2316,6 +2517,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://movies/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://movies/tags/,return)</property>
 			<property name="list">videodb://movies/tags/</property>
@@ -2333,6 +2535,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(Movies)] + StringCompare(Window(10000).Property(submenuVisibility),movies)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/movies/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/movies/,return)</property>
 			<property name="list">library://video/movies/</property>
@@ -2349,6 +2552,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2368,6 +2572,7 @@
 			<property name="labelID">20387</property>
 			<property name="defaultID">20387</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</property>
 			<property name="list">videodb://recentlyaddedepisodes/</property>
@@ -2385,6 +2590,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/years/,return)</property>
 			<property name="list">videodb://tvshows/years/</property>
@@ -2402,6 +2608,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/titles/,return)</property>
 			<property name="list">videodb://tvshows/titles/</property>
@@ -2419,6 +2626,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/genres/,return)</property>
 			<property name="list">videodb://tvshows/genres/</property>
@@ -2436,6 +2644,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/actors/,return)</property>
 			<property name="list">videodb://tvshows/actors/</property>
@@ -2453,6 +2662,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/tags/,return)</property>
 			<property name="list">videodb://tvshows/tags/</property>
@@ -2470,6 +2680,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>Library.HasContent(TVShows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/tvshows/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/tvshows/,return)</property>
 			<property name="list">library://video/tvshows/</property>
@@ -2486,6 +2697,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2505,6 +2717,7 @@
 			<property name="labelID">20387</property>
 			<property name="defaultID">20387</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</property>
 			<property name="list">videodb://recentlyaddedepisodes/</property>
@@ -2522,6 +2735,7 @@
 			<property name="labelID">562</property>
 			<property name="defaultID">562</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/years/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/years/,return)</property>
 			<property name="list">videodb://tvshows/years/</property>
@@ -2539,6 +2753,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/titles/,return)</property>
 			<property name="list">videodb://tvshows/titles/</property>
@@ -2556,6 +2771,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/genres/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/genres/,return)</property>
 			<property name="list">videodb://tvshows/genres/</property>
@@ -2573,6 +2789,7 @@
 			<property name="labelID">344</property>
 			<property name="defaultID">344</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/actors/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/actors/,return)</property>
 			<property name="list">videodb://tvshows/actors/</property>
@@ -2590,6 +2807,7 @@
 			<property name="labelID">20459</property>
 			<property name="defaultID">20459</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://tvshows/tags/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://tvshows/tags/,return)</property>
 			<property name="list">videodb://tvshows/tags/</property>
@@ -2607,6 +2825,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(TVShows)] + StringCompare(Window(10000).Property(submenuVisibility),tvshows)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/tvshows/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/tvshows/,return)</property>
 			<property name="list">library://video/tvshows/</property>
@@ -2623,6 +2842,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2642,6 +2862,7 @@
 			<property name="labelID">20390</property>
 			<property name="defaultID">20390</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</property>
 			<property name="list">videodb://recentlyaddedmusicvideos/</property>
@@ -2659,6 +2880,7 @@
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/years/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/years/,return)</property>
 			<property name="list">videodb://musicvideos/years/</property>
@@ -2676,6 +2898,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://musicvideos/titles/,return)</property>
 			<property name="list">videodb://musicvideos/titles/</property>
@@ -2693,6 +2916,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/genres/,return)</property>
 			<property name="list">videodb://musicvideos/genres/</property>
@@ -2710,6 +2934,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/artists/,return)</property>
 			<property name="list">videodb://musicvideos/artists/</property>
@@ -2727,6 +2952,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/albums/,return)</property>
 			<property name="list">videodb://musicvideos/albums/</property>
@@ -2744,6 +2970,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/musicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/musicvideos/,return)</property>
 			<property name="list">library://video/musicvideos/</property>
@@ -2760,6 +2987,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2779,6 +3007,7 @@
 			<property name="labelID">20390</property>
 			<property name="defaultID">20390</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</property>
 			<property name="list">videodb://recentlyaddedmusicvideos/</property>
@@ -2796,6 +3025,7 @@
 			<property name="labelID">652</property>
 			<property name="defaultID">652</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/years/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/years/,return)</property>
 			<property name="list">videodb://musicvideos/years/</property>
@@ -2813,6 +3043,7 @@
 			<property name="labelID">369</property>
 			<property name="defaultID">369</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 			<property name="path">ActivateWindow(videos,videodb://musicvideos/titles/,return)</property>
 			<property name="list">videodb://musicvideos/titles/</property>
@@ -2830,6 +3061,7 @@
 			<property name="labelID">135</property>
 			<property name="defaultID">135</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/genres/,return)</property>
 			<property name="list">videodb://musicvideos/genres/</property>
@@ -2847,6 +3079,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/artists/,return)</property>
 			<property name="list">videodb://musicvideos/artists/</property>
@@ -2864,6 +3097,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://musicvideos/albums/,return)</property>
 			<property name="list">videodb://musicvideos/albums/</property>
@@ -2881,6 +3115,7 @@
 			<property name="labelID">20314</property>
 			<property name="defaultID">20314</property>
 			<visible>[Library.HasContent(MusicVideos)] + StringCompare(Window(10000).Property(submenuVisibility),musicvideos)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(videos,library://video/musicvideos/,return)</onclick>
 			<property name="path">ActivateWindow(videos,library://video/musicvideos/,return)</property>
 			<property name="list">library://video/musicvideos/</property>
@@ -2897,6 +3132,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(video)</onclick>
 			<property name="path">UpdateLibrary(video)</property>
 			<property name="list">UpdateLibrary(video)</property>
@@ -2916,6 +3152,7 @@
 			<property name="labelID">359</property>
 			<property name="defaultID">359</property>
 			<visible>Library.HasContent(Music)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</property>
 			<property name="list">musicdb://recentlyaddedalbums/</property>
@@ -2933,6 +3170,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>Library.HasContent(Music)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://artists/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://artists/,return)</property>
 			<property name="list">musicdb://artists/</property>
@@ -2950,6 +3188,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>Library.HasContent(Music)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://albums/,return)</property>
 			<property name="list">musicdb://albums/</property>
@@ -2967,6 +3206,7 @@
 			<property name="labelID">271</property>
 			<property name="defaultID">271</property>
 			<visible>Library.HasContent(Music)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://top100/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://top100/,return)</property>
 			<property name="list">musicdb://top100/</property>
@@ -2983,6 +3223,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,sources://music/,return)</onclick>
 			<property name="path">ActivateWindow(music,sources://music/,return)</property>
 			<property name="list">sources://music/</property>
@@ -2999,6 +3240,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
 			<property name="list">special://musicplaylists/</property>
@@ -3015,6 +3257,7 @@
 			<thumb />
 			<property name="labelID">10516</property>
 			<property name="defaultID">10516</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://,return)</property>
 			<property name="list">musicdb://</property>
@@ -3031,6 +3274,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(music)</onclick>
 			<property name="path">UpdateLibrary(music)</property>
 			<property name="list">UpdateLibrary(music)</property>
@@ -3050,6 +3294,7 @@
 			<property name="labelID">359</property>
 			<property name="defaultID">359</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</property>
 			<property name="list">musicdb://recentlyaddedalbums/</property>
@@ -3067,6 +3312,7 @@
 			<property name="labelID">133</property>
 			<property name="defaultID">133</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://artists/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://artists/,return)</property>
 			<property name="list">musicdb://artists/</property>
@@ -3084,6 +3330,7 @@
 			<property name="labelID">132</property>
 			<property name="defaultID">132</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://albums/,return)</property>
 			<property name="list">musicdb://albums/</property>
@@ -3101,6 +3348,7 @@
 			<property name="labelID">271</property>
 			<property name="defaultID">271</property>
 			<visible>[Library.HasContent(Music)] + StringCompare(Window(10000).Property(submenuVisibility),num-2)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://top100/,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://top100/,return)</property>
 			<property name="list">musicdb://top100/</property>
@@ -3117,6 +3365,7 @@
 			<thumb />
 			<property name="labelID">744</property>
 			<property name="defaultID">744</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,sources://music/,return)</onclick>
 			<property name="path">ActivateWindow(music,sources://music/,return)</property>
 			<property name="list">sources://music/</property>
@@ -3133,6 +3382,7 @@
 			<thumb />
 			<property name="labelID">136</property>
 			<property name="defaultID">136</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,special://musicplaylists/,return)</onclick>
 			<property name="path">ActivateWindow(music,special://musicplaylists/,return)</property>
 			<property name="list">special://musicplaylists/</property>
@@ -3149,6 +3399,7 @@
 			<thumb />
 			<property name="labelID">10516</property>
 			<property name="defaultID">10516</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(music,musicdb://,return)</onclick>
 			<property name="path">ActivateWindow(music,musicdb://,return)</property>
 			<property name="list">musicdb://</property>
@@ -3165,6 +3416,7 @@
 			<thumb />
 			<property name="labelID">653</property>
 			<property name="defaultID">653</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>UpdateLibrary(music)</onclick>
 			<property name="path">UpdateLibrary(music)</property>
 			<property name="list">UpdateLibrary(music)</property>
@@ -3183,6 +3435,7 @@
 			<thumb />
 			<property name="labelID">10040</property>
 			<property name="defaultID">10040</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser)</onclick>
 			<property name="path">ActivateWindow(addonbrowser)</property>
 			<property name="list">addonbrowser</property>
@@ -3199,6 +3452,7 @@
 			<thumb />
 			<property name="labelID">24998</property>
 			<property name="defaultID">24998</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://user/,return)</property>
 			<property name="list">addons://user/</property>
@@ -3215,6 +3469,7 @@
 			<thumb />
 			<property name="labelID">24043</property>
 			<property name="defaultID">24043</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://outdated/,return)</property>
 			<property name="list">addons://outdated/</property>
@@ -3231,6 +3486,7 @@
 			<thumb />
 			<property name="labelID">24033</property>
 			<property name="defaultID">24033</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://repos/,return)</property>
 			<property name="list">addons://repos/</property>
@@ -3247,6 +3503,7 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://search/,return)</property>
 			<property name="list">addons://search/</property>
@@ -3265,6 +3522,7 @@
 			<thumb />
 			<property name="labelID">10040</property>
 			<property name="defaultID">10040</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser)</onclick>
 			<property name="path">ActivateWindow(addonbrowser)</property>
 			<property name="list">addonbrowser</property>
@@ -3281,6 +3539,7 @@
 			<thumb />
 			<property name="labelID">24998</property>
 			<property name="defaultID">24998</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://user/,return)</property>
 			<property name="list">addons://user/</property>
@@ -3297,6 +3556,7 @@
 			<thumb />
 			<property name="labelID">24043</property>
 			<property name="defaultID">24043</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://outdated/,return)</property>
 			<property name="list">addons://outdated/</property>
@@ -3313,6 +3573,7 @@
 			<thumb />
 			<property name="labelID">24033</property>
 			<property name="defaultID">24033</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://repos/,return)</property>
 			<property name="list">addons://repos/</property>
@@ -3329,6 +3590,7 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 			<property name="path">ActivateWindow(addonbrowser,addons://search/,return)</property>
 			<property name="list">addons://search/</property>
@@ -3347,6 +3609,7 @@
 			<thumb />
 			<property name="labelID">7</property>
 			<property name="defaultID">7</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(filemanager)</onclick>
 			<property name="path">ActivateWindow(filemanager)</property>
 			<property name="list">filemanager</property>
@@ -3363,6 +3626,7 @@
 			<thumb />
 			<property name="labelID">13200</property>
 			<property name="defaultID">13200</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(profiles)</onclick>
 			<property name="path">ActivateWindow(profiles)</property>
 			<property name="list">profiles</property>
@@ -3379,6 +3643,7 @@
 			<thumb />
 			<property name="labelID">130</property>
 			<property name="defaultID">130</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 			<property name="path">ActivateWindow(systeminfo)</property>
 			<property name="list">systeminfo</property>
@@ -3396,6 +3661,7 @@
 			<property name="labelID">14111</property>
 			<property name="defaultID">14111</property>
 			<visible>system.getbool(eventlog.enabled)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(eventlog,events://,return)</onclick>
 			<property name="path">ActivateWindow(eventlog,events://,return)</property>
 			<property name="list">events://</property>
@@ -3414,6 +3680,7 @@
 			<thumb />
 			<property name="labelID">7</property>
 			<property name="defaultID">7</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(filemanager)</onclick>
 			<property name="path">ActivateWindow(filemanager)</property>
 			<property name="list">filemanager</property>
@@ -3430,6 +3697,7 @@
 			<thumb />
 			<property name="labelID">13200</property>
 			<property name="defaultID">13200</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(profiles)</onclick>
 			<property name="path">ActivateWindow(profiles)</property>
 			<property name="list">profiles</property>
@@ -3446,6 +3714,7 @@
 			<thumb />
 			<property name="labelID">130</property>
 			<property name="defaultID">130</property>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 			<property name="path">ActivateWindow(systeminfo)</property>
 			<property name="list">systeminfo</property>
@@ -3463,6 +3732,7 @@
 			<property name="labelID">14111</property>
 			<property name="defaultID">14111</property>
 			<visible>[system.getbool(eventlog.enabled)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
+			<onclick>SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</onclick>
 			<onclick>ActivateWindow(eventlog,events://,return)</onclick>
 			<property name="path">ActivateWindow(eventlog,events://,return)</property>
 			<property name="list">events://</property>

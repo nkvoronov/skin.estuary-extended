@@ -3,7 +3,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
-    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onunload>
 	<controls>
 		<!-- Background -->
 		<include>DefaultBackground</include>

@@ -11,7 +11,7 @@
         <label2>342</label2>
         <icon>special://skin/extras/icons/years.png</icon>
         <action>ActivateWindow(videos,videodb://movies/years/,return)</action>
-    </shortcut>    
+    </shortcut>
     <shortcut>
         <label>20434</label>
         <label2>342</label2>

@@ -157,7 +157,7 @@
     <!-- Weather -->
     <include name="WidgetWeather">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetWeatherPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/weather.jpg"/>
             <param name="text_label" value="$LOCALIZE[31120]" />
             <param name="button_label" value="$LOCALIZE[31121]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
@@ -262,7 +262,7 @@
     <!-- Pictures -->
     <include name="WidgetPicture">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetPicturePath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/pictures.jpg"/>
             <param name="text_label" value="$LOCALIZE[31111]" />
             <param name="button_label" value="" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,pictures,home)" />
@@ -270,7 +270,7 @@
             <param name="button_id" value="$PARAM[control_id0]"/>
             <param name="onup_id" value="$PARAM[submenu_list]"/>
             <param name="ondown_id" value="$PARAM[control_id1]"/>
-            <param name="visible" value="$PARAM[visible] + IntegerGreaterThan(Container(12100).NumItems,0)"/>"/>
+            <param name="visible" value="$PARAM[visible] + !IntegerGreaterThan(Container($PARAM[control_id1]).NumItems,0)"/>"/>
             <param name="visible_1" value="False"/>
             <param name="visible_2" value="False"/>
         </include>
@@ -287,7 +287,7 @@
     <!-- TV -->
     <include name="WidgetTV">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetTVPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31143]" />
             <param name="button_label" value="$LOCALIZE[31144]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
@@ -355,7 +355,7 @@
     <!-- Radio -->
     <include name="WidgetRadio">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetRadioPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31143]" />
             <param name="button_label" value="$LOCALIZE[31144]" />
             <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
@@ -421,7 +421,7 @@
     <!-- Video -->
     <include name="WidgetVideo">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetVideoPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31105]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -456,7 +456,7 @@
     <!-- Movies -->
     <include name="WidgetMovies">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetMoviePath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/movie.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -469,36 +469,40 @@
             <param name="visible_2" value="False"/>
         </include>
         <include name="WidgetListMovies">
-            <param name="content_path" value="$VAR[WidgetMoviesContent1]"/>
-            <param name="widget_header" value="$VAR[WidgetMoviesHeader1]"/>
-            <param name="widget_target" value="$VAR[WidgetMoviesTarget1]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.movies1)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.movies1)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.movies1)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.movies1)]"/>
             <param name="list_id" value="$PARAM[control_id1]"/>
             <param name="onup_id" value="$PARAM[control_id0]"/>
             <param name="ondown_id" value="$PARAM[control_id2]"/>
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListMovies">
-            <param name="content_path" value="$VAR[WidgetMoviesContent2]"/>
-            <param name="widget_header" value="$VAR[WidgetMoviesHeader2]"/>
-            <param name="widget_target" value="$VAR[WidgetMoviesTarget2]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.movies2)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.movies2)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.movies2)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.movies2)]"/>
             <param name="list_id" value="$PARAM[control_id2]"/>
             <param name="onup_id" value="$PARAM[control_id1]"/>
             <param name="ondown_id" value="$PARAM[control_id3]"/>
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListMovies">
-            <param name="content_path" value="$VAR[WidgetMoviesContent3]"/>
-            <param name="widget_header" value="$VAR[WidgetMoviesHeader3]"/>
-            <param name="widget_target" value="$VAR[WidgetMoviesTarget3]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.movies3)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.movies3)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.movies3)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.movies3)]"/>
             <param name="list_id" value="$PARAM[control_id3]"/>
             <param name="onup_id" value="$PARAM[control_id2]"/>
             <param name="ondown_id" value="$PARAM[control_id4]"/>
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListMovies">
-            <param name="content_path" value="$VAR[WidgetMoviesContent4]"/>
-            <param name="widget_header" value="$VAR[WidgetMoviesHeader4]"/>
-            <param name="widget_target" value="$VAR[WidgetMoviesTarget4]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.movies4)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.movies4)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.movies4)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.movies4)]"/>
             <param name="list_id" value="$PARAM[control_id4]"/>
             <param name="onup_id" value="$PARAM[control_id3]"/>
             <param name="ondown_id" value="200001"/>
@@ -508,7 +512,7 @@
     <!-- TVShows -->
     <include name="WidgetTVShows">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetTvShowsPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -521,9 +525,10 @@
             <param name="visible_2" value="False"/>
         </include>
         <include name="WidgetListEpisodes">
-            <param name="content_path" value="$VAR[WidgetTVShowsContent1]"/>
-            <param name="widget_header" value="$VAR[WidgetTVShowsHeader1]"/>
-            <param name="widget_target" value="$VAR[WidgetTVShowsTarget1]"/>        
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.tvshows1)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.tvshows1)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.tvshows1)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.tvshows1)]"/>        
             <param name="sortby" value="lastplayed"/>
             <param name="sortorder" value="descending"/>
             <param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
@@ -534,9 +539,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListEpisodes">
-            <param name="content_path" value="$VAR[WidgetTVShowsContent2]"/>
-            <param name="widget_header" value="$VAR[WidgetTVShowsHeader2]"/>
-            <param name="widget_target" value="$VAR[WidgetTVShowsTarget2]"/>         
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.tvshows2)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.tvshows2)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.tvshows2)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.tvshows2)]"/>        
             <param name="item_image" value="$INFO[ListItem.Art(thumb)]" />
             <param name="second_label" value="[COLOR button_focus]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode][/COLOR] $INFO[ListItem.Title]" />
             <param name="list_id" value="$PARAM[control_id2]"/>
@@ -545,9 +551,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListEpisodes">
-            <param name="content_path" value="$VAR[WidgetTVShowsContent3]"/>
-            <param name="widget_header" value="$VAR[WidgetTVShowsHeader3]"/>
-            <param name="widget_target" value="$VAR[WidgetTVShowsTarget3]"/>         
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.tvshows3)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.tvshows3)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.tvshows3)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.tvshows3)]"/>        
             <param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
             <param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />
             <param name="list_id" value="$PARAM[control_id3]"/>
@@ -559,7 +566,7 @@
     <!-- MusicVideos -->
     <include name="WidgetMusicVideos">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetMusicVideosPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -572,9 +579,10 @@
             <param name="visible_2" value="False"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicVideosContent1]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicVideosHeader1]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicVideosTarget1]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.musicvideos1)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.musicvideos1)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.musicvideos1)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.musicvideos1)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id1]"/>
             <param name="onup_id" value="$PARAM[control_id0]"/>
@@ -583,9 +591,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicVideosContent2]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicVideosHeader2]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicVideosTarget2]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.musicvideos2)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.musicvideos2)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.musicvideos2)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.musicvideos2)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id2]"/>
             <param name="onup_id" value="$PARAM[control_id1]"/>
@@ -594,9 +603,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicVideosContent3]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicVideosHeader3]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicVideosTarget3]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.musicvideos3)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.musicvideos3)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.musicvideos3)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.musicvideos3)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id3]"/>
             <param name="onup_id" value="$PARAM[control_id2]"/>
@@ -605,9 +615,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicVideosContent4]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicVideosHeader4]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicVideosTarget4]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.musicvideos4)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.musicvideos4)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.musicvideos4)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.musicvideos4)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id4]"/>
             <param name="onup_id" value="$PARAM[control_id3]"/>
@@ -619,7 +630,7 @@
     <!-- Music -->
     <include name="WidgetMusic">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetMusicPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,music,home)" />
@@ -632,9 +643,10 @@
             <param name="visible_2" value="False"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent1]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader1]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget1]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music1)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music1)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music1)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music1)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id1]"/>
             <param name="onup_id" value="$PARAM[control_id0]"/>
@@ -643,9 +655,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent2]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader2]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget2]"/>        
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music2)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music2)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music2)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music2)]"/>        
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id2]"/>
             <param name="onup_id" value="$PARAM[control_id1]"/>
@@ -654,9 +667,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent3]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader3]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget3]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music3)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music3)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music3)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music3)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id3]"/>
             <param name="onup_id" value="$PARAM[control_id2]"/>
@@ -665,9 +679,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent4]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader4]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget4]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music4)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music4)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music4)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music4)]"/>
             <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id4]"/>
             <param name="onup_id" value="$PARAM[control_id3]"/>
@@ -679,9 +694,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent5]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader5]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget5]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music5)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music5)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music5)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music5)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id5]"/>
             <param name="onup_id" value="$PARAM[control_id4]"/>
@@ -690,9 +706,10 @@
             <param name="visible" value="$PARAM[visible]"/>
         </include>
         <include name="WidgetListSquare">
-            <param name="content_path" value="$VAR[WidgetMusicContent6]"/>
-            <param name="widget_header" value="$VAR[WidgetMusicHeader6]"/>
-            <param name="widget_target" value="$VAR[WidgetMusicTarget6]"/>
+            <param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.music6)]"/>
+            <param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.music6)]"/>
+            <param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.music6)]"/>
+			<param name="widget_type" value="$INFO[Container(9000).ListItem.Property(widgetType.music6)]"/>
             <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
             <param name="list_id" value="$PARAM[control_id6]"/>
             <param name="onup_id" value="$PARAM[control_id5]"/>
@@ -726,7 +743,7 @@
     <include name="WidgetAddons">
         <!-- No Addons -->                        
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetAddonsPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
             <param name="text_label" value="$LOCALIZE[31119]" />
             <param name="button_label" value="$LOCALIZE[31118]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
@@ -843,7 +860,7 @@
     <!-- Posers -->
     <include name="WidgetPosers">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetPosersPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -913,7 +930,7 @@
     <!-- Thumbs -->
     <include name="WidgetThumbs">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetThumbsPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -995,7 +1012,7 @@
     <!-- Icons -->
     <include name="WidgetIcons">
         <include name="ImageWidget">
-            <param name="image_path" value="$VAR[WidgetIconsPath]"/>
+            <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
             <param name="text_label" value="$LOCALIZE[31104]" />
             <param name="button_label" value="$LOCALIZE[31110]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />

@@ -152,6 +152,7 @@
         <param name="widget_limit">10</param>
         <param name="visible">True</param>
 		<param name="visible_watched">True</param>
+		<param name="widget_type">movies</param>
         <definition>
             <control type="group">
                 <description>Poster Widget including header and arrows</description>
@@ -340,6 +341,7 @@
         <param name="widget_limit">10</param>
 		<param name="visible_watched">True</param>
         <param name="visible">True</param>
+		<param name="widget_type">episodes</param>
 		<definition>
 			<control type="group">
 				<description>Episode Widget including header and arrows</description>
@@ -527,6 +529,7 @@
 		<param name="main_label">$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Artist]$INFO[ListItem.Property(Addon.Version),[COLOR button_focus],[/COLOR]]</param>
 		<param name="visible">True</param>
 		<param name="visible_watched">False</param>
+		<param name="widget_type">albums</param>
 		<definition>
 			<control type="group">
 				<description>Square Widget including header and arrows</description>
