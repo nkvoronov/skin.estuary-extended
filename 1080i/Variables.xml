@@ -523,7 +523,7 @@
     <variable name="HomeFanartName">
         <value condition="!IsEmpty(Skin.String(HomeFanart.name))">$INFO[Skin.String(HomeFanart.name)]</value>
         <value>$LOCALIZE[231]</value>
-    </variable>    
+    </variable>
     <variable name="WeatherFanartName">
         <value condition="!IsEmpty(Skin.String(WeatherFanart.name))">$INFO[Skin.String(WeatherFanart.name)]</value>
         <value>$LOCALIZE[231]</value>

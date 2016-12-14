@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <smartplaylist type="episodes">
-    <name>$LOCALIZE[40247]</name>
+    <name>Resent Unwatched Episodes</name>
     <match>all</match>
     <rule field="playcount" operator="lessthan">
     <value>1</value>

@@ -975,7 +975,7 @@
                     <param name="button_onclick" value="ActivateWindow(music,files)"/>
                     <param name="button_id" value="19910"/>
                     <param name="onup_id" value="19800"/>
-                    <param name="visible" value="!Library.HasContent(music) + !IntegerGreaterThan(Container(19700).NumItems,0) + !IntegerGreaterThan(19800).NumItems,0)"/>
+                    <param name="visible" value="!Library.HasContent(music) + !IntegerGreaterThan(Container(19700).NumItems,0) + !IntegerGreaterThan(Container(19800).NumItems,0)"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
                 </include>
             </control>
