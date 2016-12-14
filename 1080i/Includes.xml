@@ -315,6 +315,7 @@
 			</control>
 		</control>
 	</include>
+	
 	<include name="DefaultSimpleListLayout">
 		<param name="align">left</param>
 		<param name="height">70</param>
