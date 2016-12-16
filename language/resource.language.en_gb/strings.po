@@ -773,20 +773,16 @@ msgstr ""
 
 # extended added value
 
-msgctxt "#40000"
-msgid "Preconfigured widgets"
-msgstr ""
-
 msgctxt "#40001"
-msgid "Weather widget"
+msgid "Weather widgets"
 msgstr ""
 
 msgctxt "#40002"
-msgid "LiveTV widget"
+msgid "LiveTV widgets"
 msgstr ""
 
 msgctxt "#40003"
-msgid "Radios widget"
+msgid "Radio widgets"
 msgstr ""
 
 msgctxt "#40004"
@@ -799,14 +795,6 @@ msgstr ""
 
 msgctxt "#40006"
 msgid "Media widgets"
-msgstr ""
-
-msgctxt "#40007"
-msgid "User widgets"
-msgstr ""
-
-msgctxt "#40011"
-msgid "Customizable widgets"
 msgstr ""
 
 msgctxt "#40100"

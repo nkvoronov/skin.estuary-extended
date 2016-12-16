@@ -276,7 +276,7 @@
                     <onclick>SetProperty(widgetID, widget1)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="352">
                     <width>1256</width>
@@ -287,7 +287,7 @@
                     <onclick>SetProperty(widgetID, widget2)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="353">
                     <width>1256</width>
@@ -298,7 +298,7 @@
                     <onclick>SetProperty(widgetID, widget3)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="354">
                     <width>1256</width>
@@ -309,7 +309,7 @@
                     <onclick>SetProperty(widgetID, widget4)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="355">
                     <width>1256</width>
@@ -320,7 +320,7 @@
                     <onclick>SetProperty(widgetID, widget5)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="356">
                     <width>1256</width>
@@ -331,7 +331,7 @@
                     <onclick>SetProperty(widgetID, widget6)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="image" id="600">
                     <description>Separator image</description>

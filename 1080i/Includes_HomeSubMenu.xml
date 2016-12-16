@@ -56,8 +56,7 @@
                 <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),TVWidget)">$PARAM[ondown_id]103</ondown>
                 <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),RadioWidget)">$PARAM[ondown_id]104</ondown>                
 				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),AddonsWidget)">$PARAM[ondown_id]110</ondown>
-				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]116</ondown>				
-				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),UserWidget)">$PARAM[ondown_id]200</ondown>
+				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]116</ondown>	
 				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)">$PARAM[ondown_id]200</ondown>
 				<itemlayout width="110" height="120">
 					<control type="image">

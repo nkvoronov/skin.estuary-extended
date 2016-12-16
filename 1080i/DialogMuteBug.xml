@@ -20,7 +20,7 @@
             <width>40</width>
             <height>40</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="button_focus">dialogs/volume/mute.png</texture>
+			<texture colordiffuse="white">dialogs/volume/mute.png</texture>
             <visible>![Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
 		</control>
 	</controls>
