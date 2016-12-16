@@ -76,7 +76,7 @@
                     <width>40</width>
                     <height>40</height>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="button_focus">dialogs/volume/mute.png</texture>
+                    <texture colordiffuse="white">dialogs/volume/mute.png</texture>
                     <visible>Player.Muted</visible>
                 </control>
 				<control type="label">

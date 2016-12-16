@@ -1023,7 +1023,7 @@
                     <param name="list_id" value="20100"/>
                     <param name="ondown_id" value="20200"/>                    
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" name="WidgetCustomListSquare">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" name="WidgetListCustomAddons">
                     <param name="widget_header" value="$LOCALIZE[1037]"/>
                     <param name="widget_target" value="Video"/>
 					<param name="onup_id" value="20900"/>
@@ -1041,7 +1041,7 @@
                     <param name="list_id" value="20200"/>                    
                     <param name="ondown_id" value="20300"/>
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" name="WidgetCustomListSquare">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" name="WidgetListCustomAddons">
                     <param name="widget_header" value="$LOCALIZE[1038]"/>
                     <param name="widget_target" value="Audio"/>
 					<param name="onup_id" value="20100"/>
@@ -1059,7 +1059,7 @@
                     <param name="list_id" value="20300"/>                    
                     <param name="ondown_id" value="20400"/>
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)" name="WidgetCustomListSquare">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)" name="WidgetListCustomAddons">
                     <param name="widget_header" value="$LOCALIZE[1043]"/>
                     <param name="widget_target" value="Programs"/>
                     <param name="list_id" value="20300"/>
@@ -1088,7 +1088,7 @@
 					<param name="onup_id" value="20400"/>
                     <param name="list_id" value="20500"/>                    
                 </include>
-                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)" name="WidgetCustomListSquare">
+                <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)" name="WidgetListCustomAddons">
                     <param name="widget_header" value="$LOCALIZE[1039]"/>
                     <param name="widget_target" value="Image"/>
 					<param name="onup_id" value="20400"/>
