@@ -622,24 +622,20 @@ msgstr "Текущий инфоресурс"
 
 # extended added value
 
-msgctxt "#40000"
-msgid "Preconfigured widgets"
-msgstr "Предустановленные виджеты"
-
 msgctxt "#40001"
-msgid "Weather widget"
+msgid "Weather widgets"
 msgstr "Виджеты погоды"
 
 msgctxt "#40002"
-msgid "LiveTV widget"
+msgid "LiveTV widgets"
 msgstr "Виджеты ТВ"
 
 msgctxt "#40003"
-msgid "Radios widget"
+msgid "Radio widgets"
 msgstr "Виджеты радио"
 
 msgctxt "#40004"
-msgid "Addons widget"
+msgid "Addons widgets"
 msgstr "Виджеты дополнений"
 
 msgctxt "#40005"
@@ -649,14 +645,6 @@ msgstr "Виджет системной информации"
 msgctxt "#40006"
 msgid "Media widgets"
 msgstr "Медиа виджеты"
-
-msgctxt "#40007"
-msgid "User widgets"
-msgstr "Пользовательские виджеты"
-
-msgctxt "#40011"
-msgid "Customizable widgets"
-msgstr "Настраиваемые виджеты"
 
 msgctxt "#40100"
 msgid "Most watched music videos"
