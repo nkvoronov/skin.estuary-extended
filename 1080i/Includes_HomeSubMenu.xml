@@ -52,20 +52,13 @@
 				<height>110</height>
 				<width>880</width>
 				<onup>200000</onup>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),WeatherWidget)">$PARAM[ondown_id]000</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),PictureWidget)">$PARAM[ondown_id]010</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),TVWidget)">$PARAM[ondown_id]020</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),RadioWidget)">$PARAM[ondown_id]030</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),VideoWidget)">$PARAM[ondown_id]040</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),MoviesWidget)">$PARAM[ondown_id]050</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),TVShowsWidget)">$PARAM[ondown_id]060</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),MusicVideoWidget)">$PARAM[ondown_id]070</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),MusicWidget)">$PARAM[ondown_id]080</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),AddonsWidget)">$PARAM[ondown_id]090</ondown>
-				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]100</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),PersonalWidgetPoster)">$PARAM[ondown_id]110</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),PersonalWidgetThumb)">$PARAM[ondown_id]120</ondown>
-                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),PersonalWidgetIcon)">$PARAM[ondown_id]130</ondown>
+                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),WeatherWidget)">$PARAM[ondown_id]100</ondown>               
+                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),TVWidget)">$PARAM[ondown_id]103</ondown>
+                <ondown condition="StringCompare(Container(9000).ListItem.Property(widget),RadioWidget)">$PARAM[ondown_id]104</ondown>                
+				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),AddonsWidget)">$PARAM[ondown_id]110</ondown>
+				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]116</ondown>				
+				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),UserWidget)">$PARAM[ondown_id]200</ondown>
+				<ondown condition="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)">$PARAM[ondown_id]200</ondown>
 				<itemlayout width="110" height="120">
 					<control type="image">
 						<width>130</width>

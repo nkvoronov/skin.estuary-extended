@@ -2,5 +2,6 @@
 <smartplaylist type="tvshows">
     <name>Random TVShows</name>
     <match>all</match>
+    <limit>25</limit>
     <order direction="descending">random</order>
 </smartplaylist>

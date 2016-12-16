@@ -2,5 +2,6 @@
 <smartplaylist type="movies">
     <name>Random Movies</name>
     <match>all</match>
+    <limit>10</limit>
     <order direction="descending">random</order>
 </smartplaylist>

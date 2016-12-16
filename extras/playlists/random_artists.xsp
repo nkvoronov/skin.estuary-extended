@@ -2,5 +2,6 @@
 <smartplaylist type="artists">
     <name>Random Artists</name>
     <match>all</match>
+    <limit>10</limit>
     <order direction="ascending">random</order>
 </smartplaylist>

@@ -265,398 +265,73 @@
                     <onclick>SetProperty(WidgetVisibility,True,home)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                </control>
-                <!-- MoviesWidget -->
+                </control>				
+                <!-- Widgets -->
                 <control type="button" id="351">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[MoviesHeader1Label2]</label2>
+                    <label2>$VAR[WidgetName1Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, movies1)</onclick>
+                    <onclick>SetProperty(widgetID, widget1)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
-                </control>                         
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                </control>
                 <control type="button" id="352">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[MoviesHeader2Label2]</label2>
+                    <label2>$VAR[WidgetName2Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, movies2)</onclick>
+                    <onclick>SetProperty(widgetID, widget2)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="353">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[MoviesHeader3Label2]</label2>
+                    <label2>$VAR[WidgetName3Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, movies3)</onclick>
+                    <onclick>SetProperty(widgetID, widget3)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
-                </control>                         
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                </control>
                 <control type="button" id="354">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[MoviesHeader4Label2]</label2>
+                    <label2>$VAR[WidgetName4Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, movies4)</onclick>
+                    <onclick>SetProperty(widgetID, widget4)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MoviesWidget)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
-                <!-- TVShowsWidget -->
                 <control type="button" id="355">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[TVShowsHeader1Label2]</label2>
+                    <label>$ADDON[script.skinshortcuts 32044] 5</label>
+                    <label2>$VAR[WidgetName5Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, tvshows1)</onclick>
+                    <onclick>SetProperty(widgetID, widget5)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
-                </control>                         
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
+                </control>
                 <control type="button" id="356">
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[TVShowsHeader2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, tvshows2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
-                </control>
-                <control type="button" id="357">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[TVShowsHeader3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, tvshows3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),TVShowsWidget)</visible>
-                </control>
-                <!-- MusicVideoWidget -->
-                <control type="button" id="358">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[MusicVideosHeader1Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, musicvideos1)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicVideoWidget)</visible>
-                </control>
-                <control type="button" id="359">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[MusicVideosHeader2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, musicvideos2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicVideoWidget)</visible>
-                </control>
-                <control type="button" id="360">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[MusicVideosHeader3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, musicvideos3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicVideoWidget)</visible>
-                </control>
-                <control type="button" id="361">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[MusicVideosHeader4Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, musicvideos4)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicVideoWidget)</visible>
-                </control>
-                <!-- MusicWidget -->
-                <control type="button" id="362">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[MusicHeader1Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music1)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <control type="button" id="363">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[MusicHeader2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <control type="button" id="364">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[MusicHeader3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <control type="button" id="365">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[MusicHeader4Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music4)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <control type="button" id="366">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[MusicHeader5Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music5)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <control type="button" id="367">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[MusicHeader6Label2]</label2>
+                    <label2>$VAR[WidgetName6Label2]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, music6)</onclick>
+                    <onclick>SetProperty(widgetID, widget6)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),MusicWidget)</visible>
-                </control>
-                <!-- PersonalWidgetPoster -->
-                <control type="button" id="368">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[PersonalPoster1Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter1)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <control type="button" id="369">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[PersonalPoster2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <control type="button" id="370">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[PersonalPoster3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <control type="button" id="371">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[PersonalPoster4Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter4)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <control type="button" id="372">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[PersonalPoster5Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter5)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <control type="button" id="373">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[PersonalPoster6Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalposter6)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetPoster)</visible>
-                </control>
-                <!-- PersonalWidgetThumb -->
-                <control type="button" id="374">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[PersonalThumb1Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb1)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <control type="button" id="375">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[PersonalThumb2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <control type="button" id="376">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[PersonalThumb3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <control type="button" id="377">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[PersonalThumb4Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb4)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <control type="button" id="378">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[PersonalThumb5Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb5)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <control type="button" id="379">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[PersonalThumb6Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalthumb6)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetThumb)</visible>
-                </control>
-                <!-- PersonalWidgetIcon -->
-                <control type="button" id="380">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[PersonalIcon1Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon1)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
-                </control>
-                <control type="button" id="381">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[PersonalIcon2Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon2)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
-                </control>
-                <control type="button" id="382">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[PersonalIcon3Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon3)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
-                </control>
-                <control type="button" id="383">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[PersonalIcon4Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon4)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
-                </control>
-                <control type="button" id="384">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[PersonalIcon5Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon5)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
-                </control>
-                <control type="button" id="385">
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[PersonalIcon6Label2]</label2>
-                    <onclick>ClearProperty(WidgetVisibility,home)</onclick>
-                    <onclick>SetProperty(widgetID, personalicon6)</onclick>
-                    <onclick>SendClick(312)</onclick>
-                    <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>StringCompare(Container(211).ListItem.Property(widget),PersonalWidgetIcon)</visible>
+                    <visible>StringCompare(Container(211).ListItem.Property(widget),UserWidget) | StringCompare(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="image" id="600">
                     <description>Separator image</description>

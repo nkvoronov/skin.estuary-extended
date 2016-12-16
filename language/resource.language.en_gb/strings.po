@@ -782,59 +782,31 @@ msgid "Weather widget"
 msgstr ""
 
 msgctxt "#40002"
-msgid "Pictures widget"
-msgstr ""
-
-msgctxt "#40003"
 msgid "LiveTV widget"
 msgstr ""
 
-msgctxt "#40004"
+msgctxt "#40003"
 msgid "Radios widget"
 msgstr ""
 
+msgctxt "#40004"
+msgid "Addons widgets"
+msgstr ""
+
 msgctxt "#40005"
-msgid "Videos widget"
+msgid "SystemInfo widget"
 msgstr ""
 
 msgctxt "#40006"
-msgid "Movies widget"
+msgid "Media widgets"
 msgstr ""
 
 msgctxt "#40007"
-msgid "TVShows widget"
-msgstr ""
-
-msgctxt "#40008"
-msgid "Musicvideos widget"
-msgstr ""
-
-msgctxt "#40009"
-msgid "Music widget"
-msgstr ""
-
-msgctxt "#40010"
-msgid "Addons widget"
+msgid "User widgets"
 msgstr ""
 
 msgctxt "#40011"
 msgid "Customizable widgets"
-msgstr ""
-
-msgctxt "#40012"
-msgid "Customizable widget (posters)"
-msgstr ""
-
-msgctxt "#40013"
-msgid "Customizable widget (thumbs)"
-msgstr ""
-
-msgctxt "#40014"
-msgid "Customizable widget (icons)"
-msgstr ""
-
-msgctxt "#40015"
-msgid "SystemInfo widget"
 msgstr ""
 
 msgctxt "#40100"

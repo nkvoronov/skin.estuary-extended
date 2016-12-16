@@ -631,60 +631,32 @@ msgid "Weather widget"
 msgstr "Віджети погоди"
 
 msgctxt "#40002"
-msgid "Pictures widget"
-msgstr "Віджети фото"
-
-msgctxt "#40003"
 msgid "LiveTV widget"
 msgstr "Віджети ТБ"
 
-msgctxt "#40004"
+msgctxt "#40003"
 msgid "Radios widget"
 msgstr "Віджети радіо"
 
-msgctxt "#40005"
-msgid "Videos widget"
-msgstr "Віджети відео"
-
-msgctxt "#40006"
-msgid "Movies widget"
-msgstr "Віджети фільмів"
-
-msgctxt "#40007"
-msgid "TVShows widget"
-msgstr "Віджети серіалів"
-
-msgctxt "#40008"
-msgid "Musicvideos widget"
-msgstr "Віджети муз.відео"
-
-msgctxt "#40009"
-msgid "Music widget"
-msgstr "Віджети музики"
-
-msgctxt "#40010"
+msgctxt "#40004"
 msgid "Addons widget"
 msgstr "Віджети доповнень"
+
+msgctxt "#40005"
+msgid "SystemInfo widget"
+msgstr "Віджет системної інформації"
+
+msgctxt "#40006"
+msgid "Media widgets"
+msgstr "Медіа віджети"
+
+msgctxt "#40007"
+msgid "User widgets"
+msgstr "Віджети користовуча"
 
 msgctxt "#40011"
 msgid "Customizable widgets"
 msgstr "Віджети користовуча"
-
-msgctxt "#40012"
-msgid "Customizable widget (posters)"
-msgstr "Віджети користовуча (постери)"
-
-msgctxt "#40013"
-msgid "Customizable widget (thumbs)"
-msgstr "Віджети користовуча (thumbs)"
-
-msgctxt "#40014"
-msgid "Customizable widget (icons)"
-msgstr "Віджети користовуча (іконки)"
-
-msgctxt "#40015"
-msgid "SystemInfo widget"
-msgstr "Віджет системної інформації"
 
 msgctxt "#40100"
 msgid "Most watched music videos"
