@@ -327,12 +327,12 @@
 		<value condition="Skin.HasSetting(no_fanart)">$VAR[GlobalFanartVar]</value>
 		<value condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$INFO[Window(home).Property(infobackground)]</value>
 		<!-- Weather -->
-		<value condition="!IsEmpty(Window(home).Property(WeatherFanartCode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(WeatherFanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!IsEmpty(Window(home).Property(WeatherFanartCode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(WeatherFanartCode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
-        <value condition="!IsEmpty(Window(home).Property(WeatherFanartCode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(WeatherFanartCode)]</value>
-		<value condition="!IsEmpty(Window(home).Property(WeatherFanartCode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(WeatherFanartCode)]</value>
+		<value condition="!IsEmpty(Window(home).Property(weatherfanartcode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="!IsEmpty(Window(home).Property(weatherfanartcode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + !Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]$INFO[Skin.String(WeatherFanart.ext)]</value>
+        <value condition="!IsEmpty(Window(home).Property(weatherfanartcode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]</value>
+		<value condition="!IsEmpty(Window(home).Property(weatherfanartcode)) + !IsEmpty(Skin.String(WeatherFanart.path)) + Skin.HasSetting(WeatherFanart.multi)">$INFO[Skin.String(WeatherFanart.path)]$INFO[Window(home).Property(weatherfanartcode)]</value>
 		<!-- Media -->
-		<value condition="!IsEmpty(Window(home).Property(MediaArtFanart))">$INFO[Window(home).Property(MediaArtFanart)]</value>
+		<value condition="!IsEmpty(Window(home).Property(mediaartfanart))">$INFO[Window(home).Property(mediaartfanart)]</value>
 		<!-- Global -->
 		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuType]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
@@ -421,6 +421,10 @@
 		<value condition="!IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
         <value condition="ListItem.IsFolder + Container.Content(files)">overlays/folder.png</value>
 		<value>OverlayUnwatched.png</value>
+	</variable>
+	<variable name="WidgetListTextIconVar">
+		<value condition="IsEmpty(ListItem.Icon)">DefaultPlaylist.png</value>
+		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="SettingsSectionIcon">
 		<value condition="Window.IsActive(picturessettings)">icons/settings/pictures.png</value>
@@ -558,183 +562,36 @@
     </variable>
     <!-- Widget Limit Items -->
     <variable name="WidgetLimitItems">
-        <value>10</value>
+        <value>25</value>
     </variable>
-    <!-- Movies Widget Content 1 -->
-    <variable name="MoviesHeader1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.movies1))">$INFO[Container(211).ListItem.Property(widgetName.movies1)]</value>
+    <!-- Widget Name 1 -->
+    <variable name="WidgetName1Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget1))">$INFO[Container(211).ListItem.Property(widgetName.widget1)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
-    <!-- Movies Widget Content 2 -->
-    <variable name="MoviesHeader2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.movies2))">$INFO[Container(211).ListItem.Property(widgetName.movies2)]</value>
+    <!-- Widget Name 2 -->
+    <variable name="WidgetName2Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget2))">$INFO[Container(211).ListItem.Property(widgetName.widget2)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
-    <!-- Movies Widget Content 3 -->
-    <variable name="MoviesHeader3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.movies3))">$INFO[Container(211).ListItem.Property(widgetName.movies3)]</value>
+    <!-- Widget Name 3 -->
+    <variable name="WidgetName3Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget3))">$INFO[Container(211).ListItem.Property(widgetName.widget3)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
-    <!-- Movies Widget Content 4 -->
-    <variable name="MoviesHeader4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.movies4))">$INFO[Container(211).ListItem.Property(widgetName.movies4)]</value>
+    <!-- Widget Name 4 -->
+    <variable name="WidgetName4Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget4))">$INFO[Container(211).ListItem.Property(widgetName.widget4)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
-    <!-- TVShows Widget Content 1 -->
-    <variable name="TVShowsHeader1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.tvshows1))">$INFO[Container(211).ListItem.Property(widgetName.tvshows1)]</value>
+    <!-- Widget Name 5 -->
+    <variable name="WidgetName5Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget5))">$INFO[Container(211).ListItem.Property(widgetName.widget5)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
-    <!-- TVShows Widget Content 2 -->
-    <variable name="TVShowsHeader2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.tvshows2))">$INFO[Container(211).ListItem.Property(widgetName.tvshows2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- TVShows Widget Content 3 -->
-    <variable name="TVShowsHeader3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.tvshows3))">$INFO[Container(211).ListItem.Property(widgetName.tvshows3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- MusicVideos Widget Content 1 -->
-    <variable name="MusicVideosHeader1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.musicvideos1))">$INFO[Container(211).ListItem.Property(widgetName.musicvideos1)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- MusicVideos Widget Content 2 -->
-    <variable name="MusicVideosHeader2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.musicvideos2))">$INFO[Container(211).ListItem.Property(widgetName.musicvideos2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- MusicVideos Widget Content 3 -->
-    <variable name="MusicVideosHeader3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.musicvideos3))">$INFO[Container(211).ListItem.Property(widgetName.musicvideos3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- MusicVideos Widget Content 4 -->
-    <variable name="MusicVideosHeader4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.musicvideos4))">$INFO[Container(211).ListItem.Property(widgetName.musicvideos4)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 1 -->
-    <variable name="MusicHeader1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music1))">$INFO[Container(211).ListItem.Property(widgetName.music1)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 2 -->
-    <variable name="MusicHeader2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music2))">$INFO[Container(211).ListItem.Property(widgetName.music2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 3 -->
-      <variable name="MusicHeader3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music3))">$INFO[Container(211).ListItem.Property(widgetName.music3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 4 -->
-     <variable name="MusicHeader4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music4))">$INFO[Container(211).ListItem.Property(widgetName.music4)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 5 -->
-    <variable name="MusicHeader5Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music5))">$INFO[Container(211).ListItem.Property(widgetName.music5)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- Music Widget Content 6 -->
-    <variable name="MusicHeader6Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.music6))">$INFO[Container(211).ListItem.Property(widgetName.music6)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 1 -->
-    <variable name="PersonalPoster1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter1))">$INFO[Container(211).ListItem.Property(widgetName.personalposter1)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 2 -->
-    <variable name="PersonalPoster2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter2))">$INFO[Container(211).ListItem.Property(widgetName.personalposter2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 3 -->
-    <variable name="PersonalPoster3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter3))">$INFO[Container(211).ListItem.Property(widgetName.personalposter3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 4 -->
-    <variable name="PersonalPoster4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter4))">$INFO[Container(211).ListItem.Property(widgetName.personalposter4)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 5 -->
-    <variable name="PersonalPoster5Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter5))">$INFO[Container(211).ListItem.Property(widgetName.personalposter5)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalPoster Widget Content 6 -->
-    <variable name="PersonalPoster6Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalposter6))">$INFO[Container(211).ListItem.Property(widgetName.personalposter6)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content Description -->    
-    <!-- PersonalThumb Widget Content 1 -->
-    <variable name="PersonalThumb1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb1))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb1)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 2 -->
-    <variable name="PersonalThumb2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb2))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 3 -->
-    <variable name="PersonalThumb3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb3))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 4 -->
-    <variable name="PersonalThumb4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb4))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb4)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 5 -->
-    <variable name="PersonalThumb5Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb5))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb5)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 6 -->
-    <variable name="PersonalThumb6Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalthumb6))">$INFO[Container(211).ListItem.Property(widgetName.personalthumb6)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalIcon Widget Content Description -->   
-    <!-- PersonalIcon Widget Content 1 -->
-    <variable name="PersonalIcon1Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon1))">$INFO[Container(211).ListItem.Property(widgetName.personalicon1)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 2 -->
-    <variable name="PersonalIcon2Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon2))">$INFO[Container(211).ListItem.Property(widgetName.personalicon2)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 3 -->
-    <variable name="PersonalIcon3Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon3))">$INFO[Container(211).ListItem.Property(widgetName.personalicon3)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 4 -->
-    <variable name="PersonalIcon4Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon4))">$INFO[Container(211).ListItem.Property(widgetName.personalicon4)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 5 -->
-    <variable name="PersonalIcon5Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon5))">$INFO[Container(211).ListItem.Property(widgetName.personalicon5)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
-    <!-- PersonalThumb Widget Content 6 -->
-    <variable name="PersonalIcon6Label2">
-        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.personalicon6))">$INFO[Container(211).ListItem.Property(widgetName.personalicon6)]</value>
+    <!-- Widget Name 6 -->
+    <variable name="WidgetName6Label2">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName.widget6))">$INFO[Container(211).ListItem.Property(widgetName.widget6)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
     <!-- Current Weather Icon -->

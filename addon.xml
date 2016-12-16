@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-extented-s" version="0.8.5.057" name="Estuary Extented Shortcuts" provider-name="phil65, Piers, YLLOW_DRAGON">
+<addon id="skin.estuary-extented-s" version="0.8.5.058" name="Estuary Extented Shortcuts" provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0"/>
 		<import addon="script.pvr.favourites" version="1.0.7"/>

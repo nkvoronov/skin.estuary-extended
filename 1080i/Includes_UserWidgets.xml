@@ -265,16 +265,17 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetCustomListWidgets -->    
-	<include name="WidgetCustomListSquare">
-		<param name="height">405</param>
-		<param name="sub_label">$INFO[ListItem.Label]</param>
+    <!-- WidgetListCustomAddons -->    
+	<include name="WidgetListCustomAddons">
 		<param name="visible">True</param>
-        <param name="fallback_image">DefaultFolderSquare.png</param>
-		<param name="main_label">$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Artist]$INFO[ListItem.Property(AddonVersion),[COLOR button_focus],[/COLOR]]</param>
+		<param name="ondown_id">200001</param>
+		<param name="height">405</param>
+		<param name="label1">$INFO[ListItem.Label]</param>
+		<param name="label2">[COLOR button_focus]$INFO[ListItem.Property(Addon.Version)][/COLOR]</param>
+		<param name="fallback_image">DefaultFolderSquare.png</param>
 		<definition>
 			<control type="group">
-				<description>Square Widget including header and arrows</description>
+				<description>CustomAddons Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<visible>$PARAM[visible]</visible>
@@ -300,7 +301,7 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>noop</onright>
-					<onunfocus>ClearProperty(MediaArtFanart,home)</onunfocus>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
 					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -333,7 +334,7 @@
 								<left>20</left>
 								<top>238</top>
 								<width>260</width>
-								<label>$PARAM[sub_label]</label>
+								<label>$PARAM[label1]</label>
 								<font>font10</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -342,18 +343,7 @@
 								<left>20</left>
 								<top>266</top>
 								<width>260</width>
-								<label>$PARAM[main_label]</label>
-								<font>font10</font>
-								<shadowcolor>text_shadow</shadowcolor>
-								<align>center</align>
-							</control>
-							<control type="textbox">
-								<left>10</left>
-								<top>237</top>
-								<width>280</width>
-								<height>60</height>
-								<aligny>center</aligny>
-								<label>$PARAM[single_label]</label>
+								<label>$PARAM[label2]</label>
 								<font>font10</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -374,7 +364,7 @@
                                 <top>0</top>
 								<width>340</width>
 								<height>340</height>
-								<onfocus>SetProperty(MediaArtFanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -400,7 +390,7 @@
 									<left>10</left>
 									<top>238</top>
 									<width>280</width>
-									<label>$PARAM[sub_label]</label>
+									<label>$PARAM[label1]</label>
 									<font>font10</font>
 									<scroll>true</scroll>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -412,18 +402,7 @@
 									<width>280</width>
 									<font>font10</font>
 									<scroll>true</scroll>
-									<label>$PARAM[main_label]</label>
-									<shadowcolor>text_shadow</shadowcolor>
-									<align>center</align>
-								</control>
-								<control type="textbox">
-									<left>10</left>
-									<top>237</top>
-									<width>280</width>
-									<height>60</height>
-									<aligny>center</aligny>
-									<label>$PARAM[single_label]</label>
-									<font>font10</font>
+									<label>$PARAM[label2]</label>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 								</control>
@@ -683,16 +662,16 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetCustomListChannelsWidgets -->
-	<include name="WidgetCustomListChannels">
+    <!-- WidgetListCustomChannels -->
+	<include name="WidgetListCustomChannels">
+		<param name="visible">True</param>
+		<param name="ondown_id">200001</param>
 		<param name="height">600</param>
-		<param name="arrow_posy">200</param>
-		<param name="icon">$INFO[ListItem.Icon]</param>
+		<param name="item_image">$INFO[ListItem.Icon]</param>
         <param name="fallback_image">DefaultTVShowsSquare.png</param>
-        <param name="visible">True</param>
 		<definition>
 			<control type="group">
-				<description>Square Widget including header and arrows</description>
+				<description>CustomChannels Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<top>0</top>
@@ -737,7 +716,7 @@
 							<left>42</left>
 							<width>260</width>
 							<height>200</height>
-							<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
+							<texture fallback="$PARAM[fallback_image]">$PARAM[item_image]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
@@ -789,7 +768,7 @@
 								<left>42</left>
 								<width>260</width>
 								<height>200</height>
-								<texture fallback="$PARAM[fallback_image]">$PARAM[icon]</texture>
+								<texture fallback="$PARAM[fallback_image]">$PARAM[item_image]</texture>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="textbox">
