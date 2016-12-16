@@ -176,6 +176,7 @@
                         <thumb>icons/home/weather.png</thumb>
                         <property name="id">weather</property>
                         <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>!IsEmpty(Weather.Plugin)</visible>
                     </item>
                     <!-- Pictures -->
                     <item>
@@ -194,6 +195,7 @@
                         <thumb>icons/home/livetv.png</thumb>
                         <property name="id">livetv</property>
                         <visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+						<visible>PVR.HasTVChannels</visible>
                     </item>
 					<!-- Radio -->
                     <item>
@@ -203,6 +205,7 @@
                         <thumb>icons/home/radio.png</thumb>
                         <property name="id">radio</property>
                         <visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+						<visible>PVR.HasRadioChannels</visible>
                     </item>
                     <!-- Videos -->
                     <item>
@@ -222,6 +225,7 @@
                         <thumb>icons/home/movies.png</thumb>
                         <property name="id">movies</property>
                         <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+						<visible>Library.HasContent(Movies)</visible>
                     </item>
                     <!-- TVShows -->
                     <item>
@@ -232,6 +236,7 @@
                         <thumb>icons/home/tv.png</thumb>
                         <property name="id">tvshows</property>
                         <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
                     </item>
 					<!-- MusicVideos -->
                     <item>
@@ -242,6 +247,7 @@
                         <thumb>icons/home/musicvideos.png</thumb>
                         <property name="id">musicvideos</property>
                         <visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+						<visible>Library.HasContent(MusicVideos)</visible>
                     </item>
                     <!-- Music -->
                     <item>

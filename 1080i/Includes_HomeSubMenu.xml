@@ -119,17 +119,16 @@
                 </control>
                 <include name="WeatherWidget">
                     <param name="content_include" value="HourlyItems" />
-                    <param name="list_id" value="11100" />
-                    <param name="onup_id" value="11900" />
+					<param name="onup_id" value="11900" />
+                    <param name="list_id" value="11100" />                    
                     <param name="ondown_id" value="11200" />
                     <param name="widget_header" value="$LOCALIZE[33036]"/>
                     <param name="visible" value="!IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
                 </include>
                 <include name="WeatherWidget">
                     <param name="content_include" value="DailyItems" />
+					<param name="onup_id" value="11100" />
                     <param name="list_id" value="11200" />
-                    <param name="onup_id" value="11100" />
-                    <param name="ondown_id" value="200001" />
                     <param name="widget_header" value="$LOCALIZE[31019]"/>
                     <param name="visible" value="!IsEmpty(Window(weather).Property(Daily.IsFetched))" />
                 </include>
@@ -188,7 +187,6 @@
                     <param name="widget_target" value="pictures"/>
                     <param name="list_id" value="12100"/>
                     <param name="onup_id" value="12900"/>
-                    <param name="ondown_id" value="200001"/>
                 </include>
 				<include name="ImageWidget">
                     <param name="image_path" value="special://skin/extras/home-images/pictures.jpg"/>
@@ -266,7 +264,7 @@
                         <width>680</width>
                         <visible>PVR.IsRecording</visible>
                         <include name="PVRWidget">
-                            <param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
+                            <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
                             <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
@@ -276,7 +274,7 @@
                         <visible>PVR.HasNonRecordingTimer</visible>
                         <width>680</width>
                         <include name="PVRWidget">
-                            <param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
+                            <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
                             <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
@@ -293,24 +291,22 @@
                     <param name="visible" value="!PVR.HasTVChannels"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
                 </include>                                                
-                <include name="WidgetListChannels" condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]">
+                <include condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/tv/All channels/"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>
                     <param name="widget_header" value="$LOCALIZE[31016]"/>
                     <param name="widget_target" value="pvr"/>
-                    <param name="list_id" value="13200"/>
-                    <param name="onup_id" value="13900"/>
-                    <param name="ondown_id" value="200001"/>
+					<param name="onup_id" value="13900"/>
+                    <param name="list_id" value="13200"/>                    
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasTVChannels"/>
                 </include>
-                <include name="WidgetCustomListChannels" condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)">
+                <include condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="WidgetListCustomChannels">
                     <param name="widget_header" value="$LOCALIZE[84207]"/>
                     <param name="widget_target" value="TV"/>
+					<param name="onup_id" value="13900"/>
                     <param name="list_id" value="13200"/>
-                    <param name="onup_id" value="13900"/>
-                    <param name="ondown_id" value="200001"/>
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasTVChannels"/>
                 </include>
@@ -379,7 +375,7 @@
                         <width>680</width>
                         <visible>PVR.IsRecording</visible>
                         <include name="PVRWidget">
-                            <param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
+                            <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
                             <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
@@ -389,7 +385,7 @@
                         <visible>PVR.HasNonRecordingTimer</visible>
                         <width>680</width>
                         <include name="PVRWidget">
-                            <param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
+                            <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
                             <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
@@ -405,24 +401,22 @@
                     <param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
                 </include>
-                <include name="WidgetListChannels" condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]">
+                <include condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/radio/All channels/"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>                            
                     <param name="widget_header" value="$LOCALIZE[31018]"/>
                     <param name="widget_target" value="files"/>
-                    <param name="list_id" value="14200"/>
-                    <param name="onup_id" value="14900"/>
-                    <param name="ondown_id" value="200001"/>
+					<param name="onup_id" value="14900"/>
+                    <param name="list_id" value="14200"/>                    
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
-                <include name="WidgetCustomListChannels" condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)">
+                <include condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="WidgetListCustomChannels">
                     <param name="widget_header" value="$LOCALIZE[84208]"/>
                     <param name="widget_target" value="Radio"/>
-                    <param name="list_id" value="14200"/>
-                    <param name="onup_id" value="14900"/>
-                    <param name="ondown_id" value="200001"/>
+					<param name="onup_id" value="14900"/>
+                    <param name="list_id" value="14200"/>                    
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
@@ -475,18 +469,17 @@
                     <param name="content_path" value="sources://video/"/>
                     <param name="widget_header" value="$LOCALIZE[20094]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="15100"/>
-                    <param name="onup_id" value="15900"/>
+					<param name="onup_id" value="15900"/>
+                    <param name="list_id" value="15100"/>                    
                     <param name="ondown_id" value="15200"/>
                 </include>
                 <include name="WidgetListText">
                     <param name="content_path" value="special://videoplaylists/"/>
                     <param name="widget_header" value="$LOCALIZE[136]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="15200"/>
-                    <param name="onup_id" value="15100"/>
-                    <param name="ondown_id" value="200001"/>
-                    <param name="icon" value="DefaultPlaylist.png"/>
+					<param name="onup_id" value="15100"/>
+                    <param name="list_id" value="15200"/>                    
+                    <param name="item_image" value="DefaultPlaylist.png"/>
                 </include>
                 <include name="ImageWidget">
                     <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
@@ -494,8 +487,8 @@
                     <param name="button_label" value="$LOCALIZE[31110]" />
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
                     <param name="button_onclick" value="ActivateWindow(videos,root)"/>
-                    <param name="button_id" value="15300"/>
-                    <param name="onup_id" value="15200"/>
+					<param name="onup_id" value="15200"/>
+                    <param name="button_id" value="15300"/>                    
                     <param name="visible" value="!IntegerGreaterThan(Container(11200).NumItems,0) + !IntegerGreaterThan(Container(11100).NumItems,0)"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
                 </include>
@@ -562,33 +555,32 @@
                     <param name="content_path" value="special://skin/extras/playlists/inprogress_movies.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31010]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16100"/>
-                    <param name="onup_id" value="16900"/>
+					<param name="onup_id" value="16900"/>
+                    <param name="list_id" value="16100"/>                    
                     <param name="ondown_id" value="16200"/>
                 </include>
                 <include name="WidgetListMovies">
                     <param name="content_path" value="videodb://recentlyaddedmovies/"/>
                     <param name="widget_header" value="$LOCALIZE[20386]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16200"/>
-                    <param name="onup_id" value="16100"/>
+					<param name="onup_id" value="16100"/>
+                    <param name="list_id" value="16200"/>                   
                     <param name="ondown_id" value="16300"/>
                 </include>
                 <include name="WidgetListMovies">
                     <param name="content_path" value="special://skin/extras/playlists/unwatched_movies.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31007]"/>
                     <param name="widget_target" value="videos"/>
-                    <param name="list_id" value="16300"/>
-                    <param name="onup_id" value="16200"/>
+					<param name="onup_id" value="16200"/>
+                    <param name="list_id" value="16300"/>                    
                     <param name="ondown_id" value="16400"/>
                 </include>
                 <include name="WidgetListMovies">
                     <param name="content_path" value="special://skin/extras/playlists/random_movies.xsp"/>
                     <param name="widget_header" value="$LOCALIZE[31006]"/>
                     <param name="widget_target" value="videos"/>
+					<param name="onup_id" value="16300"/>
                     <param name="list_id" value="16400"/>
-                    <param name="onup_id" value="16300"/>
-                    <param name="ondown_id" value="200001"/>
                 </include>
                 <include name="ImageWidgetHeader">
                     <param name="widget_header" value="$LOCALIZE[342]" />
@@ -670,8 +662,8 @@
                     <param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
                     <param name="widget_target" value="videos"/>
                     <param name="second_label" value="$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]" />
-                    <param name="list_id" value="17100"/>
-                    <param name="onup_id" value="17900"/>
+					<param name="onup_id" value="17900"/>
+                    <param name="list_id" value="17100"/>                    
                     <param name="ondown_id" value="17200"/>
                 </include>
                 <include name="WidgetListEpisodes">
@@ -680,8 +672,8 @@
                     <param name="item_image" value="$INFO[ListItem.Art(thumb)]" />
                     <param name="widget_target" value="videos"/>
                     <param name="second_label" value="[COLOR button_focus]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode][/COLOR] $INFO[ListItem.Title]" />
-                    <param name="list_id" value="17200"/>
-                    <param name="onup_id" value="17100"/>
+					<param name="onup_id" value="17100"/>
+                    <param name="list_id" value="17200"/>                    
                     <param name="ondown_id" value="17300"/>
                 </include>
                 <include name="WidgetListEpisodes">
@@ -690,9 +682,8 @@
                     <param name="item_image" value="$VAR[TVShowWidgetImageVar]" />
                     <param name="widget_target" value="videos"/>
                     <param name="second_label" value="$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]" />
-                    <param name="list_id" value="17300"/>
-                    <param name="onup_id" value="17200"/>
-                    <param name="ondown_id" value="200001"/>
+					<param name="onup_id" value="17200"/>
+                    <param name="list_id" value="17300"/>                    
                 </include>
                 <include name="ImageWidgetHeader">
                     <param name="widget_header" value="$LOCALIZE[20343]" />
@@ -775,44 +766,35 @@
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[20390]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="18100"/>
-                    <param name="onup_id" value="18900"/>
-                    <param name="ondown_id" value="18200"/>
-                    <param name="widget_limit" value="10"/>
-					<param name="visible_watched" value="True"/>					
+					<param name="onup_id" value="18900"/>
+                    <param name="list_id" value="18100"/>                    
+                    <param name="ondown_id" value="18200"/>					
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/mostwatched_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[40100]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="18200"/>
-                    <param name="onup_id" value="18100"/>
+					<param name="onup_id" value="18100"/>
+                    <param name="list_id" value="18200"/>                   
                     <param name="ondown_id" value="18300"/>
-                    <param name="widget_limit" value="10"/>
-					<param name="visible_watched" value="True"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[40101]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="18300"/>
-                    <param name="onup_id" value="18200"/>
+					<param name="onup_id" value="18200"/>
+                    <param name="list_id" value="18300"/>                   
                     <param name="ondown_id" value="18400"/>
-                    <param name="widget_limit" value="10"/>
-					<param name="visible_watched" value="True"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/unwatched_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[40102]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="18400"/>
-                    <param name="onup_id" value="18300"/>
-                    <param name="ondown_id" value="200001"/>
-                    <param name="widget_limit" value="10"/>
-					<param name="visible_watched" value="True"/>
+					<param name="onup_id" value="18300"/>
+                    <param name="list_id" value="18400"/>                    
                 </include>
                 <include name="ImageWidget">
                     <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
@@ -890,82 +872,75 @@
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[517]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19100"/>
-                    <param name="onup_id" value="19900"/>
+					<param name="onup_id" value="19900"/>
+                    <param name="list_id" value="19100"/>                    
                     <param name="ondown_id" value="19200"/>
-                    <param name="widget_limit" value="10"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="musicdb://recentlyaddedalbums/"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[359]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19200"/>
-                    <param name="onup_id" value="19100"/>
+					<param name="onup_id" value="19100"/>
+                    <param name="list_id" value="19200"/>                    
                     <param name="ondown_id" value="19300"/>
-                    <param name="widget_limit" value="10"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_albums.xsp"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[31012]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19300"/>
-                    <param name="onup_id" value="19200"/>
+					<param name="onup_id" value="19200"/>
+                    <param name="list_id" value="19300"/>                    
                     <param name="ondown_id" value="19400"/>
-                    <param name="widget_limit" value="10"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_artists.xsp"/>
                     <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[31013]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19400"/>
-                    <param name="onup_id" value="19300"/>
+					<param name="onup_id" value="19300"/>
+                    <param name="list_id" value="19400"/>                   
                     <param name="ondown_id" value="19500"/>
                     <param name="single_label" value="$INFO[ListItem.Label]"/>
                     <param name="main_label" value=""/>
                     <param name="sub_label" value=""/>
-                    <param name="widget_limit" value="10"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/unplayed_albums.xsp"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[31014]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19500"/>
-                    <param name="onup_id" value="19400"/>
+					<param name="onup_id" value="19400"/>
+                    <param name="list_id" value="19500"/>                    
                     <param name="ondown_id" value="19600"/>
-                    <param name="widget_limit" value="10"/>
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/mostplayed_albums.xsp"/>
                     <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
                     <param name="widget_header" value="$LOCALIZE[31011]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19600"/>
-                    <param name="onup_id" value="19500"/>
+					<param name="onup_id" value="19500"/>
+                    <param name="list_id" value="19600"/>                   
                     <param name="ondown_id" value="19700"/>
                     <param name="sortby" value="playcount"/>
                     <param name="sortorder" value="descending"/>
-                    <param name="widget_limit" value="10"/>
                 </include>
 				<include name="WidgetListText">
                     <param name="content_path" value="sources://music/"/>
                     <param name="widget_header" value="$LOCALIZE[20094]"/>
                     <param name="widget_target" value="music"/>
-                    <param name="list_id" value="19700"/>
-                    <param name="onup_id" value="19600"/>
+					<param name="onup_id" value="19600"/>
+                    <param name="list_id" value="19700"/>                    
                     <param name="ondown_id" value="19800"/>
                 </include>
                 <include name="WidgetListText">
                     <param name="content_path" value="special://musicplaylists/"/>
                     <param name="widget_header" value="$LOCALIZE[136]"/>
                     <param name="widget_target" value="music"/>
+					<param name="onup_id" value="19700"/>
                     <param name="list_id" value="19800"/>
-                    <param name="onup_id" value="19700"/>
-                    <param name="ondown_id" value="200001"/>
-                    <param name="icon" value="DefaultPlaylist.png"/>
+                    <param name="item_image" value="DefaultPlaylist.png"/>
                 </include>
                 <include name="ImageWidget">
                     <param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
@@ -973,8 +948,8 @@
                     <param name="button_label" value="$LOCALIZE[31110]" />
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,music,home)" />
                     <param name="button_onclick" value="ActivateWindow(music,files)"/>
-                    <param name="button_id" value="19910"/>
-                    <param name="onup_id" value="19800"/>
+					<param name="onup_id" value="19800"/>
+                    <param name="button_id" value="19910"/>                   
                     <param name="visible" value="!Library.HasContent(music) + !IntegerGreaterThan(Container(19700).NumItems,0) + !IntegerGreaterThan(Container(19800).NumItems,0)"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
                 </include>
@@ -1043,16 +1018,16 @@
                     <param name="widget_header" value="$LOCALIZE[1037]"/>
                     <param name="widget_target" value="videos"/>
                     <param name="sortby" value="lastused"/>
-                    <param name="sortorder" value="descending"/>
+                    <param name="sortorder" value="descending"/>					
+					<param name="onup_id" value="20900"/>
                     <param name="list_id" value="20100"/>
-                    <param name="onup_id" value="20900"/>
-                    <param name="ondown_id" value="20200"/>
+                    <param name="ondown_id" value="20200"/>                    
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)" name="WidgetCustomListSquare">
                     <param name="widget_header" value="$LOCALIZE[1037]"/>
                     <param name="widget_target" value="Video"/>
-                    <param name="list_id" value="20100"/>
-                    <param name="onup_id" value="20900"/>
+					<param name="onup_id" value="20900"/>
+                    <param name="list_id" value="20100"/>                    
                     <param name="ondown_id" value="20200"/>
                 </include>
                 <!-- Audio Addons -->
@@ -1062,15 +1037,15 @@
                     <param name="widget_target" value="music"/>
                     <param name="sortby" value="lastused"/>
                     <param name="sortorder" value="descending"/>
-                    <param name="list_id" value="20200"/>
-                    <param name="onup_id" value="20100"/>
+					<param name="onup_id" value="20100"/>
+                    <param name="list_id" value="20200"/>                    
                     <param name="ondown_id" value="20300"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_audio)" name="WidgetCustomListSquare">
                     <param name="widget_header" value="$LOCALIZE[1038]"/>
                     <param name="widget_target" value="Audio"/>
-                    <param name="list_id" value="20200"/>
-                    <param name="onup_id" value="20100"/>
+					<param name="onup_id" value="20100"/>
+                    <param name="list_id" value="20200"/>                    
                     <param name="ondown_id" value="20300"/>
                 </include>
                 <!-- Programs Addons -->
@@ -1080,8 +1055,8 @@
                     <param name="widget_target" value="programs"/>
                     <param name="sortby" value="lastused"/>
                     <param name="sortorder" value="descending"/>
-                    <param name="list_id" value="20300"/>
-                    <param name="onup_id" value="20200"/>
+					<param name="onup_id" value="20200"/>
+                    <param name="list_id" value="20300"/>                    
                     <param name="ondown_id" value="20400"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_programs)" name="WidgetCustomListSquare">
@@ -1098,8 +1073,8 @@
                     <param name="widget_target" value="programs"/>
                     <param name="sortby" value="lastused"/>
                     <param name="sortorder" value="descending"/>
-                    <param name="list_id" value="20400"/>
-                    <param name="onup_id" value="20300"/>
+					<param name="onup_id" value="20300"/>
+                    <param name="list_id" value="20400"/>                    
                     <param name="ondown_id" value="20500"/>
                     <param name="visible" value="System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_apps)]"/>
                 </include>
@@ -1110,16 +1085,14 @@
                     <param name="widget_target" value="pictures"/>
                     <param name="sortby" value="lastused"/>
                     <param name="sortorder" value="descending"/>
-                    <param name="list_id" value="20500"/>
-                    <param name="onup_id" value="20400"/>
-                    <param name="ondown_id" value="200001"/>
+					<param name="onup_id" value="20400"/>
+                    <param name="list_id" value="20500"/>                    
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)" name="WidgetCustomListSquare">
                     <param name="widget_header" value="$LOCALIZE[1039]"/>
                     <param name="widget_target" value="Image"/>
+					<param name="onup_id" value="20400"/>
                     <param name="list_id" value="20500"/>
-                    <param name="onup_id" value="20400"/>
-                    <param name="ondown_id" value="200001"/>
                 </include>
                 <!-- No Addons -->                        
                 <include name="ImageWidget">
@@ -1128,8 +1101,8 @@
                     <param name="button_label" value="$LOCALIZE[31118]" />
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
                     <param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
-                    <param name="button_id" value="20600"/>
-                    <param name="onup_id" value="20100"/>
+					<param name="onup_id" value="20100"/>
+                    <param name="button_id" value="20600"/>                    
                     <param name="visible" value="!IntegerGreaterThan(Container(20100).NumItems,0) + !IntegerGreaterThan(Container(20200).NumItems,0) + !IntegerGreaterThan(Container(20300).NumItems,0) + !IntegerGreaterThan(Container(20400).NumItems,0) + !IntegerGreaterThan(Container(20500).NumItems,0) + !Skin.HasSetting(enable_custom_list_addons)"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoProgramsButton)"/>
                 </include>
