@@ -360,7 +360,10 @@
 		<value condition="!IsEmpty(Container(20400).ListItem.Art(fanart)) + Control.HasFocus(20400) + System.Platform.Android + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_apps)]">$INFO[Container(20400).ListItem.Art(fanart)]</value>		
 		<value condition="!IsEmpty(Container(20500).ListItem.Art(fanart)) + Control.HasFocus(20500) + ![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)]">$INFO[Container(20400).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(20500).ListItem.Property(AddonFanart)) + Control.HasFocus(20500) + Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_image)">$INFO[Container(20500).ListItem.Property(AddonFanart)]</value>
-		<!-- Global -->		
+		<!-- Global -->
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(shutdownmenu)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(favourites)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(1107)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>		
 		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
 	</variable>

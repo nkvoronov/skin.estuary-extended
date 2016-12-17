@@ -292,7 +292,7 @@
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
                 </include>                                                
                 <include condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" name="WidgetListChannels">
-                    <param name="content_path" value="pvr://channels/tv/All channels/"/>
+                    <param name="content_path" value="pvr://channels/tv/*"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>
                     <param name="widget_header" value="$LOCALIZE[31016]"/>
@@ -402,7 +402,7 @@
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
                 </include>
                 <include condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" name="WidgetListChannels">
-                    <param name="content_path" value="pvr://channels/radio/All channels/"/>
+                    <param name="content_path" value="pvr://channels/radio/*"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>                            
                     <param name="widget_header" value="$LOCALIZE[31018]"/>
@@ -1129,7 +1129,7 @@
                 <include name="SubMenu">
                     <param name="list_id" value="21900"/>
                     <param name="ondown_id" value="21100"/>
-                    <param name="item1_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
+                    <param name="item1_onclick2" value="SetProperty(FanartHomeType,filemanager,home)" />
                     <param name="item1_onclick" value="ActivateWindow(filemanager)" />
                     <param name="item1_icon" value="files.png" />
                     <param name="item1_label" value="$LOCALIZE[7]" />

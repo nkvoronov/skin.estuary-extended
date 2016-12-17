@@ -15,6 +15,7 @@
             <include name="BottomMainMenuItem">
                 <param name="control_id" value="901" />
                 <param name="onclick" value="ActivateWindow(shutdownmenu)" />
+				<param name="onclick2" value="" />
                 <param name="icon" value="icons/power.png" />
                 <param name="label" value="$LOCALIZE[33060]" />
             </include>
@@ -22,6 +23,7 @@
             <include name="BottomMainMenuItem">
                 <param name="control_id" value="902" />
                 <param name="onclick" value="ActivateWindow(favourites)" />
+				<param name="onclick2" value="" />
                 <param name="icon" value="icons/favourites.png" />
                 <param name="label" value="$LOCALIZE[10134]" />
             </include>
@@ -29,6 +31,7 @@
             <include name="BottomMainMenuItem">
                 <param name="control_id" value="903" />
                 <param name="onclick" value="ActivateWindow(1107)" />
+				<param name="onclick2" value="" />
                 <param name="icon" value="icons/search.png" />
                 <param name="label" value="$LOCALIZE[31001]" />
             </include>
@@ -36,6 +39,7 @@
             <include name="BottomMainMenuItem">
                 <param name="control_id" value="904" />
                 <param name="onclick" value="FullScreen" />
+				<param name="onclick2" value="" />
                 <param name="icon" value="icons/now-playing/fullscreen.png" />
                 <param name="label" value="$LOCALIZE[244]" />
 				<param name="selected" value="!Player.Paused" />

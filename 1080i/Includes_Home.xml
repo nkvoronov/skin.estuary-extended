@@ -233,41 +233,41 @@
 		<param name="label1"></param>
 		<param name="label2"></param>
 		<definition>
-    		<control type="image">
-    			<top>0</top>
-    			<left>0</left>
-    			<width>690</width>
-    			<height>225</height>
-    			<texture border="22">dialogs/dialog-bg.png</texture>
-    		</control>
-    		<control type="image">
-    			<left>40</left>
-    			<top>42</top>
-    			<width>140</width>
-    			<height>140</height>
-    			<aspectratio>keep</aspectratio>
-    			<texture background="true" fallback="DefaultVideoCover.png">$PARAM[item_image]</texture>
-    		</control>
-    		<control type="label">
-    			<left>210</left>
-    			<top>47</top>
-    			<height>25</height>
-    			<width>420</width>
-    			<label>$PARAM[header]</label>
-    			<aligny>center</aligny>
-    			<font>font24_title</font>
-    			<textcolor>button_focus</textcolor>
-    			<shadowcolor>black</shadowcolor>
-    		</control>
-    		<control type="label">
-    			<left>210</left>
-    			<top>92</top>
-    			<height>105</height>
-    			<width>420</width>
-    			<label>$PARAM[label1][CR]$PARAM[label2]</label>
-    			<font>font12</font>
-    			<shadowcolor>black</shadowcolor>
-    		</control>
+			<control type="image">
+				<top>0</top>
+				<left>0</left>
+				<width>690</width>
+				<height>225</height>
+				<texture border="22">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>42</top>
+				<width>140</width>
+				<height>140</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" fallback="DefaultVideoCover.png">$PARAM[item_image]</texture>
+			</control>
+			<control type="label">
+				<left>210</left>
+				<top>47</top>
+				<height>25</height>
+				<width>420</width>
+				<label>$PARAM[header]</label>
+				<aligny>center</aligny>
+				<font>font24_title</font>
+				<textcolor>button_focus</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<left>210</left>
+				<top>92</top>
+				<height>105</height>
+				<width>420</width>
+				<label>$PARAM[label1][CR]$PARAM[label2]</label>
+				<font>font12</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
 		</definition>
 	</include>
 	<include name="WidgetListMovies">
@@ -891,7 +891,7 @@
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<aligny>top</aligny>
+							<aligny>center</aligny>
 						</control>
 					</itemlayout>
 					<focusedlayout width="343" height="340">
@@ -939,7 +939,7 @@
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
-								<aligny>top</aligny>
+								<aligny>center</aligny>
 							</control>
 						</control>
 					</focusedlayout>
