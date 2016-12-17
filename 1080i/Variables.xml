@@ -334,6 +334,9 @@
 		<!-- Media -->
 		<value condition="!IsEmpty(Window(home).Property(mediaartfanart))">$INFO[Window(home).Property(mediaartfanart)]</value>
 		<!-- Global -->
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(shutdownmenu)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(favourites)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
+		<value condition="!IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(1107)">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuType]$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value>-</value>
 	</variable>

@@ -1492,7 +1492,7 @@
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<aligny>top</aligny>
+							<aligny>center</aligny>
 						</control>
 					</itemlayout>
 					<focusedlayout width="343" height="340">
@@ -1540,7 +1540,7 @@
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
-								<aligny>top</aligny>
+								<aligny>center</aligny>
 							</control>
 						</control>
 					</focusedlayout>
