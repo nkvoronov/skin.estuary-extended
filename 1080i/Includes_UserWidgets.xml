@@ -271,8 +271,8 @@
 		<param name="ondown_id">200001</param>
 		<param name="height">405</param>
 		<param name="label1">$INFO[ListItem.Label]</param>
-		<param name="label2">[COLOR button_focus]$INFO[ListItem.Property(Addon.Version)][/COLOR]</param>
-		<param name="fallback_image">DefaultFolderSquare.png</param>
+		<param name="label2">[COLOR button_focus]$INFO[ListItem.Property(AddonVersion)][/COLOR]</param>
+        <param name="fallback_image">DefaultFolderSquare.png</param>
 		<definition>
 			<control type="group">
 				<description>CustomAddons Widget including header and arrows</description>
