@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-    <onload condition="IsEmpty(Window(home).Property(FanartHomeType))">SetProperty(FanartHomeType,video,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<views>50,51,52,53,54,55,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>CommonScrollbars</include>
 			<include>View_50_List</include>
 			<include>View_51_Poster</include>
@@ -28,14 +26,14 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(files) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(videos)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(files) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content()</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>[Control.IsVisible(50) | Control.Isvisible(54)]</visible>
-                <visible>!StringCompare(ListItem.Label,..)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 				<include>Visible_Right</include>
 				<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				<control type="image">
@@ -72,13 +70,13 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !StringCompare(ListItem.Label,..)</visible>
+					<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="group">
 					<left>1350</left>
 					<top>244</top>
 					<visible>ListItem.IsCollection</visible>
-					<include name="InfoList">
+					<include content="InfoList">
 						<param name="height" value="322" />
 						<param name="width" value="429" />
 						<param name="sortby" value="year" />
@@ -110,23 +108,23 @@
 						<orientation>horizontal</orientation>
 						<width>360</width>
 						<align>center</align>
-						<include name="InfoFlag">
-							<param name="visible" value="!IsEmpty(ListItem.duration)" />
+						<include content="InfoFlag">
+							<param name="visible" value="!String.IsEmpty(ListItem.duration)" />
 							<param name="icon" value="frame/clock.png" />
 							<param name="label" value="$INFO[ListItem.Duration,, $LOCALIZE[31132]]" />
 						</include>
-						<include name="InfoFlag">
-							<param name="visible" value="!IsEmpty(ListItem.Property(TotalEpisodes))" />
+						<include content="InfoFlag">
+							<param name="visible" value="!String.IsEmpty(ListItem.Property(TotalEpisodes))" />
 							<param name="icon" value="lists/played-total.png" />
 							<param name="label" value="$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]" />
 						</include>
-						<include name="InfoFlag">
-							<param name="visible" value="!IsEmpty(ListItem.Year) + IsEmpty(ListItem.Premiered)" />
+						<include content="InfoFlag">
+							<param name="visible" value="!String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.Premiered)" />
 							<param name="icon" value="lists/year.png" />
 							<param name="label" value="$INFO[ListItem.Year]" />
 						</include>
-						<include name="InfoFlag">
-							<param name="visible" value="!IsEmpty(ListItem.Premiered) + IsEmpty(ListItem.Property(TotalEpisodes))" />
+						<include content="InfoFlag">
+							<param name="visible" value="!String.IsEmpty(ListItem.Premiered) + String.IsEmpty(ListItem.Property(TotalEpisodes))" />
 							<param name="icon" value="lists/year.png" />
 							<param name="label" value="$INFO[ListItem.Premiered]" />
 						</include>
@@ -170,7 +168,7 @@
 				<control type="group">
 					<left>415</left>
 					<top>10</top>
-					<include name="UserRatingCircle">
+					<include content="UserRatingCircle">
 						<param name="animation" value="True" />
 					</include>
 					<visible>Control.IsVisible(51) | Control.IsVisible(50) | Control.IsVisible(55)</visible>
@@ -205,7 +203,7 @@
 						<description>Unlock Shares</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[20336]</label>
-						<onclick>xbmc.mastermode</onclick>
+						<onclick>mastermode</onclick>
 						<selected>system.ismaster</selected>
 						<visible>system.haslocks</visible>
 					</control>
@@ -214,7 +212,7 @@
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
 						<onclick>UpdateLibrary(video)</onclick>
-						<visible>!Container.Content(addons)+ IsEmpty(Container.PluginName)</visible>
+						<visible>!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</visible>
 						<altlabel>$LOCALIZE[13353]</altlabel>
 						<usealttexture>library.isscanningvideo</usealttexture>
 					</control>
@@ -229,34 +227,36 @@
 						<description>Get more</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
-					    <onclick>ActivateWindow(addonbrowser,addons://sources/video/,return)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
 						<visible>Container.Content(addons)</visible>
 					</control>
 					<control type="button" id="622">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31117]</label>
 						<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
-						<visible>Container.Content() + IsEmpty(Container.PluginName)</visible>
+						<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
+						<visible>Container.Content() + String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<control type="button" id="623">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[31009]</label>
+						<onclick>InstallAddon(resource.images.studios.white)</onclick>
 						<visible>Container.Content(studios) + !System.HasAddon(resource.images.studios.white)</visible>
 					</control>
 					<control type="button" id="624">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[10140]</label>
 						<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
-						<visible>!IsEmpty(Container.PluginName)</visible>
+						<visible>!String.IsEmpty(Container.PluginName)</visible>
 					</control>
 					<include>MediaMenuNowPlaying</include>
 				</control>
 			</control>
-			<include name="TopBar">
+			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
 				<param name="breadcrumbs_icon" value="icons/settings/video.png" />
 			</include>
-			<include name="BottomBar">
+			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
 		</control>

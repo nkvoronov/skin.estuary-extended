@@ -7,7 +7,7 @@
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="600" />
 			<param name="DialogBackgroundHeight" value="550" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[5]" />
@@ -22,7 +22,7 @@
 			<ondown>5000</ondown>
 			<onleft>99</onleft>
 			<onright>61</onright>
-			<include name="DefaultSimpleListLayout">
+			<include content="DefaultSimpleListLayout">
 				<param name="width" value="600" />
 				<param name="list_id" value="5000" />
 				<param name="align" value="center" />
@@ -59,7 +59,7 @@
 				<item>
 					<label>$LOCALIZE[31083]</label>
 					<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
-					<visible>!IsEmpty(Skin.String(LyricScript_Path))</visible>
+					<visible>!String.IsEmpty(Skin.String(LyricScript_Path))</visible>
 				</item>
 			</content>
 		</control>

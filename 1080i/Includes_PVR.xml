@@ -56,7 +56,7 @@
 					<height>60</height>
 					<left>405</left>
 					<top>4</top>
-					<texture border="2">$INFO[ListItem.Icon]</texture>
+					<texture border="2">$INFO[ListItem.ActualIcon]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>2</bordersize>
 					<aspectratio>keep</aspectratio>
@@ -94,7 +94,7 @@
 					<height>60</height>
 					<left>405</left>
 					<top>4</top>
-					<texture border="2">$INFO[ListItem.Icon]</texture>
+					<texture border="2">$INFO[ListItem.ActualIcon]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>2</bordersize>
 					<aspectratio>keep</aspectratio>
@@ -153,7 +153,7 @@
 				<width>560</width>
 				<height>262</height>
 				<font>font12</font>
-				<visible>!StringCompare(ListItem.StartTime,ListItem.EndTime)</visible>
+				<visible>!String.IsEqual(ListItem.StartTime,ListItem.EndTime)</visible>
 				<label>$INFO[ListItem.StartTime]</label>
 			</control>
 			<control type="label">
@@ -162,7 +162,7 @@
 				<height>262</height>
 				<align>right</align>
 				<font>font12</font>
-				<visible>!StringCompare(ListItem.StartTime,ListItem.EndTime)</visible>
+				<visible>!String.IsEqual(ListItem.StartTime,ListItem.EndTime)</visible>
 				<label>$INFO[ListItem.EndTime]</label>
 			</control>
 			<control type="label">
@@ -235,7 +235,7 @@
 			<align>center</align>
 			<font>font24_title</font>
 			<label>$LOCALIZE[19055]</label>
-			<visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Genre)</visible>
+			<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Genre)</visible>
 		</control>
 	</include>
 </includes>

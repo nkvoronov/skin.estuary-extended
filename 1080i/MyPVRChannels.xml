@@ -5,10 +5,9 @@
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<left>110</left>
@@ -206,7 +205,7 @@
 							<height>77</height>
 							<width>750</width>
 							<aligny>top</aligny>
-							<animation effect="slide" start="0,0" end="0,18" time="0" condition="IsEmpty(ListItem.Title)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,18" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -272,7 +271,7 @@
 							<width>750</width>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,18" time="0" condition="IsEmpty(ListItem.Title)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,18" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
@@ -317,12 +316,12 @@
 				<visible>Control.IsVisible(50)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
-				<include name="PVRInfoPanel">
+				<include content="PVRInfoPanel">
 					<param name="bottom_label1" value="$INFO[ListItem.NextTitle,[COLOR button_focus]$LOCALIZE[19031]:[/COLOR] ]" />
 					<param name="bottom_label2" value="$INFO[ListItem.NextStartTime]" />
 				</include>
 			</control>
-			<include name="UpDownArrows">
+			<include content="UpDownArrows">
 				<param name="container_id" value="50" />
 				<param name="posx" value="936" />
 				<param name="up_posy" value="132" />
@@ -334,11 +333,11 @@
 				<include>MediaMenuCommon</include>
 				<include>PVRSideBar</include>
 			</control>
-			<include name="TopBar">
+			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]" />
 				<param name="breadcrumbs_icon" value="icons/settings/tvremote.png" />
 			</include>
-			<include name="BottomBar">
+			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
 		</control>

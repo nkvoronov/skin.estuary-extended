@@ -6,7 +6,7 @@
 		<control type="group">
 			<left>260</left>
 			<top>150</top>
-			<include name="DialogBackgroundCommons">
+			<include content="DialogBackgroundCommons">
 				<param name="DialogBackgroundWidth" value="1400" />
 				<param name="DialogBackgroundHeight" value="770" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[13406]" />
@@ -42,7 +42,7 @@
 			<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Up</onclick>
-			<visible>Control.IsVisible(3000) + IntegerGreaterThan(Container(5).CurrentPage,1)</visible>
+			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(5).CurrentPage,1)</visible>
 			<animation delay="80" effect="fade" time="120">VisibleChange</animation>
 		</control>
 		<control type="button">
@@ -54,7 +54,7 @@
 			<onclick>Down</onclick>
 			<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
 			<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
-			<visible>Control.IsVisible(3000) + !StringCompare(Container(5).CurrentPage,Container(5).NumPages)</visible>
+			<visible>Control.IsVisible(3000) + !String.IsEqual(Container(5).CurrentPage,Container(5).NumPages)</visible>
 			<animation delay="80" effect="fade" time="120">VisibleChange</animation>
 		</control>
 		<control type="label">
@@ -68,7 +68,7 @@
 			<aligny>center</aligny>
 			<label>$LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages][/COLOR]</label>
 			<wrapmultiline>true</wrapmultiline>
-			<visible>IntegerGreaterThan(Container(5).NumPages,1)</visible>
+			<visible>Integer.IsGreater(Container(5).NumPages,1)</visible>
 		</control>
 	</controls>
 </window>

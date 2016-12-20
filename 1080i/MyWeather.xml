@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
-	<onload>SetProperty(FanartHomeType,weather,Home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>20000</menucontrol>
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
-			<onfocus>ActivateWindow(weathersettings)</onfocus>
+			<onfocus>ActivateWindow(servicesettings,weather)</onfocus>
 			<onclick>noop</onclick>
 		</control>
-		<!-- Background -->
-		<include name="DefaultBackground">
-			<param name="is_media" value="False" />
-			<param name="image_path" value="$VAR[WeatherFanartVar]" />
-		</include>
+			<control type="videowindow">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="visualisation">
+				<include>FullScreenDimensions</include>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
+				<texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
+			</control>
+			<control type="multiimage">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<imagepath background="true" colordiffuse="35FFFFFF">$VAR[WeatherFanartVar]</imagepath>
+				<visible>!Player.HasMedia</visible>
+			</control>
 		<control type="group">
 			<left>110</left>
 			<top>0</top>
@@ -35,7 +59,7 @@
 				<ondown>20</ondown>
 				<onleft>16001</onleft>
 				<onright>16001</onright>
-				<include name="DefaultSimpleListLayout">
+				<include content="DefaultSimpleListLayout">
 					<param name="align" value="center" />
 					<param name="width" value="340" />
 					<param name="height" value="120" />
@@ -49,7 +73,7 @@
 					<item id="2">
 						<label>$LOCALIZE[33036]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Window(weather).Property(Hourly.IsFetched))</visible>
+						<visible>!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))</visible>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31019]</label>
@@ -58,7 +82,7 @@
 					<item id="4">
 						<label>$LOCALIZE[33035]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
+						<visible>!String.IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -231,46 +255,46 @@
 					</control>
 				</itemlayout>
 				<content>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="1" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="2" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="3" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="4" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="5" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="6" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="7" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="8" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="9" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="10" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="11" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="12" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="13" />
 					</include>
-					<include name="WeatherDailyItem">
+					<include content="WeatherDailyItem">
 						<param name="item_index" value="14" />
 					</include>
 				</content>
@@ -378,46 +402,46 @@
 					</control>
 				</itemlayout>
 				<content>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="1" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="2" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="3" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="4" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="5" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="6" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="7" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="8" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="9" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="10" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="11" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="12" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="13" />
 					</include>
-					<include name="WeatherHourlyItem">
+					<include content="WeatherHourlyItem">
 						<param name="item_index" value="14" />
 					</include>
 				</content>
@@ -476,7 +500,7 @@
 					<left>50</left>
 					<width>300</width>
 					<height>300</height>
-					<texture>$VAR[CurrentWeatherIcon]</texture>
+					<texture>$INFO[Weather.conditions]</texture>
 				</control>
 				<control type="label">
 					<left>800</left>
@@ -498,27 +522,27 @@
 					<top>650</top>
 					<left>70</left>
 					<orientation>horizontal</orientation>
-					<include name="WeatherIcon">
+					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Wind)" />
 						<param name="texture" value="icons/weather/wind.png" />
 						<param name="header" value="$LOCALIZE[404]" />
 					</include>
-					<include name="WeatherIcon">
+					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Humidity)" />
 						<param name="texture" value="icons/weather/humidity.png" />
 						<param name="header" value="$LOCALIZE[406]" />
 					</include>
-					<include name="WeatherIcon">
+					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Current.Precipitation)" />
 						<param name="texture" value="icons/weather/rain.png" />
 						<param name="header" value="$LOCALIZE[33021]" />
 					</include>
-					<include name="WeatherIcon">
+					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Today.Sunrise)" />
 						<param name="texture" value="icons/weather/sunrise.png" />
 						<param name="header" value="$LOCALIZE[405]" />
 					</include>
-					<include name="WeatherIcon">
+					<include content="WeatherIcon">
 						<param name="label" value="Window(weather).Property(Today.Sunset)" />
 						<param name="texture" value="icons/weather/sunset.png" />
 						<param name="header" value="$LOCALIZE[403]" />
@@ -630,25 +654,25 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<include name="WeatherMapItem">
+					<include content="WeatherMapItem">
 						<param name="item_id" value="1" />
 					</include>
-					<include name="WeatherMapItem">
+					<include content="WeatherMapItem">
 						<param name="item_id" value="2" />
 					</include>
-					<include name="WeatherMapItem">
+					<include content="WeatherMapItem">
 						<param name="item_id" value="3" />
 					</include>
-					<include name="WeatherMapItem">
+					<include content="WeatherMapItem">
 						<param name="item_id" value="4" />
 					</include>
-					<include name="WeatherMapItem">
+					<include content="WeatherMapItem">
 						<param name="item_id" value="5" />
 					</include>
 				</content>
 			</control>
 		</control>
-		<include name="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[8]" />
 			<param name="breadcrumbs_icon" value="icons/settings/weather.png" />
 		</include>

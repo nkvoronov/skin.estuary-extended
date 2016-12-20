@@ -8,7 +8,7 @@
 			<left>640</left>
 			<animation effect="slide" end="600,-850" time="500" tween="sine" easing="inout" condition="Window.IsActive(fullscreenvideo)">conditional</animation>
 			<include>Animation_DialogPopupOpenClose</include>
-			<visible>IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
 			<control type="image">
 				<left>-25</left>
 				<top>-25</top>

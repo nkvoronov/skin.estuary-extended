@@ -2,12 +2,12 @@
 <window>
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<coordinates>
-		<left>480</left>
-		<top>290</top>
+		<left>360</left>
+		<top>330</top>
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="960" />
 			<param name="DialogBackgroundHeight" value="500" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[21421]" />
@@ -27,12 +27,12 @@
 			<orientation>vertical</orientation>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<control type="spincontrolex" id="15">
+			<control type="button" id="15">
 				<description>Rule Field</description>
 				<include>SettingsItemCommon</include>
 				<width>900</width>
 			</control>
-			<control type="spincontrolex" id="16">
+			<control type="button" id="16">
 				<description>Rule operator</description>
 				<width>900</width>
 				<include>SettingsItemCommon</include>
@@ -65,11 +65,11 @@
 			<align>center</align>
 			<onup>9002</onup>
 			<ondown>15</ondown>
-			<include name="DefaultDialogButton">
+			<include content="DefaultDialogButton">
 				<param name="id" value="18" />
 				<param name="label" value="$LOCALIZE[186]" />
 			</include>
-			<include name="DefaultDialogButton">
+			<include content="DefaultDialogButton">
 				<param name="id" value="19" />
 				<param name="label" value="$LOCALIZE[222]" />
 			</include>

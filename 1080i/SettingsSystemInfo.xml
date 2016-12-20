@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">95</defaultcontrol>
-    <onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<left>90</left>
@@ -23,53 +21,62 @@
 				<height>540</height>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
+				<onright>60</onright>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[20037]</label>
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[13277]</label>
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[13279]</label>
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[13280]</label>
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[13281]</label>
 				</control>
 				<control type="button" id="99">
 					<description>Button PVR</description>
-					<include name="DefaultSettingButton">
-						<param name="height" value="88" />
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
 					</include>
 					<width>400</width>
 					<label>$LOCALIZE[19191]</label>
+				</control>
+				<control type="button" id="100">
+					<description>Button Policy</description>
+					<include content="DefaultSettingButton">
+						<param name="height" value="75" />
+					</include>
+					<width>400</width>
+					<label>$LOCALIZE[12389]</label>
 				</control>
 			</control>
 		</control>
@@ -81,7 +88,7 @@
 				<left>420</left>
 				<top>70</top>
 				<width>1300</width>
-				<height>570</height>
+				<height>572</height>
 				<texture border="22">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
@@ -94,57 +101,80 @@
 			<control type="grouplist">
 				<left>480</left>
 				<top>105</top>
+				<height>500</height>
 				<orientation>vertical</orientation>
 				<control type="label" id="2">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="3">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="4">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="5">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="6">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="7">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="8">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="9">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="10">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
 				<control type="label" id="11">
-					<height>45</height>
+					<height>41</height>
 					<width>1220</width>
-					<font>Mono30</font>
+					<font>Mono28</font>
 				</control>
+				<control type="label" id="12">
+					<height>41</height>
+					<width>1220</width>
+					<font>Mono28</font>
+				</control>
+			</control>
+			<control type="textbox" id="30">
+				<left>480</left>
+				<top>105</top>
+				<height>500</height>
+				<width>1200</width>
+				<pagecontrol>60</pagecontrol>
+				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1705</left>
+				<top>90</top>
+				<width>12</width>
+				<height>530</height>
+				<onleft>9000</onleft>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(30)</visible>
 			</control>
 			<control type="grouplist">
 				<left>60</left>
@@ -248,7 +278,7 @@
 				</control>
 			</control>
 		</control>
-		<include name="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[130]" />
 			<param name="breadcrumbs_icon" value="icons/settings/system.png" />
 		</include>

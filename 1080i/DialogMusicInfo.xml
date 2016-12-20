@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<includes>
-	<include name="DialogMusicInfos">
-        <!-- Thumb -->
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>SetProperty(infobackground,$INFO[ListItem.Art(fanart)],home)</onload>
+	<onunload>ClearProperty(infobackground,home)</onunload>
+	<controls>
 		<control type="group">
 			<include>OpenClose_Left</include>
 			<top>158</top>
@@ -24,15 +26,13 @@
 				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
 		</control>
-        <!-- Main -->
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<include>Visible_Right</include>
 			<left>80</left>
-			<visible>![Window.IsActive(songinformation) + Window.IsActive(musicinformation)]</visible>
-            <!-- Descriptions -->
+			<visible>![Window.Is(songinformation) + Window.IsActive(musicinformation)]</visible>
 			<control type="group">
-				<visible>StringCompare(Container(50).NumItems,0) + IsEmpty(Control.GetLabel(400))</visible>
+				<visible>Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(Control.GetLabel(400))</visible>
 				<top>160</top>
 				<control type="button" id="130">
 					<left>586</left>
@@ -49,10 +49,10 @@
 					<height>550</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture fallback="special://skin/extras/home-images/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(Control.GetLabel(400))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(400))</visible>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(Control.GetLabel(400)) + IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(400)) + String.IsEmpty(ListItem.Art(fanart))</visible>
 					<control type="image">
 						<left>614</left>
 						<top>30</top>
@@ -74,9 +74,9 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!StringCompare(Container(50).NumItems,0) | !IsEmpty(Control.GetLabel(400))</visible>
+				<visible>!Integer.IsEqual(Container(50).NumItems,0) | !String.IsEmpty(Control.GetLabel(400))</visible>
 				<top>454</top>
-				<control type="button" id="130">
+				<control type="button">
 					<onup>50</onup>
 					<ondown>9000</ondown>
 					<left>586</left>
@@ -84,7 +84,7 @@
 					<width>1190</width>
 					<height>320</height>
 					<label></label>
-					<visible>StringCompare(Container(50).NumItems,0)</visible>
+					<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
 				</control>
 				<control type="button" id="130">
 					<onup>50</onup>
@@ -98,8 +98,8 @@
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="group">
-					<animation effect="slide" start="0,0" end="0,-295" time="0" condition="StringCompare(Container(50).NumItems,0)">Conditional</animation>
-					<visible>[!StringCompare(Container(50).NumItems,0) + IsEmpty(Control.GetLabel(400))] | [StringCompare(Container(50).NumItems,0) + !IsEmpty(Control.GetLabel(400))]</visible>
+					<animation effect="slide" start="0,0" end="0,-295" time="0" condition="Integer.IsEqual(Container(50).NumItems,0)">Conditional</animation>
+					<visible>[!Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(Control.GetLabel(400))] | [Integer.IsEqual(Container(50).NumItems,0) + !String.IsEmpty(Control.GetLabel(400))]</visible>
 					<control type="image">
 						<left>614</left>
 						<top>30</top>
@@ -109,7 +109,7 @@
 						<texture fallback="special://skin/extras/home-images/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					</control>
 					<control type="group">
-						<visible>IsEmpty(ListItem.Art(fanart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 						<control type="image">
 							<left>614</left>
 							<top>30</top>
@@ -141,7 +141,6 @@
 				<label>$VAR[MusicInfoTextboxVar]</label>
 				<textcolor>button_focus</textcolor>
 			</control>
-            <!-- List albums or songs -->
 			<control type="panel" id="50">
 				<left>585</left>
 				<top>170</top>
@@ -289,17 +288,17 @@
 				<orientation>horizontal</orientation>
 				<control type="group" id="420">
 					<width>262</width>
-					<visible>Container.Content(songs)</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)</visible>
 					<control type="button" id="7">
-						<include name="VideoInfoButtonsCommon">
+						<include content="VideoInfoButtonsCommon">
 							<param name="icon" value="" />
 						</include>
 						<label>$LOCALIZE[31033]</label>
 						<onup>130</onup>
 						<onleft>12</onleft>
 						<onright>120</onright>
-						<onup condition="IntegerGreaterThan(Container(5000).CurrentItem,3)">210</onup>
-						<onup condition="!IntegerGreaterThan(Container(5000).CurrentItem,3)">138</onup>
+						<onup condition="Integer.IsGreater(Container(5000).CurrentItem,3)">210</onup>
+						<onup condition="!Integer.IsGreater(Container(5000).CurrentItem,3)">138</onup>
 					</control>
 					<control type="label">
 						<label>$INFO[ListItem.UserRating]</label>
@@ -316,54 +315,46 @@
 						<width>48</width>
 						<height>48</height>
 						<align>center</align>
-						<visible>IsEmpty(ListItem.UserRating)</visible>
+						<visible>String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
 				</control>
 				<control type="radiobutton" id="120">
-					<include name="VideoInfoButtonsCommon">
+					<include content="VideoInfoButtonsCommon">
 						<param name="icon" value="icons/infodialogs/image.png" />
 					</include>
 					<label>$LOCALIZE[31028]</label>
-					<enable>!IsEmpty(ListItem.Art(fanart))</enable>
+					<enable>!String.IsEmpty(ListItem.Art(fanart))</enable>
 					<onclick>SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)</onclick>
 					<onclick>ActivateWindow(1104)</onclick>
-					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)</visible>
 				</control>
 				<control type="radiobutton" id="440">
 					<label>$LOCALIZE[31114]</label>
-					<include name="VideoInfoButtonsCommon">
+					<include content="VideoInfoButtonsCommon">
 						<param name="icon" value="icons/infodialogs/trailer.png" />
 					</include>
 					<onclick>Action(close)</onclick>
 					<visible>System.hasAddon(script.extendedinfo)</visible>
-					<onclick condition="!StringCompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
-					<onclick condition="StringCompare(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+					<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+					<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 				</control>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="6" />
 					<param name="icon" value="icons/infodialogs/update.png" />
 					<param name="label" value="$LOCALIZE[184]" />
 				</include>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="10" />
 					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[13405]" />
-                    <param name="visible" value="Container.Content(artists) | Container.Content(albums)" />
 				</include>
-                <include name="InfoDialogButton">
-					<param name="id" value="13" />
-					<param name="icon" value="icons/infodialogs/choose_image.png" />
-					<param name="label" value="$LOCALIZE[13405]" />
-                    <param name="visible" value="Container.Content(songs)" />
-				</include>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="12" />
 					<param name="icon" value="icons/infodialogs/choose_image.png" />
 					<param name="label" value="$LOCALIZE[20413]" />
-                    <param name="visible" value="Container.Content(artists)" />
 				</include>
 			</control>
-			<include name="LeftRightArrows">
+			<include content="LeftRightArrows">
 				<param name="list_id" value="50" />
 				<param name="left_posx" value="574" />
 				<param name="right_posx" value="1780" />
@@ -371,32 +362,29 @@
 				<param name="visible" value="true" />
 			</include>
 		</control>
-        <!-- TopBarInfo Artists -->
 		<control type="group">
-			<visible>Container.Content(artists)</visible>
-			<include name="InfoDialogTopBarInfo">
+			<visible>String.IsEqual(ListItem.DBType,artist)</visible>
+			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Artist]" />
 				<param name="sub_label" value="$INFO[ListItem.Genre]" />
 				<param name="id" value="33333" />
 			</include>
 		</control>
-        <!-- TopBarInfo Albums -->
 		<control type="group">
-			<visible>Container.Content(albums)</visible>
-			<include name="InfoDialogTopBarInfo">
+			<visible>String.IsEqual(ListItem.DBType,album)</visible>
+			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist]" />
 				<param name="id" value="33334" />
 			</include>
 		</control>
-        <!-- TopBarInfo Songs -->
 		<control type="group">
-			<visible>Container.Content(songs) + !Window.IsActive(musicinformation)</visible>
-			<include name="InfoDialogTopBarInfo">
+			<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
+			<include content="InfoDialogTopBarInfo">
 				<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 				<param name="id" value="33335" />
 			</include>
 		</control>
-	</include>
-</includes>
+	</controls>
+</window>

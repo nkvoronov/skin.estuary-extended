@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="!ListItem.Property(addon.installed) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
+	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
 	<onload>SetProperty(infobackground,$INFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
@@ -9,31 +9,31 @@
 			<include>OpenClose_Right</include>
 			<control type="button" id="5000">
 				<left>605</left>
-				<top>158</top>
+				<top>400</top>
 				<width>1235</width>
-				<height>620</height>
+				<height>375</height>
 				<label></label>
 				<onup>50</onup>
 				<ondown>9000</ondown>
-				<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.Property(Addon.Version)],home)</onclick>
+				<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
 				<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],home)</onclick>
 				<onclick>ActivateWindow(1102)</onclick>
-				<enable>!IsEmpty(ListItem.AddonNews)</enable>
+				<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
 			</control>
 			<control type="textbox">
 				<left>670</left>
-				<top>193</top>
+				<top>435</top>
 				<width>1050</width>
-				<height>580</height>
+				<height>300</height>
 				<font>font_textbox</font>
-				<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]][COLOR=white]$INFO[ListItem.Property(Addon.Description)][/COLOR][COLOR=white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
+				<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR=white]$INFO[ListItem.AddonDescription][/COLOR][COLOR=white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
 				<textcolor>button_focus</textcolor>
 				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 			</control>
 			<control type="group">
 				<left>625</left>
 				<top>176</top>
-				<visible>IntegerGreaterThan(Container(50).NumItems,0)</visible>
+				<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
 				<control type="image">
 					<width>385</width>
 					<height>220</height>
@@ -111,7 +111,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<include name="LeftRightArrows">
+			<include content="LeftRightArrows">
 				<param name="list_id" value="50" />
 				<param name="left_posx" value="580" />
 				<param name="right_posx" value="1840" />
@@ -130,17 +130,17 @@
 				<align>center</align>
 				<itemgap>-18</itemgap>
 				<orientation>horizontal</orientation>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="12" />
 					<param name="icon" value="icons/infodialogs/launch.png" />
 					<param name="label" value="$LOCALIZE[518]" />
 				</include>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="9" />
 					<param name="icon" value="icons/infodialogs/configure.png" />
 					<param name="label" value="$LOCALIZE[24020]" />
 				</include>
-				<include name="InfoDialogButton">
+				<include content="InfoDialogButton">
 					<param name="id" value="8" />
 					<param name="icon" value="icons/infodialogs/update.png" />
 					<param name="label" value="$LOCALIZE[24069]" />
@@ -158,18 +158,18 @@
 					<font>font12</font>
 					<visible>Control.IsEnabled(13)</visible>
 				</control>
-				<include name="InfoDialogToggleButton">
+				<include content="InfoDialogToggleButton">
 					<param name="id" value="7" />
 					<param name="icon_on" value="icons/infodialogs/disable.png" />
 					<param name="icon_off" value="icons/infodialogs/enabled.png" />
-					<param name="selected" value="!SubString(Control.GetLabel(7),$LOCALIZE[24022]) | !Window.IsActive(addonbrowser)" />
+					<param name="selected" value="!String.StartsWith(Control.GetLabel(7),$LOCALIZE[24022]) | !Window.IsActive(addonbrowser)" />
 					<param name="label" value="" />
 				</include>
-				<include name="InfoDialogToggleButton">
+				<include content="InfoDialogToggleButton">
 					<param name="id" value="6" />
 					<param name="icon_on" value="icons/infodialogs/uninstall.png" />
 					<param name="icon_off" value="icons/infodialogs/install.png" />
-					<param name="selected" value="ListItem.Property(addon.installed) | !Window.IsActive(addonbrowser)" />
+					<param name="selected" value="ListItem.Property(addon.isinstalled) | !Window.IsActive(addonbrowser)" />
 					<param name="label" value="" />
 				</include>
 			</control>
@@ -208,12 +208,12 @@
 				<width>446</width>
 				<height>80</height>
 				<font>font_textbox</font>
-				<label fallback="31008">$INFO[ListItem.Property(Addon.Disclaimer),$LOCALIZE[24052]: ]</label>
+				<label fallback="31008">$INFO[ListItem.AddonDisclaimer,$LOCALIZE[24052]: ]</label>
 				<textcolor>button_focus</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 				<include>OpenClose_Fade</include>
 				<control type="image">
 					<left>24</left>
@@ -234,9 +234,9 @@
 				</control>
 			</control>
 		</control>
-		<include name="InfoDialogTopBarInfo">
-			<param name="main_label" value="$INFO[ListItem.Property(Addon.Name)]" />
-			<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ]" />
+		<include content="InfoDialogTopBarInfo">
+			<param name="main_label" value="$INFO[ListItem.AddonName]" />
+			<param name="sub_label" value="$INFO[ListItem.AddonVersion,[COLOR grey],[/COLOR]]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ]" />
 		</include>
 	</controls>
 </window>

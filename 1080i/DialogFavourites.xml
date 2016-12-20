@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="134">
+<window>
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
 		<left>210</left>
@@ -7,13 +7,13 @@
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="1500" />
 			<param name="DialogBackgroundHeight" value="800" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[1036]" />
 			<param name="DialogHeaderId" value="2" />
 		</include>
-		<include name="UpDownArrows">
+		<include content="UpDownArrows">
 			<param name="container_id" value="450" />
 			<param name="posx" value="726" />
 			<param name="up_posy" value="-40" />
@@ -116,7 +116,7 @@
 			<align>center</align>
 			<label>$LOCALIZE[31025]</label>
 			<font>font30_title</font>
-			<visible>StringCompare(Container(450).NumItems,0)</visible>
+			<visible>Integer.IsEqual(Container(450).NumItems,0)</visible>
 		</control>
 	</controls>
 </window>

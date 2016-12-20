@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol />
 	<zorder>3</zorder>
 	<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -9,7 +8,7 @@
 			<depth>DepthBars</depth>
 			<left>1830</left>
 			<top>0</top>
-			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">conditional</animation>
+			<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 			<animation effect="slide" end="0,-80" time="150" condition="Window.IsVisible(FullscreenVideo)">conditional</animation>
 			<control type="image">
 				<left>-4</left>
@@ -26,7 +25,7 @@
 					<top>-11</top>
 					<width>100</width>
 					<height>100</height>
-					<texture>dialogs/volume/progress/p$INFO[Control.GetLabel(32)].png</texture>
+					<texture>$INFO[Control.GetLabel(32),dialogs/volume/progress/p,.png]</texture>
 					<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">

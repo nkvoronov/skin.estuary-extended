@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<views>50</views>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="grouplist" id="9000">
 				<include>OpenClose_Left</include>
 				<orientation>vertical</orientation>
@@ -42,7 +40,7 @@
 						<texture>icons/eventlog/order.png</texture>
 					</control>
 				</control>
-				<include name="PlaylistWindowButton">
+				<include content="PlaylistWindowButton">
 					<param name="control_id" value="21" />
 					<param name="onclick" value="" />
 					<param name="label" value="" />
@@ -59,7 +57,7 @@
 					<textwidth>300</textwidth>
 					<radioposx>-1</radioposx>
 				</control>
-				<include name="PlaylistWindowButton">
+				<include content="PlaylistWindowButton">
 					<param name="control_id" value="20" />
 					<param name="onclick" value="" />
 					<param name="label" value="$LOCALIZE[192]" />
@@ -208,7 +206,7 @@
 					</focusedlayout>
 				</control>
 			</control>
-			<include name="UpDownArrows">
+			<include content="UpDownArrows">
 				<param name="container_id" value="50" />
 				<param name="visible" value="!System.HasModalDialog" />
 			</include>
@@ -223,7 +221,7 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		</control>
-		<include name="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[31067]" />
 			<param name="breadcrumbs_icon" value="icons/settings/video.png" />
 		</include>

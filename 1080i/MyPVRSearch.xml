@@ -5,10 +5,9 @@
 	<views>50</views>
 	<menucontrol>6053</menucontrol>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<include>OpenClose_Left</include>
@@ -44,7 +43,7 @@
 								<texture border="90,3,90,3">lists/separator.png</texture>
 							</control>
 							<control type="label">
-								<visible>IsEmpty(ListItem.Date)</visible>
+								<visible>String.IsEmpty(ListItem.Date)</visible>
 								<left>120</left>
 								<top>0</top>
 								<width>650</width>
@@ -54,7 +53,7 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
-								<visible>!IsEmpty(ListItem.Date)</visible>
+								<visible>!String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>25</left>
 									<top>10</top>
@@ -62,7 +61,7 @@
 									<height>80</height>
 									<texture fallback="DefaultTVShowsSquare.png">$INFO[Listitem.ActualIcon]</texture>
 									<aspectratio>keep</aspectratio>
-									<visible>!IsEmpty(ListItem.Icon)</visible>
+									<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
 								</control>
 								<control type="label">
 									<left>120</left>
@@ -108,7 +107,7 @@
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="label">
-								<visible>IsEmpty(ListItem.Date)</visible>
+								<visible>String.IsEmpty(ListItem.Date)</visible>
 								<left>120</left>
 								<top>0</top>
 								<width>650</width>
@@ -118,7 +117,7 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="group">
-								<visible>!IsEmpty(ListItem.Date)</visible>
+								<visible>!String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>25</left>
 									<top>10</top>
@@ -126,7 +125,7 @@
 									<height>80</height>
 									<texture fallback="DefaultTVShowsSquare.png">$INFO[Listitem.ActualIcon]</texture>
 									<aspectratio>keep</aspectratio>
-									<visible>!IsEmpty(ListItem.Icon)</visible>
+									<visible>!String.IsEmpty(ListItem.ActualIcon)</visible>
 								</control>
 								<control type="label">
 									<left>120</left>
@@ -169,10 +168,10 @@
 			<control type="group">
 				<left>1220</left>
 				<top>180</top>
-				<visible>!IsEmpty(ListItem.Date)</visible>
+				<visible>!String.IsEmpty(ListItem.Date)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
-				<include name="PVRInfoPanel">
+				<include content="PVRInfoPanel">
 					<param name="bottom_label1" value="$INFO[ListItem.NextTitle,[COLOR button_focus]$LOCALIZE[19031]:[/COLOR] ]" />
 					<param name="bottom_label2" value="$INFO[ListItem.NextStartTime]" />
 				</include>
@@ -181,11 +180,11 @@
 				<include>MediaMenuCommon</include>
 				<include>PVRSideBar</include>
 			</control>
-			<include name="TopBar">
+			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRSearchVar]" />
 				<param name="breadcrumbs_icon" value="icons/settings/tvguide.png" />
 			</include>
-			<include name="BottomBar">
+			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
 		</control>

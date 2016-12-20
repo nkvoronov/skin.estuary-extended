@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="buttonMenu">
+<window>
 	<defaultcontrol>9000</defaultcontrol>
 	<coordinates>
 		<left>710</left>
@@ -7,7 +7,7 @@
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="500" />
 			<param name="DialogBackgroundHeight" value="100" />
 			<param name="DialogHeaderLabel" value="$LOCALIZE[31072]" />
@@ -66,7 +66,6 @@
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<scroll>yes</scroll>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
@@ -111,7 +110,7 @@
 					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>System.LogOff</onclick>
-					<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 					<visible>System.Loggedon</visible>
 				</item>
 				<item>
@@ -130,11 +129,6 @@
 					<label>$LOCALIZE[13018]</label>
 					<onclick>InhibitIdleShutdown(false)</onclick>
 					<visible>System.HasShutdown + System.IsInhibit</visible>
-				</item>
-				<item>
-					<label>$LOCALIZE[20183]</label>
-					<onclick>ReloadSkin()</onclick>
-                    <visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
 				</item>
 			</content>
 		</control>
