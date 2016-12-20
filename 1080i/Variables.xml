@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <variable name="NameAndVersionSkinVar">
-        <value>Estuary Extented Shortcuts $INFO[System.AddonVersion(skin.estuary-extented-s)]</value>
+        <value>Estuary Extended Shortcuts $INFO[System.AddonVersion(skin.estuary-extended-s)]</value>
     </variable>
     <!-- Stats bar -->
 	<variable name="InfoBarStats">
