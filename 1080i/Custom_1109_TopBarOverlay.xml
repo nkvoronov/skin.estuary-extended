@@ -11,7 +11,7 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>100%</width>
+				<width>2000</width>
 				<height>83</height>
 				<texture>frame/InfoBar.png</texture>
 			</control>
@@ -68,8 +68,17 @@
 					<animation effect="fade" time="300">Visible</animation>
 					<animation effect="fade" time="150">Hidden</animation>
 					<aspectratio>keep</aspectratio>
-					<visible>!Window.IsActive(volumebar)</visible>
+					<visible>!Window.IsActive(volumebar) + !Player.Muted</visible>
 				</control>
+                <control type="image">
+                    <right>23</right>
+                    <top>19</top>
+                    <width>40</width>
+                    <height>40</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="white">dialogs/volume/mute.png</texture>
+                    <visible>Player.Muted</visible>
+                </control>
 				<control type="label">
 					<top>40</top>
 					<label>$INFO[Player.FinishTime,$LOCALIZE[31080]: ]</label>

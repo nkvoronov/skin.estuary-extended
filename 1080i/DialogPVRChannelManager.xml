@@ -67,8 +67,7 @@
 						<height>50</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
-						<!-- 						<visible>!ListItem.Property(ActiveChannel)</visible>
-						 -->
+                        <!-- <visible>!ListItem.Property(ActiveChannel)</visible> -->						
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -256,7 +255,8 @@
 			<include content="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="5" />
-				<param name="label" value="$LOCALIZE[14070]" />
+				<!-- <param name="label" value="$LOCALIZE[14070]" /> -->
+                <param name="label" value="$LOCALIZE[84104]" />
 			</include>
 			<include content="DefaultDialogButton">
 				<param name="width" value="350" />

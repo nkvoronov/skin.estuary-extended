@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1110">
+    <defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<left>502</left>
+		<top>345</top>
+	</coordinates>
+	<include>Animation_DialogPopupOpenClose</include>
+	<depth>DepthDialog+</depth>
+	<controls>
+		<control type="group">
+			<include content="DialogBackgroundCommons">
+				<param name="DialogBackgroundWidth" value="915" />
+				<param name="DialogBackgroundHeight" value="380" />
+				<param name="DialogHeaderLabel" value="$LOCALIZE[10035]" />
+				<param name="DialogHeaderId" value="1" />
+			</include>
+			<control type="textbox" id="9">
+				<left>30</left>
+				<top>82</top>
+				<width>855</width>
+				<height>150</height>
+				<label>10045</label>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="9000">
+				<orientation>horizontal</orientation>
+				<left>0</left>
+				<top>280</top>
+				<width>915</width>
+				<align>center</align>
+				<include content="DefaultDialogButton">
+					<param name="id" value="11" />
+					<param name="label" value="$LOCALIZE[186]" />
+					<param name="onclick" value="Skin.ResetSettings" />
+					<param name="onclick2" value="ReloadSkin()" />
+					<param name="onclick3" value="Dialog.Close(1110)" />
+					<param name="onclick4" value="ActivateWindow(Home)" />
+				</include>
+				<include content="DefaultDialogButton">
+					<param name="id" value="10" />
+					<param name="label" value="$LOCALIZE[222]" />
+					<param name="onclick" value="PreviousMenu" />
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>
+

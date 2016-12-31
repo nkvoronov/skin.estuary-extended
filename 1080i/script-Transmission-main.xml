@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<window>
+	<defaultcontrol always="true">111</defaultcontrol>
+	<allowoverlays>false</allowoverlays>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>	
+	<coordinates>
+		<system>1</system>
+		<left>240</left>
+		<top>70</top>
+	</coordinates>
+	<controls>
+        <control type="image">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>5760</width>
+			<height>3240</height>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="C2FFFFFF">colors/black.png</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>940</height>
+			<texture border="2">dialogs/dialog-bg-solid.png</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Header image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>70</height>
+			<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+		</control>
+		<control type="label">
+			<description>textarea</description>
+			<textoffsetx>70</textoffsetx>
+			<left>-30</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>70</height>
+			<visible>true</visible>
+			<label>$ADDON[script.transmission 32000]</label>
+			<font>font20_title</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<shadowcolor>black</shadowcolor>
+		</control>
+        <control type="button" id="22001">
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>5760</width>
+			<height>3240</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>Action(close)</onclick>
+		</control>
+		<control type="button" id="22002">
+			<description>button overlay to avoid closing in dialog area</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1440</width>
+			<height>940</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>noop</onclick>
+		</control>
+		<control type="radiobutton" id="22000">
+			<left>1440</left>
+			<top>11</top>
+			<width>48</width>
+			<height>48</height>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label></label>
+			<animation effect="slide" end="-70,0" time="0" condition="true">Conditional</animation>
+			<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradiooffnofocus>
+			<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="EEFFFFFF">icons/logo.png</textureradioonnofocus>
+			<onclick>Action(close)</onclick>
+		</control>
+        <control type="image">
+			<left>230</left>
+			<top>70</top>
+			<width>1200</width>
+			<height>870</height>
+            <texture border="40">buttons/dialogbutton-nofo.png</texture>
+		</control>
+		<control type="group">
+			<left>0</left>
+			<top>70</top>
+			<!-- Button Group -->
+			<control type="button" id="111">
+				<description>Add torrent</description>
+				<left>0</left>
+				<top>0</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32101]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<ondown>112</ondown>
+				<onup>117</onup>
+			</control>
+			<control type="button" id="112">
+				<description>Remove torrent</description>
+				<left>0</left>
+				<top>120</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32102]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>111</onup>
+				<ondown>113</ondown>
+			</control>
+			<control type="button" id="113">
+				<description>Stop torrent</description>
+				<left>0</left>
+				<top>240</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32103]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>112</onup>
+				<ondown>114</ondown>
+			</control>
+			<control type="button" id="114">
+				<description>Start torrent</description>
+				<left>0</left>
+				<top>360</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32104]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>113</onup>
+				<ondown>115</ondown>
+			</control>
+			<control type="button" id="115">
+				<description>Stop all torrents</description>
+				<left>0</left>
+				<top>480</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32105]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>114</onup>
+				<ondown>116</ondown>
+			</control>
+			<control type="button" id="116">
+				<description>Start all torrents</description>
+				<left>0</left>
+				<top>600</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32106]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>115</onup>
+				<ondown>118</ondown>
+			</control>
+			<control type="button" id="118">
+				<description>Settings</description>
+				<left>0</left>
+				<top>720</top>
+				<height>150</height>
+				<width>250</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textoffsety>45</textoffsety>
+				<label>$ADDON[script.transmission 32108]</label>
+				<font>font12_title</font>
+				<onright>120</onright>
+				<onup>116</onup>
+				<ondown>111</ondown>
+			</control>
+		</control>
+		<control type="scrollbar" id="121">
+			<description>Scroll bar for the torrent list</description>
+			<left>1410</left>
+			<top>90</top>
+			<width>10</width>
+			<height>830</height>
+			<visible>true</visible>
+			<pulseonselect></pulseonselect>
+			<orientation>vertical</orientation>
+			<showonepage>false</showonepage>
+		</control>
+		<control type="list" id="120">
+			<description>Torrent list</description>
+			<left>250</left>
+			<top>90</top>
+			<width>1160</width>
+			<height>870</height>
+			<viewtype label="Torrent List">list</viewtype>
+			<orientation>vertical</orientation>
+			<visible>true</visible>
+			<onleft>111</onleft>
+			<onright>117</onright>
+            <onup>117</onup>
+			<pagecontrol>121</pagecontrol>
+			<itemlayout width="1160" height="100">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1170</width>
+					<height>100</height>
+					<texture border="5">lists/separator.png</texture>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<top>0</top>
+					<width>100</width>
+					<height>100</height>
+					<texture>icons/$INFO[ListItem.Property(TorrentStatusIcon)]</texture>
+				</control>
+				<control type="label">
+					<left>110</left>
+					<top>0</top>
+					<width>1150</width>
+					<height>50</height>
+					<label>$INFO[ListItem.label]</label>
+                    <aligny>center</aligny>
+				</control>
+				<control type="progress">
+					<left>110</left>
+					<top>65</top>
+					<width>950</width>
+					<height>25</height>
+					<info>ListItem.Property(TorrentProgress)</info>
+				</control>
+				<control type="label">
+					<left>1070</left>
+					<top>50</top>
+					<width>100</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Property(TorrentProgress)]</label>
+                    <aligny>center</aligny>
+				</control>
+			</itemlayout>
+			<focusedlayout width="1160" height="100">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1170</width>
+					<height>100</height>
+					<visible>Control.HasFocus(120)</visible>
+					<texture border="5" colordiffuse="button_focus">lists/focus.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1170</width>
+					<height>100</height>
+					<visible>!Control.HasFocus(120)</visible>
+					<texture border="5">lists/separator.png</texture>
+				</control>
+				<control type="image">
+					<left>5</left>
+					<top>0</top>
+					<width>100</width>
+					<height>100</height>
+					<texture>icons/$INFO[ListItem.Property(TorrentStatusIcon)]</texture>
+				</control>
+				<control type="label">
+					<left>110</left>
+					<top>0</top>
+					<width>1150</width>
+					<height>50</height>
+					<label>$INFO[ListItem.label]</label>
+					<scroll>true</scroll>
+                    <aligny>center</aligny>
+				</control>
+				<control type="progress">
+					<left>110</left>
+					<top>65</top>
+					<width>950</width>
+					<height>25</height>
+					<info>ListItem.Property(TorrentProgress)</info>
+				</control>
+				<control type="label">
+					<left>1070</left>
+					<top>50</top>
+					<width>100</width>
+					<height>50</height>
+					<label>$INFO[ListItem.Property(TorrentProgress)]</label>
+                    <aligny>center</aligny>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

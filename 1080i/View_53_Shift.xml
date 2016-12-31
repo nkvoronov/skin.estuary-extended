@@ -57,14 +57,20 @@
 					<itemlayout width="340">
 						<control type="group">
 							<control type="image">
-								<left>0</left>
-								<top>3</top>
+								<top>-10</top>
 								<width>340</width>
-								<height>424</height>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-								<bordertexture border="20">overlays/shadow.png</bordertexture>
-								<bordersize>20</bordersize>
+								<height>450</height>
+								<texture border="40">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>15</top>
+								<width>300</width>
+								<height>400</height>
+								<aspectratio aligny="center">keep</aspectratio>
+								<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+								<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+								<bordersize>4</bordersize>
 							</control>
 							<control type="textbox">
 								<left>20</left>
@@ -77,22 +83,37 @@
 								<font>font12</font>
 							</control>
 							<control type="group">
-								<left>145</left>
-								<top>383</top>
+								<left>255</left>
+								<top>20</top>
 								<include>UserRatingCircle</include>
+								<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
+							</control>
+							<control type="image">
+								<left>40</left>
+								<top>20</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
 					</itemlayout>
 					<focusedlayout width="340">
 						<control type="image">
-							<left>0</left>
-							<top>3</top>
+							<top>-10</top>
 							<width>340</width>
-							<height>424</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="20">overlays/shadow.png</bordertexture>
-							<bordersize>20</bordersize>
+							<height>450</height>
+							<texture border="40">buttons/button-nofo.png</texture>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>15</top>
+							<width>300</width>
+							<height>400</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+							<bordersize>4</bordersize>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -106,10 +127,19 @@
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
 						<control type="group">
-							<left>145</left>
-							<top>383</top>
+							<left>255</left>
+							<top>20</top>
 							<include>UserRatingCircle</include>
+							<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 						</control>
+						<control type="image">
+							<left>40</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!IsEmpty(ListItem.Overlay)</visible>
+						</control>                        
 					</focusedlayout>
 				</control>
 			</control>
@@ -117,39 +147,59 @@
 				<visible>Control.IsVisible(53)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
-				<include content="ShiftTextbox">
-					<param name="textbox_id" value="53200" />
-					<param name="textbox_content" value="$VAR[ShiftLeftTextBoxVar]" />
-				</include>
 				<control type="group">
-					<left>860</left>
-					<include content="ShiftTextbox">
-						<param name="textbox_id" value="53300" />
-						<param name="textbox_content" value="$VAR[ShiftRightTextBoxVar]" />
-					</include>
+					<visible>!ListItem.IsParentFolder</visible>
+					<control type="image">
+						<top>-20</top>
+						<left>90</left>
+						<width>880</width>
+						<height>192</height>
+						<texture border="22">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="image">
+						<top>-20</top>
+						<left>950</left>
+						<width>880</width>
+						<height>192</height>
+						<texture border="22">dialogs/dialog-bg.png</texture>
+					</control>
+					<control type="group">
+						<visible>!ListItem.IsCollection</visible>
+						<control type="textbox" id="53200">						
+							<left>130</left>
+							<top>15</top>
+							<width>790</width>
+							<height>123</height>
+							<label>$VAR[ShiftLeftTextBoxVar]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+						<control type="textbox" id="53300">
+							<left>990</left>
+							<top>15</top>
+							<width>790</width>
+							<height>123</height>
+							<label>$VAR[ShiftRightTextBoxVar]</label>
+							<font>font12</font>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</control>
+					<control type="group">
+						<visible>ListItem.IsCollection</visible>
+						<left>120</left>
+						<top>15</top>
+						<include content="InfoList">
+							<param name="height" value="140" />
+							<param name="width" value="1700" />
+							<param name="item_height" value="30" />
+							<param name="item_width" value="855" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="descending" />
+							<param name="font" value="font12" />
+							<param name="orientation" value="horizontal" />
+						</include>
+					</control>
 				</control>
-			</control>
-		</control>
-	</include>
-	<include name="ShiftTextbox">
-		<control type="group">
-			<animation effect="fade" time="200" start="0" end="100" condition="!String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
-			<animation effect="fade" time="200" start="100" end="0" condition="String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
-			<control type="image">
-				<top>-20</top>
-				<left>90</left>
-				<width>880</width>
-				<height>192</height>
-				<texture border="22">dialogs/dialog-bg.png</texture>
-			</control>
-			<control type="textbox" id="$PARAM[textbox_id]">
-				<left>130</left>
-				<top>15</top>
-				<width>790</width>
-				<height>123</height>
-				<label>$PARAM[textbox_content]</label>
-				<font>font12</font>
-				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 		</control>
 	</include>

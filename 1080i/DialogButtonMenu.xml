@@ -66,6 +66,7 @@
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
+					<scroll>yes</scroll>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
@@ -129,6 +130,11 @@
 					<label>$LOCALIZE[13018]</label>
 					<onclick>InhibitIdleShutdown(false)</onclick>
 					<visible>System.HasShutdown + System.IsInhibit</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[20183]</label>
+					<onclick>ReloadSkin()</onclick>
+                    <!-- <visible>!Skin.HasSetting(hide_reload_skin_button)</visible> -->
 				</item>
 			</content>
 		</control>
