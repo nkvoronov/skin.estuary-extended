@@ -231,6 +231,16 @@
 				<width>40</width>
 				<height>40</height>
 				<texture>$VAR[AddonsListIconVar]</texture>
+                <animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>15</top>
+				<width>40</width>
+				<height>40</height>
+				<texture  colordiffuse="button_focus">$VAR[AddonsListIconVar]</texture>
+                <animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
+                <visible>!Control.HasFocus(55)</visible>
 			</control>
 			<control type="label">
 				<left>75</left>
@@ -266,7 +276,7 @@
 				<top>15</top>
 				<width>40</width>
 				<height>40</height>
-				<texture>$VAR[AddonsListIconVar]</texture>
+				<texture colordiffuse="grey">$VAR[AddonsListIconVar]</texture>
 			</control>
 			<control type="label">
 				<left>75</left>

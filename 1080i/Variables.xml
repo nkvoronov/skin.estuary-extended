@@ -178,9 +178,9 @@
 		<value condition="ListItem.Property(addon.isinstalled) + !ListItem.Property(addon.isenabled) + Window.IsActive(addonbrowser)">icons/addonstatus/disable.png</value>
 		<value condition="ListItem.Property(addon.hasupdate)">icons/addonstatus/update.png</value>
 		<value condition="ListItem.Property(addon.isinstalled)">OverlayWatched.png</value>
+        <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
         <value condition="[Window.IsActive(videos) | Window.IsActive(musiclibrary) | Window.IsActive(pictures) | Window.IsActive(programs)] + !String.IsEqual(ListItem.Label,$LOCALIZE[21452]) + !ListItem.IsParentFolder">OverlayWatched.png</value>
 		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
-
 	</variable>
 	<variable name="AudioDSPIconVar">
 		<value condition="!IsEmpty(ADSP.MasterOverrideIcon)">$INFO[ADSP.MasterOverrideIcon]</value>
