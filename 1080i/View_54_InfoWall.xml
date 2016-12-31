@@ -36,9 +36,18 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<control type="group">
-			<left>320</left>
-			<top>20</top>
+			<left>333</left>
+			<top>10</top>
 			<include>UserRatingCircle</include>
+			<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
+		</control>
+		<control type="image">
+			<left>25</left>
+			<top>15</top>
+			<width>32</width>
+			<height>32</height>
+			<texture>$VAR[ListWatchedIconVar]</texture>
+			<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 		</control>
 	</include>
 	<include name="InfoWallMusicLayout">
@@ -77,10 +86,19 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
 			</control>
-			<control type="group">
-				<left>230</left>
-				<top>28</top>
-				<include>UserRatingCircle</include>
+            <control type="group">
+                <left>253</left>
+                <top>10</top>
+                <include>UserRatingCircle</include>
+				<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
+            </control>
+			<control type="image">
+				<left>25</left>
+				<top>15</top>
+				<width>32</width>
+				<height>32</height>
+				<texture>$VAR[ListWatchedIconVar]</texture>
+				<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 			</control>
 		</definition>
 	</include>

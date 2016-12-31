@@ -2,10 +2,13 @@
 <includes>
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
+    <include file="Includes_HomeMainMenu.xml" />
+    <include file="Includes_HomeSubMenu.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
 	<include file="Includes_PVR.xml" />
+    <include file="Includes_UserWidgets.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />
 	<include file="View_52_IconWall.xml" />
@@ -103,31 +106,34 @@
 		<param name="path">$INFO[ListItem.Path]</param>
 		<param name="height">200</param>
 		<param name="width">1152</param>
+		<param name="item_height">40</param>
+		<param name="item_width">1152</param>
 		<param name="list_id">5000</param>
 		<param name="font">font13</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
+		<param name="orientation">vertical</param>
 		<definition>
 			<control type="panel" id="$PARAM[list_id]">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<orientation>vertical</orientation>
-				<focusedlayout height="40" width="$PARAM[width]">
+				<orientation>$PARAM[orientation]</orientation>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
 					<control type="label">
 						<left>10</left>
-						<height>50</height>
-						<width>$PARAM[width]</width>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[item_width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</focusedlayout>
-				<itemlayout height="40" width="$PARAM[width]">
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
 					<control type="label">
 						<left>10</left>
-						<height>50</height>
-						<width>$PARAM[width]</width>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[item_width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -259,6 +265,29 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 			</focusedlayout>
+		</control>
+	</include>
+	<include name="LeftRightAlignedInfoLine">
+		<control type="group">
+			<height>30</height>
+			<control type="label">
+				<left>0</left>
+				<width>270</width>
+				<height>40</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$PARAM[label]:</label>
+				<font>font12</font>
+				<textcolor>button_focus</textcolor>
+			</control>
+			<control type="label">
+				<left>290</left>
+				<width>1000</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<label>$PARAM[value]</label>
+				<font>font12</font>
+			</control>
 		</control>
 	</include>
 	<include name="PicsInfoLine">
@@ -661,6 +690,8 @@
 		</definition>
 	</include>
 	<include name="UpDownArrows">
+        <param name="width">48</param>
+        <param name="height">24</param>
 		<param name="up_posy">134</param>
 		<param name="down_posy">910</param>
 		<param name="posx">936</param>
@@ -669,8 +700,8 @@
 			<control type="button" id="$PARAM[container_id]588">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[down_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
@@ -684,8 +715,8 @@
 			<control type="button" id="$PARAM[container_id]589">
 				<left>$PARAM[posx]</left>
 				<top>$PARAM[up_posy]</top>
-				<width>48</width>
-				<height>24</height>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
 				<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
@@ -697,6 +728,35 @@
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
+	</include>
+	<include name="UpDownArrowsHome">
+		<control type="group">
+			<visible>Control.IsVisible($PARAM[container_id])</visible>
+			<animation effect="fade" start="0" end="100" delay="1000" time="200">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="0">Hidden</animation>
+			<control type="image">
+				<left>1860</left>
+				<top>950</top>
+				<width>36</width>
+				<height>18</height>
+				<texture colordiffuse="button_focus">overlays/arrowdown.png</texture>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+				<animation effect="zoom" start="100,100" end="100,0" center="0,890" time="200">WindowClose</animation>
+				<visible>Container($PARAM[container_id]).HasNext</visible>
+			</control>
+			<control type="image">
+				<left>1860</left>
+				<top>94</top>
+				<width>36</width>
+				<height>18</height>
+				<texture colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texture>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
+				<animation effect="zoom" start="100,100" end="100,0" center="0,180" time="200">WindowClose</animation>
+				<visible>Container($PARAM[container_id]).HasPrevious</visible>
+			</control>
+		</control>
 	</include>
 	<include name="LeftRightArrows">
 		<param name="left_posx">445</param>
@@ -939,7 +999,7 @@
 							<animation effect="fade" time="300">Visible</animation>
 							<animation effect="fade" time="150">Hidden</animation>
 							<aspectratio>keep</aspectratio>
-							<visible>!Window.IsActive(volumebar)</visible>
+							<visible>!Window.IsActive(volumebar) + !Player.Muted</visible>
 						</control>
 						<control type="label">
 							<top>40</top>
@@ -986,6 +1046,8 @@
 		<align>left</align>
 	</include>
 	<include name="DefaultBackground">
+		<param name="is_media">True</param>
+		<param name="image_path">special://skin/extras/backgrounds/SKINDEFAULT.jpg</param>
 		<definition>
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
@@ -998,7 +1060,7 @@
 			</control>
 			<control type="group">
 				<animation effect="zoom" center="960,540" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-				<control type="image">
+				<control type="image" id="90000">
 					<depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
@@ -1006,7 +1068,7 @@
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
 					<texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
 				</control>
-				<control type="image">
+				<control type="image" id="90001">
 					<depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
@@ -1015,9 +1077,36 @@
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<texture background="true" colordiffuse="35FFFFFF">$VAR[MediaFanartVar]</texture>
+					<visible>$PARAM[is_media]</visible>
+					<visible>!Player.HasMedia | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+				</control>
+                <control type="image" id="90002">
+					<depth>DepthBackground</depth>
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<fadetime>400</fadetime>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+					<animation effect="fade" time="400">VisibleChange</animation>
+					<texture background="true" colordiffuse="35FFFFFF">$VAR[FanartHomeTypeVar]</texture>
+					<visible>$PARAM[is_media]</visible>
+                    <visible>String.IsEmpty(Control.GetLabel(90001))</visible>
 					<visible>!Player.HasMedia | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 				</control>
 			</control>
+			<control type="multiimage">
+				<depth>DepthBackground</depth>
+				<include>FullScreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<fadetime>600</fadetime>
+				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<imagepath background="true" colordiffuse="35FFFFFF">$PARAM[image_path]</imagepath>
+				<visible>!$PARAM[is_media]</visible>
+				<visible>!Player.HasMedia</visible>
+			</control>			
 		</definition>
 	</include>
 	<include name="BottomBar">

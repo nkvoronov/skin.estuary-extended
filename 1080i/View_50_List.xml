@@ -166,7 +166,7 @@
 			<height>461</height>
 			<aspectratio aligny="center">scale</aspectratio>
 			<fadetime>300</fadetime>
-			<texture background="true" fallback="DefaultFolderSquare.png">$VAR[IconWallThumbVar]</texture>
+			<texture background="true" fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 		</control>
 		<control type="group">
 			<left>520</left>

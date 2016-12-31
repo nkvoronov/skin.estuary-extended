@@ -5,6 +5,7 @@
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
+		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -254,6 +255,7 @@
 							<param name="path" value="$INFO[ListItem.FilenameAndPath]" />
 							<param name="height" value="362" />
 							<param name="width" value="560" />
+							<param name="item_width" value="560" />
 							<param name="font" value="font12" />
 							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
 						</include>

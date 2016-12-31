@@ -263,7 +263,7 @@
 		</animation>
 		<control type="image">
 			<left>0</left>
-			<top>80</top>
+			<top>79</top>
 			<width>484</width>
 			<height>920</height>
 			<texture>lists/panel.png</texture>

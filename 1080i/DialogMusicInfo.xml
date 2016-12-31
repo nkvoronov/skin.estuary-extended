@@ -4,6 +4,7 @@
 	<onload>SetProperty(infobackground,$INFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
+        <!-- Thumb -->
 		<control type="group">
 			<include>OpenClose_Left</include>
 			<top>158</top>
@@ -26,11 +27,13 @@
 				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
 		</control>
+        <!-- Main -->
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<include>Visible_Right</include>
 			<left>80</left>
 			<visible>![Window.Is(songinformation) + Window.IsActive(musicinformation)]</visible>
+            <!-- Descriptions -->
 			<control type="group">
 				<visible>Integer.IsEqual(Container(50).NumItems,0) + String.IsEmpty(Control.GetLabel(400))</visible>
 				<top>160</top>
@@ -141,6 +144,7 @@
 				<label>$VAR[MusicInfoTextboxVar]</label>
 				<textcolor>button_focus</textcolor>
 			</control>
+            <!-- List albums or songs -->
 			<control type="panel" id="50">
 				<left>585</left>
 				<top>170</top>
@@ -362,6 +366,7 @@
 				<param name="visible" value="true" />
 			</include>
 		</control>
+        <!-- TopBarInfo Artists -->
 		<control type="group">
 			<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 			<include content="InfoDialogTopBarInfo">
@@ -370,6 +375,7 @@
 				<param name="id" value="33333" />
 			</include>
 		</control>
+        <!-- TopBarInfo Albums -->
 		<control type="group">
 			<visible>String.IsEqual(ListItem.DBType,album)</visible>
 			<include content="InfoDialogTopBarInfo">
@@ -378,6 +384,7 @@
 				<param name="id" value="33334" />
 			</include>
 		</control>
+        <!-- TopBarInfo Songs -->
 		<control type="group">
 			<visible>String.IsEqual(ListItem.DBType,song) + !Window.IsActive(musicinformation)</visible>
 			<include content="InfoDialogTopBarInfo">
