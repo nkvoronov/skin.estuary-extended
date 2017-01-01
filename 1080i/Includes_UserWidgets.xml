@@ -435,7 +435,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].0)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].0)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>$PARAM[visible]</visible>
         </control>
@@ -445,7 +445,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].1)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].1)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].0.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -456,7 +456,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].2)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].2)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].1.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -467,7 +467,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].3)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].3)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].2.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -478,7 +478,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].4)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].4)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].3.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -489,7 +489,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].5)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].5)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].4.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -500,7 +500,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].6)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].6)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].5.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -511,7 +511,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].7)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].7)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].6.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -522,7 +522,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].8)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].8)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].7.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -533,7 +533,7 @@
             <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
-			<onclick>RunScript(script.pvr.favourites,isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].9)</onclick>
+			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].9)</onclick>
             <visible>Skin.HasSetting($PARAM[flags])</visible>
             <visible>!IsEmpty(Skin.String(Channel$PARAM[setchannelstype].8.Label))</visible>
             <visible>$PARAM[visible]</visible>
@@ -544,113 +544,103 @@
         <content>
             <item id="1">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].0.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].0.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].0.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].0.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].0.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].0.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].0.ChannelId))</visible>
             </item>
             <item id="2">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].1.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].1.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].1.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].1.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].1.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].1.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].1.ChannelId))</visible>
             </item>
             <item id="3">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].2.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].2.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].2.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].2.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].2.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].2.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].2.ChannelId))</visible>
             </item>
             <item id="4">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].3.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].3.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].3.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].3.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].3.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].3.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].3.ChannelId))</visible>
             </item>
             <item id="5">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].4.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].4.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].4.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].4.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].4.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].4.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].4.ChannelId))</visible>
             </item>
             <item id="6">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].5.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].5.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].5.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].5.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].5.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].5.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].5.ChannelId))</visible>
             </item>
             <item id="7">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].6.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].6.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].6.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].6.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].6.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].6.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].6.ChannelId))</visible>
             </item>
             <item id="8">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].7.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].7.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].7.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].7.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].7.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].7.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].7.ChannelId))</visible>
             </item>
             <item id="9">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].8.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].8.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].8.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].8.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].8.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].8.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].8.ChannelId))</visible>
             </item>
             <item id="10">
                 <label>$INFO[Skin.String(Channel$PARAM[id2].9.Label)]</label>
-                <onclick>PlayMedia("$INFO[Skin.String(Channel$PARAM[id2].9.Path)]")</onclick>
+                <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].9.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="ChannelNumber">$INFO[Skin.String(Channel$PARAM[id2].9.Number)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].9.Title)]</property>
-                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].9.Path))</visible>
+                <visible>!IsEmpty(Skin.String(Channel$PARAM[id2].9.ChannelId))</visible>
             </item>
         </content>
 	</include>
@@ -669,6 +659,10 @@
 				<top>0</top>
                 <visible>$PARAM[visible]</visible>
 				<visible>IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<include name="LeftRightArrows">
+					<param name="posy" value="300" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
 				<control type="label">
 					<left>500</left>
 					<top>15</top>
@@ -677,10 +671,6 @@
 					<label>$PARAM[widget_header]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 				</control>
-				<include name="LeftRightArrows">
-					<param name="posy" value="300" />
-					<param name="list_id" value="$PARAM[list_id]" />
-				</include>
 				<control type="panel" id="$PARAM[list_id]">
 					<left>480</left>
 					<top>55</top>

@@ -397,11 +397,11 @@
                     <param name="text_label" value="$LOCALIZE[31143]" />
                     <param name="button_label" value="$LOCALIZE[31144]" />
                     <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-                    <param name="button_id" value="13400"/>
-                    <param name="visible" value="!System.GetBool(pvrmanager.enabled)"/>
+                    <param name="button_id" value="14400"/>
+                    <param name="visible" value="!PVR.HasRadioChannels"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
                 </include>
-                <include condition="PVR.HasRadioChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" name="WidgetListChannels">
+                <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/radio/*"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>                            
@@ -412,7 +412,7 @@
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
-                <include condition="PVR.HasRadioChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="WidgetListCustomChannels">
+                <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="WidgetListCustomChannels">
                     <param name="widget_header" value="$LOCALIZE[84208]"/>
                     <param name="widget_target" value="Radio"/>
 					<param name="onup_id" value="14900"/>

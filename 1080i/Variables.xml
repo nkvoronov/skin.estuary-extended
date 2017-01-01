@@ -29,8 +29,8 @@
 		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	<variable name="NowPlayingMainlabelVar">
-        <value condition="VideoPlayer.Content(liveTV) + Player.HasAudio + !SubString(MusicPlayer.Title,.pvr,Right)">$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(liveTV)">$INFO[Player.Title]</value>
+        <value condition="VideoPlayer.Content(LiveTV) + Player.HasAudio + !SubString(MusicPlayer.Title,.pvr,Right)">$INFO[MusicPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[Player.Title]</value>
 		<value>$INFO[Player.Time]$INFO[Player.Title, - ]</value>
 	</variable>
 	<variable name="AutoCompletionContentVar">
@@ -69,7 +69,7 @@
 	</variable>
 	<variable name="GlobalFanartVar">
 		<value condition="Skin.HasSetting(use_custom_bg) + !IsEmpty(Skin.String(custom_background))">$INFO[Skin.String(custom_background)]</value>
-		<value>special://skin/extras/backgrounds/$INFO[Skin.CurrentColourTheme].jpg</value>
+		<value>$INFO[Skin.CurrentColourTheme,special://skin/extras/backgrounds/,.jpg]</value>
 	</variable>
 	<variable name="FullScreenInfoTextBoxVar">
 		<value condition="Control.HasFocus(5552)">$INFO[VideoPlayer.Duration,$LOCALIZE[180]: [B],[/B][CR]]</value>
@@ -108,11 +108,11 @@
 	</variable>
 	<variable name="IconWallThumbVar">
         <value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
-        <value condition="IsEmpty(ListItem.Thumb) + Container.Content(artists)">DefaultArtist.png</value>
-        <value condition="IsEmpty(ListItem.Thumb) + Container.Content(albums)">DefaultAlbumCover.png</value>
-        <value condition="IsEmpty(ListItem.Thumb) + Container.Content(songs)">DefaultMusicSongs.png</value>
-        <value condition="IsEmpty(ListItem.Thumb) + Container.Content(directors)">DefaultDirector.png</value>
-        <value condition="IsEmpty(ListItem.Thumb) + Container.Content(playlists)">DefaultPlaylist.png</value>
+        <value condition="Container.Content(artists) + IsEmpty(ListItem.Thumb)">DefaultArtist.png</value>
+        <value condition="Container.Content(albums) + IsEmpty(ListItem.Thumb)">DefaultAlbumCover.png</value>
+        <value condition="Container.Content(songs) + IsEmpty(ListItem.Thumb)">DefaultMusicSongs.png</value>
+        <value condition="Container.Content(directors) + IsEmpty(ListItem.Thumb)">DefaultDirector.png</value>
+        <value condition="Container.Content(playlists) + IsEmpty(ListItem.Thumb)">DefaultPlaylist.png</value>
         <value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
 		<value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>        
         <value condition="Container.Content(countries) + StringCompare(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>       
@@ -178,7 +178,6 @@
 		<value>$INFO[ListItem.Property(Addon.Creator),, - ]$INFO[ListItem.Property(Addon.Version)]</value>
 	</variable>
 	<variable name="AddonsListIconVar">
-        <value condition="StringCompare(ListItem.Label,..)">-</value>        
         <value condition="ListItem.Property(Addon.UpdateAvail)">icons/addonstatus/update.png</value>
 		<value condition="!IsEmpty(ListItem.Property(Addon.Broken))">icons/infodialogs/update.png</value>		
 		<value condition="ListItem.Property(Addon.Downloading)">icons/addonstatus/install.png</value>
@@ -186,8 +185,9 @@
         <value condition="ListItem.Property(Addon.Installed) + ListItem.Property(Addon.Enabled)">OverlayWatched.png</value>
 		<value condition="StringCompare(ListItem.Property(Addon.Status),$LOCALIZE[1223])">icons/addonstatus/disable.png</value>
         <value condition="StringCompare(ListItem.Property(Addon.Status),$LOCALIZE[305])">OverlayWatched.png</value>
-        <value condition="[Window.IsActive(videos) | Window.IsActive(musiclibrary) | Window.IsActive(pictures) | Window.IsActive(programs)] + !StringCompare(ListItem.Label,$LOCALIZE[21452])">OverlayWatched.png</value>
-		<value>OverlayUnWatched.png</value>
+        <value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
+        <value condition="[Window.IsActive(videos) | Window.IsActive(musiclibrary) | Window.IsActive(pictures) | Window.IsActive(programs)] + !StringCompare(ListItem.Label,$LOCALIZE[21452]) + !StringCompare(ListItem.Label,..)">OverlayWatched.png</value>
+		<value condition="!StringCompare(ListItem.Label,..)">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="AudioDSPIconVar">
 		<value condition="!IsEmpty(ADSP.MasterOverrideIcon)">$INFO[ADSP.MasterOverrideIcon]</value>
@@ -374,6 +374,7 @@
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
 		<value>$INFO[Container.Art(fanart)]</value>
 	</variable>
     <variable name="FanartHomeTypeVar">
@@ -407,11 +408,12 @@
 		<value>-</value>
 	</variable>
 	<variable name="ListWatchedIconVar">
+		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.IsPlaying">overlays/watched/OverlayPlaying-List.png</value>
-		<value condition="StringCompare(ListItem.Label,..)">-</value>
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="!IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
-        <value condition="ListItem.IsFolder + Container.Content(files)">overlays/folder.png</value>
+		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
+		<value condition="ListItem.IsFolder">overlays/folder.png</value>
 		<value>OverlayUnwatched.png</value>
 	</variable>
 	<variable name="SettingsSectionIcon">

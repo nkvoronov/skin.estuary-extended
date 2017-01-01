@@ -28,7 +28,7 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(files) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(videos)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(files) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content()</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
@@ -81,6 +81,7 @@
 					<include name="InfoList">
 						<param name="height" value="322" />
 						<param name="width" value="429" />
+                        <param name="item_width" value="429" />
 						<param name="sortby" value="year" />
 						<param name="sortorder" value="descending" />
 						<param name="font" value="font12" />

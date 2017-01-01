@@ -3,27 +3,15 @@
     <defaultcontrol always="true">1000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
-        <control type="group">
-            <animation effect="zoom" center="960,540" end="102,102" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>
-            <control type="image">
-                <depth>DepthBackground</depth>
-                <aspectratio>scale</aspectratio>
-                <animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
-                <animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
-                <texture fallback="default/bg.jpg">$VAR[GlobalFanartVar]</texture>
-            </control>
-        </control>
+		<!-- Background -->
         <include>DefaultBackground</include>
-
         <!-- topbar -->
-        <include content="TopBar">
+        <include name="TopBar">
             <param name="breadcrumbs_label" value="$ADDON[service.libreelec.settings 600]" />
             <param name="breadcrumbs_icon" value="os/libreelec/logo_libreelec.png" />
         </include>
-
         <!-- bottombar -->
         <include>BottomBar</include>
-
         <control type="group">
             <left>110</left>
             <!-- Main Menu (left) -->
@@ -1135,7 +1123,6 @@
                 <visible>!IsEmpty(Control.GetLabel(1500))</visible>
             </control>
         </control>
-
         <!-- simple list ( 1100 ) up / down -->
         <control type="button" id="1090">
             <left>1141</left>
@@ -1175,7 +1162,6 @@
             <orientation>vertical</orientation>
             <visible>Control.IsVisible(1100)</visible>
         </control>
-
         <!-- network list ( 1200 ) up / down -->
         <control type="button" id="1092">
             <left>1141</left>
@@ -1215,7 +1201,6 @@
             <orientation>vertical</orientation>
             <visible>Control.IsVisible(1200)</visible>
         </control>
-
         <!-- bluetooth list ( 1300 ) up / down -->
         <control type="button" id="1092">
             <left>1141</left>
@@ -1255,6 +1240,5 @@
             <orientation>vertical</orientation>
             <visible>Control.IsVisible(1300)</visible>
         </control>
-
     </controls>
 </window>

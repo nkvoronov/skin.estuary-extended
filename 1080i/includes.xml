@@ -106,31 +106,34 @@
 		<param name="path">$INFO[ListItem.Path]</param>
 		<param name="height">200</param>
 		<param name="width">1152</param>
+		<param name="item_height">40</param>
+		<param name="item_width">1152</param>
 		<param name="list_id">5000</param>
 		<param name="font">font13</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
+		<param name="orientation">vertical</param>
 		<definition>
 			<control type="panel" id="$PARAM[list_id]">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<orientation>vertical</orientation>
-				<focusedlayout height="40" width="$PARAM[width]">
+				<orientation>$PARAM[orientation]</orientation>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
 					<control type="label">
 						<left>10</left>
-						<height>50</height>
-						<width>$PARAM[width]</width>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[item_width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<font>$PARAM[font]</font>
 					</control>
 				</focusedlayout>
-				<itemlayout height="40" width="$PARAM[width]">
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
 					<control type="label">
 						<left>10</left>
-						<height>50</height>
-						<width>$PARAM[width]</width>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[item_width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -1030,7 +1033,7 @@
 			<height>50</height>
 			<fadetime>300</fadetime>
 			<aspectratio align="left">keep</aspectratio>
-			<texture colordiffuse="button_focus">weather/small/$INFO[Weather.FanartCode].png</texture>
+			<texture colordiffuse="button_focus">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
 			<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![StringCompare(Weather.FanartCode,na) + SubString(Weather.Conditions,/)]</visible>
 		</control>
 	</include>

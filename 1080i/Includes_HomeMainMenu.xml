@@ -247,7 +247,7 @@
                         <label>$LOCALIZE[20389]</label>
                         <onclick condition="!Library.HasContent(musicvideos)">ActivateWindow(Videos,Files,return)</onclick>
                         <onclick condition="Library.HasContent(musicvideos)">ActivateWindow(Videos,MusicVideos,return)</onclick>								
-                        <onclick>SetProperty(FanartHomeType,tvshows,home)</onclick>
+                        <onclick>SetProperty(FanartHomeType,musicvideos,home)</onclick>
                         <thumb>icons/home/musicvideos.png</thumb>
                         <property name="id">musicvideos</property>
                         <visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
