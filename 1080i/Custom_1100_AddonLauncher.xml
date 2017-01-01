@@ -316,6 +316,7 @@
 				<param name="path" value="addons://outdated/" />
 				<param name="height" value="1" />
 				<param name="width" value="1" />
+				<param name="item_width" value="1" />
 				<param name="list_id" value="8000" />
 				<param name="item_label" value="" />
 			</include>
