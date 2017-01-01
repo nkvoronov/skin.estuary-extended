@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-extended" version="0.8.5.066" name="Estuary Extended" provider-name="phil65, Piers, YLLOW_DRAGON">
+<addon id="skin.estuary-extended" version="0.8.5.067" name="Estuary Extended" provider-name="phil65, Piers, YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
-		<import addon="script.pvr.favourites" version="2.0.7"/>
+		<import addon="script.pvr.favourites" version="2.0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
