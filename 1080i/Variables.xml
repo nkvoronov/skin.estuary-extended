@@ -93,7 +93,7 @@
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
         <value condition="IsEmpty(Listitem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
 		<value condition="IsEmpty(Listitem.Thumb) + Container.Content(albums)">DefaultMusicAlbums.png</value>
-		<value condition="ListItem.IsFolder + IsEmpty(ListItem.Thumb)">DefaultFolderSquare.png</value>
+		<value condition="ListItem.IsFolder + IsEmpty(ListItem.Thumb)">DefaultFolder.png</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="ShiftImagesThumbVar">
