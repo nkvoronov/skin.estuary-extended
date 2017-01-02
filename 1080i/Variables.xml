@@ -92,7 +92,7 @@
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
         <value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
 		<value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(albums)">DefaultMusicAlbums.png</value>
-		<value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb)">DefaultFolder</value>
+		<value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb)">DefaultFolder.png</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="InfoWallThumbVar">
