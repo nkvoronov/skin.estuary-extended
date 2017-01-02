@@ -773,6 +773,30 @@ msgstr ""
 
 # extended added value
 
+msgctxt "#40001"
+msgid "Weather widgets"
+msgstr ""
+
+msgctxt "#40002"
+msgid "LiveTV widgets"
+msgstr ""
+
+msgctxt "#40003"
+msgid "Radio widgets"
+msgstr ""
+
+msgctxt "#40004"
+msgid "Addons widgets"
+msgstr ""
+
+msgctxt "#40005"
+msgid "SystemInfo widget"
+msgstr ""
+
+msgctxt "#40006"
+msgid "Media widgets"
+msgstr ""
+
 msgctxt "#40100"
 msgid "Most watched music videos"
 msgstr ""
@@ -897,8 +921,8 @@ msgctxt "#84220"
 msgid "Reset skin options"
 msgstr ""
 
-msgctxt "#88080"
-msgid "reload skin button"
+msgctxt "#85216"
+msgid "Customize power menu"
 msgstr ""
 
 msgctxt "#88071"
@@ -912,3 +936,27 @@ msgstr ""
 msgctxt "#89502"
 msgid "Enable SlideShow Info"
 msgstr ""
+
+msgctxt "#90020"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#90021"
+msgid "Create"
+msgstr ""
+
+msgctxt "#90022"
+msgid "Restory"
+msgstr ""
+
+msgctxt "#90030"
+msgid "Set type of widgets"
+msgstr ""
+
+msgctxt "#90044"
+msgid "Disable"
+msgstr ""
+
+
+
+

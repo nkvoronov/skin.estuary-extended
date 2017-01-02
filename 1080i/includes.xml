@@ -4,6 +4,7 @@
 	<include file="Includes_Home.xml" />
     <include file="Includes_HomeMainMenu.xml" />
     <include file="Includes_HomeSubMenu.xml" />
+    <include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_MediaMenu.xml" />
 	<include file="Includes_Buttons.xml" />
@@ -19,6 +20,7 @@
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
+    <include file="script-skinshortcuts-includes.xml"/>
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
 	<constant name="DepthDialog-">0.48</constant>

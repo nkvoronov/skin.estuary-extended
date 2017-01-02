@@ -69,8 +69,6 @@
 								<height>400</height>
 								<aspectratio aligny="center">keep</aspectratio>
 								<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
-								<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
-								<bordersize>4</bordersize>
 							</control>
 							<control type="textbox">
 								<left>20</left>
@@ -112,8 +110,6 @@
 							<height>400</height>
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
-							<bordersize>4</bordersize>
 						</control>
 						<control type="textbox">
 							<left>20</left>

@@ -547,7 +547,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].0.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].0.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].0.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].0.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].0.Title)]</property>
@@ -558,7 +557,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].1.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].1.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].1.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].1.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].1.Title)]</property>
@@ -569,7 +567,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].2.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].2.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].2.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].2.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].2.Title)]</property>
@@ -580,7 +577,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].3.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].3.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].3.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].3.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].3.Title)]</property>
@@ -591,7 +587,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].4.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].4.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].4.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].4.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].4.Title)]</property>
@@ -602,7 +597,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].5.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].5.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].5.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].5.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].5.Title)]</property>
@@ -613,7 +607,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].6.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].6.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].6.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].6.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].6.Title)]</property>
@@ -624,7 +617,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].7.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].7.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].7.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].7.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].7.Title)]</property>
@@ -635,7 +627,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].8.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].8.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].8.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].8.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].8.Title)]</property>
@@ -646,7 +637,6 @@
                 <onclick>RunScript(script.pvr.favourites,action=play&amp;channelid=$INFO[Skin.String(Channel$PARAM[id2].9.ChannelId)])</onclick>
                 <icon>$INFO[Skin.String(Channel$PARAM[id2].9.Icon)]</icon>
                 <thumb>-</thumb>
-                <property name="UniqueId">$INFO[Skin.String(Channel$PARAM[id2].9.UniqueId)]</property>
                 <property name="StartTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.StartTime)]</property>
                 <property name="EndTime">$INFO[Window(home).Property(Channel$PARAM[id2].9.EndTime)]</property>
                 <property name="Title">$INFO[Window(home).Property(Channel$PARAM[id2].9.Title)]</property>

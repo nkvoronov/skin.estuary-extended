@@ -1,127 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="SubMenu">
-		<control type="group">
-			<height>110</height>
-			<visible>$PARAM[visible]</visible>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,0)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,4)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,5)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,6)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!Integer.IsGreater(Container($PARAM[list_id]).NumItems,7)">conditional</animation>
-			<control type="label">
-				<left>235</left>
-				<top>53</top>
-				<width>700</width>
-				<height>40</height>
-				<label>$INFO[Container($PARAM[list_id]).Listitem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<font>font20_title</font>
-				<align>right</align>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>Control.HasFocus($PARAM[list_id])</visible>
-			</control>
-			<control type="panel" id="$PARAM[list_id]">
-				<orientation>horizontal</orientation>
-				<onleft>9000</onleft>
-				<left>935</left>
-				<top>22</top>
-				<height>110</height>
-				<width>1355</width>
-				<onup>200000</onup>
-				<ondown>$PARAM[ondown_id]</ondown>
-				<itemlayout width="110" height="120">
-					<control type="image">
-						<width>130</width>
-						<height>110</height>
-						<texture border="40">buttons/button-nofo.png</texture>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<top>35</top>
-						<width>40</width>
-						<height>40</height>
-						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout width="110" height="120">
-					<control type="image">
-						<width>130</width>
-						<height>110</height>
-						<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<top>35</top>
-						<width>40</width>
-						<height>40</height>
-						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$PARAM[item1_label]</label>
-						<thumb>$PARAM[item1_icon]</thumb>
-                        <onclick>$PARAM[item1_onclick2]</onclick>
-						<onclick>$PARAM[item1_onclick]</onclick>
-						<visible>$PARAM[item1_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item2_label]</label>
-						<thumb>$PARAM[item2_icon]</thumb>
-                        <onclick>$PARAM[item2_onclick2]</onclick>
-						<onclick>$PARAM[item2_onclick]</onclick>
-						<visible>$PARAM[item2_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item3_label]</label>
-						<thumb>$PARAM[item3_icon]</thumb>
-                        <onclick>$PARAM[item3_onclick2]</onclick>
-						<onclick>$PARAM[item3_onclick]</onclick>
-						<visible>$PARAM[item3_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item4_label]</label>
-						<thumb>$PARAM[item4_icon]</thumb>
-                        <onclick>$PARAM[item4_onclick2]</onclick>
-						<onclick>$PARAM[item4_onclick]</onclick>
-						<visible>$PARAM[item4_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item5_label]</label>
-						<thumb>$PARAM[item5_icon]</thumb>
-                        <onclick>$PARAM[item5_onclick2]</onclick>
-						<onclick>$PARAM[item5_onclick]</onclick>
-						<visible>$PARAM[item5_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item6_label]</label>
-						<thumb>$PARAM[item6_icon]</thumb>
-                        <onclick>$PARAM[item6_onclick2]</onclick>
-						<onclick>$PARAM[item6_onclick]</onclick>
-						<visible>$PARAM[item6_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item7_label]</label>
-						<thumb>$PARAM[item7_icon]</thumb>
-                        <onclick>$PARAM[item7_onclick2]</onclick>
-						<onclick>$PARAM[item7_onclick]</onclick>
-						<visible>$PARAM[item7_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item8_label]</label>
-						<thumb>$PARAM[item8_icon]</thumb>
-                        <onclick>$PARAM[item8_onclick2]</onclick>
-						<onclick>$PARAM[item8_onclick]</onclick>
-						<visible>$PARAM[item8_vis]</visible>
-					</item>
-				</content>
-			</control>
-		</control>
-	</include>
 	<include name="ImageWidgetHeader">
 		<param name="visible">True</param>
         <param name="widget_header"></param>        
@@ -273,13 +151,13 @@
 	<include name="WidgetListMovies">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
 		<param name="sortby"></param>
 		<param name="sortorder"></param>
 		<param name="height">404</param>        		
         <definition>
             <control type="group">
-                <description>Poster Widget including header and arrows</description>
+                <description>Movies Widget including header and arrows</description>
                 <height>$PARAM[height]</height>
                 <left>0</left>
                 <top>0</top>
@@ -306,9 +184,10 @@
                     <orientation>horizontal</orientation>
                     <onleft>9000</onleft>
                     <onright>noop</onright>
-                    <onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+                    <onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
                     <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
-                    <onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+                    <onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>					
                     <onup>$PARAM[onup_id]</onup>
                     <ondown>$PARAM[ondown_id]</ondown>
                     <onback>SetFocus(9000)</onback>
@@ -355,6 +234,13 @@
                             <animation type="Unfocus">
                                 <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="110,130" />
                             </animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>0</top>
+								<width>240</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -426,7 +312,7 @@
                                     <width>150</width>
                                     <height>13</height>
                                     <info>ListItem.PercentPlayed</info>
-                                    <visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
+                                    <visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
                                 </control>
                                 <control type="image">
                                     <left>0</left>
@@ -454,18 +340,18 @@
 	<include name="WidgetListEpisodes">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
         <param name="height">405</param>       
 		<definition>
 			<control type="group">
-				<description>Episode Widget including header and arrows</description>
+				<description>Episodes Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<top>0</top>
                 <visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>                
 				<include content="LeftRightArrows">
 					<param name="posy" value="210" />
 					<param name="list_id" value="$PARAM[list_id]" />
@@ -487,6 +373,7 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
 					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -508,13 +395,13 @@
 							<width>298</width>
 							<height>220</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+							<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
 							<top>253</top>
 							<width>288</width>
-							<label>$PARAM[second_label]</label>
+							<label>[COLOR button_focus]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode][/COLOR] $INFO[ListItem.Title]</label>
 							<font>font10</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -546,6 +433,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="233,90" />
 							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>1</top>
+								<width>348</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
 							<control type="image">
 								<left>0</left>
 								<top>1</top>
@@ -559,7 +453,7 @@
 								<width>298</width>
 								<height>220</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+								<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 							</control>
 							<control type="group">
 								<left>20</left>
@@ -586,7 +480,7 @@
 								<left>30</left>
 								<top>253</top>
 								<width>288</width>
-								<label>$PARAM[second_label]</label>
+								<label>[COLOR button_focus]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode][/COLOR] $INFO[ListItem.Title]</label>
 								<scroll>true</scroll>
 								<font>font10</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -627,19 +521,228 @@
 			</control>
 		</definition>
 	</include>
-	<include name="WidgetListSquare">
-        <param name="visible">True</param>
+	<include name="WidgetListTVShows">
+		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
-		<param name="sortby"></param>
-		<param name="sortorder">ascending</param>
-		<param name="height">405</param>
-		<param name="sub_label">$INFO[ListItem.Label]</param>
-        <param name="main_label">$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Artist]$INFO[ListItem.AddonVersion,[COLOR button_focus],[/COLOR]]</param>
-        <param name="fallback_image">DefaultFolderSquare.png</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
+		<param name="sortby">lastplayed</param>
+		<param name="sortorder">descending</param>
+        <param name="height">405</param>       
 		<definition>
 			<control type="group">
-				<description>Square Widget including header and arrows</description>
+				<description>TVShows Widget including header and arrows</description>
+				<height>$PARAM[height]</height>
+				<left>0</left>
+				<top>0</top>
+                <visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>                
+				<include content="LeftRightArrows">
+					<param name="posy" value="210" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
+				<control type="label">
+					<left>500</left>
+					<top>15</top>
+					<width>900</width>
+					<height>40</height>
+					<label>$PARAM[widget_header]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>60</top>
+					<width>1372</width>
+					<height>400</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+					<onup>$PARAM[onup_id]</onup>
+					<ondown>$PARAM[ondown_id]</ondown>
+					<onback>SetFocus(9000)</onback>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="341" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>1</top>
+							<width>348</width>
+							<height>340</height>
+							<texture border="40">buttons/button-nofo.png</texture>
+						</control>
+						<control type="image">
+							<left>24</left>
+							<top>25</top>
+							<width>298</width>
+							<height>220</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultVideo.png" background="true">$VAR[TVShowWidgetImageVar]</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>253</top>
+							<width>288</width>
+							<label>$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]</label>
+							<font>font10</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<visible>!Integer.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+							<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>253</top>
+							<width>288</width>
+							<label>$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</label>
+							<font>font10</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<visible>Integer.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+							<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>279</top>
+							<width>288</width>
+							<label>$INFO[ListItem.TVShowTitle]</label>
+							<font>font10</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="341" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="233,90" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="233,90" />
+							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>1</top>
+								<width>348</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>348</width>
+								<height>340</height>
+								<texture border="40">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<left>24</left>
+								<top>25</top>
+								<width>298</width>
+								<height>220</height>
+								<aspectratio>scale</aspectratio>
+								<texture fallback="DefaultVideo.png" background="true">$VAR[TVShowWidgetImageVar]</texture>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<visible>!Integer.IsEqual(ListItem.PercentPlayed,0) + Control.HasFocus($PARAM[list_id])</visible>
+								<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>310</width>
+									<height>30</height>
+									<texture colordiffuse="99FFFFFF">colors/black.png</texture>
+								</control>
+								<control type="progress">
+									<left>30</left>
+									<top>10</top>
+									<width>250</width>
+									<height>13</height>
+									<info>ListItem.PercentPlayed</info>
+								</control>
+							</control>
+							<control type="label">
+								<left>30</left>
+								<top>253</top>
+								<width>288</width>
+								<label>$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<visible>!Integer.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+								<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+							</control>
+							<control type="label">
+								<left>30</left>
+								<top>253</top>
+								<width>288</width>
+								<label>$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<visible>Integer.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+								<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+							</control>							
+							<control type="label">
+								<left>30</left>
+								<top>279</top>
+								<width>288</width>
+								<scroll>true</scroll>
+								<label>$INFO[ListItem.TVShowTitle]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="image">
+								<left>17</left>
+								<top>17</top>
+								<width>312</width>
+								<height>306</height>
+								<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+								<visible>Control.HasFocus($PARAM[list_id])</visible>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>20</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="WidgetListAlbums">
+		<param name="visible">True</param>
+		<param name="ondown_id">200001</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
+		<param name="sortby"></param>        		
+		<param name="sortorder">ascending</param>		
+		<param name="height">405</param>		
+		<param name="label1">$INFO[ListItem.Label]</param>
+		<param name="label2">[COLOR button_focus]$INFO[ListItem.Year] - [/COLOR]$INFO[ListItem.Artist]</param>
+        <param name="fallback_image">DefaultMusicAlbumsSolid.png</param>       
+		<definition>
+			<control type="group">
+				<description>Albums Widget including header and arrows</description>
 				<height>$PARAM[height]</height>
 				<left>0</left>
 				<visible>$PARAM[visible]</visible>
@@ -665,6 +768,7 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
 					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -697,7 +801,7 @@
 								<left>20</left>
 								<top>238</top>
 								<width>260</width>
-								<label>$PARAM[sub_label]</label>
+								<label>$PARAM[label1]</label>
 								<font>font10</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -706,18 +810,7 @@
 								<left>20</left>
 								<top>266</top>
 								<width>260</width>
-								<label>$PARAM[main_label]</label>
-								<font>font10</font>
-								<shadowcolor>text_shadow</shadowcolor>
-								<align>center</align>
-							</control>
-							<control type="textbox">
-								<left>10</left>
-								<top>237</top>
-								<width>280</width>
-								<height>60</height>
-								<aligny>center</aligny>
-								<label>$PARAM[single_label]</label>
+								<label>$PARAM[label2]</label>
 								<font>font10</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -741,6 +834,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>0</top>
+								<width>340</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -765,7 +865,7 @@
 									<left>10</left>
 									<top>238</top>
 									<width>280</width>
-									<label>$PARAM[sub_label]</label>
+									<label>$PARAM[label1]</label>
 									<font>font10</font>
 									<scroll>true</scroll>
 									<shadowcolor>text_shadow</shadowcolor>
@@ -777,9 +877,157 @@
 									<width>280</width>
 									<font>font10</font>
 									<scroll>true</scroll>
-									<label>$PARAM[main_label]</label>
+									<label>$PARAM[label2]</label>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>300</width>
+									<height>300</height>
+									<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+									<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+									<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								</control>
+								<control type="image">
+									<left>5</left>
+									<top>5</top>
+									<width>32</width>
+									<height>32</height>
+									<texture>$VAR[ListWatchedIconVar]</texture>
+									<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+					<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="WidgetListArtists">
+		<param name="visible">True</param>
+		<param name="ondown_id">200001</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
+		<param name="sortby"></param>        		
+		<param name="sortorder">ascending</param>		
+		<param name="height">405</param>		
+		<param name="label1">$INFO[ListItem.Label]</param>
+        <param name="fallback_image">DefaultMusicArtistsSolid.png</param>       
+		<definition>
+			<control type="group">
+				<description>Artists Widget including header and arrows</description>
+				<height>$PARAM[height]</height>
+				<left>0</left>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<include content="LeftRightArrows">
+					<param name="posy" value="200" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
+				<control type="label">
+					<left>500</left>
+					<top>15</top>
+					<width>900</width>
+					<height>40</height>
+					<label>$PARAM[widget_header]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>55</top>
+					<width>1372</width>
+					<height>400</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+					<onup>$PARAM[onup_id]</onup>
+					<ondown>$PARAM[ondown_id]</ondown>
+					<onback>SetFocus(9000)</onback>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="343" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
+                            <aspectratio>scale</aspectratio>
+							<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="group">
+							<left>20</left>
+							<top>20</top>
+							<control type="image">
+								<left>0</left>
+								<top>240</top>
+								<width>300</width>
+								<height>60</height>
+								<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+							</control>
+							<control type="textbox">
+								<left>10</left>
+								<top>237</top>
+								<width>280</width>
+								<height>60</height>
+								<aligny>center</aligny>
+								<label>$PARAM[label1]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="343" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>0</top>
+								<width>340</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>340</width>
+								<height>340</height>
+                                <aspectratio>scale</aspectratio>
+								<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<control type="image">
+									<left>0</left>
+									<top>240</top>
+									<width>300</width>
+									<height>60</height>
+									<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
 								</control>
 								<control type="textbox">
 									<left>10</left>
@@ -787,8 +1035,361 @@
 									<width>280</width>
 									<height>60</height>
 									<aligny>center</aligny>
-									<label>$PARAM[single_label]</label>
+									<label>$PARAM[label1]</label>
 									<font>font10</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>300</width>
+									<height>300</height>
+									<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+									<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+									<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								</control>
+								<control type="image">
+									<left>5</left>
+									<top>5</top>
+									<width>32</width>
+									<height>32</height>
+									<texture>$VAR[ListWatchedIconVar]</texture>
+									<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+					<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="WidgetListSongs">
+		<param name="visible">True</param>
+		<param name="ondown_id">200001</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
+		<param name="sortby"></param>        		
+		<param name="sortorder">ascending</param>		
+		<param name="height">405</param>		
+		<param name="label1">$INFO[ListItem.Label]</param>
+		<param name="label2">$INFO[ListItem.Album][COLOR button_focus] - [/COLOR]$INFO[ListItem.Artist]</param>
+        <param name="fallback_image">DefaultAudio.png</param>						
+		<param name="visible_watched">True</param>       
+		<definition>
+			<control type="group">
+				<description>Songs Widget including header and arrows</description>
+				<height>$PARAM[height]</height>
+				<left>0</left>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<include content="LeftRightArrows">
+					<param name="posy" value="200" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
+				<control type="label">
+					<left>500</left>
+					<top>15</top>
+					<width>900</width>
+					<height>40</height>
+					<label>$PARAM[widget_header]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>55</top>
+					<width>1372</width>
+					<height>400</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+					<onup>$PARAM[onup_id]</onup>
+					<ondown>$PARAM[ondown_id]</ondown>
+					<onback>SetFocus(9000)</onback>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="343" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
+                            <aspectratio>scale</aspectratio>
+							<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="group">
+							<left>20</left>
+							<top>20</top>
+							<control type="image">
+								<left>0</left>
+								<top>240</top>
+								<width>300</width>
+								<height>60</height>
+								<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>238</top>
+								<width>260</width>
+								<label>$PARAM[label1]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>266</top>
+								<width>260</width>
+								<label>$PARAM[label2]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="343" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>0</top>
+								<width>340</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>340</width>
+								<height>340</height>
+                                <aspectratio>scale</aspectratio>
+								<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<control type="image">
+									<left>0</left>
+									<top>240</top>
+									<width>300</width>
+									<height>60</height>
+									<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>238</top>
+									<width>280</width>
+									<label>$PARAM[label1]</label>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>266</top>
+									<width>280</width>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<label>$PARAM[label2]</label>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>300</width>
+									<height>300</height>
+									<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+									<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+									<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								</control>
+								<control type="image">
+									<left>5</left>
+									<top>5</top>
+									<width>32</width>
+									<height>32</height>
+									<texture>$VAR[ListWatchedIconVar]</texture>
+									<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+								</control>
+							</control>
+						</control>
+					</focusedlayout>
+					<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[widget_limit]">$PARAM[content_path]</content>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="WidgetListAddons">
+		<param name="visible">True</param>
+		<param name="ondown_id">200001</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="height">405</param>
+		<param name="label1">$INFO[ListItem.Label]</param>
+		<param name="label2">[COLOR button_focus]$INFO[ListItem.AddonVersion][/COLOR]</param>
+        <param name="fallback_image">DefaultFolderSquare.png</param>
+		<definition>
+			<control type="group">
+				<description>Addons Widget including header and arrows</description>
+				<height>$PARAM[height]</height>
+				<left>0</left>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<include content="LeftRightArrows">
+					<param name="posy" value="200" />
+					<param name="list_id" value="$PARAM[list_id]" />
+				</include>
+				<control type="label">
+					<left>500</left>
+					<top>15</top>
+					<width>900</width>
+					<height>40</height>
+					<label>$PARAM[widget_header]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+				</control>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>55</top>
+					<width>1372</width>
+					<height>400</height>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
+					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+					<onup>$PARAM[onup_id]</onup>
+					<ondown>$PARAM[ondown_id]</ondown>
+					<onback>SetFocus(9000)</onback>
+					<preloaditems>1</preloaditems>
+					<itemlayout width="343" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
+                            <aspectratio>scale</aspectratio>
+							<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">overlays/shadow.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+						<control type="group">
+							<left>20</left>
+							<top>20</top>
+							<control type="image">
+								<left>0</left>
+								<top>240</top>
+								<width>300</width>
+								<height>60</height>
+								<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>238</top>
+								<width>260</width>
+								<label>$PARAM[label1]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>266</top>
+								<width>260</width>
+								<label>$PARAM[label2]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+							</control>
+							<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="343" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
+							</animation>
+							<control type="button">
+                                <left>0</left>
+                                <top>0</top>
+								<width>340</width>
+								<height>340</height>
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>340</width>
+								<height>340</height>
+                                <aspectratio>scale</aspectratio>
+								<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
+								<bordertexture border="20">overlays/shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<control type="image">
+									<left>0</left>
+									<top>240</top>
+									<width>300</width>
+									<height>60</height>
+									<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>238</top>
+									<width>280</width>
+									<label>$PARAM[label1]</label>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<left>10</left>
+									<top>266</top>
+									<width>280</width>
+									<font>font10</font>
+									<scroll>true</scroll>
+									<label>$PARAM[label2]</label>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 								</control>
@@ -820,11 +1421,11 @@
 	<include name="WidgetListText">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
 		<param name="sortby">label</param>
 		<param name="sortorder">ascending</param>
 		<param name="height">405</param>
-		<param name="item_image">$INFO[ListItem.Icon]</param>        
+		<param name="item_image">$VAR[WidgetListTextIconVar]</param>        
 		<definition>
 			<control type="group" id="$PARAM[list_id]0">
 				<description>Square Widget including header and arrows</description>
@@ -951,7 +1552,7 @@
 	<include name="WidgetListChannels">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
 		<param name="sortby">lastplayed</param>        		
 		<param name="sortorder">descending</param>
 		<param name="height">600</param>		
@@ -1090,7 +1691,7 @@
 	<include name="WidgetListRecordings">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
-		<param name="widget_limit">10</param>
+		<param name="widget_limit">$VAR[WidgetLimitItems]</param>
 		<param name="height">600</param>
 		<param name="item_image">$INFO[ListItem.Icon]</param>        
 		<definition>
@@ -1273,6 +1874,7 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>noop</onright>
+					<onunfocus>ClearProperty(weatherfanartcode,home)</onunfocus>
 					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -1328,6 +1930,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="110,130" />
 							</animation>
+							<control type="button">
+								<left>0</left>
+								<top>20</top>
+								<width>260</width>
+								<height>350</height>
+								<onfocus>SetProperty(weatherfanartcode,$INFO[Container($PARAM[list_id]).ListItem.Property(FanartCode)],home)</onfocus>
+							</control>
 							<control type="image">
 								<left>0</left>
 								<top>20</top>

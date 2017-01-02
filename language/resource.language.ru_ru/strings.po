@@ -622,6 +622,30 @@ msgstr "Текущий инфоресурс"
 
 # extended added value
 
+msgctxt "#40001"
+msgid "Weather widgets"
+msgstr "Виджеты погоды"
+
+msgctxt "#40002"
+msgid "LiveTV widgets"
+msgstr "Виджеты ТВ"
+
+msgctxt "#40003"
+msgid "Radio widgets"
+msgstr "Виджеты радио"
+
+msgctxt "#40004"
+msgid "Addons widgets"
+msgstr "Виджеты дополнений"
+
+msgctxt "#40005"
+msgid "SystemInfo widget"
+msgstr "Виджет системной информации"
+
+msgctxt "#40006"
+msgid "Media widgets"
+msgstr "Медиа виджеты"
+
 msgctxt "#40100"
 msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"
@@ -750,9 +774,9 @@ msgctxt "#88071"
 msgid "Show stats"
 msgstr "Показывать статистику"
 
-msgctxt "#88080"
-msgid "reload skin button"
-msgstr "кнопку обновления обложки"
+msgctxt "#85216"
+msgid "Customize power menu"
+msgstr "Настройка меню питания"
 
 msgctxt "#89501"
 msgid "Enable FullScreen Clock"
@@ -761,3 +785,23 @@ msgstr "Показывать часы в полноэкранном режиме
 msgctxt "#89502"
 msgid "Enable SlideShow Info"
 msgstr "Показывать информацию в слайдшоу"
+
+msgctxt "#90020"
+msgid "Backup Skin Settings"
+msgstr "Резервная копия настроек обложки"
+
+msgctxt "#90021"
+msgid "Create"
+msgstr "Создать"
+
+msgctxt "#90022"
+msgid "Restory"
+msgstr "Восстановить"
+
+msgctxt "#90030"
+msgid "Set type of widgets"
+msgstr "Выберите тип виджетов"
+
+msgctxt "#90044"
+msgid "Disable"
+msgstr "Запретить"

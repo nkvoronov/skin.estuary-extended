@@ -155,9 +155,7 @@
 			<width>509</width>
 			<height>509</height>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="BFFFFFFF">colors/black.png</texture>
-			<bordertexture border="20">overlays/shadow.png</bordertexture>
-			<bordersize>20</bordersize>
+			<texture border="40">buttons/button-nofo.png</texture>
 		</control>
 		<control type="image">
 			<left>114</left>
