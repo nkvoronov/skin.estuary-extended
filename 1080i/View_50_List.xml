@@ -162,7 +162,7 @@
 			<top>186</top>
 			<width>461</width>
 			<height>461</height>
-			<aspectratio aligny="center">scale</aspectratio>
+			<aspectratio>keep</aspectratio>
 			<fadetime>300</fadetime>
 			<texture background="true" fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
 		</control>
