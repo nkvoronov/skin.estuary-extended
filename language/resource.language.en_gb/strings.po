@@ -912,3 +912,7 @@ msgstr ""
 msgctxt "#89502"
 msgid "Enable SlideShow Info"
 msgstr ""
+
+msgctxt "#89503"
+msgid "Watch it Later"
+msgstr ""

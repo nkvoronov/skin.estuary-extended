@@ -41,6 +41,20 @@
 			<width>450</width>
 			<height max="780">auto</height>
 			<usecontrolcoords>true</usecontrolcoords>
+			<control type="button" id="3000">
+				<description>Watch It Later</description>
+                <left>2</left>
+                <top></top>
+                <width>446</width>
+                <height>60</height>
+                <font>fontContextMenu</font>
+                <align>center</align>
+                <texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+                <texturenofocus>lists/separator.png</texturenofocus>
+				<label>$LOCALIZE[89503]</label>
+				<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
+				<visible>Skin.HasSetting(activate_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+			</control>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
