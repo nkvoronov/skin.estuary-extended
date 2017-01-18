@@ -177,8 +177,8 @@
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[24000] Global Search</label>
-					<onclick>Skin.ToggleSetting(activate_globalsearch)</onclick>
-					<selected>Skin.HasSetting(activate_globalsearch)</selected>
+					<onclick>Skin.ToggleSetting(enable_globalsearch)</onclick>
+					<selected>Skin.HasSetting(enable_globalsearch)</selected>
                     <enable>System.hasAddon(script.globalsearch)</enable>
 				</control>
                 <control type="button" id="107">
@@ -187,7 +187,7 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020]</label>
                     <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
-					<enable>Skin.HasSetting(activate_globalsearch)</enable>
+					<enable>Skin.HasSetting(enable_globalsearch)</enable>
 					<visible>System.HasAddon(script.globalsearch)</visible>
 				</control>
 				<control type="radiobutton" id="108">
@@ -195,8 +195,8 @@
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[24000] Simple Playlists</label>
-					<onclick>Skin.ToggleSetting(activate_watchitlater)</onclick>
-					<selected>Skin.HasSetting(activate_watchitlater)</selected>
+					<onclick>Skin.ToggleSetting(enable_watchitlater)</onclick>
+					<selected>Skin.HasSetting(enable_watchitlater)</selected>
                     <enable>System.hasAddon(script.simpleplaylists)</enable>
 				</control>
                 <control type="button" id="109">
@@ -205,7 +205,7 @@
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020]</label>
                     <onclick>Addon.OpenSettings(script.simpleplaylists)</onclick>
-					<enable>Skin.HasSetting(activate_watchitlater)</enable>
+					<enable>Skin.HasSetting(enable_watchitlater)</enable>
 					<visible>System.HasAddon(script.simpleplaylists)</visible>
 				</control>
 			</control>

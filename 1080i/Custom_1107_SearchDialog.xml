@@ -32,7 +32,7 @@
 					<label>$LOCALIZE[31113]</label>
 					<onclick>Dialog.Close(all)</onclick>
 					<onclick>RunScript(script.globalsearch)</onclick>
-                    <visible>Skin.HasSetting(activate_globalsearch)</visible>
+                    <visible>Skin.HasSetting(enable_globalsearch)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31145]</label>

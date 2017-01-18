@@ -53,7 +53,7 @@
                 <texturenofocus>lists/separator.png</texturenofocus>
 				<label>$LOCALIZE[89503]</label>
 				<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-				<visible>Skin.HasSetting(activate_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+				<visible>Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 			</control>
 		</control>
 		<control type="button" id="1000">
