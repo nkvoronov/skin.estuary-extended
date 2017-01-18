@@ -4,9 +4,17 @@
 	<!-- SkinShortcuts-->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<!-- SkinHelper -->
-    <!-- <onload condition="Skin.HasSetting(ActivateSmartShortcutsPlaylists)">Skin.SetBool(SmartShortcuts.playlists)</onload> -->
-    <!-- <onload condition="Skin.HasSetting(ActivateSmartShortcutsFavorites)">Skin.SetBool(SmartShortcuts.favorites)</onload> -->
-    <!-- <onload condition="Skin.HasSetting(ActivateAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload> -->
+    <onload condition="Skin.HasSetting(smartshortcuts_playlists)">Skin.SetBool(SmartShortcuts.playlists)</onload>
+    <onload condition="!Skin.HasSetting(smartshortcuts_playlists)">Skin.Reset(SmartShortcuts.playlists)</onload>
+    <onload condition="Skin.HasSetting(smartshortcuts_favorites)">Skin.SetBool(SmartShortcuts.favorites)</onload>
+    <onload condition="!Skin.HasSetting(smartshortcuts_favorites)">Skin.Reset(SmartShortcuts.favorites)</onload>
+    <onload condition="Skin.HasSetting(animated_posters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
+    <onload condition="!Skin.HasSetting(animated_posters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
+    <onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+    <onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+    <onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+    <onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
+    <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<!-- -->
 	<onload condition="!String.IsEmpty(Window(home).Property(FanartHomeType))">ClearProperty(FanartHomeType,home)</onload>
     <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">XBMC.RunScript(script.pvr.favourites)</onload>

@@ -301,6 +301,7 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>noop</onright>
+					<onunfocus>ClearProperty(mediaartfanart,home)</onunfocus>
 					<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 					<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 					<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -358,6 +359,12 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+							<control type="button">
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+							</control>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -733,6 +740,16 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+                            <control type="button">
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+                            </control>
+                            <control type="button">
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+                            </control>
 							<control type="image">
 								<width>340</width>
 								<height>500</height>

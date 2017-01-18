@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls />
+    <onload condition="Skin.HasSetting(enable_splashscreen)">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(splashscreen_path)],duration=$VAR[DurationSplashScreenName])</onload>
+    <onload condition="!Skin.HasSetting(enable_splashscreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<controls>
+        <!-- video control for splash -->
+        <control type="videowindow">
+            <width>100%</width>
+            <height>100%</height>
+        </control>
+        <!-- image control for splash -->
+        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[Window(Home).Property(SkinHelper.SplashScreen)]</texture>
+        </control>
+	</controls>
 </window>

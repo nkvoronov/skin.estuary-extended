@@ -160,7 +160,7 @@
     <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>    
     <!-- Menus Groupings -->
     <groupings>
-        <shortcut label="$ADDON[script.skin.helper.service 32062]" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
+        <shortcut label="90050" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
         <!-- Weather -->
         <node label="8">
             <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
@@ -394,7 +394,7 @@
 		<shortcut label="40005" icon="special://skin/extras/icons/systeminfo.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="SystemInfoWidget">SystemInfoWidget</shortcut>
 		<shortcut label="40006" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
 		<!-- -->
-        <shortcut label="$ADDON[script.skin.helper.service 32062]" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
+        <shortcut label="90051" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
         <node label="32030" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
             <content>video</content>
             <node label="32040">

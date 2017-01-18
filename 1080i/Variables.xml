@@ -62,6 +62,7 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.ContributorAndRole,[B]$LOCALIZE[31128][/B][CR][COLOR=white],[/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[21821][/B][CR][COLOR=white],[/COLOR]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR=white],[/COLOR]]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR=white],[/COLOR]]</value>
         <value>$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR=white],[/COLOR]]</value>
 	</variable>
 	<variable name="NowPlayingSublabelVar">
@@ -95,11 +96,13 @@
         <value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
 		<value condition="String.IsEmpty(Listitem.Thumb) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb)">DefaultFolder.png</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="InfoWallThumbVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
-		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="IconWallThumbVar">
@@ -128,6 +131,7 @@
 	</variable>
 	<variable name="ShiftRightTextBoxVar">
 		<value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,[COLOR button_focus]$LOCALIZE[289]:  [/COLOR],[CR]]$INFO[ListItem.PictureAperture,[COLOR button_focus]$LOCALIZE[21826]:  [/COLOR],[CR]]$INFO[ListItem.PictureFocalLen,[COLOR button_focus]$LOCALIZE[21827]:  [/COLOR],[CR]]$INFO[ListItem.PictureExpTime,[COLOR button_focus]$LOCALIZE[21830]:  [/COLOR],[CR]]$INFO[ListItem.Date,[COLOR button_focus]$LOCALIZE[552]:  [/COLOR],[CR]]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(album_description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
@@ -152,8 +156,10 @@
 	<variable name="ListBoxInfoVar">
 		<value condition="String.IsEqual(Container.FolderPath,addons://outdated/) + !String.IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription]</value>
+        <value condition="Container.Content(albums) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR=white],[/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(album_description)]</value>
 		<value condition="Container.Content(mixed) | Container.Content(videos)">$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Plot]</value>
+        <value condition="Container.Content(artists) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR=white],[/COLOR]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR button_focus]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR button_focus]$LOCALIZE[567]: [/COLOR],[CR]]</value>
 		<value>$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR],[CR]]</value>
@@ -206,18 +212,25 @@
         <value condition="String.IsEmpty(Container.ListItem.Art(thumb)) + [Container.Content(actors) | Container.Content(directors)]">DefaultActorSolid.png</value>
 		<value condition="Container.Content(actors) | Container.Content(directors)">$INFO[Container.ListItem.Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !Container.Content(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="InfoDialogPosterVar">
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 	</variable>
 	<variable name="ListPosterVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBackSquare.png</value>
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="WidgetListMoviesPosterVar">
+        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 	</variable>
 	<variable name="BannerLabel2Var">
 		<value condition="String.IsEqual(Listitem.DBType,tvshow)">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
@@ -361,25 +374,8 @@
 		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(fanart))">$INFO[Container.Art(fanart)]</value>
-        <value>$VAR[ContainerFanartVar]</value>
+		<value>$INFO[Container.Art(fanart)]</value>
 	</variable>
-    <variable name="ContainerFanartVar">
-        <value condition="!String.IsEmpty(Container(53).ListItem.Art(fanart))">$INFO[Container(53).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(54).ListItem.Art(fanart))">$INFO[Container(54).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(500).ListItem.Art(fanart))">$INFO[Container(500).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(505).ListItem.Art(fanart))">$INFO[Container(505).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(502).ListItem.Art(fanart))">$INFO[Container(502).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(59).ListItem.Art(fanart))">$INFO[Container(59).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(58).ListItem.Art(fanart))">$INFO[Container(58).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(56).ListItem.Art(fanart))">$INFO[Container(56).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(57).ListItem.Art(fanart))">$INFO[Container(57).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(fanart))">$INFO[Container(503).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(50).ListItem.Art(fanart))">$INFO[Container(50).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(51).ListItem.Art(fanart))">$INFO[Container(51).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(501).ListItem.Art(fanart))">$INFO[Container(501).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(55).ListItem.Art(fanart))">$INFO[Container(55).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
-    </variable>
     <variable name="FanartHomeTypeVar">
         <value condition="Skin.HasSetting(no_fanart) | IsEmpty(Window(home).Property(FanartHomeType))">$VAR[GlobalFanartVar]</value>
         <value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(home).Property(FanartHomeType)]$INFO[Skin.String(HomeFanart.ext)]</value>
@@ -556,8 +552,14 @@
     </variable>
     <!-- Widget Limit Items -->
     <variable name="WidgetLimitItems">
+        <value condition="!String.IsEmpty(Skin.String(widget_limititems))">$INFO[Skin.String(widget_limititems)]</value>
         <value>25</value>
     </variable>
+    <!-- Duration SplashScreen -->
+    <variable name="DurationSplashScreenName">
+        <value condition="!String.IsEmpty(Skin.String(duration_splashscreen))">$INFO[Skin.String(duration_splashscreen)]</value>
+        <value>5</value>
+    </variable>    
     <!-- Widget Name 1 -->
     <variable name="WidgetName1Label2">
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName.widget1))">$INFO[Container(211).ListItem.Property(widgetName.widget1)]</value>
