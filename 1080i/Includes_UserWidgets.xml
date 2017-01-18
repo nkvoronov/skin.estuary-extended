@@ -360,11 +360,10 @@
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
 							<control type="button">
-                                <left>0</left>
-                                <top>0</top>
-								<width>340</width>
-								<height>340</height>
 								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Property(AddonFanart)],home)</onfocus>
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -741,6 +740,16 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+                            <control type="button">
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+                            </control>
+                            <control type="button">
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+                            </control>
 							<control type="image">
 								<width>340</width>
 								<height>500</height>

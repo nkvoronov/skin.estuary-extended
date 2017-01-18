@@ -937,6 +937,26 @@ msgctxt "#89502"
 msgid "Enable SlideShow Info"
 msgstr ""
 
+msgctxt "#89503"
+msgid "Watch it Later"
+msgstr ""
+
+msgctxt "#90009"
+msgid "Widget Limit Items"
+msgstr ""
+
+msgctxt "#90010"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr ""
+
+msgctxt "#90011"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr ""
+
+msgctxt "#90012"
+msgid "Enable Animated Posters"
+msgstr ""
+
 msgctxt "#90020"
 msgid "Backup Skin Settings"
 msgstr ""
@@ -953,10 +973,27 @@ msgctxt "#90030"
 msgid "Set type of widgets"
 msgstr ""
 
+msgctxt "#90040"
+msgid "Enable splash screen (photo, video or music)"
+msgstr ""
+
+msgctxt "#90041"
+msgid "Path:"
+msgstr ""
+
+msgctxt "#90042"
+msgid "Duration (sec)"
+msgstr ""
+
 msgctxt "#90044"
 msgid "Disable"
 msgstr ""
 
+msgctxt "#90050"
+msgid "Smart Shortcuts"
+msgstr ""
 
-
+msgctxt "#90051"
+msgid "Smart Widgets"
+msgstr ""
 

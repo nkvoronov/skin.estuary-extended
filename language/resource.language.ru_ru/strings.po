@@ -786,6 +786,26 @@ msgctxt "#89502"
 msgid "Enable SlideShow Info"
 msgstr "Показывать информацию в слайдшоу"
 
+msgctxt "#89503"
+msgid "Watch it Later"
+msgstr "Посмотреть позже"
+
+msgctxt "#90009"
+msgid "Widget Limit Items"
+msgstr "Виджеты лимит элементов"
+
+msgctxt "#90010"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr "Разрешить Смарт Ярлыки для плейлистов"
+
+msgctxt "#90011"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr "Разрешить Смарт Ярлыки для избранного"
+
+msgctxt "#90012"
+msgid "Enable Animated Posters"
+msgstr "Разрешить анимированные постеры"
+
 msgctxt "#90020"
 msgid "Backup Skin Settings"
 msgstr "Резервная копия настроек обложки"
@@ -802,6 +822,26 @@ msgctxt "#90030"
 msgid "Set type of widgets"
 msgstr "Выберите тип виджетов"
 
+msgctxt "#90040"
+msgid "Enable splash screen (photo, video or music)"
+msgstr "Разрешить заставку (фото, видео или музыка)"
+
+msgctxt "#90041"
+msgid "Path:"
+msgstr "Путь:"
+
+msgctxt "#90042"
+msgid "Duration (sec)"
+msgstr "Длительность (сек)"
+
 msgctxt "#90044"
 msgid "Disable"
 msgstr "Запретить"
+
+msgctxt "#90050"
+msgid "Smart Shortcuts"
+msgstr "Смарт Ярлыки"
+
+msgctxt "#90051"
+msgid "Smart Widgets"
+msgstr "Смарт Виджеты"

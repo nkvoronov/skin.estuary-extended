@@ -167,6 +167,160 @@
 					<onclick>Skin.ToggleSetting(show_mediaflags)</onclick>
 					<selected>Skin.HasSetting(show_mediaflags)</selected>
 				</control>
+                <control type="label" id="105">
+                    <description>Addons label</description>
+                    <width>1256</width>
+                    <include>DefaultSettingLabel</include>
+                    <label>$LOCALIZE[512]</label>
+                </control>
+				<control type="radiobutton" id="106">
+                    <description>Enable splash screen (photo, video or music)</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[90040]</label>
+					<onclick>Skin.ToggleSetting(enable_splashscreen)</onclick>
+					<selected>Skin.HasSetting(enable_splashscreen)</selected>
+				</control>
+                <control type="button" id="107">
+                    <description>Startup SplashScreen Path</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[90041]</label>
+                    <label2>$INFO[Skin.String(splashscreen_path)]</label2>
+                    <onclick>Skin.SetFile(splashscreen_path)</onclick>
+					<enable>Skin.HasSetting(enable_splashscreen)</enable>
+				</control>
+                <control type="button" id="108">
+                    <description>Duration SplashScreen</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[90042]</label>
+                    <label2>$VAR[DurationSplashScreenName]</label2>
+                    <onclick condition="IsEmpty(Skin.String(duration_splashscreen))">Skin.SetString(duration_splashscreen,5,)</onclick>
+				    <onclick>Skin.SetNumeric(duration_splashscreen)</onclick> 
+					<enable>Skin.HasSetting(enable_splashscreen)</enable>
+				</control>               
+                <control type="label" id="109">
+                    <description>Addons label</description>
+                    <width>1256</width>
+                    <include>DefaultSettingLabel</include>
+                    <label>$LOCALIZE[24001]</label>
+                </control>
+				<control type="radiobutton" id="110">
+                    <description>Activate Global Search</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[24000] Global Search</label>
+					<onclick>Skin.ToggleSetting(enable_globalsearch)</onclick>
+					<selected>Skin.HasSetting(enable_globalsearch)</selected>
+                    <enable>System.hasAddon(script.globalsearch)</enable>
+				</control>
+                <control type="button" id="111">
+                    <description>Settings Global Search</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020]</label>
+                    <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
+					<enable>Skin.HasSetting(enable_globalsearch)</enable>
+					<visible>System.HasAddon(script.globalsearch)</visible>
+				</control>
+				<control type="radiobutton" id="112">
+                    <description>Activate Simple Playlists</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[24000] Simple Playlists</label>
+					<onclick>Skin.ToggleSetting(enable_watchitlater)</onclick>
+					<selected>Skin.HasSetting(enable_watchitlater)</selected>
+                    <enable>System.hasAddon(script.simpleplaylists)</enable>
+				</control>
+                <control type="button" id="113">
+                    <description>Settings Simple Playlists</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020]</label>
+                    <onclick>Addon.OpenSettings(script.simpleplaylists)</onclick>
+					<enable>Skin.HasSetting(enable_watchitlater)</enable>
+					<visible>System.HasAddon(script.simpleplaylists)</visible>
+				</control>
+                <control type="label" id="114">
+                    <description>Skin Shortcuts Label</description>
+                    <width>1256</width>
+                    <include>DefaultSettingLabel</include>
+                   <label>$LOCALIZE[24000] Skin Shortcuts</label>
+                </control>
+                <control type="button" id="115">
+                    <description>Settings Skin Shortcuts</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020]</label>
+                    <onclick>Addon.OpenSettings(script.skinshortcuts)</onclick>
+					<enable>System.HasAddon(script.skinshortcuts)</enable>
+				</control>
+                <control type="label" id="116">
+                    <description> Skin Helper Service Label</description>
+                    <width>1256</width>
+                    <include>DefaultSettingLabel</include>
+                   <label>$LOCALIZE[24000] Skin Helper Service</label>
+                </control>
+                <control type="button" id="117">
+                    <description>Settings Skin Helper Service Art Utils</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020] Skin Helper Artwork</label>
+                    <onclick>Addon.OpenSettings(script.module.skin.helper.artutils)</onclick>
+					<visible>System.HasAddon(script.module.skin.helper.artutils)</visible>
+				</control>
+                <control type="button" id="118">
+                    <description>Settings Skin Helper Service Backgrounds</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020] Skin Helper Service Backgrounds</label>
+                    <onclick>Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
+					<visible>System.HasAddon(script.skin.helper.backgrounds)</visible>
+				</control>
+                <control type="button" id="119">
+                    <description>Settings Skin Helper Service Widgets</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020] Skin Helper Service Widgets</label>
+                    <onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
+					<visible>System.HasAddon(script.skin.helper.widgets)</visible>
+				</control>
+                <control type="button" id="120">
+                    <description>Settings Skin Helper Service Skin Backup</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[24020] Skin Helper Service Skin Backup</label>
+                    <onclick>Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+					<visible>System.HasAddon(script.skin.helper.skinbackup)</visible>
+				</control>                
+				<control type="radiobutton" id="121">
+                    <description>Enable SmartShortcuts.playlists</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[90010]</label>
+                    <onclick>Skin.ToggleSetting(smartshortcuts_playlists)</onclick>
+					<selected>Skin.HasSetting(smartshortcuts_playlists)</selected>
+					<enable>System.HasAddon(script.skin.helper.service)</enable>
+				</control>
+				<control type="radiobutton" id="122">
+                    <description>Enable SmartShortcuts.favorites</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[90011]</label>
+                    <onclick>Skin.ToggleSetting(smartshortcuts_favorites)</onclick>
+					<selected>Skin.HasSetting(smartshortcuts_favorites)</selected>
+					<enable>System.HasAddon(script.skin.helper.service)</enable>
+				</control>
+				<control type="radiobutton" id="123">
+                    <description>Enable Animated Posters</description>					
+					<width>1256</width>
+					<include>DefaultSettingButton</include>
+                    <label>- $LOCALIZE[90012]</label>
+                    <onclick>Skin.ToggleSetting(animated_posters)</onclick>
+					<selected>Skin.HasSetting(animated_posters)</selected>
+					<enable>System.HasAddon(script.skin.helper.service)</enable>
+				</control>               
 			</control>
 			<include name="UpDownArrows">
 				<param name="container_id" value="100" />
