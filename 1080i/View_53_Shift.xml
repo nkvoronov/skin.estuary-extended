@@ -62,13 +62,23 @@
 								<height>450</height>
 								<texture border="40">buttons/button-nofo.png</texture>
 							</control>
-							<control type="image">
-								<left>20</left>
+                                <control type="image">
 								<top>15</top>
-								<width>300</width>
-								<height>400</height>
+                                <left>24</left>
+                                <width>292</width>
+                                <height>400</height>
+								<aspectratio>stretch</aspectratio>
+								<texture border="20" fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
+                                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+							</control>
+							<control type="image">
+								<top>15</top>
+                                <left>24</left>
+								<width>292</width>
+                                <height>400</height>
 								<aspectratio aligny="center">keep</aspectratio>
-								<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+								<texture border="20" fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+                                <visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							</control>
 							<control type="textbox">
 								<left>20</left>
@@ -87,7 +97,7 @@
 								<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 							</control>
 							<control type="image">
-								<left>40</left>
+								<left>35</left>
 								<top>20</top>
 								<width>32</width>
 								<height>32</height>
@@ -97,45 +107,57 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="340">
-						<control type="image">
-							<top>-10</top>
-							<width>340</width>
-							<height>450</height>
-							<texture border="40">buttons/button-nofo.png</texture>
-						</control>
-						<control type="image">
-							<left>20</left>
-							<top>15</top>
-							<width>300</width>
-							<height>400</height>
-							<aspectratio aligny="center">keep</aspectratio>
-							<texture fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
-						</control>
-						<control type="textbox">
-							<left>20</left>
-							<top>438</top>
-							<width>300</width>
-							<height>100</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font12</font>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
-						</control>
 						<control type="group">
-							<left>255</left>
-							<top>20</top>
-							<include>UserRatingCircle</include>
-							<visible>![Container.Content(artists) | Container.Content(albums)]</visible>
-						</control>
-						<control type="image">
-							<left>40</left>
-							<top>20</top>
-							<width>32</width>
-							<height>32</height>
-							<texture>$VAR[ListWatchedIconVar]</texture>
-							<visible>!IsEmpty(ListItem.Overlay)</visible>
-						</control>                        
+                            <control type="image">
+                                <top>-10</top>
+                                <width>340</width>
+                                <height>450</height>
+                                <texture border="40">buttons/button-nofo.png</texture>
+                            </control>
+                            <control type="image">
+								<top>15</top>
+                                <left>24</left>
+                                <width>292</width>
+                                <height>400</height>
+                                <aspectratio>stretch</aspectratio>
+                                <texture border="20" fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+                                <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                            </control>
+                            <control type="image">
+								<top>15</top>
+                                <left>24</left>
+								<width>292</width>
+                                <height>400</height>
+                                <aspectratio aligny="center">keep</aspectratio>
+                                <texture border="20" fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+                                <visible>![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                            </control>
+                            <control type="textbox">
+                                <left>20</left>
+                                <top>438</top>
+                                <width>300</width>
+                                <height>100</height>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>font12</font>
+                                <autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+                            </control>
+                            <control type="group">
+                                <left>255</left>
+                                <top>20</top>
+                                <include>UserRatingCircle</include>
+                                <visible>![Container.Content(artists) | Container.Content(albums)]</visible>
+                            </control>
+                            <control type="image">
+                                <left>35</left>
+                                <top>20</top>
+                                <width>32</width>
+                                <height>32</height>
+                                <texture>$VAR[ListWatchedIconVar]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>                        
 					</focusedlayout>
 				</control>
 			</control>
@@ -184,7 +206,7 @@
 						<visible>ListItem.IsCollection</visible>
 						<left>120</left>
 						<top>15</top>
-						<include content="InfoList">
+						<include name="InfoList">
 							<param name="height" value="140" />
 							<param name="width" value="1700" />
 							<param name="item_height" value="30" />
@@ -370,7 +392,7 @@
 						<visible>ListItem.IsCollection</visible>
 						<left>120</left>
 						<top>15</top>
-						<include content="InfoList">
+						<include name="InfoList">
 							<param name="height" value="140" />
 							<param name="width" value="1700" />
 							<param name="item_height" value="30" />

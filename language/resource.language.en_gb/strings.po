@@ -773,6 +773,18 @@ msgstr ""
 
 # extended added value
 
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr ""
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr ""
+
+msgctxt "#40092"
+msgid "Aired"
+msgstr ""
+
 msgctxt "#40100"
 msgid "Most watched music videos"
 msgstr ""
@@ -897,12 +909,12 @@ msgctxt "#84220"
 msgid "Reset skin options"
 msgstr ""
 
-msgctxt "#88080"
-msgid "reload skin button"
-msgstr ""
-
 msgctxt "#88071"
 msgid "Show stats"
+msgstr ""
+
+msgctxt "#88080"
+msgid "reload skin button"
 msgstr ""
 
 msgctxt "#89501"

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_56_ClearLogos">
+        <control type="group">
+            <visible>Control.IsVisible(56)</visible>
+            <include>Visible_Right</include>
+            <include>OpenClose_Right</include>
+            <top>160</top>
+            <control type="image">
+                <left>65</left>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texture flipx="true" colordiffuse="button_focus">overlays/arrowright.png</texture>
+                <animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+                <animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+                <animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+            </control>
+            <control type="image">
+                <right>65</right>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texture colordiffuse="button_focus">overlays/arrowright.png</texture>
+                <animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+                <animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+                <animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+            </control>
+            <control type="button" id="56500">
+                <left>65</left>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+                <onclick>Control.Move(56,-1)</onclick>
+                <visible allowhiddenfocus="true">Container(56).HasPrevious + [Control.HasFocus(56) | Control.HasFocus(56500)]</visible>
+            </control>
+            <control type="button" id="56501">
+                <right>65</right>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+                <onclick>Control.Move(56,1)</onclick>
+                <visible allowhiddenfocus="true">Container(56).HasNext + [Control.HasFocus(56) | Control.HasFocus(56501)]</visible>
+            </control>
+            <include name="View_ClearLogos">
+                <param name="id" value="56" />
+                <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+        </control>
+    </include>
+    <include name="View_ClearLogos">
+        <include>View_Clear_Top</include>
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>495</top>
+                <left>-358</left>
+                <width>2736</width>
+                <height>230</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>5199</ondown>
+                <onup>9000</onup>
+                <pagecontrol>5199</pagecontrol>
+                <focusposition>3</focusposition>
+                <preloaditems>1</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="ClearLogos">bigwide</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="230" width="378">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="group">
+                            <centertop>50%</centertop>
+                            <height>260</height>
+                            <width>340</width>
+                            <centerleft>50%</centerleft>
+                            <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                            <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                            <control type="image">
+                                <height>100%</height>
+                                <width>100%</width>
+                                <aspectratio align="center" aligny="center">keep</aspectratio>
+                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            </control>
+                            <control type="image">
+                                <centerleft>50%</centerleft>
+                                <bottom>34</bottom>
+                                <height>35</height>
+                                <width>340</width>
+                                <texture>colors/black.png</texture>
+                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
+                                <visible>!StringCompare(ListItem.Label,..)</visible>
+                            </control>
+                            <control type="label">
+                                <centerleft>50%</centerleft>
+                                <bottom>38</bottom>
+                                <height>30</height>
+                                <width>330</width>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <scroll>true</scroll>
+                                <font>font10</font>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <height>186</height>
+                            <width>330</width>
+                            <centerleft>50%</centerleft>
+                            <aspectratio align="center" aligny="center">keep</aspectratio>
+                            <texture>$VAR[ClearLogoViewVar]</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="230" width="378">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="group">
+                            <centertop>50%</centertop>
+                            <height>260</height>
+                            <width>340</width>
+                            <centerleft>50%</centerleft>
+                            <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                            <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                            <control type="image">
+                                <height>100%</height>
+                                <width>100%</width>
+                                <aspectratio align="center" aligny="center">keep</aspectratio>
+                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            </control>
+                            <control type="image">
+                                <centerleft>50%</centerleft>
+                                <bottom>34</bottom>
+                                <height>35</height>
+                                <width>340</width>
+                                <texture>colors/black.png</texture>
+                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
+                                <visible>!StringCompare(ListItem.Label,..)</visible>
+                            </control>
+                            <control type="label">
+                                <centerleft>50%</centerleft>
+                                <bottom>38</bottom>
+                                <height>30</height>
+                                <width>330</width>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <scroll>true</scroll>
+                                <font>font10</font>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <height>186</height>
+                            <width>330</width>
+                            <centerleft>50%</centerleft>
+                            <aspectratio align="center" aligny="center">keep</aspectratio>
+                            <texture>$VAR[ClearLogoViewVar]</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    <include name="View_Clear_Top">
+        <control type="image">
+            <left>-500</left>
+            <right>-500</right>
+            <height>242</height>
+            <bottom>190</bottom>
+            <texture border="40">buttons/button-nofo.png</texture>
+        </control>
+        <control type="image">
+            <left>766</left>
+            <width>390</width>
+            <height>242</height>
+            <bottom>190</bottom>
+            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+        </control>
+        <control type="group">
+            <top>20</top>
+            <height>430</height>
+            <visible>!StringCompare(ListItem.Label,..)</visible>
+            <control type="image">
+                <top>-20</top>
+                <centerleft>50%</centerleft>
+                <width>1700</width>
+                <height>470</height>
+                <texture border="40">buttons/dialogbutton-nofo.png</texture>
+            </control>
+            <control type="image">
+                <top>10</top>
+                <posx>141</posx>
+                <height>410</height>
+                <width>288</width>
+                <fadetime>200</fadetime>
+                <aspectratio>stretch</aspectratio>                
+                <texture background="true" fallback="DefaultVideo.png">$VAR[PosterVar]</texture>
+            </control>
+            <control type="image">
+                <top>10</top>
+                <posx>1049</posx>
+                <height>410</height>
+                <width>730</width>
+                <fadetime>200</fadetime>
+                <aspectratio>stretch</aspectratio>
+                <fadetime>300</fadetime>
+                <texture background="true" fallback="colors/black.png">$VAR[ListInfoBoxImageVar]</texture>
+            </control>
+            <control type="label">
+                <top>10</top>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>580</width>
+                <height>365</height>
+                <font>font13_title</font>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>ListItem.IsCollection</visible>
+            </control>            
+            <control type="textbox">
+                <top>10</top>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>580</width>
+                <height>338</height>
+                <font>font12</font>
+                <label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
+                <textcolor>button_focus</textcolor>
+                <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+                <visible>!ListItem.IsCollection + StringCompare(ListItem.DBType,tvshow)</visible>
+            </control>
+            <control type="textbox">
+                <top>10</top>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>580</width>
+                <height>365</height>
+                <font>font12</font>
+                <label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
+                <textcolor>button_focus</textcolor>
+                <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+                <visible>!ListItem.IsCollection + !StringCompare(ListItem.DBType,tvshow)</visible>
+            </control>
+            <control type="textbox">
+                <top>10</top>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>580</width>
+                <height>365</height>
+                <align>center</align>
+                <font>font24_title</font>
+                <label>$LOCALIZE[19055]</label>
+                <visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !StringCompare(ListItem.Label,..)</visible>
+            </control>
+            <control type="group">
+                <top>60</top>
+                <posx>439</posx>
+                <left>449</left>
+                <visible>ListItem.IsCollection</visible>
+                <include name="InfoList">
+                    <param name="height" value="305" />
+                    <param name="width" value="580" />
+                    <param name="item_width" value="580" />
+                    <param name="sortby" value="year" />
+                    <param name="sortorder" value="descending" />
+                    <param name="font" value="font12" />
+                    <param name="list_id" value="5600" />
+                </include>
+            </control>
+            <control type="group">
+                <visible>!ListItem.IsCollection</visible>
+                <control type="image">
+                    <left>1049</left>
+                    <top>374</top>
+                    <width>730</width>
+                    <height>46</height>
+                    <texture colordiffuse="B0FFFFFF">colors/black.png</texture>
+                </control>
+                <control type="grouplist">
+                    <top>380</top>
+                    <left>1100</left>
+                    <orientation>horizontal</orientation>
+                    <width>730</width>
+                    <align>center</align>
+                    <include name="InfoFlag">
+                        <param name="visible" value="!IsEmpty(ListItem.duration)" />
+                        <param name="icon" value="frame/clock.png" />
+                        <param name="label" value="$INFO[ListItem.Duration,, $LOCALIZE[31132]]" />
+                    </include>
+                    <include name="InfoFlag">
+                        <param name="visible" value="!IsEmpty(ListItem.Property(TotalEpisodes))" />
+                        <param name="icon" value="lists/played-total.png" />
+                        <param name="label" value="$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]" />
+                    </include>
+                    <include name="InfoFlag">
+                        <param name="visible" value="!IsEmpty(ListItem.Year) + IsEmpty(ListItem.Premiered)" />
+                        <param name="icon" value="lists/year.png" />
+                        <param name="label" value="$INFO[ListItem.Year]" />
+                    </include>
+                    <include name="InfoFlag">
+                        <param name="visible" value="!IsEmpty(ListItem.Premiered) + IsEmpty(ListItem.Property(TotalEpisodes))" />
+                        <param name="icon" value="lists/year.png" />
+                        <param name="label" value="$INFO[ListItem.Premiered]" />
+                    </include>
+                    <include name="InfoFlag">
+                        <param name="visible" value="!IsEmpty(ListItem.Rating)" />
+                        <param name="icon" value="lists/rating.png" />
+                        <param name="label" value="$INFO[ListItem.Rating]" />
+                    </include>
+                </control>
+            </control>
+            <control type="image">
+                <bottom>2</bottom>
+                <posx>991</posx>
+                <width>48</width>
+                <height>48</height>
+                <texture>$VAR[ListWatchedIconVar]</texture>
+            </control>
+            <control type="label">
+                <bottom>40</bottom>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>535</width>
+                <height>30</height>
+                <scroll>true</scroll>
+                <font>font12</font>
+                <label>$LOCALIZE[126] : [COLOR white]$INFO[ListItem.Status][/COLOR]</label>
+                <textcolor>button_focus</textcolor>
+                <visible>!IsEmpty(ListItem.Status)</visible>
+            </control>
+            <control type="label">
+                <bottom>40</bottom>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>535</width>
+                <height>30</height>
+                <scroll>true</scroll>
+                <font>font12</font>
+                <label>$LOCALIZE[126] : [COLOR white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</label>
+                <textcolor>button_focus</textcolor>
+                <visible>IsEmpty(ListItem.Status) + !IsEmpty(Window(Home).Property(NextAired.Status))</visible>
+            </control>
+            <control type="label">
+                <bottom>10</bottom>
+                <posx>439</posx>
+                <left>449</left>
+                <right>10</right>
+                <width>535</width>
+                <height>30</height>
+                <scroll>true</scroll>
+                <font>font12</font>
+                <textcolor>button_focus</textcolor>
+                <label>$INFO[ListItem.Genre]</label>
+            </control>
+        </control>
+    </include>
+</includes>

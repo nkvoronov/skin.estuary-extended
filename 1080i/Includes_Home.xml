@@ -1,127 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="SubMenu">
-		<control type="group">
-			<height>110</height>
-			<visible>$PARAM[visible]</visible>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,4)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,5)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,6)">conditional</animation>
-			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,7)">conditional</animation>
-			<control type="label">
-				<left>235</left>
-				<top>53</top>
-				<width>700</width>
-				<height>40</height>
-				<label>$INFO[Container($PARAM[list_id]).Listitem.Label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<font>font20_title</font>
-				<align>right</align>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>Control.HasFocus($PARAM[list_id])</visible>
-			</control>
-			<control type="panel" id="$PARAM[list_id]">
-				<orientation>horizontal</orientation>
-				<onleft>9000</onleft>
-				<left>935</left>
-				<top>22</top>
-				<height>110</height>
-				<width>1355</width>
-				<onup>200000</onup>
-				<ondown>$PARAM[ondown_id]</ondown>
-				<itemlayout width="110" height="120">
-					<control type="image">
-						<width>130</width>
-						<height>110</height>
-						<texture border="40">buttons/button-nofo.png</texture>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<top>35</top>
-						<width>40</width>
-						<height>40</height>
-						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout width="110" height="120">
-					<control type="image">
-						<width>130</width>
-						<height>110</height>
-						<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
-					</control>
-					<control type="image">
-						<left>45</left>
-						<top>35</top>
-						<width>40</width>
-						<height>40</height>
-						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$PARAM[item1_label]</label>
-						<thumb>$PARAM[item1_icon]</thumb>
-                        <onclick>$PARAM[item1_onclick2]</onclick>
-						<onclick>$PARAM[item1_onclick]</onclick>
-						<visible>$PARAM[item1_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item2_label]</label>
-						<thumb>$PARAM[item2_icon]</thumb>
-                        <onclick>$PARAM[item2_onclick2]</onclick>
-						<onclick>$PARAM[item2_onclick]</onclick>
-						<visible>$PARAM[item2_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item3_label]</label>
-						<thumb>$PARAM[item3_icon]</thumb>
-                        <onclick>$PARAM[item3_onclick2]</onclick>
-						<onclick>$PARAM[item3_onclick]</onclick>
-						<visible>$PARAM[item3_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item4_label]</label>
-						<thumb>$PARAM[item4_icon]</thumb>
-                        <onclick>$PARAM[item4_onclick2]</onclick>
-						<onclick>$PARAM[item4_onclick]</onclick>
-						<visible>$PARAM[item4_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item5_label]</label>
-						<thumb>$PARAM[item5_icon]</thumb>
-                        <onclick>$PARAM[item5_onclick2]</onclick>
-						<onclick>$PARAM[item5_onclick]</onclick>
-						<visible>$PARAM[item5_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item6_label]</label>
-						<thumb>$PARAM[item6_icon]</thumb>
-                        <onclick>$PARAM[item6_onclick2]</onclick>
-						<onclick>$PARAM[item6_onclick]</onclick>
-						<visible>$PARAM[item6_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item7_label]</label>
-						<thumb>$PARAM[item7_icon]</thumb>
-                        <onclick>$PARAM[item7_onclick2]</onclick>
-						<onclick>$PARAM[item7_onclick]</onclick>
-						<visible>$PARAM[item7_vis]</visible>
-					</item>
-					<item>
-						<label>$PARAM[item8_label]</label>
-						<thumb>$PARAM[item8_icon]</thumb>
-                        <onclick>$PARAM[item8_onclick2]</onclick>
-						<onclick>$PARAM[item8_onclick]</onclick>
-						<visible>$PARAM[item8_vis]</visible>
-					</item>
-				</content>
-			</control>
-		</control>
-	</include>
 	<include name="ImageWidgetHeader">
 		<param name="visible">True</param>
         <param name="widget_header"></param>        
@@ -320,6 +198,13 @@
                                 <top>0</top>
                                 <width>240</width>
                                 <height>340</height>
+                                <texture border="40">buttons/button-nofo.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>240</width>
+                                <height>340</height>
                                 <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
                                 <bordertexture border="20">overlays/shadow.png</bordertexture>
                                 <bordersize>20</bordersize>
@@ -355,6 +240,13 @@
                             <animation type="Unfocus">
                                 <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="110,130" />
                             </animation>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>240</width>
+                                <height>340</height>
+                                <texture border="40">buttons/button-nofo.png</texture>
+                            </control>
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -508,7 +400,7 @@
 							<width>298</width>
 							<height>220</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+							<texture fallback="DefaultTVShows.png" background="true">$PARAM[item_image]</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -559,7 +451,7 @@
 								<width>298</width>
 								<height>220</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+								<texture fallback="DefaultTVShows.png" background="true">$PARAM[item_image]</texture>
 							</control>
 							<control type="group">
 								<left>20</left>
@@ -678,6 +570,13 @@
 							<top>0</top>
 							<width>340</width>
 							<height>340</height>
+                            <texture border="40">buttons/button-nofo.png</texture>
+                        </control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
                             <aspectratio>scale</aspectratio>
 							<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
@@ -741,6 +640,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>340</width>
+                                <height>340</height>
+                                <texture border="40">buttons/button-nofo.png</texture>
+                            </control>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -1538,5 +1444,127 @@
 			<onclick>noop</onclick>
 			<visible>Weather.IsFetched + !IsEmpty(Window(weather).Property(Map.$PARAM[item_id].Area)) + !IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</item>
+	</include>
+	<include name="SubMenu">
+		<control type="group">
+			<height>110</height>
+			<visible>$PARAM[visible]</visible>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,0)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,4)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,5)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,6)">conditional</animation>
+			<animation effect="slide" end="110,0" time="0" condition="!IntegerGreaterThan(Container($PARAM[list_id]).NumItems,7)">conditional</animation>
+			<control type="label">
+				<left>235</left>
+				<top>53</top>
+				<width>700</width>
+				<height>40</height>
+				<label>$INFO[Container($PARAM[list_id]).Listitem.Label]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<font>font20_title</font>
+				<align>right</align>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<visible>Control.HasFocus($PARAM[list_id])</visible>
+			</control>
+			<control type="panel" id="$PARAM[list_id]">
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<left>935</left>
+				<top>22</top>
+				<height>110</height>
+				<width>1355</width>
+				<onup>200000</onup>
+				<ondown>$PARAM[ondown_id]</ondown>
+				<itemlayout width="110" height="120">
+					<control type="image">
+						<width>130</width>
+						<height>110</height>
+						<texture border="40">buttons/button-nofo.png</texture>
+					</control>
+					<control type="image">
+						<left>45</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout width="110" height="120">
+					<control type="image">
+						<width>130</width>
+						<height>110</height>
+						<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+					</control>
+					<control type="image">
+						<left>45</left>
+						<top>35</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>icons/submenu/$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$PARAM[item1_label]</label>
+						<thumb>$PARAM[item1_icon]</thumb>
+                        <onclick>$PARAM[item1_onclick2]</onclick>
+						<onclick>$PARAM[item1_onclick]</onclick>
+						<visible>$PARAM[item1_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item2_label]</label>
+						<thumb>$PARAM[item2_icon]</thumb>
+                        <onclick>$PARAM[item2_onclick2]</onclick>
+						<onclick>$PARAM[item2_onclick]</onclick>
+						<visible>$PARAM[item2_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item3_label]</label>
+						<thumb>$PARAM[item3_icon]</thumb>
+                        <onclick>$PARAM[item3_onclick2]</onclick>
+						<onclick>$PARAM[item3_onclick]</onclick>
+						<visible>$PARAM[item3_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item4_label]</label>
+						<thumb>$PARAM[item4_icon]</thumb>
+                        <onclick>$PARAM[item4_onclick2]</onclick>
+						<onclick>$PARAM[item4_onclick]</onclick>
+						<visible>$PARAM[item4_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item5_label]</label>
+						<thumb>$PARAM[item5_icon]</thumb>
+                        <onclick>$PARAM[item5_onclick2]</onclick>
+						<onclick>$PARAM[item5_onclick]</onclick>
+						<visible>$PARAM[item5_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item6_label]</label>
+						<thumb>$PARAM[item6_icon]</thumb>
+                        <onclick>$PARAM[item6_onclick2]</onclick>
+						<onclick>$PARAM[item6_onclick]</onclick>
+						<visible>$PARAM[item6_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item7_label]</label>
+						<thumb>$PARAM[item7_icon]</thumb>
+                        <onclick>$PARAM[item7_onclick2]</onclick>
+						<onclick>$PARAM[item7_onclick]</onclick>
+						<visible>$PARAM[item7_vis]</visible>
+					</item>
+					<item>
+						<label>$PARAM[item8_label]</label>
+						<thumb>$PARAM[item8_icon]</thumb>
+                        <onclick>$PARAM[item8_onclick2]</onclick>
+						<onclick>$PARAM[item8_onclick]</onclick>
+						<visible>$PARAM[item8_vis]</visible>
+					</item>
+				</content>
+			</control>
+		</control>
 	</include>
 </includes>

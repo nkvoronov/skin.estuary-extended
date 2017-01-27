@@ -622,6 +622,18 @@ msgstr "Текущий инфоресурс"
 
 # extended added value
 
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr "Загрузить иллюстрации"
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr "Большие постеры"
+
+msgctxt "#40092"
+msgid "Aired"
+msgstr "В эфире"
+
 msgctxt "#40100"
 msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"

@@ -272,7 +272,7 @@
 		<param name="height">405</param>
 		<param name="label1">$INFO[ListItem.Label]</param>
 		<param name="label2">[COLOR button_focus]$INFO[ListItem.Property(AddonVersion)][/COLOR]</param>
-        <param name="fallback_image">DefaultFolderSquare.png</param>
+        <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<control type="group">
 				<description>CustomAddons Widget including header and arrows</description>
@@ -309,6 +309,13 @@
 					<onback>SetFocus(9000)</onback>
 					<preloaditems>1</preloaditems>
 					<itemlayout width="343" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
+                            <texture border="40">buttons/button-nofo.png</texture>
+                        </control>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -358,6 +365,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>340</width>
+                                <height>340</height>
+                                <texture border="40">buttons/button-nofo.png</texture>
+                            </control>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>

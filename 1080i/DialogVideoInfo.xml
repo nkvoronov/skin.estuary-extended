@@ -10,22 +10,22 @@
 				<top>150</top>
 				<left>66</left>
 				<include>OpenClose_Left</include>
+                <control type="image">
+					<top>-16</top>
+					<left>-16</left>
+					<width>566</width>
+					<height>841</height>
+					<texture border="40">buttons/button-nofo.png</texture>					
+				</control>
 				<control type="image">
 					<top>-16</top>
 					<left>-16</left>
 					<width>566</width>
 					<height>841</height>
-					<texture>colors/black.png</texture>
-					<bordertexture border="20">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
-					<left>4</left>
-					<top>4</top>
-					<width>526</width>
-					<height>801</height>
 					<aspectratio>scale</aspectratio>
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
+                    <bordertexture border="20">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
 				</control>
 				<control type="group">
 					<visible>StringCompare(ListItem.DBType,episode) | StringCompare(ListItem.DBType,video)</visible>
@@ -216,14 +216,6 @@
 						<param name="visible" value="!IsEmpty(ListItem.Status)" />
 					</include>
 				</control>
-				<control type="image">
-					<left>17</left>
-					<top>185</top>
-					<width>1210</width>
-					<height>283</height>
-					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="A0FFFFFF">colors/black.png</texture>
-				</control>
 				<control type="textbox">
 					<left>17</left>
 					<top>185</top>
@@ -262,7 +254,13 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
+								<texture border="20">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<top>0</top>
+								<width>264</width>
+								<height>317</height>
+								<texture>DefaultActors.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -314,7 +312,13 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
+								<texture border="20">buttons/button-nofo.png</texture>
+							</control>
+							<control type="image">
+								<top>0</top>
+								<width>264</width>
+								<height>317</height>
+								<texture>DefaultActors.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
 								<bordertexture border="20">overlays/shadow.png</bordertexture>
 								<bordersize>20</bordersize>
@@ -359,10 +363,10 @@
 								<label>$INFO[ListItem.Label2]</label>
 							</control>
 							<control type="image">
-								<left>18</left>
-								<top>20</top>
-								<width>230</width>
-								<height>280</height>
+								<left>16</left>
+								<top>16</top>
+								<width>232</width>
+								<height>285</height>
 								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
@@ -454,6 +458,12 @@
 						<param name="visible" value="System.hasAddon(script.extendedinfo)" />
 					</include>
 					<include name="InfoDialogButton">
+						<param name="id" value="13" />
+						<param name="icon" value="icons/infodialogs/director.png" />
+						<param name="label" value="$LOCALIZE[31123]" />
+						<param name="visible" value="!IsEmpty(ListItem.Director)" />
+					</include>
+					<include name="InfoDialogButton">
 						<param name="id" value="102" />
 						<param name="icon" value="icons/infodialogs/image.png" />
 						<param name="label" value="$LOCALIZE[31028]" />
@@ -462,11 +472,19 @@
 						<param name="visible" value="!IsEmpty(ListItem.Art(fanart))" />
 					</include>
 					<include name="InfoDialogButton">
-						<param name="id" value="13" />
-						<param name="icon" value="icons/infodialogs/director.png" />
-						<param name="label" value="$LOCALIZE[31123]" />
-						<param name="visible" value="!IsEmpty(ListItem.Director)" />
+						<param name="id" value="103" />
+						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(movies)" />
 					</include>
+					<include name="InfoDialogButton">
+						<param name="id" value="104" />
+						<param name="icon" value="icons/infodialogs/download.png" />
+						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
+						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
+					</include>                    
 					<include name="InfoDialogButton">
 						<param name="id" value="10" />
 						<param name="icon" value="icons/infodialogs/choose_image.png" />
