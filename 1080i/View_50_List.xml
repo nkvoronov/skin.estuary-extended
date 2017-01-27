@@ -165,11 +165,43 @@
 			<aspectratio>keep</aspectratio>
 			<fadetime>300</fadetime>
 			<texture background="true" fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
+            <visible>![Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+		</control>
+		<control type="image">
+			<left>114</left>
+			<top>186</top>
+			<width>461</width>
+			<height>461</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>300</fadetime>
+			<texture background="true" fallback="DefaultMusicArtists.png">$VAR[IconWallThumbVar]</texture>
+            <visible>Container.Content(artists)</visible>
+		</control>
+		<control type="image">
+			<left>114</left>
+			<top>186</top>
+			<width>461</width>
+			<height>461</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>300</fadetime>
+			<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[IconWallThumbVar]</texture>
+            <visible>Container.Content(albums)</visible>
+		</control>
+		<control type="image">
+			<left>114</left>
+			<top>186</top>
+			<width>461</width>
+			<height>461</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>300</fadetime>
+			<texture background="true" fallback="DefaultMusicSongs.png">$VAR[IconWallThumbVar]</texture>
+            <visible>Container.Content(songs)</visible>
 		</control>
 		<control type="group">
 			<left>520</left>
 			<top>200</top>
 			<include>UserRatingCircle</include>
+            <visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="0" condition="Control.IsVisible(500) + Container.Content(addons)">Conditional</animation>

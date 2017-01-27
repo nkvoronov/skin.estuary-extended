@@ -773,6 +773,10 @@ msgstr ""
 
 # extended added value
 
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr ""
+
 msgctxt "#40001"
 msgid "Weather widgets"
 msgstr ""
@@ -795,6 +799,14 @@ msgstr ""
 
 msgctxt "#40006"
 msgid "Media widgets"
+msgstr ""
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr ""
+
+msgctxt "#40092"
+msgid "Aired"
 msgstr ""
 
 msgctxt "#40100"

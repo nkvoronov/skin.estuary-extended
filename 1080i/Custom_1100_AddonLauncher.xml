@@ -174,10 +174,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/submenu/add-ons.png</textureradioonfocus>
-					<textureradioonnofocus>icons/submenu/add-ons.png</textureradioonnofocus>
-					<textureradioofffocus>icons/submenu/add-ons.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/submenu/add-ons.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/addons.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/addons.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/addons.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/addons.png</textureradiooffnofocus>
 				</control>
 				<control type="radiobutton" id="802">
 					<width>157</width>
@@ -219,10 +219,10 @@
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/submenu/files.png</textureradioonfocus>
-					<textureradioonnofocus>icons/submenu/files.png</textureradioonnofocus>
-					<textureradioofffocus>icons/submenu/files.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/submenu/files.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/my-addons.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/my-addons.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/my-addons.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/my-addons.png</textureradiooffnofocus>
 				</control>
 				<control type="label" id="804">
 					<left>-217</left>

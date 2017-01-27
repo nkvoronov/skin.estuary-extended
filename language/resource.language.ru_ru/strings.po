@@ -622,6 +622,10 @@ msgstr "Текущий инфоресурс"
 
 # extended added value
 
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr "Загрузить иллюстрации"
+
 msgctxt "#40001"
 msgid "Weather widgets"
 msgstr "Виджеты погоды"
@@ -645,6 +649,14 @@ msgstr "Виджет системной информации"
 msgctxt "#40006"
 msgid "Media widgets"
 msgstr "Медиа виджеты"
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr "Большие постеры"
+
+msgctxt "#40092"
+msgid "Aired"
+msgstr "В эфире"
 
 msgctxt "#40100"
 msgid "Most watched music videos"
@@ -770,13 +782,13 @@ msgctxt "#84220"
 msgid "Reset skin options"
 msgstr "Сброс параметров обложки"
 
-msgctxt "#88071"
-msgid "Show stats"
-msgstr "Показывать статистику"
-
 msgctxt "#85216"
 msgid "Customize power menu"
 msgstr "Настройка меню питания"
+
+msgctxt "#88071"
+msgid "Show stats"
+msgstr "Показывать статистику"
 
 msgctxt "#89501"
 msgid "Enable FullScreen Clock"

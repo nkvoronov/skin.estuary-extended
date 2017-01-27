@@ -622,6 +622,10 @@ msgstr "Поточний інфоресурс"
 
 # extended added value
 
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr "Завантажити ілюстрації"
+
 msgctxt "#40001"
 msgid "Weather widgets"
 msgstr "Віджети погоди"
@@ -645,6 +649,14 @@ msgstr "Віджет системної інформації"
 msgctxt "#40006"
 msgid "Media widgets"
 msgstr "Медіа віджети"
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr "Великі постери"
+
+msgctxt "#40092"
+msgid "Aired"
+msgstr "В ефірі"
 
 msgctxt "#40100"
 msgid "Most watched music videos"
