@@ -212,6 +212,7 @@
 		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Art(tvshow.banner)]</value>
 	</variable>
+    <!-- Poster -->    
 	<variable name="PosterVarOrg">
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
 		<value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
@@ -240,11 +241,12 @@
         <value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
         <value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
-    </variable>    
+    </variable>
 	<variable name="InfoDialogPosterVar">
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ListPosterVar">
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
