@@ -1044,6 +1044,20 @@
 		<width>auto</width>
 		<align>left</align>
 	</include>
+	<include name="ColoredBackgroundImages">
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="primary_background">special://skin/extras/backgrounds/default.png</texture>
+		</control>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="secondary_background" fallback="special://skin/extras/patterns/pattern1.png">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
+		</control>
+	</include>
 	<include name="DefaultBackground">
 		<param name="is_media">True</param>
 		<param name="image_path">special://skin/extras/backgrounds/SKINDEFAULT.jpg</param>
@@ -1055,7 +1069,7 @@
 			</control>
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
-				<visible>Player.HasAudio + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+				<visible>Player.HasAudio + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive</visible>
 			</control>
 			<control type="group">
 				<animation effect="zoom" center="960,540" end="102,102" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>

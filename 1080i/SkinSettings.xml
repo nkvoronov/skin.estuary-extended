@@ -607,6 +607,27 @@
 					<enable>Skin.HasSetting(use_custom_bg)</enable>
 				</control>
                 <control type="button" id="504">
+                    <description>Background Overlay Type</description>					
+					<width>1256</width>
+                    <include>DefaultSettingButton</include>
+					<label>$LOCALIZE[31156]</label>
+					<label2>$VAR[BackgroundOverlayTypeVar]</label2>
+                    <onclick condition="IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,0)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),12)">Skin.SetString(background_overlay,0)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),11)">Skin.SetString(background_overlay,12)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),10)">Skin.SetString(background_overlay,11)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),9)">Skin.SetString(background_overlay,10)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),8)">Skin.SetString(background_overlay,9)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),7)">Skin.SetString(background_overlay,8)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),6)">Skin.SetString(background_overlay,7)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),5)">Skin.SetString(background_overlay,6)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),4)">Skin.SetString(background_overlay,5)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),3)">Skin.SetString(background_overlay,4)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),2)">Skin.SetString(background_overlay,3)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),1)">Skin.SetString(background_overlay,2)</onclick>
+                    <onclick condition="StringCompare(Skin.String(background_overlay),0)">Skin.SetString(background_overlay,1)</onclick>
+				</control>                
+                <control type="button" id="505">
                     <description>Home Fanart</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -616,7 +637,7 @@
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
 				</control>
-                <control type="button" id="505">
+                <control type="button" id="506">
                     <description>Weather Fanart</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>

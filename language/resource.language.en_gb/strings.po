@@ -771,6 +771,10 @@ msgctxt "#31312"
 msgid "Current scraper"
 msgstr ""
 
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr ""
+
 # extended added value
 
 msgctxt "#40000"
