@@ -795,7 +795,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicVideos.png"/>
                     <param name="widget_header" value="$LOCALIZE[20390]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18900"/>
@@ -804,7 +804,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/mostwatched_musicvideos.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicVideos.png"/>
                     <param name="widget_header" value="$LOCALIZE[40100]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18100"/>
@@ -813,7 +813,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_musicvideos.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicVideos.png"/>
                     <param name="widget_header" value="$LOCALIZE[40101]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18200"/>
@@ -822,7 +822,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/unwatched_musicvideos.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicVideos.png"/>
                     <param name="widget_header" value="$LOCALIZE[40102]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18300"/>
@@ -901,7 +901,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="musicdb://recentlyplayedalbums"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicAlbums.png"/>
                     <param name="widget_header" value="$LOCALIZE[517]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19900"/>
@@ -910,7 +910,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="musicdb://recentlyaddedalbums/"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicAlbums.png"/>
                     <param name="widget_header" value="$LOCALIZE[359]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19100"/>
@@ -919,7 +919,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_albums.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicAlbums.png"/>
                     <param name="widget_header" value="$LOCALIZE[31012]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19200"/>
@@ -928,7 +928,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_artists.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicArtistsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicArtists.png"/>
                     <param name="widget_header" value="$LOCALIZE[31013]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19300"/>
@@ -940,7 +940,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/unplayed_albums.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicAlbums.png"/>
                     <param name="widget_header" value="$LOCALIZE[31014]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19400"/>
@@ -949,7 +949,7 @@
                 </include>
                 <include content="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/mostplayed_albums.xsp"/>
-                    <param name="fallback_image" value="DefaultMusicAlbumsSolid.png"/>
+                    <param name="fallback_image" value="DefaultMusicAlbums.png"/>
                     <param name="widget_header" value="$LOCALIZE[31011]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="19500"/>
@@ -1001,7 +1001,7 @@
                 <texturefocus></texturefocus>
                 <texturenofocus></texturenofocus>
             </control>
-            <control type="grouplist" id="21001">
+            <control type="grouplist" id="20001">
                 <orientation>vertical</orientation>
                 <height>922</height>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>

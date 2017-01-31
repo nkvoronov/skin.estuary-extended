@@ -320,6 +320,13 @@
                                 <top>0</top>
                                 <width>240</width>
                                 <height>340</height>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>240</width>
+                                <height>340</height>
                                 <texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Art(poster)]</texture>
                                 <bordertexture border="20">overlays/shadow.png</bordertexture>
                                 <bordersize>20</bordersize>
@@ -355,6 +362,13 @@
                             <animation type="Unfocus">
                                 <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="110,130" />
                             </animation>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>240</width>
+                                <height>340</height>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
+                            </control>
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -500,7 +514,7 @@
 							<top>1</top>
 							<width>348</width>
 							<height>340</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<left>24</left>
@@ -508,7 +522,7 @@
 							<width>298</width>
 							<height>220</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+							<texture fallback="DefaultTVShows.png" background="true">$PARAM[item_image]</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -551,7 +565,7 @@
 								<top>1</top>
 								<width>348</width>
 								<height>340</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<left>24</left>
@@ -559,7 +573,7 @@
 								<width>298</width>
 								<height>220</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="DefaultVideo.png" background="true">$PARAM[item_image]</texture>
+								<texture fallback="DefaultTVShows.png" background="true">$PARAM[item_image]</texture>
 							</control>
 							<control type="group">
 								<left>20</left>
@@ -678,6 +692,13 @@
 							<top>0</top>
 							<width>340</width>
 							<height>340</height>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
+                        </control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>340</width>
+							<height>340</height>
                             <aspectratio>scale</aspectratio>
 							<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(thumb)]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
@@ -741,6 +762,13 @@
 							<animation type="Unfocus">
 								<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="150,70" />
 							</animation>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>340</width>
+                                <height>340</height>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
+                            </control>
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
@@ -865,7 +893,7 @@
 						<control type="image">
 							<width>340</width>
 							<height>340</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<top>23</top>
@@ -876,9 +904,9 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="image">
-							<left>20</left>
+							<left>22</left>
 							<top>243</top>
-							<width>298</width>
+							<width>296</width>
 							<height>75</height>
 							<texture>colors/black.png</texture>
 						</control>
@@ -906,7 +934,7 @@
 							<control type="image">
 								<width>340</width>
 								<height>340</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<width>340</width>
@@ -924,9 +952,9 @@
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="image">
-								<left>20</left>
+								<left>22</left>
 								<top>243</top>
-								<width>298</width>
+								<width>296</width>
 								<height>75</height>
 								<texture>colors/black.png</texture>
 							</control>
@@ -996,7 +1024,7 @@
 						<control type="image">
 							<width>340</width>
 							<height>500</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<top>43</top>
@@ -1041,7 +1069,7 @@
 							<control type="image">
 								<width>340</width>
 								<height>500</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<width>340</width>
@@ -1133,7 +1161,7 @@
 						<control type="image">
 							<width>340</width>
 							<height>500</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<top>43</top>
@@ -1178,7 +1206,7 @@
 							<control type="image">
 								<width>340</width>
 								<height>500</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<width>340</width>
@@ -1286,7 +1314,7 @@
 							<top>20</top>
 							<width>260</width>
 							<height>350</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<left>60</left>
@@ -1333,7 +1361,7 @@
 								<top>20</top>
 								<width>260</width>
 								<height>350</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<left>0</left>

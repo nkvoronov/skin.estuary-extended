@@ -22,13 +22,13 @@
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content() | Container.Content(tags) | Container.Content(years) | Container.Content(roles) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists) | Container.Content(unknown)</visible>
 				<viewtype label="31099">icon</viewtype>
-				<itemlayout height="248" width="440" condition="Container.Content() | Container.Content(unknown) | Container.Content(tags) | Container.Content(files) | Container.Content(playlists)  | [Container.Content(studios) + Skin.HasSetting(show_studiologos) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))]">
+				<itemlayout height="248" width="440" condition="Container.Content() | Container.Content(unknown) | Container.Content(tags) | Container.Content(files) | Container.Content(playlists) | [Container.Content(studios) + Skin.HasSetting(show_studiologos) + !String.IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !String.IsEmpty(Skin.String(LanguageFlags.path))]">
 					<control type="group">
 						<top>2</top>
 						<control type="image">
 							<width>400</width>
 							<height>245</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<left>120</left>
@@ -101,7 +101,7 @@
 						<control type="image">
 							<width>400</width>
 							<height>245</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 							<animation effect="fade" start="0" end="100" time="0">Unfocus</animation>
 							<animation effect="fade" start="100" end="0" time="0">Focus</animation>
 						</control>
@@ -174,7 +174,7 @@
 						<control type="image">
 							<width>330</width>
 							<height>124</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="textbox">
 							<left>30</left>
@@ -200,7 +200,7 @@
 						<control type="image">
 							<width>330</width>
 							<height>124</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 							<animation effect="fade" start="0" end="100" time="0">Unfocus</animation>
 							<animation effect="fade" start="100" end="0" time="0">Focus</animation>
 						</control>

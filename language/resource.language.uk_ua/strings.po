@@ -622,6 +622,22 @@ msgstr "Поточний інфоресурс"
 
 # extended added value
 
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "Виберіть шаблон фону"
+
+msgctxt "#40000"
+msgid "Artwork Downloader"
+msgstr "Завантажити ілюстрації"
+
+msgctxt "#40091"
+msgid "Big posters"
+msgstr "Великі постери"
+
+msgctxt "#40092"
+msgid "Aired"
+msgstr "В ефірі"
+
 msgctxt "#40100"
 msgid "Most watched music videos"
 msgstr "Саме Популярне муз. відео"
@@ -749,6 +765,10 @@ msgstr "Скидання параметрів обкладинки"
 msgctxt "#88071"
 msgid "Show stats"
 msgstr "Показувати статистику"
+
+msgctxt "#89501"
+msgid "Enable FullScreen Clock"
+msgstr "Показувати годинник в повноекранному режимі"
 
 msgctxt "#88080"
 msgid "reload skin button"
