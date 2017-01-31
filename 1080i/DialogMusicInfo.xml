@@ -9,8 +9,7 @@
 			<control type="image">
 				<width>615</width>
 				<height>615</height>
-				<aspectratio>scale</aspectratio>
-				<texture border="40">buttons/button-nofo.png</texture>
+				<texture border="22">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
 				<width>615</width>
@@ -174,7 +173,7 @@
 						<top>-10</top>
 						<width>595</width>
 						<height>100</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -220,7 +219,7 @@
 						<top>-10</top>
 						<width>250</width>
 						<height>312</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="image">
 						<left>30</left>

@@ -56,7 +56,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -87,7 +87,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
@@ -275,7 +275,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -324,7 +324,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
@@ -380,7 +380,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>10</left>
@@ -472,7 +472,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>

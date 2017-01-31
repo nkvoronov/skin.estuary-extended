@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>SetProperty(FanartHomeType,search,Home)</onload>
 	<coordinates>
 		<left>0</left>
 		<top>0</top>
@@ -44,8 +43,7 @@
 			</control>
 			<!-- Background -->
 			<include name="DefaultBackground">
-				<param name="is_media" value="False" />
-				<param name="image_path" value="$VAR[SearchFanartVar]" />
+				<param name="overlay_background" value="$VAR[SearchFanartVar]" />
 			</include>
 			<!-- TopBar -->
 			<include name="TopBar">

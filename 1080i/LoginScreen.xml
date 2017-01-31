@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">52</defaultcontrol>
     <onload>SetProperty(FanartHomeType,settings,home)</onload>
 	<controls>
+        <!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Right</include>

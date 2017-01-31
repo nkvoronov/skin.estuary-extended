@@ -176,7 +176,7 @@
             <right>-500</right>
             <height>242</height>
             <bottom>190</bottom>
-            <texture border="40">buttons/button-nofo.png</texture>
+            <texture border="22">dialogs/dialog-bg.png</texture>
         </control>
         <control type="image">
             <left>766</left>
@@ -194,7 +194,7 @@
                 <centerleft>50%</centerleft>
                 <width>1700</width>
                 <height>470</height>
-                <texture border="40">buttons/dialogbutton-nofo.png</texture>
+                <texture border="22">dialogs/dialog-bg.png</texture>
             </control>
             <control type="image">
                 <top>10</top>

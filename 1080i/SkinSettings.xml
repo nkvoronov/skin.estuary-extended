@@ -707,7 +707,7 @@
                 <onright>600</onright>
                 <orientation>vertical</orientation>
                 <visible>Container(9000).HasFocus(6)</visible>
-            </control>            
+            </control>
 			<control type="textbox" id="6">
 				<description>description area</description>
 				<left>480</left>

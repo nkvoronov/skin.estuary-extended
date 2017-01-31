@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-	<color name="primary_background">FF966300</color>
-	<color name="secondary_background">33FFFF00</color>
-	<color name="dialog_tint">FF2B2B22</color>
+	<color name="primary_background">FFCFA700</color>
+	<color name="secondary_background">FFCFA700</color>
 	<color name="background">FF000000</color>
 	<color name="black">FF000000</color>
 	<color name="white">FFF0F0F0</color>
@@ -13,7 +12,6 @@
 	<color name="text_shadow">22000000</color>
 	<color name="border_alpha">60FFFFFF</color>
 	<color name="disabled">40FFFFFF</color>
-	<color name="selected">FF11E7B1</color>
-	<color name="selected_new">FFFFF000</color>
+	<color name="selected">FFFFF000</color>
 	<color name="invalid">FFFF0000</color>
 </colors>

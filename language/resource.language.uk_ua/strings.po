@@ -620,11 +620,11 @@ msgctxt "#31312"
 msgid "Current scraper"
 msgstr "Поточний інфоресурс"
 
+# extended added value
+
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Виберіть шаблон фону"
-
-# extended added value
 
 msgctxt "#40000"
 msgid "Artwork Downloader"

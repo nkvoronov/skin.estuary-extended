@@ -1044,82 +1044,82 @@
 		<width>auto</width>
 		<align>left</align>
 	</include>
-	<include name="ColoredBackgroundImages">
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="primary_background">special://skin/extras/backgrounds/default.png</texture>
-		</control>
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="secondary_background" fallback="special://skin/extras/patterns/pattern1.png">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
-		</control>
-	</include>
 	<include name="DefaultBackground">
-		<param name="is_media">True</param>
-		<param name="image_path">special://skin/extras/backgrounds/SKINDEFAULT.jpg</param>
+        <param name="multi">False</param>
+		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
 		<definition>
+            <!-- Video -->
 			<control type="videowindow">
 				<depth>DepthBackground</depth>
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasVideo + !Slideshow.IsActive</visible>
 			</control>
+            <!-- Visualisation -->
 			<control type="visualisation">
 				<include>FullScreenDimensions</include>
 				<visible>Player.HasAudio + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia)) + !Slideshow.IsActive</visible>
 			</control>
+            <!-- Backgrounds -->
 			<control type="group">
+                <include>FullScreenDimensions</include>
 				<animation effect="zoom" center="960,540" end="102,102" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>
-				<control type="image" id="90000">
-					<depth>DepthBackground</depth>
+                <!-- Primary Background Default -->
+				<control type="image">
+                    <depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
-					<texture fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[GlobalFanartVar]</texture>
+                    <texture colordiffuse="primary_background">special://skin/extras/backgrounds/default.png</texture>
+                    <visible>!Skin.HasSetting(use_custom_bg)</visible>
 				</control>
-				<control type="image" id="90001">
+                <!-- Primary Background User -->
+				<control type="image">
+                    <depth>DepthBackground</depth>
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
+                    <texture>$INFO[Skin.String(custom_background)]</texture>
+                    <visible>Skin.HasSetting(use_custom_bg) + !IsEmpty(Skin.String(custom_background))</visible>
+				</control>
+                <!-- Secondary Background -->
+				<control type="image">
+                    <depth>DepthBackground</depth>
+					<include>FullScreenDimensions</include>
+					<aspectratio>scale</aspectratio>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
+					<texture colordiffuse="secondary_background">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
+                    <visible>!IsEmpty(Skin.String(background_overlay)) + !StringCompare(Skin.String(background_overlay),0)</visible>
+				</control>
+                <!-- Overlay -->
+				<control type="image">
 					<depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
+					<fadetime>600</fadetime>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<animation effect="fade" time="400">VisibleChange</animation>
-					<texture background="true" colordiffuse="35FFFFFF">$VAR[MediaFanartVar]</texture>
-					<visible>$PARAM[is_media]</visible>
+					<texture background="true" colordiffuse="bg_overlay">$PARAM[overlay_background]</texture>
+                    <visible>!$PARAM[multi]</visible>
 					<visible>!Player.HasMedia | !IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
 				</control>
-                <control type="image" id="90002">
-					<depth>DepthBackground</depth>
-					<include>FullScreenDimensions</include>
-					<aspectratio>scale</aspectratio>
-					<fadetime>400</fadetime>
-					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-					<animation effect="fade" time="400">VisibleChange</animation>
-					<texture background="true" colordiffuse="35FFFFFF">$VAR[FanartHomeTypeVar]</texture>
-					<visible>$PARAM[is_media]</visible>
-                    <visible>IsEmpty(Control.GetLabel(90001))</visible>
-					<visible>!Player.HasMedia | !IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
-				</control>
-			</control>
-			<control type="multiimage">
-				<depth>DepthBackground</depth>
-				<include>FullScreenDimensions</include>
-				<aspectratio>scale</aspectratio>
-				<fadetime>600</fadetime>
-				<animation effect="zoom" center="auto" end="102,102" time="0" condition="IntegerGreaterThan(System.StereoscopicMode,0)">conditional</animation>
-				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<animation effect="fade" time="400">VisibleChange</animation>
-				<imagepath background="true" colordiffuse="35FFFFFF">$PARAM[image_path]</imagepath>
-				<visible>!$PARAM[is_media]</visible>
-				<visible>!Player.HasMedia</visible>
-			</control>			
+                <!-- Overlay multi-->
+                <control type="multiimage">
+                    <depth>DepthBackground</depth>
+                    <include>FullScreenDimensions</include>
+                    <aspectratio>scale</aspectratio>
+                    <fadetime>600</fadetime>
+                    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+                    <animation effect="fade" time="400">VisibleChange</animation>
+                    <imagepath background="true" colordiffuse="bg_overlay">$PARAM[overlay_background]</imagepath>
+                    <visible>$PARAM[multi]</visible>
+                    <visible>!Player.HasMedia</visible>
+                </control>
+			</control>            
 		</definition>
 	</include>
 	<include name="BottomBar">

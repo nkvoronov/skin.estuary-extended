@@ -149,14 +149,13 @@
 		</control>
 	</include>
 	<include name="ListThumbInfoPanel">
-		<control type="image">
-			<left>90</left>
-			<top>162</top>
-			<width>509</width>
-			<height>509</height>
-			<aspectratio>scale</aspectratio>
-			<texture border="40">buttons/button-nofo.png</texture>
-		</control>
+        <control type="image">
+            <left>90</left>
+            <top>162</top>
+            <width>509</width>
+            <height>509</height>
+            <texture border="22">dialogs/dialog-bg.png</texture>
+        </control>
 		<control type="image">
 			<left>114</left>
 			<top>186</top>

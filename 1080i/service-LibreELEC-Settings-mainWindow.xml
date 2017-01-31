@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="5533">
     <defaultcontrol always="true">1000</defaultcontrol>
+    <onload>SetProperty(FanartHomeType,settings,home)</onload>
     <allowoverlay>no</allowoverlay>
     <controls>
 		<!-- Background -->

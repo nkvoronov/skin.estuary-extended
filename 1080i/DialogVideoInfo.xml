@@ -15,7 +15,7 @@
 					<left>-16</left>
 					<width>566</width>
 					<height>841</height>
-					<texture border="40">buttons/button-nofo.png</texture>					
+					<texture border="22">dialogs/dialog-bg.png</texture>					
 				</control>
 				<control type="image">
 					<top>-16</top>
@@ -100,7 +100,7 @@
 						<width>513</width>
 						<height>410</height>
 						<aligny>bottom</aligny>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 						<visible>IntegerGreaterThan(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
@@ -254,7 +254,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture border="20">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -312,7 +312,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture border="20">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<top>0</top>

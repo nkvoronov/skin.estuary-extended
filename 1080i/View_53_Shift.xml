@@ -60,7 +60,7 @@
 								<top>-10</top>
 								<width>340</width>
 								<height>450</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
                                 <control type="image">
 								<top>15</top>
@@ -112,7 +112,7 @@
                                 <top>-10</top>
                                 <width>340</width>
                                 <height>450</height>
-                                <texture border="40">buttons/button-nofo.png</texture>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
                             </control>
                             <control type="image">
 								<top>15</top>
