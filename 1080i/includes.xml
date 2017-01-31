@@ -1068,7 +1068,7 @@
                     <depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
                     <texture colordiffuse="primary_background">special://skin/extras/backgrounds/default.png</texture>
                     <visible>!Skin.HasSetting(use_custom_bg)</visible>
@@ -1078,7 +1078,7 @@
                     <depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
                     <texture>$INFO[Skin.String(custom_background)]</texture>
                     <visible>Skin.HasSetting(use_custom_bg) + !IsEmpty(Skin.String(custom_background))</visible>
@@ -1088,7 +1088,7 @@
                     <depth>DepthBackground</depth>
 					<include>FullScreenDimensions</include>
 					<aspectratio>scale</aspectratio>
-					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="Player.HasMedia + String.IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup)">WindowOpen</animation>
 					<texture colordiffuse="secondary_background">$INFO[Skin.String(background_overlay),special://skin/extras/patterns/pattern,.png]</texture>
                     <visible>!IsEmpty(Skin.String(background_overlay)) + !StringCompare(Skin.String(background_overlay),0)</visible>
@@ -1117,9 +1117,9 @@
                     <animation effect="fade" time="400">VisibleChange</animation>
                     <imagepath background="true" colordiffuse="bg_overlay">$PARAM[overlay_background]</imagepath>
                     <visible>$PARAM[multi]</visible>
-                    <visible>!Player.HasMedia</visible>
+                    <visible>!Player.HasMedia | !IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
                 </control>
-			</control>            
+			</control>
 		</definition>
 	</include>
 	<include name="BottomBar">

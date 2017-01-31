@@ -298,7 +298,7 @@
                     <param name="widget_header" value="$LOCALIZE[31016]"/>
                     <param name="widget_target" value="pvr"/>
 					<param name="onup_id" value="13900"/>
-                    <param name="list_id" value="13200"/>                    
+                    <param name="list_id" value="13200"/>
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasTVChannels"/>
                 </include>
@@ -408,7 +408,7 @@
                     <param name="widget_header" value="$LOCALIZE[31018]"/>
                     <param name="widget_target" value="files"/>
 					<param name="onup_id" value="14900"/>
-                    <param name="list_id" value="14200"/>                    
+                    <param name="list_id" value="14200"/>
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
@@ -416,7 +416,7 @@
                     <param name="widget_header" value="$LOCALIZE[84208]"/>
                     <param name="widget_target" value="Radio"/>
 					<param name="onup_id" value="14900"/>
-                    <param name="list_id" value="14200"/>                    
+                    <param name="list_id" value="14200"/>
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
