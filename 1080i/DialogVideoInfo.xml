@@ -23,8 +23,7 @@
 					<width>566</width>
 					<height>841</height>
 					<aspectratio>scale</aspectratio>
-                    <!-- InfoDialogPosterVar -->
-					<texture fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
                     <bordertexture border="20">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
                     <visible>!StringCompare(ListItem.DBType,musicvideo)</visible>
@@ -46,7 +45,7 @@
 						<width>506</width>
 						<height>801</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[PosterThumbVar]</texture>
+						<texture>$VAR[ListPosterVar]</texture>
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
@@ -69,7 +68,7 @@
                         <width>506</width>
                         <height>801</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[PosterThumbVar]</texture>
+                        <texture>$VAR[ListPosterVar]</texture>
                         <bordertexture border="20">overlays/shadow.png</bordertexture>
                         <bordersize>20</bordersize>
                     </control>

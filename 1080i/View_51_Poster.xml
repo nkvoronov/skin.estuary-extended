@@ -47,7 +47,7 @@
 							<width>276</width>
 							<height>394</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -84,7 +84,7 @@
 							<width>276</width>
 							<height>394</height>
 							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
+							<texture fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
 							<bordertexture border="20">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 							<animation effect="fade" time="300" start="100" end="0">Focus</animation>
