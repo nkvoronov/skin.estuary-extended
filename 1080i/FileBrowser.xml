@@ -237,7 +237,7 @@
 				<aligny>center</aligny>
 				<textcolor>grey</textcolor>
 				<font>font10</font>
-				<label>$VAR[FileBrowserSelectLabel]</label>
+				<label>$VAR[FileBrowserSelectLabelVar]</label>
 				<wrapmultiline>true</wrapmultiline>
 				<visible>!Control.IsVisible(451)</visible>
 			</control>

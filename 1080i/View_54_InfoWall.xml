@@ -181,7 +181,7 @@
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Year,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+				<label>[COLOR button_focus]$INFO[ListItem.Year,, - ][/COLOR]$INFO[ListItem.Label]</label>
 			</control>
             <control type="group">
                 <left>253</left>

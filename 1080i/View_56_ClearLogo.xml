@@ -337,7 +337,7 @@
                 <height>30</height>
                 <scroll>true</scroll>
                 <font>font12</font>
-                <label>$LOCALIZE[126] : [COLOR white]$INFO[ListItem.Status][/COLOR]</label>
+                <label>$LOCALIZE[126]: [COLOR white]$INFO[ListItem.Status][/COLOR]</label>
                 <textcolor>button_focus</textcolor>
                 <visible>!IsEmpty(ListItem.Status)</visible>
             </control>
@@ -350,7 +350,7 @@
                 <height>30</height>
                 <scroll>true</scroll>
                 <font>font12</font>
-                <label>$LOCALIZE[126] : [COLOR white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</label>
+                <label>$LOCALIZE[126]: [COLOR white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</label>
                 <textcolor>button_focus</textcolor>
                 <visible>IsEmpty(ListItem.Status) + !IsEmpty(Window(Home).Property(NextAired.Status))</visible>
             </control>

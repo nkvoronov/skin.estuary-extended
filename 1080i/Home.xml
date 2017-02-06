@@ -60,7 +60,7 @@
 				<top>15</top>
 				<width>1920</width>
 				<align>center</align>
-				<label>$VAR[InfoBarStats]</label>
+				<label>$VAR[InfoBarStatsVar]</label>
 				<font>font10</font>
 				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 				<visible>Skin.HasSetting(EnableHomeStats)</visible>				

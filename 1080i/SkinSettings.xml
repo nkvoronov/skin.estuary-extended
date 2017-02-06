@@ -82,7 +82,7 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="2">
-						<label>$LOCALIZE[84217]</label>
+						<label>$LOCALIZE[43000]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
@@ -90,7 +90,7 @@
 						<onclick>noop</onclick>
 					</item>
                     <item id="4">
-						<label>$LOCALIZE[84200]</label>
+						<label>$LOCALIZE[43001]</label>
                         <visible>Skin.HasSetting(enable_custom_list_addons) | Skin.HasSetting(enable_custom_list_channels)</visible>
 						<onclick>noop</onclick>
 					</item>
@@ -242,7 +242,7 @@
                     <description>Full Screen Clock</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[89501]</label>
+                    <label>$LOCALIZE[43009]</label>
 					<onclick>Skin.ToggleSetting(FullScreenClock)</onclick>
 					<selected>Skin.HasSetting(FullScreenClock)</selected>
 				</control>
@@ -250,7 +250,7 @@
                     <description>Slide Show Info</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[89502]</label>
+                    <label>$LOCALIZE[43010]</label>
 					<onclick>Skin.ToggleSetting(SlideShowInfo)</onclick>
 					<selected>Skin.HasSetting(SlideShowInfo)</selected>
 				</control>
@@ -258,7 +258,7 @@
                     <description>Enable Stats Bar</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[88071]</label>
+                    <label>$LOCALIZE[43011]</label>
 					<onclick>Skin.ToggleSetting(EnableHomeStats)</onclick>
 					<selected>Skin.HasSetting(EnableHomeStats)</selected>
 				</control>
@@ -271,7 +271,7 @@
                     <description>Show studio logos</description>                    
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84210]</label>
+                    <label>$LOCALIZE[43012]</label>
                     <onclick>Skin.ToggleSetting(show_studiologos)</onclick>
                     <selected>Skin.HasSetting(show_studiologos)</selected>                    
                     <visible>System.HasAddon(script.image.resource.select)</visible>
@@ -280,29 +280,29 @@
                     <description>Studios images</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[84211]</label>
-					<label2>$VAR[StudiosImagesName]</label2>
+                    <label>- $LOCALIZE[43013]</label>
+					<label2>$VAR[StudiosImagesNameVar]</label2>
                     <onclick>RunScript(script.image.resource.select,property=StudiosImages&amp;type=resource.images.studios)</onclick>
-                    <visible>System.HasAddon(script.image.resource.select)</visible>
+                    <enable>System.HasAddon(script.image.resource.select)</enable>
                     <visible>Skin.HasSetting(show_studiologos)</visible>
 				</control>
                 <control type="button" id="207">
                     <description>Language Flags</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84213]</label>
-					<label2>$VAR[LanguageFlagsName]</label2>
+                    <label>$LOCALIZE[43014]</label>
+					<label2>$VAR[LanguageFlagsNameVar]</label2>
 					<onclick>RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
-                    <visible>System.HasAddon(script.image.resource.select)</visible>
+                    <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
                 <control type="button" id="208">
                     <description>Weather icons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84214]</label>
-					<label2>$VAR[WeatherIconsName]</label2>
+                    <label>$LOCALIZE[43015]</label>
+					<label2>$VAR[WeatherIconsNameVar]</label2>
 					<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
-                    <visible>System.HasAddon(script.image.resource.select)</visible>
+                    <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
                 <control type="image" id="209">
                     <description>Separator image</description>
@@ -313,7 +313,7 @@
                     <description>Enable custom list addons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84204]</label>
+                    <label>$LOCALIZE[43017]</label>
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
@@ -321,7 +321,7 @@
                     <description>Enable custom list channels</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84205]</label>
+                    <label>$LOCALIZE[43018]</label>
 					<onclick>Skin.ToggleSetting(enable_custom_list_channels)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_channels)</selected>
                     <visible>System.HasAddon(script.pvr.favourites)</visible>
@@ -333,10 +333,19 @@
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
                 <control type="radiobutton" id="213">
+                    <description>Skin Toggle Debug</description>                    
+                    <width>1256</width>
+                    <include>DefaultSettingButton</include>
+                    <label>$LOCALIZE[43019]</label>
+                    <selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
+                    <onclick>Skin.ToggleSetting(Skin.ToggleDebug)</onclick>
+                    <onclick>Skin.ToggleDebug</onclick>
+                </control>
+                <control type="radiobutton" id="214">
                     <description>Hide ReloadSkin Button</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31133] $LOCALIZE[88080]</label>
+                    <label>$LOCALIZE[31133] $LOCALIZE[43255]</label>
 					<onclick>Skin.ToggleSetting(hide_reload_skin_button)</onclick>
 					<selected>Skin.HasSetting(hide_reload_skin_button)</selected>
 				</control>
@@ -484,7 +493,7 @@
                     <description>Custom List Addons</description>
                     <width>1256</width>
                     <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[84202]</label>
+                    <label>$LOCALIZE[43021]</label>
 					<visible>Skin.HasSetting(enable_custom_list_addons)</visible>
                 </control>
                 <include name="HomeMainCustomWidgetsAddonsSettings">
@@ -532,7 +541,7 @@
                     <description>PVR Channels</description>
                     <width>1256</width>
                     <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[84203]</label>
+                    <label>$LOCALIZE[43022]</label>
 					<visible>Skin.HasSetting(enable_custom_list_channels)</visible>
                 </control>
 				<include name="HomeMainCustomWidgetsChannelsSettings">
@@ -610,8 +619,8 @@
                     <description>Background Overlay Type</description>					
 					<width>1256</width>
                     <include>DefaultSettingButton</include>
-					<label>$LOCALIZE[31156]</label>
-					<label2>$VAR[BackgroundOverlayTypeVar]</label2>
+					<label>$LOCALIZE[43023]</label>
+					<label2>$VAR[BackgroundOverlayTypeNameVar]</label2>
                     <onclick condition="IsEmpty(Skin.String(background_overlay))">Skin.SetString(background_overlay,0)</onclick>
                     <onclick condition="StringCompare(Skin.String(background_overlay),12)">Skin.SetString(background_overlay,0)</onclick>
                     <onclick condition="StringCompare(Skin.String(background_overlay),11)">Skin.SetString(background_overlay,12)</onclick>
@@ -631,8 +640,8 @@
                     <description>Home Fanart</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84216]</label>
-					<label2>$VAR[HomeFanartName]</label2>
+                    <label>$LOCALIZE[43024]</label>
+					<label2>$VAR[HomeFanartNameVar]</label2>
 					<onclick>RunScript(script.image.resource.select,property=HomeFanart&amp;type=resource.images.skinbackgrounds)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
 					<enable>!Skin.HasSetting(no_fanart)</enable>
@@ -641,8 +650,8 @@
                     <description>Weather Fanart</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[84209]</label>
-					<label2>$VAR[WeatherFanartName]</label2>
+                    <label>$LOCALIZE[43025]</label>
+					<label2>$VAR[WeatherFanartNameVar]</label2>
 					<onclick>RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
                     <visible>System.HasAddon(script.image.resource.select)</visible>
                     <enable>!Skin.HasSetting(no_fanart)</enable>
@@ -678,13 +687,13 @@
                 <pagecontrol>60</pagecontrol>
 				<visible>Container(9000).HasFocus(6)</visible>
                 <control type="label" id="601">
-                    <description>Restory label</description>
+                    <description>Reset label</description>
                     <width>1256</width>
                     <include>DefaultSettingLabel</include>
                     <label>$LOCALIZE[10035]</label>
                 </control>
                 <control type="button" id="602">
-                    <description>Restore skin</description>
+                    <description>Reset skin</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>10045</label>

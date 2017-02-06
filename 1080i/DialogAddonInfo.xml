@@ -26,7 +26,7 @@
 				<width>1050</width>
 				<height>580</height>
 				<font>font_textbox</font>
-				<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]][COLOR=white]$INFO[ListItem.Property(Addon.Description)][/COLOR][COLOR=white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
+				<label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR]][COLOR white]$INFO[ListItem.Property(Addon.Description)][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
 				<textcolor>button_focus</textcolor>
 				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 			</control>

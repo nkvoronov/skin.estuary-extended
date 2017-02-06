@@ -134,7 +134,7 @@
 				<item>
 					<label>$LOCALIZE[20183]</label>
 					<onclick>ReloadSkin()</onclick>
-                    <visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
+                    <!-- <visible>!Skin.HasSetting(hide_reload_skin_button)</visible> -->
 				</item>
 			</content>
 		</control>

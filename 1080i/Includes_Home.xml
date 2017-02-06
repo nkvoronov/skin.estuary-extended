@@ -306,7 +306,7 @@
                                     <left>10</left>
                                     <top>266</top>
                                     <width>180</width>
-                                    <label>$INFO[ListItem.Rating,, [COLOR=44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]</label>
+                                    <label>$INFO[ListItem.Rating,, [COLOR 44FFFFFF]/[/COLOR] ]$INFO[ListItem.Year]</label>
                                     <font>font10</font>
                                     <textcolor>button_focus</textcolor>
                                     <shadowcolor>text_shadow</shadowcolor>

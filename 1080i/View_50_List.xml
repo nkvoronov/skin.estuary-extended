@@ -218,7 +218,8 @@
 				<height>188</height>
 				<font>font12</font>
 				<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog</autoscroll>
-				<label fallback="19055">$VAR[ListBoxInfoVar]</label>
+				<label>$VAR[ListBoxInfoVar]</label>
+                <textcolor>button_focus</textcolor>
 			</control>
 		</control>
 	</include>

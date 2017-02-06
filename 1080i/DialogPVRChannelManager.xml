@@ -10,7 +10,7 @@
 		<include name="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="1720" />
 			<param name="DialogBackgroundHeight" value="830" />
-			<param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeader]" />
+			<param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeaderVar]" />
 			<param name="DialogHeaderId" value="2" />
 		</include>
 		<control type="group">
@@ -255,8 +255,7 @@
 			<include name="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="5" />
-				<!-- <param name="label" value="$LOCALIZE[14070]" /> -->
-                <param name="label" value="$LOCALIZE[84104]" />
+                <param name="label" value="$LOCALIZE[43250]" />
 			</include>
 			<include name="DefaultDialogButton">
 				<param name="width" value="350" />
@@ -273,7 +272,7 @@
 			<textcolor>grey</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
-			<label>[COLOR=button_focus]$INFO[Container(20).NumItems][/COLOR] $LOCALIZE[19019] - $LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR]</label>
+			<label>[COLOR button_focus]$INFO[Container(20).NumItems][/COLOR] $LOCALIZE[19019] - $LOCALIZE[31035] [COLOR button_focus]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR]</label>
 			<wrapmultiline>true</wrapmultiline>
 		</control>
 	</controls>

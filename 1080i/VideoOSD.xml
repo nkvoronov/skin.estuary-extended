@@ -50,7 +50,7 @@
 					<height>60</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$VAR[SeekLabel]</label>
+					<label>$VAR[SeekLabelVar]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="group" id="200">

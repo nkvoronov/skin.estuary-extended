@@ -26,6 +26,7 @@
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
                     <bordertexture border="20">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
+                    <visible>!StringCompare(ListItem.DBType,musicvideo)</visible>
 				</control>
 				<control type="group">
 					<visible>StringCompare(ListItem.DBType,episode) | StringCompare(ListItem.DBType,video)</visible>
@@ -44,14 +45,14 @@
 						<width>506</width>
 						<height>801</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Thumb]</texture>
+						<texture>$VAR[ListPosterVar]</texture>
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 				</control>
                 <control type="group">
-                    <visible>Stringcompare(ListItem.DBType,musicvideo)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb) + !Stringcompare(ListItem.Thumb,ListItem.Art(poster))</visible>
+                    <visible>StringCompare(ListItem.DBType,musicvideo)</visible>
+                    <visible>!IsEmpty(ListItem.Thumb) + !StringCompare(ListItem.Thumb,ListItem.Art(poster))</visible>
                     <include>OpenClose_Left</include>
                     <control type="image">
                         <left>4</left>
@@ -67,7 +68,7 @@
                         <width>506</width>
                         <height>801</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <texture>$VAR[ListPosterVar]</texture>
                         <bordertexture border="20">overlays/shadow.png</bordertexture>
                         <bordersize>20</bordersize>
                     </control>
@@ -152,12 +153,12 @@
 					<onleft>140</onleft>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="147" />
-						<param name="label" value="$INFO[ListItem.Director,[COLOR button_focus]$LOCALIZE[20339]: [/COLOR]]" />
+						<param name="label" value="[COLOR button_focus]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]" />
 						<param name="visible" value="!IsEmpty(ListItem.Director)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="148" />
-						<param name="label" value="$INFO[ListItem.Writer,[COLOR button_focus]$LOCALIZE[20417]: [/COLOR]]" />
+						<param name="label" value="[COLOR button_focus]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer]" />
 						<param name="visible" value="!IsEmpty(ListItem.Writer)" />
 					</include>
 					<include name="InfoDialogMetadata">
@@ -474,14 +475,14 @@
 					<include name="InfoDialogButton">
 						<param name="id" value="103" />
 						<param name="icon" value="icons/infodialogs/download.png" />
-						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(movies)" />
 					</include>
 					<include name="InfoDialogButton">
 						<param name="id" value="104" />
 						<param name="icon" value="icons/infodialogs/download.png" />
-						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
 					</include>                    

@@ -21,7 +21,7 @@
 				<top>0</top>
 				<width>780</width>
 				<height>40</height>
-				<label>$VAR[PlayerLabel1]</label>
+				<label>$VAR[PlayerLabel1Var]</label>
 				<font>font30_title</font>
 				<shadowcolor>black</shadowcolor>
 				<textcolor>button_focus</textcolor>
@@ -31,7 +31,7 @@
 				<top>56</top>
 				<width>780</width>
 				<height>40</height>
-				<label>$VAR[PlayerLabel2]</label>
+				<label>$VAR[PlayerLabel2Var]</label>
 				<font>font24_title</font>
 				<shadowcolor>black</shadowcolor>
 				<textcolor>button_focus</textcolor>
@@ -41,7 +41,7 @@
 				<top>100</top>
 				<width>780</width>
 				<height>40</height>
-				<label>$VAR[PlayerLabel3]</label>
+				<label>$VAR[PlayerLabel3Var]</label>
 				<font>font30_title</font>
 				<shadowcolor>black</shadowcolor>
 				<textcolor>grey</textcolor>

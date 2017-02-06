@@ -462,7 +462,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 601]: [COLOR white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
                             <visible>!IsEmpty(ListItem.Property(Interface))</visible>
                         </control>
                         <!-- Connection Address -->
@@ -474,7 +474,7 @@
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
                             <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
-                            <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 602]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                         </control>
                         <!-- Method -->
                         <control type="label">
@@ -484,7 +484,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 603]: [COLOR white]$INFO[ListItem.Property(Method)][/COLOR]</label>
                         </control>
                         <!-- State -->
                         <control type="label">
@@ -494,7 +494,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 604]: [COLOR white]$INFO[ListItem.Property(State)][/COLOR]</label>
                         </control>
                         <!-- Signal strength -->
                         <control type="progress">
@@ -604,7 +604,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 601]: [COLOR=white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 601]: [COLOR white]$INFO[ListItem.Property(Interface)][/COLOR]</label>
                             <visible>!IsEmpty(ListItem.Property(Interface))</visible>
                         </control>
                         <!-- Connection Address -->
@@ -616,7 +616,7 @@
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
                             <visible>StringCompare(ListItem.Property(State), online) | StringCompare(ListItem.Property(State), ready)</visible>
-                            <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 602]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                         </control>
                         <!-- Method -->
                         <control type="label">
@@ -626,7 +626,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 603]: [COLOR=white]$INFO[ListItem.Property(Method)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 603]: [COLOR white]$INFO[ListItem.Property(Method)][/COLOR]</label>
                         </control>
                         <!-- State -->
                         <control type="label">
@@ -636,7 +636,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 604]: [COLOR white]$INFO[ListItem.Property(State)][/COLOR]</label>
                         </control>
                         <!-- Signal strength -->
                         <control type="progress">
@@ -856,7 +856,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 605]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                         </control>
                         <!-- Connected State -->
                         <control type="label">
@@ -866,7 +866,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 32333][COLOR white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
                         </control>
                         <!-- Paired Symbol (bottom right) -->
                         <control type="image">
@@ -1040,7 +1040,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 605]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 605]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                         </control>
                         <!-- Connected State -->
                         <control type="label">
@@ -1050,7 +1050,7 @@
                             <height>20</height>
                             <font>font12</font>
                             <textcolor>button_focus</textcolor>
-                            <label>$ADDON[service.libreelec.settings 32333][COLOR=white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
+                            <label>$ADDON[service.libreelec.settings 32333][COLOR white]$INFO[ListItem.Property(ConnectedState)][/COLOR]</label>
                         </control>
                         <!-- Paired Symbol (bottom right) -->
                         <control type="image">

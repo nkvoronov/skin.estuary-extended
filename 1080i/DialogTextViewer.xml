@@ -66,7 +66,7 @@
 			<textcolor>grey</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages][/COLOR]</label>
+			<label>$LOCALIZE[31035] [COLOR button_focus]$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages][/COLOR]</label>
 			<wrapmultiline>true</wrapmultiline>
 			<visible>IntegerGreaterThan(Container(5).NumPages,1)</visible>
 		</control>

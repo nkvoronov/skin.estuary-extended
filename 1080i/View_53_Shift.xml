@@ -120,7 +120,7 @@
                                 <width>292</width>
                                 <height>400</height>
                                 <aspectratio>stretch</aspectratio>
-                                <texture border="20" fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+                                <texture border="20" fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
                                 <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
                             </control>
                             <control type="image">
@@ -190,6 +190,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftLeftTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="textbox" id="53300">
@@ -199,6 +200,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftRightTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</control>
@@ -376,6 +378,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftLeftTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="textbox" id="53300">
@@ -385,6 +388,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftRightTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</control>

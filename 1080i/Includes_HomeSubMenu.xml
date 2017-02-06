@@ -267,7 +267,7 @@
                             <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                     <control type="group">
@@ -277,7 +277,7 @@
                             <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                 </control>
@@ -303,7 +303,7 @@
                     <param name="visible" value="PVR.HasTVChannels"/>
                 </include>
                 <include condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="WidgetListCustomChannels">
-                    <param name="widget_header" value="$LOCALIZE[84207]"/>
+                    <param name="widget_header" value="$LOCALIZE[43241]"/>
                     <param name="widget_target" value="TV"/>
 					<param name="onup_id" value="13900"/>
                     <param name="list_id" value="13200"/>
@@ -378,7 +378,7 @@
                             <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                     <control type="group">
@@ -388,7 +388,7 @@
                             <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                 </control>
@@ -413,7 +413,7 @@
                     <param name="visible" value="PVR.HasRadioChannels"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="WidgetListCustomChannels">
-                    <param name="widget_header" value="$LOCALIZE[84208]"/>
+                    <param name="widget_header" value="$LOCALIZE[43242]"/>
                     <param name="widget_target" value="Radio"/>
 					<param name="onup_id" value="14900"/>
                     <param name="list_id" value="14200"/>
@@ -549,7 +549,7 @@
                     <param name="item8_onclick2" value="SetProperty(FanartHomeType,movies,home)" />
                     <param name="item8_onclick" value="UpdateLibrary(video)" />
                     <param name="item8_icon" value="updatelibrary.png" />
-                    <param name="item8_label" value="$VAR[VideoLibraryScanLabel]" />
+                    <param name="item8_label" value="$VAR[VideoLibraryScanLabelVar]" />
                 </include>
                 <include name="WidgetListMovies">
                     <param name="content_path" value="special://skin/extras/playlists/inprogress_movies.xsp"/>
@@ -652,7 +652,7 @@
                     <param name="item8_onclick2" value="SetProperty(FanartHomeType,tvshows,home)" />
                     <param name="item8_onclick" value="UpdateLibrary(video)" />
                     <param name="item8_icon" value="updatelibrary.png" />
-                    <param name="item8_label" value="$VAR[VideoLibraryScanLabel]" />
+                    <param name="item8_label" value="$VAR[VideoLibraryScanLabelVar]" />
                 </include>
                 <include name="WidgetListEpisodes">
                     <param name="content_path" value="special://skin/extras/playlists/inprogress_tvshows.xsp"/>
@@ -759,7 +759,7 @@
                     <param name="item8_onclick2" value="SetProperty(FanartHomeType,musicvideos,home)" />
                     <param name="item8_onclick" value="UpdateLibrary(video)" />
                     <param name="item8_icon" value="updatelibrary.png" />
-                    <param name="item8_label" value="$VAR[VideoLibraryScanLabel]" />
+                    <param name="item8_label" value="$VAR[VideoLibraryScanLabelVar]" />
                 </include>
                 <include name="WidgetListSquare">
                     <param name="content_path" value="videodb://recentlyaddedmusicvideos/"/>
@@ -773,7 +773,7 @@
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/mostwatched_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicVideos.png"/>
-                    <param name="widget_header" value="$LOCALIZE[40100]"/>
+                    <param name="widget_header" value="$LOCALIZE[43090]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18100"/>
                     <param name="list_id" value="18200"/>                   
@@ -782,7 +782,7 @@
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/random_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicVideos.png"/>
-                    <param name="widget_header" value="$LOCALIZE[40101]"/>
+                    <param name="widget_header" value="$LOCALIZE[43091]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18200"/>
                     <param name="list_id" value="18300"/>                   
@@ -791,7 +791,7 @@
                 <include name="WidgetListSquare">
                     <param name="content_path" value="special://skin/extras/playlists/unwatched_musicvideos.xsp"/>
                     <param name="fallback_image" value="DefaultMusicVideos.png"/>
-                    <param name="widget_header" value="$LOCALIZE[40102]"/>
+                    <param name="widget_header" value="$LOCALIZE[43092]"/>
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18300"/>
                     <param name="list_id" value="18400"/>                    
@@ -864,7 +864,7 @@
                     <param name="item8_onclick2" value="SetProperty(FanartHomeType,music,home)" />
                     <param name="item8_onclick" value="UpdateLibrary(music)" />
                     <param name="item8_icon" value="updatelibrary.png" />
-                    <param name="item8_label" value="$VAR[MusicLibraryScanLabel]" />
+                    <param name="item8_label" value="$VAR[MusicLibraryScanLabelVar]" />
                     <param name="item8_vis" value="Library.HasContent(music)" />
                 </include>
                 <include name="WidgetListSquare">
@@ -1282,7 +1282,7 @@
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>button_focus</textcolor>
-                        <label>[UPPERCASE]• $LOCALIZE[84215] •[/UPPERCASE]</label>
+                        <label>[UPPERCASE]• $LOCALIZE[43230] •[/UPPERCASE]</label>
                     </control>
                     <control type="label">
                         <top>425</top>
@@ -1332,7 +1332,7 @@
                         <font>font13</font>
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
+                        <label>$LOCALIZE[31030]: $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
                     </control>
                     <control type="progress">
                         <top>610</top>
