@@ -33,7 +33,7 @@
 			<height>60</height>
 			<font>fontContextMenu</font>
 			<align>center</align>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 			<texturenofocus>lists/separator.png</texturenofocus>
             <onleft>1001</onleft>
 			<onright>1001</onright>
@@ -47,7 +47,7 @@
 			<height>60</height>
 			<font>fontContextMenu</font>
 			<align>center</align>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 			<texturenofocus>lists/separator.png</texturenofocus>
             <onleft>1002</onleft>
 			<onright>1002</onright>
@@ -61,7 +61,7 @@
 			<height>60</height>
 			<font>fontContextMenu</font>
 			<align>center</align>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]">lists/focus.png</texturefocus>
 			<texturenofocus>lists/separator.png</texturenofocus>
             <onleft>1003</onleft>
 			<onright>1003</onright>

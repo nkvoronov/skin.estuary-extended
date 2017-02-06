@@ -7,7 +7,9 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<!-- Background -->
-		<include>DefaultBackground</include>
+		<include name="DefaultBackground">
+			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
 			<include>CommonScrollbars</include>
@@ -64,7 +66,7 @@
 					<height>368</height>
 					<font>font12</font>
 					<label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
-                    <textcolor>button_focus</textcolor>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
                     <visible>!ListItem.IsCollection</visible>
 				</control>
@@ -98,7 +100,7 @@
 					<height>30</height>
                     <scroll>true</scroll>
                     <font>font12</font>
-                    <textcolor>button_focus</textcolor>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
                     <label>$INFO[ListItem.Genre]</label>
                     <visible>!ListItem.IsCollection + [Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows)]</visible>
                 </control>
@@ -166,7 +168,7 @@
 					<left>-16</left>
 					<width>506</width>
 					<height>741</height>
-					<texture border="40">buttons/button-nofo.png</texture>					
+					<texture border="22">dialogs/dialog-bg.png</texture>					
 				</control>
 				<control type="image">
 					<top>-16</top>
@@ -184,7 +186,7 @@
 					<top>1</top>
 					<width>472</width>
 					<height>706</height>
-					<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+					<texture background="true" border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<visible>Control.HasFocus(51)</visible>
 				</control>

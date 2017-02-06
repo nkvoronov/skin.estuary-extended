@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1100">
 	<defaultcontrol>9000</defaultcontrol>
-    <onload>SetProperty(FanartHomeType,addons,home)</onload>
 	<controls>
 		<!-- Background -->
 		<include name="DefaultBackground">
-			<param name="is_media" value="False" />
-			<param name="image_path" value="$VAR[AddonsFanartVar]" />
+			<param name="overlay_background" value="$VAR[AddonsFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
@@ -50,7 +48,7 @@
 								<top>0</top>
 								<width>382</width>
 								<height>120</height>
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 							</control>
 							<control type="label">
@@ -168,7 +166,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>55</radioposx>
 					<radioposy>0</radioposy>
@@ -189,7 +187,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>35</radioposx>
 					<radioposy>0</radioposy>
@@ -213,7 +211,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>55</radioposx>
 					<radioposy>0</radioposy>
@@ -232,7 +230,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<font>font20_title</font>
-					<label>$VAR[AddonCountLabel]</label>
+					<label>$VAR[AddonCountLabelVar]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 				</control>
 			</control>

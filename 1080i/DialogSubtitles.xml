@@ -169,7 +169,7 @@
 						<top>0</top>
 						<width>920</width>
 						<height>100</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(120)</visible>
 					</control>
 					<control type="image">
@@ -257,7 +257,7 @@
 				<align>center</align>
 				<font>font13_title</font>
 				<aligny>top</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<wrapmultiline>true</wrapmultiline>
 			</control>

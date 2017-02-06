@@ -31,7 +31,7 @@
 					<height>110</height>
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<texture colordiffuse="button_focus">colors/white.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,1) | StringCompare(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="StringCompare(Container.Position,3) | StringCompare(Container.Position,4)">Conditional</animation>
@@ -60,7 +60,7 @@
 								<top>-10</top>
 								<width>340</width>
 								<height>450</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
                                 <control type="image">
 								<top>15</top>
@@ -112,7 +112,7 @@
                                 <top>-10</top>
                                 <width>340</width>
                                 <height>450</height>
-                                <texture border="40">buttons/button-nofo.png</texture>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
                             </control>
                             <control type="image">
 								<top>15</top>
@@ -120,7 +120,7 @@
                                 <width>292</width>
                                 <height>400</height>
                                 <aspectratio>stretch</aspectratio>
-                                <texture border="20" fallback="DefaultFolder.png">$VAR[ShiftThumbVar]</texture>
+                                <texture border="20" fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
                                 <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
                             </control>
                             <control type="image">
@@ -190,6 +190,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftLeftTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="textbox" id="53300">
@@ -199,6 +200,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftRightTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</control>
@@ -252,7 +254,7 @@
 					<height>110</height>
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<texture colordiffuse="button_focus">colors/white.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,1) | Stringcompare(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="344,0" time="300" tween="sine" easing="inout" condition="Stringcompare(Container.Position,3) | Stringcompare(Container.Position,4)">Conditional</animation>
@@ -376,6 +378,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftLeftTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="textbox" id="53300">
@@ -385,6 +388,7 @@
 							<height>123</height>
 							<label>$VAR[ShiftRightTextBoxVar]</label>
 							<font>font12</font>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</control>

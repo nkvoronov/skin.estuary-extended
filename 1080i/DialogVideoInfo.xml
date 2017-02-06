@@ -15,7 +15,7 @@
 					<left>-16</left>
 					<width>566</width>
 					<height>841</height>
-					<texture border="40">buttons/button-nofo.png</texture>					
+					<texture border="22">dialogs/dialog-bg.png</texture>					
 				</control>
 				<control type="image">
 					<top>-16</top>
@@ -26,6 +26,7 @@
 					<texture fallback="DefaultVideo.png">$VAR[InfoDialogPosterVar]</texture>
                     <bordertexture border="20">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
+                    <visible>!StringCompare(ListItem.DBType,musicvideo)</visible>
 				</control>
 				<control type="group">
 					<visible>StringCompare(ListItem.DBType,episode) | StringCompare(ListItem.DBType,video)</visible>
@@ -44,14 +45,14 @@
 						<width>506</width>
 						<height>801</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Thumb]</texture>
+						<texture>$VAR[ListPosterVar]</texture>
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 				</control>
                 <control type="group">
-                    <visible>Stringcompare(ListItem.DBType,musicvideo)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb) + !Stringcompare(ListItem.Thumb,ListItem.Art(poster))</visible>
+                    <visible>StringCompare(ListItem.DBType,musicvideo)</visible>
+                    <visible>!IsEmpty(ListItem.Thumb) + !StringCompare(ListItem.Thumb,ListItem.Art(poster))</visible>
                     <include>OpenClose_Left</include>
                     <control type="image">
                         <left>4</left>
@@ -67,7 +68,7 @@
                         <width>506</width>
                         <height>801</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <texture>$VAR[ListPosterVar]</texture>
                         <bordertexture border="20">overlays/shadow.png</bordertexture>
                         <bordersize>20</bordersize>
                     </control>
@@ -100,7 +101,7 @@
 						<width>513</width>
 						<height>410</height>
 						<aligny>bottom</aligny>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 						<visible>IntegerGreaterThan(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
@@ -152,67 +153,67 @@
 					<onleft>140</onleft>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="147" />
-						<param name="label" value="$INFO[ListItem.Director,[COLOR button_focus]$LOCALIZE[20339]: [/COLOR]]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]" />
 						<param name="visible" value="!IsEmpty(ListItem.Director)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="148" />
-						<param name="label" value="$INFO[ListItem.Writer,[COLOR button_focus]$LOCALIZE[20417]: [/COLOR]]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[20417]: [/COLOR]$INFO[ListItem.Writer]" />
 						<param name="visible" value="!IsEmpty(ListItem.Writer)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="149" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.RatingAndVotes]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.RatingAndVotes]" />
 						<param name="visible" value="!IsEmpty(ListItem.RatingAndVotes)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="150" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]" />
 						<param name="visible" value="!IsEmpty(ListItem.Genre) + Stringcompare(ListItem.DBType,movie)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="151" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration] $LOCALIZE[31060]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[180]: [/COLOR]$INFO[ListItem.Duration] $LOCALIZE[31060]" />
 						<param name="visible" value="!IsEmpty(ListItem.Duration)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="152" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[21875]: [/COLOR]$INFO[ListItem.Country]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[21875]: [/COLOR]$INFO[ListItem.Country]" />
 						<param name="visible" value="!IsEmpty(ListItem.Country)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="153" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[29909]: [/COLOR]$INFO[ListItem.Studio]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[29909]: [/COLOR]$INFO[ListItem.Studio]" />
 						<param name="visible" value="!IsEmpty(ListItem.Studio)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="154" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[20416]: [/COLOR]$INFO[ListItem.Premiered]" />
 						<param name="visible" value="!IsEmpty(ListItem.Premiered)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="155" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
 						<param name="visible" value="!IsEmpty(ListItem.Season) + !Stringcompare(ListItem.DBType,episode)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="156" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[31017]: [/COLOR]$INFO[ListItem.Mpaa]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[31017]: [/COLOR]$INFO[ListItem.Mpaa]" />
 						<param name="visible" value="!IsEmpty(ListItem.Mpaa)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="157" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[20457]: [/COLOR]$INFO[ListItem.Set]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[20457]: [/COLOR]$INFO[ListItem.Set]" />
 						<param name="visible" value="!IsEmpty(ListItem.Set)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="157" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[20459]: [/COLOR]$INFO[ListItem.Tag]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[20459]: [/COLOR]$INFO[ListItem.Tag]" />
 						<param name="visible" value="!IsEmpty(ListItem.Tag)" />
 					</include>
 					<include name="InfoDialogMetadata">
 						<param name="control_id" value="157" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
+						<param name="label" value="[COLOR $VAR[MainColorVar]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
 						<param name="visible" value="!IsEmpty(ListItem.Status)" />
 					</include>
 				</control>
@@ -254,7 +255,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture border="20">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -312,7 +313,7 @@
 								<top>0</top>
 								<width>264</width>
 								<height>317</height>
-								<texture border="20">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -367,7 +368,7 @@
 								<top>16</top>
 								<width>232</width>
 								<height>285</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 						</control>
@@ -474,14 +475,14 @@
 					<include name="InfoDialogButton">
 						<param name="id" value="103" />
 						<param name="icon" value="icons/infodialogs/download.png" />
-						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(movies)" />
 					</include>
 					<include name="InfoDialogButton">
 						<param name="id" value="104" />
 						<param name="icon" value="icons/infodialogs/download.png" />
-						<param name="label" value="$LOCALIZE[40000]" />
+						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
 					</include>                    
@@ -541,7 +542,7 @@
 						<width>44</width>
 						<height>44</height>
 						<animation effect="rotate" end="-90" center="40,23" time="0" condition="true">Conditional</animation>
-						<texture colordiffuse="button_focus">frame/menu-nofo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">frame/menu-nofo.png</texture>
 					</control>
 					<control type="label">
 						<left>74</left>
@@ -560,7 +561,7 @@
 						<left>17</left>
 						<width>44</width>
 						<height>44</height>
-						<texture colordiffuse="button_focus">frame/menu-fo.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">frame/menu-fo.png</texture>
 					</control>
 					<control type="label">
 						<left>74</left>

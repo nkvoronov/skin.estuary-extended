@@ -76,7 +76,7 @@
 					<control type="image">
 						<width>130</width>
 						<height>110</height>
-						<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+						<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 					</control>
 					<control type="image">
 						<left>30</left>
@@ -91,10 +91,6 @@
 				</content>
 			</control>
 		</control>
-        <include name="ImageWidgetHeader">
-            <param name="widget_header" value="$PARAM[header_label]" />
-            <param name="visible" value="StringCompare(Container($PARAM[list_id]).NumItems,0)" />
-        </include>
     </include>
 	<include name="SystemInfoWidget">
 		<param name="onup_id">200000</param>
@@ -126,7 +122,7 @@
                         <textoffsety>10</textoffsety>
                         <font>font13_title</font>
                         <width>1370</width>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <scroll>yes</scroll>
                         <label>[UPPERCASE]• $LOCALIZE[31031] •[/UPPERCASE]</label>
@@ -170,7 +166,7 @@
                         <font>font13_title</font>
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
-                        <textcolor>button_focus</textcolor>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
                         <label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
                     </control>
                     <control type="label">
@@ -221,8 +217,8 @@
                         <font>font13_title</font>
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
-                        <textcolor>button_focus</textcolor>
-                        <label>[UPPERCASE]• $LOCALIZE[84215] •[/UPPERCASE]</label>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
+                        <label>[UPPERCASE]• $LOCALIZE[43230] •[/UPPERCASE]</label>
                     </control>
                     <control type="label">
                         <top>425</top>
@@ -272,7 +268,7 @@
                         <font>font13</font>
                         <width>1370</width>
                         <shadowcolor>black</shadowcolor>
-                        <label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
+                        <label>$LOCALIZE[31030]: $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
                     </control>
                     <control type="progress">
                         <top>610</top>

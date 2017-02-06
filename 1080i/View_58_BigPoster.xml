@@ -26,7 +26,7 @@
             <control type="label" id="5801">
                 <top>900</top>
                 <left>960</left>
-                <label>[COLOR button_focus][B]$INFO[Container(5800).NumItems][/B][/COLOR]</label>
+                <label>[COLOR $VAR[MainColorVar]][B]$INFO[Container(5800).NumItems][/B][/COLOR]</label>
             </control>            
         </control>    
     </include>
@@ -48,7 +48,7 @@
                 <movement>1</movement>
                 <preloaditems>2</preloaditems>
                 <orientation>horizontal</orientation>
-                <viewtype label="$LOCALIZE[40091]">bigicons</viewtype>
+                <viewtype label="$LOCALIZE[43200]">bigicons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="700" width="495" condition="!Container.Content(artists) + !Container.Content(albums) + !Container.Content(episodes)">
@@ -56,7 +56,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -87,12 +87,12 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                         </control>
                         <control type="image">
@@ -134,7 +134,7 @@
                                     <height>32</height>
                                     <fadetime>300</fadetime>
                                     <aspectratio align="center">keep</aspectratio>
-                                    <texture colordiffuse="button_focus">icons/submenu/sets.png</texture>
+                                    <texture colordiffuse="$VAR[MainColorVar]">icons/submenu/sets.png</texture>
                                 </control>
                                 <control type="label">
                                     <right>70</right>
@@ -162,7 +162,7 @@
                                     <height>32</height>
                                     <fadetime>300</fadetime>
                                     <aspectratio align="center">keep</aspectratio>
-                                    <texture colordiffuse="button_focus">lists/played-total.png</texture>
+                                    <texture colordiffuse="$VAR[MainColorVar]">lists/played-total.png</texture>
                                 </control>
                                 <control type="label">
                                     <right>70</right>
@@ -190,7 +190,7 @@
                                     <height>32</height>
                                     <fadetime>300</fadetime>
                                     <aspectratio align="center">keep</aspectratio>
-                                    <texture colordiffuse="button_focus">frame/clock.png</texture>
+                                    <texture colordiffuse="$VAR[MainColorVar]">frame/clock.png</texture>
                                 </control>
                                 <control type="label">
                                     <right>70</right>
@@ -218,7 +218,7 @@
                                     <height>32</height>
                                     <fadetime>300</fadetime>
                                     <aspectratio align="center">keep</aspectratio>
-                                    <texture colordiffuse="button_focus">lists/year.png</texture>
+                                    <texture colordiffuse="$VAR[MainColorVar]">lists/year.png</texture>
                                 </control>
                                 <control type="label">
                                     <right>41</right>
@@ -246,7 +246,7 @@
                                     <height>32</height>
                                     <fadetime>300</fadetime>
                                     <aspectratio align="center">keep</aspectratio>
-                                    <texture colordiffuse="button_focus">lists/rating.png</texture>
+                                    <texture colordiffuse="$VAR[MainColorVar]">lists/rating.png</texture>
                                 </control>
                                 <control type="label">
                                     <right>41</right>
@@ -275,7 +275,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -301,9 +301,10 @@
                             <width>100%</width>
                             <top>460</top>
                             <bottom>20</bottom>
-                            <label>[COLOR button_focus]$INFO[ListItem.Artist,[B],[/B][CR]][/COLOR]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                            <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
                             <align>center</align>
                             <aligny>center</aligny>
+                            <textcolor>$VAR[MainColorVar]</textcolor>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
                         </control>
                         <control type="textbox">
@@ -324,12 +325,12 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                         </control>
                         <control type="image">
@@ -380,7 +381,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>10</left>
@@ -396,7 +397,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -434,7 +435,7 @@
                                 <height>24</height>
                                 <font>font12</font>
                                 <label>[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] , [COLOR white]•[/COLOR] ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,][/UPPERCASE]</label>
-                                <textcolor>button_focus</textcolor>
+                                <textcolor>$VAR[MainColorVar]</textcolor>
                             </control>
                             <control type="textbox">
                                 <top>100</top>
@@ -453,8 +454,8 @@
                                 <height>20</height>
                                 <align>center</align>
                                 <font>font10</font>
-                                <label>[I]$LOCALIZE[40092] $INFO[ListItem.Premiered][/I]</label>
-                                <textcolor>button_focus</textcolor>
+                                <label>[I]$LOCALIZE[43210] $INFO[ListItem.Premiered][/I]</label>
+                                <textcolor>$VAR[MainColorVar]</textcolor>
                             </control>
                             <control type="image">
                                 <right>0</right>
@@ -472,12 +473,12 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                         </control>
                         <control type="image">
@@ -494,12 +495,12 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+                            <texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/dialogbutton-fo.png</texture>
                             <visible>Control.HasFocus($PARAM[id])</visible>
                         </control>
                         <control type="image">
@@ -557,7 +558,7 @@
                                 <height>20</height>
                                 <align>center</align>
                                 <font>font10</font>
-                                <label>[I]$LOCALIZE[40092] $INFO[ListItem.Premiered][/I]</label>
+                                <label>[I]$LOCALIZE[43210] $INFO[ListItem.Premiered][/I]</label>
                             </control>
                             <control type="image">
                                 <right>0</right>

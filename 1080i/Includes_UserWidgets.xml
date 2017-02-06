@@ -15,7 +15,7 @@
         <!-- WidgetsAddons01 -->
         <control type="button" id="$PARAM[id1]01">
             <label>- $LOCALIZE[24000] [B]1[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].0.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].0.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -29,7 +29,7 @@
         <!-- WidgetsAddons02 -->
         <control type="button" id="$PARAM[id1]02">
             <label>- $LOCALIZE[24000] [B]2[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].1.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].1.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -44,7 +44,7 @@
         <!-- WidgetsAddons03 -->
         <control type="button" id="$PARAM[id1]03">
             <label>- $LOCALIZE[24000] [B]3[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].2.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].2.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -59,7 +59,7 @@
         <!-- WidgetsAddons04 -->
         <control type="button" id="$PARAM[id1]04">
             <label>- $LOCALIZE[24000] [B]4[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].3.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].3.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -74,7 +74,7 @@
         <!-- WidgetsAddons05 -->
         <control type="button" id="$PARAM[id1]05">
             <label>- $LOCALIZE[24000] [B]5[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].4.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].4.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -89,7 +89,7 @@
         <!-- WidgetsAddons06 -->
         <control type="button" id="$PARAM[id1]06">
             <label>- $LOCALIZE[24000] [B]6[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].5.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].5.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -104,7 +104,7 @@
         <!-- WidgetsAddons07 -->
         <control type="button" id="$PARAM[id1]07">
             <label>- $LOCALIZE[24000] [B]7[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].6.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].6.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -119,7 +119,7 @@
         <!-- WidgetsAddons08 -->
         <control type="button" id="$PARAM[id1]08">
             <label>- $LOCALIZE[24000] [B]8[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].7.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].7.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -134,7 +134,7 @@
         <!-- WidgetsAddons09 -->
         <control type="button" id="$PARAM[id1]09">
             <label>- $LOCALIZE[24000] [B]9[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].8.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].8.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -149,7 +149,7 @@
         <!-- WidgetsAddons10 -->
         <control type="button" id="$PARAM[id1]10">
             <label>- $LOCALIZE[24000] [B]10[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].9.Label)][/COLOR]</label2>
+            <label2>[COLOR selected]$INFO[Skin.String(AddonSet$PARAM[setadonnstype].9.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<include name="HomeMainCustomWidgetsSelectAddons">
@@ -271,7 +271,7 @@
 		<param name="ondown_id">200001</param>
 		<param name="height">405</param>
 		<param name="label1">$INFO[ListItem.Label]</param>
-		<param name="label2">[COLOR button_focus]$INFO[ListItem.Property(AddonVersion)][/COLOR]</param>
+		<param name="label2">$INFO[ListItem.Property(AddonVersion)]</param>
         <param name="fallback_image">DefaultFolder.png</param>
 		<definition>
 			<control type="group">
@@ -315,7 +315,7 @@
 							<top>0</top>
 							<width>340</width>
 							<height>340</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
 						<control type="image">
 							<left>0</left>
@@ -352,6 +352,7 @@
 								<width>260</width>
 								<label>$PARAM[label2]</label>
 								<font>font10</font>
+                                <textcolor>$VAR[MainColorVar]</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
 							</control>
@@ -377,7 +378,7 @@
                                 <top>0</top>
                                 <width>340</width>
                                 <height>340</height>
-                                <texture border="40">buttons/button-nofo.png</texture>
+                                <texture border="22">dialogs/dialog-bg.png</texture>
                             </control>
 							<control type="image">
 								<left>0</left>
@@ -416,6 +417,7 @@
 									<font>font10</font>
 									<scroll>true</scroll>
 									<label>$PARAM[label2]</label>
+                                    <textcolor>$VAR[MainColorVar]</textcolor>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 								</control>
@@ -426,7 +428,7 @@
 									<height>300</height>
 									<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 									<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
-									<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+									<texture background="true" border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 								</control>
 							</control>
 						</control>
@@ -452,8 +454,8 @@
         </control>
         <!-- WidgetsChannels01 -->
         <control type="button" id="$PARAM[id1]01">
-            <label>- $LOCALIZE[84206] [B]1[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]1[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].0.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].0)</onclick>
@@ -462,8 +464,8 @@
         </control>
         <!-- WidgetsChannels02 -->
         <control type="button" id="$PARAM[id1]02">
-            <label>- $LOCALIZE[84206] [B]2[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]2[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].1.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].1)</onclick>
@@ -473,8 +475,8 @@
         </control>
         <!-- WidgetsChannels03 -->
         <control type="button" id="$PARAM[id1]03">
-            <label>- $LOCALIZE[84206] [B]3[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]3[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].2.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].2)</onclick>
@@ -484,8 +486,8 @@
         </control>
         <!-- WidgetsChannels04 -->
         <control type="button" id="$PARAM[id1]04">
-            <label>- $LOCALIZE[84206] [B]4[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]4[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].3.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].3)</onclick>
@@ -495,8 +497,8 @@
         </control>
         <!-- WidgetsChannels05 -->
         <control type="button" id="$PARAM[id1]05">
-            <label>- $LOCALIZE[84206] [B]5[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]5[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].4.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].4)</onclick>
@@ -506,8 +508,8 @@
         </control>
         <!-- WidgetsChannels06 -->
         <control type="button" id="$PARAM[id1]06">
-            <label>- $LOCALIZE[84206] [B]6[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]6[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].5.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].5)</onclick>
@@ -517,8 +519,8 @@
         </control>
         <!-- WidgetsChannels07 -->
         <control type="button" id="$PARAM[id1]07">
-            <label>- $LOCALIZE[84206] [B]7[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]7[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].6.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].6)</onclick>
@@ -528,8 +530,8 @@
         </control>
         <!-- WidgetsChannels08 -->
         <control type="button" id="$PARAM[id1]08">
-            <label>- $LOCALIZE[84206] [B]8[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]8[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].7.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].7)</onclick>
@@ -539,8 +541,8 @@
         </control>
         <!-- WidgetsChannels09 -->
         <control type="button" id="$PARAM[id1]09">
-            <label>- $LOCALIZE[84206] [B]9[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]9[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].8.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].8)</onclick>
@@ -550,8 +552,8 @@
         </control>
         <!-- WidgetsChannels10 -->
         <control type="button" id="$PARAM[id1]10">
-            <label>- $LOCALIZE[84206] [B]10[/B]</label>
-            <label2>[COLOR=selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
+            <label>- $LOCALIZE[43240] [B]10[/B]</label>
+            <label2>[COLOR selected]$INFO[Skin.String(Channel$PARAM[setchannelstype].9.Label)][/COLOR]</label2>
             <width>1256</width>
 			<include>DefaultSettingButton</include>
 			<onclick>RunScript(script.pvr.favourites,action=select&amp;isradio=$PARAM[type]&amp;property=Channel$PARAM[setchannelstype].9)</onclick>
@@ -712,7 +714,7 @@
 						<control type="image">
 							<width>340</width>
 							<height>500</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
 							<top>43</top>
@@ -738,7 +740,7 @@
 							<top>350</top>
 							<width>260</width>
 							<height>100</height>
-							<label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
+							<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -767,12 +769,12 @@
 							<control type="image">
 								<width>340</width>
 								<height>500</height>
-								<texture border="40">buttons/button-nofo.png</texture>
+								<texture border="22">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="image">
 								<width>340</width>
 								<height>500</height>
-								<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+								<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 								<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 							</control>
@@ -800,7 +802,7 @@
 								<top>350</top>
 								<width>260</width>
 								<height>100</height>
-								<label>[COLOR button_focus]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
+								<label>[COLOR $VAR[MainColorVar]]$INFO[ListItem.Property(StartTime)] - $INFO[ListItem.Property(EndTime)][/COLOR][CR]$INFO[ListItem.Property(Title)]</label>
 								<font>font12</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>

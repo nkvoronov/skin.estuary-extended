@@ -22,8 +22,8 @@
                     <top>105</top>
                     <width>48</width>
                     <height>24</height>
-                    <texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-                    <texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
                     <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
                     <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
                     <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -37,8 +37,8 @@
                     <top>940</top>
                     <width>48</width>
                     <height>24</height>
-                    <texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-                    <texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
                     <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
                     <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
                     <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -97,7 +97,7 @@
                                 <top>0</top>
                                 <width>400</width>
                                 <height>73</height>
-                                <texture colordiffuse="button_focus">lists/focus.png</texture>
+                                <texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
                                 <animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(211)">Conditional</animation>
                             </control>
                             <control type="image">
@@ -105,7 +105,7 @@
                                 <top>0</top>
                                 <width>74</width>
                                 <height>73</height>
-                                <texture colordiffuse="button_focus">$INFO[ListItem.Icon]</texture>
+                                <texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
                                 <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
                             </control>
                             <control type="image">
@@ -154,15 +154,15 @@
                 <top>802</top>
                 <width>1256</width>
                 <height>3</height>
-                <texture colordiffuse="button_focus" border="2">dialogs/separator.png</texture>
+                <texture colordiffuse="$VAR[MainColorVar]" border="2">dialogs/separator.png</texture>
             </control>
             <control type="button">
                 <left>1045</left>
                 <top>105</top>
                 <width>48</width>
                 <height>24</height>
-                <texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-                <texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
                 <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
                 <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
                 <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -176,8 +176,8 @@
                 <top>940</top>
                 <width>48</width>
                 <height>24</height>
-                <texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-                <texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
                 <animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
                 <animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
                 <animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -260,8 +260,8 @@
                     <description>Select widget type</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
-                    <label>90030</label>
-                    <label2>$VAR[SkinSettingWidgetName]</label2>
+                    <label>$LOCALIZE[43070]</label>
+                    <label2>$VAR[SkinSettingWidgetNameVar]</label2>
                     <onclick>SetProperty(WidgetVisibility,True,home)</onclick>
                     <onclick>SendClick(312)</onclick>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
@@ -271,7 +271,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
-                    <label2>$VAR[WidgetName1Label2]</label2>
+                    <label2>$VAR[WidgetName1Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget1)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -282,7 +282,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
-                    <label2>$VAR[WidgetName2Label2]</label2>
+                    <label2>$VAR[WidgetName2Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget2)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -293,7 +293,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
-                    <label2>$VAR[WidgetName3Label2]</label2>
+                    <label2>$VAR[WidgetName3Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget3)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -304,7 +304,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
-                    <label2>$VAR[WidgetName4Label2]</label2>
+                    <label2>$VAR[WidgetName4Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget4)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -315,7 +315,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
-                    <label2>$VAR[WidgetName5Label2]</label2>
+                    <label2>$VAR[WidgetName5Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget5)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -326,7 +326,7 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
-                    <label2>$VAR[WidgetName6Label2]</label2>
+                    <label2>$VAR[WidgetName6Label2Var]</label2>
                     <onclick>ClearProperty(WidgetVisibility,home)</onclick>
                     <onclick>SetProperty(widgetID, widget6)</onclick>
                     <onclick>SendClick(312)</onclick>
@@ -349,7 +349,7 @@
                     <description>Disable menu item</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[90044]</label>
+                    <label>$LOCALIZE[43071]</label>
                     <selected>StringCompare(Control.GetLabel(599),IsTrue)</selected>
                 </control>
                 <control type="image" id="601">
@@ -406,13 +406,13 @@
                 <height>83</height>
                 <font>font12</font>
                 <align>justify</align>
-                <textcolor>button_focus</textcolor>
+                <textcolor>$VAR[MainColorVar]</textcolor>
                 <label>$VAR[SkinSettingsHelpTextVar]</label>
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
         </control>
 		<include name="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]$VAR[SkinShortcutsTitle]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]$VAR[SkinShortcutsTitleVar]" />
 			<param name="breadcrumbs_icon" value="icons/settings/skin.png" />
 		</include>
 		<include>BottomBar</include>

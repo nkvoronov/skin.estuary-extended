@@ -9,15 +9,14 @@
 			<control type="image">
 				<width>615</width>
 				<height>615</height>
-				<aspectratio>scale</aspectratio>
-				<texture border="40">buttons/button-nofo.png</texture>
+				<texture border="22">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
 				<width>615</width>
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicArtists.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(artists)</visible>
@@ -27,7 +26,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(albums)</visible>
@@ -37,7 +36,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicSongs.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(songs)</visible>
@@ -158,7 +157,7 @@
 				<wrapmultiline>true</wrapmultiline>
 				<font>font_textbox</font>
 				<label>$VAR[MusicInfoTextboxVar]</label>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
             <!-- List albums or songs -->
 			<control type="panel" id="50">
@@ -174,7 +173,7 @@
 						<top>-10</top>
 						<width>595</width>
 						<height>100</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -183,7 +182,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.TrackNumber][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -197,7 +196,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -206,7 +205,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -220,7 +219,7 @@
 						<top>-10</top>
 						<width>250</width>
 						<height>312</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="image">
 						<left>30</left>
@@ -240,7 +239,7 @@
 						<font>font10</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label2][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -276,7 +275,7 @@
 							<font>font10</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label2][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -288,7 +287,7 @@
 							<top>5</top>
 							<width>220</width>
 							<height>278</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 						</control>
 					</control>
@@ -412,7 +411,7 @@
 		<control type="group">
 			<visible>Container.Content(songs) + !Window.IsActive(musicinformation)</visible>
 			<include name="InfoDialogTopBarInfo">
-				<param name="main_label" value="[COLOR button_focus]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
+				<param name="main_label" value="[COLOR $VAR[MainColorVar]]$INFO[ListItem.TrackNumber]. [/COLOR]$INFO[ListItem.Title]" />
 				<param name="sub_label" value="$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album]$INFO[ListItem.Year, ([COLOR grey],[/COLOR])]" />
 				<param name="id" value="33335" />
 			</include>

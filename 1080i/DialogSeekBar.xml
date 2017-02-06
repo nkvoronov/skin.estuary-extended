@@ -23,7 +23,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
-				<label>[COLOR button_focus]$LOCALIZE[21396]:  [/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
+				<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[21396]:  [/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
 			</control>
 			<control type="label">
@@ -33,8 +33,8 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
-				<label>$VAR[SeekLabel]</label>
+				<textcolor>$VAR[MainColorVar]</textcolor>
+				<label>$VAR[SeekLabelVar]</label>
 			</control>
 			<control type="label">
 				<left>850</left>
@@ -44,7 +44,7 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[31080]</label>
 			</control>
 			<control type="label">
@@ -65,7 +65,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13_title</font>
-				<label>[COLOR button_focus]$LOCALIZE[31134]:  [/COLOR]$INFO[Player.TimeRemaining]</label>
+				<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[31134]:  [/COLOR]$INFO[Player.TimeRemaining]</label>
 			</control>
 			<control type="label">
 				<left>40</left>
@@ -84,7 +84,7 @@
 				<height>30</height>
 				<info>Player.ProgressCache</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
+				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white50.png</midtexture>
 			</control>
 			<control type="progress">
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
@@ -94,7 +94,7 @@
 				<height>30</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
+				<midtexture colordiffuse="$VAR[MainColorVar]">colors/white50.png</midtexture>
 			</control>
 			<control type="slider" id="401">
 				<left>30</left>
@@ -104,8 +104,8 @@
 				<onup>8010</onup>
 				<ondown>650</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">colors/white.png</textureslidernibfocus>
 			</control>
 		</control>
 	</controls>

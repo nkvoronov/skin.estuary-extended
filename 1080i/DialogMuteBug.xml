@@ -11,7 +11,7 @@
             <top>-11</top>
             <width>100</width>
             <height>100</height>
-            <texture colordiffuse="button_focus">dialogs/volume/progress/p0.png</texture>
+            <texture colordiffuse="$VAR[MainColorVar]">dialogs/volume/progress/p0.png</texture>
             <visible>![Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
         </control>
 		<control type="image">

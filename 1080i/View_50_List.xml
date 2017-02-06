@@ -54,7 +54,7 @@
 					<top>0</top>
 					<width>710</width>
 					<height>69</height>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="label">
@@ -93,7 +93,7 @@
 					<top>20</top>
 					<width>32</width>
 					<height>32</height>
-					<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
 					<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<visible>!Control.HasFocus($PARAM[list_id])</visible>
@@ -149,14 +149,13 @@
 		</control>
 	</include>
 	<include name="ListThumbInfoPanel">
-		<control type="image">
-			<left>90</left>
-			<top>162</top>
-			<width>509</width>
-			<height>509</height>
-			<aspectratio>scale</aspectratio>
-			<texture border="40">buttons/button-nofo.png</texture>
-		</control>
+        <control type="image">
+            <left>90</left>
+            <top>162</top>
+            <width>509</width>
+            <height>509</height>
+            <texture border="22">dialogs/dialog-bg.png</texture>
+        </control>
 		<control type="image">
 			<left>114</left>
 			<top>186</top>
@@ -219,7 +218,8 @@
 				<height>188</height>
 				<font>font12</font>
 				<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog</autoscroll>
-				<label fallback="19055">$VAR[ListBoxInfoVar]</label>
+				<label>$VAR[ListBoxInfoVar]</label>
+                <textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
 		</control>
 	</include>

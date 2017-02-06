@@ -9,6 +9,7 @@
             <orientation>vertical</orientation>
             <height>922</height>
             <scrolltime tween="cubic" easing="out">500</scrolltime>
+            <!-- SubMenu -->
             <include name="SubMenuList">
                 <param name="list_id" value="$PARAM[submenu_list]" />
                 <param name="ondown_id" value="$PARAM[control_id0]" />
@@ -122,7 +123,7 @@
 						<param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
 						<param name="header" value="$LOCALIZE[19158]" />
 						<param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-						<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+						<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
 					</include>
 				</control>
 				<control type="group">
@@ -132,7 +133,7 @@
 						<param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
 						<param name="header" value="$LOCALIZE[19157]" />
 						<param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-						<param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+						<param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
 					</include>
 				</control>
 			</control>
@@ -146,7 +147,7 @@
 				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),TVWidget)"/>
 			</include>
 			<include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="WidgetListCustomChannels">
-				<param name="widget_header" value="$LOCALIZE[84207]"/>
+				<param name="widget_header" value="$LOCALIZE[43241]"/>
 				<param name="widget_target" value="TV"/>
 				<param name="onup_id" value="$PARAM[submenu_list]"/>
 				<param name="list_id" value="$PARAM[control_id0]103"/>				
@@ -170,7 +171,7 @@
 						<param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
 						<param name="header" value="$LOCALIZE[19158]" />
 						<param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-						<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+						<param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
 					</include>
 				</control>
 				<control type="group">
@@ -180,7 +181,7 @@
 						<param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
 						<param name="header" value="$LOCALIZE[19157]" />
 						<param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-						<param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+						<param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
 					</include>
 				</control>
 			</control>
@@ -194,7 +195,7 @@
 				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),RadioWidget)"/>
 			</include>
 			<include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="WidgetListCustomChannels">
-				<param name="widget_header" value="$LOCALIZE[84208]"/>
+				<param name="widget_header" value="$LOCALIZE[43242]"/>
 				<param name="widget_target" value="Radio"/>
 				<param name="onup_id" value="$PARAM[submenu_list]"/>
 				<param name="list_id" value="$PARAM[control_id0]104"/>
@@ -316,427 +317,70 @@
 			</include>			
             <!-- Media Widget 200 -->
 			<!-- Widget 1 -->
-			<include name="WidgetListMovies">
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="1"/>
 				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
 				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
 				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
 				<param name="onup_id" value="$PARAM[submenu_list]"/>
 				<param name="list_id" value="$PARAM[control_id0]200"/>				
 				<param name="ondown_id" value="$PARAM[control_id0]201"/>		
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget1),movies)"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
+			<!-- Widget 2 -->
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="2"/>
+				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
+				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
+				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
 				<param name="onup_id" value="$PARAM[control_id0]200"/>
 				<param name="list_id" value="$PARAM[control_id0]201"/>				
 				<param name="ondown_id" value="$PARAM[control_id0]202"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget1),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]201"/>
-				<param name="list_id" value="$PARAM[control_id0]202"/>
-				<param name="ondown_id" value="$PARAM[control_id0]203"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget1),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]202"/>
-				<param name="list_id" value="$PARAM[control_id0]203"/>
-				<param name="ondown_id" value="$PARAM[control_id0]204"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget1),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]203"/>
-				<param name="list_id" value="$PARAM[control_id0]204"/>
-				<param name="ondown_id" value="$PARAM[control_id0]205"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget1),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]204"/>
-				<param name="list_id" value="$PARAM[control_id0]205"/>
-				<param name="ondown_id" value="$PARAM[control_id0]206"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget1),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget1)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget1)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget1)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]205"/>
-				<param name="list_id" value="$PARAM[control_id0]206"/>
-				<param name="ondown_id" value="$PARAM[control_id0]207"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget1)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget1),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget1),songs)]"/>
-			</include>
-			<!-- Widget 2 -->
-			<include name="WidgetListMovies">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]206"/>
-				<param name="list_id" value="$PARAM[control_id0]207"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]208"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget2),movies)"/>
-			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]207"/>
-				<param name="list_id" value="$PARAM[control_id0]208"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]209"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget2),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]208"/>
-				<param name="list_id" value="$PARAM[control_id0]209"/>
-				<param name="ondown_id" value="$PARAM[control_id0]210"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget2),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]209"/>
-				<param name="list_id" value="$PARAM[control_id0]210"/>
-				<param name="ondown_id" value="$PARAM[control_id0]211"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget2),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]210"/>
-				<param name="list_id" value="$PARAM[control_id0]211"/>
-				<param name="ondown_id" value="$PARAM[control_id0]212"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget2),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]211"/>
-				<param name="list_id" value="$PARAM[control_id0]212"/>
-				<param name="ondown_id" value="$PARAM[control_id0]213"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget2),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget2)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget2)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget2)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]212"/>
-				<param name="list_id" value="$PARAM[control_id0]213"/>
-				<param name="ondown_id" value="$PARAM[control_id0]214"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget2)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget2),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget2),songs)]"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>
 			<!-- Widget 3 -->
-			<include name="WidgetListMovies">
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="3"/>
 				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
 				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
 				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]213"/>
-				<param name="list_id" value="$PARAM[control_id0]214"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]215"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget3),movies)"/>
-			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]214"/>
-				<param name="list_id" value="$PARAM[control_id0]215"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]216"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget3),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]215"/>
-				<param name="list_id" value="$PARAM[control_id0]216"/>
-				<param name="ondown_id" value="$PARAM[control_id0]217"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget3),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]216"/>
-				<param name="list_id" value="$PARAM[control_id0]217"/>
-				<param name="ondown_id" value="$PARAM[control_id0]218"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget3),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]217"/>
-				<param name="list_id" value="$PARAM[control_id0]218"/>
-				<param name="ondown_id" value="$PARAM[control_id0]219"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget3),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]218"/>
-				<param name="list_id" value="$PARAM[control_id0]219"/>
-				<param name="ondown_id" value="$PARAM[control_id0]220"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget3),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget3)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget3)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget3)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]219"/>
-				<param name="list_id" value="$PARAM[control_id0]220"/>
-				<param name="ondown_id" value="$PARAM[control_id0]221"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget3)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget3),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget3),songs)]"/>
+				<param name="onup_id" value="$PARAM[control_id0]201"/>
+				<param name="list_id" value="$PARAM[control_id0]202"/>				
+				<param name="ondown_id" value="$PARAM[control_id0]203"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>
 			<!-- Widget 4 -->
-			<include name="WidgetListMovies">
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="4"/>
 				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
 				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
 				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]220"/>
-				<param name="list_id" value="$PARAM[control_id0]221"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]222"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget4),movies)"/>
-			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]221"/>
-				<param name="list_id" value="$PARAM[control_id0]222"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]223"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget4),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]222"/>
-				<param name="list_id" value="$PARAM[control_id0]223"/>
-				<param name="ondown_id" value="$PARAM[control_id0]224"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget4),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]223"/>
-				<param name="list_id" value="$PARAM[control_id0]224"/>
-				<param name="ondown_id" value="$PARAM[control_id0]225"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget4),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]224"/>
-				<param name="list_id" value="$PARAM[control_id0]225"/>
-				<param name="ondown_id" value="$PARAM[control_id0]226"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget4),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]225"/>
-				<param name="list_id" value="$PARAM[control_id0]226"/>
-				<param name="ondown_id" value="$PARAM[control_id0]227"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget4),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget4)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget4)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget4)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]226"/>
-				<param name="list_id" value="$PARAM[control_id0]227"/>
-				<param name="ondown_id" value="$PARAM[control_id0]228"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget4)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget4),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget4),songs)]"/>
+				<param name="onup_id" value="$PARAM[control_id0]202"/>
+				<param name="list_id" value="$PARAM[control_id0]203"/>				
+				<param name="ondown_id" value="$PARAM[control_id0]204"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>
 			<!-- Widget 5 -->
-			<include name="WidgetListMovies">
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="5"/>
 				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
 				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
 				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]227"/>
-				<param name="list_id" value="$PARAM[control_id0]228"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]229"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget5),movies)"/>
-			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]228"/>
-				<param name="list_id" value="$PARAM[control_id0]229"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]230"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget5),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]229"/>
-				<param name="list_id" value="$PARAM[control_id0]230"/>
-				<param name="ondown_id" value="$PARAM[control_id0]231"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget5),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]230"/>
-				<param name="list_id" value="$PARAM[control_id0]231"/>
-				<param name="ondown_id" value="$PARAM[control_id0]232"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget5),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]231"/>
-				<param name="list_id" value="$PARAM[control_id0]232"/>
-				<param name="ondown_id" value="$PARAM[control_id0]233"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget5),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]232"/>
-				<param name="list_id" value="$PARAM[control_id0]233"/>
-				<param name="ondown_id" value="$PARAM[control_id0]234"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget5),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget5)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget5)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget5)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]233"/>
-				<param name="list_id" value="$PARAM[control_id0]234"/>
-				<param name="ondown_id" value="$PARAM[control_id0]235"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget5)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget5),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget5),songs)]"/>
+				<param name="onup_id" value="$PARAM[control_id0]203"/>
+				<param name="list_id" value="$PARAM[control_id0]204"/>				
+				<param name="ondown_id" value="$PARAM[control_id0]205"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>			
 			<!-- Widget 6 -->
-			<include name="WidgetListMovies">
+			<include name="WidgetListMedia">
+                <param name="widget_num" value="6"/>
 				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
 				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
 				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]234"/>
-				<param name="list_id" value="$PARAM[control_id0]235"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]236"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget6),movies)"/>
-			</include>
-			<include name="WidgetListTVShows">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]235"/>
-				<param name="list_id" value="$PARAM[control_id0]236"/>				
-				<param name="ondown_id" value="$PARAM[control_id0]237"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget6),tvshows)"/>
-			</include>
-			<include name="WidgetListEpisodes">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]236"/>
-				<param name="list_id" value="$PARAM[control_id0]237"/>
-				<param name="ondown_id" value="$PARAM[control_id0]238"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget6),episodes)"/>
-			</include>
-			<include name="WidgetListAlbums">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]237"/>
-				<param name="list_id" value="$PARAM[control_id0]238"/>
-				<param name="ondown_id" value="$PARAM[control_id0]239"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + [StringCompare(Container(9000).ListItem.Property(widgetType.widget6),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),albums)]"/>
-			</include>
-			<include name="WidgetListArtists">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]238"/>
-				<param name="list_id" value="$PARAM[control_id0]239"/>
-				<param name="ondown_id" value="$PARAM[control_id0]240"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget6),artists)"/>
-			</include>
-			<include name="WidgetListSongs">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>
-				<param name="onup_id" value="$PARAM[control_id0]239"/>
-				<param name="list_id" value="$PARAM[control_id0]240"/>
-				<param name="ondown_id" value="$PARAM[control_id0]241"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + StringCompare(Container(9000).ListItem.Property(widgetType.widget6),songs)"/>
-			</include>
-			<include name="WidgetListText">
-				<param name="content_path" value="$INFO[Container(9000).ListItem.Property(widgetPath.widget6)]"/>
-				<param name="widget_header" value="$INFO[Container(9000).ListItem.Property(widgetName.widget6)]"/>
-				<param name="widget_target" value="$INFO[Container(9000).ListItem.Property(widgetTarget.widget6)]"/>				
-				<param name="onup_id" value="$PARAM[control_id0]240"/>
-				<param name="list_id" value="$PARAM[control_id0]241"/>
+				<param name="onup_id" value="$PARAM[control_id0]204"/>
+				<param name="list_id" value="$PARAM[control_id0]205"/>				
 				<param name="ondown_id" value="200001"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !IsEmpty(Container(9000).ListItem.Property(widgetType.widget6)) + ![StringCompare(Container(9000).ListItem.Property(widgetType.widget6),movies) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),tvshows) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),episodes) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),musicvideos) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),albums) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),artists) | StringCompare(Container(9000).ListItem.Property(widgetType.widget6),songs)]"/>
-			</include>			
-            <!-- Pictures Empty -->
-			<!-- <include name="ImageWidget">
-				<param name="image_path" value="special://skin/extras/home-images/pictures.jpg"/>
-				<param name="text_label" value="$LOCALIZE[31111]" />
-				<param name="button_label" value="" />
-				<param name="button_onclick2" value="SetProperty(FanartHomeType,pictures,home)" />
-				<param name="button_onclick" value="ActivateWindow(pictures)"/>
-				<param name="onup_id" value="$PARAM[submenu_list]"/>
-				<param name="button_id" value="$PARAM[control_id0]300"/>
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + [StringCompare(Container(9000).ListItem.Property(defaultID),pictures) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[1])]"/>"/>
-				<param name="visible_1" value="False"/>
-				<param name="visible_2" value="False"/>
-			</include> -->
-			<!-- Video Empty -->
-			<include name="ImageWidget">
-				<param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-				<param name="text_label" value="$LOCALIZE[31105]" />
-				<param name="button_label" value="$LOCALIZE[31110]" />
-				<param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
-				<param name="button_onclick" value="ActivateWindow(videos,sources://video/,return)"/>
-				<param name="onup_id" value="$PARAM[submenu_list]"/>
-				<param name="button_id" value="$PARAM[control_id0]310"/>				
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !Library.HasContent(Movies) + !Library.HasContent(TVShows) + !Library.HasContent(MusicVideos) + [StringCompare(Container(9000).ListItem.Property(defaultID),video) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[3])]"/>
-				<param name="button2_onclick" value="False"/>
-				<param name="visible_2" value="False"/>           
-			</include>
-			<!-- Music Empty -->			
-			<include name="ImageWidget">
-				<param name="image_path" value="special://skin/extras/home-images/music.jpg"/>
-				<param name="text_label" value="$LOCALIZE[31104]" />
-				<param name="button_label" value="$LOCALIZE[31110]" />
-				<param name="button_onclick2" value="SetProperty(FanartHomeType,music,home)" />
-				<param name="button_onclick" value="ActivateWindow(music,files)"/>
-				<param name="onup_id" value="$PARAM[submenu_list]"/>
-				<param name="button_id" value="$PARAM[control_id0]320"/>				
-				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget) + !Library.HasContent(music) + [StringCompare(Container(9000).ListItem.Property(defaultID),music) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[2])]"/>
-				<param name="button2_onclick" value="False"/>
-				<param name="visible_2" value="False"/>
+				<param name="visible" value="StringCompare(Container(9000).ListItem.Property(widget),MediaWidget)"/>
 			</include>			
         </control>
     </include>

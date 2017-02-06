@@ -47,7 +47,7 @@
 						<top>0</top>
 						<width>1396</width>
 						<height>63</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(55)</visible>
 					</control>
 					<control type="label">
@@ -87,7 +87,7 @@
 						<width>32</width>
 						<visible>!Container.Content(addons)</visible>
 						<height>32</height>
-						<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<visible>!Control.HasFocus(55)</visible>
 					</control>
@@ -150,7 +150,7 @@
 				<top>0</top>
 				<width>1396</width>
 				<height>63</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="label">
@@ -222,7 +222,7 @@
 				<top>0</top>
 				<width>1396</width>
 				<height>63</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="image">
@@ -238,7 +238,7 @@
 				<top>15</top>
 				<width>40</width>
 				<height>40</height>
-				<texture  colordiffuse="button_focus">$VAR[AddonsListIconVar]</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">$VAR[AddonsListIconVar]</texture>
                 <animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
                 <visible>!Control.HasFocus(55)</visible>
 			</control>

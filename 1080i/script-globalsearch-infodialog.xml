@@ -120,7 +120,7 @@
 					<height>142</height>
 					<align>center</align>
 					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<textoffsetx>35</textoffsetx>
 					<textoffsety>78</textoffsety>
@@ -142,7 +142,7 @@
 					<height>142</height>
 					<align>center</align>
 					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<textoffsetx>35</textoffsetx>
 					<textoffsety>78</textoffsety>
@@ -164,7 +164,7 @@
 					<height>142</height>
 					<align>center</align>
 					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<textoffsetx>35</textoffsetx>
 					<textoffsety>78</textoffsety>
@@ -186,7 +186,7 @@
 					<height>142</height>
 					<align>center</align>
 					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<textoffsetx>35</textoffsetx>
 					<textoffsety>78</textoffsety>
@@ -227,7 +227,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -254,7 +254,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(110)</visible>
 						</control>
 						<control type="label">
@@ -265,7 +265,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -382,7 +382,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -409,7 +409,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="label">
@@ -420,7 +420,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -519,7 +519,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -546,7 +546,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(130)</visible>
 						</control>
 						<control type="label">
@@ -557,7 +557,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -620,7 +620,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -647,7 +647,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(140)</visible>
 						</control>
 						<control type="label">
@@ -658,7 +658,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -763,7 +763,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -790,7 +790,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(150)</visible>
 						</control>
 						<control type="label">
@@ -801,7 +801,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -906,7 +906,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -933,7 +933,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(160)</visible>
 						</control>
 						<control type="label">
@@ -944,7 +944,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1037,7 +1037,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1064,7 +1064,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(170)</visible>
 						</control>
 						<control type="label">
@@ -1075,7 +1075,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1180,7 +1180,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1207,7 +1207,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(180)</visible>
 						</control>
 						<control type="label">
@@ -1218,7 +1218,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1323,7 +1323,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1350,7 +1350,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 							<visible>Control.HasFocus(200)</visible>
 						</control>
 						<control type="label">
@@ -1361,7 +1361,7 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 						<control type="label">
 							<left>40</left>

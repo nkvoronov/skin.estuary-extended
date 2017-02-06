@@ -214,7 +214,7 @@ msgstr "사용 가능"
 
 msgctxt "#31049"
 msgid "Press [B]Up[/B] to rewind or fast-forward"
-msgstr "[B]Up[/B] : 되감기 또는 빨리 감기"
+msgstr "[B]Up[/B]: 되감기 또는 빨리 감기"
 
 msgctxt "#31050"
 msgid "Press [B]OK[/B] to stop"

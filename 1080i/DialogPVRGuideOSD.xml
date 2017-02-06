@@ -22,7 +22,7 @@
 				<top>0</top>
 				<width>580</width>
 				<height>70</height>
-				<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">colors/white70.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>header label</description>
@@ -118,7 +118,7 @@
 						<top>0</top>
 						<width>580</width>
 						<height>60</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
@@ -168,7 +168,7 @@
 				<textcolor>grey</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>[COLOR=button_focus]$INFO[Container(11).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR]</label>
+				<label>[COLOR $VAR[MainColorVar]]$INFO[Container(11).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR $VAR[MainColorVar]]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR]</label>
 			</control>
 		</control>
 	</controls>

@@ -45,7 +45,7 @@
 							<top>0</top>
 							<width>1050</width>
 							<height>70</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -165,7 +165,7 @@
 							<top>-30</top>
 							<width>560</width>
 							<height>262</height>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<font>font24_title</font>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
@@ -183,7 +183,7 @@
 						<top>154</top>
 						<width>560</width>
 						<height>262</height>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 						<font>font24_title</font>
 						<label>$INFO[ListItem.Title]</label>
 					</control>
@@ -191,7 +191,8 @@
 						<top>210</top>
 						<width>560</width>
 						<height>262</height>
-						<label>$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]:[/COLOR] ]</label>
+                        <textcolor>$VAR[MainColorVar]</textcolor>
+						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 					</control>
 					<control type="textbox">
@@ -256,7 +257,7 @@
 							<param name="height" value="362" />
 							<param name="width" value="560" />
 							<param name="font" value="font12" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="$INFO[ListItem.Duration][COLOR white] - $INFO[ListItem.Label][/COLOR]" />
 						</include>
 					</control>
 				</control>

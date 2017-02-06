@@ -98,7 +98,7 @@
 						<top>0</top>
 						<width>880</width>
 						<height>125</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
@@ -149,7 +149,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
-					<label>$VAR[SelectLabel]</label>
+					<label>$VAR[SelectLabelVar]</label>
 				</control>
 				<control type="grouplist" id="9001">
 					<left>920</left>

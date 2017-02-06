@@ -25,7 +25,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[557]:</label>
 				<visible>IsEmpty(RDS.Band)</visible>
 			</control>
@@ -47,7 +47,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29901]:</label>
 				<visible>!IsEmpty(RDS.Band)</visible>
 			</control>
@@ -69,7 +69,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[557]:</label>
 				<visible>!IsEmpty(RDS.Artist) + !IsEmpty(RDS.Band)</visible>
 			</control>
@@ -89,7 +89,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[556]:</label>
 			</control>
 			<control type="fadelabel">
@@ -109,7 +109,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29902]:</label>
 				<visible>!IsEmpty(RDS.ProgStyle)</visible>
 			</control>
@@ -135,7 +135,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29903]:</label>
 			</control>
 			<control type="fadelabel">
@@ -155,7 +155,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[556]:</label>
 			</control>
 			<control type="fadelabel">
@@ -175,7 +175,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29904]:</label>
 				<visible>IsEmpty(RDS.Band) + !IsEmpty(RDS.Artist)</visible>
 			</control>
@@ -196,7 +196,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29901]:</label>
 				<visible>!IsEmpty(RDS.Band)</visible>
 			</control>
@@ -218,7 +218,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29904]:</label>
 				<visible>!IsEmpty(RDS.Artist) + !IsEmpty(RDS.Band)</visible>
 			</control>
@@ -239,7 +239,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29905]:</label>
 				<visible>!IsEmpty(RDS.Conductor)</visible>
 			</control>
@@ -261,7 +261,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29902]:</label>
 				<visible>IsEmpty(RDS.Conductor) + !IsEmpty(RDS.ProgStyle)</visible>
 			</control>
@@ -281,7 +281,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29902]:</label>
 				<visible>!IsEmpty(RDS.Conductor) + !IsEmpty(RDS.ProgStyle)</visible>
 			</control>
@@ -302,7 +302,7 @@
 			<height>25</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$LOCALIZE[558]:</label>
 			<visible>!IsEmpty(RDS.Album)</visible>
 		</control>
@@ -325,7 +325,7 @@
 			<height>25</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$LOCALIZE[29906]:</label>
 			<visible>!IsEmpty(RDS.ProgHost)</visible>
 		</control>
@@ -346,7 +346,7 @@
 			<height>25</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$LOCALIZE[569]:</label>
 			<visible>!IsEmpty(RDS.Comment)</visible>
 		</control>
@@ -369,7 +369,7 @@
 			<height>25</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$LOCALIZE[19148]:</label>
 		</control>
 		<control type="fadelabel">
@@ -388,7 +388,7 @@
 			<height>25</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<label>$LOCALIZE[29907]:</label>
 			<visible>!IsEmpty(RDS.ProgEditStaff)</visible>
 		</control>
@@ -416,7 +416,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29908]:</label>
 				<visible>!IsEmpty(RDS.ProgNow) | !IsEmpty(RDS.ProgNext)</visible>
 			</control>
@@ -426,7 +426,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29909]:</label>
 				<visible>!IsEmpty(RDS.PhoneStudio) | !IsEmpty(RDS.EmailStudio) | !IsEmpty(RDS.SMSStudio)</visible>
 			</control>
@@ -531,7 +531,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29913]:</label>
 				<visible>!IsEmpty(RDS.PhoneHotline) | !IsEmpty(RDS.EmailHotline)</visible>
 			</control>
@@ -542,7 +542,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29914]:</label>
 				<visible>!IsEmpty(RDS.ProgHomepage)</visible>
 			</control>
@@ -610,7 +610,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$LOCALIZE[29915]:</label>
 			</control>
 			<control type="spincontrol" id="21">

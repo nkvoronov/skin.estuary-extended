@@ -104,7 +104,7 @@
 			<label></label>
 			<textoffsetx>40</textoffsetx>
 			<textoffsety>20</textoffsety>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<aligny>bottom</aligny>
 		</control>

@@ -31,7 +31,7 @@
 				<top>0</top>
 				<width>830</width>
 				<height>70</height>
-				<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]" border="2">colors/white70.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>header label</description>
@@ -80,7 +80,7 @@
 						<top>0</top>
 						<width>1000</width>
 						<height>77</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<visible>Control.hasFocus(11)</visible>
 					</control>
 					<control type="image">
@@ -192,7 +192,7 @@
 						<font>font10</font>
 						<label>$INFO[ListItem.Title]</label>
 						<shadowcolor>text_shadow</shadowcolor>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[MainColorVar]</textcolor>
 					</control>
 					<control type="label">
 						<left>12</left>
@@ -229,7 +229,7 @@
 				<textcolor>grey</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>[COLOR=button_focus]$INFO[Container(11).NumItems][/COLOR] $LOCALIZE[19019] - $LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR]</label>
+				<label>[COLOR $VAR[MainColorVar]]$INFO[Container(11).NumItems][/COLOR] $LOCALIZE[19019] - $LOCALIZE[31035] [COLOR $VAR[MainColorVar]]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
@@ -240,7 +240,7 @@
 				<font>font12</font>
 				<textcolor>grey</textcolor>
 				<aligny>center</aligny>
-				<label>[COLOR button_focus][B]&lt;&gt;[/B][/COLOR]  $LOCALIZE[19146]</label>
+				<label>[COLOR $VAR[MainColorVar]][B]&lt;&gt;[/B][/COLOR]  $LOCALIZE[19146]</label>
 			</control>
 		</control>
 	</controls>

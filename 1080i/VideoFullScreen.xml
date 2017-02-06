@@ -65,7 +65,7 @@
 					<aligny>top</aligny>
 					<label>$LOCALIZE[19005]</label>
 					<font>font24_title</font>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[MainColorVar]</textcolor>
 				</control>
 				<control type="grouplist">
 					<orientation>vertical</orientation>
@@ -92,7 +92,7 @@
 						<width>300</width>
 						<height>25</height>
 						<aligny>center</aligny>
-						<label>[COLOR button_focus]$LOCALIZE[19008]:[/COLOR] $INFO[PVR.ActStreamSignal]</label>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19008]:[/COLOR] $INFO[PVR.ActStreamSignal]</label>
 						<font>font12</font>
 					</control>
 					<control type="progress">
@@ -107,7 +107,7 @@
 						<width>300</width>
 						<height>25</height>
 						<aligny>center</aligny>
-						<label>[COLOR button_focus]$LOCALIZE[19009]:[/COLOR] $INFO[PVR.ActStreamSNR]</label>
+						<label>[COLOR $VAR[MainColorVar]]$LOCALIZE[19009]:[/COLOR] $INFO[PVR.ActStreamSNR]</label>
 						<font>font12</font>
 					</control>
 					<control type="progress">
@@ -162,7 +162,7 @@
 				<top>440</top>
 				<width>200</width>
 				<height>200</height>
-				<texture colordiffuse="button_focus">$INFO[Player.CacheLevel,dialogs/volume/progress/p,.png]</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">$INFO[Player.CacheLevel,dialogs/volume/progress/p,.png]</texture>
 			</control>
 			<control type="label" id="1">
 				<description>buffering value</description>
@@ -174,7 +174,7 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label" id="2">
@@ -187,7 +187,7 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>

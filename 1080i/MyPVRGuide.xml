@@ -37,7 +37,7 @@
 					<onup>10</onup>
 					<ondown>10</ondown>
 					<viewtype label="19032">list</viewtype>
-					<progresstexture border="0,60,18,14" colordiffuse="button_focus">windows/pvr/epg_progress.png</progresstexture>
+					<progresstexture border="0,60,18,14" colordiffuse="$VAR[MainColorVar]">windows/pvr/epg_progress.png</progresstexture>
 					<rulerlayout height="45" width="1400">
 						<control type="label">
 							<width>365</width>
@@ -45,7 +45,7 @@
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
 							<textoffsetx>10</textoffsetx>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 						</control>
 					</rulerlayout>
 					<channellayout height="58" width="350">
@@ -78,7 +78,7 @@
 							<height>60</height>
 							<font>font24_title</font>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 						</control>
@@ -89,7 +89,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<label>$INFO[ListItem.ChannelName]</label>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<aligny>center</aligny>
 							<textoffsetx>10</textoffsetx>
 						</control>
@@ -114,7 +114,7 @@
 							<top>32</top>
 							<width>20</width>
 							<height>20</height>
-							<texture>$VAR[PVRTimerIcon]</texture>
+							<texture>$VAR[PVRTimerIconVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="58" width="60">
@@ -123,13 +123,13 @@
 							<left>2</left>
 							<width>54</width>
 							<height>54</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
 						<control type="image" id="2">
 							<width>58</width>
 							<height>58</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 						</control>
 						<control type="image" id="2">
 							<width>58</width>
@@ -152,7 +152,7 @@
 							<top>32</top>
 							<width>20</width>
 							<height>20</height>
-							<texture>$VAR[PVRTimerIcon]</texture>
+							<texture>$VAR[PVRTimerIconVar]</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -200,7 +200,7 @@
 						<control type="label">
 							<width>1380</width>
 							<height>30</height>
-							<textcolor>button_focus</textcolor>
+							<textcolor>$VAR[MainColorVar]</textcolor>
 							<font>font12</font>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR grey],[/COLOR]]$INFO[ListItem.EpisodeName, [COLOR grey](,)[/COLOR]]$INFO[ListItem.Genre,      $LOCALIZE[515]: [COLOR grey],[/COLOR]]</label>
 						</control>
