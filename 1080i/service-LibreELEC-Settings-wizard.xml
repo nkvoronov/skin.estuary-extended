@@ -265,7 +265,7 @@
                                 <font>font12</font>
                                 <textcolor>button_focus</textcolor>
                                 <visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-                                <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                                <label>$ADDON[service.libreelec.settings 602]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                             </control>
                             <!-- State -->
                             <control type="label">
@@ -276,7 +276,7 @@
                                 <aligny>center</aligny>
                                 <font>font12</font>
                                 <textcolor>button_focus</textcolor>
-                                <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                                <label>$ADDON[service.libreelec.settings 604]: [COLOR white]$INFO[ListItem.Property(State)][/COLOR]</label>
                             </control>
                             <!-- Signal strength -->
                             <control type="progress">
@@ -366,7 +366,7 @@
                                 <font>font12</font>
                                 <textcolor>button_focus</textcolor>
                                 <visible>String.IsEqual(ListItem.Property(State), online) | String.IsEqual(ListItem.Property(State), ready)</visible>
-                                <label>$ADDON[service.libreelec.settings 602]: [COLOR=white]$INFO[ListItem.Property(Address)][/COLOR]</label>
+                                <label>$ADDON[service.libreelec.settings 602]: [COLOR white]$INFO[ListItem.Property(Address)][/COLOR]</label>
                             </control>
                             <!-- State -->
                             <control type="label">
@@ -377,7 +377,7 @@
                                 <aligny>center</aligny>
                                 <font>font12</font>
                                 <textcolor>button_focus</textcolor>
-                                <label>$ADDON[service.libreelec.settings 604]: [COLOR=white]$INFO[ListItem.Property(State)][/COLOR]</label>
+                                <label>$ADDON[service.libreelec.settings 604]: [COLOR white]$INFO[ListItem.Property(State)][/COLOR]</label>
                             </control>
                             <!-- Signal strength -->
                             <control type="progress">

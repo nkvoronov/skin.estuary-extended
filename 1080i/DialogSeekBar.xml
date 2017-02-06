@@ -34,7 +34,7 @@
 				<aligny>center</aligny>
 				<font>font12_title</font>
 				<textcolor>button_focus</textcolor>
-				<label>$VAR[SeekLabel]</label>
+				<label>$VAR[SeekLabelVar]</label>
 			</control>
 			<control type="label">
 				<left>850</left>

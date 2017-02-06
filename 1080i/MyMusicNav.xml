@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
+    <onload condition="String.IsEmpty(Window(home).Property(FanartHomeType))">SetProperty(FanartHomeType,music,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>9000</menucontrol>
-	<views>50,52,53,54,55,500</views>
+	<views>50,52,53,54,55,58,500</views>
 	<controls>
-		<include>DefaultBackground</include>
+        <!-- Background -->
+		<include content="DefaultBackground">
+			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>CommonScrollbars</include>
@@ -14,6 +18,7 @@
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
+            <include>View_58_BigPoster</include>
 			<include>View_500_SmallThumb</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
@@ -51,7 +56,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>String.IsEmpty(Listitem.Property(artist_description)) + String.IsEmpty(Listitem.Property(album_description)) + !ListItem.IsParentFolder</visible>
+					<visible>String.IsEmpty(Listitem.Property(Artist_Description)) + String.IsEmpty(Listitem.Property(Album_Description)) + !ListItem.IsParentFolder</visible>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
@@ -96,7 +101,7 @@
 					<control type="button" id="621">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
-						<onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
+					    <onclick>ActivateWindow(addonbrowser,addons://more/audio/,return)</onclick>
 						<visible>Container.Content(addons)</visible>
 					</control>
 					<control type="button" id="624">

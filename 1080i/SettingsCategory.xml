@@ -164,7 +164,7 @@
 		</control>
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
-			<param name="breadcrumbs_icon" value="$VAR[SettingsSectionIcon]" />
+			<param name="breadcrumbs_icon" value="$VAR[SettingsSectionIconVar]" />
 		</include>
 		<include>BottomBar</include>
 		<control type="label" id="2">

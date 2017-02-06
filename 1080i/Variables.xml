@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+    <!-- *** Labels *** -->
+    
+    <!-- SystemInfoWidget Skin Name and Version-->
     <variable name="NameAndVersionSkinVar">
         <value>Estuary Extended $INFO[System.AddonVersion(skin.estuary-extended)]</value>
     </variable>

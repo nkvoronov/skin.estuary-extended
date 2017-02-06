@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Estuary
-# Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Name: Estuary Extended
+# Addon id: skin.estuary-extended
+# Addon Provider: phil65, Piers, YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -608,6 +608,10 @@ msgctxt "#31147"
 msgid "Download add-ons"
 msgstr "Скачать дополнения"
 
+msgctxt "#31312"
+msgid "Current scraper"
+msgstr "Текущий инфоресурс"
+
 msgctxt "#32000"
 msgid "Poster"
 msgstr "Постер"
@@ -616,168 +620,164 @@ msgctxt "#32001"
 msgid "Banner"
 msgstr "Баннер"
 
-msgctxt "#31312"
-msgid "Current scraper"
-msgstr "Текущий инфоресурс"
+# EXTENDED ADDED VALUE
 
-# extended added value
-
-msgctxt "#31156"
-msgid "Choose background pattern"
-msgstr "Выберите шаблон фона"
-
-msgctxt "#40000"
-msgid "Artwork Downloader"
-msgstr "Загрузить иллюстрации"
-
-msgctxt "#40091"
-msgid "Big posters"
-msgstr "Большие постеры"
-
-msgctxt "#40092"
-msgid "Aired"
-msgstr "В эфире"
-
-msgctxt "#40100"
-msgid "Most watched music videos"
-msgstr "Самые просматриваемые муз. видео"
-
-msgctxt "#40101"
-msgid "Random music videos"
-msgstr "Случайные муз. видео"
-
-msgctxt "#40102"
-msgid "Unwatched music videos"
-msgstr "Непросмотренные муз. видео"
-
-msgctxt "#84102"
-msgid "Timer rules"
-msgstr "Правила таймера"
-
-msgctxt "#84103"
-msgid "Hide disabled"
-msgstr "Скрыть запрещенные"
-
-msgctxt "#84104"
-msgid "Apply"
-msgstr "Применить"
-
-msgctxt "#84105"
-msgid "Apply immediately"
-msgstr "Применить сразу"
-
-msgctxt "#84106"
-msgid "Input oversampling"
-msgstr "Вх. передискретизация"
-
-msgctxt "#84107"
-msgid "Preprocessing"
-msgstr "Пред. обработка"
-
-msgctxt "#84108"
-msgid "Output oversampling"
-msgstr "Вы. передискретизация"
-
-msgctxt "#84200"
-msgid "User widgets"
-msgstr "Виджеты пользователя"
-
-msgctxt "#84201"
-msgid "User widgets options"
-msgstr "Параметры виджетов пользователя"
-
-msgctxt "#84202"
-msgid "User list of add-ons"
-msgstr "Пользовательский список дополнений"
-
-msgctxt "#84203"
-msgid "User list of TV and radio channels"
-msgstr "Пользовательский список тв и радио каналов"
-
-msgctxt "#84204"
-msgid "Enable user list of add-ons"
-msgstr "Разрешить пользовательский список дополнений"
-
-msgctxt "#84205"
-msgid "Enable user list of TV and radio channels"
-msgstr "Разрешить пользовательский список тв и радио каналов"
-
-msgctxt "#84206"
-msgid "Channel"
-msgstr "Канал"
-
-msgctxt "#84207"
-msgid "Favorites TV Channels"
-msgstr "Избранные ТВ каналы"
-
-msgctxt "#84208"
-msgid "Favorites Radio Channels"
-msgstr "Избранные Радио каналы"
-
-msgctxt "#84209"
-msgid "Choose weather fanart pack"
-msgstr "Выбрать фанарт пакет для погоды"
-
-msgctxt "#84210"
-msgid "Show studios logos"
-msgstr "Показывать студийные лого"
-
-msgctxt "#84211"
-msgid "Choose studios logos"
-msgstr "Выбрать студийное лого"
-
-msgctxt "#84212"
-msgid "Choose record labels"
-msgstr "Выберать метки записи"
-
-msgctxt "#84213"
-msgid "Choose flags country"
-msgstr "Выбрать флаги стран"
-
-msgctxt "#84214"
-msgid "Choose weather icons"
-msgstr "Выбрать иконки погоды"
-
-msgctxt "#84215"
-msgid "Hardware"
-msgstr "Оборудование"
-
-msgctxt "#84216"
-msgid "Choose home fanart pack"
-msgstr "Выбрать фанарт пакет"
-
-msgctxt "#84217"
+msgctxt "#43000"
 msgid "Options"
 msgstr "Параметры"
 
-msgctxt "#84218"
-msgid "Advanced options"
-msgstr "Дополнительные параметры"
+msgctxt "#43001"
+msgid "User widgets"
+msgstr "Виджеты пользователя"
 
-msgctxt "#84219"
-msgid "Background options"
-msgstr "Параметры фона"
-
-msgctxt "#84220"
-msgid "Reset skin options"
-msgstr "Сброс параметров обложки"
-
-msgctxt "#88071"
-msgid "Show stats"
-msgstr "Показывать статистику"
-
-msgctxt "#88080"
-msgid "reload skin button"
-msgstr "кнопку обновления обложки"
-
-msgctxt "#89501"
+msgctxt "#43009"
 msgid "Enable FullScreen Clock"
 msgstr "Показывать часы в полноэкранном режиме"
 
-msgctxt "#89502"
+msgctxt "#43010"
 msgid "Enable SlideShow Info"
 msgstr "Показывать информацию в слайдшоу"
 
-msgctxt "#89503"
+msgctxt "#43011"
+msgid "Show stats"
+msgstr "Показывать статистику"
+
+msgctxt "#43012"
+msgid "Show studios logos"
+msgstr "Показывать студийные лого"
+
+msgctxt "#43013"
+msgid "Choose studios logos"
+msgstr "Выбрать студийное лого"
+
+msgctxt "#43014"
+msgid "Choose flags country"
+msgstr "Выбрать флаги стран"
+
+msgctxt "#43015"
+msgid "Choose weather icons"
+msgstr "Выбрать иконки погоды"
+
+msgctxt "#43017"
+msgid "Enable user list of add-ons"
+msgstr "Разрешить пользовательский список дополнений"
+
+msgctxt "#43018"
+msgid "Enable user list of TV and radio channels"
+msgstr "Разрешить пользовательский список тв и радио каналов"
+
+msgctxt "#43019"
+msgid "Debug infos"
+msgstr "Отладочная иформация"
+
+msgctxt "#43021"
+msgid "User list of add-ons"
+msgstr "Пользовательский список дополнений"
+
+msgctxt "#43022"
+msgid "User list of TV and radio channels"
+msgstr "Пользовательский список тв и радио каналов"
+
+msgctxt "#43023"
+msgid "Choose background pattern"
+msgstr "Выберите шаблон фона"
+
+msgctxt "#43024"
+msgid "Choose home fanart pack"
+msgstr "Выбрать фанарт пакет"
+
+msgctxt "#43025"
+msgid "Choose weather fanart pack"
+msgstr "Выбрать фанарт пакет для погоды"
+
+msgctxt "#43040"
+msgid "Advanced options"
+msgstr "Дополнительные параметры"
+
+msgctxt "#43041"
+msgid "User widgets options"
+msgstr "Параметры виджетов пользователя"
+
+msgctxt "#43042"
+msgid "Background options"
+msgstr "Параметры фона"
+
+msgctxt "#43044"
+msgid "Reset skin options"
+msgstr "Сброс параметров обложки"
+
+msgctxt "#43045"
+msgid "Artwork Downloader"
+msgstr "Загрузить иллюстрации"
+
+msgctxt "#43060"
+msgid "Timer rules"
+msgstr "Правила таймера"
+
+msgctxt "#43061"
+msgid "Hide disabled"
+msgstr "Скрыть запрещенные"
+
+msgctxt "#43090"
+msgid "Most watched music videos"
+msgstr "Самые просматриваемые муз. видео"
+
+msgctxt "#43091"
+msgid "Random music videos"
+msgstr "Случайные муз. видео"
+
+msgctxt "#43092"
+msgid "Unwatched music videos"
+msgstr "Непросмотренные муз. видео"
+
+msgctxt "#43200"
+msgid "Big posters"
+msgstr "Большие постеры"
+
+msgctxt "#43210"
+msgid "Aired"
+msgstr "В эфире"
+
+msgctxt "#43220"
 msgid "Watch it Later"
 msgstr "Посмотреть позже"
+
+msgctxt "#43230"
+msgid "Hardware"
+msgstr "Оборудование"
+
+msgctxt "#43240"
+msgid "Channel"
+msgstr "Канал"
+
+msgctxt "#43241"
+msgid "Favorites TV Channels"
+msgstr "Избранные ТВ каналы"
+
+msgctxt "#43242"
+msgid "Favorites Radio Channels"
+msgstr "Избранные Радио каналы"
+
+msgctxt "#43250"
+msgid "Apply"
+msgstr "Применить"
+
+msgctxt "#43251"
+msgid "Apply immediately"
+msgstr "Применить сразу"
+
+msgctxt "#43252"
+msgid "Input oversampling"
+msgstr "Вх. передискретизация"
+
+msgctxt "#43253"
+msgid "Preprocessing"
+msgstr "Пред. обработка"
+
+msgctxt "#43254"
+msgid "Output oversampling"
+msgstr "Вы. передискретизация"
+
+msgctxt "#43255"
+msgid "reload skin button"
+msgstr "кнопку обновления обложки"

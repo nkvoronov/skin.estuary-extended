@@ -19,7 +19,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicArtists.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(artists)</visible>
@@ -29,7 +29,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicAlbums.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(albums)</visible>
@@ -39,7 +39,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicSongs.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicSongs.png">$VAR[ListPosterVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(songs)</visible>
@@ -185,7 +185,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.TrackNumber][COLOR button_focus] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -208,7 +208,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber][COLOR button_focus] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -242,7 +242,7 @@
 						<font>font10</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label2][COLOR button_focus] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -278,7 +278,7 @@
 							<font>font10</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label2][COLOR button_focus] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>

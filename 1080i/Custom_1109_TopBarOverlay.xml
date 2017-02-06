@@ -29,8 +29,9 @@
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="label">
-					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, ([COLOR button_focus],[/COLOR])]</label>
+                    <label>[COLOR white]$INFO[VideoPlayer.Title][/COLOR]$INFO[VideoPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
 					<include>BreadcrumbsLabel</include>
+                    <textcolor>button_focus</textcolor>
 				</control>
 			</control>
 			<control type="label">
@@ -38,6 +39,7 @@
 				<label>$VAR[OSDSubLabelVar]</label>
 				<font>font10</font>
 				<left>85</left>
+                <textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<height>100</height>
 				<width>1400</width>

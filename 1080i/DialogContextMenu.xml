@@ -51,7 +51,7 @@
                 <align>center</align>
                 <texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
                 <texturenofocus>lists/separator.png</texturenofocus>
-				<label>$LOCALIZE[89503]</label>
+				<label>$LOCALIZE[43220]</label>
 				<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
 				<visible>Skin.HasSetting(enable_watchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 			</control>

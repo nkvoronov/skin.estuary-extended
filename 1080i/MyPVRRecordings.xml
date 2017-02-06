@@ -191,7 +191,8 @@
 						<top>210</top>
 						<width>560</width>
 						<height>262</height>
-						<label>$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]:[/COLOR] ]</label>
+                        <textcolor>button_focus</textcolor>
+						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR]]</label>
 						<font>font12</font>
 					</control>
 					<control type="textbox">
@@ -257,7 +258,7 @@
 							<param name="width" value="560" />
 							<param name="item_width" value="560" />
 							<param name="font" value="font12" />
-							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="item_label" value="$INFO[ListItem.Duration][COLOR white] - $INFO[ListItem.Label][/COLOR]" />
 						</include>
 					</control>
 				</control>

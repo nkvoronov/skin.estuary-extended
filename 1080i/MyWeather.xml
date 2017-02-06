@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
-	<onload>SetProperty(FanartHomeType,weather,Home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>20000</menucontrol>
 	<controls>
@@ -12,8 +11,8 @@
 		</control>
 		<!-- Background -->
 		<include content="DefaultBackground">
-			<param name="is_media" value="False" />
-			<param name="image_path" value="$VAR[WeatherFanartVar]" />
+            <param name="multi" value="Skin.HasSetting(WeatherFanart.multi)" />
+			<param name="overlay_background" value="$VAR[WeatherFanartVar]" />
 		</include>
 		<control type="group">
 			<left>110</left>

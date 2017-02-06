@@ -48,7 +48,7 @@
                 <movement>1</movement>
                 <preloaditems>2</preloaditems>
                 <orientation>horizontal</orientation>
-                <viewtype label="$LOCALIZE[40091]">bigicons</viewtype>
+                <viewtype label="$LOCALIZE[43200]">bigicons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="700" width="495" condition="!Container.Content(artists) + !Container.Content(albums) + !Container.Content(episodes)">
@@ -301,9 +301,10 @@
                             <width>100%</width>
                             <top>460</top>
                             <bottom>20</bottom>
-                            <label>[COLOR button_focus]$INFO[ListItem.Artist,[B],[/B][CR]][/COLOR]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
+                            <label>$INFO[ListItem.Artist,[COLOR white][B],[/B][/COLOR][CR]]$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Year]</label>
                             <align>center</align>
                             <aligny>center</aligny>
+                            <textcolor>button_focus</textcolor>
                             <visible>!String.IsEmpty(ListItem.Artist)</visible>
                         </control>
                         <control type="textbox">
@@ -396,7 +397,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -453,7 +454,7 @@
                                 <height>20</height>
                                 <align>center</align>
                                 <font>font10</font>
-                                <label>[I]$LOCALIZE[40092] $INFO[ListItem.Premiered][/I]</label>
+                                <label>[I]$LOCALIZE[43210] $INFO[ListItem.Premiered][/I]</label>
                                 <textcolor>button_focus</textcolor>
                             </control>
                             <control type="image">
@@ -494,7 +495,7 @@
                         <control type="image">
                             <width>495</width>
                             <height>700</height>
-                            <texture border="40">buttons/button-nofo.png</texture>
+                            <texture border="22">dialogs/dialog-bg.png</texture>
                         </control>
                         <control type="image">
                             <width>495</width>
@@ -557,7 +558,7 @@
                                 <height>20</height>
                                 <align>center</align>
                                 <font>font10</font>
-                                <label>[I]$LOCALIZE[40092] $INFO[ListItem.Premiered][/I]</label>
+                                <label>[I]$LOCALIZE[43210] $INFO[ListItem.Premiered][/I]</label>
                             </control>
                             <control type="image">
                                 <right>0</right>
