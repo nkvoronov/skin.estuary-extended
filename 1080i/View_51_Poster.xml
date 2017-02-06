@@ -217,7 +217,7 @@
                             <font>font12</font>
                             <width>1160</width>
                             <height>38</height>
-                            <label>$INFO[ListItem.Season,$LOCALIZE[33054]: [COLOR white],[/COLOR]]$INFO[ListItem.Episode, [COLOR white]•[/COLOR] $LOCALIZE[20360]: [COLOR white],[/COLOR]]$INFO[Window(Home).Property(NextAired.Status), [COLOR white]•[/COLOR] $LOCALIZE[126]: [COLOR white],[/COLOR]]</label>
+                            <label>$INFO[ListItem.Season,$LOCALIZE[33054]: [COLOR white],[/COLOR]]$INFO[ListItem.Episode, [COLOR white],[/COLOR] $LOCALIZE[20360]: [COLOR white],[/COLOR]]$INFO[Window(Home).Property(NextAired.Status), [COLOR white],[/COLOR] $LOCALIZE[126]: [COLOR white],[/COLOR]]</label>
                             <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
                             <visible>!IsEmpty(ListItem.Season) + IsEmpty(ListItem.Status) + !IsEmpty(Window(Home).Property(NextAired.Status))</visible>

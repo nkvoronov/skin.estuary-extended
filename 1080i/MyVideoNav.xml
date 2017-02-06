@@ -65,10 +65,10 @@
 					<width>429</width>
 					<height>368</height>
 					<font>font12</font>
+                    <visible>!ListItem.IsCollection</visible>
 					<label>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</label>
                     <textcolor>button_focus</textcolor>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-                    <visible>!ListItem.IsCollection</visible>
 				</control>
 				<control type="textbox">
 					<right>130</right>
@@ -228,7 +228,7 @@
 						<description>Unlock Shares</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[20336]</label>
-						<onclick>xbmc.mastermode</onclick>
+						<onclick>mastermode</onclick>
 						<selected>system.ismaster</selected>
 						<visible>system.haslocks</visible>
 					</control>

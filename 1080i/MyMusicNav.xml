@@ -56,7 +56,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>IsEmpty(Listitem.Property(artist_description)) + IsEmpty(Listitem.Property(album_description)) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>IsEmpty(Listitem.Property(Artist_Description)) + IsEmpty(Listitem.Property(Album_Description)) + !StringCompare(ListItem.Label,..)</visible>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
