@@ -256,6 +256,7 @@
 							<param name="path" value="$INFO[ListItem.Path]/$INFO[ListItem.Label]" />
 							<param name="height" value="362" />
 							<param name="width" value="560" />
+							<param name="item_width" value="560" />
 							<param name="font" value="font12" />
 							<param name="item_label" value="$INFO[ListItem.Duration][COLOR white] - $INFO[ListItem.Label][/COLOR]" />
 						</include>

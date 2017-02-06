@@ -126,7 +126,7 @@
 							<property name="path">addons://sources/executable/</property>
 						</item>
 						<item id="4">
-							<label>$LOCALIZE[1043]</label>
+							<label>$LOCALIZE[20244]</label>
                             <onclick>SetProperty(FanartHomeType,addons,home)</onclick>
 							<onclick>ActivateWindow(programs,androidapps://,return)</onclick>
 							<thumb>icons/settings/android.png</thumb>
