@@ -45,15 +45,13 @@
 						<width>506</width>
 						<height>801</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ListPosterVar]</texture>
+						<texture>$INFO[ListItem.Thumb]</texture>
 						<bordertexture border="20">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 				</control>
                 <control type="group">
                     <visible>StringCompare(ListItem.DBType,musicvideo)</visible>
-                    <visible>!IsEmpty(ListItem.Thumb) + !StringCompare(ListItem.Thumb,ListItem.Art(poster))</visible>
-                    <include>OpenClose_Left</include>
                     <control type="image">
                         <left>4</left>
 						<top>4</top>
@@ -68,7 +66,7 @@
                         <width>506</width>
                         <height>801</height>
                         <aspectratio>keep</aspectratio>
-                        <texture>$VAR[ListPosterVar]</texture>
+                        <texture>$INFO[ListItem.Thumb]</texture>
                         <bordertexture border="20">overlays/shadow.png</bordertexture>
                         <bordersize>20</bordersize>
                     </control>
