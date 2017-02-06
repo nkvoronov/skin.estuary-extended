@@ -203,7 +203,7 @@
                 <width>288</width>
                 <fadetime>200</fadetime>
                 <aspectratio>stretch</aspectratio>                
-                <texture background="true" fallback="DefaultVideo.png">$VAR[PosterVar]</texture>
+                <texture background="true" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
             </control>
             <control type="image">
                 <top>10</top>

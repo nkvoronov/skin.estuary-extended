@@ -128,7 +128,8 @@
 				<height>742</height>
 				<fadetime>200</fadetime>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultVideo.png" background="true">$VAR[PosterVar]</texture>
+                <!-- PosterVar -->
+				<texture fallback="DefaultVideo.png" background="true">$VAR[PosterThumbVar]</texture>
 				<bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>

@@ -16,7 +16,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+				<texture background="true" fallback="DefaultMusicArtists.png">$VAR[PosterThumbVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(artists)</visible>
@@ -26,7 +26,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[PosterThumbVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(albums)</visible>
@@ -36,7 +36,7 @@
 				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultMusicSongs.png">$VAR[ListPosterVar]</texture>
+				<texture background="true" fallback="DefaultMusicSongs.png">$VAR[PosterThumbVar]</texture>
                 <bordertexture border="20">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
                 <visible>Container.Content(songs)</visible>

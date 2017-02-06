@@ -64,7 +64,7 @@
                             <top>27</top>
                             <bottom>27</bottom>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
                         </control>
                         <control type="group">
                             <bottom>30</bottom>
@@ -101,7 +101,7 @@
                             <top>27</top>
                             <bottom>27</bottom>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultVideo.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultVideo.png">$VAR[PosterThumbVar]</texture>
                         </control>
                         <control type="image">
                             <left>27</left>
@@ -283,7 +283,7 @@
                             <top>27</top>
                             <height>435</height>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[PosterThumbVar]</texture>
                             <visible>Container.Content(artists)</visible>
                         </control>
                         <control type="image">
@@ -292,7 +292,7 @@
                             <top>27</top>
                             <height>435</height>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[PosterThumbVar]</texture>
                             <visible>Container.Content(albums)</visible>
                         </control>
                         <control type="textbox">
@@ -339,7 +339,7 @@
                             <top>27</top>
                             <height>435</height>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultMusicArtists.png">$VAR[PosterThumbVar]</texture>
                             <visible>Container.Content(artists)</visible>
                         </control>
                         <control type="image">
@@ -348,7 +348,7 @@
                             <top>27</top>
                             <height>435</height>
                             <aspectratio>stretch</aspectratio>
-                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                            <texture border="20" fallback="DefaultMusicAlbums.png">$VAR[PosterThumbVar]</texture>
                             <visible>Container.Content(albums)</visible>
                         </control>
                         <control type="textbox">
