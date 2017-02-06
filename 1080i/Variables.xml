@@ -59,7 +59,7 @@
 	</variable>
     <!-- Music Info Text -->
 	<variable name="MusicInfoTextboxVar">
-        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description)) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + Container.Content(artists)">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>        
         <value>$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>
