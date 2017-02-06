@@ -55,7 +55,8 @@
 					<width>429</width>
 					<height>388</height>
 					<font>font12</font>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[CR]]</label>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</label>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
                     <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))</visible>
 				</control>
@@ -67,7 +68,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>IsEmpty(Listitem.Property(Artist_Description)) + IsEmpty(Listitem.Property(Album_Description)) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>IsEmpty(Listitem.Property(Artist_Description)) + IsEmpty(Listitem.Property(Album_Description)) + IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + !StringCompare(ListItem.Label,..)</visible>
 					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">

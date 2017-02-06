@@ -59,7 +59,7 @@
 	</variable>
     <!-- Music Info Text -->
 	<variable name="MusicInfoTextboxVar">
-        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]$LOCALIZE[21887]*[/B][CR][COLOR white],[/COLOR]]</value>
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + Container.Content(artists)">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>        
         <value>$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>
@@ -172,10 +172,10 @@
 	<variable name="ListBoxInfoVar">
 		<value condition="StringCompare(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews,[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description),[COLOR white],[/COLOR]]</value>
-        <value condition="Container.Content(albums) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(album_description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR white],[/COLOR]]</value>
+        <value condition="Container.Content(albums) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(mixed) | Container.Content(videos)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
-        <value condition="Container.Content(artists) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(artist_description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[COLOR white],[/COLOR]]</value>
+        <value condition="Container.Content(artists) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567]: [COLOR white],[/COLOR][CR]]</value>
 		<!-- <value>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]</value> -->
