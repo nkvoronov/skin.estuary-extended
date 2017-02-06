@@ -178,7 +178,6 @@
         <value condition="Container.Content(artists) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[B]Online[/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567]: [COLOR white],[/COLOR][CR]]</value>
-		<!-- <value>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]</value> -->
         <value>[COLOR white]$LOCALIZE[19055][/COLOR]</value>
 	</variable>
     <!-- VideoOSD Help Text -->
@@ -408,8 +407,8 @@
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
         <value condition="!IsEmpty(ListItem.Art(poster)) + [!IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
-        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Label, $LOCALIZE[15102]) + Container.Content(albums)">DefaultMusicAlbums.png</value>
-        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Icon, DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Label,$LOCALIZE[15102]) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Icon,DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- WidgetList Movies Poster -->
