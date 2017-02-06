@@ -173,7 +173,6 @@
 		<value condition="Container.Content(mixed) | Container.Content(videos)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Duration,$LOCALIZE[180]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Playcount,$LOCALIZE[567]: [COLOR white],[/COLOR][CR]]</value>
-		<!-- <value>$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]</value> -->
         <value>[COLOR white]$LOCALIZE[19055][/COLOR]</value>
 	</variable>
     <!-- VideoOSD Help Text -->
@@ -377,21 +376,15 @@
     <!-- Poster -->
     <variable name="PosterVar">
         <value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
-        <value condition="!IsEmpty(Container(50).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(50).ListItem.Art(season.poster)]</value>
-        <value condition="!IsEmpty(Container(51).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(51).ListItem.Art(season.poster)]</value>        
-        <value condition="!IsEmpty(Container(53).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(53).ListItem.Art(season.poster)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(54).ListItem.Art(season.poster)]</value>
-        <value condition="!IsEmpty(Container(58).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(58).ListItem.Art(season.poster)]</value>
-        <value condition="!IsEmpty(Container(500).ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[Container(500).ListItem.Art(season.poster)]</value>       
-        <value condition="!IsEmpty(ListItem.Art(season.poster)) + Container.Content(seasons)">$INFO[ListItem.Art(season.poster)]</value>
-        <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="IsEmpty(Container.ListItem.Art(thumb)) + [Container.Content(actors) | Container.Content(directors)]">DefaultActors.png</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="!IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
         <value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
         <value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
-        <value>$INFO[ListItem.Icon]</value>
+		<value>$INFO[ListItem.Icon]</value>
     </variable>
     <!-- Poster Info Dialog -->
 	<variable name="InfoDialogPosterVar">
@@ -406,7 +399,7 @@
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>
 		<value condition="!IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
         <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Label,$LOCALIZE[15102]) + Container.Content(albums)">DefaultMusicAlbums.png</value>
-        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Icon, DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
+        <value condition="!IsEmpty(ListItem.Icon) + StringCompare(ListItem.Icon,DefaultMusicSongs.png) + Container.Content(albums)">DefaultMusicAlbums.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
     <!-- 56,57 No Clear View -->    
@@ -651,7 +644,7 @@
 		<value condition="Window.IsActive(servicesettings)">icons/settings/network.png</value>
 		<value condition="Window.IsActive(appearancesettings)">icons/settings/appearance.png</value>
 		<value condition="Window.IsActive(pvrsettings)">icons/settings/livetv.png</value>
-	</variable>   
+	</variable>
     <!-- List Watched Icon -->
 	<variable name="ListWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
