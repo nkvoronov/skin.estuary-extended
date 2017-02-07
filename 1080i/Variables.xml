@@ -394,17 +394,18 @@
         <value condition="Container.Content(seasons) + !IsEmpty(Container(54).ListItem.Art(season.poster))">$INFO[Container(54).ListItem.Art(season.poster)]</value>
         <value condition="Container.Content(seasons) + !IsEmpty(Container(500).ListItem.Art(season.poster))">$INFO[Container(500).ListItem.Art(season.poster)]</value>
         <value condition="Container.Content(seasons) + !IsEmpty(Container(58).ListItem.Art(season.poster))">$INFO[Container(58).ListItem.Art(season.poster)]</value>
-        <value condition="Container.Content(seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>        
+        <value condition="Container.Content(seasons) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
         <value condition="IsEmpty(Container.ListItem.Art(thumb)) + [Container.Content(actors) | Container.Content(directors)]">DefaultActors.png</value>
-        <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-        <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>        
+        <value condition="!IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+        <value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(Container.Art(artist.thumb))">$INFO[Container.Art(artist.thumb)]</value>
         <value condition="!IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
-        <value condition="Container.Content(episodes) + !IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
+        <value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
     </variable>
-    <!-- Poster Info Dialog -->
+    <!-- Poster Info Dialog ??? -->
 	<variable name="InfoDialogPosterVar">
         <value condition="!IsEmpty(ListItem.Art(poster)) + [!IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
