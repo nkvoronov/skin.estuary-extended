@@ -261,7 +261,7 @@
                             <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
-                </control>                                          
+                </control>
                 <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/tv/*"/>
                     <param name="sortby" value="lastplayed"/>
