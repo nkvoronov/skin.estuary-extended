@@ -78,7 +78,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !StringCompare(ListItem.Label,..)</visible>
+					<visible>IsEmpty(Listitem.Plot) + IsEmpty(Listitem.Tagline) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="group">
 					<left>1350</left>
