@@ -23,7 +23,7 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>$LOCALIZE[1021]</label>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="image">
@@ -77,7 +77,7 @@
 					<width>820</width>
 					<height>61</height>
 					<visible>Control.HasFocus(10)</visible>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -129,7 +129,7 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>$LOCALIZE[1022]</label>
-			<textcolor>button_focus</textcolor>
+			<textcolor>$VAR[MainColorVar]</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="edit" id="12">

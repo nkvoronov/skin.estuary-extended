@@ -58,7 +58,7 @@
 			<height>15</height>
 			<info>Player.ProgressCache</info>
 			<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
-			<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
+			<midtexture colordiffuse="$VAR[MainColorVar]">colors/white50.png</midtexture>
 			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 			<visible>!Player.ChannelPreviewActive</visible>
 		</control>
@@ -70,7 +70,7 @@
 			<height>15</height>
 			<info>Player.Progress</info>
 			<texturebg border="3" colordiffuse="80FFFFFF">colors/white50.png</texturebg>
-			<midtexture colordiffuse="button_focus">colors/white50.png</midtexture>
+			<midtexture colordiffuse="$VAR[MainColorVar]">colors/white50.png</midtexture>
 			<visible>!Player.ChannelPreviewActive | VideoPlayer.HasEpg</visible>
 		</control>
 		<control type="label">
@@ -78,7 +78,7 @@
 			<top>955</top>
 			<width>1300</width>
 			<height>25</height>
-			<label>[COLOR button_focus]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,: ][/COLOR]$INFO[VideoPlayer.NextTitle]</label>
+			<label>[COLOR $VAR[MainColorVar]]$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,: ][/COLOR]$INFO[VideoPlayer.NextTitle]</label>
 			<aligny>center</aligny>
 			<visible>VideoPlayer.HasEpg</visible>
 		</control>

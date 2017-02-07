@@ -41,8 +41,8 @@
 			<height>20</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Up</onclick>
-			<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
-			<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[MainColorVar]" flipy="true">overlays/arrowdown.png</texturenofocus>
 			<visible>Control.IsVisible(3000) + Integer.IsGreater(Container(2000).CurrentPage,1)</visible>
 			<animation delay="80" effect="fade" time="120">VisibleChange</animation>
 		</control>
@@ -53,8 +53,8 @@
 			<height>20</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Down</onclick>
-			<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
-			<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
+			<texturefocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[MainColorVar]">overlays/arrowdown.png</texturenofocus>
 			<visible>Control.IsVisible(3000) + !String.IsEqual(Container(2000).CurrentPage,Container(2000).NumPages)</visible>
 			<animation delay="80" effect="fade" time="120">VisibleChange</animation>
 		</control>

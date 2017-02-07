@@ -30,25 +30,41 @@
 			</control>
 			<control type="image">
 				<depth>DepthMax</depth>
-				<left>920</left>
+				<centerleft>50%</centerleft>
 				<top>513</top>
 				<width>80</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-				<texture colordiffuse="button_focus">spinner.png</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">spinner.png</texture>
 				<animation effect="fade" end="100" time="300" delay="200">WindowOpen</animation>
+                <visible>String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)</visible>
 			</control>
 			<control type="image">
 				<depth>DepthMax</depth>
-				<left>935</left>
+				<centerleft>50%</centerleft>
 				<top>528</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
 				<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-				<texture flipx="true" colordiffuse="button_focus">spinner.png</texture>
+				<texture flipx="true" colordiffuse="$VAR[MainColorVar]">spinner.png</texture>
 				<animation effect="fade" end="100" time="300" delay="200">WindowOpen</animation>
+                <visible>String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)</visible>
+			</control>
+			<control type="multiimage">
+				<depth>DepthMax</depth>
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+                <width>100</width>
+                <height>100</height>
+                <aspectratio>keep</aspectratio>
+                <imagepath>$INFO[Skin.String(SkinHelper.SpinnerTexture.Path)]</imagepath>
+                <timeperimage>100</timeperimage>
+                <randomize>false</randomize>
+                <fadetime>0</fadetime>
+                <colordiffuse>$VAR[MainColorVar]</colordiffuse>
+                <visible>![String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture.Path)) | Skin.String(SkinHelper.SpinnerTexture.Path,None)]</visible>
 			</control>
 			<control type="progress" id="10">
 				<left>920</left>

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1100">
 	<defaultcontrol>9000</defaultcontrol>
-    <onload>SetProperty(FanartHomeType,addons,home)</onload>
 	<controls>
 		<!-- Background -->
 		<include content="DefaultBackground">
-			<param name="is_media" value="False" />
-			<param name="image_path" value="$VAR[AddonsFanartVar]" />
+			<param name="overlay_background" value="$VAR[AddonsFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -50,7 +48,7 @@
 								<top>0</top>
 								<width>382</width>
 								<height>120</height>
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 							</control>
 							<control type="label">
@@ -168,16 +166,16 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>55</radioposx>
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/submenu/add-ons.png</textureradioonfocus>
-					<textureradioonnofocus>icons/submenu/add-ons.png</textureradioonnofocus>
-					<textureradioofffocus>icons/submenu/add-ons.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/submenu/add-ons.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/addons.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/addons.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/addons.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/addons.png</textureradiooffnofocus>
 				</control>
 				<control type="radiobutton" id="802">
 					<width>157</width>
@@ -189,7 +187,7 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>35</radioposx>
 					<radioposy>0</radioposy>
@@ -213,16 +211,16 @@
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<textwidth>230</textwidth>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texturefocus>
 					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
 					<radioposx>55</radioposx>
 					<radioposy>0</radioposy>
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
-					<textureradioonfocus>icons/settings.png</textureradioonfocus>
-					<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
-					<textureradioofffocus>icons/settings.png</textureradioofffocus>
-					<textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
+					<textureradioonfocus>icons/submenu/my-addons.png</textureradioonfocus>
+					<textureradioonnofocus>icons/submenu/my-addons.png</textureradioonnofocus>
+					<textureradioofffocus>icons/submenu/my-addons.png</textureradioofffocus>
+					<textureradiooffnofocus>icons/submenu/my-addons.png</textureradiooffnofocus>
 				</control>
 				<control type="label" id="804">
 					<left>-217</left>
@@ -232,7 +230,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<font>font20_title</font>
-					<label>$VAR[AddonCountLabel]</label>
+					<label>$VAR[AddonCountLabelVar]</label>
 					<shadowcolor>text_shadow</shadowcolor>
 				</control>
 			</control>

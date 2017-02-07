@@ -36,8 +36,8 @@
 		</control>
 		<!-- Background -->
 		<include content="DefaultBackground">
-			<param name="is_media" value="False" />
-			<param name="image_path" value="$VAR[HomeFanartVar]" />
+            <param name="multi" value="Skin.HasSetting(WeatherFanart.multi)" />
+			<param name="overlay_background" value="$VAR[HomeFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -57,7 +57,7 @@
 					<aspectratio>keep</aspectratio>
 					<width>56</width>
 					<height>56</height>
-					<texture colordiffuse="button_focus">icons/logo.png</texture>
+					<texture colordiffuse="$VAR[MainColorVar]">icons/logo.png</texture>
 				</control>
 				<control type="image">
 					<left>60</left>
@@ -74,7 +74,7 @@
 				<top>15</top>
 				<width>1920</width>
 				<align>center</align>
-				<label>$VAR[InfoBarStats]</label>
+				<label>$VAR[InfoBarStatsVar]</label>
 				<font>font10</font>
 				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 				<visible>Skin.HasSetting(EnableHomeStats)</visible>				
@@ -114,7 +114,7 @@
 				    <width>1920</width>
 				    <font>font12</font>
 				    <urlset>1</urlset>
-				    <titlecolor>button_focus</titlecolor>
+				    <titlecolor>$VAR[MainColorVar]</titlecolor>
 				    <shadowcolor>text_shadow</shadowcolor>
 				    <headlinecolor>FFC0C0C0</headlinecolor>
 				    <textcolor>white</textcolor>

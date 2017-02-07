@@ -29,5 +29,5 @@
         <label2>24001</label2>
         <icon>special://skin/extras/icons/settings.png</icon>
         <action>ActivateWindow(systemsettings,addons)</action>
-    </shortcut>    
+    </shortcut>
 </shortcuts>

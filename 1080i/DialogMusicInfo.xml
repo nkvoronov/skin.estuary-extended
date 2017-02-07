@@ -12,19 +12,37 @@
 			<control type="image">
 				<width>615</width>
 				<height>615</height>
-				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="border_alpha">colors/black.png</texture>
-				<bordertexture border="20">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<texture border="22">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
-				<left>24</left>
-				<top>24</top>
-				<width>567</width>
-				<height>567</height>
+				<width>615</width>
+				<height>615</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultMusicArtists.png">$VAR[ListPosterVar]</texture>
+                <bordertexture border="20">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+                <visible>Container.Content(artists)</visible>
+			</control>
+			<control type="image">
+				<width>615</width>
+				<height>615</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultMusicAlbums.png">$VAR[ListPosterVar]</texture>
+                <bordertexture border="20">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+                <visible>Container.Content(albums)</visible>
+			</control>
+			<control type="image">
+				<width>615</width>
+				<height>615</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<texture background="true" fallback="DefaultMusicSongs.png">$VAR[ListPosterVar]</texture>
+                <bordertexture border="20">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+                <visible>Container.Content(songs)</visible>
 			</control>
 		</control>
         <!-- Main -->
@@ -142,7 +160,7 @@
 				<wrapmultiline>true</wrapmultiline>
 				<font>font_textbox</font>
 				<label>$VAR[MusicInfoTextboxVar]</label>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 			</control>
             <!-- List albums or songs -->
 			<control type="panel" id="50">
@@ -158,7 +176,7 @@
 						<top>-10</top>
 						<width>595</width>
 						<height>100</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="label">
 						<left>40</left>
@@ -167,7 +185,7 @@
 						<height>60</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.TrackNumber][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -181,7 +199,7 @@
 							<top>-10</top>
 							<width>595</width>
 							<height>100</height>
-							<texture border="40" colordiffuse="button_focus">buttons/button-fo.png</texture>
+							<texture border="40" colordiffuse="$VAR[MainColorVar]">buttons/button-fo.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -190,7 +208,7 @@
 							<height>60</height>
 							<font>font12</font>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.TrackNumber,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.TrackNumber][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -204,14 +222,14 @@
 						<top>-10</top>
 						<width>250</width>
 						<height>312</height>
-						<texture border="40">buttons/button-nofo.png</texture>
+						<texture border="22">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="image">
 						<left>30</left>
 						<top>21</top>
 						<width>190</width>
 						<height>190</height>
-						<texture border="2" fallback="DefaultFolderSquare.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture border="2" fallback="DefaultMusicAlbums.png" background="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
@@ -224,7 +242,7 @@
 						<font>font10</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Label2][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 					</control>
 					<control type="group">
 						<left>230</left>
@@ -247,7 +265,7 @@
 							<top>21</top>
 							<width>190</width>
 							<height>190</height>
-							<texture border="2" fallback="DefaultFolderSquare.png" background="true">$INFO[ListItem.Thumb]</texture>
+							<texture border="2" fallback="DefaultMusicAlbums.png" background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio>keep</aspectratio>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>4</bordersize>
@@ -260,7 +278,7 @@
 							<font>font10</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label2,[COLOR button_focus], - [/COLOR]]$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label2][COLOR $VAR[MainColorVar]] - [/COLOR]$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
 							<left>230</left>
@@ -272,7 +290,7 @@
 							<top>5</top>
 							<width>220</width>
 							<height>278</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
 						</control>
 					</control>

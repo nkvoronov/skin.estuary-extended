@@ -15,14 +15,14 @@
     <icon image="DefaultAudio.png" grouping="pvr-radio">special://skin/extras/icons/tvshows.png</icon>
     <!-- Group override-->
     <groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
-    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(FanartHomeType,$VAR[HomeMenuType],home)</groupoverride>
+    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(FanartHomeType,$VAR[HomeMenuTypeVar],home)</groupoverride>
     <!-- Additionnal Widgets -->
-    <widget label="40001" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
-	<widget label="40002" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
-	<widget label="40003" icon="special://skin/extras/icons/radio.png">RadioWidget</widget>
-	<widget label="40004" icon="special://skin/extras/icons/addons.png">AddonsWidget</widget>
-	<widget label="40005" icon="special://skin/extras/icons/systeminfo.png">SystemInfoWidget</widget>	
-	<widget label="40006" icon="special://skin/extras/icons/media.png">MediaWidget</widget>
+    <widget label="43081" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
+	<widget label="43082" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
+	<widget label="43083" icon="special://skin/extras/icons/radio.png">RadioWidget</widget>
+	<widget label="43084" icon="special://skin/extras/icons/addons.png">AddonsWidget</widget>
+	<widget label="43085" icon="special://skin/extras/icons/systeminfo.png">SystemInfoWidget</widget>	
+	<widget label="43086" icon="special://skin/extras/icons/media.png">MediaWidget</widget>
     <!-- Default Widgets -->
     <widgetdefault labelID="weather">WeatherWidget</widgetdefault>
     <widgetdefault labelID="pictures">MediaWidget</widgetdefault>
@@ -97,17 +97,17 @@
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget2">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget2">40100</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget2">43090</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget2">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/mostwatched_musicvideos.xsp</propertydefault>	
 	<propertydefault labelID="musicvideos" property="widget.widget3">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget3">40101</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget3">43091</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget3">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget3">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget4">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget4">40102</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget4">43092</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget4">musicvideos</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">music</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>
@@ -160,7 +160,7 @@
     <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>    
     <!-- Menus Groupings -->
     <groupings>
-        <shortcut label="90050" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
+        <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
         <!-- Weather -->
         <node label="8">
             <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
@@ -387,14 +387,14 @@
     </groupings>
     <widget-groupings>
 		<!-- Widgets Groups-->
-		<shortcut label="40001" icon="special://skin/extras/icons/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>
-		<shortcut label="40002" icon="special://skin/extras/icons/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>
-        <shortcut label="40003" icon="special://skin/extras/icons/radio.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="RadioWidget">RadioWidget</shortcut>
-		<shortcut label="40004" icon="special://skin/extras/icons/addons.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="AddonsWidget">AddonsWidget</shortcut>
-		<shortcut label="40005" icon="special://skin/extras/icons/systeminfo.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="SystemInfoWidget">SystemInfoWidget</shortcut>
-		<shortcut label="40006" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
+		<shortcut label="43081" icon="special://skin/extras/icons/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>
+		<shortcut label="43082" icon="special://skin/extras/icons/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>
+        <shortcut label="43083" icon="special://skin/extras/icons/radio.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="RadioWidget">RadioWidget</shortcut>
+		<shortcut label="43084" icon="special://skin/extras/icons/addons.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="AddonsWidget">AddonsWidget</shortcut>
+		<shortcut label="43085" icon="special://skin/extras/icons/systeminfo.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="SystemInfoWidget">SystemInfoWidget</shortcut>
+		<shortcut label="43086" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
 		<!-- -->
-        <shortcut label="90051" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
+        <shortcut label="43101" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
         <node label="32030" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
             <content>video</content>
             <node label="32040">
