@@ -11,7 +11,6 @@
                 <label></label>
                 <onfocus>SetFocus(11001)</onfocus>
                 <onfocus condition="IntegerGreaterThan(Container(11100).NumItems,0)">SetFocus(11100)</onfocus>
-                <onfocus condition="IsEmpty(Weather.Plugin)">SetFocus(11300)</onfocus>
                 <onclick>noop</onclick>
                 <texturefocus></texturefocus>
                 <texturenofocus></texturenofocus>
@@ -132,20 +131,6 @@
                     <param name="widget_header" value="$LOCALIZE[31019]"/>
                     <param name="visible" value="!IsEmpty(Window(weather).Property(Daily.IsFetched))" />
                 </include>
-                <include name="ImageWidgetHeader">
-                    <param name="widget_header" value="$LOCALIZE[12600]" />
-                    <param name="visible" value="IsEmpty(Weather.plugin)"/>
-                </include>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/weather.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31120]" />
-                    <param name="button_label" value="$LOCALIZE[31121]" />
-                    <param name="button_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
-                    <param name="button_onclick" value="ActivateWindow(weathersettings)"/>
-                    <param name="button_id" value="11300"/>
-                    <param name="visible" value="IsEmpty(Weather.plugin)"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoWeatherButton)"/>
-                </include>
             </control>
         </control>
         <!-- Pictures -->
@@ -195,7 +180,7 @@
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,pictures,home)" />
                     <param name="button_onclick" value="ActivateWindow(pictures)"/>
                     <param name="button_id" value="12200"/>
-                    <param name="visible" value="!IntegerGreaterThan(Container(12100).NumItems,0)"/>
+                    <param name="visible" value="![IntegerGreaterThan(Container(12100).NumItems,0) | Container(12100).IsUpdating]"/>
                     <param name="visible_1" value="False"/>
                     <param name="visible_2" value="False"/>
                 </include>
@@ -210,7 +195,7 @@
                 <height>1</height>
                 <label></label>
                 <onfocus>SetFocus(13001)</onfocus>
-                <onfocus condition="IntegerGreaterThan(Container(13100).NumItems,0)">SetFocus(13100)</onfocus>
+                <onfocus condition="IntegerGreaterThan(Container(13200).NumItems,0)">SetFocus(13200)</onfocus>
                 <onclick>noop</onclick>
                 <texturefocus></texturefocus>
                 <texturenofocus></texturenofocus>
@@ -223,6 +208,7 @@
                 <include name="SubMenu">
                     <param name="list_id" value="13900"/>
                     <param name="ondown_id" value="13200"/>
+                    <param name="visible" value="PVR.HasTVChannels"/>
                     <param name="item1_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
                     <param name="item1_onclick" value="ActivateWindow(TVChannels)" />
                     <param name="item1_icon" value="channels.png" />
@@ -246,11 +232,6 @@
                     <param name="item6_vis" value="False" />
                     <param name="item7_vis" value="False" />
                     <param name="item8_vis" value="False" />
-                    <param name="visible" value="PVR.HasTVChannels"/>
-                </include>
-                <include name="ImageWidgetHeader">
-                    <param name="widget_header" value="$LOCALIZE[19020]" />
-                    <param name="visible" value="!PVR.HasTVChannels"/>
                 </include>
                 <control type="grouplist">
                     <height>218</height>
@@ -280,18 +261,8 @@
                             <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
-                </control>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31143]" />
-                    <param name="button_label" value="$LOCALIZE[31144]" />
-                    <param name="button_onclick2" value="SetProperty(FanartHomeType,livetv,home)" />
-                    <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-                    <param name="button_id" value="13400"/>
-                    <param name="visible" value="!PVR.HasTVChannels"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVButton)"/>
-                </include>                                                
-                <include condition="PVR.HasTVChannels+![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" name="WidgetListChannels">
+                </control>                                          
+                <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/tv/*"/>
                     <param name="sortby" value="lastplayed"/>
                     <param name="sortorder" value="descending"/>
@@ -302,7 +273,7 @@
                     <param name="height" value="550"/>
                     <param name="visible" value="PVR.HasTVChannels"/>
                 </include>
-                <include condition="PVR.HasTVChannels+Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="WidgetListCustomChannels">
+                <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="WidgetListCustomChannels">
                     <param name="widget_header" value="$LOCALIZE[43241]"/>
                     <param name="widget_target" value="TV"/>
 					<param name="onup_id" value="13900"/>
@@ -321,7 +292,7 @@
                 <height>1</height>
                 <label></label>
                 <onfocus>SetFocus(14001)</onfocus>
-                <onfocus condition="IntegerGreaterThan(Container(14100).NumItems,0)">SetFocus(14100)</onfocus>
+                <onfocus condition="IntegerGreaterThan(Container(14200).NumItems,0)">SetFocus(14200)</onfocus>
                 <onclick>noop</onclick>
                 <texturefocus></texturefocus>
                 <texturenofocus></texturenofocus>
@@ -334,6 +305,7 @@
                 <include name="SubMenu">
                     <param name="list_id" value="14900"/>
                     <param name="ondown_id" value="14200"/>
+                    <param name="visible" value="PVR.HasRadioChannels"/>                    
                     <param name="item1_onclick2" value="SetProperty(FanartHomeType,radio,home)" />
                     <param name="item1_onclick" value="ActivateWindow(RadioChannels)" />
                     <param name="item1_icon" value="channels.png" />
@@ -357,11 +329,6 @@
                     <param name="item6_vis" value="False" />
                     <param name="item7_vis" value="False" />
                     <param name="item8_vis" value="False" />
-                    <param name="visible" value="PVR.HasRadioChannels"/>
-                </include>
-                <include name="ImageWidgetHeader">
-                    <param name="widget_header" value="$LOCALIZE[19021]" />
-                    <param name="visible" value="!PVR.HasRadioChannels"/>
                 </include>
                 <control type="grouplist">
                     <height>218</height>
@@ -392,15 +359,6 @@
                         </include>
                     </control>
                 </control>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31143]" />
-                    <param name="button_label" value="$LOCALIZE[31144]" />
-                    <param name="button_onclick" value="ActivateWindow(addonbrowser,addons://user/xbmc.pvrclient,return)"/>
-                    <param name="button_id" value="14400"/>
-                    <param name="visible" value="!PVR.HasRadioChannels"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoRadioButton)"/>
-                </include>
                 <include condition="![Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)]" name="WidgetListChannels">
                     <param name="content_path" value="pvr://channels/radio/*"/>
                     <param name="sortby" value="lastplayed"/>
@@ -489,7 +447,7 @@
                     <param name="button_onclick" value="ActivateWindow(videos,root)"/>
 					<param name="onup_id" value="15200"/>
                     <param name="button_id" value="15300"/>                    
-                    <param name="visible" value="!IntegerGreaterThan(Container(11200).NumItems,0) + !IntegerGreaterThan(Container(11100).NumItems,0)"/>
+                    <param name="visible" value="![ IntegerGreaterThan(Container(15100).NumItems,0) | Container(15100).IsUpdating ] + ![ IntegerGreaterThan(Container(15200).NumItems,0) | Container(15200).IsUpdating ]"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoVideosButton)"/>
                 </include>
             </control>
@@ -582,20 +540,6 @@
 					<param name="onup_id" value="16300"/>
                     <param name="list_id" value="16400"/>
                 </include>
-                <include name="ImageWidgetHeader">
-                    <param name="widget_header" value="$LOCALIZE[342]" />
-                    <param name="visible" value="!Library.HasContent(movies)"/>
-                </include>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/movie.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31104]" />
-                    <param name="button_label" value="$LOCALIZE[31110]" />
-                    <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
-                    <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                    <param name="button_id" value="16500"/>
-                    <param name="visible" value="!Library.HasContent(movies)"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMovieButton)"/>
-                </include>
             </control>
         </control>
         <!-- TVShows -->
@@ -685,20 +629,6 @@
 					<param name="onup_id" value="17200"/>
                     <param name="list_id" value="17300"/>                    
                 </include>
-                <include name="ImageWidgetHeader">
-                    <param name="widget_header" value="$LOCALIZE[20343]" />
-                    <param name="visible" value="!Library.HasContent(tvshows)"/>
-                </include>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31104]" />
-                    <param name="button_label" value="$LOCALIZE[31110]" />
-                    <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
-                    <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                    <param name="button_id" value="17400"/>
-                    <param name="visible" value="!Library.HasContent(tvshows)"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoTVShowButton)"/>
-                </include>
             </control>
         </control>
 		<!-- MusicVideos -->
@@ -710,6 +640,7 @@
                 <height>1</height>
                 <label></label>
                 <onfocus>SetFocus(18001)</onfocus>
+                <onfocus condition="IntegerGreaterThan(Container(18200).NumItems,0)">SetFocus(18200)</onfocus>
                 <onfocus condition="IntegerGreaterThan(Container(18100).NumItems,0)">SetFocus(18100)</onfocus>
                 <onclick>noop</onclick>
                 <texturefocus></texturefocus>
@@ -722,6 +653,7 @@
                 <include name="SubMenu">
                     <param name="list_id" value="18900"/>
                     <param name="ondown_id" value="18100"/>
+                    <param name="visible" value="Library.HasContent(musicvideos)"/>
                     <param name="item1_onclick2" value="SetProperty(FanartHomeType,musicvideos,home)" />
                     <param name="item1_onclick" value="ActivateWindow(Videos,RecentlyAddedMusicVideos,return)" />
                     <param name="item1_icon" value="recentlyadded.png" />
@@ -795,16 +727,6 @@
                     <param name="widget_target" value="music"/>
 					<param name="onup_id" value="18300"/>
                     <param name="list_id" value="18400"/>                    
-                </include>
-                <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
-                    <param name="text_label" value="$LOCALIZE[31104]" />
-                    <param name="button_label" value="$LOCALIZE[31110]" />
-                    <param name="button_onclick2" value="SetProperty(FanartHomeType,musicvideos,home)" />
-                    <param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
-                    <param name="button_id" value="18500"/>
-                    <param name="visible" value="!Library.HasContent(musicvideos)"/>
-                    <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicVideosButton)"/>
                 </include>
             </control>
         </control>
@@ -950,7 +872,7 @@
                     <param name="button_onclick" value="ActivateWindow(music,files)"/>
 					<param name="onup_id" value="19800"/>
                     <param name="button_id" value="19910"/>                   
-                    <param name="visible" value="!Library.HasContent(music) + !IntegerGreaterThan(Container(19700).NumItems,0) + !IntegerGreaterThan(Container(19800).NumItems,0)"/>
+                    <param name="visible" value="!Library.HasContent(music) + ![ IntegerGreaterThan(Container(19700).NumItems,0) | Container(19700).IsUpdating ] + ![ IntegerGreaterThan(Container(19800).NumItems,0) | Container(19800).IsUpdating ]"/>
                     <param name="button2_onclick" value="Skin.SetBool(HomeMenuNoMusicButton)"/>
                 </include>
             </control>

@@ -774,7 +774,7 @@
 							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="image">
-							<top>23</top>
+							<top>43</top>
 							<left>62</left>
 							<width>220</width>
 							<height>180</height>
@@ -822,7 +822,7 @@
 								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 							</control>
 							<control type="image">
-								<top>23</top>
+								<top>43</top>
 								<left>62</left>
 								<width>220</width>
 								<height>180</height>

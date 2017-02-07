@@ -734,6 +734,14 @@ msgctxt "#43200"
 msgid "Big posters"
 msgstr "Великі постери"
 
+msgctxt "#43201"
+msgid "Clear Logos"
+msgstr "Логотип 1"
+
+msgctxt "#43202"
+msgid "Clear Arts"
+msgstr "Логотип 2"
+
 msgctxt "#43210"
 msgid "Aired"
 msgstr "В ефірі"

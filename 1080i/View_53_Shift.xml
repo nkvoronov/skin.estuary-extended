@@ -67,7 +67,7 @@
                                 <left>24</left>
                                 <width>292</width>
                                 <height>400</height>
-								<aspectratio>stretch</aspectratio>
+                                <aspectratio>scale</aspectratio>
 								<texture border="20" fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
                                 <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 							</control>
@@ -119,7 +119,7 @@
                                 <left>24</left>
                                 <width>292</width>
                                 <height>400</height>
-                                <aspectratio>stretch</aspectratio>
+                                <aspectratio>scale</aspectratio>
                                 <texture border="20" fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
                                 <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
                             </control>
