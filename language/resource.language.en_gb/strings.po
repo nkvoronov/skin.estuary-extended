@@ -885,6 +885,14 @@ msgctxt "#43200"
 msgid "Big posters"
 msgstr ""
 
+msgctxt "#43201"
+msgid "Clear Logos"
+msgstr ""
+
+msgctxt "#43202"
+msgid "Clear Arts"
+msgstr ""
+
 msgctxt "#43210"
 msgid "Aired"
 msgstr ""

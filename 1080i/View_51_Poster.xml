@@ -211,7 +211,7 @@
 							<label>$INFO[ListItem.Season,$LOCALIZE[33054]: [COLOR white],[/COLOR]]$INFO[ListItem.Episode, [COLOR white]•[/COLOR] $LOCALIZE[20360]: [COLOR white],[/COLOR]]$INFO[ListItem.Status, [COLOR white]•[/COLOR] $LOCALIZE[126]: [COLOR white],[/COLOR]]</label>
                             <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>!String.IsEmpty(ListItem.Season)</visible>
+							<visible>!String.IsEmpty(ListItem.Season) + !String.IsEmpty(ListItem.Status)</visible>
 						</control>
                         <control type="label">
                             <font>font12</font>

@@ -68,7 +68,7 @@
                 <focusposition>3</focusposition>
                 <preloaditems>1</preloaditems>
                 <orientation>horizontal</orientation>
-                <viewtype label="ClearLogos">bigwide</viewtype>
+                <viewtype label="$LOCALIZE[43201]">bigwide</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="230" width="378">

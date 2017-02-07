@@ -238,7 +238,7 @@
 				<top>15</top>
 				<width>40</width>
 				<height>40</height>
-				<texture  colordiffuse="button_focus">$VAR[AddonsListIconVar]</texture>
+				<texture colordiffuse="button_focus">$VAR[AddonsListIconVar]</texture>
                 <animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
                 <visible>!Control.HasFocus(55)</visible>
 			</control>
