@@ -193,7 +193,7 @@
 				<height>457</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<fadetime>300</fadetime>
-				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="button">
 				<left>-3</left>
@@ -208,7 +208,7 @@
 				<width>446</width>
 				<height>80</height>
 				<font>font_textbox</font>
-				<label fallback="31008">$INFO[ListItem.Property(Addon.Disclaimer),$LOCALIZE[24052]: ]</label>
+				<label fallback="31008">$INFO[ListItem.Property(Addon.Disclaimer),$LOCALIZE[24052]:[COLOR white],[/COLOR]]</label>
 				<textcolor>button_focus</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
