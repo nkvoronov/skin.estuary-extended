@@ -108,7 +108,7 @@
 					<shadowcolor>black</shadowcolor>
 					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
-                    <visible>!SubString(MusicPlayer.Title,.pvr,Right)</visible>
+                    <visible>!String.EndsWith(MusicPlayer.Title,.pvr)</visible>
 				</control>
 			</control>
 			<control type="image">

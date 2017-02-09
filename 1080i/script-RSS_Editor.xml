@@ -169,7 +169,7 @@
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
-			<label>[COLOR=button_focus]$INFO[Container(10).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR=button_focus]$INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages][/COLOR]</label>
+			<label>[COLOR button_focus]$INFO[Container(10).NumItems][/COLOR] $LOCALIZE[31036] - $LOCALIZE[31035] [COLOR button_focus]$INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages][/COLOR]</label>
 		</control>
 		<control type="grouplist" id="9001">
 			<left>920</left>

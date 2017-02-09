@@ -57,7 +57,7 @@
 	</variable>
     <!-- Music Info Text -->
 	<variable name="MusicInfoTextboxVar">
-		<value condition="Container.Content(songs)">$INFO[ListItem.ContributorAndRole,[B]$LOCALIZE[31128][/B][CR][COLOR=white],[/COLOR]]</value>
+		<value condition="Container.Content(songs)">$INFO[ListItem.ContributorAndRole,[B]$LOCALIZE[31128][/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[21821][/B][CR][COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>
         <value>$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR][COLOR white],[/COLOR]]</value>
@@ -93,7 +93,7 @@
     <!-- Shift Right Text -->
 	<variable name="ShiftRightTextBoxVar">
         <value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]</value>
-        <value condition="String.IsEqual(ListItem.DBType,episode) + IntegerGreaterThan(ListItem.Playcount,1) + !SubString(Container.FolderPath,plugin://,Left)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Playcount,1) + !String.StartsWith(Container.FolderPath,plugin://)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
         <value condition="Container.Content(artists)">[COLOR white]$INFO[ListItem.Property(Artist_Description)][/COLOR]</value>
         <value condition="Container.Content(albums)">[COLOR white]$INFO[ListItem.Property(Album_Description)][/COLOR]</value>
         <value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Playcount,1)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
@@ -167,7 +167,7 @@
 	</variable>
     <!-- ListBox Info -->
 	<variable name="ListBoxInfoVar">
-		<value condition="String.IsEqual(Container.FolderPath,addons://outdated/) + !IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews,[COLOR white],[/COLOR]]</value>
+		<value condition="String.IsEqual(Container.FolderPath,addons://outdated/) + !String.IsEmpty(ListItem.Addonnews)">$INFO[ListItem.Addonnews,[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[COLOR white],[/COLOR]]</value>
 		<value condition="Container.Content(mixed) | Container.Content(videos)">$INFO[ListItem.Genre,$LOCALIZE[515]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
@@ -481,9 +481,9 @@
 		<!-- Global -->
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(shutdownmenu)">$INFO[Skin.String(HomeFanart.path)]power$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + Window.IsActive(favourites)">$INFO[Skin.String(HomeFanart.path)]favorites$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + [Window.IsActive(1107) | Window.IsActive(virtualkeyboard)]">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>		
+		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path)) + [Window.IsActive(1107) | Window.IsActive(virtualkeyboard)]">$INFO[Skin.String(HomeFanart.path)]search$INFO[Skin.String(HomeFanart.ext)]</value>
 		<value condition="!String.IsEmpty(Skin.String(HomeFanart.path))">$INFO[Skin.String(HomeFanart.path)]$INFO[Container(9000).ListItem.Property(id)]$INFO[Skin.String(HomeFanart.ext)]</value>
-		<value>-</value>
+        <value>-</value>
 	</variable>
     <!-- Media Fanart -->
 	<variable name="MediaFanartVar">

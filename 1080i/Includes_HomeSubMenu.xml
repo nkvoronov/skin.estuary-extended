@@ -251,7 +251,7 @@
                             <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                     <control type="group">
@@ -261,7 +261,7 @@
                             <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                 </control>
@@ -364,7 +364,7 @@
                             <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19158]" />
                             <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR=grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NowRecordingTitle][CR][COLOR grey]$INFO[PVR.NowRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                     <control type="group">
@@ -374,7 +374,7 @@
                             <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                             <param name="header" value="$LOCALIZE[19157]" />
                             <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
-                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR=grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
+                            <param name="label2" value="$INFO[PVR.NextRecordingTitle][CR][COLOR grey]$INFO[PVR.NextRecordingChannel][/COLOR]" />
                         </include>
                     </control>
                 </control>
