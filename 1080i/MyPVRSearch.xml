@@ -70,7 +70,7 @@
 									<width>890</width>
 									<height>100</height>
 									<aligny>top</aligny>
-									<label>$INFO[ListItem.ChannelName][COLOR button_focus]$INFO[ListItem.Label, - ][/COLOR]</label>
+									<label>$INFO[ListItem.ChannelName][COLOR $VAR[MainColorVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
 								</control>
 								<control type="label">
 									<left>120</left>
@@ -104,7 +104,7 @@
 								<top>0</top>
 								<width>1050</width>
 								<height>101</height>
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 								<visible>Control.HasFocus(50)</visible>
 							</control>
 							<control type="label">
@@ -134,7 +134,7 @@
 									<width>890</width>
 									<height>100</height>
 									<aligny>top</aligny>
-									<label>$INFO[ListItem.ChannelName][COLOR button_focus]$INFO[ListItem.Label, - ][/COLOR]</label>
+									<label>$INFO[ListItem.ChannelName][COLOR $VAR[MainColorVar]]$INFO[ListItem.Label, - ][/COLOR]</label>
 								</control>
 								<control type="label">
 									<left>120</left>
@@ -173,7 +173,7 @@
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<include content="PVRInfoPanel">
-					<param name="bottom_label1" value="$INFO[ListItem.NextTitle,[COLOR button_focus]$LOCALIZE[19031]:[/COLOR] ]" />
+					<param name="bottom_label1" value="$LOCALIZE[19031]:[COLOR withe]$INFO[ListItem.NextTitle][/COLOR]" />
 					<param name="bottom_label2" value="$INFO[ListItem.NextStartTime]" />
 				</include>
 			</control>

@@ -26,7 +26,7 @@
 				<width>1050</width>
 				<height>300</height>
 				<font>font_textbox</font>
-                <label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR white]$INFO[ListItem.AddonDescription][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
+				<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]][COLOR white]$INFO[ListItem.AddonDescription][/COLOR][COLOR white][CR][/COLOR]$VAR[AddonNewsVar,[CR][CR]]</label>
 				<textcolor>$VAR[MainColorVar]</textcolor>
 				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 			</control>
@@ -208,7 +208,7 @@
 				<width>446</width>
 				<height>80</height>
 				<font>font_textbox</font>
-				<label>$INFO[ListItem.Property(Addon.Disclaimer),$LOCALIZE[24052]: [COLOR white],[/COLOR]]</label>
+				<label>$INFO[ListItem.AddonDisclaimer,$LOCALIZE[24052]: [COLOR white],[/COLOR]]</label>
 				<textcolor>$VAR[MainColorVar]</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
                 <visible>!String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>

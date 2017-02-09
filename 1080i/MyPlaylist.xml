@@ -4,7 +4,10 @@
 	<backgroundcolor>background</backgroundcolor>
 	<views>50</views>
 	<controls>
-		<include>DefaultBackground</include>
+		<!-- Background -->
+		<include content="DefaultBackground">
+			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include content="PlaylistWindowButtons">
@@ -52,7 +55,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>63</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						</control>
 						<control type="label">
 							<left>30</left>

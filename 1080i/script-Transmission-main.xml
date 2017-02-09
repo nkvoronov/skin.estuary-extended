@@ -32,7 +32,7 @@
 			<top>0</top>
 			<width>1440</width>
 			<height>70</height>
-			<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+			<texture colordiffuse="$VAR[MainColorVar]" border="2">colors/white70.png</texture>
 		</control>
 		<control type="label">
 			<description>textarea</description>
@@ -271,7 +271,7 @@
 					<width>1170</width>
 					<height>100</height>
 					<visible>Control.HasFocus(120)</visible>
-					<texture border="5" colordiffuse="button_focus">lists/focus.png</texture>
+					<texture border="5" colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>

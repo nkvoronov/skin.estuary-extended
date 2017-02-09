@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Estuary
-# Addon id: skin.estuary
-# Addon Provider: phil65, Piers
+# Addon Name: Estuary Extended Shortcuts
+# Addon id: skin.estuary-extended-s
+# Addon Provider: phil65, Piers, YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -759,6 +759,10 @@ msgctxt "#31147"
 msgid "Download add-ons"
 msgstr ""
 
+msgctxt "#31312"
+msgid "Current scraper"
+msgstr ""
+
 msgctxt "#32000"
 msgid "Poster"
 msgstr ""
@@ -767,233 +771,316 @@ msgctxt "#32001"
 msgid "Banner"
 msgstr ""
 
-msgctxt "#31312"
-msgid "Current scraper"
-msgstr ""
+# EXTENDED ADDED VALUE
 
-# extended added value
-
-msgctxt "#40001"
-msgid "Weather widgets"
-msgstr ""
-
-msgctxt "#40002"
-msgid "LiveTV widgets"
-msgstr ""
-
-msgctxt "#40003"
-msgid "Radio widgets"
-msgstr ""
-
-msgctxt "#40004"
-msgid "Addons widgets"
-msgstr ""
-
-msgctxt "#40005"
-msgid "SystemInfo widget"
-msgstr ""
-
-msgctxt "#40006"
-msgid "Media widgets"
-msgstr ""
-
-msgctxt "#40100"
-msgid "Most watched music videos"
-msgstr ""
-
-msgctxt "#40101"
-msgid "Random music videos"
-msgstr ""
-
-msgctxt "#40102"
-msgid "Unwatched music videos"
-msgstr ""
-
-msgctxt "#84102"
-msgid "Timer rules"
-msgstr ""
-
-msgctxt "#84103"
-msgid "Hide disabled"
-msgstr ""
-
-msgctxt "#84104"
-msgid "Apply"
-msgstr ""
-
-msgctxt "#84105"
-msgid "Apply immediately"
-msgstr ""
-
-msgctxt "#84106"
-msgid "Input oversampling"
-msgstr ""
-
-msgctxt "#84107"
-msgid "Preprocessing"
-msgstr ""
-
-msgctxt "#84108"
-msgid "Output oversampling"
-msgstr ""
-
-msgctxt "#84200"
-msgid "User widgets"
-msgstr ""
-
-msgctxt "#84201"
-msgid "User widgets options"
-msgstr ""
-
-msgctxt "#84202"
-msgid "User list of add-ons"
-msgstr ""
-
-msgctxt "#84203"
-msgid "User list of TV and radio channels"
-msgstr ""
-
-msgctxt "#84204"
-msgid "Enable user list of add-ons"
-msgstr ""
-
-msgctxt "#84205"
-msgid "Enable user list of TV and radio channels"
-msgstr ""
-
-msgctxt "#84206"
-msgid "Channel"
-msgstr ""
-
-msgctxt "#84207"
-msgid "Favorites TV Channels"
-msgstr ""
-
-msgctxt "#84208"
-msgid "Favorites Radio Channels"
-msgstr ""
-
-msgctxt "#84209"
-msgid "Choose weather fanart pack"
-msgstr ""
-
-msgctxt "#84210"
-msgid "Show studios logos"
-msgstr ""
-
-msgctxt "#84211"
-msgid "Choose studios logos"
-msgstr ""
-
-msgctxt "#84212"
-msgid "Choose record labels"
-msgstr ""
-
-msgctxt "#84213"
-msgid "Choose flags country"
-msgstr ""
-
-msgctxt "#84214"
-msgid "Choose weather icons"
-msgstr ""
-
-msgctxt "#84215"
-msgid "Hardware"
-msgstr ""
-
-msgctxt "#84216"
-msgid "Choose home fanart pack"
-msgstr ""
-
-msgctxt "#84217"
+msgctxt "#43000"
 msgid "Options"
 msgstr ""
 
-msgctxt "#84218"
-msgid "Advanced options"
+msgctxt "#43001"
+msgid "User widgets"
 msgstr ""
 
-msgctxt "#84219"
-msgid "Background options"
+msgctxt "#43002"
+msgid "Colors"
 msgstr ""
 
-msgctxt "#84220"
-msgid "Reset skin options"
-msgstr ""
-
-msgctxt "#85216"
-msgid "Customize power menu"
-msgstr ""
-
-msgctxt "#88071"
-msgid "Show stats"
-msgstr ""
-
-msgctxt "#89501"
-msgid "Enable FullScreen Clock"
-msgstr ""
-
-msgctxt "#89502"
-msgid "Enable SlideShow Info"
-msgstr ""
-
-msgctxt "#89503"
-msgid "Watch it Later"
-msgstr ""
-
-msgctxt "#90009"
-msgid "Widget Limit Items"
-msgstr ""
-
-msgctxt "#90010"
-msgid "Enable Smart Shortcuts Playlists"
-msgstr ""
-
-msgctxt "#90011"
-msgid "Enable Smart Shortcuts Favorites"
-msgstr ""
-
-msgctxt "#90012"
-msgid "Enable Animated Posters"
-msgstr ""
-
-msgctxt "#90020"
-msgid "Backup Skin Settings"
-msgstr ""
-
-msgctxt "#90021"
-msgid "Create"
-msgstr ""
-
-msgctxt "#90022"
-msgid "Restory"
-msgstr ""
-
-msgctxt "#90030"
-msgid "Set type of widgets"
-msgstr ""
-
-msgctxt "#90040"
+msgctxt "#43003"
 msgid "Enable splash screen (photo, video or music)"
 msgstr ""
 
-msgctxt "#90041"
+msgctxt "#43004"
 msgid "Path:"
 msgstr ""
 
-msgctxt "#90042"
+msgctxt "#43005"
 msgid "Duration (sec)"
 msgstr ""
 
-msgctxt "#90044"
+msgctxt "#43006"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr ""
+
+msgctxt "#43007"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr ""
+
+msgctxt "#43008"
+msgid "Enable Animated Posters"
+msgstr ""
+
+msgctxt "#43009"
+msgid "Enable FullScreen Clock"
+msgstr ""
+
+msgctxt "#43010"
+msgid "Enable SlideShow Info"
+msgstr ""
+
+msgctxt "#43011"
+msgid "Show stats"
+msgstr ""
+
+msgctxt "#43012"
+msgid "Show studios logos"
+msgstr ""
+
+msgctxt "#43013"
+msgid "Choose studios logos"
+msgstr ""
+
+msgctxt "#43014"
+msgid "Choose flags country"
+msgstr ""
+
+msgctxt "#43015"
+msgid "Choose weather icons"
+msgstr ""
+
+msgctxt "#43016"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#43017"
+msgid "Enable user list of add-ons"
+msgstr ""
+
+msgctxt "#43018"
+msgid "Enable user list of TV and radio channels"
+msgstr ""
+
+msgctxt "#43019"
+msgid "Debug infos"
+msgstr ""
+
+msgctxt "#43020"
+msgid "Customize power menu"
+msgstr ""
+
+msgctxt "#43021"
+msgid "User list of add-ons"
+msgstr ""
+
+msgctxt "#43022"
+msgid "User list of TV and radio channels"
+msgstr ""
+
+msgctxt "#43023"
+msgid "Choose background pattern"
+msgstr ""
+
+msgctxt "#43024"
+msgid "Choose home fanart pack"
+msgstr ""
+
+msgctxt "#43025"
+msgid "Choose weather fanart pack"
+msgstr ""
+
+msgctxt "#43026"
+msgid "Color Primary Background"
+msgstr ""
+
+msgctxt "#43027"
+msgid "Color Secondary Background"
+msgstr ""
+
+msgctxt "#43028"
+msgid "Main Color"
+msgstr ""
+
+msgctxt "#43029"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#43030"
+msgid "Create"
+msgstr ""
+
+msgctxt "#43031"
+msgid "Restory"
+msgstr ""
+
+msgctxt "#43032"
+msgid "Widget Limit Items"
+msgstr ""
+
+msgctxt "#43040"
+msgid "Advanced options"
+msgstr ""
+
+msgctxt "#43041"
+msgid "User widgets options"
+msgstr ""
+
+msgctxt "#43042"
+msgid "Background options"
+msgstr ""
+
+msgctxt "#43043"
+msgid "Colors skin options"
+msgstr ""
+
+msgctxt "#43044"
+msgid "Reset skin options"
+msgstr ""
+
+msgctxt "#43045"
+msgid "Artwork Downloader"
+msgstr ""
+
+msgctxt "#43050"
+msgid "Picture Add-On"
+msgstr ""
+
+msgctxt "#43051"
+msgid "TV Channel"
+msgstr ""
+
+msgctxt "#43052"
+msgid "Radio Channel"
+msgstr ""
+
+msgctxt "#43053"
+msgid "Video Add-On"
+msgstr ""
+
+msgctxt "#43054"
+msgid "Video Source"
+msgstr ""
+
+msgctxt "#43055"
+msgid "Music Source"
+msgstr ""
+
+msgctxt "#43056"
+msgid "Music Add-On"
+msgstr ""
+
+msgctxt "#43057"
+msgid "Program"
+msgstr ""
+
+msgctxt "#43058"
+msgid "Video Playlist"
+msgstr ""
+
+msgctxt "#43059"
+msgid "Music Playlist"
+msgstr ""
+
+msgctxt "#43060"
+msgid "Timer rules"
+msgstr ""
+
+msgctxt "#43061"
+msgid "Hide disabled"
+msgstr ""
+
+msgctxt "43070"
+msgid "Set type of widgets"
+msgstr ""
+
+msgctxt "#43071"
 msgid "Disable"
 msgstr ""
 
-msgctxt "#90050"
+msgctxt "#43081"
+msgid "Weather widgets"
+msgstr ""
+
+msgctxt "#43082"
+msgid "LiveTV widgets"
+msgstr ""
+
+msgctxt "#43083"
+msgid "Radio widgets"
+msgstr ""
+
+msgctxt "#43084"
+msgid "Addons widgets"
+msgstr ""
+
+msgctxt "#43085"
+msgid "SystemInfo widget"
+msgstr ""
+
+msgctxt "#43086"
+msgid "Media widgets"
+msgstr ""
+
+msgctxt "#43090"
+msgid "Most watched music videos"
+msgstr ""
+
+msgctxt "#43091"
+msgid "Random music videos"
+msgstr ""
+
+msgctxt "#43092"
+msgid "Unwatched music videos"
+msgstr ""
+
+msgctxt "#43100"
 msgid "Smart Shortcuts"
 msgstr ""
 
-msgctxt "#90051"
+msgctxt "#43101"
 msgid "Smart Widgets"
 msgstr ""
 
+msgctxt "#43200"
+msgid "Big posters"
+msgstr ""
+
+msgctxt "#43201"
+msgid "Clear Logos"
+msgstr ""
+
+msgctxt "#43202"
+msgid "Clear Arts"
+msgstr ""
+
+msgctxt "#43210"
+msgid "Aired"
+msgstr ""
+
+msgctxt "#43220"
+msgid "Watch it Later"
+msgstr ""
+
+msgctxt "#43230"
+msgid "Hardware"
+msgstr ""
+
+msgctxt "#43240"
+msgid "Channel"
+msgstr ""
+
+msgctxt "#43241"
+msgid "Favorites TV Channels"
+msgstr ""
+
+msgctxt "#43242"
+msgid "Favorites Radio Channels"
+msgstr ""
+
+msgctxt "#43250"
+msgid "Apply"
+msgstr ""
+
+msgctxt "#43251"
+msgid "Apply immediately"
+msgstr ""
+
+msgctxt "#43252"
+msgid "Input oversampling"
+msgstr ""
+
+msgctxt "#43253"
+msgid "Preprocessing"
+msgstr ""
+
+msgctxt "#43254"
+msgid "Output oversampling"
+msgstr ""

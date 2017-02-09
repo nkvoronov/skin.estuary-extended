@@ -38,9 +38,9 @@
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="radiobutton" id="602">
-					<textureradioonfocus colordiffuse="button_focus">osd/fullscreen/buttons/play.png</textureradioonfocus>
+					<textureradioonfocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/play.png</textureradioonfocus>
 					<textureradioonnofocus>osd/fullscreen/buttons/play.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="button_focus">osd/fullscreen/buttons/pause.png</textureradioofffocus>
+					<textureradioofffocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/pause.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/pause.png</textureradiooffnofocus>
 					<texturefocus></texturefocus>
 					<width>125</width>
@@ -80,11 +80,12 @@
 				<ondown>noop</ondown>
 				<onleft>605</onleft>
 				<onright>600</onright>
-				<control type="radiobutton" id="620">
+                <control type="radiobutton" id="620">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>
 					</include>
 					<onclick>SetRating</onclick>
+                    <visible>False</visible>
 				</control>
 				<control type="group" id="699">
 					<width>125</width>
@@ -115,9 +116,9 @@
 					</control>
 				</control>
 				<control type="radiobutton" id="607">
-					<textureradioonfocus colordiffuse="button_focus">osd/fullscreen/buttons/random-on.png</textureradioonfocus>
+					<textureradioonfocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/random-on.png</textureradioonfocus>
 					<textureradioonnofocus>osd/fullscreen/buttons/random-on.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="button_focus">osd/fullscreen/buttons/random-off.png</textureradioofffocus>
+					<textureradioofffocus colordiffuse="$VAR[MainColorVar]">osd/fullscreen/buttons/random-off.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/random-off.png</textureradiooffnofocus>
 					<textureradioondisabled colordiffuse="disabled">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
 					<textureradiooffdisabled colordiffuse="disabled">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
@@ -183,7 +184,7 @@
 				<ondown>650</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>!Control.HasFocus(87)</visible>
@@ -196,8 +197,8 @@
 				<onup>8010</onup>
 				<ondown>650</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[MainColorVar]">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
 				<action>seek</action>
 				<visible>Control.HasFocus(87)</visible>

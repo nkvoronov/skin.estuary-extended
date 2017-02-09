@@ -14,7 +14,7 @@
             <scroll>false</scroll>
             <align>left</align>
             <aligny>center</aligny>
-            <label>([COLOR button_focus]$INFO[Slideshow.SlideIndex][/COLOR]) $INFO[Slideshow.Filename]</label>
+            <label>([COLOR $VAR[MainColorVar]]$INFO[Slideshow.SlideIndex][/COLOR]) $INFO[Slideshow.Filename]</label>
             <visible>Skin.HasSetting(SlideShowInfo)</visible>
         </control>
         <control type="label">

@@ -71,7 +71,7 @@
 						<top>5</top>
 						<width>330</width>
 						<height>250</height>
-						<texture background="true" border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+						<texture background="true" border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 					</control>
 					<control type="label">
 						<left>20</left>

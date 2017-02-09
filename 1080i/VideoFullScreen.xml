@@ -72,7 +72,7 @@
 				<top>440</top>
 				<width>200</width>
 				<height>200</height>
-				<texture colordiffuse="button_focus">$INFO[Player.CacheLevel,dialogs/volume/progress/p,.png]</texture>
+				<texture colordiffuse="$VAR[MainColorVar]">$INFO[Player.CacheLevel,dialogs/volume/progress/p,.png]</texture>
 			</control>
 			<control type="label" id="1">
 				<description>buffering value</description>
@@ -84,7 +84,7 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label" id="2">
@@ -97,7 +97,7 @@
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>font12_title</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>

@@ -53,8 +53,8 @@
             <param name="height" value="18" />
             <param name="container_id" value="9000" />
             <param name="posx" value="231" />
-            <param name="up_posy" value="85" />
-            <param name="down_posy" value="975" />
+            <param name="up_posy" value="90" />
+            <param name="down_posy" value="978" />
             <param name="visible" value="!System.HasModalDialog" />
         </include>
         <control type="group">
@@ -95,7 +95,7 @@
                             <top>0</top>
                             <width>390</width>
                             <height>69</height>
-                            <texture colordiffuse="button_focus">lists/focus.png</texture>
+                            <texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
                             <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000) + !Control.HasFocus(900) + !ControlGroup(700).HasFocus + !Control.HasFocus(14200)">Conditional</animation>
                         </control>
                         <control type="image">
@@ -103,7 +103,7 @@
                             <top>1</top>
                             <width>70</width>
                             <height>70</height>
-                            <texture colordiffuse="button_focus">$INFO[ListItem.Icon]</texture>
+                            <texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
                             <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
                         </control>
                         <control type="image">
@@ -129,7 +129,7 @@
                         <height>70</height>
                         <animation effect="fade" start="0" end="100" time="200" delay="200" condition="!System.HasModalDialog">Conditional</animation>
                         <animation effect="fade" start="100" end="0" time="0" condition="System.HasModalDialog">Conditional</animation>
-                        <texture colordiffuse="button_focus">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
                         <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
                         <visible>!Control.HasFocus(9000) + !Control.HasFocus(900)</visible>
                     </control>

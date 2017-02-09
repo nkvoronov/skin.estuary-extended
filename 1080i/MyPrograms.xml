@@ -7,7 +7,9 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<!-- Background -->
-		<include>DefaultBackground</include>
+		<include content="DefaultBackground">
+			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
+		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<include>CommonScrollbars</include>
@@ -43,7 +45,7 @@
 						<description>Get more</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
-						<onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
+					    <onclick>ActivateWindow(addonbrowser,addons://more/executable/,return)</onclick>
 						<visible>Container.Content(addons)</visible>
 					</control>
 				</control>

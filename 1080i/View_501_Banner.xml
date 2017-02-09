@@ -44,7 +44,7 @@
 				<onright>531</onright>
 				<onup>501</onup>
 				<ondown>501</ondown>
-				<viewtype label="20020">wide</viewtype>
+				<viewtype label="32001">wide</viewtype>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -122,7 +122,7 @@
 							<top>15</top>
 							<width>820</width>
 							<height>155</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
 						</control>
 						<control type="group">
 							<animation type="Focus">
@@ -168,7 +168,7 @@
 								<width>800</width>
 								<height>20</height>
 								<font>font12</font>
-								<textcolor>button_focus</textcolor>
+								<textcolor>$VAR[MainColorVar]</textcolor>
 								<align>right</align>
 								<aligny>center</aligny>
 								<label>$VAR[BannerLabel2Var]</label>
@@ -180,7 +180,7 @@
 						<top>15</top>
 						<width>70</width>
 						<height>155</height>
-						<texture colordiffuse="button_focus">colors/white.png</texture>
+						<texture colordiffuse="$VAR[MainColorVar]">colors/white.png</texture>
 						<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
 						<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
 					</control>

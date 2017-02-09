@@ -67,7 +67,7 @@
 						<height>50</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
-                        <!-- <visible>!ListItem.Property(ActiveChannel)</visible> -->						
+                        <visible>!ListItem.Property(ActiveChannel)</visible>						
 					</control>
 					<control type="label">
 						<left>45</left>
