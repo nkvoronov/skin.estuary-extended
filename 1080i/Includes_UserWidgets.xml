@@ -265,8 +265,8 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetListCustomAddons -->    
-	<include name="WidgetListCustomAddons">
+    <!-- Widget-CustomAddons -->    
+	<include name="Widget-CustomAddons">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
 		<param name="height">405</param>
@@ -667,8 +667,8 @@
             </item>
         </content>
 	</include>
-    <!-- WidgetListCustomChannels -->
-	<include name="WidgetListCustomChannels">
+    <!-- Widget-CustomChannels -->
+	<include name="Widget-CustomChannels">
 		<param name="visible">True</param>
 		<param name="ondown_id">200001</param>
 		<param name="height">600</param>

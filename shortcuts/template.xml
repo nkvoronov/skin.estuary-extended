@@ -1,19 +1,125 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <template>
-    <other include="subpanels">
+    <other include="submenus">
+        <!-- property menu item -->
         <property name="id" tag="mainmenuid" />
-        <property name="submenu_name" tag="property" attribute="name|submenuVisibility"/>
+        <property name="submenu" tag="property" attribute="name|submenuVisibility" />
+        <!-- property menu item widget -->
+        <property name="widget" tag="property" attribute="name|widget" />
+        <property name="widget">None</property>
+        <property name="widget_name" tag="property" attribute="name|widgetName" />
+        <!-- property menu item widget names -->
+        <property name="widget1_name" tag="property" attribute="name|widgetName.widget1" />
+        <property name="widget2_name" tag="property" attribute="name|widgetName.widget2" />
+        <property name="widget3_name" tag="property" attribute="name|widgetName.widget3" />
+        <property name="widget4_name" tag="property" attribute="name|widgetName.widget4" />
+        <property name="widget5_name" tag="property" attribute="name|widgetName.widget5" />
+        <property name="widget6_name" tag="property" attribute="name|widgetName.widget6" />
+        <!-- property menu item widget targets -->
+        <property name="widget1_target" tag="property" attribute="name|widgetTarget.widget1" />
+        <property name="widget2_target" tag="property" attribute="name|widgetTarget.widget2" />
+        <property name="widget3_target" tag="property" attribute="name|widgetTarget.widget3" />
+        <property name="widget4_target" tag="property" attribute="name|widgetTarget.widget4" />
+        <property name="widget5_target" tag="property" attribute="name|widgetTarget.widget5" />
+        <property name="widget6_target" tag="property" attribute="name|widgetTarget.widget6" />
+        <!-- property menu item widget paths -->
+        <property name="widget1_path" tag="property" attribute="name|widgetPath.widget1" />
+        <property name="widget2_path" tag="property" attribute="name|widgetPath.widget2" />
+        <property name="widget3_path" tag="property" attribute="name|widgetPath.widget3" />
+        <property name="widget4_path" tag="property" attribute="name|widgetPath.widget4" />
+        <property name="widget5_path" tag="property" attribute="name|widgetPath.widget5" />
+        <property name="widget6_path" tag="property" attribute="name|widgetPath.widget6" />
+        <!-- property menu item widget types -->
+        <!-- widget type 1 -->
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="movies">Movies</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="tvshows">TVShows</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="episodes">Episodes</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="musicvideos">MusicVideos</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="albums">Albums</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="artists">Artists</property>
+        <property name="widget1_type" tag="property" attribute="name|widgetType.widget1" value="songs">Songs</property>
+        <property name="widget1_type">Other</property>
+        <!-- widget type 2 -->
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="movies">Movies</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="tvshows">TVShows</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="episodes">Episodes</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="musicvideos">MusicVideos</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="albums">Albums</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="artists">Artists</property>
+        <property name="widget2_type" tag="property" attribute="name|widgetType.widget2" value="songs">Songs</property>
+        <property name="widget2_type">Other</property>
+        <!-- widget type 3 -->
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="movies">Movies</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="tvshows">TVShows</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="episodes">Episodes</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="musicvideos">MusicVideos</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="albums">Albums</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="artists">Artists</property>
+        <property name="widget3_type" tag="property" attribute="name|widgetType.widget3" value="songs">Songs</property>
+        <property name="widget3_type">Other</property>
+        <!-- widget type 4 -->
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="movies">Movies</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="tvshows">TVShows</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="episodes">Episodes</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="musicvideos">MusicVideos</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="albums">Albums</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="artists">Artists</property>
+        <property name="widget4_type" tag="property" attribute="name|widgetType.widget4" value="songs">Songs</property>
+        <property name="widget4_type">Other</property>
+        <!-- widget type 5 -->
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="movies">Movies</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="tvshows">TVShows</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="episodes">Episodes</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="musicvideos">MusicVideos</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="albums">Albums</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="artists">Artists</property>
+        <property name="widget5_type" tag="property" attribute="name|widgetType.widget5" value="songs">Songs</property>
+        <property name="widget5_type">Other</property>        
+         <!-- widget type 6 -->
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="movies">Movies</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="tvshows">TVShows</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="episodes">Episodes</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="musicvideos">MusicVideos</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="albums">Albums</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="artists">Artists</property>
+        <property name="widget6_type" tag="property" attribute="name|widgetType.widget6" value="songs">Songs</property>
+        <property name="widget6_type">Other</property>       
         <controls>
             <control type="group" id="$PYTHON[10+int($SKINSHORTCUTS[id])]000">
                 <skinshortcuts>visibility</skinshortcuts>
                 <include>Visible_Right_Delayed</include>
                 <include name="HomeSubPanels">
-                    <param name="button_id" value="$PYTHON[10+int($SKINSHORTCUTS[id])]888" />
-                    <param name="grouplist_id" value="$PYTHON[10+int($SKINSHORTCUTS[id])]001" />
-                    <param name="submenu_list" value="$PYTHON[10+int($SKINSHORTCUTS[id])]900" />
-                    <param name="submenu_content" value="skinshortcuts-group-$SKINSHORTCUTS[submenu_name]" />
-                    <param name="control_id0" value="$PYTHON[10+int($SKINSHORTCUTS[id])]" />
-                </include>                    
+                    <!-- submenu property -->
+                    <param name="submain_id" value="$PYTHON[10+int($SKINSHORTCUTS[id])]" />
+                    <param name="submenu_content" value="skinshortcuts-group-$SKINSHORTCUTS[submenu]" />
+                    <!-- widget property -->
+                    <param name="widget_content" value="include-$SKINSHORTCUTS[widget]" />
+                    <!-- -->
+                    <param name="widget1_name" value="$SKINSHORTCUTS[widget1_name]"/>
+                    <param name="widget1_type" value="$SKINSHORTCUTS[widget1_type]"/>
+                    <param name="widget1_target" value="$SKINSHORTCUTS[widget1_target]"/>
+                    <param name="widget1_path" value="$SKINSHORTCUTS[widget1_path]"/>
+                    <param name="widget2_name" value="$SKINSHORTCUTS[widget2_name]"/>
+                    <param name="widget2_type" value="$SKINSHORTCUTS[widget2_type]"/>
+                    <param name="widget2_target" value="$SKINSHORTCUTS[widget2_target]"/>
+                    <param name="widget2_path" value="$SKINSHORTCUTS[widget2_path]"/>                    
+                    <param name="widget3_name" value="$SKINSHORTCUTS[widget3_name]"/>
+                    <param name="widget3_type" value="$SKINSHORTCUTS[widget3_type]"/>
+                    <param name="widget3_target" value="$SKINSHORTCUTS[widget3_target]"/>
+                    <param name="widget3_path" value="$SKINSHORTCUTS[widget3_path]"/>
+                    <param name="widget4_name" value="$SKINSHORTCUTS[widget4_name]"/>
+                    <param name="widget4_type" value="$SKINSHORTCUTS[widget4_type]"/>
+                    <param name="widget4_target" value="$SKINSHORTCUTS[widget4_target]"/>
+                    <param name="widget4_path" value="$SKINSHORTCUTS[widget4_path]"/>
+                    <param name="widget5_name" value="$SKINSHORTCUTS[widget5_name]"/>
+                    <param name="widget5_type" value="$SKINSHORTCUTS[widget5_type]"/>
+                    <param name="widget5_target" value="$SKINSHORTCUTS[widget5_target]"/>
+                    <param name="widget5_path" value="$SKINSHORTCUTS[widget5_path]"/>
+                    <param name="widget6_name" value="$SKINSHORTCUTS[widget6_name]"/>
+                    <param name="widget6_type" value="$SKINSHORTCUTS[widget6_type]"/>
+                    <param name="widget6_target" value="$SKINSHORTCUTS[widget6_target]"/>
+                    <param name="widget6_path" value="$SKINSHORTCUTS[widget6_path]"/>
+                </include>                
             </control>
         </controls>
     </other>
