@@ -1625,7 +1625,7 @@
 								<width>32</width>
 								<height>32</height>
 								<texture>$VAR[ListWatchedIconVar]</texture>
-								<visible>!IsEmpty(ListItem.Overlay)</visible>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
 					</itemlayout>
