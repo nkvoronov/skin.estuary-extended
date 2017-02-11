@@ -180,6 +180,17 @@
             <param name="list_id" value="$PARAM[control_id]103"/>				
             <param name="height" value="550"/>
         </include>
+        <include content="Widget-Recordings">
+            <param name="content_path" value="pvr://recordings/tv/active?view=flat"/>
+            <param name="sortby" value="date"/>
+            <param name="sortorder" value="descending"/>
+            <param name="widget_header" value="$LOCALIZE[31015]"/>
+            <param name="widget_target" value="pvr"/>
+            <param name="onup_id" value="13200"/>
+            <param name="list_id" value="13300"/>					
+            <param name="height" value="550"/>
+            <param name="visible" value="System.HasPVRAddon"/>
+        </include>
     </include>            
     <!-- RadioWidget 104 -->
     <include name="include-RadioWidget">
@@ -226,6 +237,17 @@
             <param name="onup_id" value="$PARAM[control_id]900"/>
             <param name="list_id" value="$PARAM[control_id]104"/>
             <param name="height" value="550"/>
+        </include>
+        <include content="Widget-Recordings">
+            <param name="content_path" value="pvr://recordings/radio/active?view=flat"/>
+            <param name="sortby" value="date"/>
+            <param name="sortorder" value="descending"/>
+            <param name="widget_header" value="$LOCALIZE[31015]"/>
+            <param name="widget_target" value="pvr"/>
+            <param name="onup_id" value="14200"/>					
+            <param name="list_id" value="14300"/>
+            <param name="height" value="550"/>
+            <param name="visible" value="System.HasPVRAddon"/>
         </include>
     </include>
     <!-- AddonsWidget 110 -->

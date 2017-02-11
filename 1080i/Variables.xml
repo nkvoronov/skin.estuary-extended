@@ -265,6 +265,11 @@
 		<value condition="Library.IsScanningMusic">$LOCALIZE[13353]</value>
 		<value>$LOCALIZE[653]</value>
 	</variable>
+    <!-- Video HW Decoder -->
+    <variable name="VideoHWDecoderVar">
+		<value condition="Player.Process(videohwdecoder)">HW</value>
+		<value>SW</value>
+	</variable>
     
     <!-- *** Views *** -->
 
@@ -290,14 +295,6 @@
 		<value condition="String.IsEmpty(ListItem.Thumb) + ListItem.IsFolder">DefaultFolder.png</value>
         <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
         <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
-		<value>$INFO[ListItem.Thumb]</value>
-	</variable>
-    <!-- 53 Shift Images View Thumb -->
-	<variable name="ShiftImagesThumbVar">
-        <value condition="String.IsEqual(ListItem.Label,..)">DefaultFolderBack.png</value>
-        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[997])">DefaultAddSource.png</value>
-        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[1039])">DefaultAddonPicture.png</value>        
-		<value condition="String.IsEmpty(ListItem.Thumb) + ListItem.IsFolder">DefaultFolder.png</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
     <!-- 54 Info Wall View Thumb -->
@@ -405,14 +402,6 @@
         <value condition="!String.IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
     </variable>
-    <!-- Poster Info Dialog ??? -->
-	<variable name="InfoDialogPosterVar">
-        <value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
-        <value>$INFO[ListItem.Icon]</value>
-	</variable>
     <!-- 51 Poster, 58 BigPoster List Poster -->
 	<variable name="ListPosterVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>

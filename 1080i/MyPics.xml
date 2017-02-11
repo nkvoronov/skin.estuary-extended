@@ -40,7 +40,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-                    <visible>!ListItem.IsParentFolder + ListItem.IsFolder</visible>
+					<visible>!ListItem.IsParentFolder + ListItem.IsFolder</visible>
 				</control>
 				<control type="grouplist">
 					<right>110</right>

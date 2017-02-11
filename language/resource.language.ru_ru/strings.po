@@ -918,18 +918,3 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr "Применить"
 
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr "Применить сразу"
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr "Вх. передискретизация"
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr "Пред. обработка"
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr "Вы. передискретизация"
