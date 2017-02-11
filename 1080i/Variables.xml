@@ -162,7 +162,7 @@
 		<value condition="Control.HasFocus(101)">$LOCALIZE[19069]</value>
 		<value condition="Control.HasFocus(102)">$LOCALIZE[19017]</value>
 		<value condition="Control.HasFocus(103)">$LOCALIZE[19040]</value>
-		<value condition="Control.HasFocus(104)">$LOCALIZE[19138]</value>
+		<value condition="Control.HasFocus(104)">$LOCALIZE[43060]</value>
 		<value condition="Control.HasFocus(105)">$LOCALIZE[137]</value>
 	</variable>
     <!-- ListBox Info -->
@@ -291,6 +291,7 @@
         <value condition="!String.IsEmpty(Listitem.Art(poster))">$INFO[Listitem.Art(poster)]</value>
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
+    <!-- 54 Info Wall View Thumb -->
 	<variable name="InfoWallThumbVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
         <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[15102])">DefaultMusicAlbums.png</value>

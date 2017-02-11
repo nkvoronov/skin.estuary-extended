@@ -21,48 +21,54 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamServiceName,[COLOR button_focus]$LOCALIZE[19099]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamServiceName,$LOCALIZE[19099]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamProviderName,[COLOR button_focus]$LOCALIZE[19101]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamProviderName,$LOCALIZE[19101]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamClient,[COLOR button_focus]$LOCALIZE[19012]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamClient,$LOCALIZE[19012]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamDevice,[COLOR button_focus]$LOCALIZE[19006]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamDevice,$LOCALIZE[19006]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamStatus,[COLOR button_focus]$LOCALIZE[19007]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamStatus,$LOCALIZE[19007]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamEncryptionName,[COLOR button_focus]$LOCALIZE[19015]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamEncryptionName,$LOCALIZE[19015]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
@@ -75,32 +81,36 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamBer,[COLOR button_focus]$LOCALIZE[19010]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamBer,$LOCALIZE[19010]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamUnc,[COLOR button_focus]$LOCALIZE[19011]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamUnc,$LOCALIZE[19011]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamMux,[COLOR button_focus]$LOCALIZE[19100]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamMux,$LOCALIZE[19100]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSignal,[COLOR button_focus]$LOCALIZE[19008]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamSignal,$LOCALIZE[19008]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="progress">
@@ -114,8 +124,9 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSNR,[COLOR button_focus]$LOCALIZE[19009]:[/COLOR] ]</label>
+					<label>$INFO[PVR.ActStreamSNR,$LOCALIZE[19009]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="progress">
@@ -133,8 +144,9 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),[COLOR button_focus]$LOCALIZE[31139]:[/COLOR] ]$VAR[VideoHWDecoderVar, (,)]</label>
+					<label>$INFO[Player.Process(videodecoder),$LOCALIZE[31139]: [COLOR white],[/COLOR]]$VAR[VideoHWDecoder, [COLOR white](,)[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>					
 				</control>
@@ -142,8 +154,9 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(pixformat),[COLOR button_focus]$LOCALIZE[31140]:[/COLOR] ]</label>
+					<label>$INFO[Player.Process(pixformat),$LOCALIZE[31140]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>					
 				</control>
@@ -151,8 +164,9 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(deintmethod),[COLOR button_focus]$LOCALIZE[16038]:[/COLOR] ]</label>
+					<label>$INFO[Player.Process(deintmethod),$LOCALIZE[16038]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>					
 				</control>
@@ -160,8 +174,9 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videowidth),[COLOR button_focus]$LOCALIZE[38031]:[/COLOR] ,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
+					<label>$INFO[Player.Process(videowidth),$LOCALIZE[38031]: [COLOR white] ,x[/COLOR]][COLOR white]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS][/COLOR]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>					
 				</control>
@@ -169,16 +184,18 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>[COLOR button_focus]$LOCALIZE[460]:[/COLOR] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
+					<label>$LOCALIZE[460]:[COLOR white] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz][/COLOR]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),[COLOR button_focus]$LOCALIZE[31030]:[/COLOR] ,       ]$INFO[System.CpuUsage,[COLOR button_focus]$LOCALIZE[13271][/COLOR] ]</label>
+					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31030]: [COLOR white] ,       [/COLOR]]$INFO[System.CpuUsage,$LOCALIZE[13271]: [COLOR white],[/COLOR]]</label>
 					<font>font14</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
