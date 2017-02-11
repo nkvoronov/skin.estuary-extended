@@ -405,14 +405,6 @@
         <value condition="!IsEmpty(Container.Art(season.poster)) + Container.Content(episodes)">$INFO[Container.Art(season.poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
     </variable>
-    <!-- Poster Info Dialog ??? -->
-	<variable name="InfoDialogPosterVar">
-        <value condition="!IsEmpty(ListItem.Art(poster)) + [!IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animated_posters)]">$INFO[ListItem.Art(animatedposter)]</value>
-        <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
-        <value>$INFO[ListItem.Icon]</value>
-	</variable>
     <!-- 51 Poster, 58 BigPoster List Poster -->
 	<variable name="ListPosterVar">
 		<value condition="StringCompare(ListItem.Label,..)">DefaultFolderBack.png</value>

@@ -2212,7 +2212,7 @@
 									<left>10</left>
 									<top>238</top>
 									<width>280</width>
-									<label>$PARAM[sub_label]</label>
+									<label>$INFO[ListItem.Label]</label>
 									<font>font10</font>
 									<scroll>true</scroll>
 									<shadowcolor>text_shadow</shadowcolor>

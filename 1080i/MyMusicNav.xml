@@ -113,7 +113,7 @@
 					<control type="button" id="621">
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
-					    <onclick>ActivateWindow(addonbrowser,addons://sources/audio/,return)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://sources/audio/,return)</onclick>
 						<visible>Container.Content(addons)</visible>
 					</control>
 					<control type="button" id="624">
