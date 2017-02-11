@@ -39,7 +39,7 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-                    <visible>!StringCompare(ListItem.Label,..) + ListItem.IsFolder</visible>
+					<visible>!StringCompare(ListItem.Label,..) + ListItem.IsFolder</visible>
 				</control>
 				<control type="grouplist">
 					<right>110</right>

@@ -9,7 +9,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-                <include>OpenClose_Left</include>
+				<include>OpenClose_Left</include>
 				<left>110</left>
 				<top>180</top>
 				<control type="image">
