@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
-    <include content="HomeSubMenu">
+    <include name="HomeSubMenu">
         <control type="group" id="9100">
             <include>skinshortcuts-template-submenus</include>
         </control>
     </include>
-    <include content="HomeSubButtonsFocus">
+    <include name="HomeSubButtonsFocus">
         <control type="button" id="$PARAM[control_id]888">
             <width>1</width>
             <height>1</height>
@@ -58,7 +58,7 @@
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)">$PARAM[ondown_id]110</ondown>
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]116</ondown>	
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),MediaWidget)">$PARAM[ondown_id]200</ondown>
-                <ondown condition="String.IsEmpty(Container(9000).ListItem.Property(widget)">200001</ondown>
+                <ondown condition="String.IsEmpty(Container(9000).ListItem.Property(widget))">200001</ondown>
 				<itemlayout width="110" height="120">
 					<control type="image">
 						<width>130</width>

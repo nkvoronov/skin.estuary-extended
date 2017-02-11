@@ -31,7 +31,7 @@
         <action>ActivateWindow(addonbrowser,addons://search/,return)</action>
     </shortcut>
     <shortcut>
-        <label>10040</label>
+        <label>5</label>
         <label2>24001</label2>
         <icon>special://skin/extras/icons/settings.png</icon>
         <action>ActivateWindow(systemsettings,addons)</action>
