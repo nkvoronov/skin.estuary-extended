@@ -278,7 +278,7 @@
                     <param name="visible" value="System.HasPVRAddon"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" content="WidgetListCustomChannels">
-                    <param name="widget_header" value="$LOCALIZE[84207]"/>
+                    <param name="widget_header" value="$LOCALIZE[43241]"/>
                     <param name="widget_target" value="TV"/>
 					<param name="onup_id" value="13900"/>
                     <param name="list_id" value="13200"/>
@@ -391,7 +391,7 @@
                     <param name="visible" value="System.HasPVRAddon"/>
                 </include>
                 <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" content="WidgetListCustomChannels">
-                    <param name="widget_header" value="$LOCALIZE[84208]"/>
+                    <param name="widget_header" value="$LOCALIZE[43242]"/>
                     <param name="widget_target" value="Radio"/>
 					<param name="onup_id" value="14900"/>
                     <param name="list_id" value="14200"/>
@@ -931,27 +931,44 @@
                     <param name="list_id" value="20900"/>
                     <param name="ondown_id" value="20100"/>
                     <param name="item1_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-                    <param name="item1_onclick" value="ActivateWindow(addonbrowser,addons://user/,return)" />
-                    <param name="item1_icon" value="recordings.png" />
-                    <param name="item1_label" value="$LOCALIZE[31146]" />					
+                    <param name="item1_onclick" value="ActivateWindow(addonbrowser,root)" />
+                    <param name="item1_icon" value="addons.png" />
+                    <param name="item1_label" value="$LOCALIZE[10040]" />					
 					<param name="item2_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-                    <param name="item2_onclick" value="ActivateWindow(addonbrowser,addons://repos/,return)" />
-                    <param name="item2_icon" value="add-ons.png" />
-                    <param name="item2_label" value="$LOCALIZE[31147]" />
+                    <param name="item2_onclick" value="ActivateWindow(addonbrowser,addons://user/,return)" />
+                    <param name="item2_icon" value="my-addons.png" />
+                    <param name="item2_label" value="$LOCALIZE[24998]" />
+					<param name="item2_vis" value="True" />					
 					<param name="item3_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
-                    <param name="item3_onclick" value="ActivateWindow(addonbrowser,addons://search/,return)" />
-                    <param name="item3_icon" value="tv-search.png" />
-                    <param name="item3_label" value="$LOCALIZE[137]" />
-					<param name="item3_vis" value="true" />					
-					<param name="item4_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
-                    <param name="item4_onclick" value="ActivateWindow(systemsettings,addons)" />
-                    <param name="item4_icon" value="settings.png" />
-                    <param name="item4_label" value="$LOCALIZE[5]" />
-					<param name="item4_vis" value="True" />
-					<param name="item5_vis" value="False" />
+                    <param name="item3_onclick" value="ActivateWindow(addonbrowser,addons://outdated/,return)" />
+                    <param name="item3_icon" value="update-available.png" />
+                    <param name="item3_label" value="$LOCALIZE[24043]" />
+					<param name="item3_vis" value="True" />					
+					<param name="item4_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
+                    <param name="item4_onclick" value="ActivateWindow(addonbrowser,addons://downloading/,return)" />
+                    <param name="item4_icon" value="files.png" />
+                    <param name="item4_label" value="$LOCALIZE[24067]" />
+					<param name="item4_vis" value="False" />					
+					<param name="item5_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
+                    <param name="item5_onclick" value="ActivateWindow(addonbrowser,addons://repos/,return)" />
+                    <param name="item5_icon" value="install_repos.png" />
+                    <param name="item5_label" value="$LOCALIZE[24033]" /> 
+					<param name="item5_vis" value="True" />					
+					<param name="item6_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
+                    <param name="item6_onclick" value="ActivateWindow(addonbrowser,addons://install/,return)" />
+                    <param name="item6_icon" value="files.png" />
+                    <param name="item6_label" value="$LOCALIZE[24041]" />
 					<param name="item6_vis" value="False" />
-					<param name="item7_vis" value="False" />
-					<param name="item8_vis" value="False" />
+					<param name="item7_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
+                    <param name="item7_onclick" value="ActivateWindow(addonbrowser,addons://search/,return)" />
+                    <param name="item7_icon" value="tv-search.png" />
+                    <param name="item7_label" value="$LOCALIZE[137]" />
+					<param name="item7_vis" value="True" />
+                    <param name="item8_onclick2" value="SetProperty(FanartHomeType,settings,home)" />
+                    <param name="item8_onclick" value="ActivateWindow(systemsettings,addons)" />
+                    <param name="item8_icon" value="settings.png" />
+                    <param name="item8_label" value="$LOCALIZE[5]" />
+					<param name="item8_vis" value="True" />
                 </include>
                 <!-- Video Addons -->
                 <include condition="![Skin.HasSetting(enable_custom_list_addons) + Skin.HasSetting(enable_custom_list_addons_video)]" content="WidgetListSquare">

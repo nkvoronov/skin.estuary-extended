@@ -770,22 +770,6 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr "Застосувати"
 
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr "Застосувати відразу"
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr "Вх. передискретизація"
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr "Попер. обробка"
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr "Ви. передискретизація"
-
 msgctxt "#43255"
 msgid "reload skin button"
 msgstr "кнопку оновлення обкладинки"

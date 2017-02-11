@@ -80,7 +80,7 @@
 				<ondown>noop</ondown>
 				<onleft>605</onleft>
 				<onright>600</onright>
-                <control type="radiobutton" id="620">
+				<control type="radiobutton" id="620">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>
 					</include>

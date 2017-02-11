@@ -921,22 +921,6 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr ""
 
-msgctxt "#43251"
-msgid "Apply immediately"
-msgstr ""
-
-msgctxt "#43252"
-msgid "Input oversampling"
-msgstr ""
-
-msgctxt "#43253"
-msgid "Preprocessing"
-msgstr ""
-
-msgctxt "#43254"
-msgid "Output oversampling"
-msgstr ""
-
 msgctxt "#43255"
 msgid "reload skin button"
 msgstr ""
