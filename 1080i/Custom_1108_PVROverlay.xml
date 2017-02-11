@@ -91,16 +91,16 @@
 			<orientation>horizontal</orientation>
 			<itemgap>10</itemgap>
 			<visible>!Player.ChannelPreviewActive</visible>
-			<include name="MediaFlag">
+			<include content="MediaFlag">
 				<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
 			</include>
-			<include name="MediaFlag">
+			<include content="MediaFlag">
 				<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
 			</include>
-			<include name="MediaFlag">
+			<include content="MediaFlag">
 				<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
 			</include>
-			<include name="MediaFlag">
+			<include content="MediaFlag">
 				<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
 			</include>
 		</control>

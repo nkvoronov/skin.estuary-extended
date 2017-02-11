@@ -5,10 +5,9 @@
 	<views>10</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group" id="50">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group">
 				<description>Guide Timeline</description>
 				<visible>Control.IsVisible(10)</visible>
@@ -176,7 +175,7 @@
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>SubString(ListItem.PlotOutline,http://,Left) | SubString(ListItem.PlotOutline,https://,Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,http://) | String.StartsWith(ListItem.PlotOutline,https://)</visible>
 					</control>
 					<control type="image">
 						<left>125</left>
@@ -217,15 +216,15 @@
 			</control>
 			<control type="group">
 				<include>MediaMenuCommon</include>
-				<include name="PVRSideBar">
+				<include content="PVRSideBar">
 					<param name="group_label2" value="$INFO[Control.GetLabel(30)]" />
 				</include>
 			</control>
-			<include name="TopBar">
+			<include content="TopBar">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRGuideVar]" />
 				<param name="breadcrumbs_icon" value="icons/settings/tvguide.png" />
 			</include>
-			<include name="BottomBar">
+			<include content="BottomBar">
 				<param name="PageLabel" value="$INFO[Container.NumItems,$LOCALIZE[19019]: ]" />
 				<param name="info_visible" value="true" />
 			</include>

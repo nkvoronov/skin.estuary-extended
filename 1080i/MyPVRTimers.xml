@@ -4,12 +4,11 @@
 	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
-		<!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-                <include>OpenClose_Left</include>
+				<include>OpenClose_Left</include>
 				<left>110</left>
 				<top>180</top>
 				<control type="image">
@@ -46,11 +45,11 @@
 							<height>100</height>
 							<font>font24_title</font>
 							<aligny>center</aligny>
-							<visible>IsEmpty(ListItem.Date)</visible>
+							<visible>String.IsEmpty(ListItem.Date)</visible>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="group">
-							<visible>!IsEmpty(ListItem.Date)</visible>
+							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
 								<top>10</top>
@@ -115,10 +114,10 @@
 							<font>font24_title</font>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>IsEmpty(ListItem.Date)</visible>
+							<visible>String.IsEmpty(ListItem.Date)</visible>
 						</control>
 						<control type="group">
-							<visible>!IsEmpty(ListItem.Date)</visible>
+							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
 								<top>10</top>
@@ -172,10 +171,10 @@
 			<control type="group">
 				<left>1220</left>
 				<top>180</top>
-				<visible>!IsEmpty(ListItem.Date)</visible>
+				<visible>!String.IsEmpty(ListItem.Date)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
-				<include name="PVRInfoPanel">
+				<include content="PVRInfoPanel">
 					<param name="bottom_label1" value="$INFO[PVR.NextTimer]" />
 					<param name="bottom_label2" value="" />
 				</include>
@@ -185,11 +184,11 @@
 			<include>MediaMenuCommon</include>
 			<include>PVRSideBar</include>
 		</control>
-		<include name="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRTimersVar]" />
 			<param name="breadcrumbs_icon" value="icons/settings/tvguide.png" />
 		</include>
-		<include name="BottomBar">
+		<include content="BottomBar">
 			<param name="info_visible" value="true" />
 		</include>
 		<control type="label" id="29">

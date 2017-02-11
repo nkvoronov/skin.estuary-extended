@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<includes>
-	<include name="MyPlaylists">
-		<!-- Background -->
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<views>50</views>
+	<controls>
 		<include>DefaultBackground</include>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
-			<include name="PlaylistWindowButtons">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<include content="PlaylistWindowButtons">
 				<param name="width" value="400" />
 			</include>
 			<control type="group">
@@ -142,14 +144,14 @@
 				<include>MediaFlags</include>
 			</control>
 		</control>
-		<include name="TopBar" condition="Window.IsActive(videoplaylist)">
+		<include content="TopBar" condition="Window.IsActive(videoplaylist)">
 			<param name="breadcrumbs_label" value="$LOCALIZE[31065]" />
 			<param name="breadcrumbs_icon" value="icons/settings/video.png" />
 		</include>
-		<include name="TopBar" condition="Window.IsActive(musicplaylist)">
+		<include content="TopBar" condition="Window.IsActive(musicplaylist)">
 			<param name="breadcrumbs_label" value="$LOCALIZE[31066]" />
 			<param name="breadcrumbs_icon" value="icons/settings/music.png" />
 		</include>
 		<include>BottomBar</include>
-	</include>
-</includes>
+	</controls>
+</window>

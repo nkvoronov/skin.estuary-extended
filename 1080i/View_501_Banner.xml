@@ -25,7 +25,7 @@
 		</control>
 	</include>
 	<include name="View_501_Banner">
-		<include name="UpDownArrows">
+		<include content="UpDownArrows">
 			<param name="container_id" value="501" />
 			<param name="visible" value="!System.HasModalDialog" />
 		</include>
@@ -44,7 +44,7 @@
 				<onright>531</onright>
 				<onup>501</onup>
 				<ondown>501</ondown>
-				<viewtype label="32001">wide</viewtype>
+				<viewtype label="20020">wide</viewtype>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -70,20 +70,12 @@
 						<shadowcolor>text_shadow</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<visible>IsEmpty(ListItem.Art(banner)) + !StringCompare(ListItem.Label,..)</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) + !Listitem.IsParentFolder</visible>
 					</control>
 					<control type="group">
-						<left>774</left>
-						<top>16</top>
+						<left>770</left>
+						<top>20</top>
 						<include>UserRatingCircle</include>
-					</control>
-                    <control type="image">
-						<left>15</left>
-						<top>130</top>
-						<width>32</width>
-						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="183" width="900">
@@ -110,11 +102,11 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-							<visible>IsEmpty(ListItem.Art(banner)) + !StringCompare(ListItem.Label,..)</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + !Listitem.IsParentFolder</visible>
 						</control>
 						<control type="group">
-							<left>774</left>
-							<top>16</top>
+							<left>770</left>
+							<top>20</top>
 							<include>UserRatingCircle</include>
 						</control>
 						<control type="image">
@@ -143,7 +135,6 @@
 								<width>32</width>
 								<height>32</height>
 								<texture>$VAR[ListWatchedIconVar]</texture>
-								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<left>60</left>
@@ -160,7 +151,7 @@
 								<width>22</width>
 								<height>22</height>
 								<texture>lists/played-total.png</texture>
-								<visible>StringCompare(Listitem.dbtype,tvshow) + !IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+								<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							</control>
 							<control type="label">
 								<right>123</right>
@@ -189,12 +180,12 @@
 						<animation effect="fade" start="100" end="0" time="50">UnFocus</animation>
 						<top>13</top>
 						<right>0</right>
-						<include name="BannerInfoFlag">
+						<include content="BannerInfoFlag">
 							<param name="icon" value="lists/rating.png" />
 							<param name="infolabel" value="ListItem.Rating" />
 							<param name="posy" value="5" />
 						</include>
-						<include name="BannerInfoFlag">
+						<include content="BannerInfoFlag">
 							<param name="icon" value="lists/year.png" />
 							<param name="infolabel" value="ListItem.Year" />
 							<param name="posy" value="84" />

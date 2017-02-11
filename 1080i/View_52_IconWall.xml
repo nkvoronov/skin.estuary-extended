@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="View_52_IconWall">
-		<include name="UpDownArrows">
+		<include content="UpDownArrows">
 			<param name="container_id" value="52" />
 			<param name="visible" value="!System.HasModalDialog" />
 		</include>
@@ -20,9 +20,9 @@
 				<onup>52</onup>
 				<ondown>52</ondown>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<visible>Container.Content() | Container.Content(tags) | Container.Content(years) | Container.Content(roles) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists)</visible>
+				<visible>Container.Content() | Container.Content(tags) | Container.Content(years) | Container.Content(roles) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists) | Container.Content(unknown)</visible>
 				<viewtype label="31099">icon</viewtype>
-				<itemlayout height="248" width="440" condition="Container.Content(tags) | Container.Content(files) | Container.Content(playlists) | [Container.Content(studios) + Skin.HasSetting(show_studiologos) + !IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !IsEmpty(Skin.String(LanguageFlags.path))]">
+				<itemlayout height="248" width="440" condition="Container.Content() | Container.Content(unknown) | Container.Content(tags) | Container.Content(files) | Container.Content(playlists) | [Container.Content(studios) + System.HasAddon(resource.images.studios.white)]">
 					<control type="group">
 						<top>2</top>
 						<control type="image">
@@ -38,27 +38,6 @@
 							<texture fallback="DefaultStudios.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(studios)</visible>
-						</control>
-						<control type="image">
-							<left>120</left>
-							<top>20</top>
-							<width>160</width>
-							<height>130</height>
-							<texture fallback="DefaultCountry.png">$VAR[IconWallThumbVar]</texture>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
-                            <visible>Container.Content(countries)</visible>
-						</control>
-						<control type="image">
-							<left>120</left>
-							<top>20</top>
-							<width>160</width>
-							<height>130</height>
-							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries)]</visible>
 						</control>
 						<control type="image">
 							<left>21</left>
@@ -74,7 +53,7 @@
 							<height>50</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Overlay]</texture>
-							<visible>!SubString(ListItem.Overlay,watched.png,right)</visible>
+							<visible>!String.EndsWith(ListItem.Overlay,watched.png)</visible>
 						</control>
 						<control type="textbox">
 							<left>25</left>
@@ -88,7 +67,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="248" width="440" condition="Container.Content(tags) | Container.Content(files) | Container.Content(playlists) | [Container.Content(studios) + Skin.HasSetting(show_studiologos) + !IsEmpty(Skin.String(StudiosImages.path))] | [Container.Content(countries) + !IsEmpty(Skin.String(LanguageFlags.path))]">
+				<focusedlayout height="248" width="440" condition="Container.Content() | Container.Content(unknown) | Container.Content(tags) | Container.Content(files) | Container.Content(playlists) | [Container.Content(studios) + System.HasAddon(resource.images.studios.white)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus" reversible="false">
@@ -119,27 +98,6 @@
 							<texture fallback="DefaultStudios.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
-                            <visible>Container.Content(studios)</visible>
-						</control>
-						<control type="image">
-							<left>120</left>
-							<top>20</top>
-							<width>160</width>
-							<height>130</height>
-							<texture fallback="DefaultCountry.png">$VAR[IconWallThumbVar]</texture>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
-                            <visible>Container.Content(countries)</visible>
-						</control>
-						<control type="image">
-							<left>120</left>
-							<top>20</top>
-							<width>160</width>
-							<height>130</height>
-							<texture fallback="DefaultFolder.png">$VAR[IconWallThumbVar]</texture>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
-                            <visible>![Container.Content(studios) | Container.Content(countries)]</visible>
 						</control>
 						<control type="image">
 							<left>329</left>
@@ -148,7 +106,7 @@
 							<height>50</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Overlay]</texture>
-							<visible>!SubString(ListItem.Overlay,watched.png,right)</visible>
+							<visible>!String.EndsWith(ListItem.Overlay,watched.png)</visible>
 						</control>
 						<control type="image">
 							<left>21</left>
@@ -169,7 +127,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="124" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + !Skin.HasSetting(show_studiologos)] | [Container.Content(countries) + IsEmpty(Skin.String(LanguageFlags.path))]">
+				<itemlayout height="124" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | Container.Content(countries) | [Container.Content(studios) + !System.HasAddon(resource.images.studios.white)]">
 					<control type="group">
 						<control type="image">
 							<width>330</width>
@@ -189,7 +147,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="124" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | [Container.Content(studios) + !Skin.HasSetting(show_studiologos)] | [Container.Content(countries) + IsEmpty(Skin.String(LanguageFlags.path))]">
+				<focusedlayout height="124" width="348" condition="Container.Content(genres) | Container.Content(years) | Container.Content(roles) | Container.Content(countries) | [Container.Content(studios) + !System.HasAddon(resource.images.studios.white)]">
 					<control type="group">
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />

@@ -12,7 +12,7 @@
 				<onclick>noop</onclick>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
-			<include name="LeftRightArrows">
+			<include content="LeftRightArrows">
 				<param name="list_id" value="51" />
 				<param name="left_posx" value="45" />
 				<param name="right_posx" value="1849" />
@@ -39,7 +39,7 @@
 					<hitrect x="100" y="0" w="800" h="400" />
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					<preloaditems>1</preloaditems>
-					<viewtype label="32000">icon</viewtype>
+					<viewtype label="20021">icon</viewtype>
 					<itemlayout width="317">
 						<control type="image">
 							<left>20</left>
@@ -61,20 +61,12 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<visible>IsEmpty(ListItem.Art(poster)) + !StringCompare(ListItem.Label,..)</visible>
+							<visible>String.IsEmpty(ListItem.Art(poster)) + !Listitem.IsParentFolder</visible>
 						</control>
 						<control type="group">
 							<left>230</left>
-							<top>25</top>
+							<top>30</top>
 							<include>UserRatingCircle</include>
-						</control>
-                        <control type="image">
-							<left>40</left>
-							<top>25</top>
-							<width>32</width>
-							<height>32</height>
-							<texture>$VAR[ListWatchedIconVar]</texture>
-							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="317">
@@ -100,7 +92,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<visible>IsEmpty(ListItem.Art(poster)) + !StringCompare(ListItem.Label,..)</visible>
+							<visible>String.IsEmpty(ListItem.Art(poster)) + !Listitem.IsParentFolder</visible>
 						</control>
 						<control type="group">
 							<animation effect="fade" time="300" start="100" end="0">Focus</animation>
@@ -108,14 +100,6 @@
 							<left>230</left>
 							<top>30</top>
 							<include>UserRatingCircle</include>
-						</control>
-                        <control type="image">
-							<left>40</left>
-							<top>25</top>
-							<width>32</width>
-							<height>32</height>
-							<texture>$VAR[ListWatchedIconVar]</texture>
-							<visible>!IsEmpty(ListItem.Overlay)</visible>
 						</control>
 					</focusedlayout>
 				</control>
@@ -138,7 +122,7 @@
 						<left>635</left>
 						<top>475</top>
 						<visible>ListItem.IsCollection</visible>
-						<include name="InfoList">
+						<include content="InfoList">
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
 							<param name="font" value="font12" />
@@ -150,7 +134,6 @@
 						<width>32</width>
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="label">
 						<left>695</left>
@@ -183,7 +166,7 @@
 							<height>38</height>
 							<label>$INFO[ListItem.Duration,[COLOR button_focus]$LOCALIZE[180]: [/COLOR], $LOCALIZE[31060]]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>!IsEmpty(ListItem.Duration)</visible>
+							<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="label">
 							<font>font12</font>
@@ -191,7 +174,7 @@
 							<height>38</height>
 							<label>$INFO[ListItem.Director,[COLOR button_focus]$LOCALIZE[20339]: [/COLOR]]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>!IsEmpty(ListItem.Director)</visible>
+							<visible>!String.IsEmpty(ListItem.Director)</visible>
 						</control>
 						<control type="label">
 							<font>font12</font>
@@ -199,7 +182,7 @@
 							<height>38</height>
 							<label>$INFO[ListItem.Genre,[COLOR button_focus]$LOCALIZE[515]: [/COLOR]]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>[IsEmpty(ListItem.Director) | IsEmpty(ListItem.Duration)] + !IsEmpty(ListItem.Genre)</visible>
+							<visible>[String.IsEmpty(ListItem.Director) | String.IsEmpty(ListItem.Duration)] + !String.IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="label">
 							<font>font12</font>
@@ -207,7 +190,7 @@
 							<height>38</height>
 							<label>$INFO[ListItem.Season,[COLOR button_focus]$LOCALIZE[33054]: [/COLOR],]$INFO[ListItem.Episode,  •  [COLOR button_focus] $LOCALIZE[20360]: [/COLOR],]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>!IsEmpty(ListItem.Season)</visible>
+							<visible>!String.IsEmpty(ListItem.Season)</visible>
 						</control>
 						<control type="textbox">
 							<width>1150</width>

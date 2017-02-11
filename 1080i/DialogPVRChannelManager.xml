@@ -7,7 +7,7 @@
 	</coordinates>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<include name="DialogBackgroundCommons">
+		<include content="DialogBackgroundCommons">
 			<param name="DialogBackgroundWidth" value="1720" />
 			<param name="DialogBackgroundHeight" value="830" />
 			<param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeader]" />
@@ -51,7 +51,7 @@
 						<height>68</height>
 						<texture colordiffuse="selected">colors/white.png</texture>
 						<animation effect="fade" end="20" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Property(Changed))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Changed))</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -67,7 +67,8 @@
 						<height>50</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
-                        <!-- <visible>!ListItem.Property(ActiveChannel)</visible> -->						
+						<!-- 						<visible>!ListItem.Property(ActiveChannel)</visible>
+						 -->
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -87,7 +88,7 @@
 						<height>68</height>
 						<texture colordiffuse="selected">colors/white.png</texture>
 						<animation effect="fade" end="20" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Property(Changed))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Changed))</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -237,7 +238,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19024]</label>
 					<altlabel>$LOCALIZE[19023]</altlabel>
-					<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
+					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
 			</control>
 		</control>
@@ -247,18 +248,17 @@
 			<onleft>9002</onleft>
 			<onright>20</onright>
 			<itemgap>-20</itemgap>
-			<include name="DefaultDialogButton">
+			<include content="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="4" />
 				<param name="label" value="$LOCALIZE[186]" />
 			</include>
-			<include name="DefaultDialogButton">
+			<include content="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="5" />
-				<!-- <param name="label" value="$LOCALIZE[14070]" /> -->
-                <param name="label" value="$LOCALIZE[84104]" />
+				<param name="label" value="$LOCALIZE[14070]" />
 			</include>
-			<include name="DefaultDialogButton">
+			<include content="DefaultDialogButton">
 				<param name="width" value="350" />
 				<param name="id" value="6" />
 				<param name="label" value="$LOCALIZE[222]" />
