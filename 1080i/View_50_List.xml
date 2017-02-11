@@ -200,7 +200,6 @@
 			<left>520</left>
 			<top>200</top>
 			<include>UserRatingCircle</include>
-            <visible>![Container.Content(artists) | Container.Content(albums)]</visible>
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="0" condition="Control.IsVisible(500) + Container.Content(addons)">Conditional</animation>

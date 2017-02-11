@@ -269,7 +269,7 @@
                 <posx>439</posx>
                 <left>449</left>
                 <visible>ListItem.IsCollection</visible>
-                <include name="InfoList">
+                <include content="InfoList">
                     <param name="height" value="305" />
                     <param name="width" value="580" />
                     <param name="item_width" value="580" />
