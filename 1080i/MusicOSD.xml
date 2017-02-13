@@ -85,7 +85,6 @@
 						<param name="texture" value="osd/fullscreen/buttons/rating.png"/>
 					</include>
 					<onclick>SetRating</onclick>
-                    <visible>False</visible>
 				</control>
 				<control type="group" id="699">
 					<width>125</width>

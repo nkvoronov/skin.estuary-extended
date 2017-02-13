@@ -233,14 +233,15 @@
                     <label>$ADDON[script.skinshortcuts 32026]</label>
                     <label2>$INFO[Container(211).ListItem.Icon]</label2>
                 </control>
-                <control type="button" id="310">
+                <!-- No implementation -->
+                <!-- <control type="button" id="310">
                     <description>Browse for background</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                </control>
+                </control> -->
                 <control type="button" id="405">
                     <description>Edit submenu</description>
                     <width>1256</width>
@@ -411,7 +412,7 @@
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
         </control>
-		<include name="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]$VAR[SkinShortcutsTitleVar]" />
 			<param name="breadcrumbs_icon" value="icons/settings/skin.png" />
 		</include>

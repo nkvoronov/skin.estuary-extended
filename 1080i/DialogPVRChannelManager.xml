@@ -67,7 +67,6 @@
 						<height>50</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
 						<aspectratio>keep</aspectratio>
-                        <visible>!ListItem.Property(ActiveChannel)</visible>						
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -192,7 +191,6 @@
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
 			</control>
-
 			<control type="grouplist">
 				<top>565</top>
 				<itemgap>-15</itemgap>

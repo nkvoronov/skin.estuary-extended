@@ -147,7 +147,7 @@
             <control type="group">
                 <width>680</width>
                 <visible>PVR.IsRecording</visible>
-                <include name="Widget-PVR">
+                <include content="Widget-PVR">
                     <param name="item_image" value="$INFO[PVR.NowRecordingChannelIcon]" />
                     <param name="header" value="$LOCALIZE[19158]" />
                     <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
@@ -157,7 +157,7 @@
             <control type="group">
                 <visible>PVR.HasNonRecordingTimer</visible>
                 <width>680</width>
-                <include name="Widget-PVR">
+                <include content="Widget-PVR">
                     <param name="item_image" value="$INFO[PVR.NextRecordingChannelIcon]" />
                     <param name="header" value="$LOCALIZE[19157]" />
                     <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
@@ -170,14 +170,16 @@
             <param name="widget_header" value="$LOCALIZE[31016]"/>
             <param name="widget_target" value="pvr"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]103"/>				
+            <param name="list_id" value="$PARAM[control_id]103"/>
+            <param name="ondown_id" value="$PARAM[control_id]104"/>        
             <param name="height" value="550"/>
         </include>
         <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" content="Widget-CustomChannels">
             <param name="widget_header" value="$LOCALIZE[43241]"/>
             <param name="widget_target" value="TV"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]103"/>				
+            <param name="list_id" value="$PARAM[control_id]103"/>
+            <param name="ondown_id" value="$PARAM[control_id]104"/>            
             <param name="height" value="550"/>
         </include>
         <include content="Widget-Recordings">
@@ -186,13 +188,12 @@
             <param name="sortorder" value="descending"/>
             <param name="widget_header" value="$LOCALIZE[31015]"/>
             <param name="widget_target" value="pvr"/>
-            <param name="onup_id" value="13200"/>
-            <param name="list_id" value="13300"/>					
+            <param name="onup_id" value="$PARAM[control_id]103"/>
+            <param name="list_id" value="$PARAM[control_id]104"/>					
             <param name="height" value="550"/>
-            <param name="visible" value="System.HasPVRAddon"/>
         </include>
     </include>            
-    <!-- RadioWidget 104 -->
+    <!-- RadioWidget 105 -->
     <include name="include-RadioWidget">
         <control type="grouplist">
             <height>218</height>
@@ -205,7 +206,7 @@
             <control type="group">
                 <width>680</width>
                 <visible>PVR.IsRecording</visible>
-                <include name="Widget-PVR">
+                <include content="Widget-PVR">
                     <param name="icon" value="$INFO[PVR.NowRecordingChannelIcon]" />
                     <param name="header" value="$LOCALIZE[19158]" />
                     <param name="label1" value="$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]" />
@@ -215,7 +216,7 @@
             <control type="group">
                 <visible>PVR.HasNonRecordingTimer</visible>
                 <width>680</width>
-                <include name="Widget-PVR">
+                <include content="Widget-PVR">
                     <param name="icon" value="$INFO[PVR.NextRecordingChannelIcon]" />
                     <param name="header" value="$LOCALIZE[19157]" />
                     <param name="label1" value="$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]" />
@@ -228,14 +229,15 @@
             <param name="widget_header" value="$LOCALIZE[31018]"/>
             <param name="widget_target" value="files"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>				
+            <param name="list_id" value="$PARAM[control_id]105"/>
+            <param name="ondown_id" value="$PARAM[control_id]106"/>
             <param name="height" value="550"/>
         </include>
         <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" content="Widget-CustomChannels">
             <param name="widget_header" value="$LOCALIZE[43242]"/>
             <param name="widget_target" value="Radio"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>
+            <param name="list_id" value="$PARAM[control_id]105"/>
+            <param name="ondown_id" value="$PARAM[control_id]106"/>
             <param name="height" value="550"/>
         </include>
         <include content="Widget-Recordings">
@@ -244,10 +246,9 @@
             <param name="sortorder" value="descending"/>
             <param name="widget_header" value="$LOCALIZE[31015]"/>
             <param name="widget_target" value="pvr"/>
-            <param name="onup_id" value="14200"/>					
-            <param name="list_id" value="14300"/>
+            <param name="onup_id" value="$PARAM[control_id]105"/>
+            <param name="list_id" value="$PARAM[control_id]106"/>
             <param name="height" value="550"/>
-            <param name="visible" value="System.HasPVRAddon"/>
         </include>
     </include>
     <!-- AddonsWidget 110 -->

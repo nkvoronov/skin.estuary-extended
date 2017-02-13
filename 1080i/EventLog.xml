@@ -70,7 +70,14 @@
 					<top>0</top>
 					<width>340</width>
 					<height>360</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture border="22">dialogs/dialog-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>0</top>
+					<width>340</width>
+					<height>360</height>
+					<aspectratio aligny="center">keep</aspectratio>
 					<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="20">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>

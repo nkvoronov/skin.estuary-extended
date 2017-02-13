@@ -54,7 +54,7 @@
 				<onup>200000</onup>
                 <ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget)">$PARAM[ondown_id]100</ondown>               
                 <ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),TVWidget)">$PARAM[ondown_id]103</ondown>
-                <ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)">$PARAM[ondown_id]104</ondown>                
+                <ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),RadioWidget)">$PARAM[ondown_id]105</ondown>                
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),AddonsWidget)">$PARAM[ondown_id]110</ondown>
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),SystemInfoWidget)">$PARAM[ondown_id]116</ondown>	
 				<ondown condition="String.IsEqual(Container(9000).ListItem.Property(widget),MediaWidget)">$PARAM[ondown_id]200</ondown>
