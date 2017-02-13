@@ -226,13 +226,13 @@
 	</variable>
     <!-- Video Info SubLabel -->
 	<variable name="VideoInfoSubLabelVar">
-		<value condition="StringCompare(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,: ][COLOR white]$INFO[ListItem.TVShowTitle][/COLOR]</value>
+		<value condition="StringCompare(ListItem.DBType,episode)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x, ][COLOR white]$INFO[ListItem.TVShowTitle][/COLOR]</value>
 		<value condition="StringCompare(ListItem.DBType,movie)">[COLOR white]$INFO[ListItem.Tagline][/COLOR]</value>
 		<value>[COLOR white]$INFO[ListItem.Genre][/COLOR]</value>
 	</variable>
     <!-- OSD SubLabel -->
 	<variable name="OSDSubLabelVar">
-        <value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x,: ][COLOR white]$INFO[VideoPlayer.TVShowTitle][/COLOR]</value>
+        <value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x, ][COLOR white]$INFO[VideoPlayer.TVShowTitle][/COLOR]</value>
         <value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording">$INFO[VideoPlayer.ChannelNumberLabel,[COLOR white]([/COLOR],[COLOR white])[/COLOR] ][COLOR white]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)][/COLOR]</value>
 		<value>[COLOR white]$INFO[VideoPlayer.Genre][/COLOR]</value>
 	</variable>
