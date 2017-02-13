@@ -170,7 +170,7 @@
             <param name="widget_header" value="$LOCALIZE[31016]"/>
             <param name="widget_target" value="pvr"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]103"/>				
+            <param name="list_id" value="$PARAM[control_id]103"/>
             <param name="height" value="550"/>
         </include>
         <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" name="Widget-CustomChannels">
@@ -181,7 +181,7 @@
             <param name="height" value="550"/>
         </include>
     </include>            
-    <!-- RadioWidget 104 -->
+    <!-- RadioWidget 105 -->
     <include name="include-RadioWidget">
         <control type="grouplist">
             <height>218</height>
@@ -217,14 +217,14 @@
             <param name="widget_header" value="$LOCALIZE[31018]"/>
             <param name="widget_target" value="files"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>				
+            <param name="list_id" value="$PARAM[control_id]105"/>
             <param name="height" value="550"/>
         </include>
         <include condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" name="Widget-CustomChannels">
             <param name="widget_header" value="$LOCALIZE[43242]"/>
             <param name="widget_target" value="Radio"/>
             <param name="onup_id" value="$PARAM[control_id]900"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>
+            <param name="list_id" value="$PARAM[control_id]105"/>
             <param name="height" value="550"/>
         </include>
     </include>

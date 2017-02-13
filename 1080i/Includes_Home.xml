@@ -1214,7 +1214,7 @@
                             <width>288</width>
                             <height>60</height>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.TVShowTitle]</label>
+                            <label>$INFO[ListItem.Label]</label>
                             <font>font10</font>
                             <shadowcolor>text_shadow</shadowcolor>
                             <align>center</align>
@@ -1319,7 +1319,7 @@
                                 <width>288</width>
                                 <height>60</height>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.TVShowTitle]</label>
+                                <label>$INFO[ListItem.Label]</label>
                                 <font>font10</font>
                                 <shadowcolor>text_shadow</shadowcolor>
                                 <align>center</align>
@@ -1614,7 +1614,7 @@
 								<top>266</top>
 								<width>260</width>
                                 <font>font10</font>
-								<label>$INFO[ListItem.Year] - [COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
+								<label>$INFO[ListItem.Year,, - ][COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
                                 <textcolor>$VAR[MainColorVar]</textcolor>								
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -1687,7 +1687,7 @@
 									<width>280</width>
 									 <font>font10</font>
 									<scroll>true</scroll>
-									<label>$INFO[ListItem.Year] - [COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
+									<label>$INFO[ListItem.Year,, - ][COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
                                     <textcolor>$VAR[MainColorVar]</textcolor>                                   
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -1799,7 +1799,7 @@
 								<top>266</top>
 								<width>260</width>
                                 <font>font10</font>
-								<label>$INFO[ListItem.Year] - [COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
+								<label>$INFO[ListItem.Year,, - ][COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
                                 <textcolor>$VAR[MainColorVar]</textcolor>								
 								<shadowcolor>text_shadow</shadowcolor>
 								<align>center</align>
@@ -1872,7 +1872,7 @@
 									<width>280</width>
 									<font>font10</font>
 									<scroll>true</scroll>
-									<label>$INFO[ListItem.Year] - [COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
+									<label>$INFO[ListItem.Year,, - ][COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
                                     <textcolor>$VAR[MainColorVar]</textcolor>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>

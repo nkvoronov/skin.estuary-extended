@@ -674,6 +674,7 @@
 					<width>1800</width>
 					<label>$PARAM[main_label]</label>
 					<font>font35_title</font>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>65</height>
 					<align>center</align>
@@ -684,6 +685,7 @@
 					<label>$PARAM[sub_label]</label>
 					<font>font13</font>
 					<left>85</left>
+                    <textcolor>$VAR[MainColorVar]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<height>100</height>
@@ -914,7 +916,7 @@
 						<label>$INFO[Container.FolderName, / ]</label>
 						<include>BreadcrumbsLabel</include>
 						<visible>![Container.Content() + Window.IsActive(videos)]</visible>
-						<visible>![Window.IsActive(PVR) | Window.IsActive(MyPVRTimers.xml)]</visible>
+						<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Container.PluginCategory, / ]</label>
