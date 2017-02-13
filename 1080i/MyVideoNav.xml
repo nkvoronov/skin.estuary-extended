@@ -40,7 +40,7 @@
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>[Control.IsVisible(50) | Control.Isvisible(54)]</visible>
-				<visible>!StringCompare(ListItem.Label,..)</visible>
+                <visible>!StringCompare(ListItem.Label,..)</visible>
 				<include>Visible_Right</include>
 				<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 				<control type="image">
@@ -252,7 +252,7 @@
 						<description>Get more</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[21452]</label>
-					    <onclick>ActivateWindow(addonbrowser,addons://sources/video/,return)</onclick>
+						<onclick>ActivateWindow(addonbrowser,addons://sources/video/,return)</onclick>
 						<visible>Container.Content(addons)</visible>
 					</control>
 					<control type="button" id="622">

@@ -672,6 +672,7 @@
 					<width>1800</width>
 					<label>$PARAM[main_label]</label>
 					<font>font35_title</font>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>65</height>
 					<align>center</align>
@@ -682,6 +683,7 @@
 					<label>$PARAM[sub_label]</label>
 					<font>font13</font>
 					<left>85</left>
+                    <textcolor>button_focus</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<height>100</height>

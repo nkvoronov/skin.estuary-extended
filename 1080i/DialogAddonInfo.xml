@@ -34,30 +34,44 @@
 				<left>625</left>
 				<top>176</top>
 				<visible>IntegerGreaterThan(Container(50).NumItems,0)</visible>
+                <control type="image">
+                    <width>385</width>
+					<height>220</height>
+                    <texture border="22">dialogs/dialog-bg.png</texture>
+                </control>
 				<control type="image">
 					<width>385</width>
 					<height>220</height>
 					<texture border="2" background="true">DefaultNoPreview.png</texture>
 					<aspectratio>scale</aspectratio>
-					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
 				</control>
+                <control type="image">
+					<left>405</left>
+					<width>385</width>
+					<height>220</height>
+                    <texture border="22">dialogs/dialog-bg.png</texture>
+                </control>
 				<control type="image">
 					<left>405</left>
 					<width>385</width>
 					<height>220</height>
 					<texture border="2" background="true">DefaultNoPreview.png</texture>
 					<aspectratio>scale</aspectratio>
-					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
 				</control>
+                <control type="image">
+					<left>810</left>
+					<width>385</width>
+					<height>220</height>
+                    <texture border="22">dialogs/dialog-bg.png</texture>
+                </control>
 				<control type="image">
 					<left>810</left>
 					<width>385</width>
 					<height>220</height>
 					<texture border="2" background="true">DefaultNoPreview.png</texture>
 					<aspectratio>scale</aspectratio>
-					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
 				</control>
 			</control>
@@ -70,12 +84,16 @@
 				<onup>9000</onup>
 				<orientation>horizontal</orientation>
 				<itemlayout height="225" width="405">
+                    <control type="image">
+                        <width>385</width>
+                        <height>220</height>
+                        <texture border="22">dialogs/dialog-bg.png</texture>
+                    </control>
 					<control type="image">
 						<width>385</width>
 						<height>220</height>
 						<texture border="2" background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
-						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 					<control type="image">
@@ -83,17 +101,20 @@
 						<height>220</height>
 						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>scale</aspectratio>
-						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 				</itemlayout>
 				<focusedlayout height="225" width="405">
+                    <control type="image">
+                        <width>385</width>
+                        <height>220</height>
+                        <texture border="22">dialogs/dialog-bg.png</texture>
+                    </control>
 					<control type="image">
 						<width>385</width>
 						<height>220</height>
 						<texture border="2" background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
-						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 					<control type="image">
@@ -101,7 +122,6 @@
 						<height>220</height>
 						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>scale</aspectratio>
-						<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 					<control type="image">
@@ -246,8 +266,8 @@
 			</control>
 		</control>
 		<include name="InfoDialogTopBarInfo">
-			<param name="main_label" value="$INFO[ListItem.Property(Addon.Name)]" />
-			<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version),[COLOR grey],[/COLOR]]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ]" />
+			<param name="main_label" value="[COLOR white]$INFO[ListItem.Property(Addon.Name)][/COLOR]" />
+			<param name="sub_label" value="$INFO[ListItem.Property(Addon.Version)][COLOR white]$INFO[ListItem.Property(Addon.Creator), $LOCALIZE[31071] ][/COLOR]" />
 		</include>
 	</controls>
 </window>
