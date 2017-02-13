@@ -65,23 +65,23 @@
 					<param name="label" value="$LOCALIZE[192]" />
 					<param name="icon" value="DefaultIconError.png" />
 				</include>
-				<control type="image">
-					<left>40</left>
+                <control type="group">
+                    <left>40</left>
 					<top>0</top>
-					<width>340</width>
-					<height>360</height>
-					<texture border="22">dialogs/dialog-bg.png</texture>
-				</control>
-				<control type="image">
-					<left>40</left>
-					<top>0</top>
-					<width>340</width>
-					<height>360</height>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="20">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-				</control>
+      				<control type="image">					
+      					<width>340</width>
+      					<height>360</height>
+      					<texture border="22">dialogs/dialog-bg.png</texture>
+      				</control>
+      				<control type="image">
+      					<width>340</width>
+      					<height>360</height>
+      					<aspectratio>scale</aspectratio>
+      					<texture fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+      					<bordertexture border="20">overlays/shadow.png</bordertexture>
+      					<bordersize>20</bordersize>
+      				</control>
+                </control>
 			</control>
 			<control type="group">
 				<left>300</left>
