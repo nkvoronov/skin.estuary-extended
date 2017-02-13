@@ -18,8 +18,16 @@
 				<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
 				<onclick>SetProperty(TextViewer_Text,$ESCINFO[ListItem.AddonNews],home)</onclick>
 				<onclick>ActivateWindow(1102)</onclick>
+                <texturenofocus></texturenofocus>
 				<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
 			</control>
+            <control type="image">
+				<left>605</left>
+				<top>400</top>
+				<width>1235</width>
+				<height>375</height>
+                <texture border="22">dialogs/dialog-bg.png</texture>
+            </control>
 			<control type="textbox">
 				<left>670</left>
 				<top>435</top>
@@ -198,30 +206,26 @@
 			<include>OpenClose_Left</include>
 			<top>158</top>
 			<left>80</left>
-			<control type="image">
-				<width>505</width>
+            <control type="image">
+                <width>505</width>
 				<height>505</height>
-				<aspectratio>scale</aspectratio>
-				<texture colordiffuse="border_alpha">colors/black.png</texture>
-				<bordertexture border="20">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-			</control>
+                <texture border="22">dialogs/dialog-bg.png</texture>
+            </control>
 			<control type="image">
 				<left>24</left>
 				<top>24</top>
 				<width>457</width>
 				<height>457</height>
-				<aspectratio aligny="top">scale</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<fadetime>300</fadetime>
 				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="button">
-				<left>-3</left>
+            <control type="image">
 				<top>490</top>
-				<width>511</width>
+				<width>505</width>
 				<height>128</height>
-				<label></label>
-			</control>
+                <texture border="22">dialogs/dialog-bg.png</texture>
+            </control>
 			<control type="textbox">
 				<left>30</left>
 				<top>515</top>

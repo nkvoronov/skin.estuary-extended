@@ -134,6 +134,7 @@
 				<item>
 					<label>$LOCALIZE[20183]</label>
 					<onclick>ReloadSkin()</onclick>
+                    <onclick condition="Skin.HasSetting(enable_skin_debug)">Skin.ToggleDebug</onclick>
                     <visible>!Skin.HasSetting(hide_reload_skin_button)</visible>
 				</item>
 			</content>
