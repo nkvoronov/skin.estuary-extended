@@ -69,7 +69,7 @@
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
                     <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>IsEmpty(Listitem.Property(Artist_Description)) + IsEmpty(Listitem.Property(Album_Description))</visible>					
+					<visible>IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + IsEmpty(Listitem.Property(Artist_Description)) + IsEmpty(Listitem.Property(Album_Description))</visible>					
 				</control>
 				<control type="image">
 					<right>113</right>

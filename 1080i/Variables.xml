@@ -97,8 +97,8 @@
         <value condition="Window.IsActive(pictures)">$INFO[ListItem.Size,$LOCALIZE[289]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: [COLOR white],[/COLOR][CR]]$INFO[ListItem.Date,$LOCALIZE[552]: [COLOR white],[/COLOR][CR]]</value>
         <value condition="StringCompare(ListItem.DBType,episode) + IntegerGreaterThan(ListItem.Playcount,1) + !SubString(Container.FolderPath,plugin://,Left)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
         <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) + !Container.Content(movies) + !Container.Content(tvshows)">[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</value>
-        <value condition="Container.Content(artists)">[COLOR white]$INFO[ListItem.Property(artist_description)][/COLOR]</value>
-        <value condition="Container.Content(albums)">[COLOR white]$INFO[ListItem.Property(album_description)][/COLOR]</value>
+        <value condition="Container.Content(artists)">[COLOR white]$INFO[ListItem.Property(Artist_Description)][/COLOR]</value>
+        <value condition="Container.Content(albums)">[COLOR white]$INFO[ListItem.Property(Album_Description)][/COLOR]</value>
         <value condition="StringCompare(ListItem.DBType,episode) + IntegerGreaterThan(ListItem.Playcount,1)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
         <value>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
     </variable>
