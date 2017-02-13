@@ -56,8 +56,8 @@
 					<align>center</align>
 					<font>font24_title</font>
 					<label>$LOCALIZE[19055]</label>
-					<visible>String.IsEmpty(Listitem.Property(Artist_Description)) + String.IsEmpty(Listitem.Property(Album_Description))</visible>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+                    <autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					<visible>String.IsEmpty(Listitem.Property(Artist_Description)) + String.IsEmpty(Listitem.Property(Album_Description))</visible>					
 				</control>
 				<control type="image">
 					<right>113</right>

@@ -49,9 +49,7 @@
 				<left>-16</left>
 				<width>506</width>
 				<height>741</height>
-				<texture colordiffuse="60FFFFFF">colors/black.png</texture>
-				<bordertexture border="20">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<texture border="40">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="image">
 				<top>-16</top>
@@ -68,7 +66,7 @@
 				<top>-18</top>
 				<width>506</width>
 				<height>616</height>
-				<texture border="40">buttons/button-nofo.png</texture>
+				<texture border="40">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="textbox">
 				<left>1326</left>
@@ -115,94 +113,34 @@
 				<itemgap>-16</itemgap>
 				<onup>900</onup>
 				<onleft>900</onleft>
-				<control type="radiobutton" id="9001">
-					<width>262</width>
-					<height>142</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-					<textoffsetx>35</textoffsetx>
-					<textoffsety>78</textoffsety>
-					<radioposx>108</radioposx>
-					<radioposy>25</radioposy>
-					<radiowidth>48</radiowidth>
-					<radioheight>48</radioheight>
-					<font>font12</font>
-					<label>$INFO[Control.GetLabel(192)]</label>
-					<textureradioonfocus colordiffuse="D0FFFFFF">icons/infodialogs/play.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="D0FFFFFF">icons/infodialogs/play.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="D0FFFFFF">icons/infodialogs/play.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/infodialogs/play.png</textureradiooffnofocus>
-					<onclick>SendClick(192)</onclick>
-					<visible>Control.IsVisible(192) + ![Control.IsVisible(120) | Control.IsVisible(130) | Control.IsVisible(160)]</visible>
-				</control>
-				<control type="radiobutton" id="9002">
-					<width>262</width>
-					<height>142</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-					<textoffsetx>35</textoffsetx>
-					<textoffsety>78</textoffsety>
-					<radioposx>108</radioposx>
-					<radioposy>25</radioposy>
-					<radiowidth>48</radiowidth>
-					<radioheight>48</radioheight>
-					<font>font12</font>
-					<label>$INFO[Control.GetLabel(192)]</label>
-					<textureradioonfocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradiooffnofocus>
-					<onclick>SendClick(192)</onclick>
-					<visible>Control.IsVisible(192) + [Control.IsVisible(120) | Control.IsVisible(130) | Control.IsVisible(160)]</visible>
-				</control>
-				<control type="radiobutton" id="9003">
-					<width>262</width>
-					<height>142</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-					<textoffsetx>35</textoffsetx>
-					<textoffsety>78</textoffsety>
-					<radioposx>108</radioposx>
-					<radioposy>25</radioposy>
-					<radiowidth>48</radiowidth>
-					<radioheight>48</radioheight>
-					<font>font12</font>
-					<label>$INFO[Control.GetLabel(193)]</label>
-					<textureradioonfocus colordiffuse="D0FFFFFF">icons/infodialogs/trailer.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="D0FFFFFF">icons/infodialogs/trailer.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="D0FFFFFF">icons/infodialogs/trailer.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/infodialogs/trailer.png</textureradiooffnofocus>
-					<onclick>SendClick(193)</onclick>
-					<visible>Control.IsVisible(193) + !Control.IsVisible(170)</visible>
-				</control>
-				<control type="radiobutton" id="9004">
-					<width>262</width>
-					<height>142</height>
-					<align>center</align>
-					<aligny>top</aligny>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-					<texturenofocus border="40">buttons/button-nofo.png</texturenofocus>
-					<textoffsetx>35</textoffsetx>
-					<textoffsety>78</textoffsety>
-					<radioposx>108</radioposx>
-					<radioposy>25</radioposy>
-					<radiowidth>48</radiowidth>
-					<radioheight>48</radioheight>
-					<font>font12</font>
-					<label>$INFO[Control.GetLabel(193)]</label>
-					<textureradioonfocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioonfocus>
-					<textureradioonnofocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradioofffocus>
-					<textureradiooffnofocus colordiffuse="D0FFFFFF">icons/infodialogs/changelog.png</textureradiooffnofocus>
-					<onclick>SendClick(193)</onclick>
-					<visible>Control.IsVisible(193) + Control.IsVisible(170)</visible>
-				</control>
+                <include content="InfoDialogButton">
+                    <param name="id" value="9001" />
+                    <param name="icon" value="icons/infodialogs/play.png" />
+                    <param name="label" value="$INFO[Control.GetLabel(192)]" />
+                    <param name="onclick_1" value="SendClick(192)" />
+                    <param name="visible" value="Control.IsVisible(192) + ![Control.IsVisible(120) | Control.IsVisible(130) | Control.IsVisible(160)]" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="9002" />
+                    <param name="icon" value="icons/infodialogs/changelog.png" />
+                    <param name="label" value="$INFO[Control.GetLabel(192)]" />
+                    <param name="onclick_1" value="SendClick(192)" />
+                    <param name="visible" value="Control.IsVisible(192) + [Control.IsVisible(120) | Control.IsVisible(130) | Control.IsVisible(160)]" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="9003" />
+                    <param name="icon" value="icons/infodialogs/trailer.png" />
+                    <param name="label" value="$INFO[Control.GetLabel(193)]" />
+                    <param name="onclick_1" value="SendClick(193)" />
+                    <param name="visible" value="Control.IsVisible(193) + !Control.IsVisible(170)" />
+                </include>
+                <include content="InfoDialogButton">
+                    <param name="id" value="9004" />
+                    <param name="icon" value="icons/infodialogs/changelog.png" />
+                    <param name="label" value="$INFO[Control.GetLabel(193)]" />
+                    <param name="onclick_1" value="SendClick(193)" />
+                    <param name="visible" value="Control.IsVisible(193) + Control.IsVisible(170)" />
+                </include>
 			</control>
 			<control type="group" id="900">
 				<control type="list" id="110">
@@ -217,7 +155,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -246,7 +184,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(110)</visible>
 						</control>
 						<control type="image">
@@ -372,7 +310,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -401,7 +339,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">
@@ -509,7 +447,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -538,7 +476,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(130)</visible>
 						</control>
 						<control type="image">
@@ -610,7 +548,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -639,7 +577,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(140)</visible>
 						</control>
 						<control type="image">
@@ -753,7 +691,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -782,7 +720,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(150)</visible>
 						</control>
 						<control type="image">
@@ -896,7 +834,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -925,7 +863,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(160)</visible>
 						</control>
 						<control type="image">
@@ -1027,7 +965,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1056,7 +994,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(170)</visible>
 						</control>
 						<control type="image">
@@ -1170,7 +1108,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1199,7 +1137,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(180)</visible>
 						</control>
 						<control type="image">
@@ -1313,7 +1251,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 						</control>
 						<control type="label">
 							<left>40</left>
@@ -1342,7 +1280,7 @@
 							<top>0</top>
 							<width>800</width>
 							<height>100</height>
-							<texture border="40">buttons/button-nofo.png</texture>
+							<texture border="40">dialogs/dialog-bg.png</texture>
 							<visible>!Control.HasFocus(200)</visible>
 						</control>
 						<control type="image">

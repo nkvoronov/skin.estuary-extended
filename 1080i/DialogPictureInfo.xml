@@ -116,8 +116,8 @@
 			</control>
 		</control>
 		<include content="InfoDialogTopBarInfo">
-			<param name="main_label" value="$INFO[ListItem.Label]" />
-			<param name="sub_label" value="$INFO[ListItem.PictureDateTime]" />
+			<param name="main_label" value="[COLOR white]$INFO[ListItem.Label][/COLOR]" />
+			<param name="sub_label" value="[COLOR white]$INFO[ListItem.PictureDateTime][/COLOR]" />
 		</include>
 	</controls>
 </window>

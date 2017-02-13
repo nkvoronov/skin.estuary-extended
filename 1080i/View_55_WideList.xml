@@ -161,7 +161,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<font>fontContextMenu</font>
-				<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 			<control type="label">
@@ -191,7 +191,7 @@
 				<width>1030</width>
 				<aligny>center</aligny>
 				<font>fontContextMenu</font>
-				<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 			<control type="label">
