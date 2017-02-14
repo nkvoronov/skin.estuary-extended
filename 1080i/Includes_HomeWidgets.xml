@@ -6,6 +6,7 @@
         </include>
         <control type="grouplist" id="$PARAM[submain_id]001">
             <orientation>vertical</orientation>
+            <animation effect="slide" start="0,0" end="0,110" time="0" condition="StringCompare(Container($PARAM[submain_id]900).NumItems,0)">Conditional</animation>
             <height>922</height>
             <scrolltime tween="cubic" easing="out">500</scrolltime>
             <!-- SubMenu -->
@@ -189,7 +190,7 @@
             <param name="widget_header" value="$LOCALIZE[31015]"/>
             <param name="widget_target" value="pvr"/>
             <param name="onup_id" value="$PARAM[control_id]103"/>
-            <param name="list_id" value="$PARAM[control_id]104"/>					
+            <param name="list_id" value="$PARAM[control_id]104"/>
             <param name="height" value="550"/>
         </include>
     </include>            
@@ -339,7 +340,7 @@
         </include>			
         <!-- No Addons -->                        
         <include content="Widget-Image">
-            <param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
+            <param name="image_path" value="special://skin/extras/home-images/addons.jpg"/>
             <param name="text_label" value="$LOCALIZE[31119]" />
             <param name="button_label" value="$LOCALIZE[31118]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />

@@ -477,8 +477,8 @@
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43019]</label>
-                    <selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
-                    <onclick>Skin.ToggleSetting(Skin.ToggleDebug)</onclick>
+                    <selected>Skin.HasSetting(enable_skin_debug)</selected>
+                    <onclick>Skin.ToggleSetting(enable_skin_debug)</onclick>
                     <onclick>Skin.ToggleDebug</onclick>
                 </control>                
 			</control>
