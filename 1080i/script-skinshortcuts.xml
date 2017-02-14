@@ -233,15 +233,15 @@
                     <label>$ADDON[script.skinshortcuts 32026]</label>
                     <label2>$INFO[Container(211).ListItem.Icon]</label2>
                 </control>
-                <!-- No implementation -->
-                <!-- <control type="button" id="310">
+                <!-- No implementation ???? -->
+                <control type="button" id="310">
                     <description>Browse for background</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-                </control> -->
+                </control>
                 <control type="button" id="405">
                     <description>Edit submenu</description>
                     <width>1256</width>

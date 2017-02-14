@@ -6,6 +6,7 @@
         </include>
         <control type="grouplist" id="$PARAM[submain_id]001">
             <orientation>vertical</orientation>
+            <animation effect="slide" start="0,0" end="0,110" time="0" condition="StringCompare(Container($PARAM[submain_id]900).NumItems,0)">Conditional</animation>
             <height>922</height>
             <scrolltime tween="cubic" easing="out">500</scrolltime>
             <!-- SubMenu -->
@@ -316,7 +317,7 @@
         </include>			
         <!-- No Addons -->                        
         <include name="Widget-Image">
-            <param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
+            <param name="image_path" value="special://skin/extras/home-images/addons.jpg"/>
             <param name="text_label" value="$LOCALIZE[31119]" />
             <param name="button_label" value="$LOCALIZE[31118]" />
             <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
