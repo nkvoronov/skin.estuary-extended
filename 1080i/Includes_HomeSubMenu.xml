@@ -440,7 +440,7 @@
                     <param name="item_image" value="DefaultPlaylist.png"/>
                 </include>
                 <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/tv.jpg"/>
+                    <param name="image_path" value="special://skin/extras/home-images/videos.jpg"/>
                     <param name="text_label" value="$LOCALIZE[31105]" />
                     <param name="button_label" value="$LOCALIZE[31110]" />
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,video,home)" />
@@ -1018,7 +1018,7 @@
                 </include>
                 <!-- No Addons -->                        
                 <include name="ImageWidget">
-                    <param name="image_path" value="special://skin/extras/home-images/add-ons.jpg"/>
+                    <param name="image_path" value="special://skin/extras/home-images/addons.jpg"/>
                     <param name="text_label" value="$LOCALIZE[31119]" />
                     <param name="button_label" value="$LOCALIZE[31118]" />
                     <param name="button_onclick2" value="SetProperty(FanartHomeType,addons,home)" />
