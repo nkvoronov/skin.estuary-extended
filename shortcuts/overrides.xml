@@ -157,7 +157,8 @@
 	<backgrounddefault labelID="search">special://skin/extras/home-images/search.jpg</backgrounddefault>
     <backgrounddefault labelID="power">special://skin/extras/home-images/power.jpg</backgrounddefault>    
     <backgrounddefault labelID="favourite">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
-    <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>    
+    <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>
+    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>    
     <!-- Menus Groupings -->
     <groupings>
         <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
