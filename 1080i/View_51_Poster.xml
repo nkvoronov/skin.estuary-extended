@@ -184,7 +184,16 @@
                             <label>$LOCALIZE[180]: [COLOR white]$INFO[ListItem.Duration] $LOCALIZE[31060][/COLOR]</label>
                             <textcolor>button_focus</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
-							<visible>!IsEmpty(ListItem.Duration)</visible>
+							<visible>!IsEmpty(ListItem.Duration) + IsEmpty(ListItem.Property(NumEpisodes))</visible>
+						</control>
+                        <control type="label">
+							<font>font12</font>
+							<width>1160</width>
+							<height>38</height>
+                            <label>$INFO[ListItem.Property(NumEpisodes),$LOCALIZE[20360]: [COLOR white],[/COLOR]]$INFO[ListItem.Property(UnWatchedEpisodes), [COLOR white]($LOCALIZE[31064]: ,)[/COLOR]]</label>
+                            <textcolor>button_focus</textcolor>
+							<shadowcolor>text_shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.Property(NumEpisodes))</visible>
 						</control>
 						<control type="label">
 							<font>font12</font>
