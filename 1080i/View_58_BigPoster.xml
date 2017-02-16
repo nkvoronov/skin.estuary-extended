@@ -181,7 +181,7 @@
                                 <left>80</left>
                                 <width>170</width>
                                 <height>32</height>
-                                <visible>!String.IsEmpty(ListItem.duration)</visible>
+                                <visible>!String.IsEmpty(ListItem.duration) + String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
                                 <visible>!ListItem.IsCollection</visible>
                                 <control type="image">
                                     <top>0</top>
