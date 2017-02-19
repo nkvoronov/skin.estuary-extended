@@ -216,7 +216,7 @@
 				<top>24</top>
 				<width>457</width>
 				<height>457</height>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<fadetime>300</fadetime>
 				<texture background="true" fallback="DefaultFolderSquare.png">$INFO[ListItem.Icon]</texture>
 			</control>
