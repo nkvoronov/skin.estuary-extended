@@ -15,7 +15,7 @@
             <shadowcolor>black</shadowcolor>
             <label>$INFO[System.Time]</label>
             <animation effect="slide" start="0,0" end="-65,0" time="0" condition="Window.IsActive(volumebar) | Player.Muted">conditional</animation>
-            <visible>Skin.HasSetting(FullScreenClock) + ![Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
+            <visible>Skin.HasSetting(full_screen_clock) + ![Player.ShowInfo | Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Window.IsActive(PVROSDChannels) | Window.IsActive(PVROSDGuide)]</visible>
         </control>
 		<control type="group" id="0">
             <!-- codec infos -->

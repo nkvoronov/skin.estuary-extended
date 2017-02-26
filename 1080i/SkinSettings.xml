@@ -272,8 +272,8 @@
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>- $LOCALIZE[24020] Skin Helper Artwork</label>
-                    <onclick>Addon.OpenSettings(script.module.skin.helper.artutils)</onclick>
-					<visible>System.HasAddon(script.module.skin.helper.artutils)</visible>
+                    <onclick>Addon.OpenSettings(script.module.metadatautils)</onclick>
+					<visible>System.HasAddon(script.module.metadatautils)</visible>
 				</control>
                 <control type="button" id="118">
                     <description>Settings Skin Helper Service Backgrounds</description>					
@@ -361,24 +361,24 @@
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43009]</label>
-					<onclick>Skin.ToggleSetting(FullScreenClock)</onclick>
-					<selected>Skin.HasSetting(FullScreenClock)</selected>
+					<onclick>Skin.ToggleSetting(full_screen_clock)</onclick>
+					<selected>Skin.HasSetting(full_screen_clock)</selected>
 				</control>
                 <control type="radiobutton" id="202">
                     <description>Slide Show Info</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43010]</label>
-					<onclick>Skin.ToggleSetting(SlideShowInfo)</onclick>
-					<selected>Skin.HasSetting(SlideShowInfo)</selected>
+					<onclick>Skin.ToggleSetting(slideshow_info)</onclick>
+					<selected>Skin.HasSetting(slideshow_info)</selected>
 				</control>
                 <control type="radiobutton" id="203">
                     <description>Enable Stats Bar</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43011]</label>
-					<onclick>Skin.ToggleSetting(EnableHomeStats)</onclick>
-					<selected>Skin.HasSetting(EnableHomeStats)</selected>
+					<onclick>Skin.ToggleSetting(enable_home_stats)</onclick>
+					<selected>Skin.HasSetting(enable_home_stats)</selected>
 				</control>
                 <control type="button" id="204">
                     <description>Widget Limit Items</description>					
