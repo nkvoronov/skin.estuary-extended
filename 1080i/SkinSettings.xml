@@ -243,24 +243,24 @@
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43009]</label>
-					<onclick>Skin.ToggleSetting(FullScreenClock)</onclick>
-					<selected>Skin.HasSetting(FullScreenClock)</selected>
+					<onclick>Skin.ToggleSetting(full_screen_clock)</onclick>
+					<selected>Skin.HasSetting(full_screen_clock)</selected>
 				</control>
                 <control type="radiobutton" id="202">
                     <description>Slide Show Info</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43010]</label>
-					<onclick>Skin.ToggleSetting(SlideShowInfo)</onclick>
-					<selected>Skin.HasSetting(SlideShowInfo)</selected>
+					<onclick>Skin.ToggleSetting(slideshow_info)</onclick>
+					<selected>Skin.HasSetting(slideshow_info)</selected>
 				</control>
                 <control type="radiobutton" id="203">
                     <description>Enable Stats Bar</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43011]</label>
-					<onclick>Skin.ToggleSetting(EnableHomeStats)</onclick>
-					<selected>Skin.HasSetting(EnableHomeStats)</selected>
+					<onclick>Skin.ToggleSetting(enable_home_stats)</onclick>
+					<selected>Skin.HasSetting(enable_home_stats)</selected>
 				</control>
                 <control type="image" id="204">
                     <description>Separator image</description>
