@@ -658,10 +658,6 @@ msgctxt "#43015"
 msgid "Choose weather icons"
 msgstr "Вибрати іконки погоди"
 
-msgctxt "#43016"
-msgid "Choose music genre icons"
-msgstr "Вибрати іконки жанрів для музики"
-
 msgctxt "#43017"
 msgid "Enable user list of add-ons"
 msgstr "Дозволити список користувача доповнень"
@@ -693,6 +689,10 @@ msgstr "Вибрати фанарт пакет"
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr "Вибрати фанарт пакет для погоди"
+
+msgctxt "#43013"
+msgid "Choose music genre icons"
+msgstr "Вибрати іконки жанрів для музики"
 
 msgctxt "#43040"
 msgid "Advanced options"

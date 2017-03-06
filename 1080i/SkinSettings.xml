@@ -299,7 +299,7 @@
 				    <description>Music genre icons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[43016]</label>
+					<label>$LOCALIZE[43033]</label>
 					<label2>$VAR[MusicGenreIconsNameVar]</label2>					
 					<onclick>RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>

@@ -809,10 +809,6 @@ msgctxt "#43015"
 msgid "Choose weather icons"
 msgstr ""
 
-msgctxt "#43016"
-msgid "Choose music genre icons"
-msgstr ""
-
 msgctxt "#43017"
 msgid "Enable user list of add-ons"
 msgstr ""
@@ -843,6 +839,10 @@ msgstr ""
 
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
+msgstr ""
+
+msgctxt "#43033"
+msgid "Choose music genre icons"
 msgstr ""
 
 msgctxt "#43040"
