@@ -671,8 +671,8 @@ msgid "Show stats"
 msgstr "Показывать статистику"
 
 msgctxt "#43012"
-msgid "Show studios logos"
-msgstr "Показывать студийные лого"
+msgid "Choose movie genre icons"
+msgstr "Выбрать иконки жанров для фильмов"
 
 msgctxt "#43013"
 msgid "Choose studios logos"
@@ -753,6 +753,10 @@ msgstr "Восстановить"
 msgctxt "#43032"
 msgid "Widget Limit Items"
 msgstr "Виджеты лимит элементов"
+
+msgctxt "#43033"
+msgid "Choose music genre icons"
+msgstr "Выбрать иконки жанров для музыки"
 
 msgctxt "#43040"
 msgid "Advanced options"

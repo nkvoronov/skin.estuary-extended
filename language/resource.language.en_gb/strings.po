@@ -822,7 +822,7 @@ msgid "Show stats"
 msgstr ""
 
 msgctxt "#43012"
-msgid "Show studios logos"
+msgid "Choose movie genre icons"
 msgstr ""
 
 msgctxt "#43013"
@@ -903,6 +903,10 @@ msgstr ""
 
 msgctxt "#43032"
 msgid "Widget Limit Items"
+msgstr ""
+
+msgctxt "#43033"
+msgid "Choose music genre icons"
 msgstr ""
 
 msgctxt "#43040"
