@@ -671,8 +671,8 @@ msgid "Show stats"
 msgstr "Показывать статистику"
 
 msgctxt "#43012"
-msgid "Show studios logos"
-msgstr "Показывать студийные лого"
+msgid "Choose movie genre icons"
+msgstr "Выбрать иконки жанров для фильмов"
 
 msgctxt "#43013"
 msgid "Choose studios logos"
@@ -725,6 +725,10 @@ msgstr "Выбрать фанарт пакет"
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr "Выбрать фанарт пакет для погоды"
+
+msgctxt "#43033"
+msgid "Choose music genre icons"
+msgstr "Выбрать иконки жанров для музыки"
 
 msgctxt "#43026"
 msgid "Color Primary Background"
