@@ -55,13 +55,24 @@
                         <height>380</height>
                         <texture border="22">dialogs/dialog-bg.png</texture>
                     </control>
-                    <control type="image">
+					<control type="image">
                         <top>20</top>
                         <left>530</left>
                         <width>150</width>
                         <height>150</height>
-                        <texture>$VAR[CurrentWeatherIcon]</texture>
-                    </control>
+						<texture>$VAR[CurrentWeatherIconVar]</texture>
+						<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
+					</control>
+					<control type="multiimage">
+                        <top>20</top>
+                        <left>530</left>
+                        <width>150</width>
+                        <height>150</height>
+						<imagepath>$VAR[CurrentWeatherIconVar]</imagepath>
+						<timeperimage>100</timeperimage>
+						<randomize>false</randomize>
+						<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
+					</control>										
                     <control type="label">
                         <left>990</left>
                         <top>110</top>

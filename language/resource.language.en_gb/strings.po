@@ -794,7 +794,7 @@ msgid "Show stats"
 msgstr ""
 
 msgctxt "#43012"
-msgid "Show studios logos"
+msgid "Choose movie genre icons"
 msgstr ""
 
 msgctxt "#43013"
@@ -839,6 +839,10 @@ msgstr ""
 
 msgctxt "#43025"
 msgid "Choose weather fanart pack"
+msgstr ""
+
+msgctxt "#43033"
+msgid "Choose music genre icons"
 msgstr ""
 
 msgctxt "#43040"
@@ -938,5 +942,5 @@ msgid "Output oversampling"
 msgstr ""
 
 msgctxt "#43255"
-msgid "reload skin button"
+msgid "Hide reload skin button"
 msgstr ""

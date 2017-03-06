@@ -279,9 +279,36 @@
         <value condition="IsEmpty(ListItem.Thumb) + Container.Content(songs)">DefaultMusicSongs.png</value>
         <value condition="IsEmpty(ListItem.Thumb) + Container.Content(directors)">DefaultDirector.png</value>
         <value condition="IsEmpty(ListItem.Thumb) + Container.Content(playlists)">DefaultPlaylist.png</value>
-        <value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>        
-        <value condition="Container.Content(countries) + StringCompare(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
+	    <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.grey/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.grey/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.grey/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.poster/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.poster/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.poster/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.poster/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.white/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.white/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.white/,.jpg]</value>
+		<value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.transparent/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.transparent/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.jpg]</value>
+		<value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-flat/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-flat/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-flat/,.jpg]</value>
+		<value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-reflection/) + StringCompare(Skin.String(MovieGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(videos) + StringCompare(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.xzener-reflection/) + StringCompare(Skin.String(MovieGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.xzener-reflection/,.jpg]</value>        
+	    <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.grey/) + StringCompare(Skin.String(MusicGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.grey/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.grey/) + StringCompare(Skin.String(MusicGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.grey/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.poster/) + StringCompare(Skin.String(MusicGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.poster/) + StringCompare(Skin.String(MusicGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.jpg]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/) + StringCompare(Skin.String(MusicGenreIcons.ext),.png)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.png]</value>
+        <value condition="Container.Content(genres) + Window.IsActive(music) + StringCompare(Skin.String(MusicGenreIcons.path),resource://resource.images.musicgenreicons.text/) + StringCompare(Skin.String(MusicGenreIcons.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.text/,.jpg]</value>        
+        <value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.white/) + StringCompare(Skin.String(StudiosImages.ext),.png)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+        <value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.white/) + StringCompare(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.jpg]</value>
+		<value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + StringCompare(Skin.String(StudiosImages.ext),.png)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+        <value condition="Container.Content(studios) + StringCompare(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/) + StringCompare(Skin.String(StudiosImages.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.jpg]</value>                
+        <value condition="Container.Content(countries) + StringCompare(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + StringCompare(Skin.String(LanguageFlags.ext),.png)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
+        <value condition="Container.Content(countries) + StringCompare(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/) + StringCompare(Skin.String(LanguageFlags.ext),.jpg)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.jpg]</value>
         <value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -631,6 +658,16 @@
         <value condition="!IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
+    <!-- MovieGenreIcons Name -->
+    <variable name="MovieGenreIconsNameVar">
+        <value condition="!IsEmpty(Skin.String(MovieGenreIcons.name))">$INFO[Skin.String(MovieGenreIcons.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <!-- MusicGenreIcons Name -->
+    <variable name="MusicGenreIconsNameVar">
+        <value condition="!IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
     <!-- Background Overlay Type Name -->
     <variable name="BackgroundOverlayTypeNameVar">
         <value condition="IsEmpty(Skin.String(background_overlay))">$LOCALIZE[231]</value>
@@ -728,56 +765,9 @@
 		<value>dialogs/volume/volume1.png</value>
 	</variable>
     <!-- Current Weather Icon -->
-    <variable name="CurrentWeatherIcon">
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/na.png)">$INFO[Skin.String(WeatherIcons.path)]na.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/0.png)">$INFO[Skin.String(WeatherIcons.path)]0.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/1.png)">$INFO[Skin.String(WeatherIcons.path)]1.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/2.png)">$INFO[Skin.String(WeatherIcons.path)]2.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/3.png)">$INFO[Skin.String(WeatherIcons.path)]3.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/4.png)">$INFO[Skin.String(WeatherIcons.path)]4.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/5.png)">$INFO[Skin.String(WeatherIcons.path)]5.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/6.png)">$INFO[Skin.String(WeatherIcons.path)]6.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/7.png)">$INFO[Skin.String(WeatherIcons.path)]7.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/8.png)">$INFO[Skin.String(WeatherIcons.path)]8.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/9.png)">$INFO[Skin.String(WeatherIcons.path)]9.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/10.png)">$INFO[Skin.String(WeatherIcons.path)]10.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/11.png)">$INFO[Skin.String(WeatherIcons.path)]11.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/12.png)">$INFO[Skin.String(WeatherIcons.path)]12.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/13.png)">$INFO[Skin.String(WeatherIcons.path)]13.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/14.png)">$INFO[Skin.String(WeatherIcons.path)]14.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/15.png)">$INFO[Skin.String(WeatherIcons.path)]15.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/16.png)">$INFO[Skin.String(WeatherIcons.path)]16.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/17.png)">$INFO[Skin.String(WeatherIcons.path)]17.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/18.png)">$INFO[Skin.String(WeatherIcons.path)]18.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/19.png)">$INFO[Skin.String(WeatherIcons.path)]19.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/20.png)">$INFO[Skin.String(WeatherIcons.path)]20.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/21.png)">$INFO[Skin.String(WeatherIcons.path)]21.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/22.png)">$INFO[Skin.String(WeatherIcons.path)]22.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/23.png)">$INFO[Skin.String(WeatherIcons.path)]23.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/24.png)">$INFO[Skin.String(WeatherIcons.path)]24.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/25.png)">$INFO[Skin.String(WeatherIcons.path)]25.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/26.png)">$INFO[Skin.String(WeatherIcons.path)]26.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/27.png)">$INFO[Skin.String(WeatherIcons.path)]27.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/28.png)">$INFO[Skin.String(WeatherIcons.path)]28.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/29.png)">$INFO[Skin.String(WeatherIcons.path)]29.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/30.png)">$INFO[Skin.String(WeatherIcons.path)]30.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/31.png)">$INFO[Skin.String(WeatherIcons.path)]31.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/32.png)">$INFO[Skin.String(WeatherIcons.path)]32.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/33.png)">$INFO[Skin.String(WeatherIcons.path)]33.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/34.png)">$INFO[Skin.String(WeatherIcons.path)]34.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/35.png)">$INFO[Skin.String(WeatherIcons.path)]35.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/36.png)">$INFO[Skin.String(WeatherIcons.path)]36.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/37.png)">$INFO[Skin.String(WeatherIcons.path)]37.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/38.png)">$INFO[Skin.String(WeatherIcons.path)]38.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/39.png)">$INFO[Skin.String(WeatherIcons.path)]39.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/40.png)">$INFO[Skin.String(WeatherIcons.path)]40.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/41.png)">$INFO[Skin.String(WeatherIcons.path)]41.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/42.png)">$INFO[Skin.String(WeatherIcons.path)]42.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/43.png)">$INFO[Skin.String(WeatherIcons.path)]43.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/44.png)">$INFO[Skin.String(WeatherIcons.path)]44.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/45.png)">$INFO[Skin.String(WeatherIcons.path)]45.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/46.png)">$INFO[Skin.String(WeatherIcons.path)]46.png</value>
-        <value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + StringCompare(Weather.Conditions,resource://resource.images.weathericons.default/47.png)">$INFO[Skin.String(WeatherIcons.path)]47.png</value>
-        <value>$INFO[Weather.Conditions]</value>
+    <variable name="CurrentWeatherIconVar">
+		<value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + !Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
+		<value condition="!IsEmpty(Skin.String(WeatherIcons.name)) + Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
+		<value>$INFO[Weather.Conditions]</value>
     </variable>
 </includes>
