@@ -62,6 +62,7 @@
 				<align>center</align>
 				<label>$VAR[InfoBarStatsVar]</label>
 				<font>font10</font>
+                <visible>!Player.HasMedia</visible>
 				<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 				<visible>Skin.HasSetting(enable_home_stats)</visible>				
 			</control>

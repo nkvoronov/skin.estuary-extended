@@ -475,7 +475,18 @@
 					<left>50</left>
 					<width>300</width>
 					<height>300</height>
-					<texture>$VAR[CurrentWeatherIcon]</texture>
+					<texture>$VAR[CurrentWeatherIconVar]</texture>
+					<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
+				</control>
+				<control type="multiimage">
+					<top>232</top>
+					<left>50</left>
+					<width>300</width>
+					<height>300</height>
+					<imagepath>$VAR[CurrentWeatherIconVar]</imagepath>
+					<timeperimage>100</timeperimage>
+					<randomize>false</randomize>
+					<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
 				</control>
 				<control type="label">
 					<left>800</left>

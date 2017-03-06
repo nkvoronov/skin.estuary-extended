@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Estuary Extended
-# Addon id: skin.estuary-extended
-# Addon Provider: phil65, Piers, YLLOW_DRAGON
+# Addon Name: Estuary v2 Extended
+# Addon id: skin.estuary2-extended
+# Addon Provider: phil65, Ichabod Fletchman, YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -794,7 +794,7 @@ msgid "Show stats"
 msgstr ""
 
 msgctxt "#43012"
-msgid "Show studios logos"
+msgid "Choose movie genre icons"
 msgstr ""
 
 msgctxt "#43013"
@@ -807,6 +807,10 @@ msgstr ""
 
 msgctxt "#43015"
 msgid "Choose weather icons"
+msgstr ""
+
+msgctxt "#43016"
+msgid "Choose music genre icons"
 msgstr ""
 
 msgctxt "#43017"
@@ -922,5 +926,5 @@ msgid "Apply"
 msgstr ""
 
 msgctxt "#43255"
-msgid "reload skin button"
+msgid "Hide reload skin button"
 msgstr ""
