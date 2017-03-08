@@ -123,13 +123,14 @@
 						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
-					<control type="image">
-						<left>20</left>
-						<top>10</top>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-					</control>
+                    <include content="WeatherIcons">
+                        <param name="left" value="20" />
+                        <param name="top" value="10" />
+                        <param name="width" value="80" />
+                        <param name="height" value="80" />
+                        <param name="image_1" value="$INFO[ListItem.Thumb]" />
+                        <param name="image_multi" value="$INFO[ListItem.Thumb]" />
+                    </include>
 					<control type="label">
 						<left>120</left>
 						<top>13</top>
@@ -180,13 +181,14 @@
 						<height>107</height>
 						<texture border="90,3,90,3">lists/separator.png</texture>
 					</control>
-					<control type="image">
-						<left>20</left>
-						<top>10</top>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-					</control>
+                    <include content="WeatherIcons">
+                        <param name="left" value="20" />
+                        <param name="top" value="10" />
+                        <param name="width" value="80" />
+                        <param name="height" value="80" />
+                        <param name="image_1" value="$INFO[ListItem.Thumb]" />
+                        <param name="image_multi" value="$INFO[ListItem.Thumb]" />
+                    </include>
 					<control type="label">
 						<left>120</left>
 						<top>13</top>
@@ -314,13 +316,14 @@
 						<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(8000)">Conditional</animation>
 					</control>
-					<control type="image">
-						<left>20</left>
-						<top>10</top>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-					</control>
+                    <include content="WeatherIcons">
+                        <param name="left" value="20" />
+                        <param name="top" value="10" />
+                        <param name="width" value="80" />
+                        <param name="height" value="80" />
+                        <param name="image_1" value="$INFO[ListItem.Thumb]" />
+                        <param name="image_multi" value="$INFO[ListItem.Thumb]" />
+                    </include>
 					<control type="label">
 						<left>120</left>
 						<top>0</top>
@@ -349,13 +352,14 @@
 						<height>107</height>
 						<texture border="90,3,90,3">lists/separator.png</texture>
 					</control>
-					<control type="image">
-						<left>20</left>
-						<top>10</top>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-					</control>
+                    <include content="WeatherIcons">
+                        <param name="left" value="20" />
+                        <param name="top" value="10" />
+                        <param name="width" value="80" />
+                        <param name="height" value="80" />
+                        <param name="image_1" value="$INFO[ListItem.Thumb]" />
+                        <param name="image_multi" value="$INFO[ListItem.Thumb]" />
+                    </include>
 					<control type="label">
 						<left>120</left>
 						<top>0</top>
@@ -470,24 +474,14 @@
 					<height>392</height>
 					<texture border="22">dialogs/dialog-bg.png</texture>
 				</control>
-				<control type="image">
-					<top>232</top>
-					<left>50</left>
-					<width>300</width>
-					<height>300</height>
-					<texture>$VAR[CurrentWeatherIconVar]</texture>
-					<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
-				</control>
-				<control type="multiimage">
-					<top>232</top>
-					<left>50</left>
-					<width>300</width>
-					<height>300</height>
-					<imagepath>$VAR[CurrentWeatherIconVar]</imagepath>
-					<timeperimage>100</timeperimage>
-					<randomize>false</randomize>
-					<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
-				</control>
+                <include content="WeatherIcons">
+					<param name="left" value="50" />
+					<param name="top" value="232" />
+					<param name="width" value="300" />
+					<param name="height" value="300" />
+					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
+				</include>
 				<control type="label">
 					<left>800</left>
 					<top>310</top>
