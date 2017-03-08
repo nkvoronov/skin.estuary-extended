@@ -766,7 +766,7 @@
 	<include name="HourlyItems">
 		<content>
 			<include name="WeatherNAItem">
-				<param name="visible" value="String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+				<param name="visible" value="IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
 			</include>
 			<include name="WeatherHourlyItem">
 				<param name="item_index" value="1" />
