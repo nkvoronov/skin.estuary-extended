@@ -1367,5 +1367,5 @@
 				<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
 			</control>
 		</definition>
-	</include>    
+	</include>
 </includes>

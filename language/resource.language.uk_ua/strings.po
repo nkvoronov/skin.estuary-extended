@@ -690,7 +690,7 @@ msgctxt "#43025"
 msgid "Choose weather fanart pack"
 msgstr "Вибрати фанарт пакет для погоди"
 
-msgctxt "#43013"
+msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr "Вибрати іконки жанрів для музики"
 
