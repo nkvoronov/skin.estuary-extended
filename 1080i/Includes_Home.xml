@@ -1194,24 +1194,14 @@
 							<height>350</height>
 							<texture border="22">dialogs/dialog-bg.png</texture>
 						</control>
-						<control type="image">
-							<left>60</left>
-							<top>130</top>
-							<width>130</width>
-							<height>130</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
-						</control>
-						<control type="multiimage">
-							<left>60</left>
-							<top>130</top>
-							<width>130</width>
-							<height>130</height>
-							<imagepath>$INFO[ListItem.Icon]</imagepath>
-							<timeperimage>100</timeperimage>
-							<randomize>false</randomize>
-							<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
-						</control>
+                        <include content="WeatherIcons">
+                            <param name="left" value="60" />
+                            <param name="top" value="130" />
+                            <param name="width" value="130" />
+                            <param name="height" value="130" />
+                            <param name="image_1" value="$INFO[ListItem.Icon]" />
+                            <param name="image_multi" value="$INFO[ListItem.Icon]" />
+                        </include>
 						<control type="label">
 							<left>15</left>
 							<top>47</top>
@@ -1261,24 +1251,14 @@
 								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 								<visible>Control.HasFocus($PARAM[list_id])</visible>
 							</control>
-							<control type="image">
-								<left>60</left>
-								<top>130</top>
-								<width>130</width>
-								<height>130</height>
-								<texture>$INFO[ListItem.Icon]</texture>
-								<visible>!Skin.HasSetting(WeatherIcons.multi)</visible>
-							</control>
-							<control type="multiimage">
-								<left>60</left>
-								<top>130</top>
-								<width>130</width>
-								<height>130</height>
-								<imagepath>$INFO[ListItem.Icon]</imagepath>
-								<timeperimage>100</timeperimage>
-								<randomize>false</randomize>
-								<visible>Skin.HasSetting(WeatherIcons.multi)</visible>
-							</control>
+                            <include content="WeatherIcons">
+                                <param name="left" value="60" />
+                                <param name="top" value="130" />
+                                <param name="width" value="130" />
+                                <param name="height" value="130" />
+                                <param name="image_1" value="$INFO[ListItem.Icon]" />
+                                <param name="image_multi" value="$INFO[ListItem.Icon]" />
+                            </include>
 							<control type="label">
 								<left>15</left>
 								<top>47</top>
@@ -1400,19 +1380,19 @@
 			<icon>resource://resource.images.weathericons.default/na.png</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.name))</visible>
+			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
 		</item>
 		<item>
 			<icon>$INFO[Skin.String(WeatherIcons.path)]/na.png</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 		<item>
 			<icon>$INFO[Skin.String(WeatherIcons.path)]/</icon>
 			<onclick>noop</onclick>
 			<visible>$PARAM[visible]</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
 	<include name="WeatherHourlyItem">
@@ -1424,10 +1404,10 @@
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode)]</property>
-			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Hourly.$PARAM[item_index].OutlookIcon)]</thumb>
+			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook))</visible>
-            <visible>String.IsEmpty(Skin.String(WeatherIcons.name))</visible>
+            <visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1440,7 +1420,7 @@
 			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook))</visible>
-            <visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+            <visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1453,7 +1433,7 @@
 			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode),,/]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook))</visible>
-            <visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+            <visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
 	<include name="WeatherDailyItem">
@@ -1466,10 +1446,10 @@
 			<property name="Outlook">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Outlook)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
-			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_index].OutlookIcon)]</thumb>
+			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook))</visible>
-            <visible>String.IsEmpty(Skin.String(WeatherIcons.name))</visible>
+            <visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
@@ -1483,7 +1463,7 @@
 			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,.png]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook))</visible>
-            <visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+            <visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
@@ -1497,7 +1477,7 @@
 			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode),,/]</thumb>
 			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook))</visible>
-            <visible>!String.IsEmpty(Skin.String(WeatherIcons.name)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+            <visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
 		</item>
 	</include>
 	<include name="WeatherMapItem">
