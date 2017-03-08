@@ -271,11 +271,10 @@
                     <description>Studios images</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[43013]</label>
+                    <label>$LOCALIZE[43013]</label>
 					<label2>$VAR[StudiosImagesNameVar]</label2>
                     <onclick>RunScript(script.image.resource.select,property=StudiosImages&amp;type=resource.images.studios)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
-                    <visible>Skin.HasSetting(show_studiologos)</visible>
 				</control>
                 <control type="button" id="206">
                     <description>Language Flags</description>					
