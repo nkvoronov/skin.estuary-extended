@@ -23,6 +23,14 @@
         <value condition="StringCompare(Container(9000).ListItem.Property(defaultID),livetv) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
         <!-- Radio -->
         <value condition="StringCompare(Container(9000).ListItem.Property(defaultID),radio) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[19021])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
+        <!-- Weather -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(defaultID),weather) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[8])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
+        <!-- Addons -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(defaultID),addons) | StringCompare(Container(9000).ListItem.label2,$LOCALIZE[24001])">[B][COLOR $VAR[MainColorVar]]$LOCALIZE[3]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalVideoAddons]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[2]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[0]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[1]: [/COLOR][/B]$INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>        
+        <!-- Other -->
+		<value condition="!SubString(System.CPUTemperature,?) + !SubString(System.GPUTemperature,?)">[B][COLOR $VAR[MainColorVar]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
+		<value condition="!SubString(System.CPUTemperature,?)">[B][COLOR $VAR[MainColorVar]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR $VAR[MainColorVar]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR $VAR[MainColorVar]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
+		<value>[COLOR $VAR[MainColorVar]][B]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR $VAR[MainColorVar]][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR $VAR[MainColorVar]][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
 	</variable>
     <!-- Now Playing label -->
 	<variable name="NowPlayingMainlabelVar">
