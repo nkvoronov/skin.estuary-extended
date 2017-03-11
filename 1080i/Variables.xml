@@ -21,6 +21,12 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(id),music)">[B][COLOR button_focus]$LOCALIZE[132]: [/COLOR][/B]$INFO[Window.Property(Music.AlbumsCount)]  [B][COLOR button_focus]$LOCALIZE[133]: [/COLOR][/B]$INFO[Window.Property(Music.ArtistsCount)]  [B][COLOR button_focus]$LOCALIZE[134]: [/COLOR][/B]$INFO[Window.Property(Music.SongsCount)]</value>
         <!-- PVR -->
         <value condition="StringCompare(Container(9000).ListItem.Property(id),livetv) | StringCompare(Container(9000).ListItem.Property(id),radio)">[B][COLOR button_focus]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Pvr.BackendChannels]</value>
+        <!-- Weather -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(id),weather)">[B][COLOR button_focus]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR button_focus]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
+        <!-- Other -->
+		<value condition="!SubString(System.CPUTemperature,?) + !SubString(System.GPUTemperature,?)">[B][COLOR button_focusIP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR button_focus]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR button_focus]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
+		<value condition="!SubString(System.CPUTemperature,?)">[B][COLOR button_focus]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR button_focus]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR button_focus]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
+		<value>[COLOR button_focus][B]IP: [/B][/COLOR]$INFO[Network.IPAddress]  [COLOR button_focus][B]RAM: [/B][/COLOR]$INFO[system.memory(used.percent)]  [COLOR button_focus][B]$LOCALIZE[155]: [/B][/COLOR]$INFO[System.UsedSpacePercent]</value>
 	</variable>
     <!-- Now Playing label -->
 	<variable name="NowPlayingMainlabelVar">
