@@ -284,6 +284,7 @@
     <!-- *** Views *** -->
 
     <!-- 50 List, 52 Icon Wall View Thumb -->
+	<!-- IconWallThumbVar -->
 	<variable name="IconWallThumbVar">
         <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
         <value condition="String.IsEmpty(ListItem.Thumb) + Container.Content(artists)">DefaultMusicArtists.png</value>
