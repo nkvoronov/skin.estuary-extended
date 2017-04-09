@@ -116,7 +116,7 @@
 	</variable>
     <!-- Addons Label2 -->
 	<variable name="AddonsLabel2Var">
-		<value condition="ListItem.Property(Addon.Downloading)">$INFO[ListItem.Property(addon.status)]</value>
+		<value condition="ListItem.Property(addon.downloading)">$INFO[ListItem.Property(addon.status)]</value>
 		<value condition="!Stringcompare(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Label2]</value>
 		<value>$INFO[ListItem.Property(Addon.Creator),, - ]$INFO[ListItem.Property(Addon.Version)]</value>
 	</variable>
@@ -186,6 +186,7 @@
         <value condition="Control.HasFocus(602) + Player.Paused">$LOCALIZE[208]</value>
         <value condition="Control.HasFocus(602)">$LOCALIZE[36045]</value>
         <value condition="Control.HasFocus(603)">$LOCALIZE[36044]</value>
+        <value condition="Control.HasFocus(605)">$LOCALIZE[209]</value>
 		<value condition="Control.HasFocus(87) + [Player.Rewinding | Player.Forwarding]">$LOCALIZE[31050]</value>
 		<value condition="Control.HasFocus(70011)">$LOCALIZE[20060]</value>
 		<value condition="Control.HasFocus(700)">$LOCALIZE[298]</value>
@@ -252,13 +253,13 @@
 		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20373]$INFO[VideoPlayer.Season,: , / ]$LOCALIZE[20359]$INFO[VideoPlayer.Episode,: ]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Year]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
-		<value condition="Player.HasAudio">[COLOR grey]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, (,) ]</value>
+		<value condition="Player.HasAudio">[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR] ]</value>
 	</variable>
     <!-- Player Label 3 -->
 	<variable name="PlayerLabel3Var">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,: ][COLOR grey]$INFO[Player.Title][/COLOR]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ][COLOR white]$INFO[Player.Title][/COLOR]</value>
 	</variable>
     <!-- Addon News -->
 	<variable name="AddonNewsVar">
