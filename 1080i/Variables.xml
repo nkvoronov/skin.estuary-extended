@@ -254,7 +254,7 @@
 		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20373]$INFO[VideoPlayer.Season,: , / ]$LOCALIZE[20359]$INFO[VideoPlayer.Episode,: ]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Year]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName]</value>
-		<value condition="Player.HasAudio">[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR] ]</value>
+		<value condition="Player.HasAudio">[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</value>
 	</variable>
     <!-- Player Label 3 -->
 	<variable name="PlayerLabel3Var">
