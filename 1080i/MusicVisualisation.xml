@@ -93,7 +93,7 @@
 					<top>56</top>
 					<width>1600</width>
 					<height>40</height>
-					<label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white](,)[/COLOR] ]</label>
+					<label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [COLOR white]([/COLOR],[COLOR white])[/COLOR]]</label>
 					<font>font24_title</font>
 					<shadowcolor>black</shadowcolor>
 					<textcolor>button_focus</textcolor>
