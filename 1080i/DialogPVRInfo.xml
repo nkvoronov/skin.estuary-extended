@@ -51,7 +51,7 @@
 				<align>justify</align>
 				<font>font_textbox</font>
                 <textcolor>$VAR[MainColorVar]</textcolor>
-				<label>[COLOR white]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.Duration])[CR][/COLOR][COLOR white]$INFO[ListItem.StartDate][CR][/COLOR]$INFO[ListItem.Season, S[COLOR white],[/COLOR]x]$INFO[ListItem.Episode, E[COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white] ,[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
+				<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] [COLOR white]($INFO[ListItem.Duration])[CR][/COLOR][COLOR white]$INFO[ListItem.StartDate][CR][/COLOR]$INFO[ListItem.Season, [COLOR white],[/COLOR]x]$INFO[ListItem.Episode, [COLOR white],[/COLOR]: ]$INFO[ListItem.EpisodeName,[B][COLOR white],[/COLOR][/B][CR]]$INFO[ListItem.Genre,$LOCALIZE[515]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Writer,$LOCALIZE[20417]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Director,$LOCALIZE[20339]:[COLOR white] ,[/COLOR][CR]]$INFO[ListItem.Cast,$LOCALIZE[206]:[COLOR white] ,[/COLOR][CR]][CR][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 			<control type="grouplist" id="9000">

@@ -484,7 +484,7 @@
 						<param name="label" value="$LOCALIZE[43045]" />
 						<param name="onclick_1" value="RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])" />
 						<param name="visible" value="System.HasAddon(script.artwork.downloader) + Container.Content(tvshows)" />
-					</include>                    
+					</include>
 					<include content="InfoDialogButton">
 						<param name="id" value="10" />
 						<param name="icon" value="icons/infodialogs/choose_image.png" />

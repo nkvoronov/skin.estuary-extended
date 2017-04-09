@@ -394,16 +394,7 @@
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="radiobutton" id="206">
-                    <description>Show studio logos</description>                    
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[43012]</label>
-                    <onclick>Skin.ToggleSetting(show_studiologos)</onclick>
-                    <selected>Skin.HasSetting(show_studiologos)</selected>                    
-                    <enable>System.HasAddon(script.image.resource.select)</enable>
-                </control>
-				<control type="button" id="207">
+				<control type="button" id="206">
                     <description>Studios images</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -411,9 +402,8 @@
 					<label2>$VAR[StudiosImagesNameVar]</label2>
                     <onclick>RunScript(script.image.resource.select,property=StudiosImages&amp;type=resource.images.studios)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
-                    <visible>Skin.HasSetting(show_studiologos)</visible>
 				</control>
-                <control type="button" id="208">
+                <control type="button" id="207">
                     <description>Language Flags</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -422,7 +412,7 @@
 					<onclick>RunScript(script.image.resource.select,property=LanguageFlags&amp;type=resource.images.languageflags)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-				<control type="button" id="209">
+				<control type="button" id="208">
 				    <description>Movie genre icons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -431,7 +421,7 @@
 					<onclick>RunScript(script.image.resource.select,property=MovieGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-				<control type="button" id="210">
+				<control type="button" id="209">
 				    <description>Music genre icons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -440,7 +430,7 @@
 					<onclick>RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-                <control type="button" id="211">
+                <control type="button" id="210">
                     <description>Weather icons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -449,12 +439,12 @@
 					<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
 				</control>
-                <control type="image" id="212">
+                <control type="image" id="211">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="button" id="213">
+                <control type="button" id="212">
                     <description>Busy Texture</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>                    
@@ -462,12 +452,12 @@
                     <label2>$VAR[SkinSettingSpinnerVar]</label2>
                     <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
                 </control>
-                <control type="image" id="214">
+                <control type="image" id="213">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="radiobutton" id="215">
+                <control type="radiobutton" id="214">
                     <description>Enable custom list addons</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -475,7 +465,7 @@
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-                <control type="radiobutton" id="216">
+                <control type="radiobutton" id="215">
                     <description>Enable custom list channels</description>					
 					<width>1256</width>
 					<include>DefaultSettingButton</include>
@@ -485,12 +475,12 @@
                     <visible>System.HasAddon(script.pvr.favourites)</visible>
                     <visible>PVR.HasTVChannels | PVR.HasRadioChannels</visible>
 				</control>
-                <control type="image" id="217">
+                <control type="image" id="216">
                     <description>Separator image</description>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
-                <control type="radiobutton" id="218">
+                <control type="radiobutton" id="217">
                     <description>Skin Toggle Debug</description>                    
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
