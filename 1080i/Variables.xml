@@ -103,7 +103,7 @@
         <value condition="Container.Content(artists)">[COLOR white]$INFO[ListItem.Property(Artist_Description)][/COLOR]</value>
         <value condition="Container.Content(albums)">[COLOR white]$INFO[ListItem.Property(Album_Description)][/COLOR]</value>
         <value condition="String.IsEqual(ListItem.DBType,episode) + Integer.IsGreater(ListItem.Playcount,1)">[COLOR white]$LOCALIZE[40132][/COLOR]</value>
-        <value>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
+        <value>$INFO[ListItem.Tagline,[I],[/I][CR]]$INFO[ListItem.Plot,[COLOR white],[/COLOR]]</value>
     </variable>
     <!-- Select Label -->
 	<variable name="SelectLabelVar">
