@@ -1,16 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
     <shortcut>
-        <label>20390</label>
+        <label>135</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/recentlyadded.png</icon>
-        <action>ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</action>
-    </shortcut>
-    <shortcut>
-        <label>652</label>
-        <label2>20389</label2>
-        <icon>special://skin/extras/icons/years.png</icon>
-        <action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
+        <icon>special://skin/extras/icons/genre.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>369</label>
@@ -19,10 +13,10 @@
         <action>ActivateWindow(videos,videodb://musicvideos/titles/,return)</action>
     </shortcut>
     <shortcut>
-        <label>135</label>
+        <label>652</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/genre.png</icon>
-        <action>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</action>
+        <icon>special://skin/extras/icons/years.png</icon>
+        <action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
     </shortcut>
     <shortcut>
         <label>133</label>
@@ -35,12 +29,24 @@
         <label2>20389</label2>
         <icon>special://skin/extras/icons/album.png</icon>
         <action>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</action>
+    </shortcut>	
+    <shortcut>
+        <label>20348</label>
+        <label2>20389</label2>
+        <icon>special://skin/extras/icons/director2.png</icon>
+        <action>ActivateWindow(videos,videodb://musicvideos/directors/,return)</action>
     </shortcut>
     <shortcut>
-        <label>20314</label>
+        <label>20388</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/media.png</icon>
-        <action>ActivateWindow(videos,library://video/musicvideos/,return)</action>
+        <icon>special://skin/extras/icons/studios.png</icon>
+        <action>ActivateWindow(videos,videodb://musicvideos/studios/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20459</label>
+        <label2>20389</label2>
+        <icon>special://skin/extras/icons/tags.png</icon>
+        <action>ActivateWindow(videos,videodb://musicvideos/tags/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>

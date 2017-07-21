@@ -2,9 +2,9 @@
 <smartplaylist type="albums">
     <name>Most Played Albums</name>
     <match>all</match>
-    <limit>10</limit>
     <rule field="playcount" operator="greaterthan">
         <value>0</value>
     </rule>
+    <limit>25</limit>
     <order direction="descending">playcount</order>
 </smartplaylist>

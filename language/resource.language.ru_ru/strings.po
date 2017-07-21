@@ -89,7 +89,7 @@ msgid "Rated"
 msgstr "Номинальный"
 
 msgctxt "#31018"
-msgid "Recently played channels"
+msgid "Most played channels"
 msgstr "Самые проигрываемые каналы"
 
 msgctxt "#31019"
@@ -137,7 +137,7 @@ msgid "Last logged in"
 msgstr "Последний вход"
 
 msgctxt "#31030"
-msgid "Memory used"
+msgid "System memory usage"
 msgstr "Использовано памяти"
 
 msgctxt "#31031"
@@ -265,8 +265,8 @@ msgid "Main menu"
 msgstr "Главное меню"
 
 msgctxt "#31062"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "Ярлыки к \"Файлам\" секциям каждого типа носителя. Перейдите, чтобы добавить дополнительные источники для вашей базы данных."
+msgid "Choose weather fanart pack"
+msgstr "Выбрать фан-арт пакет для погоды"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -413,7 +413,7 @@ msgid "Select your Kodi user profile[CR]to login and continue"
 msgstr "Выберите профиль пользователя Kodi,[CR]чтобы войти и продолжить"
 
 msgctxt "#31099"
-msgid "Icon Wall"
+msgid "IconWall"
 msgstr "Стена иконок"
 
 msgctxt "#31100"
@@ -541,8 +541,8 @@ msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Основные параметры меню - настройка главного экрана."
 
 msgctxt "#31131"
-msgid "Choose home fanart pack"
-msgstr "Выбрать фанарт пакет"
+msgid "Choose skin fanart pack"
+msgstr "Выбрать фан-арт пакет для обложки"
 
 msgctxt "#31132"
 msgid "min"
@@ -607,6 +607,18 @@ msgstr "Управление дополнениями"
 msgctxt "#31147"
 msgid "Download add-ons"
 msgstr "Скачать дополнения"
+
+msgctxt "#31149"
+msgid "Select genre fanart pack"
+msgstr "Выбрать фан-арт пакет для жанров"
+
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "Выберите шаблон фона"
+
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr "Флаги сведений"
 
 msgctxt "#31312"
 msgid "Current scraper"
@@ -718,14 +730,6 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Выберите шаблон фона"
 
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr "Выбрать фанарт пакет"
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr "Выбрать фанарт пакет для погоды"
-
 msgctxt "#43026"
 msgid "Color Primary Background"
 msgstr "Цвет фона"
@@ -772,7 +776,7 @@ msgstr "Параметры фона"
 
 msgctxt "#43043"
 msgid "Colors skin options"
-msgstr "Параметры цветов"
+msgstr "Параметры цвета"
 
 msgctxt "#43044"
 msgid "Reset skin options"
@@ -838,6 +842,10 @@ msgctxt "#43071"
 msgid "Disable"
 msgstr "Запретить"
 
+msgctxt "#43072"
+msgid "Enable"
+msgstr "Разрешить"
+
 msgctxt "#43081"
 msgid "Weather widgets"
 msgstr "Виджеты погоды"
@@ -867,7 +875,7 @@ msgid "Most watched music videos"
 msgstr "Самые просматриваемые муз. видео"
 
 msgctxt "#43091"
-msgid "Random music videos"
+msgid "Random music videos artists"
 msgstr "Случайные муз. видео"
 
 msgctxt "#43092"
@@ -922,3 +930,62 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr "Применить"
 
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr "Прозрачность фона"
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr "Прозрачность "
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr "Скрыть время"
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr "Позиция всплывающих уведомлений"
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr "Скрыть уведомления при проигрывании"
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr "Установите позицию всплывающих уведомлений"
+
+msgctxt "#44104"
+msgid "Top left"
+msgstr "Вверху слева"
+
+msgctxt "#44105"
+msgid "Top center"
+msgstr "Вверху по центру"
+
+msgctxt "#44106"
+msgid "Top right"
+msgstr "Вверху справа"
+
+msgctxt "#44107"
+msgid "Bottom left"
+msgstr "Внизу слева"
+
+msgctxt "#44108"
+msgid "Bottom center"
+msgstr "Внизу по центру"
+
+msgctxt "#44109"
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+msgctxt "#44111"
+msgid "Single image"
+msgstr "Одно изображение"
+
+msgctxt "#44112"
+msgid "Multi-image"
+msgstr "Набор картинок"
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr "Алтернативный вид"

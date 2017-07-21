@@ -1,28 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
     <shortcut>
-        <label>20386</label>
+        <label>135</label>
         <label2>342</label2>
-        <icon>special://skin/extras/icons/recentlyadded.png</icon>
-        <action>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</action>
+        <icon>special://skin/extras/icons/genre.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/genres/,return)</action>
     </shortcut>
+    <shortcut>
+        <label>369</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/title.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
+    </shortcut>	
     <shortcut>
         <label>562</label>
         <label2>342</label2>
         <icon>special://skin/extras/icons/years.png</icon>
         <action>ActivateWindow(videos,videodb://movies/years/,return)</action>
-    </shortcut>
-    <shortcut>
-        <label>20434</label>
-        <label2>342</label2>
-        <icon>special://skin/extras/icons/sets.png</icon>
-        <action>ActivateWindow(videos,videodb://movies/sets/,return)</action>
-    </shortcut>
-    <shortcut>
-        <label>135</label>
-        <label2>342</label2>
-        <icon>special://skin/extras/icons/genre.png</icon>
-        <action>ActivateWindow(videos,videodb://movies/genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>344</label>
@@ -31,16 +25,40 @@
         <action>ActivateWindow(videos,videodb://movies/actors/,return)</action>
     </shortcut>
     <shortcut>
+        <label>20348</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/director2.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/directors/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20388</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/studios.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/studios/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20434</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/sets.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/sets/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20451</label>
+        <label2>342</label2>
+        <icon>special://skin/extras/icons/country.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/countries/,return)</action>
+    </shortcut>
+    <shortcut>
         <label>20459</label>
         <label2>342</label2>
         <icon>special://skin/extras/icons/tags.png</icon>
         <action>ActivateWindow(videos,videodb://movies/tags/,return)</action>
     </shortcut>
     <shortcut>
-        <label>20314</label>
+        <label>20386</label>
         <label2>342</label2>
-        <icon>special://skin/extras/icons/media.png</icon>
-        <action>ActivateWindow(videos,library://video/movies/,return)</action>
+        <icon>special://skin/extras/icons/recentlyadded.png</icon>
+        <action>ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>

@@ -80,6 +80,20 @@
                             <font>font14</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
+                            <textcolor>white</textcolor>
+                            <visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        </control>
+                        <control type="label">
+                            <left>80</left>
+                            <top>0</top>
+                            <height>70</height>
+                            <width>320</width>
+                            <aligny>center</aligny>
+                            <font>font14</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <textcolor>red</textcolor>
+                            <visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
                         </control>
                     </itemlayout>
                     <focusedlayout height="74">
@@ -134,6 +148,21 @@
                             <scroll>yes</scroll>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>text_shadow</shadowcolor>
+                            <textcolor>white</textcolor>
+                            <visible>!String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
+                        </control>
+                        <control type="label">
+                            <left>80</left>
+                            <top>0</top>
+                            <height>70</height>
+                            <width>320</width>
+                            <aligny>center</aligny>
+                            <font>font14</font>
+                            <scroll>yes</scroll>
+                            <label>$INFO[ListItem.Label]</label>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <textcolor>red</textcolor>
+                            <visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
                         </control>
                     </focusedlayout>
                 </control>

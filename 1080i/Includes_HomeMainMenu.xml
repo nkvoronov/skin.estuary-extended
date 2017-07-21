@@ -14,24 +14,27 @@
             <!-- Power button -->
             <include content="BottomMainMenuItem">
                 <param name="control_id" value="901" />
-                <param name="onclick" value="ActivateWindow(shutdownmenu)" />
-				<param name="onclick2" value="" />
+                <param name="onclick" value="SetProperty(fanarthometype,power,home)" />
+                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+                <param name="onclick3" value="ActivateWindow(shutdownmenu)" />
                 <param name="icon" value="icons/power.png" />
                 <param name="label" value="$LOCALIZE[33060]" />
             </include>
             <!-- Favourites button -->
             <include content="BottomMainMenuItem">
                 <param name="control_id" value="902" />
-                <param name="onclick" value="ActivateWindow(favourites)" />
-				<param name="onclick2" value="" />
+                <param name="onclick" value="SetProperty(fanarthometype,favourites,home)" />
+                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundFavoritesVar],home)" />
+                <param name="onclick3" value="ActivateWindow(favourites)" />
                 <param name="icon" value="icons/favourites.png" />
                 <param name="label" value="$LOCALIZE[10134]" />
             </include>
             <!-- Search button -->
             <include content="BottomMainMenuItem">
                 <param name="control_id" value="903" />
-                <param name="onclick" value="ActivateWindow(1107)" />
-				<param name="onclick2" value="" />
+                <param name="onclick" value="SetProperty(fanarthometype,search,home)" />
+                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
+				<param name="onclick3" value="ActivateWindow(1107)" />
                 <param name="icon" value="icons/search.png" />
                 <param name="label" value="$LOCALIZE[31001]" />
             </include>

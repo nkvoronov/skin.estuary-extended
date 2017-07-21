@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
     <shortcut>
-        <label>10040</label>
-        <label2>24001</label2>
-        <icon>special://skin/extras/icons/addons.png</icon>
-        <action>ActivateWindow(addonbrowser)</action>
-    </shortcut>
-    <shortcut>
         <label>24998</label>
         <label2>24001</label2>
         <icon>special://skin/extras/icons/addons_installed.png</icon>
@@ -15,13 +9,19 @@
     <shortcut>
         <label>24043</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/update-available.png</icon>
+        <icon>special://skin/extras/icons/addons_updates.png</icon>
         <action>ActivateWindow(addonbrowser,addons://outdated/,return)</action>
     </shortcut>	
     <shortcut>
+        <label>24004</label>
+        <label2>24001</label2>
+        <icon>special://skin/extras/icons/addons_recentlyupdated.png</icon>
+        <action>ActivateWindow(addonbrowser,addons://recently_updated/,return)</action>
+    </shortcut>
+    <shortcut>
         <label>24033</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/install_repos.png</icon>
+        <icon>special://skin/extras/icons/addons_repo.png</icon>
         <action>ActivateWindow(addonbrowser,addons://repos/,return)</action>
     </shortcut>	
     <shortcut>
@@ -29,11 +29,5 @@
         <label2>24001</label2>
         <icon>special://skin/extras/icons/tv-search.png</icon>
         <action>ActivateWindow(addonbrowser,addons://search/,return)</action>
-    </shortcut>
-    <shortcut>
-        <label>5</label>
-        <label2>24001</label2>
-        <icon>special://skin/extras/icons/settings.png</icon>
-        <action>ActivateWindow(systemsettings,addons)</action>
     </shortcut>
 </shortcuts>

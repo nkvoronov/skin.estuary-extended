@@ -171,7 +171,7 @@ msgstr ""
 
 #: /1080i/SettingsSystemInfo.xml
 msgctxt "#31030"
-msgid "Memory used"
+msgid "System memory usage"
 msgstr ""
 
 #: /1080i/SettingsSystemInfo.xml
@@ -514,21 +514,25 @@ msgctxt "#31098"
 msgid "Select your Kodi user profile[CR]to login and continue"
 msgstr ""
 
+#. viewtype name
 #: /1080i/View_52_IconWall.xml
 msgctxt "#31099"
-msgid "Icon Wall"
+msgid "IconWall"
 msgstr ""
 
+#. viewtype name
 #: /1080i/View_53_Shift.xml
 msgctxt "#31100"
 msgid "Shift"
 msgstr ""
 
+#. viewtype name
 #: /1080i/View_54_InfoWall.xml
 msgctxt "#31101"
 msgid "InfoWall"
 msgstr ""
 
+#. viewtype name
 #: /1080i/View_500_SmallThumb.xml
 msgctxt "#31102"
 msgid "Wall"
@@ -554,6 +558,7 @@ msgctxt "#31106"
 msgid "Teletext"
 msgstr ""
 
+#. viewtype name
 #: /1080i/View_55_WideList.xml
 msgctxt "#31107"
 msgid "WideList"
@@ -759,6 +764,21 @@ msgctxt "#31147"
 msgid "Download add-ons"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31149"
+msgid "Select genre fanart pack"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr ""
+
 msgctxt "#31312"
 msgid "Current scraper"
 msgstr ""
@@ -869,14 +889,6 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr ""
 
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr ""
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr ""
-
 msgctxt "#43026"
 msgid "Color Primary Background"
 msgstr ""
@@ -981,12 +993,16 @@ msgctxt "#43061"
 msgid "Hide disabled"
 msgstr ""
 
-msgctxt "43070"
+msgctxt "#43070"
 msgid "Set type of widgets"
 msgstr ""
 
 msgctxt "#43071"
 msgid "Disable"
+msgstr ""
+
+msgctxt "#43072"
+msgid "Enable"
 msgstr ""
 
 msgctxt "#43081"
@@ -1018,7 +1034,7 @@ msgid "Most watched music videos"
 msgstr ""
 
 msgctxt "#43091"
-msgid "Random music videos"
+msgid "Random music videos artists"
 msgstr ""
 
 msgctxt "#43092"
@@ -1073,3 +1089,62 @@ msgctxt "#43250"
 msgid "Apply"
 msgstr ""
 
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr ""
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr ""
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr ""
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr ""
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr ""
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr ""
+
+msgctxt "#44104"
+msgid "Top left"
+msgstr ""
+
+msgctxt "#44105"
+msgid "Top center"
+msgstr ""
+
+msgctxt "#44106"
+msgid "Top right"
+msgstr ""
+
+msgctxt "#44107"
+msgid "Bottom left"
+msgstr ""
+
+msgctxt "#44108"
+msgid "Bottom center"
+msgstr ""
+
+msgctxt "#44109"
+msgid "Bottom right"
+msgstr ""
+
+msgctxt "#44111"
+msgid "Single image"
+msgstr ""
+
+msgctxt "#44112"
+msgid "Multi-image"
+msgstr ""
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr ""

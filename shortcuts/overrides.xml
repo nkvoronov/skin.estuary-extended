@@ -15,13 +15,27 @@
     <icon image="DefaultAudio.png" grouping="pvr-radio">special://skin/extras/icons/tvshows.png</icon>
     <!-- Group override-->
     <groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
-    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(FanartHomeType,$VAR[HomeMenuTypeVar],home)</groupoverride>
+    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
+    <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(homebackground,$VAR[HomeMenuBackgroundVar],home)</groupoverride>
+    <!-- Default Backgrounds -->
+	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
+	<backgrounddefault labelID="pictures">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
+	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>
+	<backgrounddefault labelID="radio">special://skin/extras/home-images/radio.jpg</backgrounddefault>
+    <backgrounddefault labelID="video">special://skin/extras/home-images/videos.jpg</backgrounddefault>
+    <backgrounddefault labelID="movies">special://skin/extras/home-images/movies.jpg</backgrounddefault>
+    <backgrounddefault labelID="tvshows">special://skin/extras/home-images/tvshows.jpg</backgrounddefault>
+    <backgrounddefault labelID="musicvideos">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
+    <backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>    
+    <backgrounddefault labelID="addons">special://skin/extras/home-images/addons.jpg</backgrounddefault>    
+    <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
+    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
     <!-- Additionnal Widgets -->
     <widget label="43081" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
 	<widget label="43082" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
 	<widget label="43083" icon="special://skin/extras/icons/radio.png">RadioWidget</widget>
 	<widget label="43084" icon="special://skin/extras/icons/addons.png">AddonsWidget</widget>
-	<widget label="43085" icon="special://skin/extras/icons/systeminfo.png">SystemInfoWidget</widget>	
+	<widget label="43085" icon="special://skin/extras/icons/favourites2.png">FavouritesWidget</widget>	
 	<widget label="43086" icon="special://skin/extras/icons/media.png">MediaWidget</widget>
     <!-- Default Widgets -->
     <widgetdefault labelID="weather">WeatherWidget</widgetdefault>
@@ -142,28 +156,22 @@
 	<propertydefault labelID="music" property="widgetType.widget6">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget6">music</propertydefault>
 	<propertydefault labelID="music" property="widgetPath.widget6">special://skin/extras/playlists/mostplayed_albums.xsp</propertydefault>
-    <!-- Default Backgrounds -->
-	<backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
-	<backgrounddefault labelID="picture">special://skin/extras/home-images/pictures.jpg</backgrounddefault>
-	<backgrounddefault labelID="livetv">special://skin/extras/home-images/livetv.jpg</backgrounddefault>
-	<backgrounddefault labelID="radio">special://skin/extras/home-images/radio.jpg</backgrounddefault>
-    <backgrounddefault labelID="videos">special://skin/extras/home-images/videos.jpg</backgrounddefault>
-    <backgrounddefault labelID="movies">special://skin/extras/home-images/movies.jpg</backgrounddefault>
-    <backgrounddefault labelID="tvshows">special://skin/extras/home-images/tvshows.jpg</backgrounddefault>
-    <backgrounddefault labelID="musicvideo">special://skin/extras/home-images/musicvideo.jpg</backgrounddefault>
-    <backgrounddefault labelID="music">special://skin/extras/home-images/music.jpg</backgrounddefault>    
-    <backgrounddefault labelID="addon">special://skin/extras/home-images/addons.jpg</backgrounddefault>
-    <backgrounddefault labelID="setting">special://skin/extras/home-images/settings.jpg</backgrounddefault>
-	<backgrounddefault labelID="search">special://skin/extras/home-images/search.jpg</backgrounddefault>
-    <backgrounddefault labelID="power">special://skin/extras/home-images/power.jpg</backgrounddefault>    
-    <backgrounddefault labelID="favourite">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
-    <backgrounddefault labelID="filemanager">special://skin/extras/home-images/filemanager.jpg</backgrounddefault>
-    <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>    
+    <!-- Context Menu -->
+    <contextmenu>
+        <enableon>211</enableon>
+        <item control="303">$ADDON[script.skinshortcuts 32002]</item>
+        <item control="304">$ADDON[script.skinshortcuts 32003]</item>
+        <item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[43071]</item>
+        <item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[43072]</item>
+        <item control="301">$ADDON[script.skinshortcuts 32000]</item>
+        <item control="302">$ADDON[script.skinshortcuts 32001]</item>
+        <item control="308">$ADDON[script.skinshortcuts 32028]</item>
+    </contextmenu>
     <!-- Menus Groupings -->
     <groupings>
         <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
         <!-- Weather -->
-        <node label="8">
+        <node label="8" condition="!String.IsEmpty(Weather.Plugin)">
             <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
             <shortcut label="184" type="8" icon="special://skin/extras/icons/update.png">Weather.Refresh</shortcut>
             <shortcut label="35500" type="8" icon="special://skin/extras/icons/location-previous.png">Weather.LocationPrevious</shortcut>
@@ -183,6 +191,7 @@
             <shortcut label="19019" type="19020" icon="special://skin/extras/icons/channels.png">ActivateWindow(tvchannels)</shortcut>
             <shortcut label="19069" type="19020" icon="special://skin/extras/icons/guide.png">ActivateWindow(tvguide)</shortcut>
             <shortcut label="19017" type="19020" icon="special://skin/extras/icons/recordings.png">ActivateWindow(tvrecordings)</shortcut>
+			<shortcut label="19138" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimerrules)</shortcut>
             <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimers)</shortcut>
             <shortcut label="137" type="19020" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(tvsearch)</shortcut>
             <shortcut label="32066" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvrTV</shortcut>
@@ -198,6 +207,7 @@
             <shortcut label="19019" type="19021" icon="special://skin/extras/icons/channels.png">ActivateWindow(radiochannels)</shortcut>
             <shortcut label="19069" type="19021" icon="special://skin/extras/icons/guide.png">ActivateWindow(radioguide)</shortcut>
             <shortcut label="19017" type="19021" icon="special://skin/extras/icons/recordings.png">ActivateWindow(radiorecordings)</shortcut>
+			<shortcut label="19138" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimerrules)</shortcut>
             <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimers)</shortcut>
             <shortcut label="137" type="19021" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(radiosearch)</shortcut>
             <shortcut label="32067" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvrRadio</shortcut>
@@ -230,7 +240,7 @@
             </node>
         </node>
         <!-- Movies -->
-        <node label="342">
+        <node label="342" condition="Library.HasContent(movies)">
             <shortcut label="342" type="342" icon="special://skin/extras/icons/movies2.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
             <shortcut label="20386" type="342" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</shortcut>
             <shortcut label="135" type="342" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://movies/genres/,return)</shortcut>
@@ -245,7 +255,7 @@
             <shortcut label="20314" type="342" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://movies/,return)</shortcut>
         </node>
         <!-- TVShows -->
-        <node label="20343">
+        <node label="20343" condition="Library.HasContent(tvshows)">
             <shortcut label="20343" type="20343" icon="special://skin/extras/icons/tvshows.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
             <shortcut label="20387" type="20343" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</shortcut>
             <shortcut label="626" type="20343" icon="special://skin/extras/icons/inprogressshows.png">ActivateWindow(videos,library://video/inprogressshows.xml/,return)</shortcut>
@@ -258,7 +268,7 @@
             <shortcut label="20314" type="20343" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://tvshows/,return)</shortcut>
         </node>
         <!-- MusicVideos -->
-        <node label="20389">
+        <node label="20389" condition="Library.HasContent(musicvideos)">
             <shortcut label="20389" type="20389" icon="special://skin/extras/icons/musicvideos.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
             <shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</shortcut>
             <shortcut label="135" type="20389" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://musicvideos/genres/,return)</shortcut>
@@ -266,7 +276,7 @@
             <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://musicvideos/years/,return)</shortcut>
             <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png">ActivateWindow(videos,videodb://musicvideos/artists/,return)</shortcut>
             <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png">ActivateWindow(videos,videodb://musicvideos/albums/,return)</shortcut>            
-            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>            
+            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>
             <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://musicvideos/studios/,return)</shortcut>
             <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://musicvideos/tags/,return)</shortcut>
             <shortcut label="20314" type="20389" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
@@ -278,12 +288,12 @@
             <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png">ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</shortcut>
             <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
             <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
+			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png">ActivateWindow(music,library://music/musicroles/,return)</shortcut>
             <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
             <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
             <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
             <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png">ActivateWindow(music,musicdb://top100/songs/,return)</shortcut>
-            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>            
-            <shortcut label="521" type="2" icon="special://skin/extras/icons/musiccompilations.png">ActivateWindow(music,musicdb://compilations/,return)</shortcut>
+            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>
             <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png">ActivateWindow(music,musicdb://years/,return)</shortcut>
             <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png">ActivateWindow(music,musicdb://singles/,return)</shortcut>
             <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png">ActivateWindow(music,musicdb://,return)</shortcut>            
@@ -293,7 +303,6 @@
             <shortcut label="589" type="2" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode)</shortcut>
             <shortcut label="653" type="2" icon="special://skin/extras/icons/updatelibrary.png">UpdateLibrary(music)</shortcut>
             <shortcut label="32055" type="2" icon="special://skin/extras/icons/error.png">CleanLibrary(music)</shortcut>
-            <shortcut label="600" type="2" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
             <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>
             <node label="32040">
                 <content>playlist-audio</content>
@@ -305,12 +314,13 @@
             <node label="32075">
                 <content>musicsources</content>
                 <content>upnp-music</content>
-            </node>            
+            </node>
         </node>
         <!-- DVD -->
         <node label="446">
             <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
             <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
+			<shortcut label="600" type="446" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
         </node>
         <!-- Addons -->
         <node label="24001">
@@ -321,7 +331,7 @@
 			<shortcut label="24033" type="24001" icon="special://skin/extras/icons/install_repos.png">ActivateWindow(addonbrowser,addons://repos/,return)</shortcut>
 			<shortcut label="137" type="24001" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(addonbrowser,addons://search/,return)</shortcut>			
             <node label="1043">
-                <shortcut label="10001" type="24001" icon="special://skin/extras/icons/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
+                <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
                 <shortcut label="20244" type="24001" icon="special://skin/extras/icons/android.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps,return)</shortcut>
                 <content>addon-program</content>
             </node>
@@ -346,14 +356,14 @@
             <shortcut label="130" type="10004" icon="special://skin/extras/icons/systeminfo.png">ActivateWindow(systeminfo)</shortcut>
             <shortcut label="14111" type="10004" icon="special://skin/extras/icons/eventlog.png">ActivateWindow(eventlog,events://,return)</shortcut>
             <shortcut label="166" type="10004" icon="special://skin/extras/icons/skin2.png">ActivateWindow(skinsettings)</shortcut>
-            <shortcut label="8" type="10004" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(weathersettings)</shortcut>
-            <shortcut label="1" type="10004" icon="special://skin/extras/icons/pictures.png">ActivateWindow(picturessettings)</shortcut>
+            <shortcut label="8" type="10004" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(servicesettings,weather)</shortcut>
+            <shortcut label="1" type="10004" icon="special://skin/extras/icons/pictures.png">ActivateWindow(playersettings,pictures)</shortcut>
             <shortcut label="19020" type="10004" icon="special://skin/extras/icons/livetv2.png">ActivateWindow(pvrsettings)</shortcut>
-            <shortcut label="3" type="10004" icon="special://skin/extras/icons/video-settings.png">ActivateWindow(videossettings)</shortcut>
-            <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>      
+            <shortcut label="3" type="10004" icon="special://skin/extras/icons/video-settings.png">ActivateWindow(playersettings,videos)</shortcut>
+            <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(playersettings,music)</shortcut>      
             <shortcut label="13000" type="10004" icon="special://skin/extras/icons/system.png">ActivateWindow(systemsettings)</shortcut>
             <shortcut label="14036" type="10004" icon="special://skin/extras/icons/network3.png">ActivateWindow(servicesettings)</shortcut>
-            <shortcut label="480" type="10004" icon="special://skin/extras/icons/appearance.png">ActivateWindow(appearancesettings)</shortcut>
+            <shortcut label="14206" type="10004" icon="special://skin/extras/icons/appearance.png">ActivateWindow(interfacesettings)</shortcut>
             <shortcut label="20183" type="10004" icon="special://skin/extras/icons/reloadskin.png">ReloadSkin()</shortcut>
             <shortcut label="360" type="10004" icon="special://skin/extras/icons/screensaver.png">ActivateScreensaver()</shortcut>            
         </node>
@@ -369,13 +379,13 @@
             <shortcut label="31072" type="13005" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
             <shortcut label="13012" type="13005" icon="special://skin/extras/icons/quit.png" condition="System.ShowExitButton">Quit()</shortcut>
             <shortcut label="13005" type="13005" icon="special://skin/extras/icons/shutdown.png" condition="System.HasShutdown">Shutdown()</shortcut>
-            <shortcut label="13016" type="13005" icon="special://skin/extras/icons/shutdown.png" condition="System.CanPowerDown">Powerdown()</shortcut>            
+            <shortcut label="13016" type="13005" icon="special://skin/extras/icons/shutdown.png" condition="System.CanPowerDown">Powerdown()</shortcut>
+            <shortcut label="13313" type="13005" icon="special://skin/extras/icons/files.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
             <shortcut label="13011" type="13005" icon="special://skin/extras/icons/suspend.png" condition="System.CanSuspend">Suspend()</shortcut>
             <shortcut label="13010" type="13005" icon="special://skin/extras/icons/suspend.png" condition="System.CanHibernate">Hibernate()</shortcut>
             <shortcut label="13013" type="13005" icon="special://skin/extras/icons/reboot.png" condition="System.CanReboot">Reboot</shortcut>
             <shortcut label="19026" type="13005" icon="special://skin/extras/icons/shutdowntimer.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
             <shortcut label="20151" type="13005" icon="special://skin/extras/icons/files.png">CancelAlarm(shutdowntimer)</shortcut>            
-            <shortcut label="13313" type="13005" icon="special://skin/extras/icons/files.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
             <shortcut label="13014" type="13005" icon="special://skin/extras/icons/files.png">Minimize()</shortcut>
         </node>
         <!-- Favourites -->
@@ -386,6 +396,8 @@
             </node>
         </node>        
     </groupings>
+	<!-- Widget Groupings -->
+    <widgetRename>True</widgetRename>
     <widget-groupings>
 		<!-- Widgets Groups-->
 		<shortcut label="43081" icon="special://skin/extras/icons/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>

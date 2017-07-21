@@ -265,8 +265,8 @@ msgid "Main menu"
 msgstr "Головне меню"
 
 msgctxt "#31062"
-msgid "Shortcuts to the \"Files\" sections of each media type. Go there to add additional sources for your databases."
-msgstr "Ярлики до \"Файлам\" секціям кожного типу носія. Перейдіть, щоб додати додаткові джерела для вашої бази даних."
+msgid "Choose weather fanart pack"
+msgstr "Выбрать фан-арт пакет для погоды"
 
 msgctxt "#31063"
 msgid "Sections"
@@ -413,7 +413,7 @@ msgid "Select your Kodi user profile[CR]to login and continue"
 msgstr "Виберіть профіль користувача Kodi,[CR]щоб увійти до системи"
 
 msgctxt "#31099"
-msgid "Icon Wall"
+msgid "IconWall"
 msgstr "Стіна іконок"
 
 msgctxt "#31100"
@@ -541,7 +541,7 @@ msgid "Main menu-related settings: Configure the home screen to your likings."
 msgstr "Основні параметри меню - настройка головного екрану."
 
 msgctxt "#31131"
-msgid "Choose home fanart pack"
+msgid "Choose skin fanart pack"
 msgstr "Вибрати фанарт пакет"
 
 msgctxt "#31132"
@@ -607,6 +607,18 @@ msgstr "Управління доповненнями"
 msgctxt "#31147"
 msgid "Download add-ons"
 msgstr "Завантажити доповнення"
+
+msgctxt "#31149"
+msgid "Select genre fanart pack"
+msgstr "Вибрати фан-арт пакет для жанрів"
+
+msgctxt "#31156"
+msgid "Choose background pattern"
+msgstr "Виберіть шаблон фону"
+
+msgctxt "#31160"
+msgid "Show media flags"
+msgstr "Флаги відомостей"
 
 msgctxt "#31312"
 msgid "Current scraper"
@@ -718,14 +730,6 @@ msgctxt "#43023"
 msgid "Choose background pattern"
 msgstr "Виберіть шаблон фону"
 
-msgctxt "#43024"
-msgid "Choose home fanart pack"
-msgstr "Вибрати фанарт пакет"
-
-msgctxt "#43025"
-msgid "Choose weather fanart pack"
-msgstr "Вибрати фанарт пакет для погоди"
-
 msgctxt "#43026"
 msgid "Color Primary Background"
 msgstr "Колір фону"
@@ -754,7 +758,7 @@ msgctxt "#43032"
 msgid "Widget Limit Items"
 msgstr "Віджети ліміт елементів"
 
-msgctxt "#43013"
+msgctxt "#43033"
 msgid "Choose music genre icons"
 msgstr "Вибрати іконки жанрів для музики"
 
@@ -838,6 +842,10 @@ msgctxt "#43071"
 msgid "Disable"
 msgstr "Заборонити"
 
+msgctxt "#43072"
+msgid "Enable"
+msgstr "Дозволити"
+
 msgctxt "#43081"
 msgid "Weather widgets"
 msgstr "Віджети погоди"
@@ -867,8 +875,8 @@ msgid "Most watched music videos"
 msgstr "Саме Популярне муз. відео"
 
 msgctxt "#43091"
-msgid "Random music videos"
-msgstr "Випадкове муз. відео"
+msgid "Random music videos artists"
+msgstr "Випадкове муз. відео виконавець"
 
 msgctxt "#43092"
 msgid "Unwatched music videos"
@@ -921,3 +929,63 @@ msgstr "Вибрані Радіо канали"
 msgctxt "#43250"
 msgid "Apply"
 msgstr "Застосувати"
+
+msgctxt "#44000"
+msgid "Background opacity"
+msgstr "Прозорість фону"
+
+msgctxt "#44001"
+msgid "Opacity "
+msgstr "Прозорість "
+
+msgctxt "#44100"
+msgid "Hide time"
+msgstr "Приховати час"
+
+msgctxt "#44101"
+msgid "Notification popup position"
+msgstr "Позиція спливаючих повідомлень"
+
+msgctxt "#44102"
+msgid "Hide notification popup during playback"
+msgstr "Приховати повідомлення при програванні"
+
+msgctxt "#44103"
+msgid "Set notification popup position."
+msgstr "Встановіть позицію спливаючих повідомлень"
+
+msgctxt "#44104"
+msgid "Top left"
+msgstr "Вгорі зліва"
+
+msgctxt "#44105"
+msgid "Top center"
+msgstr "Вгорі по центру"
+
+msgctxt "#44106"
+msgid "Top right"
+msgstr "Вгорі справа"
+
+msgctxt "#44107"
+msgid "Bottom left"
+msgstr "Внизу зліва"
+
+msgctxt "#44108"
+msgid "Bottom center"
+msgstr "Внизу по центру"
+
+msgctxt "#44109"
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+msgctxt "#44111"
+msgid "Single image"
+msgstr "Oдне зображення"
+
+msgctxt "#44112"
+msgid "Multi-image"
+msgstr "Hабір картинок"
+
+msgctxt "#44113"
+msgid "Alternative view"
+msgstr "Альтернативний вид"

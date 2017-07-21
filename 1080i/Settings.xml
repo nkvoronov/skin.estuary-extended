@@ -144,12 +144,6 @@
 					<icon>icons/settings/system.png</icon>
 				</item>
 				<item>
-					<label>OpenELEC</label>
-					<onclick>RunAddon(service.openelec.settings)</onclick>
-					<icon>os/openelec/logo_openelec.png</icon>
-                    <visible>System.HasAddon(service.openelec.settings)</visible>
-				</item>
-				<item>
 					<label>LibreELEC</label>
 					<onclick>RunAddon(service.libreelec.settings)</onclick>
 					<icon>os/libreelec/logo_libreelec.png</icon>

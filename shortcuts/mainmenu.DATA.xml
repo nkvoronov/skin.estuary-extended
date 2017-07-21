@@ -64,6 +64,13 @@
         <action>ActivateWindow(music)</action>
     </shortcut>
     <shortcut>
+        <label>427</label>
+        <label2>427</label2>
+        <defaultID>dvd</defaultID>
+        <icon>special://skin/extras/icons/dvd.png</icon>
+        <action>PlayDVD</action>
+    </shortcut>
+    <shortcut>
         <label>24001</label>
         <label2>24001</label2>
         <defaultID>addons</defaultID>

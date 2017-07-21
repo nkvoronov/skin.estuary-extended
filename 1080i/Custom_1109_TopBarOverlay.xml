@@ -59,6 +59,7 @@
 					<control type="label">
 						<include>BreadcrumbsLabel</include>
 						<label>$INFO[System.Time]</label>
+                        <visible>!Skin.HasSetting(hide_time)</visible>
 					</control>
 				</control>
 				<control type="image">

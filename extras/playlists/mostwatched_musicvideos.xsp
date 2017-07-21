@@ -2,9 +2,9 @@
 <smartplaylist type="musicvideos">
     <name>Most Played MusicVideos</name>
     <match>all</match>
-    <limit>25</limit>
     <rule field="playcount" operator="greaterthan">
         <value>0</value>
     </rule>
+    <limit>25</limit>
     <order direction="descending">playcount</order>
 </smartplaylist>
