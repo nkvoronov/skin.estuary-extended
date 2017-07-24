@@ -3,16 +3,16 @@
     <doNotShareMenu />
     <alwaysRestore>True</alwaysRestore>
     <!-- Icons Directory -->
-    <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
+    <thumbnailBrowseDefault>resource://resource.images.skinicons.estuary/</thumbnailBrowseDefault>
     <!-- Background -->
 	<background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
 	<background label="smartshortcuts">||BROWSE||special://skin/extras/home-images</background>
 	<backgroundBrowse default="protocol://">True</backgroundBrowse>    
     <!-- Icons overrides -->
-    <icon image="DefaultShortcut.png">special://skin/extras/icons/files.png</icon>
-    <icon image="DefaultAudio.png">special://skin/extras/icons/files.png</icon>
-    <icon image="DefaultPlaylist.png">special://skin/extras/icons/playlists.png</icon>
-    <icon image="DefaultAudio.png" grouping="pvr-radio">special://skin/extras/icons/tvshows.png</icon>
+    <icon image="DefaultShortcut.png">resource://resource.images.skinicons.estuary/files.png</icon>
+    <icon image="DefaultAudio.png">resource://resource.images.skinicons.estuary/files.png</icon>
+    <icon image="DefaultPlaylist.png">resource://resource.images.skinicons.estuary/playlists.png</icon>
+    <icon image="DefaultAudio.png" grouping="pvr-radio">resource://resource.images.skinicons.estuary/tvshows.png</icon>
     <!-- Group override-->
     <groupoverride group="powermenu" disable_groups="" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
     <groupoverride group="*" disable_groups="powermenu" condition="">SetProperty(fanarthometype,$VAR[HomeMenuTypeVar],home)</groupoverride>
@@ -31,12 +31,12 @@
     <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
     <backgrounddefault labelID="dvd">special://skin/extras/home-images/disc.jpg</backgrounddefault>
     <!-- Additionnal Widgets -->
-    <widget label="43081" icon="special://skin/extras/icons/weather.png">WeatherWidget</widget>
-	<widget label="43082" icon="special://skin/extras/icons/livetv.png">TVWidget</widget>
-	<widget label="43083" icon="special://skin/extras/icons/radio.png">RadioWidget</widget>
-	<widget label="43084" icon="special://skin/extras/icons/addons.png">AddonsWidget</widget>
-	<widget label="43085" icon="special://skin/extras/icons/favourites2.png">FavouritesWidget</widget>	
-	<widget label="43086" icon="special://skin/extras/icons/media.png">MediaWidget</widget>
+    <widget label="43081" icon="resource://resource.images.skinicons.estuary/weather.png">WeatherWidget</widget>
+	<widget label="43082" icon="resource://resource.images.skinicons.estuary/livetv.png">TVWidget</widget>
+	<widget label="43083" icon="resource://resource.images.skinicons.estuary/radio.png">RadioWidget</widget>
+	<widget label="43084" icon="resource://resource.images.skinicons.estuary/addons.png">AddonsWidget</widget>
+	<widget label="43085" icon="resource://resource.images.skinicons.estuary/favourites2.png">FavouritesWidget</widget>	
+	<widget label="43086" icon="resource://resource.images.skinicons.estuary/media.png">MediaWidget</widget>
     <!-- Default Widgets -->
     <widgetdefault labelID="weather">WeatherWidget</widgetdefault>
     <widgetdefault labelID="pictures">MediaWidget</widgetdefault>
@@ -48,23 +48,23 @@
     <widgetdefault labelID="musicvideos">MediaWidget</widgetdefault>
     <widgetdefault labelID="music">MediaWidget</widgetdefault>    
     <widgetdefault labelID="addons">AddonsWidget</widgetdefault>
-	<widgetdefault labelID="settings">SystemInfoWidget</widgetdefault>
+    <widgetdefault labelID="favorites">FavouritesWidget</widgetdefault>
 	<!-- Default Property -->
 	<!-- Pictures -->
 	<propertydefault labelID="pictures" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="pictures" property="widgetName.widget1">20094</propertydefault>
-	<propertydefault labelID="pictures" property="widgetType.widget1">pictures</propertydefault>
+	<propertydefault labelID="pictures" property="widgetType.widget1">source</propertydefault>
 	<propertydefault labelID="pictures" property="widgetTarget.widget1">pictures</propertydefault>
 	<propertydefault labelID="pictures" property="widgetPath.widget1">sources://pictures</propertydefault>
 	<!-- Video -->
 	<propertydefault labelID="video" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="video" property="widgetName.widget1">20094</propertydefault>
-	<propertydefault labelID="video" property="widgetType.widget1">videos</propertydefault>
+	<propertydefault labelID="video" property="widgetType.widget1">source</propertydefault>
 	<propertydefault labelID="video" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="video" property="widgetPath.widget1">sources://video</propertydefault>
 	<propertydefault labelID="video" property="widget.widget2">Library</propertydefault>
 	<propertydefault labelID="video" property="widgetName.widget2">136</propertydefault>
-	<propertydefault labelID="video" property="widgetType.widget2">videos</propertydefault>
+	<propertydefault labelID="video" property="widgetType.widget2">playlist</propertydefault>
 	<propertydefault labelID="video" property="widgetTarget.widget2">videos</propertydefault>
 	<propertydefault labelID="video" property="widgetPath.widget2">special://videoplaylists</propertydefault>
 	<!-- Movies -->
@@ -73,11 +73,11 @@
 	<propertydefault labelID="movies" property="widgetType.widget1">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget1">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget1">special://skin/extras/playlists/inprogress_movies.xsp</propertydefault>	
-	<propertydefault labelID="movies" property="widget.widget2">Library</propertydefault>
+	<propertydefault labelID="movies" property="widget.widget2">Playlist</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget2">20386</propertydefault>
 	<propertydefault labelID="movies" property="widgetType.widget2">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget2">videos</propertydefault>
-	<propertydefault labelID="movies" property="widgetPath.widget2">videodb://recentlyaddedmovies</propertydefault>	
+	<propertydefault labelID="movies" property="widgetPath.widget2">special://skin/extras/playlists/recent_unwatched_movies.xsp</propertydefault>	
 	<propertydefault labelID="movies" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="movies" property="widgetName.widget3">31007</propertydefault>
 	<propertydefault labelID="movies" property="widgetType.widget3">movies</propertydefault>
@@ -88,54 +88,79 @@
 	<propertydefault labelID="movies" property="widgetType.widget4">movies</propertydefault>
 	<propertydefault labelID="movies" property="widgetTarget.widget4">videos</propertydefault>
 	<propertydefault labelID="movies" property="widgetPath.widget4">special://skin/extras/playlists/random_movies.xsp</propertydefault>
+	<propertydefault labelID="movies" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="movies" property="widgetName.widget5">135</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget5">moviegenre</propertydefault>
+	<propertydefault labelID="movies" property="widgetTarget.widget5">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetPath.widget5">videodb://movies/genres/</propertydefault>	
+	<propertydefault labelID="movies" property="widget.widget6">Library</propertydefault>
+	<propertydefault labelID="movies" property="widgetName.widget6">31075</propertydefault>
+	<propertydefault labelID="movies" property="widgetType.widget6">movies</propertydefault>
+	<propertydefault labelID="movies" property="widgetTarget.widget6">videos</propertydefault>
+	<propertydefault labelID="movies" property="widgetPath.widget6">videodb://movies/sets/</propertydefault>	
 	<!-- TVShows -->
-	<propertydefault labelID="tvshows" property="widget.widget1">Playlist</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget1">626</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget1">tvshows</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget1">videos</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetPath.widget1">special://skin/extras/playlists/inprogress_tvshows.xsp</propertydefault>	
-	<propertydefault labelID="tvshows" property="widget.widget2">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget1">videodb://inprogresstvshows</propertydefault>	
+	<propertydefault labelID="tvshows" property="widget.widget2">Playlist</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget2">20387</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget2">episodes</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget2">videos</propertydefault>
-	<propertydefault labelID="tvshows" property="widgetPath.widget2">videodb://recentlyaddedepisodes</propertydefault>	
+	<propertydefault labelID="tvshows" property="widgetPath.widget2">special://skin/extras/playlists/recent_unwatched_episodes.xsp</propertydefault>	
 	<propertydefault labelID="tvshows" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetName.widget3">31122</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetType.widget3">tvshows</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetTarget.widget3">videos</propertydefault>
 	<propertydefault labelID="tvshows" property="widgetPath.widget3">special://skin/extras/playlists/unwatched_tvshows.xsp</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget4">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetName.widget4">135</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget4">moviegenre</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetTarget.widget4">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget4">videodb://tvshows/genres/</propertydefault>
+	<propertydefault labelID="tvshows" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetName.widget5">20388</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetType.widget5">studios</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetTarget.widget5">videos</propertydefault>
+	<propertydefault labelID="tvshows" property="widgetPath.widget5">videodb://tvshows/studios/</propertydefault>
 	<!-- MusicVideos -->
 	<propertydefault labelID="musicvideos" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget1">20390</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget1">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget1">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget1">videodb://recentlyaddedmusicvideos/</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget2">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget2">43090</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget2">31151</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget2">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/mostwatched_musicvideos.xsp</propertydefault>	
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget2">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget2">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>	
 	<propertydefault labelID="musicvideos" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetName.widget3">43091</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetType.widget3">musicvideos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget3">artists</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetTarget.widget3">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget3">special://skin/extras/playlists/random_musicvideo_artists.xsp</propertydefault>
 	<propertydefault labelID="musicvideos" property="widget.widget4">Playlist</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetName.widget4">43092</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget4">31152</propertydefault>
 	<propertydefault labelID="musicvideos" property="widgetType.widget4">musicvideos</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">music</propertydefault>
-	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/unwatched_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget4">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget4">special://skin/extras/playlists/random_musicvideos.xsp</propertydefault>
+	<propertydefault labelID="musicvideos" property="widget.widget5">Library</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetName.widget5">20388</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetType.widget5">studios</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetTarget.widget5">videos</propertydefault>
+	<propertydefault labelID="musicvideos" property="widgetPath.widget5">videodb://musicvideos/studios/</propertydefault>
 	<!-- Music -->
 	<propertydefault labelID="music" property="widget.widget1">Library</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget1">517</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget1">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget1">music</propertydefault>
-	<propertydefault labelID="music" property="widgetPath.widget1">musicdb://recentlyplayedalbums</propertydefault>
+	<propertydefault labelID="music" property="widgetPath.widget1">musicdb://recentlyplayedalbums/</propertydefault>
 	<propertydefault labelID="music" property="widget.widget2">Library</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget2">359</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget2">albums</propertydefault>
 	<propertydefault labelID="music" property="widgetTarget.widget2">music</propertydefault>
-	<propertydefault labelID="music" property="widgetPath.widget2">musicdb://recentlyaddedalbums</propertydefault>
+	<propertydefault labelID="music" property="widgetPath.widget2">musicdb://recentlyaddedalbums/</propertydefault>
 	<propertydefault labelID="music" property="widget.widget3">Playlist</propertydefault>
 	<propertydefault labelID="music" property="widgetName.widget3">31012</propertydefault>
 	<propertydefault labelID="music" property="widgetType.widget3">albums</propertydefault>
@@ -172,66 +197,66 @@
         <shortcut label="43100" type="" icon="DefaultFolder.png" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>        
         <!-- Weather -->
         <node label="8" condition="!String.IsEmpty(Weather.Plugin)">
-            <shortcut label="8" type="8" icon="special://skin/extras/icons/weather.png">ActivateWindow(Weather)</shortcut>
-            <shortcut label="184" type="8" icon="special://skin/extras/icons/update.png">Weather.Refresh</shortcut>
-            <shortcut label="35500" type="8" icon="special://skin/extras/icons/location-previous.png">Weather.LocationPrevious</shortcut>
-            <shortcut label="35500" type="8" icon="special://skin/extras/icons/location-next.png">Weather.LocationNext</shortcut>
-            <shortcut label="8" type="10004" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(weathersettings)</shortcut>
+            <shortcut label="8" type="8" icon="resource://resource.images.skinicons.estuary/weather.png">ActivateWindow(Weather)</shortcut>
+            <shortcut label="184" type="8" icon="resource://resource.images.skinicons.estuary/update.png">Weather.Refresh</shortcut>
+            <shortcut label="31077" type="8" icon="resource://resource.images.skinicons.estuary/location-previous.png">Weather.LocationPrevious</shortcut>
+            <shortcut label="31078" type="8" icon="resource://resource.images.skinicons.estuary/location-next.png">Weather.LocationNext</shortcut>
+            <shortcut label="8" type="10004" icon="resource://resource.images.skinicons.estuary/weather-settings.png">ActivateWindow(weathersettings)</shortcut>
         </node>
         <!-- Pictures -->
         <node label="1">
-            <shortcut label="1" type="1" icon="special://skin/extras/icons/pictures.png">ActivateWindow(pictures)</shortcut>
-            <shortcut label="1039" type="1" icon="special://skin/extras/icons/pictures2.png">ActivateWindow(pictures,addons://sources/image/,return)</shortcut>
-            <shortcut label="1" type="10004" icon="special://skin/extras/icons/pictures.png">ActivateWindow(picturessettings)</shortcut>
+            <shortcut label="1" type="1" icon="resource://resource.images.skinicons.estuary/pictures.png">ActivateWindow(pictures)</shortcut>
+            <shortcut label="1039" type="1" icon="resource://resource.images.skinicons.estuary/pictures2.png">ActivateWindow(pictures,addons://sources/image/,return)</shortcut>
+            <shortcut label="1" type="10004" icon="resource://resource.images.skinicons.estuary/pictures.png">ActivateWindow(picturessettings)</shortcut>
             <content>picturesources</content>
         </node>
         <!-- LiveTV -->
         <node label="19020" condition="PVR.HasTVChannels">
-            <shortcut label="19020" type="19020" icon="special://skin/extras/icons/livetv.png">ActivateWindow(tvchannels)</shortcut>
-            <shortcut label="19019" type="19020" icon="special://skin/extras/icons/channels.png">ActivateWindow(tvchannels)</shortcut>
-            <shortcut label="19069" type="19020" icon="special://skin/extras/icons/guide.png">ActivateWindow(tvguide)</shortcut>
-            <shortcut label="19017" type="19020" icon="special://skin/extras/icons/recordings.png">ActivateWindow(tvrecordings)</shortcut>
-			<shortcut label="19138" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimerrules)</shortcut>
-            <shortcut label="19040" type="19020" icon="special://skin/extras/icons/timers.png">ActivateWindow(tvtimers)</shortcut>
-            <shortcut label="137" type="19020" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(tvsearch)</shortcut>
-            <shortcut label="32066" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvrTV</shortcut>
-            <shortcut label="32068" type="19020" icon="special://skin/extras/icons/livetv.png">PlayPvr</shortcut>
-            <shortcut label="19020" type="10004" icon="special://skin/extras/icons/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <shortcut label="19020" type="19020" icon="resource://resource.images.skinicons.estuary/livetv.png">ActivateWindow(tvchannels)</shortcut>
+            <shortcut label="19019" type="19020" icon="resource://resource.images.skinicons.estuary/channels.png">ActivateWindow(tvchannels)</shortcut>
+            <shortcut label="19069" type="19020" icon="resource://resource.images.skinicons.estuary/guide.png">ActivateWindow(tvguide)</shortcut>
+            <shortcut label="19017" type="19020" icon="resource://resource.images.skinicons.estuary/recordings.png">ActivateWindow(tvrecordings)</shortcut>
+			<shortcut label="19138" type="19020" icon="resource://resource.images.skinicons.estuary/timers.png">ActivateWindow(tvtimerrules)</shortcut>
+            <shortcut label="19040" type="19020" icon="resource://resource.images.skinicons.estuary/timers.png">ActivateWindow(tvtimers)</shortcut>
+            <shortcut label="137" type="19020" icon="resource://resource.images.skinicons.estuary/tv-search.png">ActivateWindow(tvsearch)</shortcut>
+            <shortcut label="32066" type="19020" icon="resource://resource.images.skinicons.estuary/livetv.png">PlayPvrTV</shortcut>
+            <shortcut label="32068" type="19020" icon="resource://resource.images.skinicons.estuary/livetv.png">PlayPvr</shortcut>
+            <shortcut label="19020" type="10004" icon="resource://resource.images.skinicons.estuary/livetv.png">ActivateWindow(pvrsettings)</shortcut>
             <node label="19023">
                 <content>pvr-tv</content>
             </node>
         </node>
         <!-- Radio -->
         <node label="19021" condition="PVR.HasRadioChannels">
-            <shortcut label="19021" type="19021" icon="special://skin/extras/icons/radio.png">ActivateWindow(radiochannels)</shortcut>
-            <shortcut label="19019" type="19021" icon="special://skin/extras/icons/channels.png">ActivateWindow(radiochannels)</shortcut>
-            <shortcut label="19069" type="19021" icon="special://skin/extras/icons/guide.png">ActivateWindow(radioguide)</shortcut>
-            <shortcut label="19017" type="19021" icon="special://skin/extras/icons/recordings.png">ActivateWindow(radiorecordings)</shortcut>
-			<shortcut label="19138" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimerrules)</shortcut>
-            <shortcut label="19040" type="19021" icon="special://skin/extras/icons/timers.png">ActivateWindow(radiotimers)</shortcut>
-            <shortcut label="137" type="19021" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(radiosearch)</shortcut>
-            <shortcut label="32067" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvrRadio</shortcut>
-            <shortcut label="32068" type="19021" icon="special://skin/extras/icons/radio.png">PlayPvr</shortcut>
-            <shortcut label="19020" type="10004" icon="special://skin/extras/icons/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <shortcut label="19021" type="19021" icon="resource://resource.images.skinicons.estuary/radio.png">ActivateWindow(radiochannels)</shortcut>
+            <shortcut label="19019" type="19021" icon="resource://resource.images.skinicons.estuary/channels.png">ActivateWindow(radiochannels)</shortcut>
+            <shortcut label="19069" type="19021" icon="resource://resource.images.skinicons.estuary/guide.png">ActivateWindow(radioguide)</shortcut>
+            <shortcut label="19017" type="19021" icon="resource://resource.images.skinicons.estuary/recordings.png">ActivateWindow(radiorecordings)</shortcut>
+			<shortcut label="19138" type="19021" icon="resource://resource.images.skinicons.estuary/timers.png">ActivateWindow(radiotimerrules)</shortcut>
+            <shortcut label="19040" type="19021" icon="resource://resource.images.skinicons.estuary/timers.png">ActivateWindow(radiotimers)</shortcut>
+            <shortcut label="137" type="19021" icon="resource://resource.images.skinicons.estuary/tv-search.png">ActivateWindow(radiosearch)</shortcut>
+            <shortcut label="32067" type="19021" icon="resource://resource.images.skinicons.estuary/radio.png">PlayPvrRadio</shortcut>
+            <shortcut label="32068" type="19021" icon="resource://resource.images.skinicons.estuary/radio.png">PlayPvr</shortcut>
+            <shortcut label="19020" type="10004" icon="resource://resource.images.skinicons.estuary/livetv.png">ActivateWindow(pvrsettings)</shortcut>
             <node label="19024">
                 <content>pvr-radio</content>
             </node>
         </node>
         <!-- Video -->
         <node label="3">
-            <shortcut label="3" type="3" icon="special://skin/extras/icons/videos.png">ActivateWindow(videos,library://video/,return)</shortcut>
-            <shortcut label="744" type="3" icon="special://skin/extras/icons/files.png">ActivateWindow(videos,sources://video/,return)</shortcut>
-            <shortcut label="136" type="3" icon="special://skin/extras/icons/playlists.png">ActivateWindow(videos,special://videoplaylists/,return)</shortcut>
-            <shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
-            <shortcut label="589" type="3" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode(video))</shortcut>
-            <shortcut label="653" type="3" icon="special://skin/extras/icons/updatelibrary.png">UpdateLibrary(video)</shortcut>
-            <shortcut label="32055" type="3" icon="special://skin/extras/icons/error.png">CleanLibrary(video)</shortcut> 
-            <shortcut label="3" type="10004" icon="special://skin/extras/icons/video-settings.png">ActivateWindow(videossettings)</shortcut>
+            <shortcut label="3" type="3" icon="resource://resource.images.skinicons.estuary/videos.png">ActivateWindow(videos,library://video/,return)</shortcut>
+            <shortcut label="744" type="3" icon="resource://resource.images.skinicons.estuary/files.png">ActivateWindow(videos,sources://video/,return)</shortcut>
+            <shortcut label="136" type="3" icon="resource://resource.images.skinicons.estuary/playlists.png">ActivateWindow(videos,special://videoplaylists/,return)</shortcut>
+            <shortcut label="1037" type="3" icon="resource://resource.images.skinicons.estuary/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+            <shortcut label="589" type="3" icon="resource://resource.images.skinicons.estuary/play.png">PlayerControl(PartyMode(video))</shortcut>
+            <shortcut label="653" type="3" icon="resource://resource.images.skinicons.estuary/updatelibrary.png">UpdateLibrary(video)</shortcut>
+            <shortcut label="32055" type="3" icon="resource://resource.images.skinicons.estuary/error.png">CleanLibrary(video)</shortcut> 
+            <shortcut label="3" type="10004" icon="resource://resource.images.skinicons.estuary/video-settings.png">ActivateWindow(videossettings)</shortcut>
             <node label="32040">
                 <content>playlist-video</content>
             </node>
             <node label="32010">
-                <shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+                <shortcut label="1037" type="3" icon="resource://resource.images.skinicons.estuary/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
                 <content>addon-video</content>
             </node>
             <node label="32075">
@@ -241,74 +266,74 @@
         </node>
         <!-- Movies -->
         <node label="342" condition="Library.HasContent(movies)">
-            <shortcut label="342" type="342" icon="special://skin/extras/icons/movies2.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
-            <shortcut label="20386" type="342" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</shortcut>
-            <shortcut label="135" type="342" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://movies/genres/,return)</shortcut>
-            <shortcut label="369" type="342" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
-            <shortcut label="562" type="342" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://movies/years/,return)</shortcut>
-            <shortcut label="344" type="342" icon="special://skin/extras/icons/actor.png">ActivateWindow(videos,videodb://movies/actors/,return)</shortcut>
-            <shortcut label="20348" type="342" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://movies/directors/,return)</shortcut>
-            <shortcut label="20388" type="342" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://movies/studios/,return)</shortcut>
-            <shortcut label="20434" type="342" icon="special://skin/extras/icons/sets.png">ActivateWindow(videos,videodb://movies/sets/,return)</shortcut>
-            <shortcut label="20451" type="342" icon="special://skin/extras/icons/country.png">ActivateWindow(videos,videodb://movies/countries/,return)</shortcut>            
-            <shortcut label="20459" type="342" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://movies/tags/,return)</shortcut>
-            <shortcut label="20314" type="342" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://movies/,return)</shortcut>
+            <shortcut label="342" type="342" icon="resource://resource.images.skinicons.estuary/movies2.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="20386" type="342" icon="resource://resource.images.skinicons.estuary/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmovies/,return)</shortcut>
+            <shortcut label="135" type="342" icon="resource://resource.images.skinicons.estuary/genre.png">ActivateWindow(videos,videodb://movies/genres/,return)</shortcut>
+            <shortcut label="369" type="342" icon="resource://resource.images.skinicons.estuary/title.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="562" type="342" icon="resource://resource.images.skinicons.estuary/years.png">ActivateWindow(videos,videodb://movies/years/,return)</shortcut>
+            <shortcut label="344" type="342" icon="resource://resource.images.skinicons.estuary/actor.png">ActivateWindow(videos,videodb://movies/actors/,return)</shortcut>
+            <shortcut label="20348" type="342" icon="resource://resource.images.skinicons.estuary/director2.png">ActivateWindow(videos,videodb://movies/directors/,return)</shortcut>
+            <shortcut label="20388" type="342" icon="resource://resource.images.skinicons.estuary/studios.png">ActivateWindow(videos,videodb://movies/studios/,return)</shortcut>
+            <shortcut label="20434" type="342" icon="resource://resource.images.skinicons.estuary/sets.png">ActivateWindow(videos,videodb://movies/sets/,return)</shortcut>
+            <shortcut label="20451" type="342" icon="resource://resource.images.skinicons.estuary/country.png">ActivateWindow(videos,videodb://movies/countries/,return)</shortcut>            
+            <shortcut label="20459" type="342" icon="resource://resource.images.skinicons.estuary/tags.png">ActivateWindow(videos,videodb://movies/tags/,return)</shortcut>
+            <shortcut label="20314" type="342" icon="resource://resource.images.skinicons.estuary/media.png">ActivateWindow(videos,videodb://movies/,return)</shortcut>
         </node>
         <!-- TVShows -->
         <node label="20343" condition="Library.HasContent(tvshows)">
-            <shortcut label="20343" type="20343" icon="special://skin/extras/icons/tvshows.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
-            <shortcut label="20387" type="20343" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</shortcut>
-            <shortcut label="626" type="20343" icon="special://skin/extras/icons/inprogressshows.png">ActivateWindow(videos,library://video/inprogressshows.xml/,return)</shortcut>
-            <shortcut label="135" type="20343" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://tvshows/genres/,return)</shortcut>
-            <shortcut label="369" type="20343" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://tvshows/titles/,return)</shortcut>
-            <shortcut label="562" type="20343" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://tvshows/years/,return)</shortcut>
-            <shortcut label="344" type="20343" icon="special://skin/extras/icons/actor.png">ActivateWindow(videos,videodb://tvshows/actors/,return)</shortcut>
-            <shortcut label="20388" type="20343" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://tvshows/studios/,return)</shortcut>            
-            <shortcut label="20459" type="20343" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://tvshows/tags/,return)</shortcut>
-            <shortcut label="20314" type="20343" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://tvshows/,return)</shortcut>
+            <shortcut label="20343" type="20343" icon="resource://resource.images.skinicons.estuary/tvshows.png">ActivateWindow(videos,videodb://movies/titles/,return)</shortcut>
+            <shortcut label="20387" type="20343" icon="resource://resource.images.skinicons.estuary/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedepisodes/,return)</shortcut>
+            <shortcut label="626" type="20343" icon="resource://resource.images.skinicons.estuary/inprogressshows.png">ActivateWindow(videos,library://video/inprogressshows.xml/,return)</shortcut>
+            <shortcut label="135" type="20343" icon="resource://resource.images.skinicons.estuary/genre.png">ActivateWindow(videos,videodb://tvshows/genres/,return)</shortcut>
+            <shortcut label="369" type="20343" icon="resource://resource.images.skinicons.estuary/title.png">ActivateWindow(videos,videodb://tvshows/titles/,return)</shortcut>
+            <shortcut label="562" type="20343" icon="resource://resource.images.skinicons.estuary/years.png">ActivateWindow(videos,videodb://tvshows/years/,return)</shortcut>
+            <shortcut label="344" type="20343" icon="resource://resource.images.skinicons.estuary/actor.png">ActivateWindow(videos,videodb://tvshows/actors/,return)</shortcut>
+            <shortcut label="20388" type="20343" icon="resource://resource.images.skinicons.estuary/studios.png">ActivateWindow(videos,videodb://tvshows/studios/,return)</shortcut>            
+            <shortcut label="20459" type="20343" icon="resource://resource.images.skinicons.estuary/tags.png">ActivateWindow(videos,videodb://tvshows/tags/,return)</shortcut>
+            <shortcut label="20314" type="20343" icon="resource://resource.images.skinicons.estuary/media.png">ActivateWindow(videos,videodb://tvshows/,return)</shortcut>
         </node>
         <!-- MusicVideos -->
         <node label="20389" condition="Library.HasContent(musicvideos)">
-            <shortcut label="20389" type="20389" icon="special://skin/extras/icons/musicvideos.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
-            <shortcut label="20390" type="20389" icon="special://skin/extras/icons/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</shortcut>
-            <shortcut label="135" type="20389" icon="special://skin/extras/icons/genre.png">ActivateWindow(videos,videodb://musicvideos/genres/,return)</shortcut>
-            <shortcut label="369" type="20389" icon="special://skin/extras/icons/title.png">ActivateWindow(videos,videodb://musicvideos/titles/,return)</shortcut>
-            <shortcut label="562" type="20389" icon="special://skin/extras/icons/years.png">ActivateWindow(videos,videodb://musicvideos/years/,return)</shortcut>
-            <shortcut label="133" type="20389" icon="special://skin/extras/icons/artist.png">ActivateWindow(videos,videodb://musicvideos/artists/,return)</shortcut>
-            <shortcut label="132" type="20389" icon="special://skin/extras/icons/album.png">ActivateWindow(videos,videodb://musicvideos/albums/,return)</shortcut>            
-            <shortcut label="20348" type="20389" icon="special://skin/extras/icons/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>
-            <shortcut label="20388" type="20389" icon="special://skin/extras/icons/studios.png">ActivateWindow(videos,videodb://musicvideos/studios/,return)</shortcut>
-            <shortcut label="20459" type="20389" icon="special://skin/extras/icons/tags.png">ActivateWindow(videos,videodb://musicvideos/tags/,return)</shortcut>
-            <shortcut label="20314" type="20389" icon="special://skin/extras/icons/media.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
+            <shortcut label="20389" type="20389" icon="resource://resource.images.skinicons.estuary/musicvideos.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
+            <shortcut label="20390" type="20389" icon="resource://resource.images.skinicons.estuary/recentlyadded.png">ActivateWindow(videos,videodb://recentlyaddedmusicvideos/,return)</shortcut>
+            <shortcut label="135" type="20389" icon="resource://resource.images.skinicons.estuary/genre.png">ActivateWindow(videos,videodb://musicvideos/genres/,return)</shortcut>
+            <shortcut label="369" type="20389" icon="resource://resource.images.skinicons.estuary/title.png">ActivateWindow(videos,videodb://musicvideos/titles/,return)</shortcut>
+            <shortcut label="562" type="20389" icon="resource://resource.images.skinicons.estuary/years.png">ActivateWindow(videos,videodb://musicvideos/years/,return)</shortcut>
+            <shortcut label="133" type="20389" icon="resource://resource.images.skinicons.estuary/artist.png">ActivateWindow(videos,videodb://musicvideos/artists/,return)</shortcut>
+            <shortcut label="132" type="20389" icon="resource://resource.images.skinicons.estuary/album.png">ActivateWindow(videos,videodb://musicvideos/albums/,return)</shortcut>            
+            <shortcut label="20348" type="20389" icon="resource://resource.images.skinicons.estuary/director2.png">ActivateWindow(videos,videodb://musicvideos/directors/,return)</shortcut>
+            <shortcut label="20388" type="20389" icon="resource://resource.images.skinicons.estuary/studios.png">ActivateWindow(videos,videodb://musicvideos/studios/,return)</shortcut>
+            <shortcut label="20459" type="20389" icon="resource://resource.images.skinicons.estuary/tags.png">ActivateWindow(videos,videodb://musicvideos/tags/,return)</shortcut>
+            <shortcut label="20314" type="20389" icon="resource://resource.images.skinicons.estuary/media.png">ActivateWindow(videos,videodb://musicvideos/,return)</shortcut>
         </node>
         <!-- Music -->
         <node label="2">
-            <shortcut label="2" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(music,musicdb://,return)</shortcut>
-            <shortcut label="359" type="2" icon="special://skin/extras/icons/musicrecentlyadded.png">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</shortcut>
-            <shortcut label="517" type="2" icon="special://skin/extras/icons/musicrecentlyplayed.png">ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</shortcut>
-            <shortcut label="135" type="2" icon="special://skin/extras/icons/musicgenres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
-            <shortcut label="133" type="2" icon="special://skin/extras/icons/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
+            <shortcut label="2" type="2" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(music,musicdb://,return)</shortcut>
+            <shortcut label="359" type="2" icon="resource://resource.images.skinicons.estuary/musicrecentlyadded.png">ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</shortcut>
+            <shortcut label="517" type="2" icon="resource://resource.images.skinicons.estuary/musicrecentlyplayed.png">ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</shortcut>
+            <shortcut label="135" type="2" icon="resource://resource.images.skinicons.estuary/musicgenres.png">ActivateWindow(music,musicdb://genres/,return)</shortcut>
+            <shortcut label="133" type="2" icon="resource://resource.images.skinicons.estuary/artist.png">ActivateWindow(music,musicdb://artists/,return)</shortcut>
 			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png">ActivateWindow(music,library://music/musicroles/,return)</shortcut>
-            <shortcut label="132" type="2" icon="special://skin/extras/icons/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
-            <shortcut label="134" type="2" icon="special://skin/extras/icons/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
-            <shortcut label="271" type="2" icon="special://skin/extras/icons/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
-            <shortcut label="10504" type="2" icon="special://skin/extras/icons/musictop100songs.png">ActivateWindow(music,musicdb://top100/songs/,return)</shortcut>
-            <shortcut label="10505" type="2" icon="special://skin/extras/icons/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>
-            <shortcut label="562" type="2" icon="special://skin/extras/icons/years.png">ActivateWindow(music,musicdb://years/,return)</shortcut>
-            <shortcut label="1050" type="2" icon="special://skin/extras/icons/sets.png">ActivateWindow(music,musicdb://singles/,return)</shortcut>
-            <shortcut label="10516" type="2" icon="special://skin/extras/icons/media.png">ActivateWindow(music,musicdb://,return)</shortcut>            
-            <shortcut label="744" type="2" icon="special://skin/extras/icons/files.png">ActivateWindow(music,sources://music/,return)</shortcut>
-            <shortcut label="136" type="2" icon="special://skin/extras/icons/playlists.png">ActivateWindow(music,special://musicplaylists/,return)</shortcut>
-            <shortcut label="1038" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
-            <shortcut label="589" type="2" icon="special://skin/extras/icons/play.png">PlayerControl(PartyMode)</shortcut>
-            <shortcut label="653" type="2" icon="special://skin/extras/icons/updatelibrary.png">UpdateLibrary(music)</shortcut>
-            <shortcut label="32055" type="2" icon="special://skin/extras/icons/error.png">CleanLibrary(music)</shortcut>
-            <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(musicsettings)</shortcut>
+            <shortcut label="132" type="2" icon="resource://resource.images.skinicons.estuary/album.png">ActivateWindow(music,musicdb://albums/,return)</shortcut>
+            <shortcut label="134" type="2" icon="resource://resource.images.skinicons.estuary/songs.png">ActivateWindow(music,musicdb://songs/,return)</shortcut>
+            <shortcut label="271" type="2" icon="resource://resource.images.skinicons.estuary/musictop100.png">ActivateWindow(music,musicdb://top100/,return)</shortcut>
+            <shortcut label="10504" type="2" icon="resource://resource.images.skinicons.estuary/musictop100songs.png">ActivateWindow(music,musicdb://top100/songs/,return)</shortcut>
+            <shortcut label="10505" type="2" icon="resource://resource.images.skinicons.estuary/musictop100albums.png">ActivateWindow(music,musicdb://top100/albums/,return)</shortcut>
+            <shortcut label="562" type="2" icon="resource://resource.images.skinicons.estuary/years.png">ActivateWindow(music,musicdb://years/,return)</shortcut>
+            <shortcut label="1050" type="2" icon="resource://resource.images.skinicons.estuary/sets.png">ActivateWindow(music,musicdb://singles/,return)</shortcut>
+            <shortcut label="10516" type="2" icon="resource://resource.images.skinicons.estuary/media.png">ActivateWindow(music,musicdb://,return)</shortcut>            
+            <shortcut label="744" type="2" icon="resource://resource.images.skinicons.estuary/files.png">ActivateWindow(music,sources://music/,return)</shortcut>
+            <shortcut label="136" type="2" icon="resource://resource.images.skinicons.estuary/playlists.png">ActivateWindow(music,special://musicplaylists/,return)</shortcut>
+            <shortcut label="1038" type="2" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+            <shortcut label="589" type="2" icon="resource://resource.images.skinicons.estuary/play.png">PlayerControl(PartyMode)</shortcut>
+            <shortcut label="653" type="2" icon="resource://resource.images.skinicons.estuary/updatelibrary.png">UpdateLibrary(music)</shortcut>
+            <shortcut label="32055" type="2" icon="resource://resource.images.skinicons.estuary/error.png">CleanLibrary(music)</shortcut>
+            <shortcut label="2" type="10004" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(musicsettings)</shortcut>
             <node label="32040">
                 <content>playlist-audio</content>
             </node>
             <node label="32011">
-                <shortcut label="1038" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+                <shortcut label="1038" type="2" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
                 <content>addon-audio</content>
             </node>
             <node label="32075">
@@ -318,79 +343,79 @@
         </node>
         <!-- DVD -->
         <node label="446">
-            <shortcut label="341" type="446" icon="special://skin/extras/icons/dvd.png">PlayDVD</shortcut>
-            <shortcut label="13391" type="446" icon="special://skin/extras/icons/eject.png">EjectTray()</shortcut>
-			<shortcut label="600" type="446" icon="special://skin/extras/icons/cd.png">RipCD()</shortcut>
+            <shortcut label="341" type="446" icon="resource://resource.images.skinicons.estuary/dvd.png">PlayDVD</shortcut>
+            <shortcut label="13391" type="446" icon="resource://resource.images.skinicons.estuary/eject.png">EjectTray()</shortcut>
+			<shortcut label="600" type="446" icon="resource://resource.images.skinicons.estuary/cd.png">RipCD()</shortcut>
         </node>
         <!-- Addons -->
         <node label="24001">
-            <shortcut label="24001" type="24001" icon="special://skin/extras/icons/addons.png">ActivateWindow(1100)</shortcut>
-            <shortcut label="10040" type="24001" icon="special://skin/extras/icons/addons.png">ActivateWindow(addonbrowser)</shortcut>			
-			<shortcut label="24998" type="24001" icon="special://skin/extras/icons/addons_installed.png">ActivateWindow(addonbrowser,addons://user/,return)</shortcut>
-			<shortcut label="24043" type="24001" icon="special://skin/extras/icons/update-available.png">ActivateWindow(addonbrowser,addons://outdated/,return)</shortcut>
-			<shortcut label="24033" type="24001" icon="special://skin/extras/icons/install_repos.png">ActivateWindow(addonbrowser,addons://repos/,return)</shortcut>
-			<shortcut label="137" type="24001" icon="special://skin/extras/icons/tv-search.png">ActivateWindow(addonbrowser,addons://search/,return)</shortcut>			
+            <shortcut label="24001" type="24001" icon="resource://resource.images.skinicons.estuary/addons.png">ActivateWindow(1100)</shortcut>
+            <shortcut label="10040" type="24001" icon="resource://resource.images.skinicons.estuary/addons.png">ActivateWindow(addonbrowser)</shortcut>			
+			<shortcut label="24998" type="24001" icon="resource://resource.images.skinicons.estuary/addons_installed.png">ActivateWindow(addonbrowser,addons://user/,return)</shortcut>
+			<shortcut label="24043" type="24001" icon="resource://resource.images.skinicons.estuary/update-available.png">ActivateWindow(addonbrowser,addons://outdated/,return)</shortcut>
+			<shortcut label="24033" type="24001" icon="resource://resource.images.skinicons.estuary/install_repos.png">ActivateWindow(addonbrowser,addons://repos/,return)</shortcut>
+			<shortcut label="137" type="24001" icon="resource://resource.images.skinicons.estuary/tv-search.png">ActivateWindow(addonbrowser,addons://search/,return)</shortcut>			
             <node label="1043">
-                <shortcut label="1043" type="24001" icon="special://skin/extras/icons/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
-                <shortcut label="20244" type="24001" icon="special://skin/extras/icons/android.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps,return)</shortcut>
+                <shortcut label="1043" type="24001" icon="resource://resource.images.skinicons.estuary/program.png">ActivateWindow(programs,addons://sources/executable/,return)</shortcut>
+                <shortcut label="20244" type="24001" icon="resource://resource.images.skinicons.estuary/android.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps,return)</shortcut>
                 <content>addon-program</content>
             </node>
             <node label="1037">
-                <shortcut label="1037" type="3" icon="special://skin/extras/icons/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
+                <shortcut label="1037" type="3" icon="resource://resource.images.skinicons.estuary/video-addons.png">ActivateWindow(videos,addons://sources/video/,return)</shortcut>
                 <content>addon-video</content>
             </node>
             <node label="1038">
-                <shortcut label="1038" type="2" icon="special://skin/extras/icons/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
+                <shortcut label="1038" type="2" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(music,addons://sources/audio/,return)</shortcut>
                 <content>addon-audio</content>
             </node>
             <node label="1039">
-                <shortcut label="1039" type="1" icon="special://skin/extras/icons/pictures2.png">ActivateWindow(pictures,addons://sources/image/,return)</shortcut>
+                <shortcut label="1039" type="1" icon="resource://resource.images.skinicons.estuary/pictures2.png">ActivateWindow(pictures,addons://sources/image/,return)</shortcut>
                 <content>addon-image</content>
             </node>
         </node>
         <!-- Settings -->
         <node label="10004">
-            <shortcut label="10004" type="10004" icon="special://skin/extras/icons/settings.png">ActivateWindow(settings)</shortcut>
-            <shortcut label="7" type="10004" icon="special://skin/extras/icons/files.png">ActivateWindow(filemanager)</shortcut>
-            <shortcut label="10040" type="10004" icon="special://skin/extras/icons/addons.png">ActivateWindow(addonbrowser)</shortcut>
-            <shortcut label="130" type="10004" icon="special://skin/extras/icons/systeminfo.png">ActivateWindow(systeminfo)</shortcut>
-            <shortcut label="14111" type="10004" icon="special://skin/extras/icons/eventlog.png">ActivateWindow(eventlog,events://,return)</shortcut>
-            <shortcut label="166" type="10004" icon="special://skin/extras/icons/skin2.png">ActivateWindow(skinsettings)</shortcut>
-            <shortcut label="8" type="10004" icon="special://skin/extras/icons/weather-settings.png">ActivateWindow(servicesettings,weather)</shortcut>
-            <shortcut label="1" type="10004" icon="special://skin/extras/icons/pictures.png">ActivateWindow(playersettings,pictures)</shortcut>
-            <shortcut label="19020" type="10004" icon="special://skin/extras/icons/livetv2.png">ActivateWindow(pvrsettings)</shortcut>
-            <shortcut label="3" type="10004" icon="special://skin/extras/icons/video-settings.png">ActivateWindow(playersettings,videos)</shortcut>
-            <shortcut label="2" type="10004" icon="special://skin/extras/icons/music.png">ActivateWindow(playersettings,music)</shortcut>      
-            <shortcut label="13000" type="10004" icon="special://skin/extras/icons/system.png">ActivateWindow(systemsettings)</shortcut>
-            <shortcut label="14036" type="10004" icon="special://skin/extras/icons/network3.png">ActivateWindow(servicesettings)</shortcut>
-            <shortcut label="14206" type="10004" icon="special://skin/extras/icons/appearance.png">ActivateWindow(interfacesettings)</shortcut>
-            <shortcut label="20183" type="10004" icon="special://skin/extras/icons/reloadskin.png">ReloadSkin()</shortcut>
-            <shortcut label="360" type="10004" icon="special://skin/extras/icons/screensaver.png">ActivateScreensaver()</shortcut>            
+            <shortcut label="10004" type="10004" icon="resource://resource.images.skinicons.estuary/settings.png">ActivateWindow(settings)</shortcut>
+            <shortcut label="7" type="10004" icon="resource://resource.images.skinicons.estuary/files.png">ActivateWindow(filemanager)</shortcut>
+            <shortcut label="10040" type="10004" icon="resource://resource.images.skinicons.estuary/addons.png">ActivateWindow(addonbrowser)</shortcut>
+            <shortcut label="130" type="10004" icon="resource://resource.images.skinicons.estuary/systeminfo.png">ActivateWindow(systeminfo)</shortcut>
+            <shortcut label="14111" type="10004" icon="resource://resource.images.skinicons.estuary/eventlog.png">ActivateWindow(eventlog,events://,return)</shortcut>
+            <shortcut label="166" type="10004" icon="resource://resource.images.skinicons.estuary/skin2.png">ActivateWindow(skinsettings)</shortcut>
+            <shortcut label="8" type="10004" icon="resource://resource.images.skinicons.estuary/weather-settings.png">ActivateWindow(servicesettings,weather)</shortcut>
+            <shortcut label="1" type="10004" icon="resource://resource.images.skinicons.estuary/pictures.png">ActivateWindow(playersettings,pictures)</shortcut>
+            <shortcut label="19020" type="10004" icon="resource://resource.images.skinicons.estuary/livetv.png">ActivateWindow(pvrsettings)</shortcut>
+            <shortcut label="3" type="10004" icon="resource://resource.images.skinicons.estuary/video-settings.png">ActivateWindow(playersettings,videos)</shortcut>
+            <shortcut label="2" type="10004" icon="resource://resource.images.skinicons.estuary/music.png">ActivateWindow(playersettings,music)</shortcut>      
+            <shortcut label="13000" type="10004" icon="resource://resource.images.skinicons.estuary/system.png">ActivateWindow(systemsettings)</shortcut>
+            <shortcut label="14036" type="10004" icon="resource://resource.images.skinicons.estuary/network3.png">ActivateWindow(servicesettings)</shortcut>
+            <shortcut label="14206" type="10004" icon="resource://resource.images.skinicons.estuary/appearance.png">ActivateWindow(interfacesettings)</shortcut>
+            <shortcut label="20183" type="10004" icon="resource://resource.images.skinicons.estuary/reloadskin.png">ReloadSkin()</shortcut>
+            <shortcut label="360" type="10004" icon="resource://resource.images.skinicons.estuary/screensaver.png">ActivateScreensaver()</shortcut>            
         </node>
         <!-- Profiles -->
         <node label="13200">
-            <shortcut label="13200" type="13200" icon="special://skin/extras/icons/profiles.png">ActivateWindow(profiles)</shortcut>
-            <shortcut label="10029" type="13200" icon="special://skin/extras/icons/files.png">ActivateWindow(loginscreen)</shortcut>
-            <shortcut label="20126" type="13200" icon="special://skin/extras/icons/logout.png" condition="System.HasLoginScreen">System.LogOff()</shortcut>
-            <shortcut label="20045" type="13200" icon="special://skin/extras/icons/files.png">Mastermode()</shortcut>
+            <shortcut label="13200" type="13200" icon="resource://resource.images.skinicons.estuary/profiles.png">ActivateWindow(profiles)</shortcut>
+            <shortcut label="10029" type="13200" icon="resource://resource.images.skinicons.estuary/files.png">ActivateWindow(loginscreen)</shortcut>
+            <shortcut label="20126" type="13200" icon="resource://resource.images.skinicons.estuary/logout.png" condition="System.HasLoginScreen">System.LogOff()</shortcut>
+            <shortcut label="20045" type="13200" icon="resource://resource.images.skinicons.estuary/files.png">Mastermode()</shortcut>
         </node>
         <!-- Power -->
         <node label="13005">
-            <shortcut label="31072" type="13005" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
-            <shortcut label="13012" type="13005" icon="special://skin/extras/icons/quit.png" condition="System.ShowExitButton">Quit()</shortcut>
-            <shortcut label="13005" type="13005" icon="special://skin/extras/icons/shutdown.png" condition="System.HasShutdown">Shutdown()</shortcut>
-            <shortcut label="13016" type="13005" icon="special://skin/extras/icons/shutdown.png" condition="System.CanPowerDown">Powerdown()</shortcut>
-            <shortcut label="13313" type="13005" icon="special://skin/extras/icons/files.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
-            <shortcut label="13011" type="13005" icon="special://skin/extras/icons/suspend.png" condition="System.CanSuspend">Suspend()</shortcut>
-            <shortcut label="13010" type="13005" icon="special://skin/extras/icons/suspend.png" condition="System.CanHibernate">Hibernate()</shortcut>
-            <shortcut label="13013" type="13005" icon="special://skin/extras/icons/reboot.png" condition="System.CanReboot">Reboot</shortcut>
-            <shortcut label="19026" type="13005" icon="special://skin/extras/icons/shutdowntimer.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
-            <shortcut label="20151" type="13005" icon="special://skin/extras/icons/files.png">CancelAlarm(shutdowntimer)</shortcut>            
-            <shortcut label="13014" type="13005" icon="special://skin/extras/icons/files.png">Minimize()</shortcut>
+            <shortcut label="31072" type="13005" icon="resource://resource.images.skinicons.estuary/power.png">ActivateWindow(shutdownmenu)</shortcut>
+            <shortcut label="13012" type="13005" icon="resource://resource.images.skinicons.estuary/quit.png" condition="System.ShowExitButton">Quit()</shortcut>
+            <shortcut label="13005" type="13005" icon="resource://resource.images.skinicons.estuary/shutdown.png" condition="System.HasShutdown">Shutdown()</shortcut>
+            <shortcut label="13016" type="13005" icon="resource://resource.images.skinicons.estuary/shutdown.png" condition="System.CanPowerDown">Powerdown()</shortcut>
+            <shortcut label="13313" type="13005" icon="resource://resource.images.skinicons.estuary/reboot.png" condition="!System.Platform.Linux.RaspberryPi + [ System.Platform.Windows | System.Platform.Linux.RaspberryPi ]">RestartApp()</shortcut>
+            <shortcut label="13011" type="13005" icon="resource://resource.images.skinicons.estuary/suspend.png" condition="System.CanSuspend">Suspend()</shortcut>
+            <shortcut label="13010" type="13005" icon="resource://resource.images.skinicons.estuary/suspend.png" condition="System.CanHibernate">Hibernate()</shortcut>
+            <shortcut label="13013" type="13005" icon="resource://resource.images.skinicons.estuary/reboot.png" condition="System.CanReboot">Reboot</shortcut>
+            <shortcut label="19026" type="13005" icon="resource://resource.images.skinicons.estuary/shutdowntimer.png">AlarmClock(shutdowntimer,Shutdown())</shortcut>
+            <shortcut label="20151" type="13005" icon="resource://resource.images.skinicons.estuary/error.png">CancelAlarm(shutdowntimer)</shortcut>            
+            <shortcut label="13014" type="13005" icon="resource://resource.images.skinicons.estuary/files.png">Minimize()</shortcut>
         </node>
         <!-- Favourites -->
         <node label="1036">
-            <shortcut label="1036" type="1036" icon="special://skin/extras/icons/favourites2.png">ActivateWindow(favourites)</shortcut>
+            <shortcut label="1036" type="1036" icon="resource://resource.images.skinicons.estuary/favourites2.png">ActivateWindow(favourites)</shortcut>
             <node label="1036">
                 <content>favourite</content>
             </node>
@@ -400,16 +425,40 @@
     <widgetRename>True</widgetRename>
     <widget-groupings>
 		<!-- Widgets Groups-->
-		<shortcut label="43081" icon="special://skin/extras/icons/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>
-		<shortcut label="43082" icon="special://skin/extras/icons/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>
-        <shortcut label="43083" icon="special://skin/extras/icons/radio.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="RadioWidget">RadioWidget</shortcut>
-		<shortcut label="43084" icon="special://skin/extras/icons/addons.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="AddonsWidget">AddonsWidget</shortcut>
-		<shortcut label="43085" icon="special://skin/extras/icons/systeminfo.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="SystemInfoWidget">SystemInfoWidget</shortcut>
-		<shortcut label="43086" icon="special://skin/extras/icons/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
-		<!-- -->
+		<shortcut label="43081" icon="resource://resource.images.skinicons.estuary/weather.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="WeatherWidget">WeatherWidget</shortcut>
+		<shortcut label="43082" icon="resource://resource.images.skinicons.estuary/livetv.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="TVWidget">TVWidget</shortcut>
+        <shortcut label="43083" icon="resource://resource.images.skinicons.estuary/radio.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="RadioWidget">RadioWidget</shortcut>
+		<shortcut label="43084" icon="resource://resource.images.skinicons.estuary/addons.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="AddonsWidget">AddonsWidget</shortcut>
+		<shortcut label="43085" icon="resource://resource.images.skinicons.estuary/favourites2.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="FavouritesWidget">FavouritesWidget</shortcut>		
+		<shortcut label="43086" icon="resource://resource.images.skinicons.estuary/media.png" condition="!String.IsEmpty(Window(home).Property(WidgetVisibility))" widget="MediaWidget">MediaWidget</shortcut>
+		<!-- Smart Shortcuts -->
         <shortcut label="43101" icon="DefaultFolder.png" condition="String.IsEmpty(Window(home).Property(WidgetVisibility)) + System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
-        <node label="32030" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>video</content>
+		<!-- Pictures -->
+        <node label="1" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20094" type="1" icon="resource://resource.images.skinicons.estuary/files.png" widget="Library" widgetType="source" widgetTarget="pictures">sources://pictures</shortcut>
+            <shortcut label="1039" type="1" icon="resource://resource.images.skinicons.estuary/pictures2.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
+            <content>picturesources</content>
+        </node>
+		<!-- LiveTV -->
+        <node label="19020" condition="PVR.HasTVChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="31016" type="19020" icon="resource://resource.images.skinicons.estuary/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+            <shortcut label="31015" type="19020" icon="resource://resource.images.skinicons.estuary/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+            <shortcut label="19040" type="19020" icon="resource://resource.images.skinicons.estuary/timers.png" widget="Library" widgetType="tvtimer" widgetTarget="pvr">TVTimers</shortcut>
+			<shortcut label="43241" type="19020" icon="resource://resource.images.skinicons.estuary/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_tv)" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">CustomChannelsTV</shortcut>
+		</node>
+		<!-- Radio -->
+        <node label="19021" condition="PVR.HasRadioChannels + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="31018" type="19021" icon="resource://resource.images.skinicons.estuary/channels.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+            <shortcut label="31015" type="19021" icon="resource://resource.images.skinicons.estuary/recordings.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
+            <shortcut label="19040" type="19021" icon="resource://resource.images.skinicons.estuary/timers.png" widget="Library" widgetType="radiotimer" widgetTarget="pvr">RadioTimers</shortcut>
+			<shortcut label="43242" type="19021" icon="resource://resource.images.skinicons.estuary/channels.png" condition="Skin.HasSetting(enable_custom_list_channels) + Skin.HasSetting(enable_custom_list_channels_radio)" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">CustomChannelsRadio</shortcut>
+		</node>
+		<!-- Video -->
+        <node label="3" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+            <shortcut label="3" type="3" icon="resource://resource.images.skinicons.estuary/videos.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/</shortcut>
+			<shortcut label="20094" type="3" icon="resource://resource.images.skinicons.estuary/files.png" widget="Library" widgetType="source" widgetTarget="videos">sources://video</shortcut>
+			<shortcut label="136" type="3" icon="resource://resource.images.skinicons.estuary/playlists.png" widget="Library" widgetType="playlist" widgetTarget="videos">special://videoplaylists/</shortcut>
+			<shortcut label="1037" type="3" icon="resource://resource.images.skinicons.estuary/video-addons.png" widget="Library" widgetType="video" widgetTarget="videos">addons://sources/video/</shortcut>
             <node label="32040">
                 <content>playlist-video</content>
             </node>
@@ -418,10 +467,63 @@
             </node>
             <node label="32075">
                 <content>videosources</content>
+				<content>upnp-video</content>
             </node>
         </node>
-        <node label="32031" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>music</content>
+		<!-- Movies -->
+        <node label="342" condition="Library.HasContent(movies) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="342" type="342" icon="resource://resource.images.skinicons.estuary/movies2.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/movies/</shortcut>
+			<shortcut label="20386" type="342" icon="resource://resource.images.skinicons.estuary/recentlyadded.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://recentlyaddedmovies/</shortcut>
+			<shortcut label="135" type="342" icon="resource://resource.images.skinicons.estuary/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://movies/genres/</shortcut>
+			<shortcut label="562" type="342" icon="resource://resource.images.skinicons.estuary/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://movies/years/</shortcut>
+            <shortcut label="344" type="342" icon="resource://resource.images.skinicons.estuary/actor.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/actors/</shortcut>
+            <shortcut label="20348" type="342" icon="resource://resource.images.skinicons.estuary/director2.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/directors/</shortcut>
+            <shortcut label="20388" type="342" icon="resource://resource.images.skinicons.estuary/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://movies/studios/</shortcut>
+			<shortcut label="20434" type="342" icon="resource://resource.images.skinicons.estuary/sets.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://movies/sets/</shortcut>
+			<shortcut label="20451" type="342" icon="resource://resource.images.skinicons.estuary/country.png" widget="Library" widgetType="country" widgetTarget="videos">videodb://movies/countries/</shortcut>            
+            <shortcut label="20459" type="342" icon="resource://resource.images.skinicons.estuary/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://movies/tags/</shortcut>
+		</node>
+        <!-- TVShows -->
+        <node label="20343" condition="Library.HasContent(tvshows) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20343" type="20343" icon="resource://resource.images.skinicons.estuary/tvshows.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/tvshows/</shortcut>
+			<shortcut label="20387" type="20343" icon="resource://resource.images.skinicons.estuary/recentlyadded.png" widget="Library" widgetType="episodes" widgetTarget="videos">videodb://recentlyaddedepisodes/</shortcut>
+            <shortcut label="626" type="20343" icon="resource://resource.images.skinicons.estuary/inprogressshows.png" widget="Library" widgetType="tvshows" widgetTarget="videos">videodb://inprogresstvshows</shortcut>
+			<shortcut label="135" type="20343" icon="resource://resource.images.skinicons.estuary/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://tvshows/genres/</shortcut>
+            <shortcut label="562" type="20343" icon="resource://resource.images.skinicons.estuary/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://tvshows/years/</shortcut>
+            <shortcut label="344" type="20343" icon="resource://resource.images.skinicons.estuary/actor.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://tvshows/actors/</shortcut>
+            <shortcut label="20388" type="20343" icon="resource://resource.images.skinicons.estuary/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://tvshows/studios/</shortcut>            
+            <shortcut label="20459" type="20343" icon="resource://resource.images.skinicons.estuary/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://tvshows/tags/</shortcut>			
+		</node>
+		<!-- MusicVideos -->
+        <node label="20389" condition="Library.HasContent(musicvideos) + String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="20389" type="20389" icon="resource://resource.images.skinicons.estuary/musicvideos.png" widget="Library" widgetType="source" widgetTarget="videos">library://video/musicvideos/</shortcut>
+			<shortcut label="20390" type="20389" icon="resource://resource.images.skinicons.estuary/recentlyadded.png" widget="Library" widgetType="musicvideos" widgetTarget="videos">videodb://recentlyaddedmusicvideos/</shortcut>
+			<shortcut label="135" type="20389" icon="resource://resource.images.skinicons.estuary/genre.png" widget="Library" widgetType="moviegenre" widgetTarget="videos">videodb://musicvideos/genres/</shortcut>
+            <shortcut label="562" type="20389" icon="resource://resource.images.skinicons.estuary/years.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/years/</shortcut>
+            <shortcut label="133" type="20389" icon="resource://resource.images.skinicons.estuary/artist.png" widget="Library" widgetType="artists" widgetTarget="videos">videodb://musicvideos/artists/</shortcut>
+            <shortcut label="132" type="20389" icon="resource://resource.images.skinicons.estuary/album.png" widget="Library" widgetType="albums" widgetTarget="videos">videodb://musicvideos/albums/</shortcut>           
+            <shortcut label="20348" type="20389" icon="resource://resource.images.skinicons.estuary/director2.png" widget="Library" widgetType="movies" widgetTarget="videos">videodb://musicvideos/directors/</shortcut>
+            <shortcut label="20388" type="20389" icon="resource://resource.images.skinicons.estuary/studios.png" widget="Library" widgetType="studios" widgetTarget="videos">videodb://musicvideos/studios/</shortcut>
+            <shortcut label="20459" type="20389" icon="resource://resource.images.skinicons.estuary/tags.png" widget="Library" widgetType="source" widgetTarget="videos">videodb://musicvideos/tags/</shortcut>
+		</node>
+		<!-- Music -->
+        <node label="2" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+            <shortcut label="2" type="2" icon="resource://resource.images.skinicons.estuary/media.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://</shortcut>
+            <shortcut label="20094" type="2" icon="resource://resource.images.skinicons.estuary/files.png" widget="Library" widgetType="source" widgetTarget="music">sources://music/</shortcut>
+            <shortcut label="359" type="2" icon="resource://resource.images.skinicons.estuary/musicrecentlyadded.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut>
+            <shortcut label="517" type="2" icon="resource://resource.images.skinicons.estuary/musicrecentlyplayed.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://recentlyplayedalbums/</shortcut>
+            <shortcut label="135" type="2" icon="resource://resource.images.skinicons.estuary/musicgenres.png" widget="Library" widgetType="musicgenre" widgetTarget="music">musicdb://genres/</shortcut>
+            <shortcut label="133" type="2" icon="resource://resource.images.skinicons.estuary/artist.png" widget="Library" widgetType="artists" widgetTarget="music">musicdb://artists/</shortcut>
+			<shortcut label="29994" type="2" icon="DefaultMusicRoles.png" widget="Library" widgetType="source" widgetTarget="music">library://music/musicroles/</shortcut>
+            <shortcut label="132" type="2" icon="resource://resource.images.skinicons.estuary/album.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://albums/</shortcut>
+            <shortcut label="134" type="2" icon="resource://resource.images.skinicons.estuary/songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://songs/</shortcut>
+            <shortcut label="271" type="2" icon="resource://resource.images.skinicons.estuary/musictop100.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://top100/</shortcut>
+            <shortcut label="10504" type="2" icon="resource://resource.images.skinicons.estuary/musictop100songs.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://top100/songs/</shortcut>
+            <shortcut label="10505" type="2" icon="resource://resource.images.skinicons.estuary/musictop100albums.png" widget="Library" widgetType="albums" widgetTarget="music">musicdb://top100/albums/</shortcut>
+            <shortcut label="562" type="2" icon="resource://resource.images.skinicons.estuary/years.png" widget="Library" widgetType="source" widgetTarget="music">musicdb://years/</shortcut>
+            <shortcut label="1050" type="2" icon="resource://resource.images.skinicons.estuary/sets.png" widget="Library" widgetType="songs" widgetTarget="music">musicdb://singles/</shortcut>            
+            <shortcut label="136" type="2" icon="resource://resource.images.skinicons.estuary/playlists.png" widget="Library" widgetType="playlist" widgetTarget="music">special://musicplaylists/</shortcut>
+            <shortcut label="1038" type="2" icon="resource://resource.images.skinicons.estuary/music.png" widget="Library" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
             <node label="32040">
                 <content>playlist-audio</content>
             </node>
@@ -430,29 +532,35 @@
             </node>
             <node label="32075">
                 <content>musicsources</content>
+				<content>upnp-music</content>
             </node>
         </node>
-        <node label="32020" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <content>picturesources</content>
-        </node>
-        <node label="32007" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
-            <node label="32009">
-                <content>addon-program-plugin</content>
-            </node>
-            <node label="32010">
+		<!-- Addons -->
+        <node label="24001" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+            <shortcut label="1043" type="24001" icon="resource://resource.images.skinicons.estuary/program.png" widget="Library" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut>
+            <shortcut label="20244" type="24001" icon="resource://resource.images.skinicons.estuary/program.png" widget="Library" widgetType="addon" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
+            <shortcut label="1037" type="24001" icon="resource://resource.images.skinicons.estuary/video-addons.png" widget="Library" widgetType="addon" widgetTarget="videos">addons://sources/video</shortcut>
+            <shortcut label="1038" type="24001" icon="resource://resource.images.skinicons.estuary/music.png" widget="Library" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut>
+            <shortcut label="1039" type="24001" icon="resource://resource.images.skinicons.estuary/pictures2.png" widget="Library" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut>
+			<node label="43021" condition="Skin.HasSetting(enable_custom_list_addons) + [ Skin.HasSetting(enable_custom_list_addons_programs) | Skin.HasSetting(enable_custom_list_addons_video) | Skin.HasSetting(enable_custom_list_addons_audio) | Skin.HasSetting(enable_custom_list_addons_image) ]">
+				<shortcut label="1043" type="24001" icon="resource://resource.images.skinicons.estuary/program.png" condition="Skin.HasSetting(enable_custom_list_addons_programs)" widget="Custom" widgetType="custaddon" widgetTarget="Programs">CustomAddonsPrograms</shortcut>
+				<shortcut label="1037" type="24001" icon="resource://resource.images.skinicons.estuary/video-addons.png" condition="Skin.HasSetting(enable_custom_list_addons_video)" widget="Custom" widgetType="custaddon" widgetTarget="Video">CustomAddonsVideo</shortcut>
+				<shortcut label="1038" type="24001" icon="resource://resource.images.skinicons.estuary/music.png" condition="Skin.HasSetting(enable_custom_list_addons_audio)" widget="Custom" widgetType="custaddon" widgetTarget="Audio">CustomAddonsAudio</shortcut>
+				<shortcut label="1039" type="24001" icon="resource://resource.images.skinicons.estuary/pictures2.png" condition="Skin.HasSetting(enable_custom_list_addons_image)" widget="Custom" widgetType="custaddon" widgetTarget="Image">CustomAddonsImage</shortcut>
+			</node>
+            <node label="1037">
                 <content>addon-video</content>
             </node>
-            <node label="32011">
+            <node label="1038">
                 <content>addon-audio</content>
             </node>
-            <node label="32012">
+            <node label="1039">
                 <content>addon-image</content>
             </node>
-            <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
-            <shortcut label="20244" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps</shortcut>
-            <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png" widget="addon" widgetType="video" widgetTarget="video">addons://sources/video</shortcut>
-            <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png" widget="addon" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
-            <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png" widget="addon" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>
         </node>
-    </widget-groupings>    
+		<!-- Favourites -->
+        <node label="1036" condition="String.IsEmpty(Window(home).Property(WidgetVisibility))">
+			<shortcut label="1036" type="1036" icon="resource://resource.images.skinicons.estuary/favourites2.png" widget="Library" widgetType="favourites" widgetTarget="">favourites://</shortcut>
+		</node>
+    </widget-groupings>
 </overrides>

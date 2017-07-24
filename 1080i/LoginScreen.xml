@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
-    <onload>SetProperty(FanartHomeType,settings,home)</onload>
+    <onload>SetProperty(fanarthometype,settings,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<controls>
         <!-- Background -->
 		<include>DefaultBackground</include>

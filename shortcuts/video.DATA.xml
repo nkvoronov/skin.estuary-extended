@@ -3,43 +3,43 @@
     <shortcut>
         <label>342</label>
         <label2>342</label2>
-        <icon>special://skin/extras/icons/movies2.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/movies2.png</icon>
         <action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
     </shortcut>
     <shortcut>
         <label>20343</label>
         <label2>20343</label2>
-        <icon>special://skin/extras/icons/tvshows.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/tvshows.png</icon>
         <action>ActivateWindow(videos,videodb://tvshows/titles/,return)</action>
     </shortcut>
     <shortcut>
         <label>20389</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/musicvideos.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/musicvideos.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/,return)</action>
     </shortcut>	
     <shortcut>
         <label>744</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/files.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/files.png</icon>
         <action>ActivateWindow(videos,sources://video/,return)</action>
     </shortcut>
     <shortcut>
         <label>136</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/playlists.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/playlists.png</icon>
         <action>ActivateWindow(videos,special://videoplaylists/,return)</action>
     </shortcut>
     <shortcut>
         <label>24001</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/video-addons.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/video-addons.png</icon>
         <action>ActivateWindow(videos,addons://sources/video/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/updatelibrary.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
         <action>UpdateLibrary(video)</action>
     </shortcut>
 </shortcuts>

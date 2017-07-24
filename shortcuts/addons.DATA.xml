@@ -3,31 +3,31 @@
     <shortcut>
         <label>24998</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/addons_installed.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/addons_installed.png</icon>
         <action>ActivateWindow(addonbrowser,addons://user/,return)</action>
     </shortcut>	
     <shortcut>
         <label>24043</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/addons_updates.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/addons_updates.png</icon>
         <action>ActivateWindow(addonbrowser,addons://outdated/,return)</action>
     </shortcut>	
     <shortcut>
         <label>24004</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/addons_recentlyupdated.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/addons_recentlyupdated.png</icon>
         <action>ActivateWindow(addonbrowser,addons://recently_updated/,return)</action>
     </shortcut>
     <shortcut>
         <label>24033</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/addons_repo.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/addons_repo.png</icon>
         <action>ActivateWindow(addonbrowser,addons://repos/,return)</action>
     </shortcut>	
     <shortcut>
         <label>137</label>
         <label2>24001</label2>
-        <icon>special://skin/extras/icons/tv-search.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/tv-search.png</icon>
         <action>ActivateWindow(addonbrowser,addons://search/,return)</action>
     </shortcut>
 </shortcuts>

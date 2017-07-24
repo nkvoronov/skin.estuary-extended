@@ -13,36 +13,37 @@
             <onright>2000</onright>
             <!-- Power button -->
             <include content="BottomMainMenuItem">
-                <param name="control_id" value="901" />
+                <param name="control_id" value="801" />
                 <param name="onclick" value="SetProperty(fanarthometype,power,home)" />
-                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
-                <param name="onclick3" value="ActivateWindow(shutdownmenu)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+                <param name="onclick_3" value="ActivateWindow(shutdownmenu)" />
                 <param name="icon" value="icons/power.png" />
                 <param name="label" value="$LOCALIZE[33060]" />
             </include>
-            <!-- Favourites button -->
+            <!-- Settings button -->
             <include content="BottomMainMenuItem">
-                <param name="control_id" value="902" />
-                <param name="onclick" value="SetProperty(fanarthometype,favourites,home)" />
-                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundFavoritesVar],home)" />
-                <param name="onclick3" value="ActivateWindow(favourites)" />
-                <param name="icon" value="icons/favourites.png" />
-                <param name="label" value="$LOCALIZE[10134]" />
+                <param name="control_id" value="802" />
+                <param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(settings)" />
+				<param name="icon" value="icons/settings.png" />
+				<param name="label" value="$LOCALIZE[21417]" />
             </include>
             <!-- Search button -->
             <include content="BottomMainMenuItem">
-                <param name="control_id" value="903" />
+                <param name="control_id" value="803" />
                 <param name="onclick" value="SetProperty(fanarthometype,search,home)" />
-                <param name="onclick2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
-				<param name="onclick3" value="ActivateWindow(1107)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(1107)" />
                 <param name="icon" value="icons/search.png" />
                 <param name="label" value="$LOCALIZE[31001]" />
             </include>
             <!-- FullScreen button -->
             <include content="BottomMainMenuItem">
-                <param name="control_id" value="904" />
+                <param name="control_id" value="804" />
                 <param name="onclick" value="FullScreen" />
-				<param name="onclick2" value="" />
+				<param name="onclick_2" value="" />
+                <param name="onclick_3" value="" />
                 <param name="icon" value="icons/now-playing/fullscreen.png" />
                 <param name="label" value="$LOCALIZE[244]" />
 				<param name="selected" value="!Player.Paused" />

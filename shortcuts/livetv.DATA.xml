@@ -3,37 +3,37 @@
     <shortcut>
         <label>19019</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/channels.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/channels.png</icon>
         <action>ActivateWindow(tvchannels)</action>
     </shortcut>
     <shortcut>
         <label>19069</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/guide.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/guide.png</icon>
         <action>ActivateWindow(tvguide)</action>
     </shortcut>
     <shortcut>
         <label>19017</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/recordings.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/recordings.png</icon>
         <action>ActivateWindow(tvrecordings)</action>
     </shortcut>
     <shortcut>
         <label>19040</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/timers.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/timers.png</icon>
         <action>ActivateWindow(tvtimers)</action>
     </shortcut>
     <shortcut>
         <label>19138</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/timer-rules.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/timer-rules.png</icon>
         <action>ActivateWindow(tvtimerrules)</action>
     </shortcut>
     <shortcut>
         <label>137</label>
         <label2>19020</label2>
-        <icon>special://skin/extras/icons/tv-search.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/tv-search.png</icon>
         <action>ActivateWindow(tvsearch)</action>
     </shortcut>
 </shortcuts>

@@ -3,7 +3,7 @@
 	<shortcut>
 		<label>24001</label>
 		<label2>1</label2>
-		<icon>special://skin/extras/icons/pictures2.png</icon>
+		<icon>resource://resource.images.skinicons.estuary/pictures2.png</icon>
 		<action>ActivateWindow(pictures,addons://sources/image/,return)</action>
 	</shortcut>
 </shortcuts>

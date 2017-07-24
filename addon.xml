@@ -14,6 +14,8 @@
         <import addon="script.skin.helper.widgets" version="1.0.10"/>
         <import addon="script.skin.helper.backgrounds" version="1.0.10"/>
         <import addon="script.skin.helper.colorpicker" version="1.0.0"/>
+        <import addon="resource.images.skinicons.estuary" version="1.0.0"/>
+        <import addon="resource.images.busyspinners.estuary" version="1.0.0"/>
 	</requires>
 	<extension
         point="xbmc.gui.skin" 
@@ -124,17 +126,17 @@
 		<forum>http://forum.kodi.tv/</forum>
 		<email>nkvoronov@gmail.com</email>
 		<source>https://github.com/nkvoronov/skin.estuary-extended.git</source>
-                <assets>
-                       <icon>resources/icon.png</icon>
-                       <fanart>resources/fanart.jpg</fanart>
-                       <screenshot>resources/screenshot-01.jpg</screenshot>
-                       <screenshot>resources/screenshot-02.jpg</screenshot>
-                       <screenshot>resources/screenshot-03.jpg</screenshot>
-                       <screenshot>resources/screenshot-04.jpg</screenshot>
-                       <screenshot>resources/screenshot-05.jpg</screenshot>
-                       <screenshot>resources/screenshot-06.jpg</screenshot>
-                       <screenshot>resources/screenshot-07.jpg</screenshot>
-                       <screenshot>resources/screenshot-08.jpg</screenshot>
-               </assets>
+        <assets>
+           <icon>resources/icon.png</icon>
+           <fanart>resources/fanart.jpg</fanart>
+           <screenshot>resources/screenshot-01.jpg</screenshot>
+           <screenshot>resources/screenshot-02.jpg</screenshot>
+           <screenshot>resources/screenshot-03.jpg</screenshot>
+           <screenshot>resources/screenshot-04.jpg</screenshot>
+           <screenshot>resources/screenshot-05.jpg</screenshot>
+           <screenshot>resources/screenshot-06.jpg</screenshot>
+           <screenshot>resources/screenshot-07.jpg</screenshot>
+           <screenshot>resources/screenshot-08.jpg</screenshot>
+       </assets>
 	</extension>
 </addon>

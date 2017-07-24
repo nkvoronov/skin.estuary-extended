@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>90010</defaultcontrol>
+    <onload>SetProperty(fanarthometype,settings,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-        <include>DefaultBackground</include>
+        <!-- Background -->
+        <include>DefaultBackground</include>        
 		<control type="group">
 			<left>110</left>
             <include>OpenClose_Left</include>
@@ -235,51 +238,51 @@
                 <ondown>90010</ondown>
                 <pagecontrol>60</pagecontrol>
                 <control type="button" id="401">
-                    <description>Choose shortcut</description>
+                    <description>Choose Shortcut</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32048]</label>
                     <label2>$INFO[Container(211).ListItem.Label]</label2>
                 </control>
                 <control type="button" id="307">
-                    <description>Change action</description>
+                    <description>Change Action</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32027]</label>
                     <label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
                 </control>
                 <control type="button" id="305">
-                    <description>Change label</description>
+                    <description>Change Label</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32025]</label>
                     <label2>$INFO[Container(211).ListItem.Label]</label2>
                 </control>
                 <control type="button" id="306">
-                    <description>Browse for thumbnail</description>
+                    <description>Browse For Thumbnail</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32026]</label>
                     <label2>$INFO[Container(211).ListItem.Icon]</label2>
                 </control>
-                <!-- No implementation ???? -->
                 <control type="button" id="310">
-                    <description>Browse for background</description>
+                    <description>Browse For Background</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32045]</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
                 </control>
                 <control type="button" id="405">
-                    <description>Edit submenu</description>
+                    <description>Edit Submenu</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32072]</label>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
                 <control type="button" id="312">
-                    <description>Edit widget name</description>
+                    <description>Edit Widget Name</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label></label>
@@ -287,7 +290,7 @@
                     <visible>false</visible>
                 </control>
                 <control type="button" id="350">
-                    <description>Select widget type</description>
+                    <description>Select Widget Type</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43070]</label>
@@ -298,6 +301,7 @@
                 </control>				
                 <!-- Widgets -->
                 <control type="button" id="351">
+                    <description>Widget 1</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 1</label>
@@ -309,6 +313,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="352">
+                    <description>Widget 2</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 2</label>
@@ -320,6 +325,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="353">
+                    <description>Widget 3</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 3</label>
@@ -331,6 +337,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="354">
+                    <description>Widget 4</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 4</label>
@@ -342,6 +349,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="355">
+                    <description>Widget 5</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 5</label>
@@ -353,6 +361,7 @@
                     <visible>String.IsEqual(Container(211).ListItem.Property(widget),MediaWidget)</visible>
                 </control>
                 <control type="button" id="356">
+                    <description>Widget 6</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32044] 6</label>
@@ -369,76 +378,79 @@
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
                 <control type="label" id="599">
-                    <description>Disable menu item label</description>
+                    <description>Disable Menu Item Label</description>
                     <width>1256</width>
                     <include>DefaultSettingLabel</include>
                     <label>Is$INFO[Container(211).ListItem.Property(skinshortcuts-disabled)]</label>
                     <visible>false</visible>
                 </control>
                 <control type="radiobutton" id="313">
-                    <description>Disable menu item</description>
+                    <description>Disable Menu Item</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[43071]</label>
                     <selected>String.IsEqual(Control.GetLabel(599),IsTrue)</selected>
                 </control>
                 <control type="image" id="601">
-                    <description>Separator image</description>
+                    <description>Separator Image</description>
+                    <width>1256</width>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
                 <control type="button" id="303">
-                    <description>Move up</description>                    
+                    <description>Move Up</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[31159]</label>
                 </control>
                 <control type="button" id="304">
-                    <description>Move down</description>                    
+                    <description>Move Down</description>                    
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$LOCALIZE[31160]</label>
                 </control>
                 <control type="image" id="602">
-                    <description>Separator image</description>
+                    <description>Separator Image</description>
+                    <width>1256</width>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
                 <control type="button" id="301">
-                    <description>Add shortcut</description>
+                    <description>Add Shortcut</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32000]</label>
                 </control>                
                 <control type="button" id="302">
-                    <description>Delete shortcut</description>
+                    <description>Delete Shortcut</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32001]</label>
                 </control>
                 <control type="image" id="603">
-                    <description>Separator image</description>
+                    <description>Separator Image</description>
+                    <width>1256</width>
                     <height>3</height>
                     <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 		        </control>
                 <control type="button" id="308">
-                    <description>Restore shortcuts</description>
+                    <description>Restore Shortcuts</description>
                     <width>1256</width>
                     <include>DefaultSettingButton</include>
                     <label>$ADDON[script.skinshortcuts 32028]</label>
                 </control>
             </control>
             <control type="textbox" id="6">
-                <description>description area</description>
-                <left>590</left>
-                <top>810</top>
-                <width>1150</width>
-                <height>83</height>
-                <font>font12</font>
-                <align>justify</align>
-                <textcolor>$VAR[MainColorVar]</textcolor>
-                <label>$VAR[SkinSettingsHelpTextVar]</label>
-                <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<description>Description Area</description>
+				<left>480</left>
+				<top>810</top>
+				<width>1150</width>
+				<height>83</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>$VAR[MainColorVar]</textcolor>
+				<label>$INFO[Container(211).ListItem.Label]</label>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
             </control>
         </control>
 		<include content="TopBar">

@@ -3,67 +3,67 @@
     <shortcut>
         <label>135</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/musicgenres.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/musicgenres.png</icon>
         <action>ActivateWindow(music,musicdb://genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>133</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/artist.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/artist.png</icon>
         <action>ActivateWindow(music,musicdb://artists/,return)</action>
     </shortcut>
     <shortcut>
         <label>132</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/album.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/album.png</icon>
         <action>ActivateWindow(music,musicdb://albums/,return)</action>
     </shortcut>
     <shortcut>
         <label>1050</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/sets.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/sets.png</icon>
         <action>ActivateWindow(music,musicdb://singles/,return)</action>
     </shortcut>	
     <shortcut>
         <label>134</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/songs.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/songs.png</icon>
         <action>ActivateWindow(music,musicdb://songs/,return)</action>
     </shortcut>	
     <shortcut>
         <label>562</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/years.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/years.png</icon>
         <action>ActivateWindow(music,musicdb://years/,return)</action>
     </shortcut>
     <shortcut>
         <label>271</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/musictop100.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/musictop100.png</icon>
         <action>ActivateWindow(music,musicdb://top100/,return)</action>
     </shortcut>	
     <shortcut>
         <label>359</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/recentlyadded.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/recentlyadded.png</icon>
         <action>ActivateWindow(music,musicdb://recentlyaddedalbums/,return)</action>
     </shortcut>
     <shortcut>
         <label>517</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/musicrecentlyplayed.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/musicrecentlyplayed.png</icon>
         <action>ActivateWindow(music,musicdb://recentlyplayedalbums/,return)</action>
     </shortcut>
     <shortcut>
         <label>20389</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/musicvideos.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/musicvideos.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/,return)</action>
     </shortcut>	
     <shortcut>
         <label>136</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/playlists.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/playlists.png</icon>
         <action>ActivateWindow(music,special://musicplaylists/,return)</action>
     </shortcut>
     <shortcut>
@@ -75,19 +75,19 @@
     <shortcut>
         <label>744</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/files.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/files.png</icon>
         <action>ActivateWindow(music,sources://music/,return)</action>
     </shortcut>
     <shortcut>
         <label>24001</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/music.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/music.png</icon>
         <action>ActivateWindow(music,addons://sources/audio/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>
         <label2>2</label2>
-        <icon>special://skin/extras/icons/updatelibrary.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
         <action>UpdateLibrary(music)</action>
     </shortcut>
 </shortcuts>

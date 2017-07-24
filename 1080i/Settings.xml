@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(FanartHomeType,settings,home)</onload>
+    <onload>SetProperty(fanarthometype,settings,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
+	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<!-- Background -->
 		<include>DefaultBackground</include>
@@ -163,6 +165,11 @@
 					<label>$LOCALIZE[10003]</label>
 					<onclick>ActivateWindow(filemanager)</onclick>
 					<icon>icons/settings/filemanager.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[24001]</label>
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+					<icon>icons/settings/addons.png</icon>
 				</item>
 			</content>
 		</control>

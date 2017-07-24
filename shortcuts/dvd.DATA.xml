@@ -3,13 +3,13 @@
 	<shortcut>
 		<label>341</label>
 		<label2>446</label2>
-		<icon>special://skin/extras/icons/dvd.png</icon>
+		<icon>resource://resource.images.skinicons.estuary/dvd.png</icon>
 		<action>PlayDVD</action>
 	</shortcut>
 	<shortcut>
 		<label>13391</label>
 		<label2>446</label2>
-		<icon>special://skin/extras/icons/eject.png</icon>
+		<icon>resource://resource.images.skinicons.estuary/eject.png</icon>
 		<action>EjectTray()</action>
 	</shortcut>
 </shortcuts>

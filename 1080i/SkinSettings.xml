@@ -21,7 +21,7 @@
 				<texture border="22">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="list" id="9000">
-				<description>button area</description>
+				<description>Button Area</description>
 				<left>0</left>
 				<top>160</top>
 				<width>400</width>
@@ -853,14 +853,14 @@
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="509">
-                    <description>Favorites Background</description>
+                    <description>Settings Background</description>
 					<width>1256</width>					
 					<include>DefaultSettingButton</include>
-                    <label>- $LOCALIZE[10134]</label>
-					<label2>$VAR[BackgroundFavoritesNameVar]</label2>
-                    <onclick>SetProperty(setbackgrounds,background_favorites,home)</onclick>
+                    <label>- $LOCALIZE[21417]</label>
+					<label2>$VAR[BackgroundSettingsNameVar]</label2>
+                    <onclick>SetProperty(setbackgrounds,background_settings,home)</onclick>
                     <onclick>ActivateWindow(1202)</onclick>
-                    <onclick>SetProperty(homebackground,$VAR[BackgroundFavoritesVar],home)</onclick>
+                    <onclick>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onclick>
 					<enable>![Skin.HasSetting(no_fanart) | Skin.HasSetting(hide_backgrounds)]</enable>
 				</control>
                 <control type="button" id="510">
@@ -1098,7 +1098,7 @@
                 <visible>Container(9000).HasFocus(7)</visible>
             </control>
 			<control type="textbox" id="6">
-				<description>description area</description>
+				<description>Description Area</description>
 				<left>480</left>
 				<top>810</top>
 				<width>1150</width>
@@ -1107,7 +1107,7 @@
 				<align>justify</align>
 				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$VAR[SkinSettingsHelpTextVar]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
 		<include content="TopBar">

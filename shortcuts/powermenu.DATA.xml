@@ -4,42 +4,42 @@
         <label>13012</label>
         <label2>13005</label2>
         <action>Quit</action>
-        <icon>special://skin/extras/icons/quit.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/quit.png</icon> 
         <visible>System.ShowExitButton</visible>       
     </shortcut>
     <shortcut>
         <label>13016</label>
         <label2>13005</label2>        
         <action>Powerdown</action>
-        <icon>special://skin/extras/icons/shutdown.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/shutdown.png</icon> 
         <visible>System.CanPowerDown</visible>        
     </shortcut>
     <shortcut>        
         <label>13011</label>
         <label2>13005</label2>
         <action>Suspend</action>
-        <icon>special://skin/extras/icons/suspend.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/suspend.png</icon> 
         <visible>System.CanSuspend</visible>       
     </shortcut>
     <shortcut>       
         <label>13010</label>
         <label2>13005</label2>
         <action>Hibernate</action>
-        <icon>special://skin/extras/icons/suspend.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/suspend.png</icon> 
         <visible>System.CanHibernate</visible>        
     </shortcut>
     <shortcut>        
         <label>13013</label>
         <label2>13005</label2>
         <action>Reset</action>
-        <icon>special://skin/extras/icons/reboot.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/reboot.png</icon> 
         <visible>System.CanReboot</visible>        
     </shortcut>
     <shortcut>        
         <label>20126</label>
         <label2>13005</label2>
         <action>System.LogOff</action>
-        <icon>special://skin/extras/icons/logout.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/logout.png</icon> 
         <visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
         <visible>System.Loggedon</visible>        
     </shortcut>
@@ -49,28 +49,28 @@
         <altlabel>20045</altlabel>
         <usealttexture>!System.IsMaster</usealttexture>
         <action>mastermode</action>
-        <icon>special://skin/extras/icons/logout.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/logout.png</icon> 
         <visible>System.HasLocks</visible>        
     </shortcut>
     <shortcut>        
         <label>13017</label>
         <label2>13005</label2>
         <action>InhibitIdleShutdown(true)</action>
-        <icon>special://skin/extras/icons/power.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/power.png</icon> 
         <visible>System.HasShutdown +!System.IsInhibit</visible>     
     </shortcut>
     <shortcut>        
         <label>13018</label>
         <label2>13005</label2>
         <action>InhibitIdleShutdown(false)</action>
-        <icon>special://skin/extras/icons/power.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/power.png</icon> 
         <visible>System.HasShutdown + System.IsInhibit</visible>       
     </shortcut>
     <shortcut>        
         <label>20150</label>
         <label2>13005</label2>
         <action>AlarmClock(shutdowntimer,Shutdown())</action>
-        <icon>special://skin/extras/icons/shutdowntimer.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/shutdowntimer.png</icon> 
         <visible>!System.HasAlarm(shutdowntimer)</visible>
         <visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>       
     </shortcut>
@@ -78,13 +78,13 @@
         <label>20151</label>
         <label2>13005</label2>
         <action>CancelAlarm(shutdowntimer)</action>
-        <icon>special://skin/extras/icons/files.png</icon> 
+        <icon>resource://resource.images.skinicons.estuary/files.png</icon> 
         <visible>System.HasAlarm(shutdowntimer)</visible>        
     </shortcut>
     <shortcut>        
         <label>20183</label>
         <label2>13005</label2>
         <action>ReloadSkin</action>
-        <icon>special://skin/extras/icons/reloadskin.png</icon>        
+        <icon>resource://resource.images.skinicons.estuary/reloadskin.png</icon>        
     </shortcut>
 </shortcuts>

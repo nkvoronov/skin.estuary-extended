@@ -3,55 +3,55 @@
     <shortcut>
         <label>135</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/genre.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/genre.png</icon>
         <action>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</action>
     </shortcut>
     <shortcut>
         <label>369</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/title.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/title.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/titles/,return)</action>
-    </shortcut>
+    </shortcut>	
     <shortcut>
         <label>652</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/years.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/years.png</icon>
         <action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
     </shortcut>
     <shortcut>
         <label>133</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/artist.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/artist.png</icon>
         <action>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</action>
     </shortcut>
     <shortcut>
         <label>132</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/album.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/album.png</icon>
         <action>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</action>
     </shortcut>	
     <shortcut>
         <label>20348</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/director2.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/director2.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/directors/,return)</action>
     </shortcut>
     <shortcut>
         <label>20388</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/studios.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/studios.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/studios/,return)</action>
     </shortcut>
     <shortcut>
         <label>20459</label>
         <label2>20389</label2>
-        <icon>special://skin/extras/icons/tags.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/tags.png</icon>
         <action>ActivateWindow(videos,videodb://musicvideos/tags/,return)</action>
     </shortcut>
     <shortcut>
         <label>653</label>
         <label2>3</label2>
-        <icon>special://skin/extras/icons/updatelibrary.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
         <action>UpdateLibrary(video)</action>
     </shortcut>
 </shortcuts>

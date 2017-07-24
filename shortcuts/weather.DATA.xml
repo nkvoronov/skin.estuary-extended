@@ -3,25 +3,25 @@
     <shortcut>
         <label>184</label>
         <label2>8</label2>
-        <icon>special://skin/extras/icons/updatelibrary.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/updatelibrary.png</icon>
         <action>Weather.Refresh</action>
     </shortcut>
     <shortcut>
         <label>31077</label>
         <label2>8</label2>
-        <icon>special://skin/extras/icons/location-previous.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/location-previous.png</icon>
         <action>Weather.LocationPrevious</action>
     </shortcut>
     <shortcut>
         <label>31078</label>
         <label2>8</label2>
-        <icon>special://skin/extras/icons/location-next.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/location-next.png</icon>
         <action>Weather.LocationNext</action>
     </shortcut>
     <shortcut>
         <label>1390</label>
         <label2>8</label2>
-        <icon>special://skin/extras/icons/weather-settings.png</icon>
+        <icon>resource://resource.images.skinicons.estuary/weather-settings.png</icon>
         <action>ActivateWindow(weathersettings)</action>
     </shortcut>
 </shortcuts>

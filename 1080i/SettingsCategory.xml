@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<onload>SetProperty(FanartHomeType,settings,home)</onload>
+    <onload>SetProperty(fanarthometype,settings,home)</onload>
+    <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
+	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<!-- Background -->
 		<include>DefaultBackground</include>
