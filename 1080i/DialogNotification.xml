@@ -3,19 +3,20 @@
 	<zorder>3</zorder>
 	<controls>
 		<control type="group">
+            <!-- Right Top Default -->
 			<depth>DepthMax</depth>
-			<top>945</top>
-			<left>640</left>
-			<animation effect="slide" end="600,-850" time="500" tween="sine" easing="inout" condition="Window.IsActive(fullscreenvideo)">conditional</animation>
-			<include>Animation_DialogPopupOpenClose</include>
+			<top>95</top>
+			<right>20</right>
+			<width>640</width>
+            <include>Animation_DialogPopupOpenClose</include>
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
             <visible>!Window.IsVisible(Startup.xml) + ![[Window.IsActive(fullscreenvideo) | Window.IsActive(fullscreeninfo) | Window.IsActive(visualisation)] + Skin.HasSetting(hide_popup)]</visible>
             <!-- Bottom -->
-			<animation effect="slide" end="0,830" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44107]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44109])">conditional</animation>
+			<animation effect="slide" end="0,785" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44107]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44109])">conditional</animation>
             <!-- Center -->
-            <animation effect="slide" end="-645,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44105]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108])">conditional</animation>
+            <animation effect="slide" end="-620,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44105]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44108])">conditional</animation>
             <!-- Left -->
-			<animation effect="slide" end="-1290,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44104]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44107])">conditional</animation>
+			<animation effect="slide" end="-1240,0" time="0" condition="String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44104]) | String.IsEqual(Skin.String(PopupPosition.label),$LOCALIZE[44107])">conditional</animation>
 			<control type="image">
 				<left>-25</left>
 				<top>-25</top>
