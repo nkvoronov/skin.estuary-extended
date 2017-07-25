@@ -13,9 +13,9 @@
             <control type="image">
                 <description>Menu Panel</description>
                 <left>-20</left>
-                <top>138</top>
+                <top>220</top>
                 <width>440</width>
-                <height>792</height>
+                <height>710</height>
                 <texture border="22">dialogs/dialog-bg.png</texture>
             </control>
             <control type="group">
@@ -52,11 +52,12 @@
                 </control>                
                 <control type="list" id="211">
                     <left>0</left>
-                    <top>160</top>
+                    <top>240</top>
                     <width>400</width>
-                    <height>740</height>
-                    <onleft>61</onleft>
+                    <height>670</height>                    
+                    <onright>SetFocus($INFO[Container(9000).ListItem.Property(defaultID)])</onright>
                     <onright>90010</onright>
+                    <onleft>700</onleft>
                     <onup>211</onup>
                     <ondown>211</ondown>
                     <itemlayout height="74">
@@ -169,6 +170,39 @@
                         </control>
                     </focusedlayout>
                 </control>
+                <!-- Edit Buttons -->
+                <control type="grouplist" id="700">
+                    <orientation>horizontal</orientation>
+                    <itemgap>-11</itemgap>
+                    <left>-20</left>
+                    <width>440</width>
+                    <height>110</height>
+                    <top>140</top>
+                    <onup>SetFocus(211)</onup>
+                    <ondown>SetFocus(211)</ondown>
+                    <onright>90010</onright>
+                    <onleft>211</onleft>
+                    <!-- Add Button -->
+                    <include content="BottomMainMenuItem">
+                        <param name="control_id" value="301" />
+                        <param name="icon" value="shortcuts/add.png" />
+                    </include>
+                    <!-- Delete Button -->
+                    <include content="BottomMainMenuItem">
+                        <param name="control_id" value="302" />
+                        <param name="icon" value="shortcuts/delete.png" />
+                    </include>                
+                    <!-- Up Button -->
+                    <include content="BottomMainMenuItem">
+                        <param name="control_id" value="303" />
+                        <param name="icon" value="shortcuts/up.png" />
+                    </include>
+                    <!-- Down Button -->
+                    <include content="BottomMainMenuItem">
+                        <param name="control_id" value="304" />
+                        <param name="icon" value="shortcuts/down.png" />
+                    </include>
+                </control>                
 			</control>
 		</control>
         <control type="group">
@@ -392,42 +426,6 @@
                     <selected>String.IsEqual(Control.GetLabel(599),IsTrue)</selected>
                 </control>
                 <control type="image" id="601">
-                    <description>Separator Image</description>
-                    <width>1256</width>
-                    <height>3</height>
-                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
-                <control type="button" id="303">
-                    <description>Move Up</description>
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31159]</label>
-                </control>
-                <control type="button" id="304">
-                    <description>Move Down</description>                    
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31160]</label>
-                </control>
-                <control type="image" id="602">
-                    <description>Separator Image</description>
-                    <width>1256</width>
-                    <height>3</height>
-                    <texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
-		        </control>
-                <control type="button" id="301">
-                    <description>Add Shortcut</description>
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32000]</label>
-                </control>                
-                <control type="button" id="302">
-                    <description>Delete Shortcut</description>
-                    <width>1256</width>
-                    <include>DefaultSettingButton</include>
-                    <label>$ADDON[script.skinshortcuts 32001]</label>
-                </control>
-                <control type="image" id="603">
                     <description>Separator Image</description>
                     <width>1256</width>
                     <height>3</height>

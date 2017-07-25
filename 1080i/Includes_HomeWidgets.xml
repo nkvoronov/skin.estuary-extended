@@ -352,13 +352,6 @@
             <param name="button2_onclick" value="False"/>
             <param name="visible_2" value="False"/>
         </include>
-    </include>			
-    <!-- SystemInfoWidget 116 -->
-    <include name="include-SystemInfoWidget">
-        <include content="Widget-SystemInfo">
-            <param name="button_id" value="$PARAM[control_id]116"/>
-            <param name="onup_id" value="$PARAM[control_id]900"/>
-        </include>
     </include>
     <!-- Media Widget 200 -->
     <include name="include-MediaWidget">
