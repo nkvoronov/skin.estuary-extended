@@ -48,7 +48,7 @@
     </include>    
     <!-- WeatherWidget 100 -->
     <include name="include-WeatherWidget">
-        <!-- Weather Info -->
+		<!-- Weather Info -->
         <control type="group" id="$PARAM[control_id]102">
             <description>Weather info</description>
             <height>380</height>
@@ -95,27 +95,27 @@
                 <orientation>horizontal</orientation>
                 <align>justify</align>
                 <itemgap>-50</itemgap>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Wind)" />
                     <param name="texture" value="icons/weather/wind.png" />
                     <param name="header" value="404" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Humidity)" />
                     <param name="texture" value="icons/weather/humidity.png" />
                     <param name="header" value="406" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Current.Precipitation)" />
                     <param name="texture" value="icons/weather/rain.png" />
                     <param name="header" value="33021" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Today.Sunrise)" />
                     <param name="texture" value="icons/weather/sunrise.png" />
                     <param name="header" value="405" />
                 </include>
-                <include content="WeatherIcon">
+                <include content="WeatherIcon" condition="!String.IsEmpty(Weather.Plugin)">
                     <param name="label" value="Window(weather).Property(Today.Sunset)" />
                     <param name="texture" value="icons/weather/sunset.png" />
                     <param name="header" value="403" />
@@ -123,21 +123,21 @@
             </control>
         </control>
 		<!-- Weather Daily -->
-        <include content="Widget-Weather">
-            <param name="content_include" value="HourlyItems" />
-            <param name="onup_id" value="$PARAM[control_id]900" />
-            <param name="list_id" value="$PARAM[control_id]100" />				
-            <param name="ondown_id" value="$PARAM[control_id]101" />
-            <param name="widget_header" value="$LOCALIZE[33036]"/>
-            <param name="visible" value="!String.IsEmpty(Weather.plugin) + !String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
-        </include>
-        <!-- Weather Hourly -->
-        <include content="Widget-Weather">
+        <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
             <param name="content_include" value="DailyItems" />
-            <param name="onup_id" value="$PARAM[control_id]100" />
-            <param name="list_id" value="$PARAM[control_id]101" />				
             <param name="widget_header" value="$LOCALIZE[31019]"/>
-            <param name="visible" value="!String.IsEmpty(Weather.plugin) + !String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+            <param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+            <param name="onup_id" value="$PARAM[control_id]900" />
+            <param name="list_id" value="$PARAM[control_id]100" />
+            <param name="ondown_id" value="$PARAM[control_id]101" />
+        </include>
+		<!-- Weather Hourly -->
+        <include content="Widget-Weather" condition="!String.IsEmpty(Weather.Plugin)">
+            <param name="content_include" value="HourlyItems" />
+            <param name="widget_header" value="$LOCALIZE[33036]"/>
+            <param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+            <param name="onup_id" value="$PARAM[control_id]100" />
+            <param name="list_id" value="$PARAM[control_id]101" />
         </include>
     </include>
     <!-- Favorites 110 -->
@@ -148,7 +148,7 @@
     </include>
     <!-- TVWidget 120 -->
     <include name="include-TVWidget">
-        <!-- Timers -->
+		<!-- Timers -->
 		<include content="Widget-TVTimers">
 			<param name="list_id" value="$PARAM[control_id]120"/>
 		</include>
@@ -296,12 +296,12 @@
             <param name="onup_id" value="$PARAM[control_id]154"/>
             <param name="list_id" value="$PARAM[control_id]155"/>
         </include>    
-     </include>
+    </include>
     <!-- None Widget 160 -->
     <include name="include-None">
         <control type="group" id="$PARAM[control_id]160">
             <onup>$PARAM[control_id]900</onup>
 			<ondown>200001</ondown>
         </control>
-    </include>     
+    </include>
 </includes>

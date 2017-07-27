@@ -2,7 +2,7 @@
 <includes>
 	<include file="Defaults.xml" />
 	<include file="Includes_Home.xml" />
-    <include file="Includes_HomeMainMenu.xml" />
+	<include file="Includes_HomeMainMenu.xml" />
     <include file="Includes_HomeSubMenu.xml" />
     <include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_Animations.xml" />
@@ -19,7 +19,7 @@
     <include file="View_56_ClearLogo.xml" />
     <include file="View_57_ClearArt.xml" />
     <include file="View_58_BigPoster.xml" />
-	<include file="View_500_SmallThumb.xml" />
+	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
 	<include file="Variables.xml" />
@@ -31,12 +31,17 @@
 	<constant name="DepthOSD">0.40</constant>
 	<constant name="DepthOSD+">0.44</constant>
 	<constant name="DepthContentPopout">0.10</constant>
+	<constant name="DepthContentPanel">0.05</constant>
 	<constant name="DepthBars">0.12</constant>
 	<constant name="DepthBackground">-0.80</constant>
 	<constant name="DepthSideBlade">0.10</constant>
 	<constant name="bg_alpha">79</constant>
+	<constant name="dialogbuttons_itemgap">-20</constant>
+	<constant name="list_y_offset">0</constant>
+	<constant name="list_item_height">80</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</expression>
-	<expression name="sidebar_focused">ControlGroup(9000).HasFocus | Control.HasFocus(6130)</expression>
+	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Window.IsActive(MyPlaylist.xml)</expression>
+    <expression name="fanart_visible">Window.IsActive(skinsettings) | Window.IsActive(Custom_1100_AddonLauncher.xml)</expression>
 	<include name="CommonScrollbars">
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -76,8 +81,8 @@
 		<top>-3000</top>
 		<width>1</width>
 		<height>1</height>
-		<texturefocus></texturefocus>
-		<texturenofocus></texturenofocus>
+		<texturefocus />
+		<texturenofocus />
 		<label></label>
 		<font></font>
 	</include>
@@ -1102,7 +1107,7 @@
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 					<top>1019</top>
 					<control type="group">
-						<visible>!$EXP[sidebar_focused]</visible>
+						<visible>!$EXP[sidebar_visible]</visible>
 						<control type="button">
 							<left>17</left>
 							<width>44</width>
@@ -1142,7 +1147,7 @@
 						<height>44</height>
 						<texture colordiffuse="$VAR[MainColorVar]">frame/menu-fo.png</texture>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>$EXP[sidebar_focused]</visible>
+						<visible>$EXP[sidebar_visible]</visible>
 						<visible>!Player.HasMedia | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 					</control>
 				</control>
@@ -1400,16 +1405,17 @@
                         <control type="label">
                             <left>135</left>
                             <top>0</top>
-                            <width>700</width>
+                            <right>20</right>
                             <height>60</height>
+                            <font>font14</font>
                             <aligny>center</aligny>
                             <label>[B]$INFO[ListItem.Label][/B]</label>
                         </control>
                         <control type="textbox">
                             <left>135</left>
                             <top>52</top>
-                            <width>700</width>
-                            <height>60</height>
+                            <right>20</right>
+                            <height>65</height>
                             <font>font12</font>
                             <textcolor>grey</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
@@ -1443,17 +1449,18 @@
                         <control type="label">
                             <left>135</left>
                             <top>0</top>
-                            <width>700</width>
+                            <right>20</right>
                             <height>60</height>
                             <aligny>center</aligny>
                             <scroll>true</scroll>
+                            <font>font14</font>
                             <label>[B]$INFO[ListItem.Label][/B]</label>
                         </control>
                         <control type="textbox">
                             <left>135</left>
                             <top>52</top>
-                            <width>700</width>
-                            <height>60</height>
+                            <right>20</right>
+                            <height>65</height>
                             <font>font12</font>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
@@ -1476,7 +1483,7 @@
                     <top>695</top>
                     <width>275</width>
                     <height>35</height>
-                    <font>font10</font>
+                    <font>font12</font>
                     <align>right</align>
                     <aligny>center</aligny>
                     <textcolor>grey</textcolor>
@@ -1486,7 +1493,7 @@
                     <left>920</left>
                     <top>80</top>
                     <onleft>61</onleft>
-                    <itemgap>-20</itemgap>
+                    <itemgap>dialogbuttons_itemgap</itemgap>
                     <onright>6</onright>
                     <include content="DefaultDialogButton">
                         <param name="id" value="7" />
@@ -1525,5 +1532,10 @@
                 <onclick>PreviousMenu</onclick>            
             </item>
         </content>
+    </include>
+    <!-- Lrclyrics Dialog -->
+    <include name="Lrclyrics_Dialog">
+        <include>Animation_DialogPopupOpenClose</include>
+        <depth>DepthOSD</depth>
     </include>    
 </includes>

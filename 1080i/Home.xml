@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol>9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<!-- SkinShortcuts-->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu)</onload>
 	<!-- SkinHelper -->
@@ -16,10 +16,14 @@
     <onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
     <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
 	<!-- -->
-	<onload condition="!String.IsEmpty(Window(home).Property(FanartHomeType))">ClearProperty(FanartHomeType,home)</onload>
-    <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">XBMC.RunScript(script.pvr.favourites)</onload>
+	<onload condition="!String.IsEmpty(Window(home).Property(fanarthometype))">ClearProperty(fanarthometype,home)</onload>
+    <onload condition="!String.IsEmpty(Window(home).Property(homebackground))">ClearProperty(homebackground,home)</onload>
+    <onload condition="!String.IsEmpty(Window(home).Property(mediaartfanart))">ClearProperty(mediaartfanart,home)</onload>
+    <onload condition="!String.IsEmpty(Window(home).Property(weatherfanartcode))">ClearProperty(weatherfanartcode,home)</onload>
+    <!-- -->
+    <onload condition="System.HasAddon(script.pvr.favourites)+Skin.HasSetting(enable_custom_list_channels)+[Skin.HasSetting(enable_custom_list_channels_tv) | Skin.HasSetting(enable_custom_list_channels_radio)]">RunScript(script.pvr.favourites)</onload>
 	<backgroundcolor>background</backgroundcolor>
-	<controls>
+    <controls>
 		<control type="button" id="200000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
@@ -36,7 +40,6 @@
 		</control>
 		<!-- Background -->
 		<include content="DefaultBackground">
-            <param name="multi" value="Skin.HasSetting(WeatherFanart.multi)" />
 			<param name="overlay_background" value="$VAR[HomeFanartVar]" />
 		</include>
 		<control type="group">
