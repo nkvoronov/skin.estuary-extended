@@ -209,7 +209,7 @@
 	</include>
     <!-- TVShows Type -->
 	<include name="Widget-TVShows">
-		<include content="Widget-Posters">
+		<include content="Widget-Square2">
 			<param name="widget_header" value="$PARAM[widget_header]"/>
             <param name="widget_target" value="$PARAM[widget_target]"/>
             <param name="content_path" value="$PARAM[content_path]"/>
@@ -218,8 +218,6 @@
             <param name="ondown_id" value="$PARAM[ondown_id]"/>
             <param name="sortby" value="$PARAM[sortby]"/>
             <param name="sortorder" value="$PARAM[sortorder]"/>
-            <param name="fallback_image" value="DefaultTVShows.png" />
-            <param name="icon" value="$VAR[TVShowWidgetImageVar]"/>
 		</include>
 	</include>
     <!-- Episodes Type -->
@@ -432,16 +430,6 @@
 
 	<!-- *** Common Widget *** -->	
 
-    <!-- Widget Group Common -->    
-	<include name="WidgetGroup-Common">
-		<orientation>vertical</orientation>
-		<height>100%</height>
-		<scrolltime tween="cubic" easing="out">500</scrolltime>
-		<itemgap>-160</itemgap>
-		<onup>200000</onup>
-		<ondown>200001</ondown>
-		<usecontrolcoords>true</usecontrolcoords>
-	</include>
     <!-- Widget Common -->
 	<include name="Widget-Common">
         <scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -1252,6 +1240,243 @@
 									<texture>$VAR[ListWatchedIconVar]</texture>
 									<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 								</control>
+							</control>
+						</control>
+					</focusedlayout>
+					<include condition="!$PARAM[custom]" content="Widget-Content">
+                        <param name="sortby" value="$PARAM[sortby]"/>
+                        <param name="sortorder" value="$PARAM[sortorder]"/>
+                        <param name="widget_target" value="$PARAM[widget_target]"/>
+                        <param name="item_limit" value="$PARAM[item_limit]"/>
+                        <param name="content_path" value="$PARAM[content_path]"/>
+                    </include>
+                    <include condition="$PARAM[custom]" content="Widget-ContentCustom">
+                        <param name="content_path" value="$PARAM[content_path]"/>
+                        <param name="type" value="$PARAM[type]"/>
+                    </include>
+				</control>
+			</control>
+		</definition>
+	</include>
+    <!-- Square 2 -->
+	<include name="Widget-Square2">
+		<param name="height">405</param>
+        <param name="visible">true</param>
+		<param name="custom">false</param>
+        <param name="type">no</param>
+		<param name="item_limit">$VAR[WidgetLimitItemsVar]</param>
+        <param name="icon">$VAR[TVShowWidgetImageVar]</param>
+		<param name="sub_label">$LOCALIZE[16102]: $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ]</param>
+        <param name="sub_label2">$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)]</param>
+        <param name="main_label">$INFO[ListItem.TVShowTitle]</param>
+        <param name="single_label">$INFO[ListItem.Label]</param>
+		<param name="fallback_image">DefaultTVShows.png</param>
+		<param name="sortby"></param>
+		<param name="sortorder"></param>
+        <param name="ondown_id">200001</param>
+		<definition>
+			<control type="group">
+				<description>Square 2 Widget including header and arrows</description>
+                <include content="Widget-Header">
+                    <param name="label" value="$PARAM[widget_header]"/>
+                    <param name="list_id" value="$PARAM[list_id]"/>
+                    <param name="visible" value="$PARAM[visible]"/>
+                    <param name="height" value="$PARAM[height]"/>
+                    <param name="pos_ar" value="210"/>
+                </include>
+				<control type="panel" id="$PARAM[list_id]">
+					<left>480</left>
+					<top>55</top>
+					<width>1372</width>
+					<height>400</height>
+                    <include content="Widget-Common">
+                        <param name="onup_id" value="$PARAM[onup_id]"/>
+                        <param name="list_id" value="$PARAM[list_id]"/>
+                        <param name="ondown_id" value="$PARAM[ondown_id]"/>
+                    </include>
+					<itemlayout width="341" height="400">
+						<control type="image">
+							<left>0</left>
+							<top>1</top>
+							<width>348</width>
+							<height>340</height>
+							<texture border="22">dialogs/dialog-bg.png</texture>
+						</control>
+						<control type="image">
+							<left>24</left>
+							<top>25</top>
+							<width>298</width>
+							<height>220</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="$PARAM[fallback_image]" background="true">$PARAM[icon]</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>253</top>
+							<width>288</width>
+							<label>$PARAM[sub_label]</label>
+							<font>font10</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<visible>!String.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+							<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>253</top>
+							<width>288</width>
+							<label>$PARAM[sub_label2]</label>
+							<font>font10</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<visible>String.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+							<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+                        <control type="label">
+                            <left>30</left>
+                            <top>279</top>
+                            <width>288</width>
+                            <scroll>true</scroll>
+                            <label>$PARAM[main_label]</label>
+                            <font>font10</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>30</left>
+                            <top>253</top>
+                            <width>288</width>
+                            <height>60</height>
+                            <aligny>center</aligny>
+                            <label>$PARAM[single_label]</label>
+                            <font>font10</font>
+                            <shadowcolor>text_shadow</shadowcolor>
+                            <align>center</align>
+                            <visible>String.IsEmpty(ListItem.Property(WatchedEpisodes)) + String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+                        </control>
+						<control type="image">
+							<left>20</left>
+							<top>20</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[ListWatchedIconVar]</texture>
+							<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="341" height="400">
+						<control type="group">
+							<depth>DepthContentPopout</depth>
+							<animation type="Focus">
+								<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="233,90" />
+							</animation>
+							<animation type="Unfocus">
+								<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="233,90" />
+							</animation>
+							<control type="button">
+								<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
+                                <onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
+                                <texturenofocus></texturenofocus>
+                                <texturefocus></texturefocus>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>348</width>
+								<height>340</height>
+								<texture border="22">dialogs/dialog-bg.png</texture>
+							</control>
+                            <control type="image">
+								<left>24</left>
+								<top>25</top>
+								<width>298</width>
+								<height>220</height>
+								<aspectratio>scale</aspectratio>
+								<texture fallback="$PARAM[fallback_image]" background="true">$PARAM[icon]</texture>
+							</control>
+							<control type="group">
+								<left>20</left>
+								<top>20</top>
+								<visible>!String.IsEqual(ListItem.PercentPlayed,0) + Control.HasFocus($PARAM[list_id])</visible>
+								<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<width>310</width>
+									<height>30</height>
+									<texture colordiffuse="99FFFFFF">colors/black.png</texture>
+								</control>
+								<control type="progress">
+									<left>30</left>
+									<top>10</top>
+									<width>250</width>
+									<height>13</height>
+									<info>ListItem.PercentPlayed</info>
+								</control>
+							</control>
+							<control type="label">
+								<left>30</left>
+								<top>253</top>
+								<width>288</width>
+								<label>$PARAM[sub_label]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<visible>!String.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+								<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+							</control>
+							<control type="label">
+								<left>30</left>
+								<top>253</top>
+								<width>288</width>
+								<label>$PARAM[sub_label2]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+								<visible>String.IsEqual(ListItem.Property(WatchedEpisodes),0)</visible>
+								<visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+							</control>
+                            <control type="label">
+								<left>30</left>
+								<top>279</top>
+								<width>288</width>
+								<scroll>true</scroll>
+								<label>$PARAM[main_label]</label>
+								<font>font10</font>
+								<shadowcolor>text_shadow</shadowcolor>
+								<align>center</align>
+                                <visible>!String.IsEmpty(ListItem.Property(WatchedEpisodes)) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+							</control>
+                            <control type="textbox">
+                                <left>30</left>
+                                <top>253</top>
+                                <width>288</width>
+                                <height>60</height>
+                                <aligny>center</aligny>
+                                <label>$PARAM[single_label]</label>
+                                <font>font10</font>
+                                <shadowcolor>text_shadow</shadowcolor>
+                                <align>center</align>
+                                <visible>String.IsEmpty(ListItem.Property(WatchedEpisodes)) + String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+                            </control>
+							<control type="image">
+								<left>17</left>
+								<top>17</top>
+								<width>312</width>
+								<height>306</height>
+								<texture background="true" border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+								<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+								<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+								<visible>Control.HasFocus($PARAM[list_id])</visible>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>20</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>$VAR[ListWatchedIconVar]</texture>
+								<visible>!String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</control>
 					</focusedlayout>
