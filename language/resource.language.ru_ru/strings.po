@@ -86,11 +86,11 @@ msgstr "Недавно проигранные каналы"
 
 msgctxt "#31017"
 msgid "Rated"
-msgstr "Номинальный"
+msgstr "Оцененный"
 
 msgctxt "#31018"
-msgid "Most played channels"
-msgstr "Самые проигрываемые каналы"
+msgid "Recently played channels"
+msgstr "Недавно проигранные каналы"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -612,6 +612,13 @@ msgctxt "#31149"
 msgid "Select genre fanart pack"
 msgstr "Выбрать фан-арт пакет для жанров"
 
+msgctxt "#31151"
+msgid "Unwatched music videos"
+msgstr "Непросмотреные муз. видео"
+
+msgctxt "#31152"
+msgid "Random music videos"
+msgstr "Случайные муз. видео"
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Выберите шаблон фона"
@@ -863,8 +870,8 @@ msgid "Addons widgets"
 msgstr "Виджеты дополнений"
 
 msgctxt "#43085"
-msgid "SystemInfo widget"
-msgstr "Виджет системной информации"
+msgid "Favorites widget"
+msgstr "Виджет избранного"
 
 msgctxt "#43086"
 msgid "Media widgets"
@@ -876,11 +883,7 @@ msgstr "Самые просматриваемые муз. видео"
 
 msgctxt "#43091"
 msgid "Random music videos artists"
-msgstr "Случайные муз. видео"
-
-msgctxt "#43092"
-msgid "Unwatched music videos"
-msgstr "Непросмотренные муз. видео"
+msgstr "Случайные муз. видео исполнители"
 
 msgctxt "#43100"
 msgid "Smart Shortcuts"

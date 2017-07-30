@@ -89,8 +89,8 @@ msgid "Rated"
 msgstr "Номінальний"
 
 msgctxt "#31018"
-msgid "Most played channels"
-msgstr "Самі програваємі канали"
+msgid "Recently played channels"
+msgstr "Недавно переглянуті канали"
 
 msgctxt "#31019"
 msgid "Forecast"
@@ -612,6 +612,13 @@ msgctxt "#31149"
 msgid "Select genre fanart pack"
 msgstr "Вибрати фан-арт пакет для жанрів"
 
+msgctxt "#31151"
+msgid "Unwatched music videos"
+msgstr "Непереглянуті музичні відео"
+
+msgctxt "#31152"
+msgid "Random music videos"
+msgstr "Випадкові музичні відео"
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Виберіть шаблон фону"
@@ -863,8 +870,8 @@ msgid "Addons widgets"
 msgstr "Віджети доповнень"
 
 msgctxt "#43085"
-msgid "SystemInfo widget"
-msgstr "Віджет системної інформації"
+msgid "Favorites widget"
+msgstr "Віджет обранного"
 
 msgctxt "#43086"
 msgid "Media widgets"
@@ -876,11 +883,7 @@ msgstr "Саме Популярне муз. відео"
 
 msgctxt "#43091"
 msgid "Random music videos artists"
-msgstr "Випадкове муз. відео виконавець"
-
-msgctxt "#43092"
-msgid "Unwatched music videos"
-msgstr "Непереглянуте муз. відео"
+msgstr "Випадкові муз. відео виконавці"
 
 msgctxt "#43100"
 msgid "Smart Shortcuts"
