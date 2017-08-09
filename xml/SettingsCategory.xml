@@ -5,7 +5,7 @@
     <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
+        <!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<left>110</left>

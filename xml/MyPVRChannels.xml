@@ -2,10 +2,11 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
+    <onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),livetv) | String.IsEqual(window(home).Property(fanarthometype),radio)]">SetProperty(fanarthometype,livetv,home)</onload>
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
+        <!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -311,6 +312,13 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]" />
+				<param name="breadcrumbs_icon" value="icons/settings/tvremote.png" />
+			</include>
+			<include content="BottomBar">
+				<param name="info_visible" value="true" />
+			</include>
 			<control type="group">
 				<left>1170</left>
 				<top>182</top>
@@ -334,13 +342,6 @@
 				<include>MediaMenuCommon</include>
 				<include>PVRSideBar</include>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]" />
-				<param name="breadcrumbs_icon" value="icons/settings/tvremote.png" />
-			</include>
-			<include content="BottomBar">
-				<param name="info_visible" value="true" />
-			</include>
 		</control>
 		<control type="label" id="29">
 			<font></font>

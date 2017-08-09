@@ -26,7 +26,7 @@
 					<width>992</width>
 					<height>558</height>
 					<fadetime>300</fadetime>
-					<texture border="2" fallback="DefaultVideo.png" background="true">$VAR[FanartImageVar]</texture>
+					<texture border="2" fallback="special://skin/extras/backgrounds/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
 				<control type="group">
@@ -48,6 +48,7 @@
 					<height>121</height>
 					<font>font12</font>
 					<label>$INFO[ListItem.Plot]</label>
+					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">

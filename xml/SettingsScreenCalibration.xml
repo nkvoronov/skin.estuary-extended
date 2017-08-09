@@ -4,7 +4,7 @@
     <onload>SetProperty(fanarthometype,settings,home)</onload>
     <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<controls>
-		<!-- Background -->
+        <!-- Background -->
 		<include>DefaultBackground</include>
 		<control type="mover" id="8">
 			<description>top left mover</description>

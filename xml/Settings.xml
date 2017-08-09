@@ -5,7 +5,7 @@
     <onload>SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<!-- Background -->
+        <!-- Background -->
 		<include>DefaultBackground</include>
         <include content="UpDownArrows">
 			<param name="container_id" value="9000" />
@@ -149,7 +149,7 @@
 					<label>LibreELEC</label>
 					<onclick>RunAddon(service.libreelec.settings)</onclick>
 					<icon>os/libreelec/logo_libreelec.png</icon>
-                    <visible>System.HasAddon(service.libreelec.settings)</visible>
+					<visible>System.HasAddon(service.libreelec.settings)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[138]</label>
@@ -173,15 +173,19 @@
 				</item>
 			</content>
 		</control>
-		<control type="scrollbar" id="60">
-			<right>0</right>
-			<top>80</top>
-			<width>12</width>
-			<height>920</height>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<orientation>vertical</orientation>
-		</control>
+        <control type="scrollbar" id="60">
+            <right>0</right>
+            <top>80</top>
+            <width>13</width>
+            <height>919</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <orientation>vertical</orientation>
+            <texturesliderbackground />
+            <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+            <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+		</control>        
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]" />
 			<param name="breadcrumbs_icon" value="icons/settings/settings.png" />

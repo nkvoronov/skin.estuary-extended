@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-    <onload condition="String.IsEmpty(Window(home).Property(FanartHomeType))">SetProperty(FanartHomeType,music,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
 	<menucontrol>9000</menucontrol>
-	<views>50,52,53,54,55,58,500</views>
+    <onload>SetProperty(fanarthometype,music,home)</onload>
+    <views>50,52,53,54,55,58,500</views>
 	<controls>
         <!-- Background -->
 		<include content="DefaultBackground">
@@ -12,21 +12,27 @@
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
-			<include>CommonScrollbars</include>
 			<include>View_50_List</include>
 			<include>View_52_IconWall</include>
 			<include>View_53_Shift</include>
 			<include>View_54_InfoWall</include>
 			<include>View_55_WideList</include>
             <include>View_58_BigPoster</include>
-			<include>View_500_SmallThumb</include>
+			<include>View_500_Wall</include>
+			<include>CommonScrollbars</include>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<visible>Control.IsVisible(50) | Control.IsVisible(55)</visible>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(files) | Container.Content(directors) | Container.Content()</visible>
+				<visible>Control.Isvisible(54) | Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
+				<param name="breadcrumbs_icon" value="icons/settings/music.png" />
+			</include>
+			<include content="BottomBar">
+				<param name="info_visible" value="true" />
+			</include>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>[Control.IsVisible(50) | Control.Isvisible(54)] + !String.IsEmpty(ListItem.DBID)</visible>
@@ -132,13 +138,6 @@
 					<include>MediaMenuNowPlaying</include>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
-				<param name="breadcrumbs_icon" value="icons/settings/music.png" />
-			</include>
-			<include content="BottomBar">
-				<param name="info_visible" value="true" />
-			</include>
 		</control>
 	</controls>
 </window>

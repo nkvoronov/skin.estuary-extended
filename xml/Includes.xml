@@ -64,14 +64,14 @@
 			<control type="scrollbar" id="5199">
 				<left>0</left>
 				<top>988</top>
-				<width>100%</width>
+				<width>1920</width>
 				<height>12</height>
 				<texturesliderbackground />
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(51) | Control.IsVisible(53) | Control.IsVisible(58)</visible>
-				<animation effect="slide" end="0,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(5199)">conditional</animation>
+				<animation effect="zoom" end="0,994,1920,6" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(5199)">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -94,7 +94,7 @@
 		<definition>
 			<control type="group">
 				<visible>!String.IsEmpty($PARAM[userratingval])</visible>
-				<animation effect="fade" time="200" condition="$PARAM[animation]">VisibleChange</animation>
+				<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
 				<control type="image">
 					<left>8</left>
 					<top>2</top>
@@ -104,10 +104,12 @@
 					<texture colordiffuse="$VAR[MainColorVar]">overlays/circle.png</texture>
 				</control>
 				<control type="label">
-					<top>6</top>
+					<left>8</left>
+					<top>2</top>
 					<align>center</align>
-					<width>50</width>
-					<height>32</height>
+					<aligny>center</aligny>
+					<width>36</width>
+					<height>36</height>
 					<font>font10_title</font>
 					<label>$INFO[$PARAM[userratingval]]</label>
 				</control>
@@ -115,27 +117,29 @@
 		</definition>
 	</include>
 	<include name="InfoList">
-        <param name="item_label">$INFO[ListItem.Year,,  [COLOR white]-[/COLOR]  ][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
-		<param name="path">$INFO[ListItem.Path]</param>
+		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">40</param>
 		<param name="height">200</param>
 		<param name="width">1152</param>
-		<param name="item_height">40</param>
-		<param name="item_width">1152</param>
 		<param name="list_id">5000</param>
 		<param name="font">font13</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
 		<param name="orientation">vertical</param>
+		<param name="visible">true</param>
 		<definition>
 			<control type="panel" id="$PARAM[list_id]">
+				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
 				<orientation>$PARAM[orientation]</orientation>
-				<focusedlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+				<visible>$PARAM[visible]</visible>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<control type="label">
 						<left>10</left>
 						<height>$PARAM[item_height]</height>
-						<width>$PARAM[item_width]</width>
+						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
                         <textcolor>$VAR[MainColorVar]</textcolor>
@@ -143,11 +147,11 @@
 						<font>$PARAM[font]</font>
 					</control>
 				</focusedlayout>
-				<itemlayout height="$PARAM[item_height]" width="$PARAM[item_width]">
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
 					<control type="label">
 						<left>10</left>
 						<height>$PARAM[item_height]</height>
-						<width>$PARAM[item_width]</width>
+						<width>$PARAM[width]</width>
 						<aligny>center</aligny>
 						<label>$PARAM[item_label]</label>
                         <textcolor>$VAR[MainColorVar]</textcolor>
@@ -311,8 +315,10 @@
 	<include name="DefaultSimpleListLayout">
 		<param name="align">left</param>
 		<param name="height">70</param>
+		<param name="font">font13</param>
+		<param name="fontcolor">grey</param>
 		<definition>
-			<itemlayout height="$PARAM[height]">
+			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -321,18 +327,18 @@
 					<texture border="40">lists/separator.png</texture>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<textoffsetx>20</textoffsetx>
+					<left>20</left>
 					<top>0</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
+					<right>20</right>
+					<bottom>0</bottom>
 					<align>$PARAM[align]</align>
+					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>$PARAM[fontcolor]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="$PARAM[height]">
+			<focusedlayout width="$PARAM[width]" height="$PARAM[height]">
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -344,20 +350,21 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
+					<right>0</right>
+					<bottom>0</bottom>
 					<texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<textoffsetx>20</textoffsetx>
+					<left>20</left>
 					<top>0</top>
-					<width>$PARAM[width]</width>
-					<height>$PARAM[height]</height>
+					<right>20</right>
+					<bottom>0</bottom>
 					<align>$PARAM[align]</align>
+					<font>$PARAM[font]</font>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
+					<scroll>true</scroll>
 				</control>
 			</focusedlayout>
 		</definition>
@@ -444,7 +451,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[label]]</label>
-				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
 	</include>
@@ -1012,13 +1018,13 @@
 	</include>
 	<include name="ColoredBackgroundImages">
         <!-- Primary Background Default -->
-        <control type="image">
-            <depth>DepthBackground</depth>
-            <include>FullScreenDimensions</include>
-            <aspectratio>scale</aspectratio>
-            <texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/default.png</texture>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/default.png</texture>
             <visible>!Skin.HasSetting(use_custom_bg)</visible>
-        </control>
+		</control>
         <!-- Primary Background User -->
         <control type="image">
             <depth>DepthBackground</depth>
@@ -1028,13 +1034,13 @@
             <visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background))</visible>
         </control>
         <!-- Secondary Background -->
-        <control type="image">
-            <depth>DepthBackground</depth>
-            <include>FullScreenDimensions</include>
-            <aspectratio>scale</aspectratio>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
             <texture colordiffuse="$VAR[SecondaryBackgroundColorVar]">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.png]</texture>
             <visible>!String.IsEmpty(Skin.String(background_overlay)) + !String.IsEqual(Skin.String(background_overlay),0)</visible>
-        </control>
+		</control>
 	</include>
 	<include name="DefaultBackground">
 		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
@@ -1054,7 +1060,7 @@
 			</control>
             <!-- Backgrounds -->
 			<control type="group">
-                <include>FullScreenDimensions</include>
+				<include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 				<control type="group">
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
@@ -1073,33 +1079,6 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<imagepath background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$PARAM[overlay_background]</imagepath>
-						<visible>!Control.IsVisible(502) | $EXP[infodialog_active] | $EXP[fanart_visible]</visible>
-					</control>
-					<control type="image">
-						<left>-3</left>
-						<top>0</top>
-						<right>1193</right>
-						<height>100%</height>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<include>OpenClose_Left</include>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
-						<visible>!Control.IsVisible(32111)</visible>
-						<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>-3</left>
-						<top>0</top>
-						<right>1193</right>
-						<height>100%</height>
-						<aspectratio aligny="center">keep</aspectratio>
-						<fadetime>400</fadetime>
-						<include>OpenClose_Left</include>
-						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[BackgroundOpacityValueVar]">$VAR[PosterVar]</texture>
-						<visible>!Control.IsVisible(32111)</visible>
-						<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 					</control>
 				</control>
 			</control>
@@ -1338,6 +1317,24 @@
 		<top>0</top>
 		<width>100%</width>
 		<height>100%</height>
+	</include>
+	<include name="ContentPanel">
+		<param name="width">509</param>
+		<param name="left">1315</param>
+		<param name="right">90</param>
+		<param name="top">162</param>
+		<param name="height">746</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="image">
+                <texture border="22">dialogs/dialog-bg.png</texture>
+				<width>$PARAM[width]</width>
+				<right>$PARAM[right]</right>
+				<top>$PARAM[top]</top>
+				<height>$PARAM[height]</height>
+                <visible>$PARAM[visible]</visible>
+			</control>            
+		</definition>
 	</include>
 	<include name="WeatherIcons">		
 		<param name="left">50</param>

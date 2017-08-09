@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-    <onload condition="String.IsEmpty(Window(home).Property(FanartHomeType))">SetProperty(FanartHomeType,video,home)</onload>
 	<backgroundcolor>background</backgroundcolor>
-	<views>50,51,52,53,54,55,56,57,58,500,501,502</views>
+    <onload condition="String.IsEmpty(Window(home).Property(fanarthometype)) | ![String.IsEqual(window(home).Property(fanarthometype),movies) | String.IsEqual(window(home).Property(fanarthometype),tvshows) | String.IsEqual(window(home).Property(fanarthometype),musicvideos)]">SetProperty(fanarthometype,video,home)</onload>
+    <views>50,51,52,53,54,55,56,57,58,500,501,502</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
-		<!-- Background -->
+        <!-- Background -->
 		<include content="DefaultBackground">
 			<param name="overlay_background" value="$VAR[MediaFanartVar]" />
 		</include>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
-			<include>CommonScrollbars</include>
 			<include>View_50_List</include>
 			<include>View_51_Poster</include>
 			<include>View_52_IconWall</include>
@@ -22,7 +21,7 @@
             <include>View_56_ClearLogos</include>
             <include>View_57_ClearArts</include>
             <include>View_58_BigPoster</include>
-			<include>View_500_SmallThumb</include>
+			<include>View_500_Wall</include>
 			<include>View_501_Banner</include>
 			<include>View_502_FanArt</include>
 			<control type="group">
@@ -33,23 +32,16 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
-				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(files) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content()</visible>
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<visible>[Control.IsVisible(50) | Control.Isvisible(54)]</visible>
-                <visible>!ListItem.IsParentFolder</visible>
 				<include>Visible_Right</include>
-				<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
-				<control type="image">
-					<right>90</right>
-					<top>162</top>
-					<width>509</width>
-					<height>746</height>
-					<texture border="22">dialogs/dialog-bg.png</texture>
-				</control>
+				<include content="ContentPanel">
+					<param name="width" value="509" />
+				</include>
 				<control type="label">
 					<right>130</right>
 					<top>194</top>
@@ -114,7 +106,7 @@
 					<texture background="true" fallback="colors/black.png">$VAR[ListInfoBoxImageVar]</texture>
 				</control>
 				<control type="group">
-					<visible>!ListItem.IsCollection</visible>
+					<visible>!ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<right>113</right>
 						<top>838</top>
@@ -156,6 +148,13 @@
 					</control>
 				</control>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
+				<param name="breadcrumbs_icon" value="icons/settings/video.png" />
+			</include>
+			<include content="BottomBar">
+				<param name="info_visible" value="true" />
+			</include>
 			<control type="group">
 				<top>180</top>
 				<left>106</left>
@@ -201,6 +200,7 @@
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				</control>
 			</control>
+			<include>CommonScrollbars</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>
@@ -277,13 +277,6 @@
 					<include>MediaMenuNowPlaying</include>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
-				<param name="breadcrumbs_icon" value="icons/settings/video.png" />
-			</include>
-			<include content="BottomBar">
-				<param name="info_visible" value="true" />
-			</include>
 		</control>
 	</controls>
 </window>

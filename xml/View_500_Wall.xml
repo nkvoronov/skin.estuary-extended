@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="View_500_SmallThumb">
+	<include name="View_500_Wall">
 		<include content="UpDownArrows">
 			<param name="container_id" value="500" />
 			<param name="visible" value="!System.HasModalDialog" />
@@ -85,14 +85,16 @@
 				</focusedlayout>
 				<itemlayout height="360" width="350" condition="Container.Content(images)">
 					<control type="group">
-						<include>InfoWallPictureLayout</include>
+						<include>PictureLayout</include>
 					</control>
 				</itemlayout>
 				<focusedlayout height="360" width="350" condition="Container.Content(images)">
 						<control type="group">
 						<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="222,180">Focus</animation>
 						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="222,180">UnFocus</animation>
-						<include>InfoWallPictureLayout</include>
+						<include content="PictureLayout">
+							<param name="focused" value="true" />
+						</include>
 						<control type="image">
 							<left>15</left>
 							<top>5</top>
