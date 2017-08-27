@@ -384,10 +384,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10)">conditional</animation>
                 <onleft>100</onleft>
                 <onright>100</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(1)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(100)</visible>
             </control>
             <!-- Options -->
 			<control type="grouplist" id="200">
@@ -584,10 +590,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(20)">conditional</animation>
                 <onleft>200</onleft>
                 <onright>200</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(2)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(200)</visible>
             </control>
             <!-- Main menu -->
 			<control type="grouplist" id="300">
@@ -641,10 +653,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(30)">conditional</animation>
                 <onleft>300</onleft>
                 <onright>300</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(3)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(300)</visible>
             </control>
             <!-- User Widgets -->
             <control type="grouplist" id="400">
@@ -755,10 +773,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(40)">conditional</animation>
                 <onleft>400</onleft>
                 <onright>400</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(4)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(400)</visible>
             </control>
             <!-- Background -->
 			<control type="grouplist" id="500">
@@ -935,10 +959,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">conditional</animation>
                 <onleft>500</onleft>
                 <onright>500</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(5)</visible>                
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(500)</visible>                
             </control>
             <!-- Colors -->
 			<control type="grouplist" id="600">
@@ -1023,10 +1053,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
                 <onleft>600</onleft>
                 <onright>600</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(6)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(600)</visible>
             </control>
             <!-- Reset -->
 			<control type="grouplist" id="700">
@@ -1092,10 +1128,16 @@
                 <top>80</top>
                 <width>12</width>
                 <height>920</height>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">conditional</animation>
                 <onleft>700</onleft>
                 <onright>700</onright>
-                <orientation>vertical</orientation>
-                <visible>Container(9000).HasFocus(7)</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<visible>Control.IsVisible(700)</visible>
             </control>
 			<control type="textbox" id="6">
 				<description>Description Area</description>

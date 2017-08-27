@@ -21,6 +21,11 @@
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
+				<param name="breadcrumbs_icon" value="icons/settings/addons.png" />
+			</include>
+			<include>BottomBar</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">
 				<include>MediaMenuCommon</include>
@@ -56,11 +61,6 @@
 					<include>MediaMenuNowPlaying</include>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
-				<param name="breadcrumbs_icon" value="icons/settings/addons.png" />
-			</include>
-			<include>BottomBar</include>
 			<control type="group">
 				<top>1002</top>
 				<visible>$EXP[sidebar_visible]</visible>
