@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="View_57_ClearArts">
+        <control type="group">
+            <visible>Control.IsVisible(57)</visible>
+            <include>Visible_Right</include>
+            <include>OpenClose_Right</include>
+            <top>160</top>
+            <control type="image">
+                <left>65</left>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texture flipx="true" colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+                <animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+                <animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+                <animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+            </control>
+            <control type="image">
+                <right>65</right>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texture colordiffuse="$VAR[MainColorVar]">overlays/arrowright.png</texture>
+                <animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
+                <animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+                <animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
+            </control>
+            <control type="button" id="57500">
+                <left>65</left>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+                <onclick>Control.Move(57,-1)</onclick>
+                <visible allowhiddenfocus="true">Container(57).HasPrevious + [Control.HasFocus(57) | Control.HasFocus(57500)]</visible>
+            </control>
+            <control type="button" id="57501">
+                <right>65</right>
+                <top>218</top>
+                <width>28</width>
+                <height>28</height>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+                <onclick>Control.Move(57,1)</onclick>
+                <visible allowhiddenfocus="true">Container(57).HasNext + [Control.HasFocus(57) | Control.HasFocus(57501)]</visible>
+            </control>
+            <include content="View_ClearArts">
+                <param name="id" value="57" />
+                <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+        </control>
+    </include>
+    <include name="View_ClearArts">
+        <include>View_Clear_Top</include>
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>495</top>
+                <left>-358</left>
+                <width>2736</width>
+                <height>230</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>5199</ondown>
+                <onup>9000</onup>
+                <pagecontrol>5199</pagecontrol>
+                <focusposition>3</focusposition>
+                <preloaditems>1</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="$LOCALIZE[43202]">bigwide</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="230" width="378">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="group">
+                            <centertop>50%</centertop>
+                            <height>260</height>
+                            <width>340</width>
+                            <centerleft>50%</centerleft>
+                            <visible>String.IsEmpty(ListItem.Art(clearart))</visible>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+                            <control type="image">
+                                <height>100%</height>
+                                <width>100%</width>
+                                <aspectratio align="center" aligny="center">keep</aspectratio>
+                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            </control>
+                            <control type="image">
+                                <centerleft>50%</centerleft>
+                                <bottom>34</bottom>
+                                <height>35</height>
+                                <width>340</width>
+                                <texture>colors/black.png</texture>
+                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
+                                <visible>!ListItem.IsParentFolder</visible>
+                            </control>
+                            <control type="label">
+                                <centerleft>50%</centerleft>
+                                <bottom>38</bottom>
+                                <height>30</height>
+                                <width>330</width>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <scroll>true</scroll>
+                                <font>font10</font>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <height>186</height>
+                            <width>330</width>
+                            <centerleft>50%</centerleft>
+                            <aspectratio align="center" aligny="center">keep</aspectratio>
+                            <texture>$VAR[ClearArtViewVar]</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="230" width="378">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="group">
+                            <centertop>50%</centertop>
+                            <height>260</height>
+                            <width>340</width>
+                            <centerleft>50%</centerleft>
+                            <visible>String.IsEmpty(ListItem.Art(clearart))</visible>
+                            <visible>String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+                            <control type="image">
+                                <height>100%</height>
+                                <width>100%</width>
+                                <aspectratio align="center" aligny="center">keep</aspectratio>
+                                <texture fallback="DefaultVideo.png">$VAR[NoClearViewVar]</texture>
+                            </control>
+                            <control type="image">
+                                <centerleft>50%</centerleft>
+                                <bottom>34</bottom>
+                                <height>35</height>
+                                <width>340</width>
+                                <texture>colors/black.png</texture>
+                                <animation condition="true" effect="Fade" start="50" end="50" time="0">Conditional</animation>
+                                <visible>!ListItem.IsParentFolder</visible>
+                            </control>
+                            <control type="label">
+                                <centerleft>50%</centerleft>
+                                <bottom>38</bottom>
+                                <height>30</height>
+                                <width>330</width>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <scroll>true</scroll>
+                                <font>font10</font>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <height>186</height>
+                            <width>330</width>
+                            <centerleft>50%</centerleft>
+                            <aspectratio align="center" aligny="center">keep</aspectratio>
+                            <texture>$VAR[ClearArtViewVar]</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+</includes>

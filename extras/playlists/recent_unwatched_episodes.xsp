@@ -2,8 +2,11 @@
 <smartplaylist type="episodes">
     <name>Resent Unwatched Episodes</name>
     <match>all</match>
+    <rule field="dateadded" operator="after">
+        <value>1900-01-01</value>
+    </rule>
     <rule field="playcount" operator="lessthan">
-    <value>1</value>
+    	<value>1</value>
     </rule>
     <limit>25</limit>
     <order direction="descending">dateadded</order>

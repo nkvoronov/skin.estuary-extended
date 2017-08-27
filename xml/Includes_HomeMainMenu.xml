@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="HomeSystemButtons">
+        <!-- System Buttons -->
+        <control type="grouplist" id="900">
+            <orientation>horizontal</orientation>
+            <itemgap>-16</itemgap>
+            <left>33</left>
+            <top>94</top>
+            <onup>SetFocus(9000,99)</onup>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+            <onright>2000</onright>
+            <!-- Power button -->
+            <include content="BottomMainMenuItem">
+                <param name="control_id" value="801" />
+                <param name="onclick" value="SetProperty(fanarthometype,power,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundPowerVar],home)" />
+                <param name="onclick_3" value="ActivateWindow(shutdownmenu)" />
+                <param name="icon" value="icons/power.png" />
+                <param name="label" value="$LOCALIZE[33060]" />
+            </include>
+            <!-- Settings button -->
+            <include content="BottomMainMenuItem">
+                <param name="control_id" value="802" />
+                <param name="onclick" value="SetProperty(fanarthometype,settings,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSettingsVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(settings)" />
+				<param name="icon" value="icons/settings.png" />
+				<param name="label" value="$LOCALIZE[21417]" />
+            </include>
+            <!-- Search button -->
+            <include content="BottomMainMenuItem">
+                <param name="control_id" value="803" />
+                <param name="onclick" value="SetProperty(fanarthometype,search,home)" />
+                <param name="onclick_2" value="SetProperty(homebackground,$VAR[BackgroundSearchVar],home)" />
+				<param name="onclick_3" value="ActivateWindow(1107)" />
+                <param name="icon" value="icons/search.png" />
+                <param name="label" value="$LOCALIZE[31001]" />
+            </include>
+            <!-- FullScreen button -->
+            <include content="BottomMainMenuItem">
+                <param name="control_id" value="804" />
+                <param name="onclick" value="FullScreen" />
+				<param name="onclick_2" value="" />
+                <param name="onclick_3" value="" />
+                <param name="icon" value="icons/now-playing/fullscreen.png" />
+                <param name="label" value="$LOCALIZE[244]" />
+				<param name="selected" value="!Player.Paused" />
+				<param name="visible" value="Player.hasMedia" />
+            </include>
+        </control>
+    </include>
+    <include name="HomeMainMenu">
+        <include content="UpDownArrows">
+            <param name="width" value="28" />
+            <param name="height" value="18" />
+            <param name="container_id" value="9000" />
+            <param name="posx" value="231" />
+            <param name="up_posy" value="90" />
+            <param name="down_posy" value="978" />
+            <param name="visible" value="!System.HasModalDialog" />
+        </include>
+        <control type="group">
+            <left>53</left>
+            <top>204</top>
+            <control type="image">
+				<description>Menu Panel</description>
+                <left>-20</left>
+                <top>-20</top>
+                <width>424</width>
+                <height>810</height>
+                <texture border="22">dialogs/dialog-bg.png</texture>
+            </control>
+            <control type="list" id="9000">
+				<description>button area</description>
+                <left>1</left>
+                <top>1</top>
+                <width>382</width>
+                <height>770</height>
+                <pagecontrol>70</pagecontrol>
+                <onfocus>ClearProperty(listposition,home)</onfocus>
+				<onright condition="String.IsEqual(Container(9000).ListItem.Property(id),weather) + Control.IsVisible(11000)">11000</onright>
+				<onright condition="String.IsEqual(Container(9000).ListItem.Property(id),pictures) + Control.IsVisible(12000)">12000</onright>
+				<onright condition="String.IsEqual(Container(9000).ListItem.Property(id),livetv) + Control.IsVisible(13000)">13000</onright>
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),radio) + Control.IsVisible(14000)">14000</onright>
+				<onright condition="String.IsEqual(Container(9000).ListItem.Property(id),video) + Control.IsVisible(15000)">15000</onright>				
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),movies) + Control.IsVisible(16000)">16000</onright>
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Control.IsVisible(17000)">17000</onright>
+				<onright condition="String.IsEqual(Container(9000).ListItem.Property(id),musicvideos) + Control.IsVisible(18000)">18000</onright>
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),music) + Control.IsVisible(19000)">19000</onright>
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),addons) + Control.IsVisible(20000)">20000</onright>
+                <onright condition="String.IsEqual(Container(9000).ListItem.Property(id),settings) + Control.IsVisible(21000)">21000</onright>                
+                <onup>900</onup>
+                <ondown>900</ondown>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <focusedlayout height="70">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>390</width>
+                        <height>71</height>
+                        <texture border="90,3,90,3">lists/separator.png</texture>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>390</width>
+                            <height>69</height>
+                            <texture colordiffuse="$VAR[MainColorVar]">lists/focus.png</texture>
+                            <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000) + !Control.HasFocus(900) + !ControlGroup(700).HasFocus + !Control.HasFocus(14200)">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <left>-3</left>
+                            <top>1</top>
+                            <width>70</width>
+                            <height>70</height>
+                            <texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
+                            <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+                        </control>
+                        <control type="image">
+                            <left>-5</left>
+                            <top>0</top>
+                            <width>68</width>
+                            <height>70</height>
+                            <texture colordiffuse="51FFFFFF">colors/black.png</texture>
+                            <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000) + !Control.HasFocus(900) + !ControlGroup(700).HasFocus + !Control.HasFocus(14200)">Conditional</animation>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <left>-3</left>
+                        <top>1</top>
+                        <width>70</width>
+                        <height>70</height>
+                        <texture>$INFO[ListItem.Art(thumb)]</texture>
+                    </control>
+                    <control type="image">
+                        <left>-3</left>
+                        <top>1</top>
+                        <width>70</width>
+                        <height>70</height>
+                        <animation effect="fade" start="0" end="100" time="200" delay="200" condition="!System.HasModalDialog">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" condition="System.HasModalDialog">Conditional</animation>
+                        <texture colordiffuse="$VAR[MainColorVar]">$INFO[ListItem.Icon]</texture>
+                        <animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
+                        <visible>!Control.HasFocus(9000) + !Control.HasFocus(900)</visible>
+                    </control>
+                    <control type="label">
+                        <left>74</left>
+                        <top>0</top>
+                        <height>70</height>
+                        <width>560</width>
+                        <aligny>center</aligny>
+                        <font>font14</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <shadowcolor>text_shadow</shadowcolor>
+                    </control>
+                </focusedlayout>
+                <itemlayout height="70">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>390</width>
+                        <height>71</height>
+                        <texture border="90,3,90,3">lists/separator.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>74</left>
+                        <top>0</top>
+                        <height>70</height>
+                        <width>560</width>
+                        <aligny>center</aligny>
+                        <font>font14</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <shadowcolor>text_shadow</shadowcolor>
+                    </control>
+                    <control type="image">
+                        <left>-3</left>
+                        <top>1</top>
+                        <width>70</width>
+                        <height>70</height>
+                        <texture>$INFO[ListItem.Art(thumb)]</texture>
+                    </control>
+                </itemlayout>
+                <content>
+                    <!-- Weather -->
+                    <item>
+                        <label>$LOCALIZE[8]</label>
+                        <onclick>SetProperty(FanartHomeType,weather,home)</onclick>
+                        <onclick>ActivateWindow(Weather)</onclick>
+                        <thumb>icons/home/weather.png</thumb>
+                        <property name="id">weather</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>!String.IsEmpty(Weather.Plugin)</visible>
+                    </item>
+                    <!-- Pictures -->
+                    <item>
+                        <label>$LOCALIZE[1]</label>								
+                        <onclick>SetProperty(FanartHomeType,pictures,home)</onclick>
+                        <onclick>ActivateWindow(Pictures)</onclick>
+                        <thumb>icons/home/pictures.png</thumb>
+                        <property name="id">pictures</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+                    </item>
+                    <!-- TV -->
+                    <item>
+                        <label>$LOCALIZE[19020]</label>
+                        <onclick>SetProperty(FanartHomeType,livetv,home)</onclick>
+                        <onclick>ActivateWindow(TVChannels)</onclick>                                
+                        <thumb>icons/home/livetv.png</thumb>
+                        <property name="id">livetv</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+						<visible>PVR.HasTVChannels</visible>
+                    </item>
+					<!-- Radio -->
+                    <item>
+                        <label>$LOCALIZE[19021]</label>
+                        <onclick>SetProperty(FanartHomeType,radio,home)</onclick>
+                        <onclick>ActivateWindow(RadioChannels)</onclick>                                
+                        <thumb>icons/home/radio.png</thumb>
+                        <property name="id">radio</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+						<visible>PVR.HasRadioChannels</visible>
+                    </item>
+                    <!-- Videos -->
+                    <item>
+                        <label>$LOCALIZE[3]</label>								
+                        <onclick>SetProperty(FanartHomeType,video,home)</onclick>
+                        <onclick>ActivateWindow(Videos,root)</onclick>
+                        <thumb>icons/home/videos.png</thumb>
+                        <property name="id">video</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+                    </item>					
+                    <!-- Movies -->
+                    <item>
+                        <label>$LOCALIZE[342]</label>
+                        <onclick>SetProperty(FanartHomeType,movies,home)</onclick>
+                        <onclick condition="Library.HasContent(movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+                        <onclick condition="!Library.HasContent(movies)">ActivateWindow(Videos,Files,return)</onclick>                                
+                        <thumb>icons/home/movies.png</thumb>
+                        <property name="id">movies</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+						<visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <!-- TVShows -->
+                    <item>
+                        <label>$LOCALIZE[20343]</label>
+                        <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(Videos,Files,return)</onclick>
+                        <onclick condition="Library.HasContent(tvshows)">ActivateWindow(Videos,TVShowTitles,return)</onclick>								
+                        <onclick>SetProperty(FanartHomeType,tvshows,home)</onclick>
+                        <thumb>icons/home/tv.png</thumb>
+                        <property name="id">tvshows</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+						<visible>Library.HasContent(TVShows)</visible>
+                    </item>
+					<!-- MusicVideos -->
+                    <item>
+                        <label>$LOCALIZE[20389]</label>
+                        <onclick condition="!Library.HasContent(musicvideos)">ActivateWindow(Videos,Files,return)</onclick>
+                        <onclick condition="Library.HasContent(musicvideos)">ActivateWindow(Videos,MusicVideos,return)</onclick>								
+                        <onclick>SetProperty(FanartHomeType,musicvideos,home)</onclick>
+                        <thumb>icons/home/musicvideos.png</thumb>
+                        <property name="id">musicvideos</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoMusicVideosButton)</visible>
+						<visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+                    <!-- Music -->
+                    <item>
+                        <label>$LOCALIZE[2]</label>
+                        <onclick>SetProperty(FanartHomeType,music,home)</onclick>
+                        <onclick>ActivateWindow(Music,root,return)</onclick>                                
+                        <thumb>icons/home/music.png</thumb>
+                        <property name="id">music</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+                    </item>
+                    <!-- Addons -->
+                    <item>
+                        <label>$LOCALIZE[24001]</label>								
+                        <onclick>SetProperty(FanartHomeType,addons,home)</onclick>
+                        <onclick>ActivateWindow(1100)</onclick>
+                        <thumb>icons/home/addons.png</thumb>
+                        <property name="id">addons</property>
+                        <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+                    </item>
+                    <!-- Settings -->
+                    <item>
+                        <label>$LOCALIZE[21417]</label>
+                        <onclick>SetProperty(FanartHomeType,settings,home)</onclick>
+                        <onclick>ActivateWindow(settings)</onclick>                                
+                        <thumb>icons/home/settings.png</thumb>
+                        <property name="id">settings</property>
+                    </item>
+                </content>
+            </control>
+        </control>
+    </include>
+</includes>
