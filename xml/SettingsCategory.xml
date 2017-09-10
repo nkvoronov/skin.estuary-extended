@@ -160,9 +160,15 @@
 			<top>80</top>
 			<width>12</width>
 			<height>920</height>
+            <orientation>vertical</orientation>
+            <texturesliderbackground />
+            <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 			<onleft>5</onleft>
 			<onright>5</onright>
-			<orientation>vertical</orientation>
+            <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+            <animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>			
 		</control>
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />

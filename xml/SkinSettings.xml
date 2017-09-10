@@ -726,16 +726,16 @@
                 <visible>Container(9000).HasFocus(6)</visible>
             </control>
 			<control type="textbox" id="6">
-				<description>description area</description>
+				<description>Description Area</description>
 				<left>480</left>
 				<top>810</top>
 				<width>1150</width>
 				<height>83</height>
 				<font>font12</font>
 				<align>justify</align>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[MainColorVar]</textcolor>
 				<label>$VAR[SkinSettingsHelpTextVar]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
 		<include content="TopBar">
