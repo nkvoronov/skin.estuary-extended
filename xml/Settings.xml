@@ -176,15 +176,17 @@
         <control type="scrollbar" id="60">
             <right>0</right>
             <top>80</top>
-            <width>13</width>
-            <height>919</height>
-            <onleft>9000</onleft>
-            <onright>9000</onright>
+            <width>12</width>
+            <height>920</height>
             <orientation>vertical</orientation>
             <texturesliderbackground />
+            <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
             <animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
             <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-            <animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+            <animation effect="fade" start="0" end="100" delay="300" time="320">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>                
 		</control>        
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]" />

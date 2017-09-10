@@ -117,7 +117,7 @@
 		</definition>
 	</include>
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,,[COLOR white]  -  [/COLOR]][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
+        <param name="item_label">$INFO[ListItem.Year,,  [COLOR white]-[/COLOR]  ][COLOR white]$INFO[ListItem.Label][/COLOR]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
 		<param name="item_height">40</param>
 		<param name="height">200</param>
@@ -582,39 +582,72 @@
 	<include name="AddonLauncherPanel">
 		<param name="fallback_image">DefaultFolder.png</param>
 		<definition>
-			<control type="panel" id="$PARAM[container_id]">
-				<left>520</left>
-				<top>175</top>
-				<width>1360</width>
-				<height>720</height>
-				<onleft>9000</onleft>
-				<onright>531</onright>
+			<control type="group" id="$PARAM[group_id]">
 				<include>Visible_Right_Delayed</include>
-				<visible>$PARAM[visible]</visible>
-				<onup>$PARAM[container_id]</onup>
-				<ondown>$PARAM[container_id]</ondown>
-				<preloaditems>1</preloaditems>
-				<pagecontrol>531</pagecontrol>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<itemlayout height="360" width="320">
-					<include>InfoWallAddonsLayout</include>
-				</itemlayout>
-				<focusedlayout height="360" width="320">
-					<control type="group">
-						<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,180">Focus</animation>
-						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,180">UnFocus</animation>
-						<include>InfoWallAddonsLayout</include>
-						<control type="image">
-							<left>15</left>
-							<top>5</top>
-							<width>288</width>
-							<height>348</height>
-							<texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
-							<animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
-						</control>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),$PARAM[id])</visible>
+				<control type="group">
+					<visible>Integer.IsGreater(Container($PARAM[group_id]50).NumItems,0) | Container($PARAM[group_id]50).IsUpdating</visible>
+					<control type="panel" id="$PARAM[group_id]50">
+						<left>520</left>
+						<top>175</top>
+						<right>50</right>
+						<width>1360</width>
+                        <height>720</height>
+						<onleft>9000</onleft>
+						<onright>$PARAM[group_id]30</onright>
+						<onup>$PARAM[group_id]50</onup>
+						<ondown>$PARAM[group_id]50</ondown>
+						<preloaditems>2</preloaditems>
+						<pagecontrol>$PARAM[group_id]30</pagecontrol>
+						<scrolltime tween="cubic" easing="out">500</scrolltime>
+                        <itemlayout height="360" width="320">
+                            <include>InfoWallAddonsLayout</include>
+                        </itemlayout>
+                        <focusedlayout height="360" width="320">
+                            <control type="group">
+                                <animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,180">Focus</animation>
+                                <animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,180">UnFocus</animation>
+                                <include>InfoWallAddonsLayout</include>
+                                <control type="image">
+                                    <left>15</left>
+                                    <top>5</top>
+                                    <width>288</width>
+                                    <height>348</height>
+                                    <texture border="8" colordiffuse="$VAR[MainColorVar]">buttons/thumbnail_focused.png</texture>
+                                    <animation effect="fade" start="100" end="0" time="200">Unfocus</animation>
+                                </control>
+                            </control>
+                        </focusedlayout>
+                        <content sortby="lastused" sortorder="descending" target="$PARAM[container_target]">$PARAM[container_path]</content>
 					</control>
-				</focusedlayout>
-				<content sortby="lastused" sortorder="descending" target="$PARAM[container_target]">$PARAM[container_path]</content>
+					<control type="scrollbar" id="$PARAM[group_id]30">
+						<right>0</right>
+						<top>80</top>
+						<width>12</width>
+						<height>920</height>
+						<orientation>vertical</orientation>
+						<texturesliderbackground />
+						<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[group_id]30)">conditional</animation>
+						<onleft>$PARAM[group_id]50</onleft>
+						<onright>noop</onright>
+					</control>
+                    <include content="UpDownArrows">
+                        <param name="container_id" value="$PARAM[group_id]50" />
+                        <param name="posx" value="1135" />
+                    </include>
+				</control>
+				<control type="group">
+                    <top>185</top>
+					<left>20</left>
+					<include content="Widget-Image">
+						<param name="text_label" value="$LOCALIZE[31153]" />
+						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="button_onclick" value="$PARAM[imagewidget_onclick]"/>
+						<param name="button_id" value="$PARAM[group_id]333"/>
+						<param name="visible_2" value="false"/>
+						<param name="visible" value="![Integer.IsGreater(Container($PARAM[group_id]50).NumItems,0) | Container($PARAM[group_id]50).IsUpdating]"/>
+					</include>
+				</control>
 			</control>
 		</definition>
 	</include>
@@ -1018,13 +1051,13 @@
 	</include>
 	<include name="ColoredBackgroundImages">
         <!-- Primary Background Default -->
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/default.png</texture>
+        <control type="image">
+            <depth>DepthBackground</depth>
+            <include>FullScreenDimensions</include>
+            <aspectratio>scale</aspectratio>
+            <texture colordiffuse="$VAR[PrimaryBackgroundColorVar]">special://skin/extras/backgrounds/default.png</texture>
             <visible>!Skin.HasSetting(use_custom_bg)</visible>
-		</control>
+        </control>
         <!-- Primary Background User -->
         <control type="image">
             <depth>DepthBackground</depth>
@@ -1034,13 +1067,13 @@
             <visible>Skin.HasSetting(use_custom_bg) + !String.IsEmpty(Skin.String(custom_background))</visible>
         </control>
         <!-- Secondary Background -->
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
+        <control type="image">
+            <depth>DepthBackground</depth>
+            <include>FullScreenDimensions</include>
+            <aspectratio>scale</aspectratio>
             <texture colordiffuse="$VAR[SecondaryBackgroundColorVar]">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.png]</texture>
             <visible>!String.IsEmpty(Skin.String(background_overlay)) + !String.IsEqual(Skin.String(background_overlay),0)</visible>
-		</control>
+        </control>
 	</include>
 	<include name="DefaultBackground">
 		<param name="overlay_background">$VAR[GeneralFanartVar]</param>
@@ -1060,7 +1093,7 @@
 			</control>
             <!-- Backgrounds -->
 			<control type="group">
-				<include>FullScreenDimensions</include>
+                <include>FullScreenDimensions</include>
 				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 				<control type="group">
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>

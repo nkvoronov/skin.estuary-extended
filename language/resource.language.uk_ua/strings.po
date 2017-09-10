@@ -619,6 +619,7 @@ msgstr "Непереглянуті музичні відео"
 msgctxt "#31152"
 msgid "Random music videos"
 msgstr "Випадкові музичні відео"
+
 msgctxt "#31156"
 msgid "Choose background pattern"
 msgstr "Виберіть шаблон фону"
